@@ -1,4 +1,33 @@
-# Nature-ready Accessible Colour System
+# Theme Library and Accessible Colour System
+
+This skill has one default theme and nine user-selectable themes extracted from the supplied scientific figure references. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
+
+## Select a theme
+
+| ID | Theme | Best fit | Categorical colours |
+|---|---|---|---|
+| `nature-default` | Nature 默认 **(default)** | General publication figures and first proofs | `#0072B2 #009E73 #E69F00 #CC79A7 #D55E00 #56B4E9` |
+| `vivid-signal` | 高辨识信号 | Small group counts, strong highlights | `#E31A1C #FC8D3C #377EB8 #984EA3 #4DAF4A` |
+| `bright-bio` | 明亮生物 | Multi-condition molecular biology panels | `#F7A63A #557CFF #80C662 #866AD2 #56BFB0` |
+| `teal-genome` | 青绿组学 | Genomics and network-style pages | `#0F9EA8 #008B82 #45728F #8CD1B2 #8B84A3` |
+| `muted-microbe` | 柔和微生物 | Experimental biology and culture studies | `#BA4460 #FFAFAC #DBAC72 #87AD7C #65AA93` |
+| `immuno-signal` | 免疫信号 | Immune-response contrasts | `#A9C4E2 #B9D6ED #AEDFE4 #F04A4D #5896D0 #68C9D4` |
+| `pastel-catalysis` | 粉彩催化 | Materials and catalytic comparisons | `#7AD4FE #FDCBA7 #B3DDD4 #C9D2F9 #DDEAF6` |
+| `electrochemistry` | 电化学柔彩 | Electrochemistry and environmental series | `#E26E67 #509CBA #91BFDB #F1B9B6 #A4D86A` |
+| `soft-cost` | 柔和成本 | Techno-economic and process comparisons | `#6DA4B0 #ABCBD4 #E1B3AD #D78F81 #D7CDE1` |
+| `soft-academic` | 柔和学术 | Multi-panel academic reports and talks | `#FCE8E6 #FFC6BC #F8B9B8 #D6DFEF #A5CDE2 #5FA3CB` |
+
+The canonical full values, including sequential and diverging ramps, live in [`palette-library.json`](palette-library.json). Use that file as the single source of truth for preview scripts and future adapters.
+
+### Selection and personalization protocol
+
+1. Before drawing, use the user's named theme; otherwise use `nature-default` and say so in the initial plan.
+2. Keep one semantic mapping across all panels: `categorical[0]` is the baseline, following entries are ordered comparisons, `accent` is a single emphasis role, and grey/neutral is context.
+3. After the QA-passed first proof, ask whether the user wants a different library theme, explicit hex colours, or a reference palette image.
+4. For a supplied palette image, first return the inferred swatches and proposed semantic order for confirmation. Recolour only after confirmation; do not change data, analyses, figure type, or statistical annotations.
+5. Named themes are aesthetic choices, not universal accessibility guarantees. Keep shapes, line types, direct labels, or ordering for critical comparisons; use `nature-default` when colourblind-safe categorical distinction is the primary requirement.
+
+## Nature-ready Accessible Colour System
 
 Nature does not prescribe one universal set of hex codes. Its figure guide requires an accessible palette and points authors to Wong's colour-blindness guidance. This system therefore uses a colour-blind-safe qualitative core, then creates restraint with alpha, ordering, and neutral context—not with low-contrast category colours. Source: <https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/>.
 

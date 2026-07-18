@@ -14,7 +14,7 @@ Academic Data Visualization generates publication-grade scientific figures for N
 CNS reviewers skim fast. A figure must convey its main conclusion in 3 seconds. Remove gridlines, borders, and legend entries that dilute the core message. Default to minimal, not maximal.
 
 **2. Restrained color > abundant color.**
-Default palettes (matplotlib tab10, ggplot2 hue_pal, Excel colors) signal "not designed" instantly. Use 2-4 semantic main colors + 1 accent. The default language is a colourblind-safe blue, bluish green, orange, purple, vermilion, and neutral grey system; see `references/color-palettes.md`, `references/visual-style.md`, and `references/nature-publication-style.md`.
+Default palettes (matplotlib tab10, ggplot2 hue_pal, Excel colors) signal "not designed" instantly. Use 2-4 semantic main colors + 1 accent. Use the colourblind-safe `nature-default` theme unless the user selects a named alternative. The theme library, custom recoloring protocol, and preview gallery are defined in `references/color-palettes.md`.
 
 **3. Design for print, not screen.**
 Journal column widths are fixed (89 mm single, 183 mm double). Set figure dimensions at creation time — never scale down post-render. At final size, use Arial/Helvetica, 5-7 pt routine text, and 8 pt bold upright lowercase panel labels.
@@ -61,6 +61,10 @@ User request received
        ▼
   Step 6: QA Protocol ←── 4-pass QA (AP-0..AP-7, CL-1..CL-7,
        │                  VI-1..VI-6, VV-1..VV-5). Fix → re-render.
+       ▼
+  Step 6.5: Palette Personalization ←── Show the rendered preview, then offer
+       │                                  a named theme, hex colours, or a
+       │                                  reference palette image for recoloring.
        ▼
   Step 7: Deliver ←── Editable vector master + 450dpi RGB raster proof
                       + QA report + statistics report
@@ -185,6 +189,8 @@ Load these four files and copy their "COPY VERBATIM" code blocks into the script
 2. `references/color-palettes.md` — PALETTE constants. All color variables.
 3. `references/export-specs.md` — font embedding + save function.
 4. `references/visual-style.md` — hierarchy, chart-specific mark rules, and final visual review.
+
+**Palette selection is part of the style baseline.** Read the theme table in `references/color-palettes.md` before writing plotting code. Record the selected theme in the script header and map its colours to stable semantic roles (baseline, comparison, emphasis, context). If the user gives no preference, use `nature-default`; do not silently substitute matplotlib, seaborn, ggplot2, Excel, rainbow, or `tab10` colours.
 
 Also read `references/journal-specs.md` for target dimensions (89mm single / 183mm double).
 
@@ -403,6 +409,16 @@ If Python/R runtime is unavailable, skip Pass 3 and warn the user.
 
 ---
 
+### Step 6.5: Palette Personalization Pass
+
+After the first rendered PNG proof passes QA and before final delivery, state the theme used and ask exactly once:
+
+> 当前预览使用 **[theme name]**。你想保留它，还是提供喜欢的十六进制颜色、配色图或论文图作为参考，让我在不改变数据、统计、图型和颜色语义的前提下重新绘制个性化配色版本？
+
+If the user chooses a library theme, recolor all panels with that theme and retain the same category-to-colour mapping across the full figure. If the user supplies hex colours, confirm their semantic ordering before applying them. If the user supplies a reference palette image, extract a concise palette, show the inferred swatches and semantic mapping, then recolor after confirmation. A custom palette never removes redundant markers, direct labels, line types, or ordering used for accessibility.
+
+---
+
 ### Step 7: Deliver
 
 Output:
@@ -502,7 +518,8 @@ Generated adapters are in `install/`:
 |------|---------|
 | `references/figure-contract.md` | Scientific claim, evidence chain, archetype, review risks |
 | `references/nature-publication-style.md` | Nature-ready typography, colour, axes, decoration, and export contract |
-| `references/color-palettes.md` | Color selection |
+| `references/color-palettes.md` | Theme selection and custom recoloring protocol |
+| `references/palette-library.json` | Canonical machine-readable theme values |
 | `references/typography.md` | Font setup |
 | `references/journal-specs.md` | Dimension and spine setup |
 | `references/export-specs.md` | Format and resolution |

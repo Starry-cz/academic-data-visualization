@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "default_theme": "nature-default",
+  "themes": [
+    {
+      "id": "nature-default",
+      "name": "Nature 默认",
+      "source": "既有色盲安全主配色",
+      "categorical": ["#0072B2", "#009E73", "#E69F00", "#CC79A7", "#D55E00", "#56B4E9", "#999999"],
+      "sequential": ["#F7FBFF", "#C6DBEF", "#6BAED6", "#2171B5", "#084594"],
+      "diverging": ["#2166AC", "#F7F7F7", "#B2182B"],
+      "accent": "#D55E00"
+    },
+    {
+      "id": "vivid-signal",
+      "name": "高辨识信号",
+      "source": "用户上传图 1",
+      "categorical": ["#E31A1C", "#FC8D3C", "#377EB8", "#984EA3", "#4DAF4A", "#FDBF6F", "#BDBDBD", "#4D4D4D"],
+      "sequential": ["#FFF5F0", "#FDBF6F", "#FC8D3C", "#E31A1C"],
+      "diverging": ["#377EB8", "#FFFFFF", "#E31A1C"],
+      "accent": "#E31A1C"
+    },
+    {
+      "id": "bright-bio",
+      "name": "明亮生物",
+      "source": "用户上传图 2",
+      "categorical": ["#F7A63A", "#557CFF", "#80C662", "#866AD2", "#56BFB0", "#9E9E9E", "#535353", "#E36889"],
+      "sequential": ["#FFF8E8", "#F7A63A", "#E36889"],
+      "diverging": ["#557CFF", "#FFFFFF", "#E36889"],
+      "accent": "#E36889"
+    },
+    {
+      "id": "teal-genome",
+      "name": "青绿组学",
+      "source": "用户上传图 3",
+      "categorical": ["#0F9EA8", "#008B82", "#45728F", "#8CD1B2", "#8B84A3", "#3D3539"],
+      "sequential": ["#F0FBF9", "#8CD1B2", "#0F9EA8", "#008B82"],
+      "diverging": ["#45728F", "#FFFFFF", "#0F9EA8"],
+      "accent": "#008B82"
+    },
+    {
+      "id": "muted-microbe",
+      "name": "柔和微生物",
+      "source": "用户上传图 4",
+      "categorical": ["#BA4460", "#FFAFAC", "#DBAC72", "#87AD7C", "#65AA93", "#626890"],
+      "sequential": ["#FFF7F5", "#FFAFAC", "#DBAC72", "#BA4460"],
+      "diverging": ["#626890", "#FFFFFF", "#BA4460"],
+      "accent": "#BA4460"
+    },
+    {
+      "id": "immuno-signal",
+      "name": "免疫信号",
+      "source": "用户上传图 5",
+      "categorical": ["#A9C4E2", "#B9D6ED", "#AEDFE4", "#F04A4D", "#5896D0", "#68C9D4"],
+      "sequential": ["#F5FAFE", "#B9D6ED", "#A9C4E2", "#5896D0"],
+      "diverging": ["#5896D0", "#FFFFFF", "#F04A4D"],
+      "accent": "#F04A4D"
+    },
+    {
+      "id": "pastel-catalysis",
+      "name": "粉彩催化",
+      "source": "用户上传图 6",
+      "categorical": ["#7AD4FE", "#FDCBA7", "#B3DDD4", "#C9D2F9", "#DDEAF6", "#E0EDD8", "#FEF1C8"],
+      "sequential": ["#F6FCFE", "#DDEAF6", "#7AD4FE", "#509CBA"],
+      "diverging": ["#509CBA", "#FFFFFF", "#FDCBA7"],
+      "accent": "#FDCBA7"
+    },
+    {
+      "id": "electrochemistry",
+      "name": "电化学柔彩",
+      "source": "用户上传图 7",
+      "categorical": ["#E26E67", "#509CBA", "#91BFDB", "#F1B9B6", "#A4D86A", "#F8D1B5", "#4BC783"],
+      "sequential": ["#F7FCFB", "#91BFDB", "#509CBA", "#4BC783"],
+      "diverging": ["#509CBA", "#FFFFFF", "#E26E67"],
+      "accent": "#E26E67"
+    },
+    {
+      "id": "soft-cost",
+      "name": "柔和成本",
+      "source": "用户上传图 8",
+      "categorical": ["#6DA4B0", "#ABCBD4", "#E1B3AD", "#D78F81", "#D7CDE1", "#BED191", "#E6E9C4"],
+      "sequential": ["#F7FBFC", "#ABCBD4", "#6DA4B0"],
+      "diverging": ["#6DA4B0", "#FFFFFF", "#D78F81"],
+      "accent": "#D78F81"
+    },
+    {
+      "id": "soft-academic",
+      "name": "柔和学术",
+      "source": "用户上传图 9",
+      "categorical": ["#FCE8E6", "#FFC6BC", "#F8B9B8", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#668FCA", "#C9CEFE", "#66A8CD", "#006BAD"],
+      "sequential": ["#F7FBFF", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#006BAD"],
+      "diverging": ["#5FA3CB", "#FFFFFF", "#FFC6BC"],
+      "accent": "#006BAD"
+    }
+  ]
+}

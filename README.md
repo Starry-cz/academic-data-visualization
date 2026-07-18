@@ -145,7 +145,26 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 4. 注入字体、物理尺寸、语义配色、统计标注和导出规则，优先复用生产脚本。
 5. 输出 PNG 预览、SVG/PDF 矢量版与投稿级 TIFF，并完成代码和视觉 QA。
 
-默认视觉语言采用 Nature-ready、色盲安全的语义配色，而不是 matplotlib / ggplot 的默认色板：蓝 `#0072B2`、蓝绿色 `#009E73`、橙 `#E69F00`、紫 `#CC79A7`、朱红 `#D55E00`，并以深灰 `#1A1A1A` 承载文字与轴线。完整规范见 [`references/color-palettes.md`](references/color-palettes.md) 与 [`references/visual-style.md`](references/visual-style.md)。
+默认视觉语言采用 Nature-ready、色盲安全的 `nature-default` 主题：蓝 `#0072B2`、蓝绿色 `#009E73`、橙 `#E69F00`、紫 `#CC79A7`、朱红 `#D55E00`，并以深灰 `#1A1A1A` 承载文字与轴线。完整规范见 [`references/color-palettes.md`](references/color-palettes.md) 与 [`references/visual-style.md`](references/visual-style.md)。
+
+## 配色主题库与个性化重绘
+
+Skill 默认使用 `nature-default`，同时提供 9 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
+
+| 主题 | 预览 |
+|---|---|
+| Nature 默认 | <img src="assets/palette-gallery/nature-default.png" width="360" alt="Nature 默认配色预览"> |
+| 高辨识信号 | <img src="assets/palette-gallery/vivid-signal.png" width="360" alt="高辨识信号配色预览"> |
+| 明亮生物 | <img src="assets/palette-gallery/bright-bio.png" width="360" alt="明亮生物配色预览"> |
+| 青绿组学 | <img src="assets/palette-gallery/teal-genome.png" width="360" alt="青绿组学配色预览"> |
+| 柔和微生物 | <img src="assets/palette-gallery/muted-microbe.png" width="360" alt="柔和微生物配色预览"> |
+| 免疫信号 | <img src="assets/palette-gallery/immuno-signal.png" width="360" alt="免疫信号配色预览"> |
+| 粉彩催化 | <img src="assets/palette-gallery/pastel-catalysis.png" width="360" alt="粉彩催化配色预览"> |
+| 电化学柔彩 | <img src="assets/palette-gallery/electrochemistry.png" width="360" alt="电化学柔彩配色预览"> |
+| 柔和成本 | <img src="assets/palette-gallery/soft-cost.png" width="360" alt="柔和成本配色预览"> |
+| 柔和学术 | <img src="assets/palette-gallery/soft-academic.png" width="360" alt="柔和学术配色预览"> |
+
+使用时可以直接说“使用 `teal-genome` 主题绘制”，也可以先看默认预览。首版预览通过质量检查后，Skill 会询问是否保留当前主题，或改用上述主题、你提供的十六进制颜色、配色图或论文图作为参考进行个性化重绘。自定义仅改变视觉配色，不改变数据、统计、图型、分组顺序或颜色语义。
 
 ## 安装与更新
 
