@@ -1,15 +1,36 @@
 import pandas as pd
+import matplotlib as mpl
+mpl.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats as stats
 from itertools import combinations
 from matplotlib.patches import Patch
 import os
+import sys
+from io import BytesIO
+from pathlib import Path
+
+from PIL import Image
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+from visual_qa import audit_figure
+
+
+# 统一导出字体与文本编码，保证 PDF / SVG 可编辑。
+mpl.rcParams.update({
+    "font.family": "Arial",
+    "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
+    "svg.fonttype": "none",
+    "pdf.fonttype": 42,
+})
 
 def plot_jitter_mean_sig(
     df: pd.DataFrame,                 # DataFrame，列为分组，值为该组样本
     group_order=None,                 # list[str]，分组顺序；None则使用df列顺序
-    palette=None,                     # list[color]，每组颜色；None自动生成（前三组固定色）
+    palette=None,                     # list[color]，每组颜色；None使用色盲安全默认色
     # --- 几何布局（保持原始组间距） ---
     x_start=-0.3,                     # float，第一组的x起点
     x_step=0.5,                       # float，相邻两组的水平间距（不变则保证组距恒定）
@@ -46,9 +67,10 @@ def plot_jitter_mean_sig(
     widest_on_top=True,               # bool，跨度（x2-x1）最大的比较条提升到最顶层
     # --- 显示/保存 ---
     show_p=True,                      # bool，是否显示顶部p值与横线
+    show_legend=True,                 # bool，是否显示图外分组图例；索引缩略图可关闭
     save_path=None,                   # str，保存路径，如"fig.pdf"/"fig.png"；None不保存
     save_format=None,                 # str，'pdf'或'png'；优先级高于文件扩展名
-    dpi=300,                          # int，保存分辨率（对PNG生效；PDF矢量不依赖dpi）
+    dpi=600,                          # int，保存分辨率（对PNG生效；PDF矢量不依赖dpi）
     transparent=False                 # bool，保存是否透明背景
 ):
     """
@@ -56,7 +78,7 @@ def plot_jitter_mean_sig(
     - 组间距保持固定（x_start/x_step），适配2组、3组或更多组。
     - 顶部显著性：全排列两两比较，按“左→右”顺序；区间打包避免重叠；可“最宽置顶”。
     - 显著性在轴域坐标绘制，Y轴刻度不会随p值数量增长而变化。
-    - 图例固定在右侧、单行竖排，不与主图重叠；画布宽度自适应组数与图例宽。
+    - 图例固定在右侧标准纵向列表，不与主图重叠；画布宽度按最长组名自适应。
     
     # 参数手册（快速参考）
     # =============================
@@ -108,12 +130,10 @@ def plot_jitter_mean_sig(
     n = len(groups)
 
     if palette is None:
-        base3 = ["#a1a0a5", "#8bacd3", "#c28bb7"]
-        if n <= 3:
-            palette = base3[:n]
-        else:
-            tab = [plt.get_cmap("tab10")(i) for i in range(10)]
-            palette = base3 + [tab[i] for i in range(n - 3)]
+        palette = ["#6B7280", "#0072B2", "#009E73", "#E69F00", "#CC79A7", "#D55E00", "#56B4E9"]
+        if n > len(palette):
+            raise ValueError("请显式提供足够的 palette 颜色，避免重复编码分组。")
+        palette = palette[:n]
     else:
         assert len(palette) >= n, "palette 颜色数量不足覆盖所有分组"
 
@@ -142,8 +162,11 @@ def plot_jitter_mean_sig(
     have_sig = show_p and len(p_values) > 0
     auto_height = base_plot_height + (height_growth_per_sig if have_sig else 0.0)
     auto_plot_width = base_plot_width + max(0, n - 3) * extra_width_per_group
-    per_item_inch = 0.28  # 右侧单行图例每个项目的预估宽度
-    wanted_legend_width = max(legend_reserved_width, per_item_inch * n + 0.6)
+    # 右侧图例按最长分组名而非组数预留宽度，避免文本被压缩或旋转。
+    wanted_legend_width = (
+        max(legend_reserved_width, 0.11 * max(len(str(group)) for group in groups) + 0.65)
+        if show_legend else 0.0
+    )
     auto_width = auto_plot_width + wanted_legend_width
     if fig_size is None:
         fig_size = (auto_width, auto_height)
@@ -152,7 +175,7 @@ def plot_jitter_mean_sig(
     plt.rcParams.update({'font.size': font_size})
     ax = plt.gca()
 
-    right_pad_frac = min(0.75, wanted_legend_width / fig_size[0] + 0.02)
+    right_pad_frac = min(0.75, wanted_legend_width / fig_size[0] + 0.02) if show_legend else 0.05
     top_pad = min(0.45, max(0.12, top_extra_frac if have_sig else 0.14))
     plt.subplots_adjust(left=0.12, right=1 - right_pad_frac, top=1 - top_pad, bottom=0.10)
 
@@ -270,57 +293,103 @@ def plot_jitter_mean_sig(
     ax.yaxis.set_tick_params(left=True, width=1.2, color='black')
     ax.yaxis.grid(False)
 
-    # 9) 右侧单行竖排图例（不与主图重叠）
-    handles = [Patch(facecolor=palette[i], edgecolor='none', label=groups[i]) for i in range(n)]
-    leg = ax.legend(
-        handles=handles,
-        frameon=False,
-        loc='upper left',
-        bbox_to_anchor=(1.02, 1.00),
-        fontsize=8,
-        ncol=len(groups),  # 单行
-        handlelength=0.5,
-        handleheight=2.5,
-        markerscale=1.0,
-        columnspacing=-1,
-        borderpad=-1,
-        handletextpad=0.6,
-        borderaxespad=0.0
-    )
-    for text in leg.get_texts():
-        text.set_rotation(90)
-        text.set_ha('center')
-        text.set_va('bottom')
-        x, y = text.get_position()
-        text.set_position((x - 15, y + 20))
+    # 9) 图例固定在主图外侧，由视觉审查器确认不会遮挡数据层。
+    if show_legend:
+        handles = [Patch(facecolor=palette[i], edgecolor='none', label=groups[i]) for i in range(n)]
+        ax.legend(
+            handles=handles,
+            frameon=False,
+            loc='upper left',
+            bbox_to_anchor=(1.02, 1.00),
+            fontsize=8,
+            ncol=1,
+            handlelength=1.1,
+            handletextpad=0.45,
+            borderaxespad=0.0,
+        )
 
-    plt.tight_layout()
+    audit_figure(fig, Path(save_path).stem if save_path is not None else "stacked-bar-scatter-preview")
 
     # 10) 保存（可选）
     if save_path is not None:
         fmt = (save_format or os.path.splitext(save_path)[1].lower().lstrip('.')).lower()
         if fmt not in {"pdf", "png"}:
             raise ValueError("save_format / 文件扩展名必须是 'pdf' 或 'png'")
-        plt.savefig(save_path, format=fmt, dpi=dpi, bbox_inches="tight", transparent=transparent)
+        fig.savefig(save_path, format=fmt, dpi=dpi, bbox_inches="tight", transparent=transparent)
 
     return fig, ax
     
-# 1) 原始三组
-df = pd.DataFrame({
-    "C57BL/6J": [5.66,5.73,5.21,5.20,2.84,5.31,5.78,3.31,6.57,5.28,6.28,4.39,4.44,4.56,5.70,3.65,3.86,4.27],
-    "APPNL-G-F": [2.51,3.65,3.14,4.04,4.78,2.45,4.57,4.78,4.19,3.98,2.88,3.12,4.68,5.33,6.15,4.21,4.66,3.62],
-    "APPNL-G-F x TSPO-KO": [3.07,4.27,1.90,3.65,0.79,4.87,4.25,4.33,5.38,6.45,4.15,3.09,4.92,3.82,2.59,3.34,1.76,3.16]
-})
-fig, ax = plot_jitter_mean_sig(df,show_p=True, save_path="figureA.pdf",fig_size=(2.5, 4))  # 自适应画布，图例在右，不重叠
-plt.show()
+def build_demo_data() -> tuple[pd.DataFrame, pd.DataFrame]:
+    """构造模板演示数据；五组缩略图仅保留每组 8 个点，避免索引预览过密。"""
+    df = pd.DataFrame({
+        "C57BL/6J": [5.66,5.73,5.21,5.20,2.84,5.31,5.78,3.31,6.57,5.28,6.28,4.39,4.44,4.56,5.70,3.65,3.86,4.27],
+        "APPNL-G-F": [2.51,3.65,3.14,4.04,4.78,2.45,4.57,4.78,4.19,3.98,2.88,3.12,4.68,5.33,6.15,4.21,4.66,3.62],
+        "APPNL-G-F x TSPO-KO": [3.07,4.27,1.90,3.65,0.79,4.87,4.25,4.33,5.38,6.45,4.15,3.09,4.92,3.82,2.59,3.34,1.76,3.16]
+    })
+    # 此处为 README 的视觉示例，不用于推断；固定取前 8 个观测以保持预览可读。
+    df_more = df.iloc[:8].copy()
+    df_more["NewGroupA"] = df_more["C57BL/6J"] + np.random.default_rng(1).normal(0, 0.25, len(df_more))
+    df_more["NewGroupB"] = df_more["APPNL-G-F"] + np.random.default_rng(2).normal(0, 0.25, len(df_more))
+    return df, df_more
 
-# 2) 只有两列也可以（组间距不变、图例不重叠）
-fig, ax = plot_jitter_mean_sig(df[["C57BL/6J","APPNL-G-F"]],show_p=False, save_path="figureB1.pdf",fig_size=(2.5, 4))
-plt.show()
 
-# 3) N 组（自动扩宽主图与画布；图例仍在右侧不重叠）
-df_more = df.copy()
-df_more["NewGroupA"] = df_more["C57BL/6J"] + np.random.default_rng(1).normal(0,0.25,len(df))
-df_more["NewGroupB"] = df_more["APPNL-G-F"] + np.random.default_rng(2).normal(0,0.25,len(df))
-fig, ax = plot_jitter_mean_sig(df_more,show_p=False, save_path="figureC1.pdf",fig_size=(4, 4))
-plt.show()
+def render_index_preview(df: pd.DataFrame, df_more: pd.DataFrame, output_path: Path) -> None:
+    """将三种分组规模并排输出为 README 缩略图。"""
+    panels = []
+    # README 图表索引与其余缩略图统一使用暖冷动力学主题。
+    index_palette = ["#115FA4", "#D7312D", "#F2724D", "#FEE395", "#ACD2E5"]
+    examples = (
+        (df[["C57BL/6J", "APPNL-G-F"]], (2.5, 4)),
+        (df, (2.5, 4)),
+        (df_more, (4, 4)),
+    )
+    for example, fig_size in examples:
+        fig, _ = plot_jitter_mean_sig(
+            example,
+            # 索引缩略图只展示图形语法，统计比较保留给独立模板输出。
+            show_p=False,
+            show_legend=False,
+            palette=index_palette,
+            fig_size=fig_size,
+            font_size=8,
+            dpi=600,
+        )
+        buffer = BytesIO()
+        fig.savefig(buffer, format="png", dpi=300, bbox_inches="tight", facecolor="white")
+        plt.close(fig)
+        buffer.seek(0)
+        panels.append(Image.open(buffer).convert("RGB"))
+
+    panel_height = max(panel.height for panel in panels)
+    normalized = [
+        panel.resize((round(panel.width * panel_height / panel.height), panel_height), Image.Resampling.LANCZOS)
+        for panel in panels
+    ]
+    gutter = 24
+    preview = Image.new("RGB", (sum(panel.width for panel in normalized) + gutter * 2, panel_height), "white")
+    offset = 0
+    for panel in normalized:
+        preview.paste(panel, (offset, 0))
+        offset += panel.width + gutter
+    preview.save(output_path)
+
+
+if __name__ == "__main__":
+    df, df_more = build_demo_data()
+    output_dir = Path(__file__).resolve().parent
+
+    # 三种分组规模的独立模板文件。
+    for example, name, fig_size, show_p in (
+        (df, "figureA.pdf", (2.5, 4), True),
+        (df[["C57BL/6J", "APPNL-G-F"]], "figureB1.pdf", (2.5, 4), False),
+        (df_more, "figureC1.pdf", (4, 4), False),
+    ):
+        fig, _ = plot_jitter_mean_sig(example, show_p=show_p, save_path=output_dir / name, fig_size=fig_size)
+        fig.savefig(output_dir / f"{Path(name).stem}.svg", format="svg", bbox_inches="tight")
+        plt.close(fig)
+
+    render_index_preview(
+        df,
+        df_more,
+        Path(__file__).resolve().parents[2] / "figure-atlas" / "StackedBarScatter.png",
+    )
