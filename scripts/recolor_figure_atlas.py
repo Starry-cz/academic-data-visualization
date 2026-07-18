@@ -44,11 +44,13 @@ def hex_to_rgb(color: str) -> np.ndarray:
 
 
 def hue_targets(theme: dict[str, object]) -> tuple[np.ndarray, np.ndarray]:
-    """按原色相建立到主题色的稳定映射，覆盖冷暖与紫粉信号。"""
+    """按主题色建立错位映射，让缩略图明显呈现所选主题。"""
     colors = [hex_to_rgb(color) for color in theme["categorical"]]
-    # 色相锚点依次对应红、橙黄、绿、青、蓝、紫、粉；保留原图的暖冷语义。
+    # 色相锚点依次对应红、橙黄、绿、青、蓝、紫、粉。
+    # 有意错开原有色相与目标色，避免原图蓝/黄体系在换主题后看起来没有变化。
     hue_anchors = np.array([0.0, 0.14, 0.34, 0.50, 0.63, 0.77, 0.92])
-    target_indices = [5, 1, 7, 10, 6, 4, 0]
+    target_positions = [0.90, 0.00, 0.65, 0.45, 0.75, 0.25, 0.55]
+    target_indices = [round(position * (len(colors) - 1)) for position in target_positions]
     return hue_anchors, np.array([colors[index] for index in target_indices])
 
 
