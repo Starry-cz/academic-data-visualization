@@ -109,6 +109,33 @@
       "sequential": ["#FEF9B7", "#FEE395", "#F2724D", "#D7312D", "#AB2428"],
       "diverging": ["#115FA4", "#FEF9B7", "#D7312D"],
       "accent": "#D7312D"
+    },
+    {
+      "id": "aquifer-recovery",
+      "name": "含水层复苏",
+      "source": "用户上传图 12",
+      "categorical": ["#F599A1", "#9FD7E9", "#95AEDA", "#FCD590", "#A577AD", "#73C79E", "#5299CC"],
+      "sequential": ["#F6FCFC", "#9FD7E9", "#73C79E", "#5299CC"],
+      "diverging": ["#5299CC", "#FFFFFF", "#F599A1"],
+      "accent": "#73C79E"
+    },
+    {
+      "id": "neuro-navy",
+      "name": "神经深蓝",
+      "source": "用户上传图 13",
+      "categorical": ["#D9E6EB", "#9FC3D5", "#8F96BD", "#2A347A", "#D6D69B"],
+      "sequential": ["#F7FAFB", "#D9E6EB", "#9FC3D5", "#2A347A"],
+      "diverging": ["#2A347A", "#FFFFFF", "#D6D69B"],
+      "accent": "#2A347A"
+    },
+    {
+      "id": "cryo-electrolyte",
+      "name": "低温电解质",
+      "source": "用户上传图 14",
+      "categorical": ["#ECE3EF", "#CFBBD9", "#D9EBF2", "#A2D1E6", "#F9CFB1", "#ACC3E5", "#355AA4", "#7A939F", "#D4E7F2"],
+      "sequential": ["#F8FAFC", "#D9EBF2", "#A2D1E6", "#355AA4"],
+      "diverging": ["#355AA4", "#FFFFFF", "#F9CFB1"],
+      "accent": "#355AA4"
     }
   ]
 }

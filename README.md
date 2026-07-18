@@ -149,7 +149,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 
 ## 配色主题库与个性化重绘
 
-Skill 默认使用 `nature-default`，同时提供 11 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
+Skill 默认使用 `nature-default`，同时提供 14 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
 
 <table>
   <tr>
@@ -175,6 +175,13 @@ Skill 默认使用 `nature-default`，同时提供 11 组由科研图配色参�
   <tr>
     <td align="center" valign="top"><strong>柔彩组学</strong><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="柔彩组学配色预览"></td>
     <td align="center" valign="top"><strong>暖冷动力学</strong><br><img src="assets/palette-gallery/warm-cool-kinetics.png" width="390" alt="暖冷动力学配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>含水层复苏</strong><br><img src="assets/palette-gallery/aquifer-recovery.png" width="390" alt="含水层复苏配色预览"></td>
+    <td align="center" valign="top"><strong>神经深蓝</strong><br><img src="assets/palette-gallery/neuro-navy.png" width="390" alt="神经深蓝配色预览"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="top"><strong>低温电解质</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png" width="390" alt="低温电解质配色预览"></td>
   </tr>
 </table>
 
