@@ -149,21 +149,33 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 
 ## 配色主题库与个性化重绘
 
-Skill 默认使用 `nature-default`，同时提供 9 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
+Skill 默认使用 `nature-default`，同时提供 10 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
 
-| 主题 | 预览 |
-|---|---|
-| Nature 默认 | <img src="assets/palette-gallery/nature-default.png" width="360" alt="Nature 默认配色预览"> |
-| 高辨识信号 | <img src="assets/palette-gallery/vivid-signal.png" width="360" alt="高辨识信号配色预览"> |
-| 明亮生物 | <img src="assets/palette-gallery/bright-bio.png" width="360" alt="明亮生物配色预览"> |
-| 青绿组学 | <img src="assets/palette-gallery/teal-genome.png" width="360" alt="青绿组学配色预览"> |
-| 柔和微生物 | <img src="assets/palette-gallery/muted-microbe.png" width="360" alt="柔和微生物配色预览"> |
-| 免疫信号 | <img src="assets/palette-gallery/immuno-signal.png" width="360" alt="免疫信号配色预览"> |
-| 粉彩催化 | <img src="assets/palette-gallery/pastel-catalysis.png" width="360" alt="粉彩催化配色预览"> |
-| 电化学柔彩 | <img src="assets/palette-gallery/electrochemistry.png" width="360" alt="电化学柔彩配色预览"> |
-| 柔和成本 | <img src="assets/palette-gallery/soft-cost.png" width="360" alt="柔和成本配色预览"> |
-| 柔和学术 | <img src="assets/palette-gallery/soft-academic.png" width="360" alt="柔和学术配色预览"> |
-| 柔彩组学 | <img src="assets/palette-gallery/pastel-omics.png" width="360" alt="柔彩组学配色预览"> |
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Nature 默认</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature 默认配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>高辨识信号</strong><br><img src="assets/palette-gallery/vivid-signal.png" width="390" alt="高辨识信号配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>明亮生物</strong><br><img src="assets/palette-gallery/bright-bio.png" width="390" alt="明亮生物配色预览"></td>
+    <td align="center" valign="top"><strong>青绿组学</strong><br><img src="assets/palette-gallery/teal-genome.png" width="390" alt="青绿组学配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>柔和微生物</strong><br><img src="assets/palette-gallery/muted-microbe.png" width="390" alt="柔和微生物配色预览"></td>
+    <td align="center" valign="top"><strong>免疫信号</strong><br><img src="assets/palette-gallery/immuno-signal.png" width="390" alt="免疫信号配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>粉彩催化</strong><br><img src="assets/palette-gallery/pastel-catalysis.png" width="390" alt="粉彩催化配色预览"></td>
+    <td align="center" valign="top"><strong>电化学柔彩</strong><br><img src="assets/palette-gallery/electrochemistry.png" width="390" alt="电化学柔彩配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>柔和成本</strong><br><img src="assets/palette-gallery/soft-cost.png" width="390" alt="柔和成本配色预览"></td>
+    <td align="center" valign="top"><strong>柔和学术</strong><br><img src="assets/palette-gallery/soft-academic.png" width="390" alt="柔和学术配色预览"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="top"><strong>柔彩组学</strong><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="柔彩组学配色预览"></td>
+  </tr>
+</table>
 
 使用时可以直接说“使用 `teal-genome` 主题绘制”，也可以先看默认预览。首版预览通过质量检查后，Skill 会询问是否保留当前主题，或改用上述主题、你提供的十六进制颜色、配色图或论文图作为参考进行个性化重绘。自定义仅改变视觉配色，不改变数据、统计、图型、分组顺序或颜色语义。
 
