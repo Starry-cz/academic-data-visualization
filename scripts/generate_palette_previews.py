@@ -19,6 +19,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.colors import LinearSegmentedColormap
 
+from visual_qa import audit_figure
+
 
 ROOT = Path(__file__).resolve().parents[1]
 LIBRARY_PATH = ROOT / "references" / "palette-library.json"
@@ -76,12 +78,16 @@ def render_theme(theme: dict[str, object]) -> None:
     t = np.linspace(0, 8, 100)
     for index, color in enumerate(colors[:3]):
         y = 0.15 * index + np.sin(t * (0.72 + index * 0.05)) * 0.22 + 0.48
-        axes[0, 1].plot(t, y, color=color, linewidth=2.0, label=f"Group {index + 1}")
+        axes[0, 1].plot(t, y, color=color, linewidth=2.0)
         axes[0, 1].fill_between(t, y - 0.07, y + 0.07, color=color, alpha=0.18)
+        # 直接标注在曲线终点后的留白中，避免图例遮挡趋势和置信区间。
+        axes[0, 1].text(8.25, y[-1], f"Group {index + 1}", color=color, fontsize=7,
+                         va="center", ha="left")
     axes[0, 1].set_xlabel("Time")
     axes[0, 1].set_ylabel("Normalized value")
     axes[0, 1].set_title("Trend with interval", fontsize=9)
-    axes[0, 1].legend(loc="upper left", fontsize=7)
+    axes[0, 1].set_xlim(0, 10.4)
+    axes[0, 1].set_xticks([0, 2, 4, 6, 8])
     add_panel_label(axes[0, 1], "b")
 
     # c：矩阵使用主题的发散色，白色固定表示科学零点。
@@ -107,6 +113,8 @@ def render_theme(theme: dict[str, object]) -> None:
     add_panel_label(axes[1, 1], "d")
 
     output_prefix = OUTPUT_DIR / str(theme["id"])
+    report = audit_figure(fig, str(theme["id"]))
+    print(f"[QA PASS] {report.figure_name}: {report.checked_texts} texts, {report.checked_legends} legends")
     # README 使用 PNG；同时保留矢量文件，便于后续编辑或复用主题卡片。
     fig.savefig(output_prefix.with_suffix(".png"), dpi=320, bbox_inches="tight")
     fig.savefig(output_prefix.with_suffix(".svg"), bbox_inches="tight")

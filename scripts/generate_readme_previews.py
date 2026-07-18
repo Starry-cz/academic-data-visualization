@@ -17,6 +17,8 @@ from matplotlib.colors import LinearSegmentedColormap, rgb_to_hsv, hsv_to_rgb
 from matplotlib.patches import Ellipse
 from PIL import Image
 
+from visual_qa import audit_figure
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ATLAS_DIR = ROOT / "assets" / "figure-atlas"
@@ -227,6 +229,8 @@ def save_preview() -> Path:
     panel_label(ax_pca, "c")
     panel_label(ax_left, "d")
     output = ATLAS_DIR / "preview.png"
+    report = audit_figure(fig, output.stem)
+    print(f"[QA PASS] {report.figure_name}: {report.checked_texts} texts, {report.checked_legends} legends")
     fig.savefig(output, dpi=600, bbox_inches="tight", pad_inches=0.08)
     fig.savefig(output.with_suffix(".svg"), format="svg", bbox_inches="tight", pad_inches=0.08)
     fig.savefig(output.with_suffix(".pdf"), format="pdf", bbox_inches="tight", pad_inches=0.08)
@@ -313,6 +317,8 @@ def save_secondary_preview() -> Path:
     fig.suptitle("Evidence layers: distribution, effect and feature structure", x=0.02, ha="left", y=1.03,
                  fontsize=13, color=INK, fontweight="bold")
     output = ATLAS_DIR / "data-figure.png"
+    report = audit_figure(fig, output.stem)
+    print(f"[QA PASS] {report.figure_name}: {report.checked_texts} texts, {report.checked_legends} legends")
     fig.savefig(output, dpi=600, bbox_inches="tight", pad_inches=0.08)
     fig.savefig(output.with_suffix(".svg"), format="svg", bbox_inches="tight", pad_inches=0.08)
     fig.savefig(output.with_suffix(".pdf"), format="pdf", bbox_inches="tight", pad_inches=0.08)

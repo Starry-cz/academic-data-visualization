@@ -14,6 +14,8 @@ import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 import numpy as np
 
+from visual_qa import audit_figure
+
 MM_PER_INCH = 25.4
 MAX_HEIGHT_MM = 247
 
@@ -446,6 +448,7 @@ def render_python_panel(panel_func: Callable, spec: dict, output_path: str | Pat
         panel_func(ax, spec)
     except TypeError:
         panel_func(ax)
+    audit_figure(fig, output_path.stem)
     fig.savefig(output_path, bbox_inches="tight", dpi=spec.get("dpi", 450))
     plt.close(fig)
     return output_path
@@ -496,6 +499,7 @@ def compose_cross_language(
 
 def save_nature_ready_figure(fig, filename: str):
     """导出可编辑矢量主文件与 450 dpi RGB 栅格校样。"""
+    audit_figure(fig, Path(filename).stem)
     fig.savefig(f"{filename}.pdf", bbox_inches="tight")
     fig.savefig(f"{filename}.png", bbox_inches="tight", dpi=450)
 

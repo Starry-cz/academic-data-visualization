@@ -153,35 +153,35 @@ Skill 默认使用 `nature-default`，同时提供 14 组由科研图配色参�
 
 <table>
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Nature 默认</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature 默认配色预览"></td>
-    <td width="50%" align="center" valign="top"><strong>高辨识信号</strong><br><img src="assets/palette-gallery/vivid-signal.png" width="390" alt="高辨识信号配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>Nature 默认</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature 默认配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>高辨识信号</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="高辨识信号配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>明亮生物</strong><br><img src="assets/palette-gallery/bright-bio.png" width="390" alt="明亮生物配色预览"></td>
-    <td align="center" valign="top"><strong>青绿组学</strong><br><img src="assets/palette-gallery/teal-genome.png" width="390" alt="青绿组学配色预览"></td>
+    <td align="center" valign="top"><strong>明亮生物</strong><br><img src="assets/palette-gallery/bright-bio.png?qa=direct-labels-v1" width="390" alt="明亮生物配色预览"></td>
+    <td align="center" valign="top"><strong>青绿组学</strong><br><img src="assets/palette-gallery/teal-genome.png?qa=direct-labels-v1" width="390" alt="青绿组学配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>柔和微生物</strong><br><img src="assets/palette-gallery/muted-microbe.png" width="390" alt="柔和微生物配色预览"></td>
-    <td align="center" valign="top"><strong>免疫信号</strong><br><img src="assets/palette-gallery/immuno-signal.png" width="390" alt="免疫信号配色预览"></td>
+    <td align="center" valign="top"><strong>柔和微生物</strong><br><img src="assets/palette-gallery/muted-microbe.png?qa=direct-labels-v1" width="390" alt="柔和微生物配色预览"></td>
+    <td align="center" valign="top"><strong>免疫信号</strong><br><img src="assets/palette-gallery/immuno-signal.png?qa=direct-labels-v1" width="390" alt="免疫信号配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>粉彩催化</strong><br><img src="assets/palette-gallery/pastel-catalysis.png" width="390" alt="粉彩催化配色预览"></td>
-    <td align="center" valign="top"><strong>电化学柔彩</strong><br><img src="assets/palette-gallery/electrochemistry.png" width="390" alt="电化学柔彩配色预览"></td>
+    <td align="center" valign="top"><strong>粉彩催化</strong><br><img src="assets/palette-gallery/pastel-catalysis.png?qa=direct-labels-v1" width="390" alt="粉彩催化配色预览"></td>
+    <td align="center" valign="top"><strong>电化学柔彩</strong><br><img src="assets/palette-gallery/electrochemistry.png?qa=direct-labels-v1" width="390" alt="电化学柔彩配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>柔和成本</strong><br><img src="assets/palette-gallery/soft-cost.png" width="390" alt="柔和成本配色预览"></td>
-    <td align="center" valign="top"><strong>柔和学术</strong><br><img src="assets/palette-gallery/soft-academic.png" width="390" alt="柔和学术配色预览"></td>
+    <td align="center" valign="top"><strong>柔和成本</strong><br><img src="assets/palette-gallery/soft-cost.png?qa=direct-labels-v1" width="390" alt="柔和成本配色预览"></td>
+    <td align="center" valign="top"><strong>柔和学术</strong><br><img src="assets/palette-gallery/soft-academic.png?qa=direct-labels-v1" width="390" alt="柔和学术配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>柔彩组学</strong><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="柔彩组学配色预览"></td>
-    <td align="center" valign="top"><strong>暖冷动力学</strong><br><img src="assets/palette-gallery/warm-cool-kinetics.png" width="390" alt="暖冷动力学配色预览"></td>
+    <td align="center" valign="top"><strong>柔彩组学</strong><br><img src="assets/palette-gallery/pastel-omics.png?qa=direct-labels-v1" width="390" alt="柔彩组学配色预览"></td>
+    <td align="center" valign="top"><strong>暖冷动力学</strong><br><img src="assets/palette-gallery/warm-cool-kinetics.png?qa=direct-labels-v1" width="390" alt="暖冷动力学配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>含水层复苏</strong><br><img src="assets/palette-gallery/aquifer-recovery.png" width="390" alt="含水层复苏配色预览"></td>
-    <td align="center" valign="top"><strong>神经深蓝</strong><br><img src="assets/palette-gallery/neuro-navy.png" width="390" alt="神经深蓝配色预览"></td>
+    <td align="center" valign="top"><strong>含水层复苏</strong><br><img src="assets/palette-gallery/aquifer-recovery.png?qa=direct-labels-v1" width="390" alt="含水层复苏配色预览"></td>
+    <td align="center" valign="top"><strong>神经深蓝</strong><br><img src="assets/palette-gallery/neuro-navy.png?qa=direct-labels-v1" width="390" alt="神经深蓝配色预览"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center" valign="top"><strong>低温电解质</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png" width="390" alt="低温电解质配色预览"></td>
+    <td colspan="2" align="center" valign="top"><strong>低温电解质</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png?qa=direct-labels-v1" width="390" alt="低温电解质配色预览"></td>
   </tr>
 </table>
 

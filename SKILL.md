@@ -405,6 +405,8 @@ Execute the 4-pass QA protocol from `references/checklist.md`.
 - **Pass 2:** Visual logic & data integrity (VI-1 through VI-6)
 - **Pass 3:** Rendered output verification (VV-1 through VV-5)
 
+**Mandatory render gate:** before every `fig.savefig`, call `audit_figure(fig, figure_name)` from `scripts/visual_qa.py`. The gate renders the canvas and rejects (1) legends placed over an axes data area, (2) visible text outside the canvas, and (3) substantial text-to-text overlap. If it fails, move the legend outside the data area or use direct labels, adjust layout, then re-render and re-audit. A figure that fails this gate must never be exported or added to the README.
+
 QA Gateway: READY (all pass) → Deliver. FIX (≤2) → Fix and re-run. ESCALATE (>2) → Reviewer Simulation Mode.
 
 If Python/R runtime is unavailable, skip Pass 3 and warn the user.

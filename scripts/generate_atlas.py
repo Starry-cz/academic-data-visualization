@@ -22,6 +22,8 @@ from matplotlib.colors import LinearSegmentedColormap
 from scipy import stats
 from scipy.cluster.hierarchy import linkage, dendrogram
 
+from visual_qa import audit_figure
+
 warnings.filterwarnings("ignore")
 
 # ---------------------------------------------------------------------------
@@ -1914,6 +1916,8 @@ def build_atlas(panel_funcs, title, output_path, figsize=(11, 9)):
         fn(ax)
 
     # 所有子图标签都放在面板内部，固定画布可避免单个越界 artist 拉宽整张图鉴。
+    report = audit_figure(fig, title)
+    print(f"  [QA PASS] {report.figure_name}: {report.checked_texts} texts, {report.checked_legends} legends")
     fig.savefig(output_path, dpi=300, facecolor="white", edgecolor="none")
     plt.close(fig)
     print(f"  [OK] Saved: {output_path}")
