@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import tempfile
+import argparse
 from pathlib import Path
 
 # 在无桌面环境中使用独立缓存和 Agg 后端，避免依赖 Tk 图形界面。
@@ -115,11 +116,19 @@ def render_theme(theme: dict[str, object]) -> None:
 
 def main() -> None:
     """读取唯一的主题库并生成全部 README 预览图。"""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--theme", help="仅生成指定主题 ID 的预览图")
+    args = parser.parse_args()
     apply_preview_style()
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with LIBRARY_PATH.open(encoding="utf-8") as handle:
         library = json.load(handle)
-    for theme in library["themes"]:
+    themes = library["themes"]
+    if args.theme:
+        themes = [theme for theme in themes if theme["id"] == args.theme]
+        if not themes:
+            raise ValueError(f"未知主题 {args.theme!r}")
+    for theme in themes:
         render_theme(theme)
 
 

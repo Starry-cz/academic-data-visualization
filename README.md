@@ -104,23 +104,23 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 <table>
   <thead><tr><th width="16%">图表名称</th><th width="24%">预览</th><th width="29%">图形特征</th><th width="31%">典型应用场景</th></tr></thead>
   <tbody>
-    <tr><td valign="top">3D 热图</td><td align="center" valign="top"><img src="assets/figure-atlas/3Dheatmap.png?theme=pastel-omics-v2" width="190"></td><td valign="top">三维柱面同时编码矩阵数值，高度与颜色双重呈现</td><td valign="top">多因子交互效应、基因型 × 环境矩阵、三维强度分布</td></tr>
-    <tr><td valign="top">AUROC 曲线图</td><td align="center" valign="top"><img src="assets/figure-atlas/auroc.png?theme=pastel-omics-v2" width="190"></td><td valign="top">TPR–FPR 曲线，包含对角参考线与 AUC 标注</td><td valign="top">分类模型评估、多模型 ROC 对比、阈值敏感性分析</td></tr>
-    <tr><td valign="top">柱状图</td><td align="center" valign="top"><img src="assets/figure-atlas/bar.png?theme=pastel-omics-v2" width="190"></td><td valign="top">单变量柱形高度编码，可配合误差线和原始样本点</td><td valign="top">组间均值比较、单指标排序、计数统计</td></tr>
-    <tr><td valign="top">相关性密度图</td><td align="center" valign="top"><img src="assets/figure-atlas/CorrelationDensity.png?theme=pastel-omics-v2" width="190"></td><td valign="top">散点叠加二维核密度等高线与拟合关系</td><td valign="top">两变量关系强弱、密集区识别、异常点检测</td></tr>
-    <tr><td valign="top">相关性矩阵图</td><td align="center" valign="top"><img src="assets/figure-atlas/Correlationmatrix.png?theme=pastel-omics-v2" width="190"></td><td valign="top">方形网格以色阶和数值呈现成对相关系数</td><td valign="top">多变量相关性总览、特征筛选前共线性检查</td></tr>
-    <tr><td valign="top">密度热图</td><td align="center" valign="top"><img src="assets/figure-atlas/density_heatmap.png?theme=pastel-omics-v2" width="190"></td><td valign="top">连续二维核密度以颜色梯度铺满网格</td><td valign="top">大样本点云密度分布、替代过度重叠散点图</td></tr>
-    <tr><td valign="top">频率 3D 热图</td><td align="center" valign="top"><img src="assets/figure-atlas/Frequency_3DHeatmap.png?theme=pastel-omics-v2" width="190"></td><td valign="top">立体柱面展示分箱频次，兼顾分组与数量</td><td valign="top">等位基因频率分布、双因子计数交叉展示</td></tr>
-    <tr><td valign="top">分组相关性矩阵图</td><td align="center" valign="top"><img src="assets/figure-atlas/GroupCorrelationmatrix.png?theme=pastel-omics-v2" width="190"></td><td valign="top">按处理或环境拆分多个相关矩阵并列呈现</td><td valign="top">不同处理 / 环境下相关结构差异比较</td></tr>
-    <tr><td valign="top">分组柱状图</td><td align="center" valign="top"><img src="assets/figure-atlas/GroupedBarChart.png?theme=pastel-omics-v2" width="190"></td><td valign="top">同一类别下并列多个子组柱形，可配误差线</td><td valign="top">多处理 × 多指标对比、重复实验组间差异</td></tr>
-    <tr><td valign="top">Mantel 相关性检验图</td><td align="center" valign="top"><img src="assets/figure-atlas/MantelCorrelation.png?theme=pastel-omics-v2" width="190"></td><td valign="top">相关矩阵热图叠加连线，标注 Mantel r 与显著性</td><td valign="top">环境因子与群落 / 基因型矩阵关联、距离矩阵分析</td></tr>
-    <tr><td valign="top">PCA 双标图</td><td align="center" valign="top"><img src="assets/figure-atlas/PCA.png?theme=pastel-omics-v2" width="190"></td><td valign="top">主成分散点、分组置信椭圆与变量载荷组合</td><td valign="top">样本分离、群体结构、降维与变量贡献展示</td></tr>
-    <tr><td valign="top">雷达图</td><td align="center" valign="top"><img src="assets/figure-atlas/radar.png?theme=pastel-omics-v2" width="190"></td><td valign="top">多轴闭合轮廓比较多个指标的相对表现</td><td valign="top">少量对象的多指标画像、处理综合性状比较</td></tr>
-    <tr><td valign="top">山脊图</td><td align="center" valign="top"><img src="assets/figure-atlas/RidgePlot.png?theme=pastel-omics-v2" width="190"></td><td valign="top">多组核密度曲线沿纵向错位堆叠</td><td valign="top">多组或多时间点的分布变化与重叠模式</td></tr>
-    <tr><td valign="top">桑基图</td><td align="center" valign="top"><img src="assets/figure-atlas/sankey.png?theme=pastel-omics-v2" width="190"></td><td valign="top">带宽编码流量，连接来源、过程与去向</td><td valign="top">分类流向、物质 / 能量转移、状态转换展示</td></tr>
-    <tr><td valign="top">堆叠柱状散点图</td><td align="center" valign="top"><img src="assets/figure-atlas/StackedBarScatter.png?theme=pastel-omics-v2" width="190"></td><td valign="top">堆叠组成与原始散点结合，兼顾比例和个体差异</td><td valign="top">组成结构比较、样本级观测与汇总结果联读</td></tr>
-    <tr><td valign="top">趋势图</td><td align="center" valign="top"><img src="assets/figure-atlas/trend.png?theme=pastel-omics-v2" width="190"></td><td valign="top">连续折线展示时间、剂量或梯度方向的变化</td><td valign="top">时间序列、剂量反应、环境梯度趋势</td></tr>
-    <tr><td valign="top">小提琴图</td><td align="center" valign="top"><img src="assets/figure-atlas/violin_chart.png?theme=pastel-omics-v2" width="190"></td><td valign="top">分布密度轮廓与中位数 / 四分位等统计摘要结合</td><td valign="top">分组分布、离散程度与异常值比较</td></tr>
+    <tr><td valign="top">3D 热图</td><td align="center" valign="top"><img src="assets/figure-atlas/3Dheatmap.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">三维柱面同时编码矩阵数值，高度与颜色双重呈现</td><td valign="top">多因子交互效应、基因型 × 环境矩阵、三维强度分布</td></tr>
+    <tr><td valign="top">AUROC 曲线图</td><td align="center" valign="top"><img src="assets/figure-atlas/auroc.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">TPR–FPR 曲线，包含对角参考线与 AUC 标注</td><td valign="top">分类模型评估、多模型 ROC 对比、阈值敏感性分析</td></tr>
+    <tr><td valign="top">柱状图</td><td align="center" valign="top"><img src="assets/figure-atlas/bar.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">单变量柱形高度编码，可配合误差线和原始样本点</td><td valign="top">组间均值比较、单指标排序、计数统计</td></tr>
+    <tr><td valign="top">相关性密度图</td><td align="center" valign="top"><img src="assets/figure-atlas/CorrelationDensity.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">散点叠加二维核密度等高线与拟合关系</td><td valign="top">两变量关系强弱、密集区识别、异常点检测</td></tr>
+    <tr><td valign="top">相关性矩阵图</td><td align="center" valign="top"><img src="assets/figure-atlas/Correlationmatrix.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">方形网格以色阶和数值呈现成对相关系数</td><td valign="top">多变量相关性总览、特征筛选前共线性检查</td></tr>
+    <tr><td valign="top">密度热图</td><td align="center" valign="top"><img src="assets/figure-atlas/density_heatmap.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">连续二维核密度以颜色梯度铺满网格</td><td valign="top">大样本点云密度分布、替代过度重叠散点图</td></tr>
+    <tr><td valign="top">频率 3D 热图</td><td align="center" valign="top"><img src="assets/figure-atlas/Frequency_3DHeatmap.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">立体柱面展示分箱频次，兼顾分组与数量</td><td valign="top">等位基因频率分布、双因子计数交叉展示</td></tr>
+    <tr><td valign="top">分组相关性矩阵图</td><td align="center" valign="top"><img src="assets/figure-atlas/GroupCorrelationmatrix.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">按处理或环境拆分多个相关矩阵并列呈现</td><td valign="top">不同处理 / 环境下相关结构差异比较</td></tr>
+    <tr><td valign="top">分组柱状图</td><td align="center" valign="top"><img src="assets/figure-atlas/GroupedBarChart.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">同一类别下并列多个子组柱形，可配误差线</td><td valign="top">多处理 × 多指标对比、重复实验组间差异</td></tr>
+    <tr><td valign="top">Mantel 相关性检验图</td><td align="center" valign="top"><img src="assets/figure-atlas/MantelCorrelation.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">相关矩阵热图叠加连线，标注 Mantel r 与显著性</td><td valign="top">环境因子与群落 / 基因型矩阵关联、距离矩阵分析</td></tr>
+    <tr><td valign="top">PCA 双标图</td><td align="center" valign="top"><img src="assets/figure-atlas/PCA.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">主成分散点、分组置信椭圆与变量载荷组合</td><td valign="top">样本分离、群体结构、降维与变量贡献展示</td></tr>
+    <tr><td valign="top">雷达图</td><td align="center" valign="top"><img src="assets/figure-atlas/radar.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">多轴闭合轮廓比较多个指标的相对表现</td><td valign="top">少量对象的多指标画像、处理综合性状比较</td></tr>
+    <tr><td valign="top">山脊图</td><td align="center" valign="top"><img src="assets/figure-atlas/RidgePlot.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">多组核密度曲线沿纵向错位堆叠</td><td valign="top">多组或多时间点的分布变化与重叠模式</td></tr>
+    <tr><td valign="top">桑基图</td><td align="center" valign="top"><img src="assets/figure-atlas/sankey.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">带宽编码流量，连接来源、过程与去向</td><td valign="top">分类流向、物质 / 能量转移、状态转换展示</td></tr>
+    <tr><td valign="top">堆叠柱状散点图</td><td align="center" valign="top"><img src="assets/figure-atlas/StackedBarScatter.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">堆叠组成与原始散点结合，兼顾比例和个体差异</td><td valign="top">组成结构比较、样本级观测与汇总结果联读</td></tr>
+    <tr><td valign="top">趋势图</td><td align="center" valign="top"><img src="assets/figure-atlas/trend.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">连续折线展示时间、剂量或梯度方向的变化</td><td valign="top">时间序列、剂量反应、环境梯度趋势</td></tr>
+    <tr><td valign="top">小提琴图</td><td align="center" valign="top"><img src="assets/figure-atlas/violin_chart.png?theme=warm-cool-kinetics-v1" width="190"></td><td valign="top">分布密度轮廓与中位数 / 四分位等统计摘要结合</td><td valign="top">分组分布、离散程度与异常值比较</td></tr>
   </tbody>
 </table>
 
@@ -149,7 +149,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 
 ## 配色主题库与个性化重绘
 
-Skill 默认使用 `nature-default`，同时提供 10 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
+Skill 默认使用 `nature-default`，同时提供 11 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
 
 <table>
   <tr>
@@ -173,13 +173,14 @@ Skill 默认使用 `nature-default`，同时提供 10 组由科研图配色参�
     <td align="center" valign="top"><strong>柔和学术</strong><br><img src="assets/palette-gallery/soft-academic.png" width="390" alt="柔和学术配色预览"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center" valign="top"><strong>柔彩组学</strong><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="柔彩组学配色预览"></td>
+    <td align="center" valign="top"><strong>柔彩组学</strong><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="柔彩组学配色预览"></td>
+    <td align="center" valign="top"><strong>暖冷动力学</strong><br><img src="assets/palette-gallery/warm-cool-kinetics.png" width="390" alt="暖冷动力学配色预览"></td>
   </tr>
 </table>
 
 使用时可以直接说“使用 `teal-genome` 主题绘制”，也可以先看默认预览。首版预览通过质量检查后，Skill 会询问是否保留当前主题，或改用上述主题、你提供的十六进制颜色、配色图或论文图作为参考进行个性化重绘。自定义仅改变视觉配色，不改变数据、统计、图型、分组顺序或颜色语义。
 
-图表索引当前使用 `pastel-omics`（柔彩组学）主题；索引缩略图的中性文字、轴线与灰色信息保持不变。
+图表索引当前使用 `warm-cool-kinetics`（暖冷动力学）主题；索引缩略图的中性文字、轴线与灰色信息保持不变。
 
 ## 安装与更新
 

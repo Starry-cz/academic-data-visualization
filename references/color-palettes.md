@@ -1,6 +1,6 @@
 # Theme Library and Accessible Colour System
 
-This skill has one default theme and ten user-selectable themes extracted from the supplied scientific figure references. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
+This skill has one default theme and eleven user-selectable themes extracted from the supplied scientific figure references. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
 
 ## Select a theme
 
@@ -17,6 +17,7 @@ This skill has one default theme and ten user-selectable themes extracted from t
 | `soft-cost` | 柔和成本 | Techno-economic and process comparisons | `#6DA4B0 #ABCBD4 #E1B3AD #D78F81 #D7CDE1` |
 | `soft-academic` | 柔和学术 | Multi-panel academic reports and talks | `#FCE8E6 #FFC6BC #F8B9B8 #D6DFEF #A5CDE2 #5FA3CB` |
 | `pastel-omics` | 柔彩组学 | Multi-cohort omics and population-structure panels | `#F9ADE5 #EFEAB7 #BBD6F5 #AAD1CC #C0A3ED #F6B593` |
+| `warm-cool-kinetics` | 暖冷动力学 | Half-life, decay-rate, and time-resolved molecular panels | `#D7312D #F2724D #FEE395 #FEF9B7 #ACD2E5 #6090C1` |
 
 The canonical full values, including sequential and diverging ramps, live in [`palette-library.json`](palette-library.json). Use that file as the single source of truth for preview scripts and future adapters.
 

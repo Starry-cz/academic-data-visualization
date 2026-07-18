@@ -100,6 +100,15 @@
       "sequential": ["#F7FBFB", "#D5ECE7", "#AAD1CC", "#72B1AC", "#3DBFCC"],
       "diverging": ["#816EA7", "#FFFFFF", "#F6B593"],
       "accent": "#3DBFCC"
+    },
+    {
+      "id": "warm-cool-kinetics",
+      "name": "暖冷动力学",
+      "source": "用户上传图 11",
+      "categorical": ["#D7312D", "#F2724D", "#FEE395", "#FEF9B7", "#ACD2E5", "#6090C1", "#AB2428", "#FB8275", "#F79015", "#DAA81C", "#115FA4", "#82C9FF"],
+      "sequential": ["#FEF9B7", "#FEE395", "#F2724D", "#D7312D", "#AB2428"],
+      "diverging": ["#115FA4", "#FEF9B7", "#D7312D"],
+      "accent": "#D7312D"
     }
   ]
 }
