@@ -1,0 +1,4 @@
+interface:
+  display_name: "Academic Data Visualization"
+  short_description: "从研究问题、数据剖析、选图和排版到投稿级科研图表与视觉审查"
+  default_prompt: "Use $academic-data-visualization to select, create, and audit a publication-ready scientific figure from my data."

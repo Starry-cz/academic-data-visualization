@@ -23,9 +23,10 @@ from typing import Any
 
 import numpy as np
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]  # Academic Figure Skill/
-FIGURES_DIR = PROJECT_ROOT / "academic-figure-skill" / "assets" / "figures"
-RESULTS_FILE = PROJECT_ROOT / "academic-figure-skill" / "scripts" / ".eval_results.json"
+# 始终从当前仓库解析路径，避免依赖历史目录名。
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+FIGURES_DIR = PROJECT_ROOT / "assets" / "figures"
+RESULTS_FILE = PROJECT_ROOT / "scripts" / ".eval_results.json"
 
 # ═══════════════════════════════════════════════════════════
 # Required baseline checks (same values as compose.py UNIFIED_RCPARAMS)
@@ -147,9 +148,9 @@ def check_baseline_compliance() -> dict[str, Any]:
     results = {}
 
     # ── Python side ──
-    compose_py = PROJECT_ROOT / "academic-figure-skill" / "scripts" / "compose.py"
-    typo_md = PROJECT_ROOT / "academic-figure-skill" / "references" / "typography.md"
-    color_md = PROJECT_ROOT / "academic-figure-skill" / "references" / "color-palettes.md"
+    compose_py = PROJECT_ROOT / "scripts" / "compose.py"
+    typo_md = PROJECT_ROOT / "references" / "typography.md"
+    color_md = PROJECT_ROOT / "references" / "color-palettes.md"
 
     # Read compose.py CATEGORICAL
     with open(compose_py, "r", encoding="utf-8", errors="replace") as f:

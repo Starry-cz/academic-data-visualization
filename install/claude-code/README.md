@@ -17,4 +17,4 @@ After installation, Claude Code auto-triggers on: "make a volcano plot", "画个
 The skill checks `academic-data-visualization/assets/figures/<type>/` for production scripts before
 generating any code. Add your own scripts there to extend figure type coverage.
 
-Generated: 2026-07-17 03:28 UTC
+Generated: 2026-07-18 16:15 UTC

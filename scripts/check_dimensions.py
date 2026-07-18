@@ -21,13 +21,34 @@ import re
 import sys
 import os
 import argparse
+import io
+import tokenize
+
+
+def _strip_python_non_code(source):
+    """移除 Python 注释和字符串，避免把文档示例误判为实际尺寸声明。"""
+    tokens = []
+    for token in tokenize.generate_tokens(io.StringIO(source).readline):
+        if token.type in (tokenize.COMMENT, tokenize.STRING):
+            token = tokenize.TokenInfo(
+                token.type,
+                "",
+                token.start,
+                token.end,
+                token.line,
+            )
+        tokens.append(token)
+    return tokenize.untokenize(tokens)
 
 
 def _resolve_target(target):
     """If target is an existing file path, read its contents; otherwise return as-is."""
     if os.path.isfile(target):
         with open(target, "r", encoding="utf-8", errors="replace") as f:
-            return f.read()
+            content = f.read()
+        if target.lower().endswith(".py"):
+            return _strip_python_non_code(content)
+        return content
     return target
 
 
@@ -68,15 +89,9 @@ _RE_MPL_FIGSIZE_WITH_MM_COMMENT = re.compile(
     re.IGNORECASE,
 )
 
-# plt.subplots with figsize
-_RE_PLT_SUBPLOTS_FIGSIZE = re.compile(
-    r"""plt\.subplots?\s*\(\s*(?:[^,]*,\s*)*figsize\s*=\s*\(\s*(?P<width>[\d.]+)\s*,\s*(?P<height>[\d.]+)\s*\)""",
-    re.IGNORECASE,
-)
-
-# Matplotlib figure() with figsize
-_RE_MPL_FIGURE = re.compile(
-    r"""plt\.figure\s*\(\s*(?:[^,]*,\s*)*figsize\s*=\s*\(\s*(?P<width>[\d.]+)\s*,\s*(?P<height>[\d.]+)\s*\)""",
+# 组合引擎可通过毫米参数动态计算 figsize；把函数默认值视为明确的物理尺寸合同。
+_RE_DYNAMIC_WIDTH_MM = re.compile(
+    r"""fig_width_mm\s*:\s*float\s*=\s*(?P<width>[\d.]+)""",
     re.IGNORECASE,
 )
 
@@ -159,11 +174,22 @@ def _extract_dimensions(code):
     """
     dimensions = []
 
+    for match in _RE_DYNAMIC_WIDTH_MM.finditer(code):
+        width = _parse_dim(match.group("width"))
+        if width is not None:
+            dimensions.append(
+                (
+                    width,
+                    MAX_HEIGHT_MM,
+                    match.group(0).strip(),
+                    "dynamic millimetre canvas contract",
+                )
+            )
+
     # --- Matplotlib figsize in inches ---
+    # 通用 figsize 模式已经覆盖 figure/subplots；避免重复的宽泛模式在大脚本上产生正则回溯。
     for pattern, source in [
         (_RE_MPL_FIGSIZE_INCHES, "matplotlib figsize (inches)"),
-        (_RE_PLT_SUBPLOTS_FIGSIZE, "matplotlib subplots figsize (inches)"),
-        (_RE_MPL_FIGURE, "matplotlib figure figsize (inches)"),
     ]:
         for match in pattern.finditer(code):
             w = _parse_dim(match.group("width"))
@@ -252,7 +278,8 @@ def _extract_dimensions(code):
                 context = context[:77] + "..."
             dimensions.append((w * MM_PER_INCH, h * MM_PER_INCH, context, "R png() device (inches)"))
 
-    return dimensions
+    # 同一动态尺寸合同可能出现在多个函数签名中；报告时只保留一个等价声明。
+    return list(dict.fromkeys(dimensions))
 
 
 def check(target, journal="nature-genetics"):

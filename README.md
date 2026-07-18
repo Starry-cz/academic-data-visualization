@@ -258,8 +258,9 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 ```text
 academic-data-visualization/
-├── SKILL.md                 # Agent 入口与完整工作流
-├── references/              # 图型、视觉、导出与 QA 规范
+├── SKILL.md                 # 精简的 Agent 决策入口与按需路由
+├── agents/openai.yaml       # Codex 技能列表与默认提示元数据
+├── references/              # 图型、资产复用、视觉、导出与 QA 规范
 ├── scripts/                 # 组合、验证、预览与图鉴生成器
 ├── assets/                  # 可复用生产脚本与 README 图表预览
 └── install/                 # Codex / Cursor / Copilot / Claude 适配文件

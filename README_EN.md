@@ -205,8 +205,9 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 ```text
 academic-data-visualization/
-├── SKILL.md                 # Agent entry point and complete workflow
-├── references/              # figure, visual, export, and QA rules
+├── SKILL.md                 # concise decision entry point and progressive routing
+├── agents/openai.yaml       # Codex skill-list and default-prompt metadata
+├── references/              # figure, asset reuse, visual, export, and QA rules
 ├── scripts/                 # composition, validation, preview, and atlas generators
 ├── assets/                  # reusable production scripts and README previews
 └── install/                 # Codex / Cursor / Copilot / Claude adapters

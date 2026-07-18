@@ -18,8 +18,9 @@ from __future__ import annotations
 import json, re, sys
 from pathlib import Path
 
-PROJECT = Path(__file__).resolve().parents[2]
-SKILL_MD = PROJECT / "academic-figure-skill" / "SKILL.md"
+# 始终以当前脚本所在仓库为准，避免仓库改名后基准测试失效。
+PROJECT = Path(__file__).resolve().parents[1]
+SKILL_MD = PROJECT / "SKILL.md"
 
 # ═══════════════════════════════════════════════════════════
 # Test prompts — 40 cases

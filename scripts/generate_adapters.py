@@ -51,11 +51,19 @@ def extract_core_rules() -> str:
 # Auto-generated from academic-data-visualization/SKILL.md — {_now()}
 # These rules work across Claude Code, Codex, Cursor, and Copilot.
 
+## Advisor Workflow
+1. Define the scientific claim and unit of observation before selecting a chart.
+2. Profile only the relevant sample sizes, distributions, missingness, outliers, grouping, and dependence.
+3. Recommend the chart from data structure + argument; actively warn about misleading choices.
+4. Fix the target journal, final physical size, panel hierarchy, and backend before plotting.
+5. Render an RGB proof, run programmatic QA, inspect RGB + grayscale proofs, revise, then export.
+
 ## Design Principles
 1. One figure, one core message. Remove gridlines, borders, and redundant legends.
 2. Restrained color > abundant color. Use 2-4 semantic colors + 1 accent. Never default palettes.
 3. Design for print, not screen. Single column 89mm, double column 183mm.
 4. Vector first, raster fallback. Editable PDF/SVG/EPS for line art; TIFF/PNG (≥450dpi) for raster.
+5. Never call a composite fully editable when it embeds rasterized panel images.
 
 ## Color Palette — COPY VERBATIM
 
@@ -95,9 +103,10 @@ Font: Arial/Helvetica. No text below 5pt at final print dimensions. Panel labels
 - Multi-panel: rows have aspect-ratio-correct heights (heatmap=1.0, ridge=0.65).
 
 ## Production Scripts
-- Check `assets/figures/<type>/` for matching production scripts first.
-- If found, copy-modify-run — change only data paths and labels.
-- If not found, cross-type inherit from similar figure type.
+- Check `assets/figures/<type>/` and its companion preview before writing new code.
+- Classify each panel as native reuse, visual adapt, or new implementation.
+- Reuse only when chart semantics and data structure are compatible.
+- Preserve per-panel vector masters when a mixed composite must embed raster images.
 - R scripts: png(type="cairo"), showtext_auto(FALSE) before export.
 
 ## QA Checklist
@@ -109,6 +118,8 @@ Font: Arial/Helvetica. No text below 5pt at final print dimensions. Panel labels
 - [ ] Panel labels consistent (a,b,c...)
 - [ ] Legend outside plot or direct labeling
 - [ ] Colorblind-friendly (no red-green only pairs)
+- [ ] RGB and grayscale proofs inspected at intended size
+- [ ] Rasterized composite panels disclosed
 '''
 
 
@@ -170,17 +181,22 @@ def generate_codex_manifest(core: str) -> str:
 name: academic-data-visualization
 version: "1.0.0"
 description: >-
-  Publication-grade scientific figure creation for Nature/Cell/Science journals.
-  Handles any figure type with journal-grade typography, color science, and layout.
+  Publication-grade scientific figure advising, creation, revision, and visual QA.
+  Profiles data, selects defensible charts, applies journal-aware layout and colour,
+  and exports reproducible Python/R figures.
 
-entrypoint: skill.md
+entrypoint: SKILL.md
 resources:
+  - SKILL.md
   - instructions.md
+  - references/
+  - scripts/
   - assets/figures/
 
 triggers:
   - keywords: [figure, plot, chart, heatmap, volcano, boxplot, scatter, bar,
-               manuscript, publication, Nature, Cell, Science, 图, 绘图, 作图]
+               manuscript, publication, Nature, Cell, Science,
+               论文配图, 科研绘图, 学术图表, 图, 绘图, 作图]
   - file_patterns: ["*.py", "*.R", "*.r"]
     content_hints: ["matplotlib", "ggplot2", "seaborn", "ComplexHeatmap",
                     "plt.plot", "plt.scatter", "ggplot(", "geom_"]

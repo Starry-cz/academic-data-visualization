@@ -94,7 +94,7 @@ def parse_skill_md_refs() -> list[str]:
     """Extract all references/<file> and scripts/<file> mentions from SKILL.md."""
     text = SKILL_MD.read_text(encoding="utf-8")
     refs = re.findall(r'`(references/[^`]+\.(?:md|R))`', text)
-    scripts = re.findall(r'`(?:academic-figure-skill/)?scripts/([^`]+\.py)`', text)
+    scripts = re.findall(r'`(?:academic-data-visualization/)?scripts/([^`]+\.py)`', text)
     assets = re.findall(r'`assets/figures/([^`/]+)/', text)
     all_refs = refs + [f"scripts/{s}" for s in scripts] + [f"assets/figures/{a}" for a in assets]
     # Filter out placeholder patterns like <type>, <dir>, <ext>, <panel_label>
@@ -186,11 +186,13 @@ def check_reference_md_health() -> list[dict]:
     findings = []
     # Files SKILL.md says to always load / on-demand
     expected = [
-        "checklist.md", "color-palettes.md", "common-pitfalls.md",
-        "complexheatmap.md", "directory-map.md", "figure-type-catalog.md", "export-specs.md",
-        "figure-contract.md", "figure-deconstruction.md", "journal-intel.md",
+        "asset-reuse-protocol.md", "checklist.md", "color-palettes.md",
+        "common-pitfalls.md", "complexheatmap.md", "directory-map.md",
+        "export-specs.md", "figure-contract.md", "figure-deconstruction.md",
+        "figure-design-brief.md", "figure-type-catalog.md", "journal-intel.md",
         "journal-specs.md", "matplotlib.md", "multipanel-layout.md",
-        "r-rendering.md", "revision-cases.md", "typography.md",
+        "nature-publication-style.md", "r-rendering.md", "revision-cases.md",
+        "typography.md", "visual-style.md",
         "compose.R",
     ]
     for fname in expected:
