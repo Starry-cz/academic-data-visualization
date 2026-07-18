@@ -163,8 +163,11 @@ Skill 默认使用 `nature-default`，同时提供 9 组由科研图配色参考
 | 电化学柔彩 | <img src="assets/palette-gallery/electrochemistry.png" width="360" alt="电化学柔彩配色预览"> |
 | 柔和成本 | <img src="assets/palette-gallery/soft-cost.png" width="360" alt="柔和成本配色预览"> |
 | 柔和学术 | <img src="assets/palette-gallery/soft-academic.png" width="360" alt="柔和学术配色预览"> |
+| 柔彩组学 | <img src="assets/palette-gallery/pastel-omics.png" width="360" alt="柔彩组学配色预览"> |
 
 使用时可以直接说“使用 `teal-genome` 主题绘制”，也可以先看默认预览。首版预览通过质量检查后，Skill 会询问是否保留当前主题，或改用上述主题、你提供的十六进制颜色、配色图或论文图作为参考进行个性化重绘。自定义仅改变视觉配色，不改变数据、统计、图型、分组顺序或颜色语义。
+
+图表索引当前使用 `pastel-omics`（柔彩组学）主题；索引缩略图的中性文字、轴线与灰色信息保持不变。
 
 ## 安装与更新
 

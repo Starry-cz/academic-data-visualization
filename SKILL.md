@@ -16,6 +16,8 @@ CNS reviewers skim fast. A figure must convey its main conclusion in 3 seconds. 
 **2. Restrained color > abundant color.**
 Default palettes (matplotlib tab10, ggplot2 hue_pal, Excel colors) signal "not designed" instantly. Use 2-4 semantic main colors + 1 accent. Use the colourblind-safe `nature-default` theme unless the user selects a named alternative. The theme library, custom recoloring protocol, and preview gallery are defined in `references/color-palettes.md`.
 
+For a requested refresh of the README 图表索引 thumbnails, use `scripts/recolor_figure_atlas.py` with a named library theme. This is a style-only transformation: preserve the original thumbnail geometry, labels, statistical annotations, and neutral ink; regenerate the palette gallery before updating the README.
+
 **3. Design for print, not screen.**
 Journal column widths are fixed (89 mm single, 183 mm double). Set figure dimensions at creation time — never scale down post-render. At final size, use Arial/Helvetica, 5-7 pt routine text, and 8 pt bold upright lowercase panel labels.
 
