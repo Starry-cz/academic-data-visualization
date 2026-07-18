@@ -231,6 +231,14 @@ git pull
 - **数据与论证：** 不当均值柱、样本丢失、相关 / 分离度表述与统计注释；
 - **视觉复核：** 文字裁切、刻度重叠、子图对齐、灰度与色盲可读性。
 
+### 出图不是终点：六步质量闭环
+
+| 1. 论证先行 | 2. 数据核查 | 3. 图型与版式 | 4. 视觉系统 | 5. 双重审查 | 6. 可投稿交付 |
+|---|---|---|---|---|---|
+| 先写清一张图要证明什么 | 检查样本量、分布、异常与数据边界 | 选择图型，确定英雄面板与证据顺序 | 期刊规格、语义色与冗余编码 | 程序布局闸门 + RGB / 灰度校样人工复核 | PDF / SVG 主文件 + 高分辨率预览 + QA 报告 |
+
+灰度校样会把最终 PNG 转为只保留亮度的版本，专门检查“颜色拿掉以后”是否还能读懂关键比较。若不能，Skill 必须补充形状、线型、直接标签、纹理或明确排序，而不是只更换另一组颜色相近的色相。
+
 ```bash
 # 核查一个生成脚本
 python scripts/qa_validator.py path/to/figure.py
@@ -239,6 +247,9 @@ python scripts/qa_validator.py path/to/figure.py
 python scripts/qa_coverage.py
 python scripts/generate_readme_previews.py
 python scripts/generate_atlas.py
+
+# 为最终 PNG 生成灰度可读性校样
+python scripts/grayscale_proof.py figure-proof.png --output figure-proof-grayscale.png
 ```
 
 ## 项目结构

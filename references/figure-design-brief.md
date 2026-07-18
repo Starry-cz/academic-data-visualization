@@ -54,9 +54,10 @@ After the automatic `visual_qa.py` gate passes, inspect the rendered figure at i
 - Is there enough whitespace between panels for labels, colour bars, and direct line labels?
 - Does each accent colour identify one concept consistently, rather than competing for attention?
 - Can the reader follow the panels left-to-right without jumping back to a legend?
+- Does the grayscale proof preserve every decision-relevant comparison through luminance or a redundant non-colour encoding?
 
 If any answer is no, revise the composition or colour roles and run the mandatory render gate again before exporting.
 
 ## Design reference note
 
-This guide independently translates useful high-level ideas from public figure resources into reproducible plotting constraints: curated examples, early aspect-ratio decisions, strong panel hierarchy, restrained literature-style colour roles, journal-aware style baselines, dense-but-scannable composition, and reserved legend space for complex comparisons. It does not reuse their scripts, prompts, or generated images. References: <https://github.com/wuyoscar/GPT-Image2-Skill#gallery-research-paper-figures>, <https://github.com/ChenLiu-1996/figures4papers>, and <https://github.com/TingxiYu/academic-figure-skill>.
+This guide independently translates useful high-level ideas from public figure resources into reproducible plotting constraints: curated examples, early aspect-ratio decisions, strong panel hierarchy, restrained literature-style colour roles, journal-aware style baselines, dense-but-scannable composition, reserved legend space for complex comparisons, and a rendered grayscale proof rather than a palette-only accessibility claim. It does not reuse their scripts, prompts, or generated images. References: <https://github.com/wuyoscar/GPT-Image2-Skill#gallery-research-paper-figures>, <https://github.com/ChenLiu-1996/figures4papers>, <https://github.com/TingxiYu/academic-figure-skill>, and <https://github.com/Haojae/scipilot-figure-skill>.

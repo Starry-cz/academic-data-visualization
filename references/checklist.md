@@ -392,10 +392,26 @@ Passes 0-2 verify the **code**. Pass 3 verifies the **output**. These are proble
 
 **Pass condition:** All chart-type-specific checks pass. All panels have 1.5%-50% content density.
 
+### VV-6: Grayscale Proof and Redundant Encoding
+
+**Question:** Does every critical comparison remain interpretable when colour information is removed?
+
+**How to check:** After rendering the final RGB PNG, run:
+
+```bash
+python scripts/grayscale_proof.py figure-proof.png --output figure-proof-grayscale.png
+```
+
+Inspect the RGB and grayscale files side by side at the intended display size. Check each comparison that carries a scientific claim, not only the palette swatches.
+
+**Pass condition:** Critical groups, lines, thresholds, and highlighted points are still distinguishable through luminance, direct labels, marker shape, line style, hatch, position, or an unambiguous ordering. Colour is never the only carrier of a decision-relevant distinction.
+
+**Fix if FAIL:** First add a redundant non-colour encoding or direct label. Only then adjust luminance contrast if necessary. Do not resolve a failure by replacing one hue with another hue of similar luminance.
+
 ### Visual Verification Protocol
 
 1. **Render the figure** 鈥?Run the generated code. If Python/R is not available locally, skip Pass 3 and flag the limitation to the user.
-2. **Inspect methodically** 鈥?Check VV-1 through VV-5 in order. Do not scan 鈥?focus on each check individually.
+2. **Inspect methodically** 鈥?Check VV-1 through VV-6 in order. Do not scan 鈥?focus on each check individually.
 3. **Fix and re-render** 鈥?Each FAIL requires a code fix AND re-rendering. Fix all VV issues, re-render, and re-inspect. Maximum 3 render-fix cycles.
 4. **Escalate if stuck** 鈥?If 3 cycles don't resolve the issues, the layout likely needs restructuring. Escalate to Reviewer Simulation Mode for a wider diagnosis.
 

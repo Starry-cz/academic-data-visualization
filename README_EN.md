@@ -178,6 +178,14 @@ Quality checks cover scientific-communication risks beyond whether a script runs
 - **data and evidence:** inappropriate summary bars, missing samples, correlation / separation claims, and statistical annotations;
 - **visual review:** clipping, overlapping ticks, panel alignment, greyscale and colour-blind readability.
 
+### A six-step publication-readiness loop
+
+| 1. Argument first | 2. Data checks | 3. Figure & layout | 4. Visual system | 5. Dual review | 6. Submission-ready delivery |
+|---|---|---|---|---|---|
+| State what one figure must prove | Check sample size, distributions, outliers, and data boundaries | Select the chart and evidence hierarchy | Apply journal specifications, semantic colour, and redundant encoding | Programmatic layout gate plus RGB / grayscale proof review | PDF / SVG master, high-resolution proof, and QA report |
+
+The grayscale proof keeps only luminance from the final PNG. If a decision-relevant comparison disappears, the skill must add marker shape, line style, direct labels, hatching, or clear ordering rather than simply swapping to another similar-looking hue.
+
 ```bash
 # Check one figure-generation script
 python scripts/qa_validator.py path/to/figure.py
@@ -186,6 +194,9 @@ python scripts/qa_validator.py path/to/figure.py
 python scripts/qa_coverage.py
 python scripts/generate_readme_previews.py
 python scripts/generate_atlas.py
+
+# Create a grayscale readability proof for the final PNG
+python scripts/grayscale_proof.py figure-proof.png --output figure-proof-grayscale.png
 ```
 
 ## Repository layout

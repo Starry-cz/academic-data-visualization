@@ -62,7 +62,7 @@ User request received
        │
        ▼
   Step 6: QA Protocol ←── 4-pass QA (AP-0..AP-7, CL-1..CL-7,
-       │                  VI-1..VI-6, VV-1..VV-5). Fix → re-render.
+       │                  VI-1..VI-6, VV-1..VV-6). Fix → re-render.
        ▼
   Step 6.5: Palette Personalization ←── Show the rendered preview, then offer
        │                                  a named theme, hex colours, or a
@@ -414,6 +414,8 @@ Execute the 4-pass QA protocol from `references/checklist.md`.
 - **Pass 3:** Rendered output verification (VV-1 through VV-5)
 
 **Mandatory render gate:** before every `fig.savefig`, call `audit_figure(fig, figure_name)` from `scripts/visual_qa.py`. The gate renders the canvas and rejects (1) legends placed over an axes data area, (2) visible text outside the canvas, and (3) substantial text-to-text overlap. If it fails, move the legend outside the data area or use direct labels, adjust layout, then re-render and re-audit. A figure that fails this gate must never be exported or added to the README.
+
+**Mandatory grayscale-proof gate:** after every final PNG proof is rendered, run `python scripts/grayscale_proof.py <preview.png> --output <preview-grayscale.png>` and inspect both files at intended display size. Critical categories must remain distinguishable without colour alone. When two groups merge in the grayscale proof, add a direct label, marker shape, line style, hatch, or unambiguous ordering; do not merely exchange two similar colours. Record the proof path in the QA report. This produces an auditable image proof, not an unsupported automatic claim that any palette is accessible.
 
 **Composition review for multi-panel figures:** compare the rendered figure with the five-line design brief from `references/figure-design-brief.md`. Confirm the intended aspect ratio, hero/support visual hierarchy, panel reading order, whitespace for annotations, and one-to-one semantic colour roles. If any item fails, revise the layout or palette assignment, then re-run the mandatory render gate.
 
