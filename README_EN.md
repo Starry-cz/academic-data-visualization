@@ -180,9 +180,11 @@ Quality checks cover scientific-communication risks beyond whether a script runs
 
 ### A six-step publication-readiness loop
 
-| 1. Argument first | 2. Data checks | 3. Figure & layout | 4. Visual system | 5. Dual review | 6. Submission-ready delivery |
-|---|---|---|---|---|---|
-| State what one figure must prove | Check sample size, distributions, outliers, and data boundaries | Select the chart and evidence hierarchy | Apply journal specifications, semantic colour, and redundant encoding | Programmatic layout gate plus RGB / grayscale proof review | PDF / SVG master, high-resolution proof, and QA report |
+| Stage | What it completes | Stage | What it completes |
+|---|---|---|---|
+| **1. Argument first** | State what one figure must prove. | **2. Data checks** | Check sample size, distributions, outliers, and data boundaries. |
+| **3. Figure & layout** | Select the chart and evidence hierarchy. | **4. Visual system** | Apply journal specifications, semantic colour, and redundant encoding. |
+| **5. Dual review** | Use the programmatic layout gate plus RGB / grayscale proof review. | **6. Submission-ready delivery** | Provide a PDF / SVG master, high-resolution proof, and QA report. |
 
 The grayscale proof keeps only luminance from the final PNG. If a decision-relevant comparison disappears, the skill must add marker shape, line style, direct labels, hatching, or clear ordering rather than simply swapping to another similar-looking hue.
 
