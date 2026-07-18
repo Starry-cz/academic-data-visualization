@@ -108,6 +108,8 @@ Classify the request into one of:
 
 Pass the archetype to `compose_figure(archetype=...)`. The engine auto-detects which panel is the hero and applies asymmetric layout when the archetype is not `quantitative_grid` or `symmetric`.
 
+**Step 0a.1 — Create the figure design brief for 2+ panels.** Before any panel code, read `references/figure-design-brief.md` and state the canvas ratio, core message, hero panel, support sequence, and stable colour roles. Select one of its composition recipes; do not assemble a multi-panel figure as an unplanned grid. This brief is a required input to the later visual QA review.
+
 **Step 0b — Parse data.** Once the archetype is classified, read and analyze the data — but only the aspects relevant to the question.
 
 1. **Parse structure:** Load the data. Count rows, columns. Classify each column (continuous / categorical / group label / identifier).
@@ -195,6 +197,8 @@ Load these four files and copy their "COPY VERBATIM" code blocks into the script
 **Palette selection is part of the style baseline.** Read the theme table in `references/color-palettes.md` before writing plotting code. Record the selected theme in the script header and map its colours to stable semantic roles (baseline, comparison, emphasis, context). If the user gives no preference, use `nature-default`; do not silently substitute matplotlib, seaborn, ggplot2, Excel, rainbow, or `tab10` colours.
 
 Also read `references/journal-specs.md` for target dimensions (89mm single / 183mm double).
+
+For any two-or-more-panel figure, also apply `references/figure-design-brief.md` and `references/multipanel-layout.md`: aspect ratio and hierarchy are fixed before plotting, while `audit_figure` remains the non-negotiable export gate.
 
 ---
 
@@ -407,6 +411,8 @@ Execute the 4-pass QA protocol from `references/checklist.md`.
 
 **Mandatory render gate:** before every `fig.savefig`, call `audit_figure(fig, figure_name)` from `scripts/visual_qa.py`. The gate renders the canvas and rejects (1) legends placed over an axes data area, (2) visible text outside the canvas, and (3) substantial text-to-text overlap. If it fails, move the legend outside the data area or use direct labels, adjust layout, then re-render and re-audit. A figure that fails this gate must never be exported or added to the README.
 
+**Composition review for multi-panel figures:** compare the rendered figure with the five-line design brief from `references/figure-design-brief.md`. Confirm the intended aspect ratio, hero/support visual hierarchy, panel reading order, whitespace for annotations, and one-to-one semantic colour roles. If any item fails, revise the layout or palette assignment, then re-run the mandatory render gate.
+
 QA Gateway: READY (all pass) → Deliver. FIX (≤2) → Fix and re-run. ESCALATE (>2) → Reviewer Simulation Mode.
 
 If Python/R runtime is unavailable, skip Pass 3 and warn the user.
@@ -537,6 +543,7 @@ Generated adapters are in `install/`:
 | `references/common-pitfalls.md` | After code generation |
 | `references/revision-cases.md` | Figure type matches known case / "will this pass review" |
 | `references/multipanel-layout.md` | Multi-panel figures — anti-redundancy, hero panel, narrative |
+| `references/figure-design-brief.md` | Multi-panel figures — aspect ratio, composition recipes, colour roles, and pre-export hierarchy review |
 | `references/directory-map.md` | Step 4 — maps user language to exact figure directory paths |
 | `references/figure-type-catalog.md` | 图型选择不明确、要扩展图型、或属于专业 / 工作可视化场景 |
 | `references/figure-deconstruction.md` | Compositional inspiration |

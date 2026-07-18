@@ -136,6 +136,33 @@
       "sequential": ["#F8FAFC", "#D9EBF2", "#A2D1E6", "#355AA4"],
       "diverging": ["#355AA4", "#FFFFFF", "#F9CFB1"],
       "accent": "#355AA4"
+    },
+    {
+      "id": "literature-clinical",
+      "name": "临床文献",
+      "source": "基于文献图的白底、柔和蓝绿与珊瑚强调角色重新组合",
+      "categorical": ["#477E95", "#72AE9E", "#D87B67", "#D4B261", "#9C86B3", "#7A8791"],
+      "sequential": ["#F7FAF9", "#CDE5DF", "#8ABFB4", "#3D7A76"],
+      "diverging": ["#3D7890", "#FFFDF9", "#C86A59"],
+      "accent": "#D87B67"
+    },
+    {
+      "id": "sage-methods",
+      "name": "鼠尾草方法",
+      "source": "基于方法图的青绿、砂岩与淡紫角色重新组合",
+      "categorical": ["#3B7480", "#8CB58B", "#DCA16C", "#C7859D", "#8295C0", "#8B9590"],
+      "sequential": ["#F8FBF8", "#D7E7D8", "#93BD99", "#4E8A70"],
+      "diverging": ["#3B7480", "#FFFEFA", "#C06D7C"],
+      "accent": "#C7859D"
+    },
+    {
+      "id": "quiet-atlas",
+      "name": "静谧图谱",
+      "source": "基于信息图的雾蓝、浅绿、暖沙与低饱和紫色角色重新组合",
+      "categorical": ["#4F738C", "#90B9C8", "#D4A48B", "#9B88B2", "#7EAF9A", "#C7AA59"],
+      "sequential": ["#F8FAFB", "#D5E7EA", "#9CC6CC", "#4E8590"],
+      "diverging": ["#4F738C", "#FFFDF8", "#CB846D"],
+      "accent": "#D4A48B"
     }
   ]
 }

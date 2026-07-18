@@ -73,7 +73,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 | 坐标与留白 | 保留必要的坐标轴、刻度与单位；默认不使用背景网格、阴影和装饰图标 |
 | 交付 | RGB；文本与线稿优先可编辑 PDF / SVG；真实栅格内容提供 450 dpi PNG / TIFF |
 
-完整执行合同见 [`references/nature-publication-style.md`](references/nature-publication-style.md)，并与 [`references/typography.md`](references/typography.md)、[`references/color-palettes.md`](references/color-palettes.md) 和 [`references/export-specs.md`](references/export-specs.md) 联动。
+完整执行合同见 [`references/nature-publication-style.md`](references/nature-publication-style.md)，并与 [`references/typography.md`](references/typography.md)、[`references/color-palettes.md`](references/color-palettes.md) 和 [`references/export-specs.md`](references/export-specs.md) 联动。两张以上的主图会额外使用 [`references/figure-design-brief.md`](references/figure-design-brief.md)，在画图前固定长宽比、英雄面板、证据顺序与配色角色，再进入自动审查。
 
 ## 全部图表导航
 
@@ -149,7 +149,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 
 ## 配色主题库与个性化重绘
 
-Skill 默认使用 `nature-default`，同时提供 14 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。
+Skill 默认使用 `nature-default`，同时提供 17 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。新增主题将“白底、低饱和主体色、单一暖色强调、清晰留白”的文献图视觉语言整理为可直接调用的配色角色。
 
 <table>
   <tr>
@@ -181,7 +181,12 @@ Skill 默认使用 `nature-default`，同时提供 14 组由科研图配色参�
     <td align="center" valign="top"><strong>神经深蓝</strong><br><img src="assets/palette-gallery/neuro-navy.png?qa=direct-labels-v1" width="390" alt="神经深蓝配色预览"></td>
   </tr>
   <tr>
-    <td colspan="2" align="center" valign="top"><strong>低温电解质</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png?qa=direct-labels-v1" width="390" alt="低温电解质配色预览"></td>
+    <td align="center" valign="top"><strong>低温电解质</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png?qa=direct-labels-v1" width="390" alt="低温电解质配色预览"></td>
+    <td align="center" valign="top"><strong>临床文献</strong><br><img src="assets/palette-gallery/literature-clinical.png?qa=direct-labels-v1" width="390" alt="临床文献配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>鼠尾草方法</strong><br><img src="assets/palette-gallery/sage-methods.png?qa=direct-labels-v1" width="390" alt="鼠尾草方法配色预览"></td>
+    <td align="center" valign="top"><strong>静谧图谱</strong><br><img src="assets/palette-gallery/quiet-atlas.png?qa=direct-labels-v1" width="390" alt="静谧图谱配色预览"></td>
   </tr>
 </table>
 

@@ -1,6 +1,6 @@
 # Theme Library and Accessible Colour System
 
-This skill has one default theme and fourteen user-selectable themes extracted from the supplied scientific figure references. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
+This skill has one default theme and seventeen user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
 
 ## Select a theme
 
@@ -21,6 +21,9 @@ This skill has one default theme and fourteen user-selectable themes extracted f
 | `aquifer-recovery` | 含水层复苏 | Hydrogeology, climate, and recovery trajectories | `#F599A1 #9FD7E9 #95AEDA #FCD590 #A577AD #73C79E` |
 | `neuro-navy` | 神经深蓝 | Neuroscience contrasts and intervention comparisons | `#D9E6EB #9FC3D5 #8F96BD #2A347A #D6D69B` |
 | `cryo-electrolyte` | 低温电解质 | Electrolytes, low-temperature materials, and stability panels | `#ECE3EF #CFBBD9 #D9EBF2 #A2D1E6 #F9CFB1 #355AA4` |
+| `literature-clinical` | 临床文献 | Clinical cohorts, biomarker workflows, survival and response panels | `#477E95 #72AE9E #D87B67 #D4B261 #9C86B3` |
+| `sage-methods` | 鼠尾草方法 | Methods, multi-modal workflows, and restrained comparison panels | `#3B7480 #8CB58B #DCA16C #C7859D #8295C0` |
+| `quiet-atlas` | 静谧图谱 | Dense overview figures, atlas-style summaries, and explanatory graphics | `#4F738C #90B9C8 #D4A48B #9B88B2 #7EAF9A` |
 
 The canonical full values, including sequential and diverging ramps, live in [`palette-library.json`](palette-library.json). Use that file as the single source of truth for preview scripts and future adapters.
 
