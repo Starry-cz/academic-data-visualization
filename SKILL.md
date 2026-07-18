@@ -110,6 +110,8 @@ Pass the archetype to `compose_figure(archetype=...)`. The engine auto-detects w
 
 **Step 0a.1 — Create the figure design brief for 2+ panels.** Before any panel code, read `references/figure-design-brief.md` and state the canvas ratio, core message, hero panel, support sequence, and stable colour roles. Select one of its composition recipes; do not assemble a multi-panel figure as an unplanned grid. This brief is a required input to the later visual QA review.
 
+For three or more benchmark metrics, method variants, or ablation blocks, explicitly evaluate the `benchmark-strip` recipe. Use a wide canvas only when it preserves readable labels and a left-to-right evidence sequence; reserve a legend-only cell when four or more series cannot be labeled directly or placed outside the data area.
+
 **Step 0b — Parse data.** Once the archetype is classified, read and analyze the data — but only the aspects relevant to the question.
 
 1. **Parse structure:** Load the data. Count rows, columns. Classify each column (continuous / categorical / group label / identifier).
@@ -412,6 +414,8 @@ Execute the 4-pass QA protocol from `references/checklist.md`.
 **Mandatory render gate:** before every `fig.savefig`, call `audit_figure(fig, figure_name)` from `scripts/visual_qa.py`. The gate renders the canvas and rejects (1) legends placed over an axes data area, (2) visible text outside the canvas, and (3) substantial text-to-text overlap. If it fails, move the legend outside the data area or use direct labels, adjust layout, then re-render and re-audit. A figure that fails this gate must never be exported or added to the README.
 
 **Composition review for multi-panel figures:** compare the rendered figure with the five-line design brief from `references/figure-design-brief.md`. Confirm the intended aspect ratio, hero/support visual hierarchy, panel reading order, whitespace for annotations, and one-to-one semantic colour roles. If any item fails, revise the layout or palette assignment, then re-run the mandatory render gate.
+
+**Comparison-panel review:** for multi-metric or ablation figures, confirm that the aspect ratio is justified by the number of metrics, repeated labels are removed only when a shared legend/title preserves interpretation, and any dense legend occupies reserved whitespace or its own axes. Use a hatch or thin edge only when it is necessary for grayscale-safe distinction; it must never be decorative.
 
 QA Gateway: READY (all pass) → Deliver. FIX (≤2) → Fix and re-run. ESCALATE (>2) → Reviewer Simulation Mode.
 

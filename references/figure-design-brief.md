@@ -24,8 +24,16 @@ Colour roles: [baseline, comparison, emphasis, context]
 | `hero-plus-proof` | One decisive map, UMAP, heatmap, image plate, or model output | hero occupies 1.2–1.5× area; two to four smaller proofs align to its edge | main result → mechanism / stratification → validation |
 | `workflow-to-result` | Cohort, multi-modal, or methods figures | compact schematic plus 2–3 data panels; schematic never displaces core evidence | data / outcome first → method synthesis → practical interpretation |
 | `landscape-comparison` | Benchmarks, ablations, or time series | shared baseline across a horizontal sequence; direct labels at line ends | benchmark → difference → uncertainty / sensitivity |
+| `benchmark-strip` | Three or more metrics, methods, or ablation blocks | use a width/height ratio of 2.6–4.0; add a dedicated legend cell when labels cannot fit outside | reference → proposed / variants → robustness |
 
 For `workflow-to-result`, place a schematic first only if it is essential to decode the measurements. Otherwise put empirical evidence at (a) and the explanatory schematic later.
+
+### Legend decision rule
+
+1. Prefer direct labels when there are at most three readable lines or groups.
+2. Place a compact legend outside the data area when it fits without shrinking the panel.
+3. For four or more series, repeated method names, or a multi-metric `benchmark-strip`, reserve one small legend-only cell. Turn its axes off and collect handles from the data panels. Never overlay a large legend on evidence merely to preserve a symmetric grid.
+4. When categories are identified entirely by a shared legend and panel title, hide repeated x-tick names only if this does not make a standalone panel ambiguous.
 
 ## 3. Palette roles, not palette decoration
 
@@ -49,4 +57,4 @@ If any answer is no, revise the composition or colour roles and run the mandator
 
 ## Design reference note
 
-This guide independently translates the useful high-level ideas from the GPT-Image2-Skill research-figure gallery—curated examples, early aspect-ratio decisions, strong panel hierarchy, restrained literature-style colour roles, and dense-but-scannable composition—into reproducible plotting constraints. It does not reuse its prompts or generated images. Reference: <https://github.com/wuyoscar/GPT-Image2-Skill#gallery-research-paper-figures>.
+This guide independently translates useful high-level ideas from two public figure resources into reproducible plotting constraints: curated examples, early aspect-ratio decisions, strong panel hierarchy, restrained literature-style colour roles, dense-but-scannable composition, and reserved legend space for complex comparisons. It does not reuse their scripts, prompts, or generated images. References: <https://github.com/wuyoscar/GPT-Image2-Skill#gallery-research-paper-figures> and <https://github.com/ChenLiu-1996/figures4papers>.

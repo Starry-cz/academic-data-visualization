@@ -1,6 +1,6 @@
 # Theme Library and Accessible Colour System
 
-This skill has one default theme and seventeen user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
+This skill has one default theme and nineteen user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
 
 ## Select a theme
 
@@ -24,6 +24,8 @@ This skill has one default theme and seventeen user-selectable themes. The palet
 | `literature-clinical` | 临床文献 | Clinical cohorts, biomarker workflows, survival and response panels | `#477E95 #72AE9E #D87B67 #D4B261 #9C86B3` |
 | `sage-methods` | 鼠尾草方法 | Methods, multi-modal workflows, and restrained comparison panels | `#3B7480 #8CB58B #DCA16C #C7859D #8295C0` |
 | `quiet-atlas` | 静谧图谱 | Dense overview figures, atlas-style summaries, and explanatory graphics | `#4F738C #90B9C8 #D4A48B #9B88B2 #7EAF9A` |
+| `method-blueprint` | 方法蓝图 | Benchmark, multi-method, and proposed-versus-baseline comparisons | `#0F4D92 #3775BA #8BCF8B #B64342 #42949E` |
+| `ablation-contrast` | 消融对照 | Ablations, model variants, and compact metric comparisons | `#1F5D99 #72A96B #E3B07C #B94A48 #6B7280` |
 
 The canonical full values, including sequential and diverging ramps, live in [`palette-library.json`](palette-library.json). Use that file as the single source of truth for preview scripts and future adapters.
 
@@ -102,4 +104,4 @@ background <- "#FFFFFF"
 
 - Use a white background and no background grid by default. If a quantitative comparison truly needs guidance, retain only very light major horizontal gridlines (`GRID`, 0.3 pt).
 - Draw axes and text in `INK`. Use 0.6 pt axes/ticks, 1.0–1.2 pt data lines, and 0.5–0.8 pt error bars.
-- Use solid fills and direct labels; avoid patterned fills, drop shadows, decorative gradients, and heavy outlines.
+- Use solid fills and direct labels; avoid decorative patterns, drop shadows, gradients, and heavy outlines. Add a restrained hatch or a thin edge only when grayscale printing or very similar fills would otherwise make a critical comparison ambiguous.

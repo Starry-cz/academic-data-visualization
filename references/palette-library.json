@@ -163,6 +163,24 @@
       "sequential": ["#F8FAFB", "#D5E7EA", "#9CC6CC", "#4E8590"],
       "diverging": ["#4F738C", "#FFFDF8", "#CB846D"],
       "accent": "#D4A48B"
+    },
+    {
+      "id": "method-blueprint",
+      "name": "方法蓝图",
+      "source": "受 figures4papers 的关键蓝、改善绿、对照暖色与中性灰语义组织方式启发",
+      "categorical": ["#0F4D92", "#3775BA", "#8BCF8B", "#B64342", "#42949E", "#767676"],
+      "sequential": ["#F7FBFF", "#CFE0F4", "#7FA8D6", "#0F4D92"],
+      "diverging": ["#0F4D92", "#FFFFFF", "#B64342"],
+      "accent": "#B64342"
+    },
+    {
+      "id": "ablation-contrast",
+      "name": "消融对照",
+      "source": "基于基准比较图的蓝色主证据、绿色正向变体、暖色对照与灰色上下文重新组合",
+      "categorical": ["#1F5D99", "#72A96B", "#E3B07C", "#B94A48", "#6B7280", "#8F79B5"],
+      "sequential": ["#F7FAFC", "#D5E2EC", "#8DB3C9", "#1F5D99"],
+      "diverging": ["#1F5D99", "#FFFEFA", "#B94A48"],
+      "accent": "#B94A48"
     }
   ]
 }

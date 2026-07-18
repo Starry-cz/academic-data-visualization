@@ -149,7 +149,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 
 ## 配色主题库与个性化重绘
 
-Skill 默认使用 `nature-default`，同时提供 17 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。新增主题将“白底、低饱和主体色、单一暖色强调、清晰留白”的文献图视觉语言整理为可直接调用的配色角色。
+Skill 默认使用 `nature-default`，同时提供 19 组由科研图配色参考整理而成的可选主题。每张预览都包含柱状图、趋势图、发散矩阵和连续色带，便于比较分类色、发散色与连续色的实际效果。新增主题将“白底、低饱和主体色、单一暖色强调、清晰留白”，以及“关键证据蓝、改善绿、对照暖色、中性上下文”的比较图视觉语言整理为可直接调用的配色角色。
 
 <table>
   <tr>
@@ -187,6 +187,10 @@ Skill 默认使用 `nature-default`，同时提供 17 组由科研图配色参�
   <tr>
     <td align="center" valign="top"><strong>鼠尾草方法</strong><br><img src="assets/palette-gallery/sage-methods.png?qa=direct-labels-v1" width="390" alt="鼠尾草方法配色预览"></td>
     <td align="center" valign="top"><strong>静谧图谱</strong><br><img src="assets/palette-gallery/quiet-atlas.png?qa=direct-labels-v1" width="390" alt="静谧图谱配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>方法蓝图</strong><br><img src="assets/palette-gallery/method-blueprint.png?qa=direct-labels-v1" width="390" alt="方法蓝图配色预览"></td>
+    <td align="center" valign="top"><strong>消融对照</strong><br><img src="assets/palette-gallery/ablation-contrast.png?qa=direct-labels-v1" width="390" alt="消融对照配色预览"></td>
   </tr>
 </table>
 
