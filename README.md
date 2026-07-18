@@ -129,7 +129,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 除上表的生产图型外，Skill 新增了 16 种可复用的科研与日常工作图型视觉模式：Kaplan–Meier、生存 / 效应估计、哑铃图、坡度图、帕累托、控制图、甘特、阶段漏斗、树图、日历热图、网络、空间气泡、dendrogram、基因组 lollipop、SHAP beeswarm、三元图。实际选择与约束见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)。
 
 <p align="center">
-  <img src="assets/chart-atlas/atlas-06-domain-work.png" width="100%" alt="科研与工作扩展图型图鉴：Kaplan-Meier、甘特图、网络图、SHAP beeswarm 等">
+  <img src="assets/chart-atlas/atlas-06-domain-work.png?theme=warm-cool-kinetics-v1" width="100%" alt="科研与工作扩展图型图鉴：Kaplan-Meier、甘特图、网络图、SHAP beeswarm 等">
 </p>
 
 ## 工作流与视觉系统

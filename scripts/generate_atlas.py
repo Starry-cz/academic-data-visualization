@@ -2,12 +2,13 @@
 """
 Academic Figure Skill Chart Atlas Generator.
 
-Generates 5 atlas grid images (4x4 subplots each) demonstrating Academic Figure Skill's
+Generates 6 atlas grid images (4x4 subplots each) demonstrating Academic Figure Skill's
 visual grammar range using pure matplotlib with CNS standard styling.
 
 Output: academic-data-visualization/assets/chart-atlas/atlas-*.png
 """
 
+import argparse
 import os
 import sys
 import warnings
@@ -62,6 +63,31 @@ CNS_SEQUENTIAL_CMAP = LinearSegmentedColormap.from_list(
     [CNS_COLORS["bg"], CNS_COLORS["blue"]],
     N=256,
 )
+
+
+def apply_warm_cool_kinetics_theme():
+    """将图鉴映射为 README 缩略图使用的暖冷动力学主题。"""
+    global CNS_PALETTE, CNS_DIVERGING_CMAP, CNS_SEQUENTIAL_CMAP
+
+    # 与 palette-library.json 的 warm-cool-kinetics 保持同一组色值；
+    # 这里按图表语义分配冷色主系列、暖色强调与浅冷色辅助系列。
+    CNS_COLORS.update({
+        "green": "#6090C1",
+        "purple": "#F79015",
+        "blue": "#115FA4",
+        "red": "#D7312D",
+        "orange": "#F2724D",
+        "teal": "#ACD2E5",
+    })
+    CNS_PALETTE = [
+        "#115FA4", "#D7312D", "#6090C1", "#F2724D", "#F79015", "#ACD2E5",
+    ]
+    CNS_DIVERGING_CMAP = LinearSegmentedColormap.from_list(
+        "warm_cool_kinetics_diverging", ["#115FA4", "#FEF9B7", "#D7312D"], N=256,
+    )
+    CNS_SEQUENTIAL_CMAP = LinearSegmentedColormap.from_list(
+        "warm_cool_kinetics_sequential", ["#FEF9B7", "#FEE395", "#F2724D", "#D7312D", "#AB2428"], N=256,
+    )
 
 # ---------------------------------------------------------------------------
 # Global matplotlib rcParams
@@ -1894,7 +1920,27 @@ def build_atlas(panel_funcs, title, output_path, figsize=(11, 9)):
 
 
 def main():
-    """Generate all 5 chart atlas images."""
+    """按指定主题生成全部或单张图表图鉴。"""
+    parser = argparse.ArgumentParser(description="生成 Academic Data Visualization 图表图鉴。")
+    parser.add_argument(
+        "--theme",
+        choices=("nature-default", "warm-cool-kinetics"),
+        default="nature-default",
+        help="图鉴配色主题；暖冷动力学与 README 图表索引保持一致。",
+    )
+    parser.add_argument(
+        "--only",
+        choices=(
+            "atlas-01-bar-charts.png", "atlas-02-line-scatter.png", "atlas-03-heatmaps.png",
+            "atlas-04-distributions.png", "atlas-05-volcano-special.png", "atlas-06-domain-work.png",
+        ),
+        help="仅生成指定图鉴，避免无关资产被覆盖。",
+    )
+    args = parser.parse_args()
+
+    if args.theme == "warm-cool-kinetics":
+        apply_warm_cool_kinetics_theme()
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     print(f"\nAcademic Figure Skill Chart Atlas Generator")
     print(f"Output directory: {OUTPUT_DIR}\n")
@@ -1907,6 +1953,8 @@ def main():
         ("atlas-05-volcano-special.png", VOLCANO_PANELS),
         ("atlas-06-domain-work.png", DOMAIN_WORK_PANELS),
     ]
+    if args.only:
+        atlases = [atlas for atlas in atlases if atlas[0] == args.only]
 
     for filename, panels in atlases:
         output_path = os.path.join(OUTPUT_DIR, filename)
