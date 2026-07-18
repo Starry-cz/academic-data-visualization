@@ -39,12 +39,20 @@
 | Stops when the script runs | Runs programmatic QA, final-size visual review, and a grayscale proof |
 | Delivers one PNG | Delivers code, vector masters, high-resolution proofs, and a QA report |
 
-| Scale | Included in this repository |
-|---|---|
-| **96 figure patterns** | Comparison, trend, distribution, matrix, omics, model, spatial, network, and work charts |
-| **29 production asset families** | Python / R scripts, data constraints, and verifiable previews |
-| **20 palette themes** | Categorical, diverging, sequential, and reference-image personalization workflows |
-| **Four-pass QA** | Anti-pattern, code/export, scientific logic, and rendered-proof review |
+<table width="100%">
+  <thead>
+    <tr>
+      <th width="30%" align="left">Scale</th>
+      <th width="70%" align="left">Included in this repository</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>96 figure patterns</strong></td><td>Comparison, trend, distribution, matrix, omics, model, spatial, network, and work charts</td></tr>
+    <tr><td><strong>29 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
+    <tr><td><strong>20 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
+    <tr><td><strong>Four-pass QA</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
+  </tbody>
+</table>
 
 ### Good fit
 
