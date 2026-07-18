@@ -7,6 +7,7 @@ Use this reference before code is written for every figure with two or more pane
 ```text
 Canvas: [single / double column] · [4:3 / 3:2 / wide] · [target final width]
 Core message: [one sentence]
+Journal profile: [journal / target context] · [routed theme or user override]
 Hero panel: [(a), its evidence, and why it is visually dominant]
 Support sequence: [(b) → (c) → …, each adds a non-redundant evidence step]
 Colour roles: [baseline, comparison, emphasis, context]
@@ -15,6 +16,7 @@ Colour roles: [baseline, comparison, emphasis, context]
 - Decide the aspect ratio before building panels. Use `4:3` for compact quantitative grids, `3:2` for a balanced main figure, and `wide` only when the scientific sequence truly runs horizontally.
 - Give the hero panel 1.2–1.5× the area of a support panel. Do not enlarge a panel merely because it has more labels.
 - Keep the canvas white, use quiet neutral axes, and reserve the accent for one evidence role rather than every panel.
+- When a target journal is named, read `references/journal-intel.md` and record the routed starting theme or a user override. Journal style informs hierarchy and palette restraint; it never changes evidence, statistics, or data encoding.
 
 ## 2. Reusable composition recipes
 
@@ -57,4 +59,4 @@ If any answer is no, revise the composition or colour roles and run the mandator
 
 ## Design reference note
 
-This guide independently translates useful high-level ideas from two public figure resources into reproducible plotting constraints: curated examples, early aspect-ratio decisions, strong panel hierarchy, restrained literature-style colour roles, dense-but-scannable composition, and reserved legend space for complex comparisons. It does not reuse their scripts, prompts, or generated images. References: <https://github.com/wuyoscar/GPT-Image2-Skill#gallery-research-paper-figures> and <https://github.com/ChenLiu-1996/figures4papers>.
+This guide independently translates useful high-level ideas from public figure resources into reproducible plotting constraints: curated examples, early aspect-ratio decisions, strong panel hierarchy, restrained literature-style colour roles, journal-aware style baselines, dense-but-scannable composition, and reserved legend space for complex comparisons. It does not reuse their scripts, prompts, or generated images. References: <https://github.com/wuyoscar/GPT-Image2-Skill#gallery-research-paper-figures>, <https://github.com/ChenLiu-1996/figures4papers>, and <https://github.com/TingxiYu/academic-figure-skill>.

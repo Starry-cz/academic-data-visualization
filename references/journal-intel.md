@@ -2,6 +2,27 @@
 
 This file captures tacit editorial and reviewer preferences — things that are NOT in the official author guidelines but that experienced authors learn through submission and revision. Content is structured by journal.
 
+## Operational Journal Style Routing
+
+Use this table only after the user names a target journal or publication context. It converts the journal brief into a reproducible starting point; it does **not** reproduce a journal's branded appearance or override the user's palette choice.
+
+| Target context | Starting theme | Layout and colour direction | Mandatory safeguard |
+|---|---|---|---|
+| Nature Genetics / genetics-heavy main figure | `teal-genome` | Cool blues/teals for primary evidence; one muted warm accent; dense panels must retain readable labels | Keep a scientific zero for effect heatmaps and never use rainbow chromosomes |
+| Nature Plants / photo + quantitative figure | `sage-methods` | Muted greens and warm sand; photo panels establish biological context before quantification when that is the evidence order | Preserve treatment-to-colour mapping across photos, plots, and captions; scale bars remain factual annotations |
+| Cell Systems / computational biology | `method-blueprint` for data, `quiet-atlas` for schematic context | Key data use restrained blue; schematics remain quieter than quantitative evidence | Do not assign biological meaning to decorative schematic colours; map network size/width to declared quantities |
+| General ML benchmark or ablation | `method-blueprint` or `ablation-contrast` | Blue for the predeclared focal method, green for a positive variant only when scientifically justified, warm colour for an explicit comparator | Never imply superiority through colour alone; report the metric, split, uncertainty, and baseline definition |
+| No target journal or cross-disciplinary first proof | `nature-default` | Accessible baseline with stable semantic roles | Keep shapes, labels, or line types for any critical distinction |
+
+### Routing procedure
+
+1. Read the named journal section below and choose the matching row above.
+2. Record `journal profile`, `theme`, and each semantic colour role in the five-line design brief before code is written.
+3. A user-selected named theme, custom hex set, or reference palette always takes precedence over the suggested starting theme.
+4. In the QA report, state whether the final theme is the routed starting theme or a user override. Confirm that the override did not change data, statistics, panel order, or scientific meaning.
+
+The routing table is a style baseline, not an authority on journal acceptance. Official author instructions and the target manuscript's data requirements always prevail.
+
 ---
 
 ## Nature Genetics

@@ -108,7 +108,7 @@ Classify the request into one of:
 
 Pass the archetype to `compose_figure(archetype=...)`. The engine auto-detects which panel is the hero and applies asymmetric layout when the archetype is not `quantitative_grid` or `symmetric`.
 
-**Step 0a.1 — Create the figure design brief for 2+ panels.** Before any panel code, read `references/figure-design-brief.md` and state the canvas ratio, core message, hero panel, support sequence, and stable colour roles. Select one of its composition recipes; do not assemble a multi-panel figure as an unplanned grid. This brief is a required input to the later visual QA review.
+**Step 0a.1 — Create the figure design brief for 2+ panels.** Before any panel code, read `references/figure-design-brief.md` and state the canvas ratio, core message, journal profile when named, hero panel, support sequence, and stable colour roles. Select one of its composition recipes; do not assemble a multi-panel figure as an unplanned grid. This brief is a required input to the later visual QA review.
 
 For three or more benchmark metrics, method variants, or ablation blocks, explicitly evaluate the `benchmark-strip` recipe. Use a wide canvas only when it preserves readable labels and a left-to-right evidence sequence; reserve a legend-only cell when four or more series cannot be labeled directly or placed outside the data area.
 
@@ -197,6 +197,8 @@ Load these four files and copy their "COPY VERBATIM" code blocks into the script
 4. `references/visual-style.md` — hierarchy, chart-specific mark rules, and final visual review.
 
 **Palette selection is part of the style baseline.** Read the theme table in `references/color-palettes.md` before writing plotting code. Record the selected theme in the script header and map its colours to stable semantic roles (baseline, comparison, emphasis, context). If the user gives no preference, use `nature-default`; do not silently substitute matplotlib, seaborn, ggplot2, Excel, rainbow, or `tab10` colours.
+
+**Journal-aware starting point:** if the user names a journal or target publication context, read `references/journal-intel.md` before selecting a theme. Use its routed theme only as the initial style baseline; a user-selected theme, hex set, or reference palette overrides it. Record the final choice as `routed` or `user override` in the script header and QA report. Journal styling must never alter data, statistics, panel order, or the semantic role of a comparison.
 
 Also read `references/journal-specs.md` for target dimensions (89mm single / 183mm double).
 
@@ -414,6 +416,8 @@ Execute the 4-pass QA protocol from `references/checklist.md`.
 **Mandatory render gate:** before every `fig.savefig`, call `audit_figure(fig, figure_name)` from `scripts/visual_qa.py`. The gate renders the canvas and rejects (1) legends placed over an axes data area, (2) visible text outside the canvas, and (3) substantial text-to-text overlap. If it fails, move the legend outside the data area or use direct labels, adjust layout, then re-render and re-audit. A figure that fails this gate must never be exported or added to the README.
 
 **Composition review for multi-panel figures:** compare the rendered figure with the five-line design brief from `references/figure-design-brief.md`. Confirm the intended aspect ratio, hero/support visual hierarchy, panel reading order, whitespace for annotations, and one-to-one semantic colour roles. If any item fails, revise the layout or palette assignment, then re-run the mandatory render gate.
+
+**Journal-profile review:** when a target journal was named, confirm that the recorded journal profile and selected theme match the final figure, any user override is documented, and the journal-specific style baseline has not turned into unsupported visual storytelling. A palette may support hierarchy but cannot imply significance, causal direction, or model superiority.
 
 **Comparison-panel review:** for multi-metric or ablation figures, confirm that the aspect ratio is justified by the number of metrics, repeated labels are removed only when a shared legend/title preserves interpretation, and any dense legend occupies reserved whitespace or its own axes. Use a hatch or thin edge only when it is necessary for grayscale-safe distinction; it must never be decorative.
 

@@ -73,7 +73,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git
 | 坐标与留白 | 保留必要的坐标轴、刻度与单位；默认不使用背景网格、阴影和装饰图标 |
 | 交付 | RGB；文本与线稿优先可编辑 PDF / SVG；真实栅格内容提供 450 dpi PNG / TIFF |
 
-完整执行合同见 [`references/nature-publication-style.md`](references/nature-publication-style.md)，并与 [`references/typography.md`](references/typography.md)、[`references/color-palettes.md`](references/color-palettes.md) 和 [`references/export-specs.md`](references/export-specs.md) 联动。两张以上的主图会额外使用 [`references/figure-design-brief.md`](references/figure-design-brief.md)，在画图前固定长宽比、英雄面板、证据顺序与配色角色，再进入自动审查。
+完整执行合同见 [`references/nature-publication-style.md`](references/nature-publication-style.md)，并与 [`references/typography.md`](references/typography.md)、[`references/color-palettes.md`](references/color-palettes.md) 和 [`references/export-specs.md`](references/export-specs.md) 联动。两张以上的主图会额外使用 [`references/figure-design-brief.md`](references/figure-design-brief.md)，在画图前固定长宽比、英雄面板、证据顺序与配色角色，再进入自动审查。指定目标期刊时，Skill 还会从 [`references/journal-intel.md`](references/journal-intel.md) 选择已有主题作为起点，并记录用户的配色覆盖选择。
 
 ## 全部图表导航
 
