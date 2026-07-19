@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="#一分钟开始"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
-  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/图型路径-96%2B-73C79E?style=flat-square" alt="96+ 图型路径"></a>
+  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/图型模式-96-73C79E?style=flat-square" alt="96 个图型模式"></a>
   <a href="#配色主题库"><img src="https://img.shields.io/badge/配色主题-20-F599A1?style=flat-square" alt="20 个配色主题"></a>
   <a href="#可复现的质量证据"><img src="https://img.shields.io/badge/QA-四轮闭环-95AEDA?style=flat-square" alt="四轮 QA 闭环"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
@@ -31,26 +31,31 @@
 
 ## 它解决什么问题
 
-| 普通画图请求 | Academic Data Visualization |
-|---|---|
-| 先选柱状图、热图或散点图 | 先问“这张图要让读者比较、关联还是判断什么？” |
-| 默认忽略样本量、分布和重复测量 | 先剖析变量类型、缺失、组大小、异常值与依赖结构 |
-| 用默认配色和固定模板美化 | 按数据语义、期刊尺寸和证据层级建立视觉系统 |
-| 脚本能运行就结束 | 程序审查 + 最终尺寸读图 + 灰度校样，发现问题后回改重绘 |
-| 只交付一张 PNG | 交付代码、矢量主文件、高分辨率校样与 QA 报告 |
+<table width="100%">
+  <thead>
+    <tr><th width="30%">普通画图请求</th><th width="70%">Academic Data Visualization</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>先选柱状图、热图或散点图</td><td>先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
+    <tr><td>默认忽略样本量、分布和重复测量</td><td>先剖析变量类型、缺失、组大小、异常值与依赖结构</td></tr>
+    <tr><td>用默认配色和固定模板美化</td><td>按数据语义、期刊尺寸和证据层级建立视觉系统</td></tr>
+    <tr><td>脚本能运行就结束</td><td>程序审查 + 最终尺寸读图 + 灰度校样，发现问题后回改重绘</td></tr>
+    <tr><td>只交付一张 PNG</td><td>交付代码、矢量主文件、高分辨率校样与 QA 报告</td></tr>
+  </tbody>
+</table>
 
 <table width="100%">
   <thead>
     <tr>
       <th width="30%" align="left">规模</th>
-      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="561" height="1" alt=""><br>当前仓库提供</th>
+      <th width="70%" align="left">当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td><strong>96+ 图型路径</strong></td><td>已核验的 96 个视觉模式，加上临床、空间、影像和组学等按需实现路径</td></tr>
+    <tr><td width="30%"><strong>96 个图型模式</strong></td><td width="70%">6 组图鉴 × 16 个已核验模式；另有 9 类专业选图路径，按数据与依赖实现</td></tr>
     <tr><td><strong>29 类生产资产</strong></td><td>Python / R 脚本、示例数据约束与可核验预览</td></tr>
     <tr><td><strong>20 个主题配色</strong></td><td>分类色、发散色、连续色及参考图个性化重绘流程</td></tr>
-    <tr><td><strong>四轮 QA</strong></td><td>反模式、代码与导出、科学逻辑、最终渲染审查</td></tr>
+    <tr><td><strong>4 轮 QA 审查</strong></td><td>反模式、代码与导出、科学逻辑、最终渲染审查</td></tr>
   </tbody>
 </table>
 
@@ -94,35 +99,42 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 450 dpi 校样、灰度校样和 QA 报告。
 ```
 
-<details>
-<summary><strong>展开更多可直接使用的提示词</strong></summary>
+### 更多可直接使用的提示词
 
-| 场景 | 提示词 |
-|---|---|
-| 不知道选什么图 | `检查 experiment.csv 的变量类型、样本量、分布和分组结构。根据我要论证的结论推荐图型，不要先套模板。` |
-| 组织论文主图 | `把这些结果组织成一张投稿级多面板主图，说明每个面板回答什么，以及它们如何形成一条证据链。` |
-| 重绘旧图 | `结合 old_figure.png 和 source_data.csv 重建可编辑图表；保留数据含义，不要只美化截图。` |
-| 适配期刊 | `按 Nature 双栏终稿尺寸审查并重绘 figure.py，包括字体、栏宽、配色、统计表达与导出。` |
-| 投稿前审查 | `审查这张图的图型合理性、文字裁切、图例遮挡、灰度可读性、矢量文本和数据表达风险。` |
-
-</details>
+<table width="100%">
+  <thead>
+    <tr><th width="16%">场景</th><th width="84%">提示词</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>不知道选什么图</td><td><code>检查 experiment.csv 的变量类型、样本量、分布和分组结构。根据我要论证的结论推荐图型，不要先套模板。</code></td></tr>
+    <tr><td>组织论文主图</td><td><code>把这些结果组织成一张投稿级多面板主图，说明每个面板回答什么，以及它们如何形成一条证据链。</code></td></tr>
+    <tr><td>重绘旧图</td><td><code>结合 old_figure.png 和 source_data.csv 重建可编辑图表；保留数据含义，不要只美化截图。</code></td></tr>
+    <tr><td>适配期刊</td><td><code>按 Nature 双栏终稿尺寸审查并重绘 figure.py，包括字体、栏宽、配色、统计表达与导出。</code></td></tr>
+    <tr><td>投稿前审查</td><td><code>审查这张图的图型合理性、文字裁切、图例遮挡、灰度可读性、矢量文本和数据表达风险。</code></td></tr>
+  </tbody>
+</table>
 
 ## 工作方式
 
-| 阶段 | Skill 完成什么 | 主要产物 |
-|---|---|---|
-| **1. 图形合同** | 明确研究问题、核心结论、观测单位和目标期刊 | 一句话结论 + 面板数据合同 |
-| **2. 数据剖析** | 检查变量类型、缺失、组大小、分布、异常值和依赖结构 | 与论证相关的数据摘要 |
-| **3. 选图论证** | 根据数据形态选择图型，并主动拦截误导性方案 | 主方案 + 备选方案 + 理由 |
-| **4. 视觉系统** | 固定终稿尺寸、面板层级、字体、色彩语义和后端 | 多面板设计简报 |
-| **5. 生成复用** | 将每个面板分类为原生复用、视觉适配或全新实现 | 可复现 Python / R 脚本 |
-| **6. 审查交付** | 四轮 QA、RGB / 灰度读图、修复重绘与多格式导出 | PDF / SVG、450 dpi 校样、QA 报告 |
+<table width="100%">
+  <thead>
+    <tr><th width="18%">阶段</th><th width="52%">Skill 完成什么</th><th width="30%">主要产物</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>1. 图形合同</strong></td><td>明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
+    <tr><td><strong>2. 数据剖析</strong></td><td>检查变量类型、缺失、组大小、分布、异常值和依赖结构</td><td>与论证相关的数据摘要</td></tr>
+    <tr><td><strong>3. 选图论证</strong></td><td>根据数据形态选择图型，并主动拦截误导性方案</td><td>主方案 + 备选方案 + 理由</td></tr>
+    <tr><td><strong>4. 视觉系统</strong></td><td>固定终稿尺寸、面板层级、字体、色彩语义和后端</td><td>多面板设计简报</td></tr>
+    <tr><td><strong>5. 生成复用</strong></td><td>将每个面板分类为原生复用、视觉适配或全新实现</td><td>可复现 Python / R 脚本</td></tr>
+    <tr><td><strong>6. 审查交付</strong></td><td>四轮 QA、RGB / 灰度读图、修复重绘与多格式导出</td><td>PDF / SVG、450 dpi 校样、QA 报告</td></tr>
+  </tbody>
+</table>
 
 ## 生产图表索引
 
 这里仅保留重点生产资产的预览，不再重复展示全部图型。完整的选图范围、限制与实现等级见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)；生成时 Skill 会先检查数据结构与语义是否兼容，再决定原生复用、视觉适配或全新实现。
 
-<table>
+<table width="100%">
   <tr>
     <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D 热图"></a><br><sub>多因子交互与三维强度矩阵</sub></td>
     <td width="33%" align="center" valign="top"><strong>AUROC 曲线</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC 曲线"></a><br><sub>分类模型与阈值敏感性</sub></td>
@@ -157,9 +169,9 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ## 配色主题库
 
-默认主题是 `nature-default`；本 README 的图表索引使用 `warm-cool-kinetics`。每个主题同时定义分类色、发散色和连续色角色，不只是若干十六进制色块。
+默认主题是 `nature-default`；README 的重点预览按图型分配不同主题，`warm-cool-kinetics` 仅用于动力学类图。每个主题同时定义分类色、发散色和连续色角色，不只是若干十六进制色块。
 
-<table>
+<table width="100%">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Nature 默认 · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature 默认配色预览"></td>
     <td width="50%" align="center" valign="top"><strong>高辨识信号 · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="高辨识信号配色预览"></td>
@@ -233,12 +245,17 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 ## 安装与更新
 
-| 平台 | 使用方式 |
-|---|---|
-| **Codex** | 将完整仓库放入 `~/.codex/skills/academic-data-visualization/` |
-| **Claude Code** | 将完整仓库放入 `~/.claude/skills/academic-data-visualization/` |
-| **Cursor** | 使用完整 Skill，并按需复制 [`install/cursor/.cursorrules`](install/cursor/.cursorrules) |
-| **GitHub Copilot** | 使用 [`install/copilot/copilot-instructions.md`](install/copilot/copilot-instructions.md) |
+<table width="100%">
+  <thead>
+    <tr><th width="30%">平台</th><th width="70%">使用方式</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
+    <tr><td><strong>Claude Code</strong></td><td>将完整仓库放入 <code>~/.claude/skills/academic-data-visualization/</code></td></tr>
+    <tr><td><strong>Cursor</strong></td><td>使用完整 Skill，并按需复制 <a href="install/cursor/.cursorrules">install/cursor/.cursorrules</a></td></tr>
+    <tr><td><strong>GitHub Copilot</strong></td><td>使用 <a href="install/copilot/copilot-instructions.md">install/copilot/copilot-instructions.md</a></td></tr>
+  </tbody>
+</table>
 
 如果保留了本地 clone，更新只需：
 

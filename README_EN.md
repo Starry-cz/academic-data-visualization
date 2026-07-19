@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="#one-minute-start"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
-  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Figure_routes-96%2B-73C79E?style=flat-square" alt="96+ figure routes"></a>
+  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Figure_patterns-96-73C79E?style=flat-square" alt="96 figure patterns"></a>
   <a href="#palette-library"><img src="https://img.shields.io/badge/Palette_themes-20-F599A1?style=flat-square" alt="20 palette themes"></a>
   <a href="#reproducible-quality-evidence"><img src="https://img.shields.io/badge/QA-4--pass_loop-95AEDA?style=flat-square" alt="Four-pass QA loop"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
@@ -31,26 +31,31 @@
 
 ## What it solves
 
-| A typical plotting request | Academic Data Visualization |
-|---|---|
-| Starts from a bar, heatmap, or scatter template | Starts from what the reader must compare, relate, or decide |
-| Often ignores sample size, distribution, and dependence | Profiles variable types, missingness, group sizes, outliers, and repeated measures |
-| Beautifies with default colours and a fixed grid | Builds a visual system from data semantics, journal size, and evidence hierarchy |
-| Stops when the script runs | Runs programmatic QA, final-size visual review, and a grayscale proof |
-| Delivers one PNG | Delivers code, vector masters, high-resolution proofs, and a QA report |
+<table width="100%">
+  <thead>
+    <tr><th width="30%">A typical plotting request</th><th width="70%">Academic Data Visualization</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Starts from a bar, heatmap, or scatter template</td><td>Starts from what the reader must compare, relate, or decide</td></tr>
+    <tr><td>Often ignores sample size, distribution, and dependence</td><td>Profiles variable types, missingness, group sizes, outliers, and repeated measures</td></tr>
+    <tr><td>Beautifies with default colours and a fixed grid</td><td>Builds a visual system from data semantics, journal size, and evidence hierarchy</td></tr>
+    <tr><td>Stops when the script runs</td><td>Runs programmatic QA, final-size visual review, and a grayscale proof</td></tr>
+    <tr><td>Delivers one PNG</td><td>Delivers code, vector masters, high-resolution proofs, and a QA report</td></tr>
+  </tbody>
+</table>
 
 <table width="100%">
   <thead>
     <tr>
       <th width="30%" align="left">Scale</th>
-      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="561" height="1" alt=""><br>Included in this repository</th>
+      <th width="70%" align="left">Included in this repository</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td><strong>96+ figure routes</strong></td><td>96 verified visual patterns plus on-demand clinical, spatial, image, and omics routes</td></tr>
+    <tr><td width="30%"><strong>96 figure patterns</strong></td><td width="70%">Six atlas groups × 16 verified patterns; nine specialist selection categories are implemented on demand</td></tr>
     <tr><td><strong>29 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
     <tr><td><strong>20 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
-    <tr><td><strong>Four-pass QA</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
+    <tr><td><strong>4 QA passes</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
   </tbody>
 </table>
 
@@ -95,35 +100,42 @@ Target a double-column manuscript figure and deliver editable vector masters, a 
 proof, a grayscale proof, and a QA report.
 ```
 
-<details>
-<summary><strong>More copy-ready prompts</strong></summary>
+### More copy-ready prompts
 
-| Situation | Prompt |
-|---|---|
-| Unsure which chart to use | `Profile experiment.csv and recommend a chart from the research claim, variable types, sample size, distribution, and grouping. Do not start from a template.` |
-| Build a main figure | `Organize these results into a submission-ready multi-panel main figure. State what each panel answers and how the panels form one evidence chain.` |
-| Rebuild an old figure | `Use old_figure.png and source_data.csv to rebuild an editable figure. Preserve the data meaning rather than merely beautifying the screenshot.` |
-| Adapt to a journal | `Audit and rebuild figure.py for a Nature double-column figure, including type, width, colour, statistics, and export.` |
-| Audit before submission | `Audit this figure for chart validity, clipping, legend occlusion, grayscale readability, vector text, and data-expression risks.` |
-
-</details>
+<table width="100%">
+  <thead>
+    <tr><th width="16%">Situation</th><th width="84%">Prompt</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Unsure which chart to use</td><td><code>Profile experiment.csv and recommend a chart from the research claim, variable types, sample size, distribution, and grouping. Do not start from a template.</code></td></tr>
+    <tr><td>Build a main figure</td><td><code>Organize these results into a submission-ready multi-panel main figure. State what each panel answers and how the panels form one evidence chain.</code></td></tr>
+    <tr><td>Rebuild an old figure</td><td><code>Use old_figure.png and source_data.csv to rebuild an editable figure. Preserve the data meaning rather than merely beautifying the screenshot.</code></td></tr>
+    <tr><td>Adapt to a journal</td><td><code>Audit and rebuild figure.py for a Nature double-column figure, including type, width, colour, statistics, and export.</code></td></tr>
+    <tr><td>Audit before submission</td><td><code>Audit this figure for chart validity, clipping, legend occlusion, grayscale readability, vector text, and data-expression risks.</code></td></tr>
+  </tbody>
+</table>
 
 ## How it works
 
-| Stage | What the skill completes | Main artifact |
-|---|---|---|
-| **1. Figure contract** | Establish the question, claim, unit of observation, and target journal | One-sentence claim + panel data contract |
-| **2. Data profile** | Check types, missingness, group sizes, distributions, outliers, and dependence | Claim-directed data summary |
-| **3. Chart justification** | Select the chart and intercept misleading alternatives | Primary plan + alternatives + rationale |
-| **4. Visual system** | Fix final size, hierarchy, type, colour roles, and backend | Multi-panel design brief |
-| **5. Build and reuse** | Classify each panel as native reuse, visual adaptation, or new implementation | Reproducible Python / R scripts |
-| **6. Review and deliver** | Run four-pass QA, inspect RGB / grayscale proofs, revise, and export | PDF / SVG, 450 dpi proof, QA report |
+<table width="100%">
+  <thead>
+    <tr><th width="18%">Stage</th><th width="52%">What the skill completes</th><th width="30%">Main artifact</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>1. Figure contract</strong></td><td>Establish the question, claim, unit of observation, and target journal</td><td>One-sentence claim + panel data contract</td></tr>
+    <tr><td><strong>2. Data profile</strong></td><td>Check types, missingness, group sizes, distributions, outliers, and dependence</td><td>Claim-directed data summary</td></tr>
+    <tr><td><strong>3. Chart justification</strong></td><td>Select the chart and intercept misleading alternatives</td><td>Primary plan + alternatives + rationale</td></tr>
+    <tr><td><strong>4. Visual system</strong></td><td>Fix final size, hierarchy, type, colour roles, and backend</td><td>Multi-panel design brief</td></tr>
+    <tr><td><strong>5. Build and reuse</strong></td><td>Classify each panel as native reuse, visual adaptation, or new implementation</td><td>Reproducible Python / R scripts</td></tr>
+    <tr><td><strong>6. Review and deliver</strong></td><td>Run four-pass QA, inspect RGB / grayscale proofs, revise, and export</td><td>PDF / SVG, 450 dpi proof, QA report</td></tr>
+  </tbody>
+</table>
 
 ## Production figure gallery
 
 The cards below retain only representative production assets rather than repeating every figure route. See [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete selection scope, constraints, and implementation levels. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation.
 
-<table>
+<table width="100%">
   <tr>
     <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D heatmap"></a><br><sub>Multifactor interactions and intensity matrices</sub></td>
     <td width="33%" align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC curve"></a><br><sub>Classifier and threshold sensitivity</sub></td>
@@ -158,9 +170,9 @@ The cards below retain only representative production assets rather than repeati
 
 ## Palette library
 
-The default is `nature-default`; the README production gallery uses `warm-cool-kinetics`. Each theme defines categorical, diverging, and sequential roles rather than supplying disconnected hex values.
+The default is `nature-default`; the README previews use different themes by figure type, with `warm-cool-kinetics` reserved for kinetic plots. Each theme defines categorical, diverging, and sequential roles rather than supplying disconnected hex values.
 
-<table>
+<table width="100%">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Nature default · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature default palette preview"></td>
     <td width="50%" align="center" valign="top"><strong>Vivid signal · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="Vivid signal palette preview"></td>
@@ -234,12 +246,17 @@ The verdict follows [`references/checklist.md`](references/checklist.md). A figu
 
 ## Installation and updates
 
-| Platform | Integration |
-|---|---|
-| **Codex** | Put the complete repository in `~/.codex/skills/academic-data-visualization/` |
-| **Claude Code** | Put the complete repository in `~/.claude/skills/academic-data-visualization/` |
-| **Cursor** | Use the complete skill and optionally copy [`install/cursor/.cursorrules`](install/cursor/.cursorrules) |
-| **GitHub Copilot** | Use [`install/copilot/copilot-instructions.md`](install/copilot/copilot-instructions.md) |
+<table width="100%">
+  <thead>
+    <tr><th width="30%">Platform</th><th width="70%">Integration</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Codex</strong></td><td>Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
+    <tr><td><strong>Claude Code</strong></td><td>Put the complete repository in <code>~/.claude/skills/academic-data-visualization/</code></td></tr>
+    <tr><td><strong>Cursor</strong></td><td>Use the complete skill and optionally copy <a href="install/cursor/.cursorrules">install/cursor/.cursorrules</a></td></tr>
+    <tr><td><strong>GitHub Copilot</strong></td><td>Use <a href="install/copilot/copilot-instructions.md">install/copilot/copilot-instructions.md</a></td></tr>
+  </tbody>
+</table>
 
 Update a retained clone with:
 
