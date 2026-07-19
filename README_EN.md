@@ -31,7 +31,7 @@
 
 ## What it solves
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
     <tr><th width="30%">A typical plotting request</th><th width="70%">Academic Data Visualization</th></tr>
   </thead>
@@ -44,7 +44,7 @@
   </tbody>
 </table>
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
     <tr>
       <th width="30%" align="left">Scale</th>
@@ -102,7 +102,7 @@ proof, a grayscale proof, and a QA report.
 
 ### More copy-ready prompts
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
     <tr><th width="16%">Situation</th><th width="84%">Prompt</th></tr>
   </thead>
@@ -117,7 +117,7 @@ proof, a grayscale proof, and a QA report.
 
 ## How it works
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
     <tr><th width="18%">Stage</th><th width="52%">What the skill completes</th><th width="30%">Main artifact</th></tr>
   </thead>
@@ -135,7 +135,7 @@ proof, a grayscale proof, and a QA report.
 
 The cards below retain only representative production assets rather than repeating every figure route. See [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete selection scope, constraints, and implementation levels. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation.
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <tr>
     <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D heatmap"></a><br><sub>Multifactor interactions and intensity matrices</sub></td>
     <td width="33%" align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC curve"></a><br><sub>Classifier and threshold sensitivity</sub></td>
@@ -172,7 +172,7 @@ The cards below retain only representative production assets rather than repeati
 
 The default is `nature-default`; the README previews use different themes by figure type, with `warm-cool-kinetics` reserved for kinetic plots. Each theme defines categorical, diverging, and sequential roles rather than supplying disconnected hex values.
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Nature default · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature default palette preview"></td>
     <td width="50%" align="center" valign="top"><strong>Vivid signal · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="Vivid signal palette preview"></td>
@@ -246,9 +246,9 @@ The verdict follows [`references/checklist.md`](references/checklist.md). A figu
 
 ## Installation and updates
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
-    <tr><th width="30%">Platform</th><th width="70%">Integration</th></tr>
+    <tr><th width="30%">Platform</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="600" height="1" alt=""><br>Integration</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>

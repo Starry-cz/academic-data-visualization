@@ -31,9 +31,9 @@
 
 ## 它解决什么问题
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
-    <tr><th width="30%">普通画图请求</th><th width="70%">Academic Data Visualization</th></tr>
+    <tr><th width="30%">普通画图请求</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="596" height="1" alt=""><br>Academic Data Visualization</th></tr>
   </thead>
   <tbody>
     <tr><td>先选柱状图、热图或散点图</td><td>先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
@@ -44,11 +44,11 @@
   </tbody>
 </table>
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
     <tr>
       <th width="30%" align="left">规模</th>
-      <th width="70%" align="left">当前仓库提供</th>
+      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="608" height="1" alt=""><br>当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
@@ -101,7 +101,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ### 更多可直接使用的提示词
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
     <tr><th width="16%">场景</th><th width="84%">提示词</th></tr>
   </thead>
@@ -116,9 +116,9 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ## 工作方式
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
-    <tr><th width="18%">阶段</th><th width="52%">Skill 完成什么</th><th width="30%">主要产物</th></tr>
+    <tr><th width="18%">阶段</th><th width="52%"><img src="assets/readme/table-full-width-spacer.svg" width="420" height="1" alt=""><br>Skill 完成什么</th><th width="30%">主要产物</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>1. 图形合同</strong></td><td>明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
@@ -134,7 +134,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 这里仅保留重点生产资产的预览，不再重复展示全部图型。完整的选图范围、限制与实现等级见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)；生成时 Skill 会先检查数据结构与语义是否兼容，再决定原生复用、视觉适配或全新实现。
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <tr>
     <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D 热图"></a><br><sub>多因子交互与三维强度矩阵</sub></td>
     <td width="33%" align="center" valign="top"><strong>AUROC 曲线</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC 曲线"></a><br><sub>分类模型与阈值敏感性</sub></td>
@@ -171,7 +171,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 默认主题是 `nature-default`；README 的重点预览按图型分配不同主题，`warm-cool-kinetics` 仅用于动力学类图。每个主题同时定义分类色、发散色和连续色角色，不只是若干十六进制色块。
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Nature 默认 · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature 默认配色预览"></td>
     <td width="50%" align="center" valign="top"><strong>高辨识信号 · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="高辨识信号配色预览"></td>
@@ -245,9 +245,9 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 ## 安装与更新
 
-<table width="100%" style="width:100%">
+<table width="100%">
   <thead>
-    <tr><th width="30%">平台</th><th width="70%">使用方式</th></tr>
+    <tr><th width="30%">平台</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="623" height="1" alt=""><br>使用方式</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
