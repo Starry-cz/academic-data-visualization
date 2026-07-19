@@ -31,11 +31,7 @@
 
 ## 它解决什么问题
 
-<table width="100%">
-  <colgroup>
-    <col width="250">
-    <col width="573">
-  </colgroup>
+<table width="100%" align="center">
   <thead>
     <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
