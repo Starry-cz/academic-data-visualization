@@ -32,8 +32,12 @@
 ## 它解决什么问题
 
 <table width="100%">
+  <colgroup>
+    <col width="250">
+    <col width="573">
+  </colgroup>
   <thead>
-    <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Academic Data Visualization<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th></tr>
+    <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
   <tbody>
     <tr><td>先选柱状图、热图或散点图</td><td>先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
