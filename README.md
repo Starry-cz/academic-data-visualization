@@ -33,7 +33,7 @@
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">普通画图请求</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="596" height="1" alt=""><br>Academic Data Visualization</th></tr>
+    <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
   <tbody>
     <tr><td>先选柱状图、热图或散点图</td><td>先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
@@ -47,8 +47,8 @@
 <table width="100%">
   <thead>
     <tr>
-      <th width="30%" align="left">规模</th>
-      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="680" height="1" alt=""><br>当前仓库提供</th>
+      <th width="30%" align="left" valign="middle">规模</th>
+      <th width="70%" align="left" valign="middle">当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
@@ -103,7 +103,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%">
   <thead>
-    <tr><th width="16%">场景</th><th width="84%">提示词</th></tr>
+    <tr><th width="16%" valign="middle">场景</th><th width="84%" valign="middle">提示词</th></tr>
   </thead>
   <tbody>
     <tr><td>不知道选什么图</td><td><code>检查 experiment.csv 的变量类型、样本量、分布和分组结构。根据我要论证的结论推荐图型，不要先套模板。</code></td></tr>
@@ -118,7 +118,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%">
   <thead>
-    <tr><th width="18%">阶段</th><th width="52%"><img src="assets/readme/table-full-width-spacer.svg" width="420" height="1" alt=""><br>Skill 完成什么</th><th width="30%">主要产物</th></tr>
+    <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle">Skill 完成什么</th><th width="30%" valign="middle">主要产物</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>1. 图形合同</strong></td><td>明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
@@ -257,7 +257,7 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">平台</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="667" height="1" alt=""><br>使用方式</th></tr>
+    <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle">使用方式</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>

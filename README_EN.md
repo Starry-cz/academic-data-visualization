@@ -33,7 +33,7 @@
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">A typical plotting request</th><th width="70%">Academic Data Visualization</th></tr>
+    <tr><th width="30%" valign="middle">A typical plotting request</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
   <tbody>
     <tr><td>Starts from a bar, heatmap, or scatter template</td><td>Starts from what the reader must compare, relate, or decide</td></tr>
@@ -47,8 +47,8 @@
 <table width="100%">
   <thead>
     <tr>
-      <th width="30%" align="left">Scale</th>
-      <th width="70%" align="left">Included in this repository</th>
+      <th width="30%" align="left" valign="middle">Scale</th>
+      <th width="70%" align="left" valign="middle">Included in this repository</th>
     </tr>
   </thead>
   <tbody>
@@ -104,7 +104,7 @@ proof, a grayscale proof, and a QA report.
 
 <table width="100%">
   <thead>
-    <tr><th width="16%">Situation</th><th width="84%">Prompt</th></tr>
+    <tr><th width="16%" valign="middle">Situation</th><th width="84%" valign="middle">Prompt</th></tr>
   </thead>
   <tbody>
     <tr><td>Unsure which chart to use</td><td><code>Profile experiment.csv and recommend a chart from the research claim, variable types, sample size, distribution, and grouping. Do not start from a template.</code></td></tr>
@@ -119,7 +119,7 @@ proof, a grayscale proof, and a QA report.
 
 <table width="100%">
   <thead>
-    <tr><th width="18%">Stage</th><th width="52%">What the skill completes</th><th width="30%">Main artifact</th></tr>
+    <tr><th width="18%" valign="middle">Stage</th><th width="52%" valign="middle">What the skill completes</th><th width="30%" valign="middle">Main artifact</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>1. Figure contract</strong></td><td>Establish the question, claim, unit of observation, and target journal</td><td>One-sentence claim + panel data contract</td></tr>
@@ -258,7 +258,7 @@ The verdict follows [`references/checklist.md`](references/checklist.md). A figu
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">Platform</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="698" height="1" alt=""><br>Integration</th></tr>
+    <tr><th width="30%" valign="middle">Platform</th><th width="70%" valign="middle">Integration</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
