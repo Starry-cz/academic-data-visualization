@@ -48,7 +48,7 @@
   <thead>
     <tr>
       <th width="30%" align="left">规模</th>
-      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="608" height="1" alt=""><br>当前仓库提供</th>
+      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="680" height="1" alt=""><br>当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
@@ -247,7 +247,7 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">平台</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="623" height="1" alt=""><br>使用方式</th></tr>
+    <tr><th width="30%">平台</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="667" height="1" alt=""><br>使用方式</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>

@@ -174,8 +174,8 @@ The default is `nature-default`; the README previews use different themes by fig
 
 <table width="100%">
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Nature default · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature default palette preview"></td>
-    <td width="50%" align="center" valign="top"><strong>Vivid signal · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="Vivid signal palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Nature default · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="396" alt="Nature default palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Vivid signal · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="396" alt="Vivid signal palette preview"></td>
   </tr>
   <tr>
     <td align="center" valign="top"><strong>Bright bio · bright-bio</strong><br><img src="assets/palette-gallery/bright-bio.png?qa=direct-labels-v1" width="390" alt="Bright bio palette preview"></td>
@@ -248,7 +248,7 @@ The verdict follows [`references/checklist.md`](references/checklist.md). A figu
 
 <table width="100%">
   <thead>
-    <tr><th width="30%">Platform</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="600" height="1" alt=""><br>Integration</th></tr>
+    <tr><th width="30%">Platform</th><th width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="698" height="1" alt=""><br>Integration</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
