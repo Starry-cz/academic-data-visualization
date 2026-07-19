@@ -99,6 +99,8 @@ Use `nature-default` when neither journal routing nor the user supplies a prefer
 
 For gallery, batch, or atlas-like outputs, keep a **palette allocation ledger**: record the theme, baseline, comparison, accent, and continuous-scale role for each figure. Use `warm-cool-kinetics` only for ordered kinetic / decay / time-resolved evidence; do not use it as the universal gallery palette. Give adjacent unrelated previews visibly distinct themes while preserving accessibility and grayscale redundancy.
 
+For a README or catalogue gallery, group cards by aspect ratio before ordering by chart family. Keep near-square cards in a complete equal-column grid and landscape cards in a separate two-column grid; do not mix their canvases in the same row. Create fixed-canvas preview cards with white padding rather than cropping, stretching, or changing the scientific evidence. Link each card to its original full-resolution preview and keep the card order in the generator script and README synchronized.
+
 Then read `references/directory-map.md` and `references/asset-reuse-protocol.md`. For every panel:
 
 1. locate the exact `assets/figures/<type>/` directory;
@@ -212,6 +214,7 @@ python scripts/qa_validator.py path/to/figure.py
 
 # Rebuild README previews and atlases
 python scripts/generate_readme_previews.py
+python scripts/build_readme_gallery_cards.py
 python scripts/generate_palette_previews.py
 python scripts/generate_atlas.py
 ```
@@ -219,7 +222,7 @@ python scripts/generate_atlas.py
 ## Production assets and adapters
 
 - `assets/figures/<type>/`: reusable production scripts and companion previews.
-- `assets/figure-atlas/`: README chart-index thumbnails.
+- `assets/figure-atlas/`: README chart-index thumbnails and fixed-canvas gallery cards.
 - `assets/palette-gallery/`: named-theme RGB previews.
 - `install/`: generated cross-platform adapters.
 - `agents/openai.yaml`: Codex UI metadata.

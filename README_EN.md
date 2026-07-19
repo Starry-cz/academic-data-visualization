@@ -133,40 +133,50 @@ proof, a grayscale proof, and a QA report.
 
 ## Production figure gallery
 
-The cards below retain only representative production assets rather than repeating every figure route. See [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete selection scope, constraints, and implementation levels. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation.
+The cards below retain only representative production assets rather than repeating every figure route. See [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete selection scope, constraints, and implementation levels. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation. Cards are grouped by aspect ratio; click any card for its full original image.
+
+### Near-square figures · 3 × 3
 
 <table width="100%">
   <tr>
-    <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D heatmap"></a><br><sub>Multifactor interactions and intensity matrices</sub></td>
-    <td width="33%" align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC curve"></a><br><sub>Classifier and threshold sensitivity</sub></td>
-    <td width="33%" align="center" valign="top"><strong>Bar chart</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/bar.png?v=palette-diversity-v1" width="280" alt="Bar chart"></a><br><sub>Group summaries, uncertainty, and observations</sub></td>
+    <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png?v=card-layout-v1" width="280" alt="3D heatmap"></a><br><sub>Three-dimensional intensity matrix</sub></td>
+    <td width="33%" align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png?v=card-layout-v1" width="280" alt="Density heatmap"></a><br><sub>Large-sample 2D density</sub></td>
+    <td width="33%" align="center" valign="top"><strong>PCA biplot</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png?v=card-layout-v1" width="280" alt="PCA biplot"></a><br><sub>Separation and loadings</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Correlation-density plot</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/CorrelationDensity.png?v=palette-diversity-v1" width="280" alt="Correlation-density plot"></a><br><sub>Bivariate relation, density, and outliers</sub></td>
-    <td align="center" valign="top"><strong>Correlation matrix</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/Correlationmatrix.png?v=palette-diversity-v1" width="280" alt="Correlation matrix"></a><br><sub>Multivariable relations and collinearity</sub></td>
-    <td align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/density_heatmap.png?v=palette-diversity-v1" width="280" alt="Density heatmap"></a><br><sub>Large point clouds and 2D density</sub></td>
+    <td align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png?v=card-layout-v1" width="280" alt="AUROC curve"></a><br><sub>Classification and threshold sensitivity</sub></td>
+    <td align="center" valign="top"><strong>Correlation-density plot</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png?v=card-layout-v1" width="280" alt="Correlation-density plot"></a><br><sub>Relation, density, and outliers</sub></td>
+    <td align="center" valign="top"><strong>Correlation matrix</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png?v=card-layout-v1" width="280" alt="Correlation matrix"></a><br><sub>Multivariable relations and collinearity</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Frequency 3D heatmap</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/Frequency_3DHeatmap.png?v=palette-diversity-v1" width="280" alt="Frequency 3D heatmap"></a><br><sub>Binned frequency and two-factor counts</sub></td>
-    <td align="center" valign="top"><strong>Grouped correlation matrix</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/GroupCorrelationmatrix.png?v=palette-diversity-v1" width="280" alt="Grouped correlation matrix"></a><br><sub>Correlation structure across conditions</sub></td>
-    <td align="center" valign="top"><strong>Grouped bar chart</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/GroupedBarChart.png?v=palette-diversity-v1" width="280" alt="Grouped bar chart"></a><br><sub>Multi-treatment × multi-metric comparison</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Mantel test</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/MantelCorrelation.png?v=palette-diversity-v1" width="280" alt="Mantel test"></a><br><sub>Distance-matrix and environment links</sub></td>
-    <td align="center" valign="top"><strong>PCA biplot</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/PCA.png?v=palette-diversity-v1" width="280" alt="PCA biplot"></a><br><sub>Separation, reduction, and loadings</sub></td>
-    <td align="center" valign="top"><strong>Radar chart</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/radar.png?v=palette-diversity-v1" width="280" alt="Radar chart"></a><br><sub>Multimetric profiles for a few objects</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Ridge plot</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/RidgePlot.png?v=palette-diversity-v1" width="280" alt="Ridge plot"></a><br><sub>Distribution shifts and overlap</sub></td>
-    <td align="center" valign="top"><strong>Sankey diagram</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/sankey.png?v=palette-diversity-v1" width="280" alt="Sankey diagram"></a><br><sub>Category flow and state transitions</sub></td>
-    <td align="center" valign="top"><strong>Stacked-bar scatter</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/StackedBarScatter.png?v=palette-diversity-v1" width="280" alt="Stacked-bar scatter"></a><br><sub>Composition plus sample-level observations</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Trend plot</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/trend.png?v=palette-diversity-v1" width="280" alt="Trend plot"></a><br><sub>Time, dose, and environmental gradients</sub></td>
-    <td align="center" valign="top"><strong>Violin plot</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/violin_chart.png?v=palette-diversity-v1" width="280" alt="Violin plot"></a><br><sub>Shape, spread, and outliers</sub></td>
-    <td align="center" valign="middle"><strong>More figure types</strong><br><a href="references/figure-type-catalog.md">Open the complete catalogue and selection constraints →</a></td>
+    <td align="center" valign="top"><strong>Grouped correlation matrix</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/readme-cards/GroupCorrelationmatrix.png?v=card-layout-v1" width="280" alt="Grouped correlation matrix"></a><br><sub>Structure across conditions</sub></td>
+    <td align="center" valign="top"><strong>Radar chart</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png?v=card-layout-v1" width="280" alt="Radar chart"></a><br><sub>Profiles for a few objects</sub></td>
+    <td align="center" valign="top"><strong>Ridge plot</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png?v=card-layout-v1" width="280" alt="Ridge plot"></a><br><sub>Distribution shifts</sub></td>
   </tr>
 </table>
+
+### Landscape figures · 2 × 4
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Bar chart</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png?v=card-layout-v1" width="390" alt="Bar chart"></a><br><sub>Summaries, uncertainty, and observations</sub></td>
+    <td width="50%" align="center" valign="top"><strong>Grouped bar chart</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png?v=card-layout-v1" width="390" alt="Grouped bar chart"></a><br><sub>Multi-treatment × multi-metric comparison</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Mantel test</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png?v=card-layout-v1" width="390" alt="Mantel test"></a><br><sub>Distance-matrix and environment links</sub></td>
+    <td align="center" valign="top"><strong>Violin plot</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/readme-cards/violin_chart.png?v=card-layout-v1" width="390" alt="Violin plot"></a><br><sub>Distribution shape and outliers</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Trend plot</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/readme-cards/trend.png?v=card-layout-v1" width="390" alt="Trend plot"></a><br><sub>Time, dose, and environmental gradients</sub></td>
+    <td align="center" valign="top"><strong>Stacked-bar scatter</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/readme-cards/StackedBarScatter.png?v=card-layout-v1" width="390" alt="Stacked-bar scatter"></a><br><sub>Composition and sample-level observations</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Frequency 3D heatmap</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/readme-cards/Frequency_3DHeatmap.png?v=card-layout-v1" width="390" alt="Frequency 3D heatmap"></a><br><sub>Binned frequency and two-factor counts</sub></td>
+    <td align="center" valign="top"><strong>Sankey diagram</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/readme-cards/sankey.png?v=card-layout-v1" width="390" alt="Sankey diagram"></a><br><sub>Category flow and state transitions</sub></td>
+  </tr>
+</table>
+
+<p align="center"><a href="references/figure-type-catalog.md"><strong>Open the complete catalogue and selection constraints →</strong></a></p>
 
 ## Palette library
 

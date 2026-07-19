@@ -132,40 +132,50 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ## 生产图表索引
 
-这里仅保留重点生产资产的预览，不再重复展示全部图型。完整的选图范围、限制与实现等级见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)；生成时 Skill 会先检查数据结构与语义是否兼容，再决定原生复用、视觉适配或全新实现。
+这里仅保留重点生产资产的预览，不再重复展示全部图型。完整的选图范围、限制与实现等级见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)；生成时 Skill 会先检查数据结构与语义是否兼容，再决定原生复用、视觉适配或全新实现。缩略图按画幅分组，原始图仍可点击查看。
+
+### 近方形图型 · 3 × 3
 
 <table width="100%">
   <tr>
-    <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D 热图"></a><br><sub>多因子交互与三维强度矩阵</sub></td>
-    <td width="33%" align="center" valign="top"><strong>AUROC 曲线</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC 曲线"></a><br><sub>分类模型与阈值敏感性</sub></td>
-    <td width="33%" align="center" valign="top"><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/bar.png?v=palette-diversity-v1" width="280" alt="柱状图"></a><br><sub>组间摘要、误差与原始样本</sub></td>
+    <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png?v=card-layout-v1" width="280" alt="3D 热图"></a><br><sub>三维强度矩阵</sub></td>
+    <td width="33%" align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png?v=card-layout-v1" width="280" alt="密度热图"></a><br><sub>大样本二维密度</sub></td>
+    <td width="33%" align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png?v=card-layout-v1" width="280" alt="PCA 双标图"></a><br><sub>样本分离与载荷</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>相关性密度图</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/CorrelationDensity.png?v=palette-diversity-v1" width="280" alt="相关性密度图"></a><br><sub>二变量关系、密集区与异常点</sub></td>
-    <td align="center" valign="top"><strong>相关性矩阵</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/Correlationmatrix.png?v=palette-diversity-v1" width="280" alt="相关性矩阵"></a><br><sub>多变量关系与共线性检查</sub></td>
-    <td align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/density_heatmap.png?v=palette-diversity-v1" width="280" alt="密度热图"></a><br><sub>大样本点云与二维密度</sub></td>
+    <td align="center" valign="top"><strong>AUROC 曲线</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png?v=card-layout-v1" width="280" alt="AUROC 曲线"></a><br><sub>分类与阈值敏感性</sub></td>
+    <td align="center" valign="top"><strong>相关性密度图</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png?v=card-layout-v1" width="280" alt="相关性密度图"></a><br><sub>关系、密集区与异常点</sub></td>
+    <td align="center" valign="top"><strong>相关性矩阵</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png?v=card-layout-v1" width="280" alt="相关性矩阵"></a><br><sub>多变量关系与共线性</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>频率 3D 热图</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/Frequency_3DHeatmap.png?v=palette-diversity-v1" width="280" alt="频率 3D 热图"></a><br><sub>分箱频次与双因子计数</sub></td>
-    <td align="center" valign="top"><strong>分组相关矩阵</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/GroupCorrelationmatrix.png?v=palette-diversity-v1" width="280" alt="分组相关矩阵"></a><br><sub>处理或环境间相关结构差异</sub></td>
-    <td align="center" valign="top"><strong>分组柱状图</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/GroupedBarChart.png?v=palette-diversity-v1" width="280" alt="分组柱状图"></a><br><sub>多处理 × 多指标比较</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Mantel 检验图</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/MantelCorrelation.png?v=palette-diversity-v1" width="280" alt="Mantel 检验图"></a><br><sub>距离矩阵与环境关联</sub></td>
-    <td align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/PCA.png?v=palette-diversity-v1" width="280" alt="PCA 双标图"></a><br><sub>样本分离、降维与变量贡献</sub></td>
-    <td align="center" valign="top"><strong>雷达图</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/radar.png?v=palette-diversity-v1" width="280" alt="雷达图"></a><br><sub>少量对象的多指标画像</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>山脊图</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/RidgePlot.png?v=palette-diversity-v1" width="280" alt="山脊图"></a><br><sub>多组分布变化与重叠</sub></td>
-    <td align="center" valign="top"><strong>桑基图</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/sankey.png?v=palette-diversity-v1" width="280" alt="桑基图"></a><br><sub>类别流向与状态转换</sub></td>
-    <td align="center" valign="top"><strong>堆叠柱状散点图</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/StackedBarScatter.png?v=palette-diversity-v1" width="280" alt="堆叠柱状散点图"></a><br><sub>组成结构与样本级观测联读</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>趋势图</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/trend.png?v=palette-diversity-v1" width="280" alt="趋势图"></a><br><sub>时间、剂量与环境梯度</sub></td>
-    <td align="center" valign="top"><strong>小提琴图</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/violin_chart.png?v=palette-diversity-v1" width="280" alt="小提琴图"></a><br><sub>分布形态、离散程度与异常值</sub></td>
-    <td align="center" valign="middle"><strong>更多图型</strong><br><a href="references/figure-type-catalog.md">查看完整图型目录与选择约束 →</a></td>
+    <td align="center" valign="top"><strong>分组相关矩阵</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/readme-cards/GroupCorrelationmatrix.png?v=card-layout-v1" width="280" alt="分组相关矩阵"></a><br><sub>条件间相关结构</sub></td>
+    <td align="center" valign="top"><strong>雷达图</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png?v=card-layout-v1" width="280" alt="雷达图"></a><br><sub>少量对象多指标</sub></td>
+    <td align="center" valign="top"><strong>山脊图</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png?v=card-layout-v1" width="280" alt="山脊图"></a><br><sub>多组分布变化</sub></td>
   </tr>
 </table>
+
+### 横向图型 · 2 × 4
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png?v=card-layout-v1" width="390" alt="柱状图"></a><br><sub>组间摘要、误差与原始点</sub></td>
+    <td width="50%" align="center" valign="top"><strong>分组柱状图</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png?v=card-layout-v1" width="390" alt="分组柱状图"></a><br><sub>多处理 × 多指标</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Mantel 检验图</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png?v=card-layout-v1" width="390" alt="Mantel 检验图"></a><br><sub>距离矩阵与环境关联</sub></td>
+    <td align="center" valign="top"><strong>小提琴图</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/readme-cards/violin_chart.png?v=card-layout-v1" width="390" alt="小提琴图"></a><br><sub>分布形态与异常值</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>趋势图</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/readme-cards/trend.png?v=card-layout-v1" width="390" alt="趋势图"></a><br><sub>时间、剂量与环境梯度</sub></td>
+    <td align="center" valign="top"><strong>堆叠柱状散点图</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/readme-cards/StackedBarScatter.png?v=card-layout-v1" width="390" alt="堆叠柱状散点图"></a><br><sub>组成与样本级观测</sub></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>频率 3D 热图</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/readme-cards/Frequency_3DHeatmap.png?v=card-layout-v1" width="390" alt="频率 3D 热图"></a><br><sub>分箱频次与双因子计数</sub></td>
+    <td align="center" valign="top"><strong>桑基图</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/readme-cards/sankey.png?v=card-layout-v1" width="390" alt="桑基图"></a><br><sub>类别流向与状态转换</sub></td>
+  </tr>
+</table>
+
+<p align="center"><a href="references/figure-type-catalog.md"><strong>查看完整图型目录与选择约束 →</strong></a></p>
 
 ## 配色主题库
 
