@@ -36,7 +36,7 @@
     <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
   <tbody>
-    <tr><td>先选柱状图、热图或散点图</td><td>先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
+    <tr><td>先选柱状图、热图或散点图</td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
     <tr><td>默认忽略样本量、分布和重复测量</td><td>先剖析变量类型、缺失、组大小、异常值与依赖结构</td></tr>
     <tr><td>用默认配色和固定模板美化</td><td>按数据语义、期刊尺寸和证据层级建立视觉系统</td></tr>
     <tr><td>脚本能运行就结束</td><td>程序审查 + 最终尺寸读图 + 灰度校样，发现问题后回改重绘</td></tr>
@@ -52,7 +52,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td width="30%"><strong>96 个图型模式</strong></td><td width="70%">6 组图鉴 × 16 个已核验模式；另有 9 类专业选图路径，按数据与依赖实现</td></tr>
+    <tr><td width="30%"><strong>96 个图型模式</strong></td><td width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">6 组图鉴 × 16 个已核验模式；另有 9 类专业选图路径，按数据与依赖实现</td></tr>
     <tr><td><strong>29 类生产资产</strong></td><td>Python / R 脚本、示例数据约束与可核验预览</td></tr>
     <tr><td><strong>20 个主题配色</strong></td><td>分类色、发散色、连续色及参考图个性化重绘流程</td></tr>
     <tr><td><strong>4 轮 QA 审查</strong></td><td>反模式、代码与导出、科学逻辑、最终渲染审查</td></tr>
