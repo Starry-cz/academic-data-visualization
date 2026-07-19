@@ -33,7 +33,7 @@
 
 <table width="100%">
   <thead>
-    <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
+    <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Academic Data Visualization<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th></tr>
   </thead>
   <tbody>
     <tr><td>先选柱状图、热图或散点图</td><td>先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
@@ -48,7 +48,7 @@
   <thead>
     <tr>
       <th width="30%" align="left" valign="middle">规模</th>
-      <th width="70%" align="left" valign="middle">当前仓库提供</th>
+      <th width="70%" align="left" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>当前仓库提供<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th>
     </tr>
   </thead>
   <tbody>
@@ -118,7 +118,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%">
   <thead>
-    <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle">Skill 完成什么</th><th width="30%" valign="middle">主要产物</th></tr>
+    <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;</span>Skill 完成什么<span aria-hidden="true">&nbsp;&nbsp;</span></th><th width="30%" valign="middle">主要产物</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>1. 图形合同</strong></td><td>明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
@@ -257,7 +257,7 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 <table width="100%">
   <thead>
-    <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle">使用方式</th></tr>
+    <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>使用方式<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
