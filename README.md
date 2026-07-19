@@ -121,7 +121,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
     <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle">Skill 完成什么</th><th width="30%" valign="middle">主要产物</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>1. 图形合同</strong></td><td>明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
+    <tr><td><strong>1. 图形合同</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
     <tr><td><strong>2. 数据剖析</strong></td><td>检查变量类型、缺失、组大小、分布、异常值和依赖结构</td><td>与论证相关的数据摘要</td></tr>
     <tr><td><strong>3. 选图论证</strong></td><td>根据数据形态选择图型，并主动拦截误导性方案</td><td>主方案 + 备选方案 + 理由</td></tr>
     <tr><td><strong>4. 视觉系统</strong></td><td>固定终稿尺寸、面板层级、字体、色彩语义和后端</td><td>多面板设计简报</td></tr>
@@ -260,7 +260,7 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
     <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle">使用方式</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
+    <tr><td><strong>Codex</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
     <tr><td><strong>Claude Code</strong></td><td>将完整仓库放入 <code>~/.claude/skills/academic-data-visualization/</code></td></tr>
     <tr><td><strong>Cursor</strong></td><td>使用完整 Skill，并按需复制 <a href="install/cursor/.cursorrules">install/cursor/.cursorrules</a></td></tr>
     <tr><td><strong>GitHub Copilot</strong></td><td>使用 <a href="install/copilot/copilot-instructions.md">install/copilot/copilot-instructions.md</a></td></tr>

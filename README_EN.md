@@ -36,7 +36,7 @@
     <tr><th width="30%" valign="middle">A typical plotting request</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
   <tbody>
-    <tr><td>Starts from a bar, heatmap, or scatter template</td><td>Starts from what the reader must compare, relate, or decide</td></tr>
+    <tr><td>Starts from a bar, heatmap, or scatter template</td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Starts from what the reader must compare, relate, or decide</td></tr>
     <tr><td>Often ignores sample size, distribution, and dependence</td><td>Profiles variable types, missingness, group sizes, outliers, and repeated measures</td></tr>
     <tr><td>Beautifies with default colours and a fixed grid</td><td>Builds a visual system from data semantics, journal size, and evidence hierarchy</td></tr>
     <tr><td>Stops when the script runs</td><td>Runs programmatic QA, final-size visual review, and a grayscale proof</td></tr>
@@ -52,7 +52,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td width="30%"><strong>96 figure patterns</strong></td><td width="70%">Six atlas groups × 16 verified patterns; nine specialist selection categories are implemented on demand</td></tr>
+    <tr><td width="30%"><strong>96 figure patterns</strong></td><td width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Six atlas groups × 16 verified patterns; nine specialist selection categories are implemented on demand</td></tr>
     <tr><td><strong>29 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
     <tr><td><strong>20 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
     <tr><td><strong>4 QA passes</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
@@ -122,7 +122,7 @@ proof, a grayscale proof, and a QA report.
     <tr><th width="18%" valign="middle">Stage</th><th width="52%" valign="middle">What the skill completes</th><th width="30%" valign="middle">Main artifact</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>1. Figure contract</strong></td><td>Establish the question, claim, unit of observation, and target journal</td><td>One-sentence claim + panel data contract</td></tr>
+    <tr><td><strong>1. Figure contract</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Establish the question, claim, unit of observation, and target journal</td><td>One-sentence claim + panel data contract</td></tr>
     <tr><td><strong>2. Data profile</strong></td><td>Check types, missingness, group sizes, distributions, outliers, and dependence</td><td>Claim-directed data summary</td></tr>
     <tr><td><strong>3. Chart justification</strong></td><td>Select the chart and intercept misleading alternatives</td><td>Primary plan + alternatives + rationale</td></tr>
     <tr><td><strong>4. Visual system</strong></td><td>Fix final size, hierarchy, type, colour roles, and backend</td><td>Multi-panel design brief</td></tr>
@@ -261,7 +261,7 @@ The verdict follows [`references/checklist.md`](references/checklist.md). A figu
     <tr><th width="30%" valign="middle">Platform</th><th width="70%" valign="middle">Integration</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>Codex</strong></td><td>Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
+    <tr><td><strong>Codex</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
     <tr><td><strong>Claude Code</strong></td><td>Put the complete repository in <code>~/.claude/skills/academic-data-visualization/</code></td></tr>
     <tr><td><strong>Cursor</strong></td><td>Use the complete skill and optionally copy <a href="install/cursor/.cursorrules">install/cursor/.cursorrules</a></td></tr>
     <tr><td><strong>GitHub Copilot</strong></td><td>Use <a href="install/copilot/copilot-instructions.md">install/copilot/copilot-instructions.md</a></td></tr>
