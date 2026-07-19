@@ -43,7 +43,7 @@
   <thead>
     <tr>
       <th width="30%" align="left">规模</th>
-      <th width="70%" align="left">当前仓库提供</th>
+      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="1600" height="1" alt=""><br>当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
