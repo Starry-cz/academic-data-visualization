@@ -31,9 +31,9 @@
 
 ## What it solves
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
-    <tr><th width="30%" valign="middle">A typical plotting request</th><th width="70%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Academic Data Visualization<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th></tr>
+    <tr><th width="30%" valign="middle">A typical plotting request</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
   </thead>
   <tbody>
     <tr><td>Starts from a bar, heatmap, or scatter template</td><td>Starts from what the reader must compare, relate, or decide</td></tr>
@@ -44,11 +44,11 @@
   </tbody>
 </table>
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
     <tr>
       <th width="30%" align="left" valign="middle">Scale</th>
-      <th width="70%" align="left" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Included in this repository<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th>
+      <th width="70%" align="left" valign="middle">Included in this repository</th>
     </tr>
   </thead>
   <tbody>
@@ -102,7 +102,7 @@ proof, a grayscale proof, and a QA report.
 
 ### More copy-ready prompts
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
     <tr><th width="16%" valign="middle">Situation</th><th width="84%" valign="middle">Prompt</th></tr>
   </thead>
@@ -117,9 +117,9 @@ proof, a grayscale proof, and a QA report.
 
 ## How it works
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
-    <tr><th width="18%" valign="middle">Stage</th><th width="52%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;</span>What the skill completes<span aria-hidden="true">&nbsp;&nbsp;</span></th><th width="30%" valign="middle">Main artifact</th></tr>
+    <tr><th width="18%" valign="middle">Stage</th><th width="52%" valign="middle">What the skill completes</th><th width="30%" valign="middle">Main artifact</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>1. Figure contract</strong></td><td>Establish the question, claim, unit of observation, and target journal</td><td>One-sentence claim + panel data contract</td></tr>
@@ -137,7 +137,7 @@ The cards below retain only representative production assets rather than repeati
 
 ### Near-square figures · 3 × 3
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png?v=card-layout-v1" width="280" alt="3D heatmap"></a><br><sub>Three-dimensional intensity matrix</sub></td>
     <td width="33%" align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png?v=card-layout-v1" width="280" alt="Density heatmap"></a><br><sub>Large-sample 2D density</sub></td>
@@ -157,7 +157,7 @@ The cards below retain only representative production assets rather than repeati
 
 ### Landscape figures · 2 × 4
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Bar chart</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png?v=card-layout-v1" width="390" alt="Bar chart"></a><br><sub>Summaries, uncertainty, and observations</sub></td>
     <td width="50%" align="center" valign="top"><strong>Grouped bar chart</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png?v=card-layout-v1" width="390" alt="Grouped bar chart"></a><br><sub>Multi-treatment × multi-metric comparison</sub></td>
@@ -182,7 +182,7 @@ The cards below retain only representative production assets rather than repeati
 
 The default is `nature-default`; the README previews use different themes by figure type, with `warm-cool-kinetics` reserved for kinetic plots. Each theme defines categorical, diverging, and sequential roles rather than supplying disconnected hex values.
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Nature default · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="396" alt="Nature default palette preview"></td>
     <td width="50%" align="center" valign="top"><strong>Vivid signal · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="396" alt="Vivid signal palette preview"></td>
@@ -256,9 +256,9 @@ The verdict follows [`references/checklist.md`](references/checklist.md). A figu
 
 ## Installation and updates
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
-    <tr><th width="30%" valign="middle">Platform</th><th width="70%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Integration<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th></tr>
+    <tr><th width="30%" valign="middle">Platform</th><th width="70%" valign="middle">Integration</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>

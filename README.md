@@ -44,11 +44,11 @@
   </tbody>
 </table>
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
     <tr>
       <th width="30%" align="left" valign="middle">规模</th>
-      <th width="70%" align="left" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>当前仓库提供<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th>
+      <th width="70%" align="left" valign="middle">当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
@@ -101,7 +101,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ### 更多可直接使用的提示词
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
     <tr><th width="16%" valign="middle">场景</th><th width="84%" valign="middle">提示词</th></tr>
   </thead>
@@ -116,9 +116,9 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ## 工作方式
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
-    <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;</span>Skill 完成什么<span aria-hidden="true">&nbsp;&nbsp;</span></th><th width="30%" valign="middle">主要产物</th></tr>
+    <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle">Skill 完成什么</th><th width="30%" valign="middle">主要产物</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>1. 图形合同</strong></td><td>明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
@@ -136,7 +136,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ### 近方形图型 · 3 × 3
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png?v=card-layout-v1" width="280" alt="3D 热图"></a><br><sub>三维强度矩阵</sub></td>
     <td width="33%" align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png?v=card-layout-v1" width="280" alt="密度热图"></a><br><sub>大样本二维密度</sub></td>
@@ -156,7 +156,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ### 横向图型 · 2 × 4
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <td width="50%" align="center" valign="top"><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png?v=card-layout-v1" width="390" alt="柱状图"></a><br><sub>组间摘要、误差与原始点</sub></td>
     <td width="50%" align="center" valign="top"><strong>分组柱状图</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png?v=card-layout-v1" width="390" alt="分组柱状图"></a><br><sub>多处理 × 多指标</sub></td>
@@ -181,7 +181,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 默认主题是 `nature-default`；README 的重点预览按图型分配不同主题，`warm-cool-kinetics` 仅用于动力学类图。每个主题同时定义分类色、发散色和连续色角色，不只是若干十六进制色块。
 
-<table width="100%">
+<table width="100%" align="center">
   <tr>
     <td width="50%" align="center" valign="top"><strong>Nature 默认 · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature 默认配色预览"></td>
     <td width="50%" align="center" valign="top"><strong>高辨识信号 · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="高辨识信号配色预览"></td>
@@ -255,9 +255,9 @@ python scripts/grayscale_proof.py figure-proof.png --output figure-proof-graysca
 
 ## 安装与更新
 
-<table width="100%">
+<table width="100%" align="center">
   <thead>
-    <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle"><span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>使用方式<span aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th></tr>
+    <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle">使用方式</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Codex</strong></td><td>将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
