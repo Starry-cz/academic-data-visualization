@@ -43,7 +43,7 @@
   <thead>
     <tr>
       <th width="30%" align="left">Scale</th>
-      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="1600" height="1" alt=""><br>Included in this repository</th>
+      <th width="70%" align="left"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" alt=""><br>Included in this repository</th>
     </tr>
   </thead>
   <tbody>
