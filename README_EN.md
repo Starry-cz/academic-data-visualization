@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="#one-minute-start"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
-  <a href="#visual-atlas"><img src="https://img.shields.io/badge/Figure_patterns-96-73C79E?style=flat-square" alt="96 figure patterns"></a>
+  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Figure_routes-96%2B-73C79E?style=flat-square" alt="96+ figure routes"></a>
   <a href="#palette-library"><img src="https://img.shields.io/badge/Palette_themes-20-F599A1?style=flat-square" alt="20 palette themes"></a>
   <a href="#reproducible-quality-evidence"><img src="https://img.shields.io/badge/QA-4--pass_loop-95AEDA?style=flat-square" alt="Four-pass QA loop"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
@@ -19,7 +19,7 @@
 <p align="center">
   <a href="#one-minute-start">One-minute start</a> ·
   <a href="#what-it-solves">Scope</a> ·
-  <a href="#visual-atlas">Visual atlas</a> ·
+  <a href="references/figure-type-catalog.md">Figure catalogue</a> ·
   <a href="#production-figure-gallery">Production figures</a> ·
   <a href="#palette-library">Palettes</a> ·
   <a href="#reproducible-quality-evidence">Quality evidence</a> ·
@@ -47,7 +47,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr><td><strong>96 figure patterns</strong></td><td>Comparison, trend, distribution, matrix, omics, model, spatial, network, and work charts</td></tr>
+    <tr><td><strong>96+ figure routes</strong></td><td>96 verified visual patterns plus on-demand clinical, spatial, image, and omics routes</td></tr>
     <tr><td><strong>29 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
     <tr><td><strong>20 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
     <tr><td><strong>Four-pass QA</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
@@ -119,72 +119,39 @@ proof, a grayscale proof, and a QA report.
 | **5. Build and reuse** | Classify each panel as native reuse, visual adaptation, or new implementation | Reproducible Python / R scripts |
 | **6. Review and deliver** | Run four-pass QA, inspect RGB / grayscale proofs, revise, and export | PDF / SVG, 450 dpi proof, QA report |
 
-## Visual atlas
-
-Six atlases cover 96 reusable visual patterns. They are routing surfaces, not drop-in templates: production decisions still follow the user's data and [`references/figure-type-catalog.md`](references/figure-type-catalog.md).
-
-<table>
-  <tr>
-    <td width="50%" align="center" valign="top"><strong>Comparison, ranking, and composition</strong><br><a href="assets/chart-atlas/atlas-01-bar-charts.png"><img src="assets/chart-atlas/atlas-01-bar-charts.png" width="100%" alt="Comparison, ranking, and composition atlas"></a></td>
-    <td width="50%" align="center" valign="top"><strong>Trends, scatter, and relationships</strong><br><a href="assets/chart-atlas/atlas-02-line-scatter.png"><img src="assets/chart-atlas/atlas-02-line-scatter.png" width="100%" alt="Trends, scatter, and relationships atlas"></a></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Heatmaps, matrices, and patterns</strong><br><a href="assets/chart-atlas/atlas-03-heatmaps.png"><img src="assets/chart-atlas/atlas-03-heatmaps.png" width="100%" alt="Heatmaps, matrices, and patterns atlas"></a></td>
-    <td align="center" valign="top"><strong>Distributions and diagnostics</strong><br><a href="assets/chart-atlas/atlas-04-distributions.png"><img src="assets/chart-atlas/atlas-04-distributions.png" width="100%" alt="Distributions and diagnostics atlas"></a></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Research, models, and omics</strong><br><a href="assets/chart-atlas/atlas-05-volcano-special.png"><img src="assets/chart-atlas/atlas-05-volcano-special.png" width="100%" alt="Research, models, and omics atlas"></a></td>
-    <td align="center" valign="top"><strong>Domain research and everyday work</strong><br><a href="assets/chart-atlas/atlas-06-domain-work.png"><img src="assets/chart-atlas/atlas-06-domain-work.png" width="100%" alt="Domain research and everyday work atlas"></a></td>
-  </tr>
-</table>
-
-<details>
-<summary><strong>Complete navigation for all 96 figure patterns</strong></summary>
-
-| Family | Available patterns |
-|---|---|
-| **Comparison, ranking, composition** | Grouped bar, stacked bar, horizontal bar, raw-point bar, significance bar, paired bar, dot plot, strip overlay, 100% stacked, diverging bar, waterfall, lollipop, horizontal percentage stack, nested group, error bar, range plot |
-| **Trends, scatter, relationships** | Scatter, regression scatter, multi-series line, dose response, correlation scatter, bubble, mean ± SEM ribbon, marginal histogram scatter, step, connected scatter, multi-group scatter, LOESS, stem, polar scatter, area, highlighted trend |
-| **Heatmaps, matrices, patterns** | Diverging, masked correlation, annotated, split, clustered, density, categorical, half-dendrogram, upper-triangle, row-normalized, discrete, sparse, multi-annotation, gapped, binary, sequential gradient |
-| **Distributions and diagnostics** | Box, violin, box + raw points, histogram, overlapping KDE, ridge, half violin, beeswarm, Sina, split violin, ECDF, QQ, overlapping histogram, raincloud, 2D histogram, rug |
-| **Research, models, omics** | Volcano, labelled volcano, faceted volcano, MA, quadrant scatter, forest, radar, UpSet, genomic waterfall, Manhattan, Bland–Altman, ROC, PR, calibration, funnel, Venn |
-| **Domain research and work** | Kaplan–Meier, dumbbell, slopegraph, Pareto, control, Gantt, stage funnel, treemap, calendar heatmap, network, spatial bubble, dendrogram, genomic lollipop, SHAP beeswarm, coefficient / dot-whisker, ternary |
-
-</details>
-
 ## Production figure gallery
 
-The cards below show common production assets. Click a thumbnail for the full image. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation.
+The cards below retain only representative production assets rather than repeating every figure route. See [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete selection scope, constraints, and implementation levels. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation.
 
 <table>
   <tr>
-    <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?theme=warm-cool-kinetics-v1" width="280" alt="3D heatmap"></a><br><sub>Multifactor interactions and intensity matrices</sub></td>
-    <td width="33%" align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?theme=warm-cool-kinetics-v1" width="280" alt="AUROC curve"></a><br><sub>Classifier and threshold sensitivity</sub></td>
-    <td width="33%" align="center" valign="top"><strong>Bar chart</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/bar.png?theme=warm-cool-kinetics-v1" width="280" alt="Bar chart"></a><br><sub>Group summaries, uncertainty, and observations</sub></td>
+    <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/3Dheatmap.png?v=palette-diversity-v1" width="280" alt="3D heatmap"></a><br><sub>Multifactor interactions and intensity matrices</sub></td>
+    <td width="33%" align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/auroc.png?v=palette-diversity-v1" width="280" alt="AUROC curve"></a><br><sub>Classifier and threshold sensitivity</sub></td>
+    <td width="33%" align="center" valign="top"><strong>Bar chart</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/bar.png?v=palette-diversity-v1" width="280" alt="Bar chart"></a><br><sub>Group summaries, uncertainty, and observations</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Correlation-density plot</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/CorrelationDensity.png?theme=warm-cool-kinetics-v1" width="280" alt="Correlation-density plot"></a><br><sub>Bivariate relation, density, and outliers</sub></td>
-    <td align="center" valign="top"><strong>Correlation matrix</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/Correlationmatrix.png?theme=warm-cool-kinetics-v1" width="280" alt="Correlation matrix"></a><br><sub>Multivariable relations and collinearity</sub></td>
-    <td align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/density_heatmap.png?theme=warm-cool-kinetics-v1" width="280" alt="Density heatmap"></a><br><sub>Large point clouds and 2D density</sub></td>
+    <td align="center" valign="top"><strong>Correlation-density plot</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/CorrelationDensity.png?v=palette-diversity-v1" width="280" alt="Correlation-density plot"></a><br><sub>Bivariate relation, density, and outliers</sub></td>
+    <td align="center" valign="top"><strong>Correlation matrix</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/Correlationmatrix.png?v=palette-diversity-v1" width="280" alt="Correlation matrix"></a><br><sub>Multivariable relations and collinearity</sub></td>
+    <td align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/density_heatmap.png?v=palette-diversity-v1" width="280" alt="Density heatmap"></a><br><sub>Large point clouds and 2D density</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Frequency 3D heatmap</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/Frequency_3DHeatmap.png?theme=warm-cool-kinetics-v1" width="280" alt="Frequency 3D heatmap"></a><br><sub>Binned frequency and two-factor counts</sub></td>
-    <td align="center" valign="top"><strong>Grouped correlation matrix</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/GroupCorrelationmatrix.png?theme=warm-cool-kinetics-v1" width="280" alt="Grouped correlation matrix"></a><br><sub>Correlation structure across conditions</sub></td>
-    <td align="center" valign="top"><strong>Grouped bar chart</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/GroupedBarChart.png?theme=warm-cool-kinetics-v1" width="280" alt="Grouped bar chart"></a><br><sub>Multi-treatment × multi-metric comparison</sub></td>
+    <td align="center" valign="top"><strong>Frequency 3D heatmap</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/Frequency_3DHeatmap.png?v=palette-diversity-v1" width="280" alt="Frequency 3D heatmap"></a><br><sub>Binned frequency and two-factor counts</sub></td>
+    <td align="center" valign="top"><strong>Grouped correlation matrix</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/GroupCorrelationmatrix.png?v=palette-diversity-v1" width="280" alt="Grouped correlation matrix"></a><br><sub>Correlation structure across conditions</sub></td>
+    <td align="center" valign="top"><strong>Grouped bar chart</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/GroupedBarChart.png?v=palette-diversity-v1" width="280" alt="Grouped bar chart"></a><br><sub>Multi-treatment × multi-metric comparison</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Mantel test</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/MantelCorrelation.png?theme=warm-cool-kinetics-v1" width="280" alt="Mantel test"></a><br><sub>Distance-matrix and environment links</sub></td>
-    <td align="center" valign="top"><strong>PCA biplot</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/PCA.png?theme=warm-cool-kinetics-v1" width="280" alt="PCA biplot"></a><br><sub>Separation, reduction, and loadings</sub></td>
-    <td align="center" valign="top"><strong>Radar chart</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/radar.png?theme=warm-cool-kinetics-v1" width="280" alt="Radar chart"></a><br><sub>Multimetric profiles for a few objects</sub></td>
+    <td align="center" valign="top"><strong>Mantel test</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/MantelCorrelation.png?v=palette-diversity-v1" width="280" alt="Mantel test"></a><br><sub>Distance-matrix and environment links</sub></td>
+    <td align="center" valign="top"><strong>PCA biplot</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/PCA.png?v=palette-diversity-v1" width="280" alt="PCA biplot"></a><br><sub>Separation, reduction, and loadings</sub></td>
+    <td align="center" valign="top"><strong>Radar chart</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/radar.png?v=palette-diversity-v1" width="280" alt="Radar chart"></a><br><sub>Multimetric profiles for a few objects</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Ridge plot</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/RidgePlot.png?theme=warm-cool-kinetics-v1" width="280" alt="Ridge plot"></a><br><sub>Distribution shifts and overlap</sub></td>
-    <td align="center" valign="top"><strong>Sankey diagram</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/sankey.png?theme=warm-cool-kinetics-v1" width="280" alt="Sankey diagram"></a><br><sub>Category flow and state transitions</sub></td>
-    <td align="center" valign="top"><strong>Stacked-bar scatter</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/StackedBarScatter.png?theme=warm-cool-kinetics-v2" width="280" alt="Stacked-bar scatter"></a><br><sub>Composition plus sample-level observations</sub></td>
+    <td align="center" valign="top"><strong>Ridge plot</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/RidgePlot.png?v=palette-diversity-v1" width="280" alt="Ridge plot"></a><br><sub>Distribution shifts and overlap</sub></td>
+    <td align="center" valign="top"><strong>Sankey diagram</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/sankey.png?v=palette-diversity-v1" width="280" alt="Sankey diagram"></a><br><sub>Category flow and state transitions</sub></td>
+    <td align="center" valign="top"><strong>Stacked-bar scatter</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/StackedBarScatter.png?v=palette-diversity-v1" width="280" alt="Stacked-bar scatter"></a><br><sub>Composition plus sample-level observations</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Trend plot</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/trend.png?theme=warm-cool-kinetics-v1" width="280" alt="Trend plot"></a><br><sub>Time, dose, and environmental gradients</sub></td>
-    <td align="center" valign="top"><strong>Violin plot</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/violin_chart.png?theme=warm-cool-kinetics-v1" width="280" alt="Violin plot"></a><br><sub>Shape, spread, and outliers</sub></td>
+    <td align="center" valign="top"><strong>Trend plot</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/trend.png?v=palette-diversity-v1" width="280" alt="Trend plot"></a><br><sub>Time, dose, and environmental gradients</sub></td>
+    <td align="center" valign="top"><strong>Violin plot</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/violin_chart.png?v=palette-diversity-v1" width="280" alt="Violin plot"></a><br><sub>Shape, spread, and outliers</sub></td>
     <td align="center" valign="middle"><strong>More figure types</strong><br><a href="references/figure-type-catalog.md">Open the complete catalogue and selection constraints →</a></td>
   </tr>
 </table>
@@ -293,14 +260,14 @@ academic-data-visualization/
 ├── SKILL.md                 # concise decision entry and conditional routing
 ├── agents/openai.yaml       # Codex display and default-prompt metadata
 ├── references/              # selection, journal, colour, layout, reuse, export, and QA
-├── scripts/                 # composition, validation, preview, atlas, and grayscale tools
-├── assets/                  # production scripts, atlases, thumbnails, and palette previews
+├── scripts/                 # composition, validation, thumbnail, palette, and grayscale tools
+├── assets/                  # production scripts, curated thumbnails, palette previews, and internal test assets
 └── install/                 # Codex / Cursor / Copilot / Claude adapters
 ```
 
 ## Design references and acknowledgements
 
-The README and workflow independently adapt strong public patterns: curated atlases and progressive disclosure from [GPT-Image2-Skill](https://github.com/wuyoscar/GPT-Image2-Skill), visual proof from real production scripts in [figures4papers](https://github.com/ChenLiu-1996/figures4papers), problem-driven planning and multi-pass QA from [academic-figure-skill](https://github.com/TingxiYu/academic-figure-skill), advisor-first profiling and rendered-proof review from [scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill), and quick-start plus journal-style examples from [SciencePlots](https://github.com/garrettj403/SciencePlots). No scripts or generated figures from these projects are copied here.
+The README and workflow independently adapt strong public patterns: progressive disclosure from [GPT-Image2-Skill](https://github.com/wuyoscar/GPT-Image2-Skill), visual proof from real production scripts in [figures4papers](https://github.com/ChenLiu-1996/figures4papers), problem-driven planning and multi-pass QA from [academic-figure-skill](https://github.com/TingxiYu/academic-figure-skill), advisor-first profiling and rendered-proof review from [scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill), and quick-start plus journal-style examples from [SciencePlots](https://github.com/garrettj403/SciencePlots). No scripts or generated figures from these projects are copied here.
 
 ## Contributing and license
 

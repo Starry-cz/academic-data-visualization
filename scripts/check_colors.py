@@ -100,11 +100,17 @@ _RE_GREEN_HEX = re.compile(r'#[0-9A-Fa-f]{2}[89A-Ba-b][0-9A-Fa-f]{2}')  # hex in
 _RE_RED_NAME = re.compile(r"""['"]#?(red|darkred|firebrick|crimson|indianred|lightcoral)['"]""", re.IGNORECASE)
 _RE_GREEN_NAME = re.compile(r"""['"]#?(green|darkgreen|forestgreen|limegreen|seagreen|mediumseagreen)['"]""", re.IGNORECASE)
 
-# Explicit "red" and "green" together in a color vector, palette, or list
+# 只拦截“恰好由红色和绿色组成”的二分类向量。此前的宽松正则会把
+# 多主题字典中的语义键（如 "red":、"green":）误判为红绿二分类。
 _RE_RED_GREEN_PAIR = re.compile(
-    r'(\[|\(|c\()\s*["\'](?:red|\#(?:FF0000|[89A-Ba-b][0-9A-Fa-f]{4}))["\'].*?'
-    r'["\'](?:green|\#(?:00FF00|00[89A-Ba-b]00))["\'].*?(\]|\)|\))',
-    re.IGNORECASE | re.DOTALL
+    r'''(?:\[\s*|c\(\s*)
+        (?:["'](?:red|\#(?:FF0000|[89A-Ba-b][0-9A-Fa-f]{4}))["'])\s*,\s*
+        (?:["'](?:green|\#(?:00FF00|00[89A-Ba-b]00))["'])\s*(?:\]|\))
+        |
+        (?:\[\s*|c\(\s*)
+        (?:["'](?:green|\#(?:00FF00|00[89A-Ba-b]00))["'])\s*,\s*
+        (?:["'](?:red|\#(?:FF0000|[89A-Ba-b][0-9A-Fa-f]{4}))["'])\s*(?:\]|\))''',
+    re.IGNORECASE | re.VERBOSE,
 )
 
 # R's color brewer paired palette (alternating red/green by default)

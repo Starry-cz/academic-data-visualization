@@ -29,6 +29,31 @@ This skill has one default theme and nineteen user-selectable themes. The palett
 
 The canonical full values, including sequential and diverging ramps, live in [`palette-library.json`](palette-library.json). Use that file as the single source of truth for preview scripts and future adapters.
 
+## Theme routing and gallery diversity
+
+Select a theme from the evidence, not from whichever preview was generated most recently. Keep one semantic mapping within a figure and across a manuscript; vary the named theme only when figures are independent examples, a gallery, or separate studies.
+
+| Evidence context | Preferred theme route | Do not use as a substitute |
+|---|---|---|
+| General first proof, colour-critical categories | `nature-default` | A pale theme whose categories cannot survive grayscale |
+| Time-resolved decay, half-life, kinetic response | `warm-cool-kinetics` | A universal default for unrelated panels |
+| Clinical cohort, survival, treatment response | `literature-clinical` or `neuro-navy` | Red–green-only group coding |
+| Omics, single-cell, genomics, population structure | `teal-genome`, `pastel-omics`, or `bright-bio` | Rainbow expression scales |
+| Materials, electrochemistry, catalysis, cost | `electrochemistry`, `pastel-catalysis`, `cryo-electrolyte`, or `soft-cost` | Decorative gradients without a numeric order |
+| Dense methods, benchmarks, diagrams, network summaries | `method-blueprint`, `sage-methods`, or `quiet-atlas` | Repeating a saturated accent for every element |
+
+For a gallery or batch of unrelated previews, create a compact allocation ledger before rendering:
+
+```text
+Figure / panel: [name]
+Theme: [library ID]
+Baseline / comparison / accent: [semantic roles]
+Continuous scale: [sequential or diverging ID]
+Grayscale redundancy: [shape, line type, label, hatch, or ordering]
+```
+
+Adjacent previews may use different themes, but never random swatches. Each retained theme must still pass the colour-role, contrast, and grayscale checks below.
+
 ### Selection and personalization protocol
 
 1. Before drawing, use the user's named theme; otherwise use `nature-default` and say so in the initial plan.

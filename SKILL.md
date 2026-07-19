@@ -59,6 +59,8 @@ For each panel, state:
 |---|---|---|---|
 | (a) | [type] | [question] | [sample size, distribution, dimensionality, or evidence role] |
 
+Before locking the plan, run a **coverage scan**. Compare the question against the relevant family in `references/figure-type-catalog.md`, including specialised routes for survival, clinical events, image evidence, spatial data, single-cell / genomics, networks, and study flow. Do not claim that every route has a ready-made script: use `生产模板` only when a matching asset exists; use `可复用模式` or `按需实现` when the data contract requires new code.
+
 Actively intercept the failure modes in `references/common-pitfalls.md`, especially:
 
 - mean-only bars for small groups;
@@ -93,7 +95,9 @@ Load these references only after the plan is fixed:
 - `references/export-specs.md`;
 - `references/visual-style.md`.
 
-Use `nature-default` when neither journal routing nor the user supplies a preference. Record stable roles for baseline, comparison, emphasis, and context.
+Use `nature-default` when neither journal routing nor the user supplies a preference. Record stable roles for baseline, comparison, emphasis, and context. Do not impose one named theme on unrelated figures merely for convenience: retain colours when semantic roles persist within one figure or manuscript, but route independent figures by their data semantics and the theme guidance in `references/color-palettes.md`.
+
+For gallery, batch, or atlas-like outputs, keep a **palette allocation ledger**: record the theme, baseline, comparison, accent, and continuous-scale role for each figure. Use `warm-cool-kinetics` only for ordered kinetic / decay / time-resolved evidence; do not use it as the universal gallery palette. Give adjacent unrelated previews visibly distinct themes while preserving accessibility and grayscale redundancy.
 
 Then read `references/directory-map.md` and `references/asset-reuse-protocol.md`. For every panel:
 

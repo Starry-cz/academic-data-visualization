@@ -12,8 +12,10 @@ from pathlib import Path
 
 import numpy as np
 import matplotlib as mpl
+# README 预览在 CI 与无桌面环境中运行，必须在导入 pyplot 前固定为无界面后端。
+mpl.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap, rgb_to_hsv, hsv_to_rgb
+from matplotlib.colors import LinearSegmentedColormap, rgb_to_hsv
 from matplotlib.patches import Ellipse
 from PIL import Image
 
@@ -34,6 +36,41 @@ MAUVE = "#CC79A7"
 TERRACOTTA = "#D55E00"
 TEAL = "#56B4E9"
 PALETTE = [MIST_BLUE, SAGE, APRICOT, MAUVE, TERRACOTTA, TEAL]
+
+# 重点图索引展示独立主题，不把单一配色误当作所有图型的默认外观。
+# 键值对应原图中常见的色相角色：蓝色是主证据，红色是强调，其他色为并列比较。
+GALLERY_THEMES = {
+    "teal-genome": {"red": "#3D3539", "orange": "#8B84A3", "green": "#8CD1B2", "blue": "#0F9EA8", "mauve": "#45728F"},
+    "bright-bio": {"red": "#E36889", "orange": "#F7A63A", "green": "#80C662", "blue": "#557CFF", "mauve": "#866AD2"},
+    "pastel-omics": {"red": "#F6B593", "orange": "#EFC372", "green": "#84C492", "blue": "#81CAEA", "mauve": "#C0A3ED"},
+    "method-blueprint": {"red": "#B64342", "orange": "#8BCF8B", "green": "#42949E", "blue": "#0F4D92", "mauve": "#3775BA"},
+    "literature-clinical": {"red": "#D87B67", "orange": "#D4B261", "green": "#72AE9E", "blue": "#477E95", "mauve": "#9C86B3"},
+    "electrochemistry": {"red": "#E26E67", "orange": "#F8D1B5", "green": "#A4D86A", "blue": "#509CBA", "mauve": "#91BFDB"},
+    "soft-academic": {"red": "#F8B9B8", "orange": "#FFC6BC", "green": "#A5CDE2", "blue": "#5FA3CB", "mauve": "#668FCA"},
+    "quiet-atlas": {"red": "#D4A48B", "orange": "#C7AA59", "green": "#7EAF9A", "blue": "#4F738C", "mauve": "#9B88B2"},
+    "warm-cool-kinetics": {"red": "#D7312D", "orange": "#F2724D", "green": "#FEE395", "blue": "#115FA4", "mauve": "#6090C1"},
+    "aquifer-recovery": {"red": "#F599A1", "orange": "#FCD590", "green": "#73C79E", "blue": "#5299CC", "mauve": "#A577AD"},
+}
+
+GALLERY_THEME_BY_FILE = {
+    "3Dheatmap.png": "teal-genome",
+    "auroc.png": "method-blueprint",
+    "bar.png": "bright-bio",
+    "CorrelationDensity.png": "soft-academic",
+    "Correlationmatrix.png": "teal-genome",
+    "density_heatmap.png": "pastel-omics",
+    "Frequency_3DHeatmap.png": "electrochemistry",
+    "GroupCorrelationmatrix.png": "quiet-atlas",
+    "GroupedBarChart.png": "bright-bio",
+    "MantelCorrelation.png": "literature-clinical",
+    "PCA.png": "pastel-omics",
+    "radar.png": "soft-academic",
+    "RidgePlot.png": "literature-clinical",
+    "sankey.png": "method-blueprint",
+    "StackedBarScatter.png": "warm-cool-kinetics",
+    "trend.png": "aquifer-recovery",
+    "violin_chart.png": "soft-academic",
+}
 
 
 def configure_style() -> None:
@@ -301,7 +338,7 @@ def save_secondary_preview() -> Path:
     ax_heat.imshow(heat, cmap=cmap, vmin=0, vmax=0.8, aspect="auto")
     ax_heat.set_xticks(range(5), ["T1", "T2", "T3", "T4", "T5"])
     ax_heat.set_yticks(range(5), ["Pathway A", "Pathway B", "Pathway C", "Pathway D", "Pathway E"])
-    ax_heat.set_title("Feature response map", loc="left", color=INK, fontweight="bold", pad=8)
+    # 总标题与面板标签已说明证据层次；不在狭窄热图上再放会越界的长标题。
     for row in range(heat.shape[0]):
         for column in range(heat.shape[1]):
             ax_heat.text(column, row, f"{heat[row, column]:.2f}", ha="center", va="center",
@@ -314,7 +351,8 @@ def save_secondary_preview() -> Path:
         spine.set_visible(False)
     panel_label(ax_heat, "c")
 
-    fig.suptitle("Evidence layers: distribution, effect and feature structure", x=0.02, ha="left", y=1.03,
+    # 交给 constrained layout 预留标题空间，避免总标题压住子图标题和面板标签。
+    fig.suptitle("Evidence layers: distribution, effect and feature structure", x=0.02, ha="left",
                  fontsize=13, color=INK, fontweight="bold")
     output = ATLAS_DIR / "data-figure.png"
     report = audit_figure(fig, output.stem)
@@ -328,23 +366,16 @@ def save_secondary_preview() -> Path:
 
 
 def recolor_gallery_assets() -> int:
-    """Re-map existing gallery thumbnails to the shared muted palette.
-
-    The gallery contains source-derived raster examples.  This preserves each
-    chart's geometry and labels while replacing the legacy saturated hues with
-    the same semantic palette used by new renders.
-    """
-    targets = {
-        "red": np.array(mpl.colors.to_rgb(TERRACOTTA)),
-        "orange": np.array(mpl.colors.to_rgb(APRICOT)),
-        "green": np.array(mpl.colors.to_rgb(SAGE)),
-        "blue": np.array(mpl.colors.to_rgb(MIST_BLUE)),
-        "mauve": np.array(mpl.colors.to_rgb(MAUVE)),
-    }
+    """按图型语义分配主题，保留几何和标注，不再全库套用同一组色。"""
     count = 0
     for image_path in sorted(ATLAS_DIR.glob("*.png")):
-        if image_path.name in {"preview.png", "data-figure.png"}:
+        if image_path.name not in GALLERY_THEME_BY_FILE:
             continue
+        theme_id = GALLERY_THEME_BY_FILE[image_path.name]
+        targets = {
+            role: np.array(mpl.colors.to_rgb(value))
+            for role, value in GALLERY_THEMES[theme_id].items()
+        }
         image = Image.open(image_path).convert("RGB")
         pixels = np.asarray(image, dtype=np.float32) / 255.0
         hsv = rgb_to_hsv(pixels)
