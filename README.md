@@ -47,8 +47,8 @@
 <table width="100%" align="center">
   <thead>
     <tr>
-      <th width="30%" align="left" valign="middle">规模</th>
-      <th width="70%" align="left" valign="middle">当前仓库提供</th>
+      <th width="30%" align="center" valign="middle">规模</th>
+      <th width="70%" align="center" valign="middle">当前仓库提供</th>
     </tr>
   </thead>
   <tbody>
@@ -290,10 +290,6 @@ academic-data-visualization/
 ├── assets/                  # 生产脚本、重点缩略图、配色预览与内部测试资产
 └── install/                 # Codex / Cursor / Copilot / Claude 适配文件
 ```
-
-## 设计参考与致谢
-
-README 与工作流独立吸收了这些公开项目的优秀方法：渐进式展示来自 [GPT-Image2-Skill](https://github.com/wuyoscar/GPT-Image2-Skill)，真实生产脚本的视觉证明来自 [figures4papers](https://github.com/ChenLiu-1996/figures4papers)，问题驱动与多轮 QA 来自 [academic-figure-skill](https://github.com/TingxiYu/academic-figure-skill)，数据顾问与渲染回看闭环来自 [scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill)，期刊样式的快速上手与示例组织参考了 [SciencePlots](https://github.com/garrettj403/SciencePlots)。本仓库没有复制这些项目的脚本或生成图。
 
 ## 贡献与许可
 

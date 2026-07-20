@@ -47,8 +47,8 @@
 <table width="100%" align="center">
   <thead>
     <tr>
-      <th width="30%" align="left" valign="middle">Scale</th>
-      <th width="70%" align="left" valign="middle">Included in this repository</th>
+      <th width="30%" align="center" valign="middle">Scale</th>
+      <th width="70%" align="center" valign="middle">Included in this repository</th>
     </tr>
   </thead>
   <tbody>
@@ -291,10 +291,6 @@ academic-data-visualization/
 ├── assets/                  # production scripts, curated thumbnails, palette previews, and internal test assets
 └── install/                 # Codex / Cursor / Copilot / Claude adapters
 ```
-
-## Design references and acknowledgements
-
-The README and workflow independently adapt strong public patterns: progressive disclosure from [GPT-Image2-Skill](https://github.com/wuyoscar/GPT-Image2-Skill), visual proof from real production scripts in [figures4papers](https://github.com/ChenLiu-1996/figures4papers), problem-driven planning and multi-pass QA from [academic-figure-skill](https://github.com/TingxiYu/academic-figure-skill), advisor-first profiling and rendered-proof review from [scipilot-figure-skill](https://github.com/Haojae/scipilot-figure-skill), and quick-start plus journal-style examples from [SciencePlots](https://github.com/garrettj403/SciencePlots). No scripts or generated figures from these projects are copied here.
 
 ## Contributing and license
 
