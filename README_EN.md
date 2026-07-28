@@ -1,79 +1,77 @@
-<p align="center">
-  <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="Academic Data Visualization: from research question and data profiling to submission-ready figures and visual review">
-</p>
-
 <h1 align="center">Academic Data Visualization</h1>
 
 <p align="center">
-  <strong>Think first, plot second: turn scientific questions and real data into reproducible, reviewable, submission-ready Python / R figures.</strong>
+  <strong>Research question → data contract → chart rationale → publication-ready figure</strong><br>
+  <sub>Turn real data and journal constraints into reproducible, reviewable Python / R scientific figures.</sub>
 </p>
 
 <p align="center">
-  <a href="#one-minute-start"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
-  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Figure_patterns-96-73C79E?style=flat-square" alt="96 figure patterns"></a>
-  <a href="#palette-library"><img src="https://img.shields.io/badge/Palette_themes-23-F599A1?style=flat-square" alt="23 palette themes"></a>
-  <a href="#reproducible-quality-evidence"><img src="https://img.shields.io/badge/QA-4--pass_loop-95AEDA?style=flat-square" alt="Four-pass QA loop"></a>
+  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Taxonomy-24_categories-4573B4?style=flat-square" alt="24-category chart taxonomy"></a>
+  <a href="#capability-scope"><img src="https://img.shields.io/badge/Source_memberships-714%2F714-73C79E?style=flat-square" alt="714/714 source memberships mapped"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production_assets-34_verified-F2A65A?style=flat-square" alt="34 verified production assets"></a>
+  <a href="#quality-evidence"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="Four-pass QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
 </p>
 
 <p align="center">
-  <a href="#one-minute-start">One-minute start</a> ·
-  <a href="#what-it-solves">Scope</a> ·
-  <a href="references/figure-type-catalog.md">Figure catalogue</a> ·
-  <a href="#production-figure-gallery">Production figures</a> ·
-  <a href="#palette-library">Palettes</a> ·
-  <a href="#reproducible-quality-evidence">Quality evidence</a> ·
-  <a href="#installation-and-updates">Install</a> ·
+  <a href="#30-second-start">Quick start</a> ·
+  <a href="#why-use-it">Why</a> ·
+  <a href="#capability-scope">Scope</a> ·
+  <a href="#selected-figures">Gallery</a> ·
+  <a href="#documentation-map">Docs</a> ·
+  <a href="#quality-evidence">Quality</a> ·
   <a href="README.md">中文</a>
 </p>
 
-> This is not a template collection that forces data into a preset chart. The skill establishes the claim, unit of observation, data structure, and target journal before selecting a chart, organizing panels, reusing production assets, and reviewing final-size RGB and grayscale proofs.
+> This is not a gallery that forces data into preset templates. It first defines the claim, unit of observation, variable structure, and submission target; then it selects a chart, reuses a verified asset or implements one on demand, and reviews final-size RGB and grayscale proofs through four QA passes.
 
-## What it solves
+## 30-second start
 
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="30%" valign="middle">A typical plotting request</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Starts from a bar, heatmap, or scatter template</td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Starts from what the reader must compare, relate, or decide</td></tr>
-    <tr><td>Often ignores sample size, distribution, and dependence</td><td>Profiles variable types, missingness, group sizes, outliers, and repeated measures</td></tr>
-    <tr><td>Beautifies with default colours and a fixed grid</td><td>Builds a visual system from data semantics, journal size, and evidence hierarchy</td></tr>
-    <tr><td>Stops when the script runs</td><td>Runs programmatic QA, final-size visual review, and a grayscale proof</td></tr>
-    <tr><td>Delivers one PNG</td><td>Delivers code, vector masters, high-resolution proofs, and a QA report</td></tr>
-  </tbody>
-</table>
+Install the complete Skill rather than copying `SKILL.md` alone:
 
-<table width="100%" align="center">
-  <thead>
-    <tr>
-      <th width="30%" align="center" valign="middle">Scale</th>
-      <th width="70%" align="center" valign="middle">Included in this repository</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td width="30%"><strong>96 figure patterns</strong></td><td width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Six atlas groups × 16 verified patterns; nine specialist selection categories are implemented on demand</td></tr>
-    <tr><td><strong>34 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
-    <tr><td><strong>23 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
-    <tr><td><strong>4 QA passes</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
-  </tbody>
-</table>
+```powershell
+# Windows PowerShell · Codex
+git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.codex\skills\academic-data-visualization"
+```
 
-### Good fit
+```bash
+# macOS / Linux · Codex
+git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
+```
 
-- Manuscript main figures, supplementary figures, theses, and scientific reports;
-- Data where the defensible chart is not yet clear;
-- Rebuilding an old figure, unifying a multi-panel visual language, or adapting to a journal;
-- Pre-submission checks for overlap, clipping, misleading encodings, colour, and export risks.
+Then describe the research question, data, and deliverables:
 
-### Out of scope
+```text
+Use academic-data-visualization to analyse experiment.csv.
+I need to compare three treatments at four time points. Profile sample sizes, distributions,
+missingness, and repeated-measures structure before defending the chart and multipanel design.
+Target a two-column manuscript figure and deliver an editable vector master, a 450 dpi proof,
+a grayscale proof, and a QA report.
+```
 
-- Interactive dashboards, web data products, or slide-deck layout;
-- Illustration-first mechanism diagrams with no quantitative panels;
-- Statistical analysis, data cleaning, or literature review with no figure-making goal.
+<p align="center">
+  <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="Workflow from research question and data profiling to publication-ready figures and visual review">
+</p>
 
-## 24-category chart registry
+## Why use it
+
+| Claim first | Honest capability boundaries | Reusable production assets | Submission-ready QA |
+|---|---|---|---|
+| Decide what readers must compare, relate, or judge before choosing a chart | Every one of the 665 canonical records has an explicit implementation state | 34 asset families include scripts, previews, and manifests for traceable reuse | Review anti-patterns, code and export, scientific logic, and the final rendering |
+
+Conventional plotting requests start with “make a bar chart” or “draw a heatmap.” This Skill starts with the scientific claim and data contract, and actively blocks common risks such as small-sample mean bars, dual axes, rainbow maps, invalid connecting lines, and misleading truncation.
+
+## How it works
+
+| Stage | Key action | Output |
+|---|---|---|
+| 1. Define | Fix the claim, observation unit, variables, dependence, and target journal | [`figure-contract.md`](references/figure-contract.md) |
+| 2. Defend | Profile sample sizes, distributions, missingness, outliers, and groups; compare candidates | Chart rationale and risk notes |
+| 3. Implement | Route to a production template, reusable pattern, or on-demand build; unify panels and colour | Python / R code and editable master |
+| 4. Verify | Run programmatic checks and inspect final-size RGB, grayscale, and export proofs | Proofs, vector files, and QA report |
+
+## Capability scope
 
 <!-- chart-registry:summary:start -->
 The registry separates catalogue coverage from implementation status. Only production templates have reusable scripts, previews, and manifests.
@@ -90,259 +88,146 @@ The registry separates catalogue coverage from implementation status. Only produ
 </table>
 <!-- chart-registry:summary:end -->
 
-Use [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete category index and [`references/chart-alias-index.md`](references/chart-alias-index.md) for name and abbreviation routing. New chart records must be registered and regenerated; catalogue coverage must never be described as a ready-made production script.
+| State | Meaning | Repository promise |
+|---|---|---|
+| `production_template` | Verified production template | Real script + PNG + `asset.yaml`, with SVG/PDF where available |
+| `reusable_pattern` | Reusable implementation pattern | Explicit data contract and backend route, but no claim of a standalone asset |
+| `on_demand` | Built for the actual data and dependencies | No fake previews and no look-alike substitutes for specialist charts |
 
-## One-minute start
+Browse the [complete 24-category catalogue](references/figure-type-catalog.md), [bilingual alias index](references/chart-alias-index.md), [coverage audit](references/chart-coverage-audit.md), and [verified production-asset map](references/directory-map.md).
 
-### 1. Install the complete skill
+## Selected figures
 
-Windows PowerShell:
+The landing page shows six representative examples. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for full previews and implementation states.
 
-```powershell
-git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.codex\skills\academic-data-visualization"
-```
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Correlation matrix</strong><br><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png" width="390" alt="Correlation matrix example"></td>
+    <td width="50%" align="center" valign="top"><strong>PCA</strong><br><img src="assets/figure-atlas/readme-cards/PCA.png" width="390" alt="PCA example"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Violin plot</strong><br><img src="assets/figure-atlas/readme-cards/violin_chart.png" width="390" alt="Violin plot example"></td>
+    <td align="center" valign="top"><strong>Time trend</strong><br><img src="assets/figure-atlas/readme-cards/trend.png" width="390" alt="Time trend example"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Sankey diagram</strong><br><img src="assets/figure-atlas/readme-cards/sankey.png" width="390" alt="Sankey diagram example"></td>
+    <td align="center" valign="top"><strong>Mantel correlation</strong><br><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png" width="390" alt="Mantel correlation example"></td>
+  </tr>
+</table>
 
-macOS / Linux:
+## Colour system
+
+Twenty-three themes cover categorical, sequential, and diverging semantics. The defaults require colour-blind safety, grayscale legibility, stable meaning, and a review step when colours are extracted from reference images.
+
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal palette preview"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Pastel harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony palette preview"></td>
+    <td align="center" valign="top"><strong>Coastal sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset palette preview"></td>
+  </tr>
+</table>
+
+See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.json`](references/palette-library.json) for complete values, semantic roles, and usage constraints.
+
+## Scope boundaries
+
+| Good fit | Out of scope |
+|---|---|
+| Manuscript main figures, supplements, theses, and scientific reports | Interactive dashboards or web data products |
+| Choosing a defensible chart from the real data structure | Illustration-only mechanisms with no quantitative panels |
+| Rebuilding old figures, unifying panels, or adapting to a journal | Statistical analysis, cleaning, or literature review with no figure goal |
+| Pre-submission checks for clipping, overlap, grayscale, misleading encodings, and export | Pretending that a generic chart is a map, genome track, or 3D volume |
+
+## Documentation map
+
+| Need | Start here |
+|---|---|
+| Find a chart, alias, and real implementation state | [Chart catalogue](references/figure-type-catalog.md) · [Alias index](references/chart-alias-index.md) · [Registry](references/chart-registry.yaml) |
+| Define inputs, claims, and deliverables | [Figure contract](references/figure-contract.md) · [Design brief](references/figure-design-brief.md) |
+| Organise multipanel hierarchy | [Multipanel layout](references/multipanel-layout.md) · [Visual style](references/visual-style.md) |
+| Match journal dimensions and export | [Journal intelligence](references/journal-intel.md) · [Journal specs](references/journal-specs.md) · [Export specs](references/export-specs.md) |
+| Select or extend a palette | [Colour guide](references/color-palettes.md) · [Palette registry](references/palette-library.json) |
+| Reuse assets and run final checks | [Asset reuse protocol](references/asset-reuse-protocol.md) · [Four-pass QA checklist](references/checklist.md) |
+
+## More installation options
+
+The complete repository matters: `references/`, `scripts/`, and `assets/` jointly provide routing, constraints, production assets, and QA. Do not copy a single file.
+
+<details>
+<summary><strong>Claude Code</strong></summary>
 
 ```bash
-git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
+git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.claude/skills/academic-data-visualization
 ```
 
-Install the **entire directory**, not `SKILL.md` alone. The `references/`, `scripts/`, and `assets/` directories provide the chart constraints, QA, and production assets.
+</details>
 
-### 2. Say this directly
+<details>
+<summary><strong>Cursor</strong></summary>
 
-```text
-Use academic-data-visualization to analyse experiment.csv.
-I need to compare three interventions across four time points. Profile sample size,
-distribution, and repeated-measure structure before justifying the chart and panel plan.
-Target a double-column manuscript figure and deliver editable vector masters, a 450 dpi
-proof, a grayscale proof, and a QA report.
-```
+Keep the complete Skill and use [`install/cursor/.cursorrules`](install/cursor/.cursorrules) where appropriate.
 
-### More copy-ready prompts
+</details>
 
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="16%" valign="middle">Situation</th><th width="84%" valign="middle">Prompt</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Unsure which chart to use</td><td><code>Profile experiment.csv and recommend a chart from the research claim, variable types, sample size, distribution, and grouping. Do not start from a template.</code></td></tr>
-    <tr><td>Build a main figure</td><td><code>Organize these results into a submission-ready multi-panel main figure. State what each panel answers and how the panels form one evidence chain.</code></td></tr>
-    <tr><td>Rebuild an old figure</td><td><code>Use old_figure.png and source_data.csv to rebuild an editable figure. Preserve the data meaning rather than merely beautifying the screenshot.</code></td></tr>
-    <tr><td>Adapt to a journal</td><td><code>Audit and rebuild figure.py for a Nature double-column figure, including type, width, colour, statistics, and export.</code></td></tr>
-    <tr><td>Audit before submission</td><td><code>Audit this figure for chart validity, clipping, legend occlusion, grayscale readability, vector text, and data-expression risks.</code></td></tr>
-  </tbody>
-</table>
+<details>
+<summary><strong>GitHub Copilot</strong></summary>
 
-## How it works
+Use [`install/copilot/copilot-instructions.md`](install/copilot/copilot-instructions.md) as repository instructions.
 
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="18%" valign="middle">Stage</th><th width="52%" valign="middle">What the skill completes</th><th width="30%" valign="middle">Main artifact</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>1. Figure contract</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Establish the question, claim, unit of observation, and target journal</td><td>One-sentence claim + panel data contract</td></tr>
-    <tr><td><strong>2. Data profile</strong></td><td>Check types, missingness, group sizes, distributions, outliers, and dependence</td><td>Claim-directed data summary</td></tr>
-    <tr><td><strong>3. Chart justification</strong></td><td>Select the chart and intercept misleading alternatives</td><td>Primary plan + alternatives + rationale</td></tr>
-    <tr><td><strong>4. Visual system</strong></td><td>Fix final size, hierarchy, type, colour roles, and backend</td><td>Multi-panel design brief</td></tr>
-    <tr><td><strong>5. Build and reuse</strong></td><td>Classify each panel as native reuse, visual adaptation, or new implementation</td><td>Reproducible Python / R scripts</td></tr>
-    <tr><td><strong>6. Review and deliver</strong></td><td>Run four-pass QA, inspect RGB / grayscale proofs, revise, and export</td><td>PDF / SVG, 450 dpi proof, QA report</td></tr>
-  </tbody>
-</table>
+</details>
 
-## Production figure gallery
-
-The cards below retain only representative production assets rather than repeating every figure route. See [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete selection scope, constraints, and implementation levels. Before reuse, the skill checks semantic and structural compatibility and classifies the panel as native reuse, visual adaptation, or a new implementation. Cards are grouped by aspect ratio; click any card for its full original image.
-
-### Near-square figures · 3 × 3
-
-<table width="100%" align="center">
-  <tr>
-    <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png?v=card-layout-v1" width="280" alt="3D heatmap"></a><br><sub>Three-dimensional intensity matrix</sub></td>
-    <td width="33%" align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png?v=card-layout-v1" width="280" alt="Density heatmap"></a><br><sub>Large-sample 2D density</sub></td>
-    <td width="33%" align="center" valign="top"><strong>PCA biplot</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png?v=card-layout-v1" width="280" alt="PCA biplot"></a><br><sub>Separation and loadings</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>AUROC curve</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png?v=card-layout-v1" width="280" alt="AUROC curve"></a><br><sub>Classification and threshold sensitivity</sub></td>
-    <td align="center" valign="top"><strong>Correlation-density plot</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png?v=card-layout-v1" width="280" alt="Correlation-density plot"></a><br><sub>Relation, density, and outliers</sub></td>
-    <td align="center" valign="top"><strong>Correlation matrix</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png?v=card-layout-v1" width="280" alt="Correlation matrix"></a><br><sub>Multivariable relations and collinearity</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Grouped correlation matrix</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/readme-cards/GroupCorrelationmatrix.png?v=card-layout-v1" width="280" alt="Grouped correlation matrix"></a><br><sub>Structure across conditions</sub></td>
-    <td align="center" valign="top"><strong>Radar chart</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png?v=card-layout-v1" width="280" alt="Radar chart"></a><br><sub>Profiles for a few objects</sub></td>
-    <td align="center" valign="top"><strong>Ridge plot</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png?v=card-layout-v1" width="280" alt="Ridge plot"></a><br><sub>Distribution shifts</sub></td>
-  </tr>
-</table>
-
-### Landscape figures · 2 × 4
-
-<table width="100%" align="center">
-  <tr>
-    <td width="50%" align="center" valign="top"><strong>Bar chart</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png?v=card-layout-v1" width="390" alt="Bar chart"></a><br><sub>Summaries, uncertainty, and observations</sub></td>
-    <td width="50%" align="center" valign="top"><strong>Grouped bar chart</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png?v=card-layout-v1" width="390" alt="Grouped bar chart"></a><br><sub>Multi-treatment × multi-metric comparison</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Mantel test</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png?v=card-layout-v1" width="390" alt="Mantel test"></a><br><sub>Distance-matrix and environment links</sub></td>
-    <td align="center" valign="top"><strong>Violin plot</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/readme-cards/violin_chart.png?v=card-layout-v1" width="390" alt="Violin plot"></a><br><sub>Distribution shape and outliers</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Trend plot</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/readme-cards/trend.png?v=card-layout-v1" width="390" alt="Trend plot"></a><br><sub>Time, dose, and environmental gradients</sub></td>
-    <td align="center" valign="top"><strong>Stacked-bar scatter</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/readme-cards/StackedBarScatter.png?v=card-layout-v1" width="390" alt="Stacked-bar scatter"></a><br><sub>Composition and sample-level observations</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Frequency 3D heatmap</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/readme-cards/Frequency_3DHeatmap.png?v=card-layout-v1" width="390" alt="Frequency 3D heatmap"></a><br><sub>Binned frequency and two-factor counts</sub></td>
-    <td align="center" valign="top"><strong>Sankey diagram</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/readme-cards/sankey.png?v=card-layout-v1" width="390" alt="Sankey diagram"></a><br><sub>Category flow and state transitions</sub></td>
-  </tr>
-</table>
-
-### Reference-image additions · 3 + 2
-
-<table width="100%" align="center">
-  <tr>
-    <td width="33%" align="center" valign="top"><strong>Bubble scatter</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figures/BubbleScatter/bubble_scatter.png?v=reference-expansion-v1" width="280" alt="Bubble scatter"></a><br><sub>Position, size, and category in one view</sub></td>
-    <td width="33%" align="center" valign="top"><strong>Correlation bubble matrix</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png?v=reference-expansion-v1" width="280" alt="Correlation bubble matrix"></a><br><sub>Direction, strength, and significance</sub></td>
-    <td width="33%" align="center" valign="top"><strong>Correlation network</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figures/CorrelationNetwork/correlation_network.png?v=reference-expansion-v1" width="280" alt="Correlation network"></a><br><sub>Signed edges, weights, and communities</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2" width="66%" align="center" valign="top"><strong>Stacked area</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figures/StackedArea/stacked_area.png?v=reference-expansion-v1" width="390" alt="Stacked area chart"></a><br><sub>Composition and cumulative change over ordered time</sub></td>
-    <td width="34%" align="center" valign="top"><strong>Geographic bubble map</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figures/GeographicBubbleMap/geographic_bubble_map.png?v=reference-expansion-v1" width="390" alt="Geographic bubble map"></a><br><sub>Location, region, and magnitude</sub></td>
-  </tr>
-</table>
-
-<p align="center"><a href="references/figure-type-catalog.md"><strong>Open the complete catalogue and selection constraints →</strong></a></p>
-
-## Palette library
-
-The default is `nature-default`; the README previews use different themes by figure type, with `warm-cool-kinetics` reserved for kinetic plots. Each theme defines categorical, diverging, and sequential roles rather than supplying disconnected hex values.
-
-<table width="100%" align="center">
-  <tr>
-    <td width="50%" align="center" valign="top"><strong>Nature default · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="396" alt="Nature default palette preview"></td>
-    <td width="50%" align="center" valign="top"><strong>Vivid signal · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="396" alt="Vivid signal palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Bright bio · bright-bio</strong><br><img src="assets/palette-gallery/bright-bio.png?qa=direct-labels-v1" width="390" alt="Bright bio palette preview"></td>
-    <td align="center" valign="top"><strong>Teal genome · teal-genome</strong><br><img src="assets/palette-gallery/teal-genome.png?qa=direct-labels-v1" width="390" alt="Teal genome palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Muted microbe · muted-microbe</strong><br><img src="assets/palette-gallery/muted-microbe.png?qa=direct-labels-v1" width="390" alt="Muted microbe palette preview"></td>
-    <td align="center" valign="top"><strong>Immuno signal · immuno-signal</strong><br><img src="assets/palette-gallery/immuno-signal.png?qa=direct-labels-v1" width="390" alt="Immuno signal palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Pastel catalysis · pastel-catalysis</strong><br><img src="assets/palette-gallery/pastel-catalysis.png?qa=direct-labels-v1" width="390" alt="Pastel catalysis palette preview"></td>
-    <td align="center" valign="top"><strong>Electrochemistry · electrochemistry</strong><br><img src="assets/palette-gallery/electrochemistry.png?qa=direct-labels-v1" width="390" alt="Electrochemistry palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Soft cost · soft-cost</strong><br><img src="assets/palette-gallery/soft-cost.png?qa=direct-labels-v1" width="390" alt="Soft cost palette preview"></td>
-    <td align="center" valign="top"><strong>Soft academic · soft-academic</strong><br><img src="assets/palette-gallery/soft-academic.png?qa=direct-labels-v1" width="390" alt="Soft academic palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Pastel omics · pastel-omics</strong><br><img src="assets/palette-gallery/pastel-omics.png?qa=direct-labels-v1" width="390" alt="Pastel omics palette preview"></td>
-    <td align="center" valign="top"><strong>Warm-cool kinetics · warm-cool-kinetics</strong><br><img src="assets/palette-gallery/warm-cool-kinetics.png?qa=direct-labels-v1" width="390" alt="Warm-cool kinetics palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Aquifer recovery · aquifer-recovery</strong><br><img src="assets/palette-gallery/aquifer-recovery.png?qa=direct-labels-v1" width="390" alt="Aquifer recovery palette preview"></td>
-    <td align="center" valign="top"><strong>Neuro navy · neuro-navy</strong><br><img src="assets/palette-gallery/neuro-navy.png?qa=direct-labels-v1" width="390" alt="Neuro navy palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Cryo electrolyte · cryo-electrolyte</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png?qa=direct-labels-v1" width="390" alt="Cryo electrolyte palette preview"></td>
-    <td align="center" valign="top"><strong>Literature clinical · literature-clinical</strong><br><img src="assets/palette-gallery/literature-clinical.png?qa=direct-labels-v1" width="390" alt="Literature clinical palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Sage methods · sage-methods</strong><br><img src="assets/palette-gallery/sage-methods.png?qa=direct-labels-v1" width="390" alt="Sage methods palette preview"></td>
-    <td align="center" valign="top"><strong>Quiet atlas · quiet-atlas</strong><br><img src="assets/palette-gallery/quiet-atlas.png?qa=direct-labels-v1" width="390" alt="Quiet atlas palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Method blueprint · method-blueprint</strong><br><img src="assets/palette-gallery/method-blueprint.png?qa=direct-labels-v1" width="390" alt="Method blueprint palette preview"></td>
-    <td align="center" valign="top"><strong>Ablation contrast · ablation-contrast</strong><br><img src="assets/palette-gallery/ablation-contrast.png?qa=direct-labels-v1" width="390" alt="Ablation contrast palette preview"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Pastel harmony · pastel-harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png?qa=reference-expansion-v1" width="390" alt="Pastel harmony palette preview"></td>
-    <td align="center" valign="top"><strong>Blue-red signal · blue-red-signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png?qa=reference-expansion-v1" width="390" alt="Blue-red signal palette preview"></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center" valign="top"><strong>Coastal sunset · coastal-sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png?qa=reference-expansion-v1" width="390" alt="Coastal sunset palette preview"></td>
-  </tr>
-</table>
-
-After the first reviewed render, the skill asks whether to keep the theme or redraw with another library theme, user-supplied hex values, a palette image, or a reference paper figure. Recolouring changes visual roles only; it does not change data, statistics, chart type, group order, or colour semantics.
-
-## Reproducible quality evidence
-
-Current repository baseline:
-
-- **40 / 40** trigger prompts classified correctly, including positive and negative cases;
-- **34 / 34** production figure families have parseable scripts;
-- **26 / 26** QA fixtures hit their expected targets across **15 / 15** programmatic checks;
-- the composition engine passes column-width, 450 dpi, TrueType embedding, vector-export, and palette checks.
-
-```bash
-# Skill metadata, structure, and trigger accuracy
-python scripts/check_skill_metadata.py
-python scripts/trigger_benchmark.py
-
-# Reference, production-asset, and QA coverage
-python scripts/check_references.py
-python scripts/qa_coverage.py
-python -m compileall -q scripts assets/figures
-
-# Audit a real plotting script
-python scripts/qa_validator.py path/to/figure.py
-
-# Create a grayscale readability proof
-python scripts/grayscale_proof.py figure-proof.png --output figure-proof-grayscale.png
-```
-
-The verdict follows [`references/checklist.md`](references/checklist.md). A figure is marked `READY` only after anti-pattern, code/export, scientific-logic, and rendered-proof passes are complete.
-
-## Installation and updates
-
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="30%" valign="middle">Platform</th><th width="70%" valign="middle">Integration</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>Codex</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Put the complete repository in <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
-    <tr><td><strong>Claude Code</strong></td><td>Put the complete repository in <code>~/.claude/skills/academic-data-visualization/</code></td></tr>
-    <tr><td><strong>Cursor</strong></td><td>Use the complete skill and optionally copy <a href="install/cursor/.cursorrules">install/cursor/.cursorrules</a></td></tr>
-    <tr><td><strong>GitHub Copilot</strong></td><td>Use <a href="install/copilot/copilot-instructions.md">install/copilot/copilot-instructions.md</a></td></tr>
-  </tbody>
-</table>
-
-Update a retained clone with:
+Update an existing installation with:
 
 ```bash
 git -C ~/.codex/skills/academic-data-visualization pull
 ```
 
-Windows PowerShell:
+## Quality evidence
 
-```powershell
-git -C "$env:USERPROFILE\.codex\skills\academic-data-visualization" pull
+Current repository baseline:
+
+- **714 / 714** source memberships are reproducibly mapped;
+- **34 / 34** production asset families contain real scripts, PNGs, and manifests;
+- **88 / 88** trigger-boundary cases classify correctly;
+- **26 / 26** QA fixtures hit their expected results across **15 / 15** programmatic checks;
+- CI audits the registry schema, 24 generated category documents, alias conflicts, asset mapping, and README summaries.
+
+```bash
+python scripts/check_skill_metadata.py
+python scripts/check_references.py
+python scripts/check_chart_registry.py
+python scripts/build_chart_registry.py --check
+python scripts/generate_chart_catalog.py --check
+python -m unittest discover -s tests -v
+python scripts/trigger_benchmark.py
+python scripts/qa_coverage.py
+python -m compileall -q scripts assets/figures tests
 ```
 
-## Repository layout
+A result is marked `READY` only after all four passes in [`checklist.md`](references/checklist.md): anti-patterns, code and export, scientific logic, and final rendering.
+
+<details>
+<summary><strong>Repository structure</strong></summary>
 
 ```text
 academic-data-visualization/
-├── SKILL.md                 # concise decision entry and conditional routing
-├── AGENTS.md                # repository architecture, generated files, and required checks
+├── SKILL.md                 # Concise decision entry point and on-demand routing
+├── AGENTS.md                # Architecture, generated-file, and validation rules
 ├── agents/openai.yaml       # Codex display and default-prompt metadata
-├── references/              # registry, 24 category files, selection, journal, colour, export, and QA
-├── scripts/                 # registry generation/validation, composition, previews, palettes, and grayscale tools
-├── tests/                   # taxonomy, routing, and generated-output regression tests
-├── assets/                  # production scripts, asset manifests, atlas, and palette previews
-└── install/                 # Codex / Cursor / Copilot / Claude adapters
+├── references/              # Registry, 24-category catalogue, journals, colour, export, and QA
+├── scripts/                 # Generation, validation, composition, colour, and grayscale tools
+├── tests/                   # Taxonomy, routing, and generated-output regression tests
+├── assets/                  # Production scripts, manifests, atlas, and palette previews
+└── install/                 # Codex / Claude Code / Cursor / Copilot adapters
 ```
 
-## Contributing and license
+</details>
 
-Contributions are welcome for journal specifications, accessibility improvements, real research scenarios, and new figure types. The minimum workflow is:
+## Contributing and licence
 
-1. register the canonical record, aliases, categories, and truthful implementation status in `chart-registry.yaml`;
-2. run `generate_chart_catalog.py` instead of hand-editing generated category files;
-3. for `production_template`, include a script, PNG, `asset.yaml`, and SVG/PDF when supported;
-4. run every check in AGENTS.md. Unimplemented charts must not have fabricated previews or asset paths.
+Register the canonical record, aliases, categories, and real implementation state before adding a chart, then run the catalogue generator. A chart may be marked `production_template` only when its real script, PNG, and `asset.yaml` are committed together. Never fabricate previews or asset paths for unimplemented charts. See [`AGENTS.md`](AGENTS.md) for the complete rules.
 
 Licensed under [Apache-2.0](LICENSE).

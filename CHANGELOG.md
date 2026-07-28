@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Rebuilt the Chinese and English README pages around an outcome-first quick start, verified capability boundaries, and a compact documentation map.
+- Replaced outdated `96`-pattern and `40 / 40` trigger claims with registry-backed `714 / 714`, `34 / 34`, and `88 / 88` evidence.
+- Reduced the landing-page galleries to representative figures and palettes while preserving direct routes to the full catalogues.
+- Added regression tests for README-local links, published metrics, and hero information hierarchy.
+
 ## 2.1.0
 
 - Imported the supplied 24-category source taxonomy and mapped all 714 memberships.

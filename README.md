@@ -1,79 +1,76 @@
-<p align="center">
-  <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="Academic Data Visualization：从研究问题、数据剖析和图型论证，到投稿级图表与视觉审查">
-</p>
-
 <h1 align="center">Academic Data Visualization</h1>
 
 <p align="center">
-  <strong>先判断，再绘制：把科研问题与真实数据转化为可复现、可审查、可投稿的 Python / R 图表。</strong>
+  <strong>科研问题 → 数据契约 → 图型论证 → 投稿级成图</strong><br>
+  <sub>把真实数据与期刊约束转化为可复现、可审查、可投稿的 Python / R 科研图表。</sub>
 </p>
 
 <p align="center">
-  <a href="#一分钟开始"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
-  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/图型模式-96-73C79E?style=flat-square" alt="96 个图型模式"></a>
-  <a href="#配色主题库"><img src="https://img.shields.io/badge/配色主题-23-F599A1?style=flat-square" alt="23 个配色主题"></a>
-  <a href="#可复现的质量证据"><img src="https://img.shields.io/badge/QA-四轮闭环-95AEDA?style=flat-square" alt="四轮 QA 闭环"></a>
+  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Taxonomy-24_categories-4573B4?style=flat-square" alt="24 类图型体系"></a>
+  <a href="#能力范围"><img src="https://img.shields.io/badge/Source_memberships-714%2F714-73C79E?style=flat-square" alt="714/714 条源分类归属已映射"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production_assets-34_verified-F2A65A?style=flat-square" alt="34 类已核验生产资产"></a>
+  <a href="#质量证据"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="四轮 QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
 </p>
 
 <p align="center">
-  <a href="#一分钟开始">一分钟开始</a> ·
-  <a href="#它解决什么问题">能力边界</a> ·
-  <a href="references/figure-type-catalog.md">图型目录</a> ·
-  <a href="#生产图表索引">生产图表</a> ·
-  <a href="#配色主题库">配色主题</a> ·
-  <a href="#可复现的质量证据">质量证据</a> ·
-  <a href="#安装与更新">安装</a> ·
+  <a href="#30-秒开始">快速开始</a> ·
+  <a href="#为什么使用它">核心价值</a> ·
+  <a href="#能力范围">能力范围</a> ·
+  <a href="#精选成图">精选成图</a> ·
+  <a href="#文档导航">文档导航</a> ·
+  <a href="#质量证据">质量证据</a> ·
   <a href="README_EN.md">English</a>
 </p>
 
-> 这不是“把数据塞进模板”的画图库。Skill 会先确认研究问题、观测单位、数据结构和目标期刊，再选择图型、组织面板、调用生产资产，并对最终尺寸的 RGB 与灰度校样执行审查。
+> 这不是一个把数据硬塞进模板的图库。它先确认研究结论、观测单位、变量结构与投稿规格，再完成选图、资产复用或按需实现，并对最终尺寸的 RGB 与灰度结果做四轮 QA。
 
-## 它解决什么问题
+## 30 秒开始
 
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="30%" valign="middle">普通画图请求</th><th width="70%" valign="middle">Academic Data Visualization</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>先选柱状图、热图或散点图</td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先问“这张图要让读者比较、关联还是判断什么？”</td></tr>
-    <tr><td>默认忽略样本量、分布和重复测量</td><td>先剖析变量类型、缺失、组大小、异常值与依赖结构</td></tr>
-    <tr><td>用默认配色和固定模板美化</td><td>按数据语义、期刊尺寸和证据层级建立视觉系统</td></tr>
-    <tr><td>脚本能运行就结束</td><td>程序审查 + 最终尺寸读图 + 灰度校样，发现问题后回改重绘</td></tr>
-    <tr><td>只交付一张 PNG</td><td>交付代码、矢量主文件、高分辨率校样与 QA 报告</td></tr>
-  </tbody>
-</table>
+安装完整 Skill，而不是只复制 `SKILL.md`：
 
-<table width="100%" align="center">
-  <thead>
-    <tr>
-      <th width="30%" align="center" valign="middle">规模</th>
-      <th width="70%" align="center" valign="middle">当前仓库提供</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td width="30%"><strong>96 个图型模式</strong></td><td width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">6 组图鉴 × 16 个已核验模式；另有 9 类专业选图路径，按数据与依赖实现</td></tr>
-    <tr><td><strong>34 类生产资产</strong></td><td>Python / R 脚本、示例数据约束与可核验预览</td></tr>
-    <tr><td><strong>23 个主题配色</strong></td><td>分类色、发散色、连续色及参考图个性化重绘流程</td></tr>
-    <tr><td><strong>4 轮 QA 审查</strong></td><td>反模式、代码与导出、科学逻辑、最终渲染审查</td></tr>
-  </tbody>
-</table>
+```powershell
+# Windows PowerShell · Codex
+git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.codex\skills\academic-data-visualization"
+```
 
-### 适合
+```bash
+# macOS / Linux · Codex
+git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
+```
 
-- 论文主图、补充图、学位论文与学术报告中的数据图；
-- 不确定选什么图，需要先从研究问题和数据结构判断；
-- 重绘旧图、统一多面板视觉语言或适配目标期刊；
-- 投稿前检查文字遮挡、裁切、误导性图型、配色和导出风险。
+然后直接描述研究问题、数据与交付规格：
 
-### 不适合
+```text
+使用 academic-data-visualization 分析 experiment.csv。
+我要比较三种处理在四个时间点的变化。请先检查样本量、分布、缺失值和重复测量结构，
+再论证图型与多面板方案；目标是双栏论文主图，交付可编辑矢量文件、450 dpi 校样、
+灰度校样和 QA 报告。
+```
 
-- 交互式仪表盘、网页数据产品或演示文稿排版；
-- 以插画、流程示意或机制图为主体且没有数据图的任务；
-- 只做统计检验、数据清洗或文献综述而不需要出图。
+<p align="center">
+  <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="从研究问题和数据剖析到投稿级成图与视觉复核的工作流">
+</p>
 
-## 24 类图型注册表
+## 为什么使用它
+
+| 结论驱动 | 真实能力边界 | 可复用生产资产 | 投稿前闭环 |
+|---|---|---|---|
+| 先判断读者需要比较、关联还是决策，再选择图型 | 665 个规范化图型均标记真实实现状态，不把“已登记”冒充“已有模板” | 34 类资产具备脚本、预览和 manifest，可追溯复用 | 同时检查反模式、代码与导出、科学逻辑、最终渲染 |
+
+传统绘图请求常从“画柱状图/热图”开始；本 Skill 从研究主张和数据契约开始，并主动拦截小样本均值柱、双 Y 轴、彩虹色图、错误连线、误导性截轴等常见风险。
+
+## 它如何工作
+
+| 阶段 | 关键动作 | 产出 |
+|---|---|---|
+| 1. 定义 | 明确结论、观测单位、变量、依赖结构和目标期刊 | [`figure-contract.md`](references/figure-contract.md) |
+| 2. 论证 | 剖析样本量、分布、缺失、异常值与分组，比较候选图型 | 图型选择理由与风险说明 |
+| 3. 实现 | 路由生产模板、可复用模式或按需实现，统一面板与配色 | Python / R 脚本和可编辑主文件 |
+| 4. 验证 | 程序检查、最终尺寸 RGB 复核、灰度复核和导出审查 | PNG 校样、矢量文件与 QA 报告 |
+
+## 能力范围
 
 <!-- chart-registry:summary:start -->
 注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。
@@ -90,258 +87,146 @@
 </table>
 <!-- chart-registry:summary:end -->
 
-完整分类入口见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)，名称与缩写路由见 [`references/chart-alias-index.md`](references/chart-alias-index.md)。新增图型时，必须先更新注册表并通过生成器同步文档；不得把“已登记”写成“已有生产脚本”。
+| 状态 | 含义 | 仓库承诺 |
+|---|---|---|
+| `production_template` | 已核验生产模板 | 真实脚本 + PNG + `asset.yaml`，可用时附 SVG/PDF |
+| `reusable_pattern` | 可复用实现模式 | 有明确数据契约与后端路由，但不声称已有独立资产 |
+| `on_demand` | 按数据与依赖实现 | 不伪造预览，不用外形相似的普通图代替专业图型 |
 
-## 一分钟开始
+查看 [24 类完整图型目录](references/figure-type-catalog.md)、[中英文别名索引](references/chart-alias-index.md)、[覆盖审计](references/chart-coverage-audit.md) 和 [真实生产资产映射](references/directory-map.md)。
 
-### 1. 安装完整 Skill
+## 精选成图
 
-Windows PowerShell：
+首页只展示六个代表案例；完整预览和实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
 
-```powershell
-git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.codex\skills\academic-data-visualization"
-```
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>相关矩阵</strong><br><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png" width="390" alt="相关矩阵示例"></td>
+    <td width="50%" align="center" valign="top"><strong>PCA</strong><br><img src="assets/figure-atlas/readme-cards/PCA.png" width="390" alt="PCA 示例"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>小提琴图</strong><br><img src="assets/figure-atlas/readme-cards/violin_chart.png" width="390" alt="小提琴图示例"></td>
+    <td align="center" valign="top"><strong>时间趋势</strong><br><img src="assets/figure-atlas/readme-cards/trend.png" width="390" alt="时间趋势图示例"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>桑基图</strong><br><img src="assets/figure-atlas/readme-cards/sankey.png" width="390" alt="桑基图示例"></td>
+    <td align="center" valign="top"><strong>Mantel 关联图</strong><br><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png" width="390" alt="Mantel 关联图示例"></td>
+  </tr>
+</table>
 
-macOS / Linux：
+## 配色系统
+
+23 套主题覆盖分类、顺序和发散语义；默认要求色盲友好、灰度可辨、语义稳定，并支持从参考图片提取候选颜色后重新审查。
+
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal 配色预览"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Pastel harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony 配色预览"></td>
+    <td align="center" valign="top"><strong>Coastal sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset 配色预览"></td>
+  </tr>
+</table>
+
+完整色值、语义角色与使用限制见 [`color-palettes.md`](references/color-palettes.md) 和 [`palette-library.json`](references/palette-library.json)。
+
+## 适用边界
+
+| 适合 | 不适合 |
+|---|---|
+| 论文主图、补充图、学位论文和科研报告 | 交互式仪表盘或 Web 数据产品 |
+| 不确定该选什么图，需要基于数据结构论证 | 没有定量面板的纯插画式机制图 |
+| 重绘旧图、统一多面板语言、适配目标期刊 | 与绘图无关的统计分析、清洗或文献综述 |
+| 投稿前检查裁切、遮挡、灰度、误导编码和导出 | 要求用普通图假装地图、基因组轨道或三维体数据 |
+
+## 文档导航
+
+| 你要解决的问题 | 入口 |
+|---|---|
+| 查找图型、别名与真实实现状态 | [图型目录](references/figure-type-catalog.md) · [别名索引](references/chart-alias-index.md) · [注册表](references/chart-registry.yaml) |
+| 定义输入、结论与交付规格 | [图表契约](references/figure-contract.md) · [设计简报](references/figure-design-brief.md) |
+| 组织多面板与视觉层级 | [多面板布局](references/multipanel-layout.md) · [视觉样式](references/visual-style.md) |
+| 适配期刊尺寸与导出 | [期刊情报](references/journal-intel.md) · [期刊规格](references/journal-specs.md) · [导出规格](references/export-specs.md) |
+| 选择或扩展配色 | [配色指南](references/color-palettes.md) · [配色注册表](references/palette-library.json) |
+| 复用资产并完成投稿前检查 | [资产复用协议](references/asset-reuse-protocol.md) · [四轮 QA 清单](references/checklist.md) |
+
+## 更多安装方式
+
+完整仓库中的 `references/`、`scripts/` 与 `assets/` 共同提供路由、约束、生产资产和质量检查，请勿只复制单个文件。
+
+<details>
+<summary><strong>Claude Code</strong></summary>
 
 ```bash
-git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
+git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.claude/skills/academic-data-visualization
 ```
 
-请安装**完整目录**，不要只复制 `SKILL.md`；`references/`、`scripts/` 与 `assets/` 共同提供图型约束、质量检查和生产资产。
+</details>
 
-### 2. 直接这样说
+<details>
+<summary><strong>Cursor</strong></summary>
 
-```text
-使用 academic-data-visualization 分析 experiment.csv。
-我要比较三种处理在四个时间点的变化，请先检查样本量、分布和重复测量结构，
-再论证图型与多面板方案；目标是双栏论文主图，最终交付可编辑矢量文件、
-450 dpi 校样、灰度校样和 QA 报告。
-```
+保留完整 Skill，并按项目需要使用 [`install/cursor/.cursorrules`](install/cursor/.cursorrules)。
 
-### 更多可直接使用的提示词
+</details>
 
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="16%" valign="middle">场景</th><th width="84%" valign="middle">提示词</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>不知道选什么图</td><td><code>检查 experiment.csv 的变量类型、样本量、分布和分组结构。根据我要论证的结论推荐图型，不要先套模板。</code></td></tr>
-    <tr><td>组织论文主图</td><td><code>把这些结果组织成一张投稿级多面板主图，说明每个面板回答什么，以及它们如何形成一条证据链。</code></td></tr>
-    <tr><td>重绘旧图</td><td><code>结合 old_figure.png 和 source_data.csv 重建可编辑图表；保留数据含义，不要只美化截图。</code></td></tr>
-    <tr><td>适配期刊</td><td><code>按 Nature 双栏终稿尺寸审查并重绘 figure.py，包括字体、栏宽、配色、统计表达与导出。</code></td></tr>
-    <tr><td>投稿前审查</td><td><code>审查这张图的图型合理性、文字裁切、图例遮挡、灰度可读性、矢量文本和数据表达风险。</code></td></tr>
-  </tbody>
-</table>
+<details>
+<summary><strong>GitHub Copilot</strong></summary>
 
-## 工作方式
+使用 [`install/copilot/copilot-instructions.md`](install/copilot/copilot-instructions.md) 作为仓库级指令。
 
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="18%" valign="middle">阶段</th><th width="52%" valign="middle">Skill 完成什么</th><th width="30%" valign="middle">主要产物</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>1. 图形合同</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">明确研究问题、核心结论、观测单位和目标期刊</td><td>一句话结论 + 面板数据合同</td></tr>
-    <tr><td><strong>2. 数据剖析</strong></td><td>检查变量类型、缺失、组大小、分布、异常值和依赖结构</td><td>与论证相关的数据摘要</td></tr>
-    <tr><td><strong>3. 选图论证</strong></td><td>根据数据形态选择图型，并主动拦截误导性方案</td><td>主方案 + 备选方案 + 理由</td></tr>
-    <tr><td><strong>4. 视觉系统</strong></td><td>固定终稿尺寸、面板层级、字体、色彩语义和后端</td><td>多面板设计简报</td></tr>
-    <tr><td><strong>5. 生成复用</strong></td><td>将每个面板分类为原生复用、视觉适配或全新实现</td><td>可复现 Python / R 脚本</td></tr>
-    <tr><td><strong>6. 审查交付</strong></td><td>四轮 QA、RGB / 灰度读图、修复重绘与多格式导出</td><td>PDF / SVG、450 dpi 校样、QA 报告</td></tr>
-  </tbody>
-</table>
+</details>
 
-## 生产图表索引
-
-这里仅保留重点生产资产的预览，不再重复展示全部图型。完整的选图范围、限制与实现等级见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)；生成时 Skill 会先检查数据结构与语义是否兼容，再决定原生复用、视觉适配或全新实现。缩略图按画幅分组，原始图仍可点击查看。
-
-### 近方形图型 · 3 × 3
-
-<table width="100%" align="center">
-  <tr>
-    <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png?v=card-layout-v1" width="280" alt="3D 热图"></a><br><sub>三维强度矩阵</sub></td>
-    <td width="33%" align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png?v=card-layout-v1" width="280" alt="密度热图"></a><br><sub>大样本二维密度</sub></td>
-    <td width="33%" align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png?v=card-layout-v1" width="280" alt="PCA 双标图"></a><br><sub>样本分离与载荷</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>AUROC 曲线</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png?v=card-layout-v1" width="280" alt="AUROC 曲线"></a><br><sub>分类与阈值敏感性</sub></td>
-    <td align="center" valign="top"><strong>相关性密度图</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png?v=card-layout-v1" width="280" alt="相关性密度图"></a><br><sub>关系、密集区与异常点</sub></td>
-    <td align="center" valign="top"><strong>相关性矩阵</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png?v=card-layout-v1" width="280" alt="相关性矩阵"></a><br><sub>多变量关系与共线性</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>分组相关矩阵</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/readme-cards/GroupCorrelationmatrix.png?v=card-layout-v1" width="280" alt="分组相关矩阵"></a><br><sub>条件间相关结构</sub></td>
-    <td align="center" valign="top"><strong>雷达图</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png?v=card-layout-v1" width="280" alt="雷达图"></a><br><sub>少量对象多指标</sub></td>
-    <td align="center" valign="top"><strong>山脊图</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png?v=card-layout-v1" width="280" alt="山脊图"></a><br><sub>多组分布变化</sub></td>
-  </tr>
-</table>
-
-### 横向图型 · 2 × 4
-
-<table width="100%" align="center">
-  <tr>
-    <td width="50%" align="center" valign="top"><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png?v=card-layout-v1" width="390" alt="柱状图"></a><br><sub>组间摘要、误差与原始点</sub></td>
-    <td width="50%" align="center" valign="top"><strong>分组柱状图</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png?v=card-layout-v1" width="390" alt="分组柱状图"></a><br><sub>多处理 × 多指标</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>Mantel 检验图</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png?v=card-layout-v1" width="390" alt="Mantel 检验图"></a><br><sub>距离矩阵与环境关联</sub></td>
-    <td align="center" valign="top"><strong>小提琴图</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/readme-cards/violin_chart.png?v=card-layout-v1" width="390" alt="小提琴图"></a><br><sub>分布形态与异常值</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>趋势图</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/readme-cards/trend.png?v=card-layout-v1" width="390" alt="趋势图"></a><br><sub>时间、剂量与环境梯度</sub></td>
-    <td align="center" valign="top"><strong>堆叠柱状散点图</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/readme-cards/StackedBarScatter.png?v=card-layout-v1" width="390" alt="堆叠柱状散点图"></a><br><sub>组成与样本级观测</sub></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>频率 3D 热图</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/readme-cards/Frequency_3DHeatmap.png?v=card-layout-v1" width="390" alt="频率 3D 热图"></a><br><sub>分箱频次与双因子计数</sub></td>
-    <td align="center" valign="top"><strong>桑基图</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/readme-cards/sankey.png?v=card-layout-v1" width="390" alt="桑基图"></a><br><sub>类别流向与状态转换</sub></td>
-  </tr>
-</table>
-
-### 新增参考图型 · 3 + 2
-
-<table width="100%" align="center">
-  <tr>
-    <td width="33%" align="center" valign="top"><strong>气泡散点图</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figures/BubbleScatter/bubble_scatter.png?v=reference-expansion-v1" width="280" alt="气泡散点图"></a><br><sub>位置、大小与类别的联合编码</sub></td>
-    <td width="33%" align="center" valign="top"><strong>相关性气泡矩阵</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png?v=reference-expansion-v1" width="280" alt="相关性气泡矩阵"></a><br><sub>方向、强度与显著性的紧凑表达</sub></td>
-    <td width="33%" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figures/CorrelationNetwork/correlation_network.png?v=reference-expansion-v1" width="280" alt="相关网络图"></a><br><sub>正负相关、边权与社区结构</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2" width="66%" align="center" valign="top"><strong>堆叠面积图</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figures/StackedArea/stacked_area.png?v=reference-expansion-v1" width="390" alt="堆叠面积图"></a><br><sub>有序时间上的组成与累积变化</sub></td>
-    <td width="34%" align="center" valign="top"><strong>地理气泡图</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figures/GeographicBubbleMap/geographic_bubble_map.png?v=reference-expansion-v1" width="390" alt="地理气泡图"></a><br><sub>地理位置、区域与量级分布</sub></td>
-  </tr>
-</table>
-
-<p align="center"><a href="references/figure-type-catalog.md"><strong>查看完整图型目录与选择约束 →</strong></a></p>
-
-## 配色主题库
-
-默认主题是 `nature-default`；README 的重点预览按图型分配不同主题，`warm-cool-kinetics` 仅用于动力学类图。每个主题同时定义分类色、发散色和连续色角色，不只是若干十六进制色块。
-
-<table width="100%" align="center">
-  <tr>
-    <td width="50%" align="center" valign="top"><strong>Nature 默认 · nature-default</strong><br><img src="assets/palette-gallery/nature-default.png?qa=direct-labels-v1" width="390" alt="Nature 默认配色预览"></td>
-    <td width="50%" align="center" valign="top"><strong>高辨识信号 · vivid-signal</strong><br><img src="assets/palette-gallery/vivid-signal.png?qa=direct-labels-v1" width="390" alt="高辨识信号配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>明亮生物 · bright-bio</strong><br><img src="assets/palette-gallery/bright-bio.png?qa=direct-labels-v1" width="390" alt="明亮生物配色预览"></td>
-    <td align="center" valign="top"><strong>青绿组学 · teal-genome</strong><br><img src="assets/palette-gallery/teal-genome.png?qa=direct-labels-v1" width="390" alt="青绿组学配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>柔和微生物 · muted-microbe</strong><br><img src="assets/palette-gallery/muted-microbe.png?qa=direct-labels-v1" width="390" alt="柔和微生物配色预览"></td>
-    <td align="center" valign="top"><strong>免疫信号 · immuno-signal</strong><br><img src="assets/palette-gallery/immuno-signal.png?qa=direct-labels-v1" width="390" alt="免疫信号配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>粉彩催化 · pastel-catalysis</strong><br><img src="assets/palette-gallery/pastel-catalysis.png?qa=direct-labels-v1" width="390" alt="粉彩催化配色预览"></td>
-    <td align="center" valign="top"><strong>电化学柔彩 · electrochemistry</strong><br><img src="assets/palette-gallery/electrochemistry.png?qa=direct-labels-v1" width="390" alt="电化学柔彩配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>柔和成本 · soft-cost</strong><br><img src="assets/palette-gallery/soft-cost.png?qa=direct-labels-v1" width="390" alt="柔和成本配色预览"></td>
-    <td align="center" valign="top"><strong>柔和学术 · soft-academic</strong><br><img src="assets/palette-gallery/soft-academic.png?qa=direct-labels-v1" width="390" alt="柔和学术配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>柔彩组学 · pastel-omics</strong><br><img src="assets/palette-gallery/pastel-omics.png?qa=direct-labels-v1" width="390" alt="柔彩组学配色预览"></td>
-    <td align="center" valign="top"><strong>暖冷动力学 · warm-cool-kinetics</strong><br><img src="assets/palette-gallery/warm-cool-kinetics.png?qa=direct-labels-v1" width="390" alt="暖冷动力学配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>含水层复苏 · aquifer-recovery</strong><br><img src="assets/palette-gallery/aquifer-recovery.png?qa=direct-labels-v1" width="390" alt="含水层复苏配色预览"></td>
-    <td align="center" valign="top"><strong>神经深蓝 · neuro-navy</strong><br><img src="assets/palette-gallery/neuro-navy.png?qa=direct-labels-v1" width="390" alt="神经深蓝配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>低温电解质 · cryo-electrolyte</strong><br><img src="assets/palette-gallery/cryo-electrolyte.png?qa=direct-labels-v1" width="390" alt="低温电解质配色预览"></td>
-    <td align="center" valign="top"><strong>临床文献 · literature-clinical</strong><br><img src="assets/palette-gallery/literature-clinical.png?qa=direct-labels-v1" width="390" alt="临床文献配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>鼠尾草方法 · sage-methods</strong><br><img src="assets/palette-gallery/sage-methods.png?qa=direct-labels-v1" width="390" alt="鼠尾草方法配色预览"></td>
-    <td align="center" valign="top"><strong>静谧图谱 · quiet-atlas</strong><br><img src="assets/palette-gallery/quiet-atlas.png?qa=direct-labels-v1" width="390" alt="静谧图谱配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>方法蓝图 · method-blueprint</strong><br><img src="assets/palette-gallery/method-blueprint.png?qa=direct-labels-v1" width="390" alt="方法蓝图配色预览"></td>
-    <td align="center" valign="top"><strong>消融对照 · ablation-contrast</strong><br><img src="assets/palette-gallery/ablation-contrast.png?qa=direct-labels-v1" width="390" alt="消融对照配色预览"></td>
-  </tr>
-  <tr>
-    <td align="center" valign="top"><strong>柔彩协调 · pastel-harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png?qa=reference-expansion-v1" width="390" alt="柔彩协调配色预览"></td>
-    <td align="center" valign="top"><strong>蓝红信号 · blue-red-signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png?qa=reference-expansion-v1" width="390" alt="蓝红信号配色预览"></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center" valign="top"><strong>海岸日落 · coastal-sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png?qa=reference-expansion-v1" width="390" alt="海岸日落配色预览"></td>
-  </tr>
-</table>
-
-首版图通过审查后，Skill 会询问是否保留当前主题，或改用其他主题、你提供的十六进制颜色、配色参考图或论文图进行个性化重绘。重绘只改变视觉角色，不改变数据、统计、图型、分组顺序或颜色语义。
-
-## 可复现的质量证据
-
-当前仓库基线：
-
-- **40 / 40** 条触发测试正确，包含应触发与不应触发场景；
-- **34 / 34** 类生产图型均有可解析脚本；
-- **26 / 26** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
-- 组合引擎通过栏宽、450 dpi、TrueType 字体嵌入、矢量导出和配色检查。
-
-```bash
-# Skill 元数据、结构与触发准确率
-python scripts/check_skill_metadata.py
-python scripts/trigger_benchmark.py
-
-# 引用、生产资产与 QA 规则覆盖
-python scripts/check_references.py
-python scripts/qa_coverage.py
-python -m compileall -q scripts assets/figures
-
-# 审查一个实际绘图脚本
-python scripts/qa_validator.py path/to/figure.py
-
-# 为最终 PNG 生成灰度可读性校样
-python scripts/grayscale_proof.py figure-proof.png --output figure-proof-grayscale.png
-```
-
-质量结论遵循 [`references/checklist.md`](references/checklist.md)：只有反模式、代码与导出、科学逻辑、最终渲染四轮检查全部完成，才可标记为 `READY`。
-
-## 安装与更新
-
-<table width="100%" align="center">
-  <thead>
-    <tr><th width="30%" valign="middle">平台</th><th width="70%" valign="middle">使用方式</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><strong>Codex</strong></td><td><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">将完整仓库放入 <code>~/.codex/skills/academic-data-visualization/</code></td></tr>
-    <tr><td><strong>Claude Code</strong></td><td>将完整仓库放入 <code>~/.claude/skills/academic-data-visualization/</code></td></tr>
-    <tr><td><strong>Cursor</strong></td><td>使用完整 Skill，并按需复制 <a href="install/cursor/.cursorrules">install/cursor/.cursorrules</a></td></tr>
-    <tr><td><strong>GitHub Copilot</strong></td><td>使用 <a href="install/copilot/copilot-instructions.md">install/copilot/copilot-instructions.md</a></td></tr>
-  </tbody>
-</table>
-
-如果保留了本地 clone，更新只需：
+更新已有安装：
 
 ```bash
 git -C ~/.codex/skills/academic-data-visualization pull
 ```
 
-Windows PowerShell：
+## 质量证据
 
-```powershell
-git -C "$env:USERPROFILE\.codex\skills\academic-data-visualization" pull
+当前仓库基线：
+
+- **714 / 714** 条源分类归属完成可复现映射；
+- **34 / 34** 类生产图型均有真实脚本、PNG 与 manifest；
+- **88 / 88** 条触发边界用例判断正确；
+- **26 / 26** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
+- 注册表 Schema、24 类生成文档、别名冲突、资产映射与 README 摘要均由 CI 审计。
+
+```bash
+python scripts/check_skill_metadata.py
+python scripts/check_references.py
+python scripts/check_chart_registry.py
+python scripts/build_chart_registry.py --check
+python scripts/generate_chart_catalog.py --check
+python -m unittest discover -s tests -v
+python scripts/trigger_benchmark.py
+python scripts/qa_coverage.py
+python -m compileall -q scripts assets/figures tests
 ```
 
-## 项目结构
+只有 [`checklist.md`](references/checklist.md) 中的反模式、代码与导出、科学逻辑、最终渲染四轮检查全部完成，结果才可标记为 `READY`。
+
+<details>
+<summary><strong>仓库结构</strong></summary>
 
 ```text
 academic-data-visualization/
-├── SKILL.md                 # 精简的决策入口与按需路由
-├── AGENTS.md                # 仓库架构、生成文件与必跑检查
-├── agents/openai.yaml       # Codex 展示名称与默认提示元数据
+├── SKILL.md                 # 精简决策入口与按需路由
+├── AGENTS.md                # 架构规则、生成文件与必跑检查
+├── agents/openai.yaml       # Codex 展示与默认提示元数据
 ├── references/              # 注册表、24 类目录、选图、期刊、配色、导出与 QA
-├── scripts/                 # 注册表生成/校验、组合、缩略图、配色和灰度校样
-├── tests/                   # taxonomy、路由和生成结果回归测试
-├── assets/                  # 生产脚本、asset manifest、图鉴和配色预览
-└── install/                 # Codex / Cursor / Copilot / Claude 适配文件
+├── scripts/                 # 生成、校验、组合、配色与灰度校样
+├── tests/                   # taxonomy、路由与生成结果回归测试
+├── assets/                  # 生产脚本、manifest、图鉴与配色预览
+└── install/                 # Codex / Claude Code / Cursor / Copilot 适配文件
 ```
+
+</details>
 
 ## 贡献与许可
 
-欢迎提交期刊规范、可访问性改进、真实研究场景和新图型。最小流程：
-
-1. 在 `chart-registry.yaml` 中登记 canonical record、别名、分类和真实实现状态；
-2. 运行 `generate_chart_catalog.py`，不要手改生成的分类文档；
-3. 若标为 `production_template`，同时提交脚本、PNG、`asset.yaml`，并在可用时提供 SVG/PDF；
-4. 运行 AGENTS.md 中的全部检查。未实现图型不得使用虚假预览或资产路径。
+新增图型时，请先登记 canonical record、别名、分类与真实实现状态，再运行目录生成器。只有同时提交真实脚本、PNG 和 `asset.yaml` 的图型才能标记为 `production_template`；不得为未实现图型伪造预览或资产路径。完整要求见 [`AGENTS.md`](AGENTS.md)。
 
 本项目采用 [Apache-2.0](LICENSE) 许可证。
