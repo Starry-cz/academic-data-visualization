@@ -5,8 +5,8 @@ Simulates Claude's skill dispatcher by scoring prompts against the SKILL.md
 description field. Reports precision / recall / F1 / false-positive and
 false-negative rates with misclassification analysis.
 
-Test cases: 40 prompts (20 should-trigger + 20 should-not-trigger).
-Expanded from the original 20 in boundary_tests.py.
+Test cases include the original boundary set plus two positive prompts for each
+of the 24 registry categories.
 
 Usage:
     py trigger_benchmark.py              # full benchmark
@@ -51,6 +51,55 @@ SHOULD_TRIGGER = [
     # --- Polish / review ---
     ("T19_polish_fig",   "polish this figure — it looks amateur"),
     ("T20_vector_export","save this as vector PDF with embedded fonts for the journal"),
+    # --- Two routing prompts for each of the 24 registry categories ---
+    ("C01a_compare_cn", "画点图比较不同学校的平均得分和置信区间"),
+    ("C01b_rank_en", "make a lollipop chart ranking the treatment effects"),
+    ("C02a_time_cn", "绘制时间序列折线图并显示置信带"),
+    ("C02b_gantt_en", "make a Gantt chart for the longitudinal study schedule"),
+    ("C03a_dist_cn", "画ECDF图比较三组数据分布"),
+    ("C03b_qq_en", "create a Q-Q plot to inspect residual normality"),
+    ("C04a_reg_cn", "画回归散点图展示剂量反应关系"),
+    ("C04b_agree_en", "make a Bland-Altman plot for method agreement"),
+    ("C05a_dim_cn", "画UMAP图展示样本的低维结构"),
+    ("C05b_parallel_en", "create a parallel coordinates plot for these multivariate profiles"),
+    ("C06a_matrix_cn", "绘制带分组注释的聚类热图"),
+    ("C06b_calendar_en", "make a calendar heatmap of daily measurements"),
+    ("C07a_effect_cn", "画森林图展示效应量和95%置信区间"),
+    ("C07b_coef_en", "create a coefficient plot with confidence intervals"),
+    ("C08a_pr_cn", "绘制PR曲线和校准曲线评估分类模型"),
+    ("C08b_resid_en", "make a residual diagnostic plot for this regression model"),
+    ("C09a_shap_cn", "画SHAP蜂群图解释模型预测"),
+    ("C09b_pdp_en", "create a partial dependence plot for the top features"),
+    ("C10a_comp_cn", "画百分比堆叠柱状图展示组成"),
+    ("C10b_likert_en", "make a diverging stacked bar chart for Likert responses"),
+    ("C11a_set_cn", "画UpSet图展示六个集合的交集"),
+    ("C11b_euler_en", "create an Euler diagram for these overlapping sets"),
+    ("C12a_flow_cn", "绘制CONSORT流程图说明受试者纳排"),
+    ("C12b_alluvial_en", "make an alluvial diagram for stage transitions"),
+    ("C13a_network_cn", "画共现网络展示节点社区和边权"),
+    ("C13b_arc_en", "create an arc diagram for this weighted graph"),
+    ("C14a_map_cn", "画分级设色地图展示各省标准化率"),
+    ("C14b_flowmap_en", "make a flow map from these origin-destination coordinates"),
+    ("C15a_survival_cn", "绘制Kaplan-Meier生存曲线和风险表"),
+    ("C15b_swimmer_en", "make a swimmer plot for treatment duration and events"),
+    ("C16a_love_cn", "画Love Plot检查倾向评分匹配后的协变量平衡"),
+    ("C16b_dca_en", "create a decision curve figure for the clinical model"),
+    ("C17a_gwas_cn", "画曼哈顿图展示GWAS关联信号"),
+    ("C17b_gsea_en", "make a GSEA enrichment curve from this ranked gene list"),
+    ("C18a_singlecell_cn", "绘制单细胞UMAP和标记基因点图"),
+    ("C18b_spatial_en", "make a spatial transcriptomics feature plot over the tissue coordinates"),
+    ("C19a_micro_cn", "把显微图像板和样本级定量图组合成论文图"),
+    ("C19b_line_en", "create a line-scan intensity plot for these microscopy channels"),
+    ("C20a_irt_cn", "画题目特征曲线和测验信息曲线"),
+    ("C20b_sem_en", "make an SEM path figure with standardized coefficients"),
+    ("C21a_did_cn", "绘制双重差分图检查政策实施前后的趋势"),
+    ("C21b_rdd_en", "create a regression discontinuity plot around the cutoff"),
+    ("C22a_cocite_cn", "画共被引网络展示知识结构"),
+    ("C22b_burst_en", "make a keyword burst plot for this bibliometric dataset"),
+    ("C23a_qc_cn", "绘制控制图监测批次质量是否稳定"),
+    ("C23b_retention_en", "make a cohort retention heatmap for the study workflow"),
+    ("C24a_composite_cn", "把图像、统计结果和流程图排成非对称多面板论文图"),
+    ("C24b_small_en", "compose a small-multiples figure with consistent axes and labels"),
 ]
 
 SHOULD_NOT_TRIGGER = [
@@ -117,13 +166,14 @@ TRIGGER_SIGNALS = [
     # Medium (score += 2): figure/plot/chart intent (English)
     (2, [
         r"\b(?:figure|plot|chart|graph|panel)s?\b",
+        r"\b(?:make|create|draw)\b.*\b(?:diagram|map|curve)s?\b",
         r"\bcompose\b.*\b(?:panel|figure|plot)\b",
         r"\bmulti.panel\b",
         r"\bvisuali[sz]e\b.*\b(?:as|with|in)\b.*\b(?:figure|plot|chart|heatmap)\b",
     ]),
     # Medium (score += 2): Chinese drawing intent
     (2, [
-        "画", "绘制", "作图", "绘图", "画图", "可视化", "做.*图",
+        "画", "绘制", "作图", "绘图", "画图", "可视化", "做.*图", "论文图", "多面板",
     ]),
     # Weak (score += 1): journal / publication context
     (1, [
@@ -284,7 +334,10 @@ if __name__ == "__main__":
     print(f"Skill: {_load_description()[:80]}...")
     print("=" * 64)
     print(f"Threshold: score >= {result['threshold']}")
-    print(f"Total prompts: {result['total']} (20 should-trigger + 20 should-not)")
+    print(
+        f"Total prompts: {result['total']} "
+        f"({len(SHOULD_TRIGGER)} should-trigger + {len(SHOULD_NOT_TRIGGER)} should-not)"
+    )
     print()
     print(f"  True Positives  : {result['tp']:2d}  (should trigger, did)")
     print(f"  True Negatives  : {result['tn']:2d}  (should NOT trigger, didn't)")
@@ -312,7 +365,7 @@ if __name__ == "__main__":
             print(f"  [{p['id']}] score={p['score']}: \"{p['prompt'][:90]}\"")
 
     if not fps and not fns:
-        print("All 40 prompts correctly classified.")
+        print(f"All {result['total']} prompts correctly classified.")
 
     print("=" * 64)
     if result["f1"] >= 0.95:

@@ -38,6 +38,15 @@ jobs:
       - name: Validate references and assets
         run: python scripts/check_references.py
 
+      - name: Validate chart registry and production manifests
+        run: |
+          python scripts/check_chart_registry.py
+          python scripts/build_chart_registry.py --check
+          python scripts/generate_chart_catalog.py --check
+
+      - name: Run taxonomy and routing tests
+        run: python -m unittest discover -s tests -v
+
       - name: Benchmark trigger boundary
         run: python scripts/trigger_benchmark.py
 
@@ -45,4 +54,4 @@ jobs:
         run: python scripts/qa_coverage.py
 
       - name: Compile Python sources
-        run: python -m compileall -q scripts assets/figures
+        run: python -m compileall -q scripts assets/figures tests
