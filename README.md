@@ -80,11 +80,13 @@
 
 <table width="100%" align="center">
   <tr><td width="35%"><strong>分类体系</strong></td><td>24 类</td></tr>
-  <tr><td width="35%"><strong>规范化图型</strong></td><td>177 个</td></tr>
-  <tr><td width="35%"><strong>源分类归属</strong></td><td>257 条可验证归属；方案声明的 714 条原始清单未随文件提供</td></tr>
+  <tr><td width="35%"><strong>规范化图型</strong></td><td>665 个</td></tr>
+  <tr><td width="35%"><strong>源清单图型</strong></td><td>625 个</td></tr>
+  <tr><td width="35%"><strong>仓库扩展图型</strong></td><td>40 个</td></tr>
+  <tr><td width="35%"><strong>源分类归属</strong></td><td>714 / 714 条已映射</td></tr>
   <tr><td width="35%"><strong>生产模板</strong></td><td>34 类</td></tr>
-  <tr><td width="35%"><strong>可复用模式</strong></td><td>83 类</td></tr>
-  <tr><td width="35%"><strong>按需实现</strong></td><td>60 类</td></tr>
+  <tr><td width="35%"><strong>可复用模式</strong></td><td>228 类</td></tr>
+  <tr><td width="35%"><strong>按需实现</strong></td><td>403 类</td></tr>
 </table>
 <!-- chart-registry:summary:end -->
 

@@ -136,6 +136,10 @@ def render_alias_index(registry: dict) -> str:
 
 def stats(registry: dict) -> dict:
     counts = status_counts(registry)
+    origin_counts = {
+        origin: sum(chart["registry_origin"] == origin for chart in registry["charts"])
+        for origin in ("source_taxonomy", "repository_extension")
+    }
     return {
         "registry_version": registry["registry_version"],
         "categories": len(registry["categories"]),
@@ -143,6 +147,7 @@ def stats(registry: dict) -> dict:
         "source_memberships": registry["source_expectation"]["available_source_memberships"],
         "declared_source_memberships": registry["source_expectation"]["declared_memberships"],
         "source_complete": registry["source_expectation"]["source_complete"],
+        **origin_counts,
         **counts,
     }
 
@@ -180,13 +185,12 @@ def render_category_index(registry: dict) -> str:
 def render_readme_summary(registry: dict, english: bool) -> str:
     values = stats(registry)
     if english:
-        source_note = (
-            f"{values['source_memberships']} verifiable memberships; the declared 714-entry source list "
-            "was not included in the supplied plan"
-        )
+        source_note = f"{values['source_memberships']} / {values['declared_source_memberships']} mapped"
         rows = [
             ("Taxonomy categories", f"{values['categories']}"),
             ("Canonical chart records", f"{values['canonical_charts']}"),
+            ("Source taxonomy records", f"{values['source_taxonomy']}"),
+            ("Repository extensions", f"{values['repository_extension']}"),
             ("Source memberships", source_note),
             ("Production templates", f"{values['production_template']}"),
             ("Reusable patterns", f"{values['reusable_pattern']}"),
@@ -197,12 +201,12 @@ def render_readme_summary(registry: dict, english: bool) -> str:
             "Only production templates have reusable scripts, previews, and manifests."
         )
     else:
-        source_note = (
-            f"{values['source_memberships']} 条可验证归属；方案声明的 714 条原始清单未随文件提供"
-        )
+        source_note = f"{values['source_memberships']} / {values['declared_source_memberships']} 条已映射"
         rows = [
             ("分类体系", f"{values['categories']} 类"),
             ("规范化图型", f"{values['canonical_charts']} 个"),
+            ("源清单图型", f"{values['source_taxonomy']} 个"),
+            ("仓库扩展图型", f"{values['repository_extension']} 个"),
             ("源分类归属", source_note),
             ("生产模板", f"{values['production_template']} 类"),
             ("可复用模式", f"{values['reusable_pattern']} 类"),
@@ -233,6 +237,7 @@ def render_catalog_data(registry: dict) -> str:
                 "name_en": chart["name_en"],
                 "categories": [categories[item]["slug"] for item in chart["category_ids"]],
                 "implementation_status": chart["implementation_status"],
+                "registry_origin": chart["registry_origin"],
                 "preview": preview,
             }
         )
@@ -278,7 +283,16 @@ def main() -> None:
     args = parser.parse_args()
     registry = load_registry()
     outputs = expected_outputs(registry)
+    expected_category_paths = {
+        path for path in outputs if path.parent == CHART_TYPES_DIR
+    }
+    stale_category_paths = set(CHART_TYPES_DIR.glob("*.md")) - expected_category_paths
     differences: list[str] = []
+    for path in sorted(stale_category_paths):
+        differences.append(str(path.relative_to(ROOT)))
+        if not args.check:
+            # 分类文档完全由注册表生成；类别重命名后删除失效文件。
+            path.unlink()
     for path, expected in outputs.items():
         current = path.read_text(encoding="utf-8") if path.exists() else None
         if current != expected:

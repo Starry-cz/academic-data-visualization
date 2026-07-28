@@ -80,11 +80,13 @@ The registry separates catalogue coverage from implementation status. Only produ
 
 <table width="100%" align="center">
   <tr><td width="35%"><strong>Taxonomy categories</strong></td><td>24</td></tr>
-  <tr><td width="35%"><strong>Canonical chart records</strong></td><td>177</td></tr>
-  <tr><td width="35%"><strong>Source memberships</strong></td><td>257 verifiable memberships; the declared 714-entry source list was not included in the supplied plan</td></tr>
+  <tr><td width="35%"><strong>Canonical chart records</strong></td><td>665</td></tr>
+  <tr><td width="35%"><strong>Source taxonomy records</strong></td><td>625</td></tr>
+  <tr><td width="35%"><strong>Repository extensions</strong></td><td>40</td></tr>
+  <tr><td width="35%"><strong>Source memberships</strong></td><td>714 / 714 mapped</td></tr>
   <tr><td width="35%"><strong>Production templates</strong></td><td>34</td></tr>
-  <tr><td width="35%"><strong>Reusable patterns</strong></td><td>83</td></tr>
-  <tr><td width="35%"><strong>On-demand routes</strong></td><td>60</td></tr>
+  <tr><td width="35%"><strong>Reusable patterns</strong></td><td>228</td></tr>
+  <tr><td width="35%"><strong>On-demand routes</strong></td><td>403</td></tr>
 </table>
 <!-- chart-registry:summary:end -->
 

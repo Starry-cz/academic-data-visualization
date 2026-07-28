@@ -111,15 +111,29 @@ def validate_registry() -> list[str]:
             + ", ".join(f"line {entry['line']} ({entry['source_label']})" for entry in unmapped[:10])
         )
     pairs = source_memberships()
-    registry_pairs = {
-        (membership["source_category_id"], chart["id"])
+    registry_memberships = [
+        (membership["source_category_id"], chart["id"], membership["source_label"])
         for chart in charts
         for membership in chart["source_memberships"]
-    }
-    if set(pairs) != registry_pairs:
+    ]
+    source_membership_records = [
+        (entry["category_id"], entry["canonical_id"], entry["source_label"])
+        for entry in entries
+        if entry["canonical_id"] is not None
+    ]
+    if Counter(source_membership_records) != Counter(registry_memberships):
         errors.append("source taxonomy memberships differ from registry source_memberships")
     if len(pairs) != registry["source_expectation"]["available_source_memberships"]:
         errors.append("source_expectation.available_source_memberships is stale")
+    if registry["source_expectation"]["source_complete"] and (
+        len(pairs) != registry["source_expectation"]["declared_memberships"]
+    ):
+        errors.append("source_complete is true but declared and available memberships differ")
+    for chart in charts:
+        if chart["registry_origin"] == "source_taxonomy" and not chart["source_memberships"]:
+            errors.append(f"{chart['id']}: source_taxonomy record has no source membership")
+        if chart["registry_origin"] == "repository_extension" and chart["source_memberships"]:
+            errors.append(f"{chart['id']}: repository_extension unexpectedly has source memberships")
 
     production_paths = {ROOT / chart["asset_path"] for chart in production_records(registry)}
     asset_dirs = {
@@ -147,6 +161,10 @@ def main() -> None:
         "source_memberships": registry["source_expectation"]["available_source_memberships"],
         "source_complete": registry["source_expectation"]["source_complete"],
         "status_counts": status_counts(registry),
+        "origin_counts": {
+            origin: sum(chart["registry_origin"] == origin for chart in registry["charts"])
+            for origin in ("source_taxonomy", "repository_extension")
+        },
         "errors": errors,
         "valid": not errors,
     }
@@ -158,6 +176,8 @@ def main() -> None:
         print(f"  Categories          : {result['categories']}/24")
         print(f"  Canonical charts    : {result['canonical_charts']}")
         print(f"  Source memberships  : {result['source_memberships']}")
+        print(f"  Source chart records: {result['origin_counts']['source_taxonomy']}")
+        print(f"  Repository extensions: {result['origin_counts']['repository_extension']}")
         print(f"  Production templates: {result['status_counts']['production_template']}")
         print(f"  Reusable patterns   : {result['status_counts']['reusable_pattern']}")
         print(f"  On-demand routes    : {result['status_counts']['on_demand']}")

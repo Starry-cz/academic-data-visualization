@@ -35,30 +35,30 @@
 <!-- chart-registry:category-index:start -->
 | 编号 | 分类 | 适用研究问题 | 图型数量 | 文档 |
 |---|---|---|---:|---|
-| 01 | 数值比较与排序 / Comparison and Ranking | 比较、排序或变化幅度 | 12 | [打开](chart-types/01-comparison-ranking.md) |
-| 02 | 时间、趋势与动态 / Time, Trend, and Dynamics | 随有序时间或剂量的变化 | 15 | [打开](chart-types/02-time-trend-dynamics.md) |
-| 03 | 分布与统计诊断 / Distribution and Statistical Diagnostics | 分布形态、离散程度与异常值 | 13 | [打开](chart-types/03-distribution-diagnostics.md) |
-| 04 | 关系与回归 / Relationship and Regression | 变量关系、拟合与一致性 | 9 | [打开](chart-types/04-relationship-regression.md) |
-| 05 | 多变量与降维 / Multivariate and Dimension Reduction | 多变量结构、相关与低维表示 | 16 | [打开](chart-types/05-multivariate-dimension-reduction.md) |
-| 06 | 矩阵、热图与模式 / Matrix, Heatmap, and Pattern | 矩阵模式、簇与注释 | 16 | [打开](chart-types/06-matrix-heatmap.md) |
-| 07 | 不确定性与效应量 / Uncertainty and Effect Size | 效应方向、大小与不确定性 | 6 | [打开](chart-types/07-uncertainty-effect-size.md) |
-| 08 | 模型评估与诊断 / Model Evaluation and Diagnostics | 预测区分度、校准或误差结构 | 11 | [打开](chart-types/08-model-evaluation-diagnostics.md) |
-| 09 | 机器学习解释 / Machine Learning Explainability | 模型贡献、响应与解释稳定性 | 7 | [打开](chart-types/09-machine-learning-explainability.md) |
-| 10 | 组成与比例 / Composition and Proportion | 整体组成、比例与结构 | 15 | [打开](chart-types/10-composition-proportion.md) |
-| 11 | 集合与交集 / Sets and Overlap | 集合交集与成员关系 | 4 | [打开](chart-types/11-sets-overlap.md) |
-| 12 | 流向、流程与层级 / Flow, Process, and Hierarchy | 阶段流向、流程与层级组成 | 13 | [打开](chart-types/12-flow-process-hierarchy.md) |
-| 13 | 网络与图结构 / Network and Graph Structure | 实体连接、权重与社区结构 | 9 | [打开](chart-types/13-network-graph.md) |
-| 14 | 地理空间与制图 / Geospatial and Cartography | 空间位置、区域差异与地理量级 | 8 | [打开](chart-types/14-geospatial-cartography.md) |
-| 15 | 生存与事件史 / Survival and Event History | 事件时间、生存概率与竞争结局 | 5 | [打开](chart-types/15-survival-event-history.md) |
-| 16 | 临床试验与流行病学 / Clinical Trials and Epidemiology | 临床路径、效应与流行病学比较 | 15 | [打开](chart-types/16-clinical-epidemiology.md) |
-| 17 | 基因组与转录组 / Genomics and Transcriptomics | 基因组位置、表达差异与通路信号 | 13 | [打开](chart-types/17-genomics-transcriptomics.md) |
-| 18 | 单细胞与空间组学 / Single-cell and Spatial Omics | 细胞状态、表达与空间组学结构 | 8 | [打开](chart-types/18-single-cell-spatial-omics.md) |
-| 19 | 显微图像与定量 / Microscopy and Image Quantification | 图像结构、通道与空间定量 | 8 | [打开](chart-types/19-microscopy-image-quantification.md) |
-| 20 | 教育测量与心理计量 / Education and Psychometrics | 测量模型、题目性能与潜变量结构 | 7 | [打开](chart-types/20-education-psychometrics.md) |
-| 21 | 因果推断与政策评估 / Causal Inference and Policy Evaluation | 处理效应、反事实趋势与识别假设 | 8 | [打开](chart-types/21-causal-policy-evaluation.md) |
-| 22 | 文献计量与科学知识图谱 / Bibliometrics and Science Mapping | 知识关联、主题演化与科学结构 | 8 | [打开](chart-types/22-bibliometrics-science-mapping.md) |
-| 23 | 项目、质量与运营 / Project, Quality, and Operations | 计划进度、过程稳定性与运营监测 | 13 | [打开](chart-types/23-project-quality-operations.md) |
-| 24 | 复合图与高级可视化 / Composite and Advanced Visualization | 多证据整合、三维或高级结构 | 18 | [打开](chart-types/24-composite-advanced.md) |
+| 01 | 数值比较与排序图 / Comparison and Ranking | 多变量结构、相关与低维表示；整体组成、比例与结构 | 27 | [打开](chart-types/01-comparison-ranking.md) |
+| 02 | 时间趋势与动态变化图 / Time Trends and Dynamics | 临床路径、效应与流行病学比较；处理效应、反事实趋势与识别假设 | 34 | [打开](chart-types/02-time-trend-dynamics.md) |
+| 03 | 数据分布图 / Data Distribution | 分布形态、离散程度与异常值；变量关系、拟合与一致性 | 30 | [打开](chart-types/03-distribution.md) |
+| 04 | 变量关系与相关性图 / Relationships and Correlation | 变量关系、拟合与一致性；多变量结构、相关与低维表示 | 32 | [打开](chart-types/04-relationship-correlation.md) |
+| 05 | 构成、比例与整体—部分关系图 / Composition and Part-to-whole | 展示组成比例以及整体与部分之间的关系；整体组成、比例与结构 | 29 | [打开](chart-types/05-composition-proportion.md) |
+| 06 | 统计估计、效应量与不确定性图 / Estimation, Effect Size, and Uncertainty | 报告估计值、效应量与统计不确定性；效应方向、大小与不确定性 | 30 | [打开](chart-types/06-uncertainty-effect-size.md) |
+| 07 | 实验设计与组间差异图 / Experimental Design and Group Differences | 临床路径、效应与流行病学比较；分布形态、离散程度与异常值 | 31 | [打开](chart-types/07-experimental-design-group-differences.md) |
+| 08 | 回归与统计模型诊断图 / Regression and Statistical Model Diagnostics | 诊断回归与统计模型的拟合、残差、影响点和假设；预测区分度、校准或误差结构 | 39 | [打开](chart-types/08-regression-model-diagnostics.md) |
+| 09 | 分类、预测与机器学习评估图 / Classification, Prediction, and Machine Learning | 多变量结构、相关与低维表示；实体连接、权重与社区结构 | 41 | [打开](chart-types/09-classification-prediction-machine-learning.md) |
+| 10 | 层级与分类结构图 / Hierarchy and Classification Structure | 多证据整合、三维或高级结构；实体连接、权重与社区结构 | 20 | [打开](chart-types/10-hierarchy-classification.md) |
+| 11 | 网络与关系结构图 / Networks and Relational Structure | 实体连接、权重与社区结构；展示实体之间的连接、权重、社群与网络结构 | 34 | [打开](chart-types/11-network-relationship-structure.md) |
+| 12 | 流程、迁移与流量图 / Process, Transition, and Flow | 多证据整合、三维或高级结构；展示流程、状态迁移、路径和流量 | 32 | [打开](chart-types/12-flow-migration.md) |
+| 13 | 空间与地理数据图 / Spatial and Geographic Data | 展示地理位置、区域差异、空间模式与空间过程；空间位置、区域差异与地理量级 | 40 | [打开](chart-types/13-spatial-geographic.md) |
+| 14 | 高维与多变量数据图 / High-dimensional and Multivariate Data | 多变量结构、相关与低维表示；多证据整合、三维或高级结构 | 50 | [打开](chart-types/14-high-dimensional-multivariate.md) |
+| 15 | 质性研究与文本分析图 / Qualitative Research and Text Analysis | 展示质性编码、文本主题、语义关系与叙事结构；知识关联、主题演化与科学结构 | 35 | [打开](chart-types/15-qualitative-text-analysis.md) |
+| 16 | 教育学与心理测量常用图 / Education and Psychometrics | 测量模型、题目性能与潜变量结构；表达教育测量、心理计量、学习过程与学校效应 | 40 | [打开](chart-types/16-education-psychometrics.md) |
+| 17 | 医学、公共卫生与生命科学常用图 / Medicine, Public Health, and Life Sciences | 临床路径、效应与流行病学比较；事件时间、生存概率与竞争结局 | 70 | [打开](chart-types/17-medicine-public-health-life-sciences.md) |
+| 18 | 集合、重叠与分类组合图 / Sets, Overlap, and Category Combinations | 展示集合成员、交集、重叠与分类组合；集合交集与成员关系 | 15 | [打开](chart-types/18-sets-overlap-combinations.md) |
+| 19 | 三维、曲面与科学计算图 / 3D, Surface, and Scientific Computing | 图像结构、通道与空间定量；多证据整合、三维或高级结构 | 30 | [打开](chart-types/19-three-dimensional-scientific-computing.md) |
+| 20 | 工程、质量管理与过程控制图 / Engineering, Quality, and Process Control | 监控工程质量、过程稳定性、可靠性与风险；计划进度、过程稳定性与运营监测 | 41 | [打开](chart-types/20-engineering-quality-process-control.md) |
+| 21 | 文献计量与科学知识图谱 / Bibliometrics and Science Mapping | 展示文献计量关系、知识结构、主题与研究前沿；知识关联、主题演化与科学结构 | 35 | [打开](chart-types/21-bibliometrics-science-mapping.md) |
+| 22 | 因果机制与理论模型图 / Causal Mechanisms and Theoretical Models | 处理效应、反事实趋势与识别假设；表达因果机制、理论关系、路径与逻辑模型 | 25 | [打开](chart-types/22-causal-theoretical-models.md) |
+| 23 | 研究流程与论文规范图 / Research Process and Reporting Standards | 说明研究流程、报告规范、实验步骤与系统架构 | 25 | [打开](chart-types/23-research-process-paper-standards.md) |
+| 24 | 复合图与高级科研图形 / Composite and Advanced Scientific Figures | 多证据整合、三维或高级结构；整合多个证据层、图型或模态形成复合科研图 | 37 | [打开](chart-types/24-composite-advanced.md) |
 <!-- chart-registry:category-index:end -->
 
 实现状态以 `chart-registry.yaml` 为准：`production_template` 才能进入真实资产目录；`reusable_pattern` 表示规则和视觉模式可复用；`on_demand` 必须按数据与依赖新实现。

@@ -127,11 +127,13 @@ def parse_source_taxonomy() -> list[dict[str, Any]]:
             continue
         if category_id and line.startswith("- "):
             item = re.match(r"^-\s+`([a-z0-9-]+)`\s+—\s*(.+)$", line)
+            source_label = item.group(2) if item else line[2:].strip()
+            source_label = re.sub(r"\s+<!--.*?-->\s*$", "", source_label)
             entries.append(
                 {
                     "category_id": category_id,
                     "canonical_id": item.group(1) if item else None,
-                    "source_label": item.group(2) if item else line[2:].strip(),
+                    "source_label": source_label,
                     "line": line_number,
                 }
             )

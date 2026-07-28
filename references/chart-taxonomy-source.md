@@ -1,337 +1,790 @@
 # 科研数据可视化图表源分类
 
-> 本文件保存当前可验证的 24 类源分类与命名。规范化 ID、别名和实现状态以
-> `chart-registry.yaml` 为准。不要手工从本文件推断生产资产状态。
->
-> 重要：输入方案声明原始清单应有 714 条，但所提供文件未包含该清单。
-> 本版本保留 24 类结构，并登记现有仓库、现有目录及方案 P0–P3 中可验证的条目；
-> 待原始清单补充后，可用 `scripts/build_chart_registry.py` 导入并审计差额。
+> 本文件保存用户提供的 24 类、714 条原始分类归属，并为每条源记录附加 canonical ID。
+> 原始重复项作为分类归属保留，但规范定义只在 `chart-registry.yaml` 中保存一次。
 
-## 01. 数值比较与排序 / Comparison and Ranking
+## 01. 数值比较与排序图
 
-- `dot-plot` — 点图（Dot Plot）
-- `lollipop-chart` — 棒棒糖图（Lollipop Chart）
-- `horizontal-bar-chart` — 水平条形图（Horizontal Bar Chart）
-- `grouped-bar-chart` — 分组柱状图（Grouped Bar Chart）
-- `categorical-bar-chart` — 分类柱状图（Categorical Bar Chart）
-- `method-comparison-bar-chart` — 方法比较柱状图（Method Comparison Bar Chart）
-- `ablation-bar-chart` — 消融柱状图（Ablation Bar Chart）
-- `dumbbell-chart` — 哑铃图（Dumbbell Chart）
-- `slope-chart` — 坡度图（Slope Chart）
-- `pareto-chart` — 帕累托图（Pareto Chart）
-- `contribution-waterfall-chart` — 贡献瀑布图（Contribution Waterfall Chart）
-- `before-after-bar-chart` — 前后比较柱状图（Before–After Bar Chart）
+- `categorical-bar-chart` — 柱状图（Bar Chart） <!-- source:01:1 -->
+- `grouped-bar-chart` — 分组柱状图（Grouped Bar Chart） <!-- source:01:2 -->
+- `stacked-bar-chart` — 堆积柱状图（Stacked Bar Chart） <!-- source:01:3 -->
+- `percent-stacked-bar-chart` — 百分比堆积柱状图（100% Stacked Bar Chart） <!-- source:01:4 -->
+- `horizontal-bar-chart` — 横向条形图（Horizontal Bar Chart） <!-- source:01:5 -->
+- `diverging-bar-chart` — 双向条形图（Diverging Bar Chart） <!-- source:01:6 -->
+- `mirror-bar-chart` — 镜像条形图（Mirror Bar Chart） <!-- source:01:7 -->
+- `population-pyramid` — 人口金字塔图（Population Pyramid） <!-- source:01:8 -->
+- `lollipop-chart` — 棒棒糖图（Lollipop Chart） <!-- source:01:9 -->
+- `dot-plot` — 点图（Dot Plot） <!-- source:01:10 -->
+- `dot-plot` — 克利夫兰点图（Cleveland Dot Plot） <!-- source:01:11 -->
+- `dumbbell-chart` — 哑铃图（Dumbbell Chart） <!-- source:01:12 -->
+- `slope-chart` — 坡度图（Slope Chart） <!-- source:01:13 -->
+- `bullet-chart` — 子弹图（Bullet Chart） <!-- source:01:14 -->
+- `pareto-chart` — 帕累托图（Pareto Chart） <!-- source:01:15 -->
+- `contribution-waterfall-chart` — 瀑布图（Waterfall Chart） <!-- source:01:16 -->
+- `waffle-chart` — 华夫饼图（Waffle Chart） <!-- source:01:17 -->
+- `pictogram-chart` — 图标阵列图（Pictogram Chart） <!-- source:01:18 -->
+- `nightingale-rose-chart` — 南丁格尔玫瑰图（Nightingale Rose Chart） <!-- source:01:19 -->
+- `polar-bar-chart` — 极坐标柱状图（Polar Bar Chart） <!-- source:01:20 -->
+- `radar-chart` — 雷达图／蜘蛛图（Radar/Spider Chart） <!-- source:01:21 -->
+- `parallel-coordinates` — 平行坐标图（Parallel Coordinates） <!-- source:01:22 -->
+- `bump-chart` — 排名变化图（Bump Chart） <!-- source:01:23 -->
+- `table-heatmap` — 表格热力图（Table Heatmap） <!-- source:01:24 -->
+- `bar-matrix` — 条形图矩阵（Bar Matrix） <!-- source:01:25 -->
 
-## 02. 时间、趋势与动态 / Time, Trend, and Dynamics
+## 02. 时间趋势与动态变化图
 
-- `slope-chart` — 坡度图（Slope Chart）
-- `line-chart` — 折线图（Line Chart）
-- `step-chart` — 阶梯图（Step Chart）
-- `confidence-band-plot` — 置信带图（Confidence Band Plot）
-- `moving-average-plot` — 移动平均图（Moving Average Plot）
-- `area-chart` — 面积图（Area Chart）
-- `stacked-area-chart` — 堆叠面积图（Stacked Area Chart）
-- `streamgraph` — 流图（Streamgraph）
-- `horizon-chart` — 地平线图（Horizon Chart）
-- `run-chart` — 运行图（Run Chart）
-- `control-chart` — 控制图（Control Chart）
-- `gantt-chart` — 甘特图（Gantt Chart）
-- `timeline` — 时间线（Timeline）
-- `spaghetti-plot` — 个体纵向轨迹图（Spaghetti Plot）
-- `interrupted-time-series` — 中断时间序列图（Interrupted Time-series Plot）
+- `line-chart` — 折线图（Line Chart） <!-- source:02:1 -->
+- `line-chart` — 多序列折线图（Multiple Line Chart） <!-- source:02:2 -->
+- `step-chart` — 阶梯图（Step Chart） <!-- source:02:3 -->
+- `area-chart` — 面积图（Area Chart） <!-- source:02:4 -->
+- `stacked-area-chart` — 堆积面积图（Stacked Area Chart） <!-- source:02:5 -->
+- `percent-stacked-area-chart` — 百分比堆积面积图（100% Stacked Area Chart） <!-- source:02:6 -->
+- `streamgraph` — 流图（Streamgraph） <!-- source:02:7 -->
+- `timeline` — 时间轴图（Timeline） <!-- source:02:8 -->
+- `time-band-chart` — 时间带状图（Time Band Chart） <!-- source:02:9 -->
+- `time-series-heatmap` — 时间序列热力图（Time-series Heatmap） <!-- source:02:10 -->
+- `calendar-heatmap` — 日历热力图（Calendar Heatmap） <!-- source:02:11 -->
+- `gantt-chart` — 甘特图（Gantt Chart） <!-- source:02:12 -->
+- `sparkline` — 火花线（Sparkline） <!-- source:02:13 -->
+- `control-chart` — 控制图（Control Chart） <!-- source:02:14 -->
+- `run-chart` — 运行图（Run Chart） <!-- source:02:15 -->
+- `cumulative-curve` — 累积曲线（Cumulative Curve） <!-- source:02:16 -->
+- `cumulative-incidence-plot` — 累积发生图（Cumulative Incidence Plot） <!-- source:02:17 -->
+- `index-chart` — 指数变化图（Index Chart） <!-- source:02:18 -->
+- `year-on-year-and-period-on-period-change-plot` — 同比／环比变化图 <!-- source:02:19 -->
+- `moving-average-plot` — 移动平均图（Moving Average Plot） <!-- source:02:20 -->
+- `seasonal-decomposition-plot` — 季节分解图（Seasonal Decomposition Plot） <!-- source:02:21 -->
+- `autocorrelation-plot` — 自相关图（Autocorrelation Plot, ACF） <!-- source:02:22 -->
+- `partial-autocorrelation-plot` — 偏自相关图（Partial Autocorrelation Plot, PACF） <!-- source:02:23 -->
+- `lag-plot` — 滞后图（Lag Plot） <!-- source:02:24 -->
+- `forecast-plot` — 时间序列预测图（Forecast Plot） <!-- source:02:25 -->
+- `fan-chart` — 扇形预测图（Fan Chart） <!-- source:02:26 -->
+- `event-study-plot` — 事件研究图（Event Study Plot） <!-- source:02:27 -->
+- `interrupted-time-series` — 间断时间序列图（Interrupted Time-series Plot） <!-- source:02:28 -->
+- `age-period-cohort-plot` — 年龄—时期—队列图（Age–Period–Cohort Plot） <!-- source:02:29 -->
+- `trajectory-plot` — 轨迹图（Trajectory Plot） <!-- source:02:30 -->
+- `individual-growth-curve` — 个体成长曲线图（Individual Growth Curve） <!-- source:02:31 -->
+- `spaghetti-plot` — 意大利面图（Spaghetti Plot） <!-- source:02:32 -->
 
-## 03. 分布与统计诊断 / Distribution and Statistical Diagnostics
+## 03. 数据分布图
 
-- `dot-plot` — 点图（Dot Plot）
-- `histogram` — 直方图（Histogram）
-- `kernel-density-plot` — 核密度图（Kernel Density Plot）
-- `ecdf-plot` — 经验累积分布图（ECDF Plot）
-- `qq-plot` — Q-Q图（Q-Q Plot）
-- `box-plot` — 箱线图（Box Plot）
-- `violin-plot` — 小提琴图（Violin Plot）
-- `grouped-violin-plot` — 分组小提琴图（Grouped Violin Plot）
-- `raincloud-plot` — 雨云图（Raincloud Plot）
-- `beeswarm-plot` — 蜂群图（Beeswarm Plot）
-- `ridgeline-plot` — 山脊图（Ridgeline Plot）
-- `paired-box-scatter` — 配对箱线散点图（Paired Box Scatter）
-- `rug-plot` — 地毯图（Rug Plot）
+- `histogram` — 直方图（Histogram） <!-- source:03:1 -->
+- `frequency-polygon` — 频率多边形（Frequency Polygon） <!-- source:03:2 -->
+- `kernel-density-plot` — 密度图（Density Plot） <!-- source:03:3 -->
+- `kernel-density-plot` — 核密度估计图（Kernel Density Plot） <!-- source:03:4 -->
+- `box-plot` — 箱线图（Box Plot） <!-- source:03:5 -->
+- `notched-box-plot` — 缺口箱线图（Notched Box Plot） <!-- source:03:6 -->
+- `violin-plot` — 小提琴图（Violin Plot） <!-- source:03:7 -->
+- `raincloud-plot` — 雨云图（Raincloud Plot） <!-- source:03:8 -->
+- `ridgeline-plot` — 山脊图（Ridgeline Plot/Joy Plot） <!-- source:03:9 -->
+- `beeswarm-plot` — 蜂群图（Beeswarm Plot） <!-- source:03:10 -->
+- `strip-plot` — 条带图（Strip Plot） <!-- source:03:11 -->
+- `jitter-plot` — 抖动散点图（Jitter Plot） <!-- source:03:12 -->
+- `dot-distribution-plot` — 点阵分布图（Dot Distribution Plot） <!-- source:03:13 -->
+- `stem-and-leaf-plot` — 茎叶图（Stem-and-Leaf Plot） <!-- source:03:14 -->
+- `ecdf-plot` — ECDF图（Empirical Cumulative Distribution Function） <!-- source:03:15 -->
+- `cdf-plot` — 累积分布图（CDF Plot） <!-- source:03:16 -->
+- `quantile-plot` — 分位数图（Quantile Plot） <!-- source:03:17 -->
+- `qq-plot` — Q-Q图（Quantile–Quantile Plot） <!-- source:03:18 -->
+- `probability-probability-plot` — P-P图（Probability–Probability Plot） <!-- source:03:19 -->
+- `qq-plot` — 正态概率图（Normal Probability Plot） <!-- source:03:20 -->
+- `boxen-plot` — 箱百分位图（Boxen Plot/Letter-value Plot） <!-- source:03:21 -->
+- `half-eye-plot` — 半眼图（Half-eye Plot） <!-- source:03:22 -->
+- `rug-plot` — 分布地毯图（Rug Plot） <!-- source:03:23 -->
+- `2d-density-plot` — 二维密度图（2D Density Plot） <!-- source:03:24 -->
+- `hexbin-plot` — 六边形分箱图（Hexbin Plot） <!-- source:03:25 -->
+- `density-contour-plot` — 等高密度图（Density Contour Plot） <!-- source:03:26 -->
+- `two-dimensional-histogram` — 双变量直方图（Bivariate Histogram） <!-- source:03:27 -->
+- `bean-plot` — 豆荚图（Bean Plot） <!-- source:03:28 -->
+- `beeswarm-plot` — Sina图（Sina Plot） <!-- source:03:29 -->
+- `population-pyramid` — 人口分布金字塔图 <!-- source:03:30 -->
 
-## 04. 关系与回归 / Relationship and Regression
+## 04. 变量关系与相关性图
 
-- `kernel-density-plot` — 核密度图（Kernel Density Plot）
-- `scatter-plot` — 散点图（Scatter Plot）
-- `scatter-regression-plot` — 回归散点图（Scatter Regression Plot）
-- `bubble-scatter` — 气泡散点图（Bubble Scatter）
-- `marginal-density-scatter` — 边际密度散点图（Marginal Density Scatter）
-- `hexbin-plot` — 六边形分箱图（Hexbin Plot）
-- `two-dimensional-histogram` — 二维直方图（Two-dimensional Histogram）
-- `connected-scatter` — 连接散点图（Connected Scatter Plot）
-- `bland-altman-plot` — Bland–Altman图（Bland–Altman Plot）
+- `scatter-plot` — 散点图（Scatter Plot） <!-- source:04:1 -->
+- `scatter-regression-plot` — 带回归线散点图 <!-- source:04:2 -->
+- `bubble-scatter` — 气泡图（Bubble Chart） <!-- source:04:3 -->
+- `scatterplot-matrix` — 散点矩阵（Scatterplot Matrix/SPLOM） <!-- source:04:4 -->
+- `scatterplot-matrix` — 成对关系图（Pair Plot） <!-- source:04:5 -->
+- `correlation-matrix` — 相关矩阵图（Correlation Matrix） <!-- source:04:6 -->
+- `correlation-matrix` — 相关热力图（Correlation Heatmap） <!-- source:04:7 -->
+- `correlation-matrix` — 相关圆图（Correlogram） <!-- source:04:8 -->
+- `covariance-matrix-plot` — 协方差矩阵图 <!-- source:04:9 -->
+- `hexbin-plot` — 六边形散点密度图（Hexbin） <!-- source:04:10 -->
+- `two-dimensional-kernel-density-plot` — 二维核密度图 <!-- source:04:11 -->
+- `joint-plot` — 联合分布图（Joint Plot） <!-- source:04:12 -->
+- `marginal-density-scatter` — 边际分布散点图（Marginal Plot） <!-- source:04:13 -->
+- `conditional-scatter-plot` — 条件散点图（Conditional Scatter Plot） <!-- source:04:14 -->
+- `faceted-scatter-plot` — 分面散点图（Faceted Scatter Plot） <!-- source:04:15 -->
+- `three-dimensional-scatter-plot` — 三维散点图（3D Scatter Plot） <!-- source:04:16 -->
+- `contour-plot` — 等高线图（Contour Plot） <!-- source:04:17 -->
+- `three-dimensional-surface` — 曲面图（Surface Plot） <!-- source:04:18 -->
+- `partial-correlation-plot` — 偏相关图（Partial Correlation Plot） <!-- source:04:19 -->
+- `canonical-correlation-plot` — 典型相关图 <!-- source:04:20 -->
+- `biplot` — 双标图（Biplot） <!-- source:04:21 -->
+- `quadrant-chart` — 四象限图（Quadrant Chart） <!-- source:04:22 -->
+- `mosaic-plot` — 马赛克图（Mosaic Plot） <!-- source:04:23 -->
+- `association-plot` — 关联图（Association Plot） <!-- source:04:24 -->
+- `co-occurrence-matrix` — 共现矩阵图（Co-occurrence Matrix） <!-- source:04:25 -->
+- `loess-plot` — 散点平滑图（LOESS/LOWESS Plot） <!-- source:04:26 -->
+- `conditional-effects-plot` — 条件效应图（Conditional Effects Plot） <!-- source:04:27 -->
+- `marginal-effects-plot` — 边际效应图（Marginal Effects Plot） <!-- source:04:28 -->
+- `partial-dependence-plot` — 部分依赖图（Partial Dependence Plot） <!-- source:04:29 -->
+- `ice-plot` — 个体条件期望图（ICE Plot） <!-- source:04:30 -->
+- `ale-plot` — 累积局部效应图（ALE Plot） <!-- source:04:31 -->
 
-## 05. 多变量与降维 / Multivariate and Dimension Reduction
+## 05. 构成、比例与整体—部分关系图
 
-- `correlation-matrix` — 相关矩阵（Correlation Matrix）
-- `grouped-correlation-matrix` — 分组相关矩阵（Grouped Correlation Matrix）
-- `correlation-bubble-matrix` — 相关性气泡矩阵（Correlation Bubble Matrix）
-- `scatterplot-matrix` — 散点矩阵（Scatterplot Matrix）
-- `pca-biplot` — PCA双标图（PCA Biplot）
-- `rda-triplot` — RDA三标图（RDA Triplot）
-- `umap-plot` — UMAP图（UMAP Plot）
-- `tsne-plot` — t-SNE图（t-SNE Plot）
-- `manifold-embedding-plot` — 流形嵌入图（Manifold Embedding Plot）
-- `parallel-coordinates` — 平行坐标图（Parallel Coordinates）
-- `ternary-plot` — 三元图（Ternary Plot）
-- `correlation-network` — 相关网络图（Correlation Network）
-- `mantel-correlation-plot` — Mantel相关图（Mantel Correlation Plot）
-- `scree-plot` — 碎石图（Scree Plot）
-- `parallel-analysis-plot` — 平行分析图（Parallel Analysis Plot）
-- `grand-tour` — Grand Tour动态图（Grand Tour）
+- `pie-chart` — 饼图（Pie Chart） <!-- source:05:1 -->
+- `donut-chart` — 环形图（Donut Chart） <!-- source:05:2 -->
+- `semi-donut-chart` — 半环图（Semi-donut Chart） <!-- source:05:3 -->
+- `sunburst-chart` — 旭日图（Sunburst Chart） <!-- source:05:4 -->
+- `treemap` — 矩形树图（Treemap） <!-- source:05:5 -->
+- `waffle-chart` — 华夫饼图（Waffle Chart） <!-- source:05:6 -->
+- `stacked-bar-chart` — 堆积柱状图 <!-- source:05:7 -->
+- `percent-stacked-bar-chart` — 百分比堆积柱状图 <!-- source:05:8 -->
+- `stacked-area-chart` — 堆积面积图 <!-- source:05:9 -->
+- `percent-stacked-area-chart` — 百分比堆积面积图 <!-- source:05:10 -->
+- `mosaic-plot` — 马赛克图（Mosaic Plot） <!-- source:05:11 -->
+- `mekko-chart` — Marimekko图（Mekko Chart） <!-- source:05:12 -->
+- `polar-area-chart` — 极坐标面积图（Polar Area Chart） <!-- source:05:13 -->
+- `nightingale-rose-chart` — 南丁格尔玫瑰图 <!-- source:05:14 -->
+- `circular-hierarchy-plot` — 圆环层级图 <!-- source:05:15 -->
+- `voronoi-treemap` — Voronoi树图 <!-- source:05:16 -->
+- `circular-packing` — 圆形打包图（Circle Packing） <!-- source:05:17 -->
+- `packed-bubble-chart` — 嵌套气泡图（Packed Bubble Chart） <!-- source:05:18 -->
+- `pictogram-proportion-plot` — 图标比例图 <!-- source:05:19 -->
+- `unit-chart` — 单位图（Unit Chart） <!-- source:05:20 -->
 
-## 06. 矩阵、热图与模式 / Matrix, Heatmap, and Pattern
+## 06. 统计估计、效应量与不确定性图
 
-- `two-dimensional-histogram` — 二维直方图（Two-dimensional Histogram）
-- `correlation-matrix` — 相关矩阵（Correlation Matrix）
-- `grouped-correlation-matrix` — 分组相关矩阵（Grouped Correlation Matrix）
-- `correlation-bubble-matrix` — 相关性气泡矩阵（Correlation Bubble Matrix）
-- `heatmap` — 热图（Heatmap）
-- `clustered-heatmap` — 聚类热图（Clustered Heatmap）
-- `annotated-heatmap` — 注释热图（Annotated Heatmap）
-- `density-heatmap` — 密度热图（Density Heatmap）
-- `three-dimensional-heatmap` — 三维热图（Three-dimensional Heatmap）
-- `frequency-3d-heatmap` — 三维频率热图（Three-dimensional Frequency Heatmap）
-- `sparse-matrix-plot` — 稀疏矩阵图（Sparse Matrix Plot）
-- `calendar-heatmap` — 日历热图（Calendar Heatmap）
-- `mosaic-plot` — 马赛克图（Mosaic Plot）
-- `dendrogram` — 树状图（Dendrogram）
-- `pseudotime-heatmap` — 拟时间热图（Pseudotime Heatmap）
-- `cohort-retention-heatmap` — 队列留存热图（Cohort Retention Heatmap）
+- `error-bar-plot` — 误差棒图（Error Bar Plot） <!-- source:06:1 -->
+- `mean-and-ci-plot` — 均值—置信区间图（Mean and CI Plot） <!-- source:06:2 -->
+- `interval-plot` — 点—区间图（Point-range Plot） <!-- source:06:3 -->
+- `caterpillar-plot` — 毛毛虫图（Caterpillar Plot） <!-- source:06:4 -->
+- `forest-plot` — 森林图（Forest Plot） <!-- source:06:5 -->
+- `effect-size-plot` — 效应量图（Effect Size Plot） <!-- source:06:6 -->
+- `gardner-altman-estimation-plot` — Gardner–Altman估计图 <!-- source:06:7 -->
+- `cumming-estimation-plot` — Cumming估计图 <!-- source:06:8 -->
+- `bootstrap-distribution-plot` — Bootstrap分布图 <!-- source:06:9 -->
+- `confidence-band-plot` — 置信带图（Confidence Band） <!-- source:06:10 -->
+- `prediction-interval-plot` — 预测区间图（Prediction Interval Plot） <!-- source:06:11 -->
+- `fan-chart` — 扇形图（Fan Chart） <!-- source:06:12 -->
+- `posterior-distribution-plot` — 后验分布图（Posterior Distribution Plot） <!-- source:06:13 -->
+- `credible-interval-plot` — 后验区间图（Credible Interval Plot） <!-- source:06:14 -->
+- `bayesian-ridgeline-plot` — 贝叶斯山脊图 <!-- source:06:15 -->
+- `bayesian-half-eye-plot` — 贝叶斯半眼图 <!-- source:06:16 -->
+- `prior-and-posterior-comparison-plot` — 先验—后验比较图 <!-- source:06:17 -->
+- `trace-plot` — 参数轨迹图（Trace Plot） <!-- source:06:18 -->
+- `convergence-diagnostic-plot` — 收敛诊断图 <!-- source:06:19 -->
+- `meta-analysis-funnel-plot` — 漏斗图（Funnel Plot） <!-- source:06:20 -->
+- `profile-likelihood-plot` — 轮廓似然图（Profile Likelihood Plot） <!-- source:06:21 -->
+- `coefficient-plot` — 系数图（Coefficient Plot） <!-- source:06:22 -->
+- `regression-coefficient-forest-plot` — 回归系数森林图 <!-- source:06:23 -->
+- `odds-ratio-forest-plot` — OR值森林图 <!-- source:06:24 -->
+- `risk-ratio-forest-plot` — RR值森林图 <!-- source:06:25 -->
+- `estimated-marginal-means-plot` — 边际均值图（Estimated Marginal Means Plot） <!-- source:06:26 -->
+- `prediction-probability-plot` — 预测概率图 <!-- source:06:27 -->
+- `probability-calibration-band-plot` — 概率校准带图 <!-- source:06:28 -->
+- `statistical-significance-interval-plot` — 统计显著性区间图 <!-- source:06:29 -->
+- `interval-heatmap` — 区间热力图 <!-- source:06:30 -->
 
-## 07. 不确定性与效应量 / Uncertainty and Effect Size
+## 07. 实验设计与组间差异图
 
-- `confidence-band-plot` — 置信带图（Confidence Band Plot）
-- `forest-plot` — 森林图（Forest Plot）
-- `coefficient-plot` — 系数图（Coefficient Plot）
-- `interval-plot` — 区间图（Interval Plot）
-- `error-bar-plot` — 误差线图（Error Bar Plot）
-- `meta-analysis-funnel-plot` — 元分析漏斗图（Meta-analysis Funnel Plot）
+- `paired-line-plot` — 前后测配对线图（Paired Line Plot） <!-- source:07:1 -->
+- `paired-dot-plot` — 配对点图（Paired Dot Plot） <!-- source:07:2 -->
+- `connected-scatter` — 连接散点图（Connected Dot Plot） <!-- source:07:3 -->
+- `between-group-mean-plot` — 组间均值图 <!-- source:07:4 -->
+- `between-group-box-plot` — 组间箱线图 <!-- source:07:5 -->
+- `grouped-violin-plot` — 组间小提琴图 <!-- source:07:6 -->
+- `interaction-plot` — 交互作用图（Interaction Plot） <!-- source:07:7 -->
+- `main-effects-plot` — 主效应图（Main Effects Plot） <!-- source:07:8 -->
+- `simple-effects-plot` — 简单效应图（Simple Effects Plot） <!-- source:07:9 -->
+- `repeated-measures-trajectory-plot` — 重复测量轨迹图 <!-- source:07:10 -->
+- `individual-change-plot` — 个体变化图 <!-- source:07:11 -->
+- `difference-in-differences-plot` — 差异中的差异图（Difference-in-Differences Plot） <!-- source:07:12 -->
+- `regression-discontinuity-plot` — 回归不连续图（Regression Discontinuity Plot） <!-- source:07:13 -->
+- `propensity-score-distribution-plot` — 倾向得分分布图 <!-- source:07:14 -->
+- `propensity-score-overlap-plot` — 倾向得分重叠图 <!-- source:07:15 -->
+- `love-plot` — 协变量平衡图（Love Plot） <!-- source:07:16 -->
+- `randomization-test-distribution-plot` — 随机化检验分布图 <!-- source:07:17 -->
+- `placebo-test-plot` — 安慰剂检验图（Placebo Test Plot） <!-- source:07:18 -->
+- `dose-response-plot` — 剂量—反应图（Dose–Response Plot） <!-- source:07:19 -->
+- `equivalence-plot` — 等效性检验图（Equivalence Plot） <!-- source:07:20 -->
+- `non-inferiority-plot` — 非劣效性图 <!-- source:07:21 -->
+- `bland-altman-plot` — Bland–Altman图 <!-- source:07:22 -->
+- `measurement-agreement-plot` — 测量一致性图 <!-- source:07:23 -->
+- `multifactor-response-surface-plot` — 多因素响应曲面图 <!-- source:07:24 -->
+- `principal-component-score-plot` — 主成分得分图 <!-- source:07:25 -->
+- `orthogonal-design-effect-plot` — 正交设计效应图 <!-- source:07:26 -->
 
-## 08. 模型评估与诊断 / Model Evaluation and Diagnostics
+## 08. 回归与统计模型诊断图
 
-- `qq-plot` — Q-Q图（Q-Q Plot）
-- `bland-altman-plot` — Bland–Altman图（Bland–Altman Plot）
-- `coefficient-plot` — 系数图（Coefficient Plot）
-- `roc-curve` — ROC曲线（ROC Curve）
-- `precision-recall-curve` — 精确率-召回率曲线（Precision–Recall Curve）
-- `calibration-curve` — 校准曲线（Calibration Curve）
-- `confusion-matrix` — 混淆矩阵（Confusion Matrix）
-- `decision-curve` — 决策曲线（Decision Curve）
-- `residual-diagnostic-plot` — 残差诊断图（Residual Diagnostic Plot）
-- `learning-curve` — 学习曲线（Learning Curve）
-- `diagnostic-test-plot` — 诊断试验性能图（Diagnostic Test Performance Plot）
+- `residuals-vs-fitted` — 拟合值—残差图（Residuals vs Fitted） <!-- source:08:1 -->
+- `residual-q-q-plot` — 残差Q-Q图 <!-- source:08:2 -->
+- `standardized-residual-plot` — 标准化残差图 <!-- source:08:3 -->
+- `scale-location-plot` — 尺度—位置图（Scale–Location Plot） <!-- source:08:4 -->
+- `leverage-plot` — 杠杆值图（Leverage Plot） <!-- source:08:5 -->
+- `cooks-distance-plot` — Cook距离图（Cook’s Distance Plot） <!-- source:08:6 -->
+- `influence-plot` — 影响度图（Influence Plot） <!-- source:08:7 -->
+- `component-plus-residual-plot` — 成分残差图（Component-plus-residual Plot） <!-- source:08:8 -->
+- `partial-regression-plot` — 偏回归图（Partial Regression Plot） <!-- source:08:9 -->
+- `heteroscedasticity-diagnostic-plot` — 异方差诊断图 <!-- source:08:10 -->
+- `multicollinearity-plot` — 多重共线性图 <!-- source:08:11 -->
+- `variance-inflation-factor-plot` — VIF图 <!-- source:08:12 -->
+- `regression-coefficient-plot` — 回归系数图 <!-- source:08:13 -->
+- `marginal-effects-plot` — 边际效应图 <!-- source:08:14 -->
+- `interaction-effect-plot` — 交互效应图 <!-- source:08:15 -->
+- `predicted-versus-observed-plot` — 预测值—实际值图 <!-- source:08:16 -->
+- `calibration-curve` — 校准图（Calibration Plot） <!-- source:08:17 -->
+- `roc-curve` — ROC曲线 <!-- source:08:18 -->
+- `precision-recall-curve` — PR曲线（Precision–Recall Curve） <!-- source:08:19 -->
+- `lift-curve` — Lift曲线 <!-- source:08:20 -->
+- `gain-curve` — Gain曲线 <!-- source:08:21 -->
+- `kolmogorov-smirnov-curve` — KS曲线 <!-- source:08:22 -->
+- `decision-curve` — 决策曲线（Decision Curve Analysis） <!-- source:08:23 -->
+- `learning-curve` — 学习曲线（Learning Curve） <!-- source:08:24 -->
+- `validation-curve` — 验证曲线（Validation Curve） <!-- source:08:25 -->
+- `bias-variance-plot` — 偏差—方差图 <!-- source:08:26 -->
+- `model-comparison-plot` — 模型比较图 <!-- source:08:27 -->
+- `aic-plot` — 信息准则比较图（AIC/BIC Plot） <!-- source:08:28 -->
+- `cross-validation-results-plot` — 交叉验证结果图 <!-- source:08:29 -->
+- `regularization-path` — 正则化路径图（Regularization Path） <!-- source:08:30 -->
+- `lasso-coefficient-path-plot` — LASSO系数路径图 <!-- source:08:31 -->
+- `roc-space-plot` — ROC空间图 <!-- source:08:32 -->
+- `confusion-matrix-heatmap` — 混淆矩阵热力图 <!-- source:08:33 -->
 
-## 09. 机器学习解释 / Machine Learning Explainability
+## 09. 分类、预测与机器学习评估图
 
-- `ablation-bar-chart` — 消融柱状图（Ablation Bar Chart）
-- `learning-curve` — 学习曲线（Learning Curve）
-- `feature-importance-plot` — 特征重要性图（Feature Importance Plot）
-- `shap-beeswarm` — SHAP蜂群图（SHAP Beeswarm）
-- `partial-dependence-plot` — 部分依赖图（Partial Dependence Plot）
-- `ice-plot` — 个体条件期望图（Individual Conditional Expectation Plot）
-- `permutation-importance-plot` — 置换重要性图（Permutation Importance Plot）
+- `confusion-matrix` — 混淆矩阵（Confusion Matrix） <!-- source:09:1 -->
+- `roc-curve` — ROC曲线 <!-- source:09:2 -->
+- `precision-recall-curve` — PR曲线 <!-- source:09:3 -->
+- `calibration-curve` — 校准曲线 <!-- source:09:4 -->
+- `decision-curve` — 决策曲线 <!-- source:09:5 -->
+- `cumulative-gains-chart` — 累积增益图 <!-- source:09:6 -->
+- `lift-chart` — 提升图（Lift Chart） <!-- source:09:7 -->
+- `kolmogorov-smirnov-plot` — KS图 <!-- source:09:8 -->
+- `learning-curve` — 学习曲线 <!-- source:09:9 -->
+- `validation-curve` — 验证曲线 <!-- source:09:10 -->
+- `feature-importance-plot` — 特征重要性图 <!-- source:09:11 -->
+- `permutation-importance-plot` — 排列重要性图（Permutation Importance） <!-- source:09:12 -->
+- `shap-summary-plot` — SHAP摘要图 <!-- source:09:13 -->
+- `shap-beeswarm` — SHAP蜂群图 <!-- source:09:14 -->
+- `shap-dependence-plot` — SHAP依赖图 <!-- source:09:15 -->
+- `shap-waterfall-plot` — SHAP瀑布图 <!-- source:09:16 -->
+- `force-plot` — SHAP力图（Force Plot） <!-- source:09:17 -->
+- `lime-explanation-plot` — LIME解释图 <!-- source:09:18 -->
+- `partial-dependence-plot` — PDP图 <!-- source:09:19 -->
+- `ice-plot` — ICE图 <!-- source:09:20 -->
+- `accumulated-local-effects-plot` — ALE图 <!-- source:09:21 -->
+- `decision-tree-diagram` — 决策树图 <!-- source:09:22 -->
+- `random-forest-tree-structure-diagram` — 随机森林树结构图 <!-- source:09:23 -->
+- `rule-extraction-plot` — 规则提取图 <!-- source:09:24 -->
+- `silhouette-plot` — 聚类轮廓图（Silhouette Plot） <!-- source:09:25 -->
+- `elbow-plot` — 肘部法图（Elbow Plot） <!-- source:09:26 -->
+- `dendrogram` — 聚类树状图（Dendrogram） <!-- source:09:27 -->
+- `clustered-heatmap` — 聚类热力图 <!-- source:09:28 -->
+- `dimensionality-reduction-scatter-plot` — 降维散点图 <!-- source:09:29 -->
+- `tsne-plot` — t-SNE图 <!-- source:09:30 -->
+- `umap-plot` — UMAP图 <!-- source:09:31 -->
+- `pca-score-plot` — PCA得分图 <!-- source:09:32 -->
+- `pca-loading-plot` — PCA载荷图 <!-- source:09:33 -->
+- `roc-confidence-interval-plot` — ROC置信区间图 <!-- source:09:34 -->
+- `multiclass-roc-plot` — 多分类ROC图 <!-- source:09:35 -->
+- `multiclass-precision-recall-plot` — 多分类PR图 <!-- source:09:36 -->
+- `model-fairness-comparison-plot` — 模型公平性比较图 <!-- source:09:37 -->
+- `error-analysis-matrix` — 误差分析矩阵 <!-- source:09:38 -->
+- `feature-interaction-plot` — 特征交互图 <!-- source:09:39 -->
+- `model-residual-distribution-plot` — 模型残差分布图 <!-- source:09:40 -->
 
-## 10. 组成与比例 / Composition and Proportion
+## 10. 层级与分类结构图
 
-- `area-chart` — 面积图（Area Chart）
-- `stacked-area-chart` — 堆叠面积图（Stacked Area Chart）
-- `streamgraph` — 流图（Streamgraph）
-- `ternary-plot` — 三元图（Ternary Plot）
-- `mosaic-plot` — 马赛克图（Mosaic Plot）
-- `stacked-bar-chart` — 堆叠柱状图（Stacked Bar Chart）
-- `percent-stacked-bar-chart` — 百分比堆叠柱状图（100% Stacked Bar Chart）
-- `diverging-stacked-bar-chart` — 发散堆叠柱状图（Diverging Stacked Bar Chart）
-- `composition-bar-chart` — 组成柱状图（Composition Bar Chart）
-- `stacked-bar-scatter` — 堆叠柱状散点图（Stacked Bar Scatter）
-- `population-pyramid` — 人口金字塔（Population Pyramid）
-- `radar-chart` — 雷达图（Radar Chart）
-- `treemap` — 矩形式树图（Treemap）
-- `pie-chart` — 饼图（Pie Chart）
-- `cell-composition-plot` — 细胞组成图（Cell Composition Plot）
+- `hierarchy-tree` — 树状图（Tree Diagram） <!-- source:10:1 -->
+- `dendrogram` — 系统树图（Dendrogram） <!-- source:10:2 -->
+- `treemap` — 矩形树图（Treemap） <!-- source:10:3 -->
+- `sunburst-chart` — 旭日图（Sunburst Chart） <!-- source:10:4 -->
+- `icicle-chart` — 冰柱图（Icicle Chart） <!-- source:10:5 -->
+- `circular-packing` — 圆形打包图（Circle Packing） <!-- source:10:6 -->
+- `radial-tree` — 径向树图（Radial Tree） <!-- source:10:7 -->
+- `hyperbolic-tree` — 双曲树图（Hyperbolic Tree） <!-- source:10:8 -->
+- `organization-structure-diagram` — 组织结构图 <!-- source:10:9 -->
+- `classification-tree-plot` — 分类树图 <!-- source:10:10 -->
+- `decision-tree-diagram` — 决策树图 <!-- source:10:11 -->
+- `phylogenetic-tree` — 系谱图（Phylogenetic Tree） <!-- source:10:12 -->
+- `evolutionary-tree` — 进化树（Evolutionary Tree） <!-- source:10:13 -->
+- `genealogy-plot` — 家谱图 <!-- source:10:14 -->
+- `clustering-hierarchy-heatmap` — 聚类层级热力图 <!-- source:10:15 -->
+- `semantic-hierarchy-plot` — 语义层级图 <!-- source:10:16 -->
+- `concept-classification-tree` — 概念分类树 <!-- source:10:17 -->
+- `theme-hierarchy-plot` — 主题层级图 <!-- source:10:18 -->
+- `multilevel-classification-network` — 多层分类网络图 <!-- source:10:19 -->
+- `voronoi-hierarchy-diagram` — Voronoi层级图 <!-- source:10:20 -->
 
-## 11. 集合与交集 / Sets and Overlap
+## 11. 网络与关系结构图
 
-- `upset-plot` — UpSet图（UpSet Plot）
-- `venn-diagram` — 韦恩图（Venn Diagram）
-- `euler-diagram` — 欧拉图（Euler Diagram）
-- `set-matrix` — 集合成员矩阵（Set Membership Matrix）
+- `node-link-diagram` — 节点—连线图（Node-link Diagram） <!-- source:11:1 -->
+- `social-network-graph` — 社会网络图（Social Network Graph） <!-- source:11:2 -->
+- `knowledge-graph` — 知识图谱（Knowledge Graph） <!-- source:11:3 -->
+- `co-word-network` — 共词网络图（Co-word Network） <!-- source:11:4 -->
+- `co-occurrence-network` — 共现网络图（Co-occurrence Network） <!-- source:11:5 -->
+- `co-citation-network` — 共被引网络图（Co-citation Network） <!-- source:11:6 -->
+- `bibliographic-coupling` — 文献耦合网络图（Bibliographic Coupling） <!-- source:11:7 -->
+- `author-collaboration-network` — 作者合作网络图 <!-- source:11:8 -->
+- `institution-collaboration-network` — 机构合作网络图 <!-- source:11:9 -->
+- `country-collaboration-network` — 国家合作网络图 <!-- source:11:10 -->
+- `citation-network` — 引文网络图 <!-- source:11:11 -->
+- `theme-evolution-network` — 主题演化网络图 <!-- source:11:12 -->
+- `semantic-network` — 语义网络图 <!-- source:11:13 -->
+- `concept-network` — 概念网络图 <!-- source:11:14 -->
+- `association-rule-network` — 关联规则网络图 <!-- source:11:15 -->
+- `adjacency-matrix` — 邻接矩阵图（Adjacency Matrix） <!-- source:11:16 -->
+- `network-matrix-heatmap` — 网络矩阵热力图 <!-- source:11:17 -->
+- `chord-diagram` — 弦图（Chord Diagram） <!-- source:11:18 -->
+- `arc-diagram` — 弧线图（Arc Diagram） <!-- source:11:19 -->
+- `hive-plot` — Hive Plot <!-- source:11:20 -->
+- `ego-network` — Ego Network <!-- source:11:21 -->
+- `community-network` — 社群网络图 <!-- source:11:22 -->
+- `multilayer-network` — 多层网络图（Multilayer Network） <!-- source:11:23 -->
+- `bipartite-network` — 二模网络图（Bipartite Network） <!-- source:11:24 -->
+- `hypergraph` — 超图（Hypergraph） <!-- source:11:25 -->
+- `temporal-network-evolution-plot` — 网络时间演化图 <!-- source:11:26 -->
+- `network-centrality-distribution-plot` — 网络中心性分布图 <!-- source:11:27 -->
+- `network-degree-distribution-plot` — 网络度分布图 <!-- source:11:28 -->
+- `network-community-sankey-diagram` — 网络社区桑基图 <!-- source:11:29 -->
+- `alluvial-network-evolution-diagram` — Alluvial网络演化图 <!-- source:11:30 -->
 
-## 12. 流向、流程与层级 / Flow, Process, and Hierarchy
+## 12. 流程、迁移与流量图
 
-- `timeline` — 时间线（Timeline）
-- `treemap` — 矩形式树图（Treemap）
-- `sankey-diagram` — 桑基图（Sankey Diagram）
-- `alluvial-diagram` — 冲积图（Alluvial Diagram）
-- `conversion-funnel-chart` — 转化漏斗图（Conversion Funnel Chart）
-- `hierarchy-tree` — 层级树（Hierarchy Tree）
-- `sunburst-chart` — 旭日图（Sunburst Chart）
-- `circular-packing` — 圆形打包图（Circle Packing）
-- `process-flow-diagram` — 流程图（Process Flow Diagram）
-- `consort-flow-diagram` — CONSORT流程图（CONSORT Flow Diagram）
-- `prisma-flow-diagram` — PRISMA流程图（PRISMA Flow Diagram）
-- `hyperbolic-tree` — 双曲树（Hyperbolic Tree）
-- `complex-process-mining` — 复杂流程挖掘图（Complex Process-mining Plot）
+- `process-flow-diagram` — 流程图（Flowchart） <!-- source:12:1 -->
+- `sankey-diagram` — 桑基图（Sankey Diagram） <!-- source:12:2 -->
+- `alluvial-diagram` — 冲积图（Alluvial Diagram） <!-- source:12:3 -->
+- `chord-diagram` — 弦图（Chord Diagram） <!-- source:12:4 -->
+- `parallel-sets` — 平行集合图（Parallel Sets） <!-- source:12:5 -->
+- `conversion-funnel-chart` — 漏斗图（Funnel Chart） <!-- source:12:6 -->
+- `user-journey-flow` — 用户路径图（User Journey Flow） <!-- source:12:7 -->
+- `state-transition-diagram` — 状态转移图（State Transition Diagram） <!-- source:12:8 -->
+- `markov-transition-diagram` — 马尔可夫转移图 <!-- source:12:9 -->
+- `state-transition-matrix-heatmap` — 状态迁移矩阵热力图 <!-- source:12:10 -->
+- `process-map` — 过程图（Process Map） <!-- source:12:11 -->
+- `swimlane-diagram` — 泳道图（Swimlane Diagram） <!-- source:12:12 -->
+- `value-stream-map` — 价值流图（Value Stream Map） <!-- source:12:13 -->
+- `data-flow-diagram` — 数据流图（Data Flow Diagram） <!-- source:12:14 -->
+- `causal-flow-diagram` — 因果流程图 <!-- source:12:15 -->
+- `energy-flow-diagram` — 能量流图 <!-- source:12:16 -->
+- `material-flow-diagram` — 物质流图 <!-- source:12:17 -->
+- `transition-flow-plot` — 迁移流向图 <!-- source:12:18 -->
+- `origin-destination-flow` — OD流向图（Origin–Destination Flow） <!-- source:12:19 -->
+- `patient-path-diagram` — 患者路径图 <!-- source:12:20 -->
+- `learning-path-diagram` — 学习路径图 <!-- source:12:21 -->
+- `event-sequence-plot` — 事件序列图 <!-- source:12:22 -->
+- `conversion-funnel-chart` — 漏斗转化图 <!-- source:12:23 -->
+- `transition-probability-plot` — 转移概率图 <!-- source:12:24 -->
+- `complex-process-mining` — 流程挖掘图（Process Mining Diagram） <!-- source:12:25 -->
 
-## 13. 网络与图结构 / Network and Graph Structure
+## 13. 空间与地理数据图
 
-- `correlation-network` — 相关网络图（Correlation Network）
-- `co-occurrence-network` — 共现网络（Co-occurrence Network）
-- `arc-diagram` — 弧线图（Arc Diagram）
-- `chord-diagram` — 弦图（Chord Diagram）
-- `dendrogram` — 树状图（Dendrogram）
-- `phylogenetic-tree` — 系统发育树（Phylogenetic Tree）
-- `co-citation-network` — 共被引网络（Co-citation Network）
-- `bibliographic-coupling-network` — 文献耦合网络（Bibliographic Coupling Network）
-- `co-word-network` — 共词网络（Co-word Network）
+- `choropleth-map` — 分级设色地图（Choropleth Map） <!-- source:13:1 -->
+- `proportional-symbol-map` — 比例符号地图（Proportional Symbol Map） <!-- source:13:2 -->
+- `proportional-symbol-map` — 气泡地图（Bubble Map） <!-- source:13:3 -->
+- `dot-density-map` — 点密度地图（Dot Density Map） <!-- source:13:4 -->
+- `spatial-heatmap` — 热力地图（Heat Map） <!-- source:13:5 -->
+- `kernel-density-map` — 核密度地图（Kernel Density Map） <!-- source:13:6 -->
+- `contour-map` — 等值线地图（Isoline Map） <!-- source:13:7 -->
+- `isopleth-map` — 等值区域图（Isopleth Map） <!-- source:13:8 -->
+- `contour-map` — 等高线地图（Contour Map） <!-- source:13:9 -->
+- `hexbin-map` — 六边形网格地图（Hexbin Map） <!-- source:13:10 -->
+- `grid-map` — 网格地图（Grid Map） <!-- source:13:11 -->
+- `cartogram` — Cartogram变形地图 <!-- source:13:12 -->
+- `flow-map` — 迁徙流向地图（Flow Map） <!-- source:13:13 -->
+- `trajectory-map` — 路径轨迹地图（Trajectory Map） <!-- source:13:14 -->
+- `spatiotemporal-trajectory-plot` — 时空轨迹图 <!-- source:13:15 -->
+- `od-map` — OD地图 <!-- source:13:16 -->
+- `geographic-scatter-plot` — 地理散点图 <!-- source:13:17 -->
+- `spatial-clustering-map` — 空间聚类地图 <!-- source:13:18 -->
+- `local-indicators-of-spatial-association-cluster-map` — LISA聚类地图 <!-- source:13:19 -->
+- `moran-scatter-plot` — Moran散点图 <!-- source:13:20 -->
+- `spatial-autocorrelation-plot` — 空间自相关图 <!-- source:13:21 -->
+- `spatial-residual-plot` — 空间残差图 <!-- source:13:22 -->
+- `spatial-regression-coefficient-map` — 空间回归系数地图 <!-- source:13:23 -->
+- `geographically-weighted-regression-map` — 地理加权回归地图 <!-- source:13:24 -->
+- `time-slider-map` — 时间滑块地图 <!-- source:13:25 -->
+- `small-multiple-maps` — 小倍数地图（Small-multiple Maps） <!-- source:13:26 -->
+- `bivariate-choropleth-map` — 双变量分级设色地图 <!-- source:13:27 -->
+- `trivariate-map` — 三变量地图 <!-- source:13:28 -->
+- `terrain-plot` — 地形图 <!-- source:13:29 -->
+- `dem` — 数字高程模型图（DEM） <!-- source:13:30 -->
+- `hillshade` — 阴影地形图（Hillshade） <!-- source:13:31 -->
+- `remote-sensing-false-color-image` — 遥感假彩色图 <!-- source:13:32 -->
+- `land-use-classification-plot` — 土地利用分类图 <!-- source:13:33 -->
+- `satellite-image-overlay` — 卫星影像叠加图 <!-- source:13:34 -->
+- `voronoi-map` — Voronoi地图 <!-- source:13:35 -->
+- `thiessen-polygon-map` — 泰森多边形图 <!-- source:13:36 -->
+- `accessibility-map` — 可达性地图 <!-- source:13:37 -->
+- `isochrone-map` — 等时圈地图（Isochrone Map） <!-- source:13:38 -->
+- `three-dimensional-terrain-plot` — 三维地形图 <!-- source:13:39 -->
+- `geographic-network` — 地理网络图 <!-- source:13:40 -->
 
-## 14. 地理空间与制图 / Geospatial and Cartography
+## 14. 高维与多变量数据图
 
-- `population-pyramid` — 人口金字塔（Population Pyramid）
-- `proportional-symbol-map` — 比例符号地图（Proportional Symbol Map）
-- `choropleth-map` — 分级设色地图（Choropleth Map）
-- `spatial-heatmap` — 空间热图（Spatial Heatmap）
-- `contour-map` — 等值线地图（Contour Map）
-- `raster-map` — 栅格地图（Raster Map）
-- `flow-map` — 流向地图（Flow Map）
-- `hexbin-map` — 蜂窝地图（Hexbin Map）
+- `parallel-coordinates` — 平行坐标图 <!-- source:14:1 -->
+- `radar-chart` — 雷达图 <!-- source:14:2 -->
+- `star-plot` — 星形图（Star Plot） <!-- source:14:3 -->
+- `chernoff-faces-plot` — Chernoff脸谱图 <!-- source:14:4 -->
+- `scatterplot-matrix` — 散点矩阵 <!-- source:14:5 -->
+- `correlation-matrix` — 相关热力图 <!-- source:14:6 -->
+- `clustered-heatmap` — 聚类热力图 <!-- source:14:7 -->
+- `biplot` — 双标图 <!-- source:14:8 -->
+- `pca-score-plot` — PCA得分图 <!-- source:14:9 -->
+- `pca-loading-plot` — PCA载荷图 <!-- source:14:10 -->
+- `pca-biplot` — 主成分双标图 <!-- source:14:11 -->
+- `factor-loading-plot` — 因子载荷图 <!-- source:14:12 -->
+- `multidimensional-scaling` — MDS图（Multidimensional Scaling） <!-- source:14:13 -->
+- `tsne-plot` — t-SNE图 <!-- source:14:14 -->
+- `umap-plot` — UMAP图 <!-- source:14:15 -->
+- `self-organizing-map` — SOM自组织映射图 <!-- source:14:16 -->
+- `multidimensional-scaling-bubble-plot` — 多维尺度气泡图 <!-- source:14:17 -->
+- `ternary-plot` — 三元图（Ternary Plot） <!-- source:14:18 -->
+- `quaternary-plot` — 四元图 <!-- source:14:19 -->
+- `parallel-sets` — 平行集合图 <!-- source:14:20 -->
+- `glyph-plot` — Glyph图 <!-- source:14:21 -->
+- `pixel-oriented-visualization` — Pixel-oriented Visualization <!-- source:14:22 -->
+- `andrews-curve` — Andrews曲线 <!-- source:14:23 -->
+- `radviz-plot` — RadViz图 <!-- source:14:24 -->
+- `multivariate-box-plot` — 多变量箱线图 <!-- source:14:25 -->
+- `multivariate-density-plot` — 多变量密度图 <!-- source:14:26 -->
+- `high-dimensional-clustering-tree` — 高维聚类树 <!-- source:14:27 -->
+- `dimension-correlation-network` — 维度相关网络图 <!-- source:14:28 -->
+- `co-plot` — 协调图（Co-plot） <!-- source:14:29 -->
+- `grand-tour` — Grand Tour动态图 <!-- source:14:30 -->
 
-## 15. 生存与事件史 / Survival and Event History
+## 15. 质性研究与文本分析图
 
-- `kaplan-meier-curve` — Kaplan–Meier曲线（Kaplan–Meier Curve）
-- `cumulative-hazard-curve` — 累计风险曲线（Cumulative Hazard Curve）
-- `cumulative-incidence-curve` — 累计发生率曲线（Cumulative Incidence Curve）
-- `competing-risk-plot` — 竞争风险图（Competing Risk Plot）
-- `swimmer-plot` — 游泳图（Swimmer Plot）
+- `word-cloud` — 词云（Word Cloud） <!-- source:15:1 -->
+- `word-frequency-bar-chart` — 词频条形图 <!-- source:15:2 -->
+- `keyword-co-occurrence-network` — 关键词共现网络图 <!-- source:15:3 -->
+- `co-word-matrix-heatmap` — 共词矩阵热力图 <!-- source:15:4 -->
+- `theme-model-plot` — 主题模型图 <!-- source:15:5 -->
+- `theme-bubble-plot` — 主题气泡图 <!-- source:15:6 -->
+- `theme-river` — 主题河流图（Theme River） <!-- source:15:7 -->
+- `theme-evolution-plot` — 主题演化图 <!-- source:15:8 -->
+- `theme-sankey-diagram` — 主题桑基图 <!-- source:15:9 -->
+- `semantic-network` — 语义网络图 <!-- source:15:10 -->
+- `sentiment-trend-plot` — 情感趋势图 <!-- source:15:11 -->
+- `sentiment-polarity-distribution-plot` — 情感极性分布图 <!-- source:15:12 -->
+- `sentiment-radar-chart` — 情感雷达图 <!-- source:15:13 -->
+- `text-clustering-plot` — 文本聚类图 <!-- source:15:14 -->
+- `text-similarity-heatmap` — 文本相似度热力图 <!-- source:15:15 -->
+- `document-term-matrix-plot` — 文档—术语矩阵图 <!-- source:15:16 -->
+- `coding-frequency-plot` — 编码频次图 <!-- source:15:17 -->
+- `coding-co-occurrence-plot` — 编码共现图 <!-- source:15:18 -->
+- `qualitative-coding-tree` — 质性编码树 <!-- source:15:19 -->
+- `concept-map` — 概念地图（Concept Map） <!-- source:15:20 -->
+- `mind-map` — 思维导图（Mind Map） <!-- source:15:21 -->
+- `causal-relationship-plot` — 因果关系图 <!-- source:15:22 -->
+- `logic-model-plot` — 逻辑模型图 <!-- source:15:23 -->
+- `narrative-timeline` — 叙事时间轴 <!-- source:15:24 -->
+- `case-comparison-matrix` — 案例比较矩阵 <!-- source:15:25 -->
+- `framework-matrix` — 框架矩阵 <!-- source:15:26 -->
+- `theme-matrix` — 主题矩阵 <!-- source:15:27 -->
+- `evidence-chain-diagram` — 证据链图 <!-- source:15:28 -->
+- `citation-relationship-plot` — 引文关系图 <!-- source:15:29 -->
+- `discourse-structure-diagram` — 话语结构图 <!-- source:15:30 -->
+- `semantic-difference-plot` — 语义差异图 <!-- source:15:31 -->
+- `keyword-burst-plot` — 关键词突现图（Burst Detection） <!-- source:15:32 -->
+- `text-flow` — 文本流图（Text Flow） <!-- source:15:33 -->
+- `topic-transition-plot` — 话题迁移图 <!-- source:15:34 -->
+- `grounded-theory-category-relationship-diagram` — 扎根理论范畴关系图 <!-- source:15:35 -->
 
-## 16. 临床试验与流行病学 / Clinical Trials and Epidemiology
+## 16. 教育学与心理测量常用图
 
-- `forest-plot` — 森林图（Forest Plot）
-- `meta-analysis-funnel-plot` — 元分析漏斗图（Meta-analysis Funnel Plot）
-- `roc-curve` — ROC曲线（ROC Curve）
-- `calibration-curve` — 校准曲线（Calibration Curve）
-- `decision-curve` — 决策曲线（Decision Curve）
-- `consort-flow-diagram` — CONSORT流程图（CONSORT Flow Diagram）
-- `prisma-flow-diagram` — PRISMA流程图（PRISMA Flow Diagram）
-- `kaplan-meier-curve` — Kaplan–Meier曲线（Kaplan–Meier Curve）
-- `cumulative-incidence-curve` — 累计发生率曲线（Cumulative Incidence Curve）
-- `competing-risk-plot` — 竞争风险图（Competing Risk Plot）
-- `swimmer-plot` — 游泳图（Swimmer Plot）
-- `love-plot` — 协变量平衡图（Love Plot）
-- `difference-in-differences-plot` — 双重差分图（Difference-in-Differences Plot）
-- `event-study-plot` — 事件研究图（Event Study Plot）
-- `diagnostic-test-plot` — 诊断试验性能图（Diagnostic Test Performance Plot）
+- `learning-achievement-distribution-plot` — 学习成绩分布图 <!-- source:16:1 -->
+- `pretest-posttest-paired-plot` — 前后测配对图 <!-- source:16:2 -->
+- `growth-curve` — 成长曲线图 <!-- source:16:3 -->
+- `learning-trajectory-plot` — 学习轨迹图 <!-- source:16:4 -->
+- `interaction-plot` — 交互作用图 <!-- source:16:5 -->
+- `class-and-school-value-added-plot` — 班级／学校增值图 <!-- source:16:6 -->
+- `multilevel-model-caterpillar-plot` — 多层模型毛毛虫图 <!-- source:16:7 -->
+- `school-effect-forest-plot` — 学校效应森林图 <!-- source:16:8 -->
+- `radar-ability-profile` — 雷达能力画像图 <!-- source:16:9 -->
+- `learner-profile-cluster-plot` — 学习者画像聚类图 <!-- source:16:10 -->
+- `knowledge-mastery-heatmap` — 知识掌握热力图 <!-- source:16:11 -->
+- `learning-behavior-time-series-plot` — 学习行为时间序列图 <!-- source:16:12 -->
+- `learning-path-sankey-diagram` — 学习路径桑基图 <!-- source:16:13 -->
+- `item-characteristic-curve` — 题目反应曲线（Item Characteristic Curve） <!-- source:16:14 -->
+- `item-information-curve` — 项目信息曲线（Item Information Curve） <!-- source:16:15 -->
+- `test-information-curve` — 测验信息曲线（Test Information Curve） <!-- source:16:16 -->
+- `wright-map` — 项目—人对应图（Wright Map） <!-- source:16:17 -->
+- `rasch-item-map` — Rasch项目地图 <!-- source:16:18 -->
+- `item-fit-plot` — 项目拟合图 <!-- source:16:19 -->
+- `item-difficulty-distribution-plot` — 项目难度分布图 <!-- source:16:20 -->
+- `factor-loading-plot` — 因子载荷图 <!-- source:16:21 -->
+- `scree-plot` — 碎石图（Scree Plot） <!-- source:16:22 -->
+- `parallel-analysis-plot` — 平行分析图 <!-- source:16:23 -->
+- `confirmatory-factor-analysis-path-diagram` — 验证性因素分析路径图 <!-- source:16:24 -->
+- `sem-path-diagram` — 结构方程模型路径图 <!-- source:16:25 -->
+- `measurement-invariance-comparison-plot` — 测量不变性比较图 <!-- source:16:26 -->
+- `latent-class-probability-plot` — 潜在类别概率图 <!-- source:16:27 -->
+- `latent-profile-plot` — 潜在剖面图 <!-- source:16:28 -->
+- `latent-growth-curve-plot` — 潜在增长曲线图 <!-- source:16:29 -->
+- `mediation-effect-plot` — 中介效应图 <!-- source:16:30 -->
+- `moderation-effect-plot` — 调节效应图 <!-- source:16:31 -->
+- `moderated-mediation-model-diagram` — 有调节的中介模型图 <!-- source:16:32 -->
+- `reliability-coefficient-plot` — 信度系数图 <!-- source:16:33 -->
+- `differential-item-functioning-plot` — DIF项目图 <!-- source:16:34 -->
+- `test-feature-curve` — 测验特征曲线 <!-- source:16:35 -->
+- `learning-engagement-radar-chart` — 学习投入雷达图 <!-- source:16:36 -->
+- `classroom-interaction-network` — 课堂互动网络图 <!-- source:16:37 -->
+- `teacher-student-relationship-network` — 教师—学生关系网络图 <!-- source:16:38 -->
+- `cognitive-diagnosis-attribute-mastery-plot` — 认知诊断属性掌握图 <!-- source:16:39 -->
+- `q-matrix-heatmap` — Q矩阵热力图 <!-- source:16:40 -->
 
-## 17. 基因组与转录组 / Genomics and Transcriptomics
+## 17. 医学、公共卫生与生命科学常用图
 
-- `chord-diagram` — 弦图（Chord Diagram）
-- `phylogenetic-tree` — 系统发育树（Phylogenetic Tree）
-- `volcano-plot` — 火山图（Volcano Plot）
-- `ma-plot` — MA图（MA Plot）
-- `manhattan-plot` — 曼哈顿图（Manhattan Plot）
-- `locuszoom-plot` — 区域关联图（LocusZoom Plot）
-- `genome-browser-track` — 基因组浏览器轨道（Genome Browser Track）
-- `mutation-lollipop-plot` — 突变棒棒糖图（Mutation Lollipop Plot）
-- `oncoprint` — 肿瘤突变谱图（OncoPrint）
-- `gsea-curve` — GSEA富集曲线（GSEA Enrichment Curve）
-- `mantel-correlation-plot` — Mantel相关图（Mantel Correlation Plot）
-- `marker-gene-dot-plot` — 标记基因点图（Marker-gene Dot Plot）
-- `circos-plot` — Circos图（Circos Plot）
+- `kaplan-meier-curve` — Kaplan–Meier生存曲线 <!-- source:17:1 -->
+- `cumulative-hazard-curve` — 累积风险曲线 <!-- source:17:2 -->
+- `nelson-aalen-curve` — Nelson–Aalen曲线 <!-- source:17:3 -->
+- `cumulative-incidence-curve` — 累积发生函数图 <!-- source:17:4 -->
+- `competing-risk-plot` — 竞争风险图 <!-- source:17:5 -->
+- `forest-plot` — 森林图 <!-- source:17:6 -->
+- `meta-analysis-funnel-plot` — 漏斗图 <!-- source:17:7 -->
+- `roc-curve` — ROC曲线 <!-- source:17:8 -->
+- `decision-curve` — 决策曲线 <!-- source:17:9 -->
+- `nomogram` — 列线图（Nomogram） <!-- source:17:10 -->
+- `calibration-curve` — 校准曲线 <!-- source:17:11 -->
+- `bland-altman-plot` — Bland–Altman图 <!-- source:17:12 -->
+- `dose-response-curve` — 剂量—反应曲线 <!-- source:17:13 -->
+- `concentration-time-curve` — 浓度—时间曲线 <!-- source:17:14 -->
+- `pharmacokinetic-curve` — 药代动力学曲线 <!-- source:17:15 -->
+- `growth-curve` — 生长曲线 <!-- source:17:16 -->
+- `epidemic-curve` — 流行病曲线（Epidemic Curve） <!-- source:17:17 -->
+- `incidence-map` — 发病率地图 <!-- source:17:18 -->
+- `hotspot-map` — 热点地图 <!-- source:17:19 -->
+- `transmission-network` — 传播网络图 <!-- source:17:20 -->
+- `patient-flow-diagram` — 患者流程图 <!-- source:17:21 -->
+- `consort-flow-diagram` — CONSORT流程图 <!-- source:17:22 -->
+- `prisma-flow-diagram` — PRISMA流程图 <!-- source:17:23 -->
+- `case-timeline` — 病例时间轴 <!-- source:17:24 -->
+- `risk-score-plot` — 风险评分图 <!-- source:17:25 -->
+- `biomarker-box-plot` — 生物标志物箱线图 <!-- source:17:26 -->
+- `tumor-response-waterfall-plot` — 瀑布图（肿瘤疗效） <!-- source:17:27 -->
+- `tumor-burden-spider-plot` — 蜘蛛图（肿瘤负荷变化） <!-- source:17:28 -->
+- `swimmer-plot` — 游泳图（Swimmer Plot） <!-- source:17:29 -->
+- `oncoplot` — Oncoplot <!-- source:17:30 -->
+- `mutation-landscape` — Mutation Landscape <!-- source:17:31 -->
+- `volcano-plot` — 火山图（Volcano Plot） <!-- source:17:32 -->
+- `ma-plot` — MA图 <!-- source:17:33 -->
+- `gene-expression-heatmap` — 基因表达热力图 <!-- source:17:34 -->
+- `dendrogram` — 聚类树状图 <!-- source:17:35 -->
+- `pca-biplot` — PCA图 <!-- source:17:36 -->
+- `umap-plot` — UMAP图 <!-- source:17:37 -->
+- `tsne-plot` — t-SNE图 <!-- source:17:38 -->
+- `manhattan-plot` — 曼哈顿图（Manhattan Plot） <!-- source:17:39 -->
+- `locuszoom-plot` — 区域关联图（Regional Association Plot） <!-- source:17:40 -->
+- `circos-plot` — Circos图 <!-- source:17:41 -->
+- `genome-browser-track` — 基因组浏览器轨迹图 <!-- source:17:42 -->
+- `enrichment-bubble-plot` — 富集气泡图 <!-- source:17:43 -->
+- `enrichment-bar-chart` — 富集条形图 <!-- source:17:44 -->
+- `gsea-curve` — GSEA曲线 <!-- source:17:45 -->
+- `venn-diagram` — Venn图 <!-- source:17:46 -->
+- `upset-plot` — UpSet图 <!-- source:17:47 -->
+- `phylogenetic-tree` — 系统发育树 <!-- source:17:48 -->
+- `single-cell-trajectory` — 单细胞轨迹图 <!-- source:17:49 -->
+- `cell-communication-network` — 细胞通信网络图 <!-- source:17:50 -->
 
-## 18. 单细胞与空间组学 / Single-cell and Spatial Omics
+## 18. 集合、重叠与分类组合图
 
-- `umap-plot` — UMAP图（UMAP Plot）
-- `tsne-plot` — t-SNE图（t-SNE Plot）
-- `marker-gene-dot-plot` — 标记基因点图（Marker-gene Dot Plot）
-- `single-cell-umap` — 单细胞UMAP图（Single-cell UMAP）
-- `single-cell-trajectory` — 单细胞轨迹图（Single-cell Trajectory）
-- `spatial-transcriptomics-overlay` — 空间转录组叠加图（Spatial Transcriptomics Overlay）
-- `cell-composition-plot` — 细胞组成图（Cell Composition Plot）
-- `pseudotime-heatmap` — 拟时间热图（Pseudotime Heatmap）
+- `venn-diagram` — Venn图 <!-- source:18:1 -->
+- `euler-diagram` — Euler图 <!-- source:18:2 -->
+- `upset-plot` — UpSet图 <!-- source:18:3 -->
+- `set-matrix` — 集合矩阵图 <!-- source:18:4 -->
+- `petal-plot` — 花瓣图 <!-- source:18:5 -->
+- `venn-network` — 韦恩网络图 <!-- source:18:6 -->
+- `set-sankey-diagram` — 集合桑基图 <!-- source:18:7 -->
+- `intersection-bar-chart` — 交集条形图 <!-- source:18:8 -->
+- `combination-matrix` — 组合矩阵 <!-- source:18:9 -->
+- `overlap-heatmap` — 重叠热力图 <!-- source:18:10 -->
+- `binary-contingency-table-plot` — 二元交叉表图 <!-- source:18:11 -->
+- `mosaic-plot` — 马赛克图 <!-- source:18:12 -->
+- `association-plot` — 关联图 <!-- source:18:13 -->
+- `two-by-two-table-plot` — 四格表图 <!-- source:18:14 -->
+- `conditional-frequency-plot` — 条件频率图 <!-- source:18:15 -->
 
-## 19. 显微图像与定量 / Microscopy and Image Quantification
+## 19. 三维、曲面与科学计算图
 
-- `spatial-transcriptomics-overlay` — 空间转录组叠加图（Spatial Transcriptomics Overlay）
-- `microscopy-image-plate` — 显微图像板（Microscopy Image Plate）
-- `pathology-image-plate` — 病理图像板（Pathology Image Plate）
-- `colocalization-plot` — 共定位图（Colocalization Plot）
-- `line-scan-intensity` — 线扫描强度图（Line-scan Intensity Plot）
-- `volume-rendering` — 体渲染（Volume Rendering）
-- `isosurface` — 等值面（Isosurface）
-- `image-plus-quant-composite` — 图像与定量复合图（Image-plus-quantification Composite）
+- `three-dimensional-scatter-plot` — 三维散点图 <!-- source:19:1 -->
+- `three-dimensional-bar-chart` — 三维柱状图 <!-- source:19:2 -->
+- `three-dimensional-surface` — 三维曲面图（Surface Plot） <!-- source:19:3 -->
+- `wireframe-plot` — 网格曲面图（Wireframe Plot） <!-- source:19:4 -->
+- `three-dimensional-contour-plot` — 三维等高线图 <!-- source:19:5 -->
+- `isosurface` — 等值面图（Isosurface Plot） <!-- source:19:6 -->
+- `volume-rendering` — 体渲染图（Volume Rendering） <!-- source:19:7 -->
+- `slice-plot` — 切片图（Slice Plot） <!-- source:19:8 -->
+- `three-dimensional-vector-field` — 三维矢量场图 <!-- source:19:9 -->
+- `quiver-plot` — 箭矢图（Quiver Plot） <!-- source:19:10 -->
+- `streamline-plot` — 流线图（Streamline Plot） <!-- source:19:11 -->
+- `fluid-particle-trajectory-plot` — 流体粒子轨迹图 <!-- source:19:12 -->
+- `phase-diagram` — 相图（Phase Diagram） <!-- source:19:13 -->
+- `phase-space-plot` — 相空间图（Phase-space Plot） <!-- source:19:14 -->
+- `bifurcation-diagram` — 分岔图（Bifurcation Diagram） <!-- source:19:15 -->
+- `poincar-section-plot` — 庞加莱截面图 <!-- source:19:16 -->
+- `chaotic-attractor-plot` — 混沌吸引子图 <!-- source:19:17 -->
+- `polar-coordinate-plot` — 极坐标图 <!-- source:19:18 -->
+- `spherical-coordinate-plot` — 球坐标图 <!-- source:19:19 -->
+- `complex-plane-plot` — 复平面图 <!-- source:19:20 -->
+- `nyquist-plot` — Nyquist图 <!-- source:19:21 -->
+- `bode-plot` — Bode图 <!-- source:19:22 -->
+- `smith-chart` — Smith圆图 <!-- source:19:23 -->
+- `contour-plot` — 等值线图 <!-- source:19:24 -->
+- `heat-conduction-field-plot` — 热传导场图 <!-- source:19:25 -->
+- `stress-contour-plot` — 应力云图 <!-- source:19:26 -->
+- `displacement-contour-plot` — 位移云图 <!-- source:19:27 -->
+- `finite-element-mesh-plot` — 有限元网格图 <!-- source:19:28 -->
+- `electric-field-distribution-plot` — 电场分布图 <!-- source:19:29 -->
+- `magnetic-field-distribution-plot` — 磁场分布图 <!-- source:19:30 -->
 
-## 20. 教育测量与心理计量 / Education and Psychometrics
+## 20. 工程、质量管理与过程控制图
 
-- `item-characteristic-curve` — 题目特征曲线（Item Characteristic Curve）
-- `test-information-curve` — 测验信息曲线（Test Information Curve）
-- `wright-map` — Wright图（Wright Map）
-- `scree-plot` — 碎石图（Scree Plot）
-- `parallel-analysis-plot` — 平行分析图（Parallel Analysis Plot）
-- `sem-path-diagram` — 结构方程路径图（SEM Path Diagram）
-- `latent-profile-plot` — 潜在剖面图（Latent Profile Plot）
+- `x-bar-control-chart` — X-bar控制图 <!-- source:20:1 -->
+- `r-control-chart` — R控制图 <!-- source:20:2 -->
+- `s-control-chart` — S控制图 <!-- source:20:3 -->
+- `p-control-chart` — P控制图 <!-- source:20:4 -->
+- `np-control-chart` — NP控制图 <!-- source:20:5 -->
+- `c-control-chart` — C控制图 <!-- source:20:6 -->
+- `u-control-chart` — U控制图 <!-- source:20:7 -->
+- `ewma-control-chart` — EWMA控制图 <!-- source:20:8 -->
+- `cusum-control-chart` — CUSUM控制图 <!-- source:20:9 -->
+- `run-chart` — 运行图 <!-- source:20:10 -->
+- `pareto-chart` — 帕累托图 <!-- source:20:11 -->
+- `ishikawa-diagram` — 鱼骨图（Ishikawa Diagram） <!-- source:20:12 -->
+- `scatter-plot` — 散点图 <!-- source:20:13 -->
+- `flow-ability-plot` — 流程能力图 <!-- source:20:14 -->
+- `process-capability-histogram` — 过程能力直方图 <!-- source:20:15 -->
+- `cp-and-cpk-plot` — Cp/Cpk图 <!-- source:20:16 -->
+- `measurement-system-analysis-plot` — 测量系统分析图 <!-- source:20:17 -->
+- `gage-r-and-r-plot` — Gage R&R图 <!-- source:20:18 -->
+- `main-effects-plot` — 主效应图 <!-- source:20:19 -->
+- `interaction-effect-plot` — 交互效应图 <!-- source:20:20 -->
+- `response-surface-plot` — 响应曲面图 <!-- source:20:21 -->
+- `contour-optimization-plot` — 等高线优化图 <!-- source:20:22 -->
+- `fault-tree` — 故障树（Fault Tree） <!-- source:20:23 -->
+- `event-tree` — 事件树（Event Tree） <!-- source:20:24 -->
+- `fmea-risk-matrix` — FMEA风险矩阵 <!-- source:20:25 -->
+- `risk-heatmap` — 风险热力图 <!-- source:20:26 -->
+- `reliability-curve` — 可靠性曲线 <!-- source:20:27 -->
+- `weibull-probability-plot` — Weibull概率图 <!-- source:20:28 -->
+- `bathtub-curve` — 浴盆曲线 <!-- source:20:29 -->
+- `lifetime-distribution-plot` — 寿命分布图 <!-- source:20:30 -->
 
-## 21. 因果推断与政策评估 / Causal Inference and Policy Evaluation
+## 21. 文献计量与科学知识图谱
 
-- `love-plot` — 协变量平衡图（Love Plot）
-- `difference-in-differences-plot` — 双重差分图（Difference-in-Differences Plot）
-- `event-study-plot` — 事件研究图（Event Study Plot）
-- `sem-path-diagram` — 结构方程路径图（SEM Path Diagram）
-- `causal-dag` — 因果有向无环图（Causal DAG）
-- `regression-discontinuity-plot` — 回归不连续图（Regression Discontinuity Plot）
-- `synthetic-control-plot` — 合成控制图（Synthetic Control Plot）
-- `interrupted-time-series` — 中断时间序列图（Interrupted Time-series Plot）
+- `annual-publication-trend-plot` — 年度发文趋势图 <!-- source:21:1 -->
+- `journal-publication-count-plot` — 期刊发文量图 <!-- source:21:2 -->
+- `highly-cited-publication-ranking-plot` — 高被引文献排名图 <!-- source:21:3 -->
+- `author-collaboration-network` — 作者合作网络图 <!-- source:21:4 -->
+- `institution-collaboration-network` — 机构合作网络图 <!-- source:21:5 -->
+- `country-collaboration-network` — 国家合作网络图 <!-- source:21:6 -->
+- `keyword-co-occurrence-network` — 关键词共现网络图 <!-- source:21:7 -->
+- `keyword-clustering-plot` — 关键词聚类图 <!-- source:21:8 -->
+- `co-citation-network` — 共被引网络图 <!-- source:21:9 -->
+- `bibliographic-coupling-network` — 文献耦合图 <!-- source:21:10 -->
+- `citation-network` — 引文网络图 <!-- source:21:11 -->
+- `keyword-timeline-plot` — 关键词时间线图 <!-- source:21:12 -->
+- `keyword-time-zone-plot` — 关键词时区图 <!-- source:21:13 -->
+- `keyword-burst-plot` — 关键词突现图 <!-- source:21:14 -->
+- `theme-evolution-plot` — 主题演化图 <!-- source:21:15 -->
+- `theme-river` — 主题河流图 <!-- source:21:16 -->
+- `dual-map-overlay` — 双图叠加图（Dual-map Overlay） <!-- source:21:17 -->
+- `strategic-diagram` — 战略坐标图（Thematic Map） <!-- source:21:18 -->
+- `theme-density-and-centrality-plot` — 主题密度—中心度图 <!-- source:21:19 -->
+- `three-fields-plot` — 三字段图（Three-fields Plot） <!-- source:21:20 -->
+- `collaboration-chord-diagram` — 合作弦图 <!-- source:21:21 -->
+- `discipline-flow-sankey-diagram` — 学科流动桑基图 <!-- source:21:22 -->
+- `knowledge-base-cluster-plot` — 知识基础聚类图 <!-- source:21:23 -->
+- `time-slice-network` — 时间切片网络图 <!-- source:21:24 -->
+- `citation-tree-ring-plot` — 引文年轮图 <!-- source:21:25 -->
+- `cluster-timeline-view` — 聚类时间线视图 <!-- source:21:26 -->
+- `document-co-citation-cluster-plot` — 文献共被引聚类图 <!-- source:21:27 -->
+- `research-front-evolution-plot` — 研究前沿演化图 <!-- source:21:28 -->
+- `theme-bubble-plot` — 主题气泡图 <!-- source:21:29 -->
+- `bradford-zones-plot` — Bradford分区图 <!-- source:21:30 -->
+- `lotka-distribution-plot` — Lotka分布图 <!-- source:21:31 -->
+- `citation-lifecycle-plot` — 引用生命周期图 <!-- source:21:32 -->
 
-## 22. 文献计量与科学知识图谱 / Bibliometrics and Science Mapping
+## 22. 因果机制与理论模型图
 
-- `prisma-flow-diagram` — PRISMA流程图（PRISMA Flow Diagram）
-- `co-occurrence-network` — 共现网络（Co-occurrence Network）
-- `co-citation-network` — 共被引网络（Co-citation Network）
-- `keyword-burst-plot` — 关键词突现图（Keyword Burst Plot）
-- `thematic-map` — 主题图（Thematic Map）
-- `bibliographic-coupling-network` — 文献耦合网络（Bibliographic Coupling Network）
-- `co-word-network` — 共词网络（Co-word Network）
-- `strategic-diagram` — 战略坐标图（Strategic Diagram）
+- `concept-framework-diagram` — 概念框架图 <!-- source:22:1 -->
+- `theoretical-model-plot` — 理论模型图 <!-- source:22:2 -->
+- `logic-model-plot` — 逻辑模型图（Logic Model） <!-- source:22:3 -->
+- `path-diagram` — 路径图（Path Diagram） <!-- source:22:4 -->
+- `sem-diagram` — 结构方程模型图（SEM Diagram） <!-- source:22:5 -->
+- `mediation-model-plot` — 中介模型图 <!-- source:22:6 -->
+- `moderation-model-plot` — 调节模型图 <!-- source:22:7 -->
+- `moderation-mediation-model-plot` — 调节中介模型图 <!-- source:22:8 -->
+- `causal-dag` — 因果图（DAG） <!-- source:22:9 -->
+- `causal-loop-diagram` — 因果回路图（Causal Loop Diagram） <!-- source:22:10 -->
+- `system-dynamics-stock-and-flow-diagram` — 系统动力学库存—流量图 <!-- source:22:11 -->
+- `mechanism-chain-diagram` — 机制链条图 <!-- source:22:12 -->
+- `input-process-output-diagram` — 投入—过程—产出图 <!-- source:22:13 -->
+- `input-process-output-model-diagram` — IPO模型图 <!-- source:22:14 -->
+- `context-mechanism-outcome-plot` — Context–Mechanism–Outcome图 <!-- source:22:15 -->
+- `theory-of-change-diagram` — Theory of Change图 <!-- source:22:16 -->
+- `research-hypothesis-relationship-plot` — 研究假设关系图 <!-- source:22:17 -->
+- `multilevel-theoretical-model-plot` — 多层理论模型图 <!-- source:22:18 -->
+- `cross-level-effect-model-diagram` — 跨层作用模型图 <!-- source:22:19 -->
+- `conceptual-mechanism-matrix` — 概念机制矩阵 <!-- source:22:20 -->
+- `logic-tree` — 逻辑树 <!-- source:22:21 -->
+- `problem-tree` — 问题树 <!-- source:22:22 -->
+- `objective-tree` — 目标树 <!-- source:22:23 -->
+- `evidence-chain-diagram` — 证据链图 <!-- source:22:24 -->
+- `causal-forest-plot` — 因果森林图 <!-- source:22:25 -->
 
-## 23. 项目、质量与运营 / Project, Quality, and Operations
+## 23. 研究流程与论文规范图
 
-- `pareto-chart` — 帕累托图（Pareto Chart）
-- `contribution-waterfall-chart` — 贡献瀑布图（Contribution Waterfall Chart）
-- `run-chart` — 运行图（Run Chart）
-- `control-chart` — 控制图（Control Chart）
-- `gantt-chart` — 甘特图（Gantt Chart）
-- `calendar-heatmap` — 日历热图（Calendar Heatmap）
-- `conversion-funnel-chart` — 转化漏斗图（Conversion Funnel Chart）
-- `process-flow-diagram` — 流程图（Process Flow Diagram）
-- `before-after-bar-chart` — 前后比较柱状图（Before–After Bar Chart）
-- `cohort-retention-heatmap` — 队列留存热图（Cohort Retention Heatmap）
-- `bullet-chart` — 子弹图（Bullet Chart）
-- `kpi-card` — KPI卡片（KPI Card）
-- `quality-control-overview` — 质量控制总览（Quality-control Overview）
+- `research-technical-roadmap` — 研究技术路线图 <!-- source:23:1 -->
+- `research-design-flow-diagram` — 研究设计流程图 <!-- source:23:2 -->
+- `research-framework-diagram` — 研究框架图 <!-- source:23:3 -->
+- `data-processing-flow-diagram` — 数据处理流程图 <!-- source:23:4 -->
+- `sample-screening-flow-diagram` — 样本筛选流程图 <!-- source:23:5 -->
+- `prisma-flow-diagram` — PRISMA流程图 <!-- source:23:6 -->
+- `consort-flow-diagram` — CONSORT流程图 <!-- source:23:7 -->
+- `strobe-study-flow-diagram` — STROBE研究流程图 <!-- source:23:8 -->
+- `experiment-apparatus-schematic` — 实验装置示意图 <!-- source:23:9 -->
+- `experiment-step-plot` — 实验步骤图 <!-- source:23:10 -->
+- `algorithm-flow-diagram` — 算法流程图 <!-- source:23:11 -->
+- `model-architecture-plot` — 模型架构图 <!-- source:23:12 -->
+- `neural-network-architecture-diagram` — 神经网络结构图 <!-- source:23:13 -->
+- `database-structure-diagram` — 数据库结构图 <!-- source:23:14 -->
+- `system-architecture-plot` — 系统架构图 <!-- source:23:15 -->
+- `variable-relationship-plot` — 变量关系图 <!-- source:23:16 -->
+- `coding-framework-diagram` — 编码框架图 <!-- source:23:17 -->
+- `literature-screening-plot` — 文献筛选图 <!-- source:23:18 -->
+- `data-cleaning-flow-diagram` — 数据清洗流程图 <!-- source:23:19 -->
+- `research-stage-gantt-chart` — 研究阶段甘特图 <!-- source:23:20 -->
+- `theoretical-analysis-framework` — 理论分析框架图 <!-- source:23:21 -->
+- `research-question-mapping-diagram` — 研究问题映射图 <!-- source:23:22 -->
+- `method-integration-plot` — 方法整合图 <!-- source:23:23 -->
+- `mixed-research-design-plot` — 混合研究设计图 <!-- source:23:24 -->
+- `evidence-synthesis-flow-diagram` — 证据综合流程图 <!-- source:23:25 -->
 
-## 24. 复合图与高级可视化 / Composite and Advanced Visualization
+## 24. 复合图与高级科研图形
 
-- `parallel-coordinates` — 平行坐标图（Parallel Coordinates）
-- `three-dimensional-heatmap` — 三维热图（Three-dimensional Heatmap）
-- `frequency-3d-heatmap` — 三维频率热图（Three-dimensional Frequency Heatmap）
-- `genome-browser-track` — 基因组浏览器轨道（Genome Browser Track）
-- `microscopy-image-plate` — 显微图像板（Microscopy Image Plate）
-- `pathology-image-plate` — 病理图像板（Pathology Image Plate）
-- `volume-rendering` — 体渲染（Volume Rendering）
-- `isosurface` — 等值面（Isosurface）
-- `quality-control-overview` — 质量控制总览（Quality-control Overview）
-- `three-dimensional-surface` — 三维表面图（Three-dimensional Surface）
-- `three-dimensional-vector-field` — 三维矢量场（Three-dimensional Vector Field）
-- `grand-tour` — Grand Tour动态图（Grand Tour）
-- `hyperbolic-tree` — 双曲树（Hyperbolic Tree）
-- `circos-plot` — Circos图（Circos Plot）
-- `complex-process-mining` — 复杂流程挖掘图（Complex Process-mining Plot）
-- `image-plus-quant-composite` — 图像与定量复合图（Image-plus-quantification Composite）
-- `asymmetric-multipanel` — 非对称多面板图（Asymmetric Multipanel Figure）
-- `small-multiples` — 小多图（Small Multiples）
+- `bar-and-line-composite-chart` — 柱线组合图 <!-- source:24:1 -->
+- `box-and-scatter-overlay-plot` — 箱线—散点叠加图 <!-- source:24:2 -->
+- `violin-box-and-scatter-composite-plot` — 小提琴—箱线—散点组合图 <!-- source:24:3 -->
+- `raincloud-plot` — 雨云图 <!-- source:24:4 -->
+- `scatter-and-marginal-density-composite-plot` — 散点—边际密度组合图 <!-- source:24:5 -->
+- `heatmap-and-dendrogram-composite-plot` — 热力图—聚类树组合图 <!-- source:24:6 -->
+- `forest-and-funnel-composite-figure` — 森林图—漏斗图组合 <!-- source:24:7 -->
+- `map-and-time-series-composite-figure` — 地图—时间序列组合 <!-- source:24:8 -->
+- `map-and-sankey-composite-figure` — 地图—桑基图组合 <!-- source:24:9 -->
+- `network-and-timeline-composite-figure` — 网络图—时间线组合 <!-- source:24:10 -->
+- `multi-panel-figure` — 多面板图（Multi-panel Figure） <!-- source:24:11 -->
+- `facet-plot` — 分面图（Facet Plot） <!-- source:24:12 -->
+- `small-multiples` — 小倍数图（Small Multiples） <!-- source:24:13 -->
+- `inset-plot` — 嵌套图（Inset Plot） <!-- source:24:14 -->
+- `dual-axis-chart` — 双轴图（Dual-axis Chart） <!-- source:24:15 -->
+- `main-figure-with-magnified-inset` — 主图—局部放大图 <!-- source:24:16 -->
+- `chart-and-table-composite-figure` — 图表—表格组合 <!-- source:24:17 -->
+- `matrix-composite-figure` — 矩阵式综合图 <!-- source:24:18 -->
+- `research-dashboard-figure` — 仪表板式科研图 <!-- source:24:19 -->
+- `multimodal-visualization` — 多模态可视化图 <!-- source:24:20 -->
