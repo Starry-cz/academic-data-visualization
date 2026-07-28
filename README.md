@@ -73,6 +73,23 @@
 - 以插画、流程示意或机制图为主体且没有数据图的任务；
 - 只做统计检验、数据清洗或文献综述而不需要出图。
 
+## 24 类图型注册表
+
+<!-- chart-registry:summary:start -->
+注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。
+
+<table width="100%" align="center">
+  <tr><td width="35%"><strong>分类体系</strong></td><td>24 类</td></tr>
+  <tr><td width="35%"><strong>规范化图型</strong></td><td>177 个</td></tr>
+  <tr><td width="35%"><strong>源分类归属</strong></td><td>257 条可验证归属；方案声明的 714 条原始清单未随文件提供</td></tr>
+  <tr><td width="35%"><strong>生产模板</strong></td><td>34 类</td></tr>
+  <tr><td width="35%"><strong>可复用模式</strong></td><td>83 类</td></tr>
+  <tr><td width="35%"><strong>按需实现</strong></td><td>60 类</td></tr>
+</table>
+<!-- chart-registry:summary:end -->
+
+完整分类入口见 [`references/figure-type-catalog.md`](references/figure-type-catalog.md)，名称与缩写路由见 [`references/chart-alias-index.md`](references/chart-alias-index.md)。新增图型时，必须先更新注册表并通过生成器同步文档；不得把“已登记”写成“已有生产脚本”。
+
 ## 一分钟开始
 
 ### 1. 安装完整 Skill
@@ -307,15 +324,22 @@ git -C "$env:USERPROFILE\.codex\skills\academic-data-visualization" pull
 ```text
 academic-data-visualization/
 ├── SKILL.md                 # 精简的决策入口与按需路由
+├── AGENTS.md                # 仓库架构、生成文件与必跑检查
 ├── agents/openai.yaml       # Codex 展示名称与默认提示元数据
-├── references/              # 选图、期刊、配色、布局、复用、导出与 QA
-├── scripts/                 # 组合、验证、缩略图、配色和灰度校样工具
-├── assets/                  # 生产脚本、重点缩略图、配色预览与内部测试资产
+├── references/              # 注册表、24 类目录、选图、期刊、配色、导出与 QA
+├── scripts/                 # 注册表生成/校验、组合、缩略图、配色和灰度校样
+├── tests/                   # taxonomy、路由和生成结果回归测试
+├── assets/                  # 生产脚本、asset manifest、图鉴和配色预览
 └── install/                 # Codex / Cursor / Copilot / Claude 适配文件
 ```
 
 ## 贡献与许可
 
-欢迎提交期刊规范、可访问性改进、真实研究场景和新图型。新增生产模板应同时提供可复现脚本、数据假设、渲染预览和 QA 结果。
+欢迎提交期刊规范、可访问性改进、真实研究场景和新图型。最小流程：
+
+1. 在 `chart-registry.yaml` 中登记 canonical record、别名、分类和真实实现状态；
+2. 运行 `generate_chart_catalog.py`，不要手改生成的分类文档；
+3. 若标为 `production_template`，同时提交脚本、PNG、`asset.yaml`，并在可用时提供 SVG/PDF；
+4. 运行 AGENTS.md 中的全部检查。未实现图型不得使用虚假预览或资产路径。
 
 本项目采用 [Apache-2.0](LICENSE) 许可证。

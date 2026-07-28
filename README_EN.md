@@ -73,6 +73,23 @@
 - Illustration-first mechanism diagrams with no quantitative panels;
 - Statistical analysis, data cleaning, or literature review with no figure-making goal.
 
+## 24-category chart registry
+
+<!-- chart-registry:summary:start -->
+The registry separates catalogue coverage from implementation status. Only production templates have reusable scripts, previews, and manifests.
+
+<table width="100%" align="center">
+  <tr><td width="35%"><strong>Taxonomy categories</strong></td><td>24</td></tr>
+  <tr><td width="35%"><strong>Canonical chart records</strong></td><td>177</td></tr>
+  <tr><td width="35%"><strong>Source memberships</strong></td><td>257 verifiable memberships; the declared 714-entry source list was not included in the supplied plan</td></tr>
+  <tr><td width="35%"><strong>Production templates</strong></td><td>34</td></tr>
+  <tr><td width="35%"><strong>Reusable patterns</strong></td><td>83</td></tr>
+  <tr><td width="35%"><strong>On-demand routes</strong></td><td>60</td></tr>
+</table>
+<!-- chart-registry:summary:end -->
+
+Use [`references/figure-type-catalog.md`](references/figure-type-catalog.md) for the complete category index and [`references/chart-alias-index.md`](references/chart-alias-index.md) for name and abbreviation routing. New chart records must be registered and regenerated; catalogue coverage must never be described as a ready-made production script.
+
 ## One-minute start
 
 ### 1. Install the complete skill
@@ -308,15 +325,22 @@ git -C "$env:USERPROFILE\.codex\skills\academic-data-visualization" pull
 ```text
 academic-data-visualization/
 ├── SKILL.md                 # concise decision entry and conditional routing
+├── AGENTS.md                # repository architecture, generated files, and required checks
 ├── agents/openai.yaml       # Codex display and default-prompt metadata
-├── references/              # selection, journal, colour, layout, reuse, export, and QA
-├── scripts/                 # composition, validation, thumbnail, palette, and grayscale tools
-├── assets/                  # production scripts, curated thumbnails, palette previews, and internal test assets
+├── references/              # registry, 24 category files, selection, journal, colour, export, and QA
+├── scripts/                 # registry generation/validation, composition, previews, palettes, and grayscale tools
+├── tests/                   # taxonomy, routing, and generated-output regression tests
+├── assets/                  # production scripts, asset manifests, atlas, and palette previews
 └── install/                 # Codex / Cursor / Copilot / Claude adapters
 ```
 
 ## Contributing and license
 
-Contributions are welcome for journal specifications, accessibility improvements, real research scenarios, and new figure types. A new production template should include a reproducible script, data assumptions, a rendered preview, and QA results.
+Contributions are welcome for journal specifications, accessibility improvements, real research scenarios, and new figure types. The minimum workflow is:
+
+1. register the canonical record, aliases, categories, and truthful implementation status in `chart-registry.yaml`;
+2. run `generate_chart_catalog.py` instead of hand-editing generated category files;
+3. for `production_template`, include a script, PNG, `asset.yaml`, and SVG/PDF when supported;
+4. run every check in AGENTS.md. Unimplemented charts must not have fabricated previews or asset paths.
 
 Licensed under [Apache-2.0](LICENSE).

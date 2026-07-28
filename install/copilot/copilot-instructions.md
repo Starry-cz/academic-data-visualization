@@ -1,9 +1,9 @@
 # Academic Data Visualization — Scientific Figure Instructions for GitHub Copilot
 # Place this file at: <your-repo>/.github/copilot-instructions.md
-# Generated: 2026-07-18 16:15 UTC
+# Generated: 2026-07-28 12:34 UTC
 
 # Academic Data Visualization Portable Core Rules
-# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-18 16:15 UTC
+# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-28 12:34 UTC
 # These rules work across Claude Code, Codex, Cursor, and Copilot.
 
 ## Advisor Workflow
