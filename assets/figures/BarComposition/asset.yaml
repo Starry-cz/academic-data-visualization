@@ -1,0 +1,44 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "composition-bar-chart"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_brute_force.py",
+    "plot_rewriting.py"
+  ],
+  "previews": [
+    "plot_brute_force.png",
+    "plot_rewriting.png"
+  ],
+  "outputs": {
+    "vector": [],
+    "raster": [
+      "plot_brute_force.png",
+      "plot_rewriting.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 4.3333,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

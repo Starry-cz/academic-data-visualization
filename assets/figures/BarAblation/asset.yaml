@@ -1,0 +1,53 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "ablation-bar-chart"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_bar_ablation.py",
+    "plot_bars_ablation.py",
+    "plot_comparison_ablation.py"
+  ],
+  "previews": [
+    "bars_ablation_Cancer.png",
+    "bars_ablation_IEDB.png",
+    "bars_comparison_Cancer.png",
+    "bars_comparison_IEDB.png",
+    "plot_bar_ablation.png",
+    "plot_comparison_ablation.png"
+  ],
+  "outputs": {
+    "vector": [],
+    "raster": [
+      "bars_ablation_Cancer.png",
+      "bars_ablation_IEDB.png",
+      "bars_comparison_Cancer.png",
+      "bars_comparison_IEDB.png",
+      "plot_bar_ablation.png",
+      "plot_comparison_ablation.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 4.6667,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

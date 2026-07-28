@@ -1,0 +1,54 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "grouped-correlation-matrix"
+  ],
+  "backend": [
+    "r"
+  ],
+  "entrypoints": [
+    "plot_GroupCorrelationHeatmap.R"
+  ],
+  "previews": [
+    "plot_GroupCorrelationHeatmap_1.png",
+    "plot_GroupCorrelationHeatmap_2.png",
+    "plot_GroupCorrelationHeatmap_3.png",
+    "plot_GroupCorrelationHeatmap_4.png",
+    "plot_GroupCorrelationHeatmap_5.png"
+  ],
+  "outputs": {
+    "vector": [
+      "Figure.pdf",
+      "Figure_Group1.pdf",
+      "Figure_Group2.pdf",
+      "Figure_Group3.pdf"
+    ],
+    "raster": [
+      "plot_GroupCorrelationHeatmap_1.png",
+      "plot_GroupCorrelationHeatmap_2.png",
+      "plot_GroupCorrelationHeatmap_3.png",
+      "plot_GroupCorrelationHeatmap_4.png",
+      "plot_GroupCorrelationHeatmap_5.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 1.033,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

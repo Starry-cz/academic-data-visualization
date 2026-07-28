@@ -1,0 +1,50 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "stacked-bar-scatter"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_StackedBarScatter.py"
+  ],
+  "previews": [
+    "plot_StackedBarScatter_1.png",
+    "plot_StackedBarScatter_2.png"
+  ],
+  "outputs": {
+    "vector": [
+      "figureA.pdf",
+      "figureA.svg",
+      "figureB1.pdf",
+      "figureB1.svg",
+      "figureC1.pdf",
+      "figureC1.svg"
+    ],
+    "raster": [
+      "plot_StackedBarScatter_1.png",
+      "plot_StackedBarScatter_2.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 2.2255,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

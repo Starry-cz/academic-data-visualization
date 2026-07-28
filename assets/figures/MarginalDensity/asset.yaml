@@ -1,0 +1,51 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "marginal-density-scatter"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_VariableCorrelation.py"
+  ],
+  "previews": [
+    "plot_VariableCorrelation_1.png",
+    "plot_VariableCorrelation_2.png",
+    "plot_VariableCorrelation_3.png",
+    "plot_VariableCorrelation_4.png",
+    "plot_VariableCorrelation_5.png",
+    "plot_VariableCorrelation_6.png"
+  ],
+  "outputs": {
+    "vector": [],
+    "raster": [
+      "plot_VariableCorrelation_1.png",
+      "plot_VariableCorrelation_2.png",
+      "plot_VariableCorrelation_3.png",
+      "plot_VariableCorrelation_4.png",
+      "plot_VariableCorrelation_5.png",
+      "plot_VariableCorrelation_6.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 1.003,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

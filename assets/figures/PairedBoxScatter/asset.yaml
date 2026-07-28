@@ -1,0 +1,53 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "paired-box-scatter"
+  ],
+  "backend": [
+    "r"
+  ],
+  "entrypoints": [
+    "plot_PairedBoxScatter1.R",
+    "plot_PairedBoxScatter2.R",
+    "plot_PairedBoxScatter3.R"
+  ],
+  "previews": [
+    "plot_PairedBoxScatter1.png",
+    "plot_PairedBoxScatter1_detail.png",
+    "plot_PairedBoxScatter2.png",
+    "plot_PairedBoxScatter2_detail.png",
+    "plot_PairedBoxScatter3.png",
+    "plot_PairedBoxScatter3_detail.png"
+  ],
+  "outputs": {
+    "vector": [],
+    "raster": [
+      "plot_PairedBoxScatter1.png",
+      "plot_PairedBoxScatter1_detail.png",
+      "plot_PairedBoxScatter2.png",
+      "plot_PairedBoxScatter2_detail.png",
+      "plot_PairedBoxScatter3.png",
+      "plot_PairedBoxScatter3_detail.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 1.1429,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

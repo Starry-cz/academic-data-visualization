@@ -1,0 +1,1856 @@
+{
+  "registry_version": "2.0.0",
+  "note": "Preview is non-null only for verified production templates.",
+  "charts": [
+    {
+      "id": "dot-plot",
+      "name_zh": "点图",
+      "name_en": "Dot Plot",
+      "categories": [
+        "comparison-ranking",
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "lollipop-chart",
+      "name_zh": "棒棒糖图",
+      "name_en": "Lollipop Chart",
+      "categories": [
+        "comparison-ranking"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "horizontal-bar-chart",
+      "name_zh": "水平条形图",
+      "name_en": "Horizontal Bar Chart",
+      "categories": [
+        "comparison-ranking"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "grouped-bar-chart",
+      "name_zh": "分组柱状图",
+      "name_en": "Grouped Bar Chart",
+      "categories": [
+        "comparison-ranking"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/GroupedBarChart/plot_GroupedBarChartv1_1.png"
+    },
+    {
+      "id": "categorical-bar-chart",
+      "name_zh": "分类柱状图",
+      "name_en": "Categorical Bar Chart",
+      "categories": [
+        "comparison-ranking"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/BarCategorical/plot_correctness_by_category.png"
+    },
+    {
+      "id": "method-comparison-bar-chart",
+      "name_zh": "方法比较柱状图",
+      "name_en": "Method Comparison Bar Chart",
+      "categories": [
+        "comparison-ranking"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/BarComparison/plot_comparison_GeneRegulatory.png"
+    },
+    {
+      "id": "ablation-bar-chart",
+      "name_zh": "消融柱状图",
+      "name_en": "Ablation Bar Chart",
+      "categories": [
+        "comparison-ranking",
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/BarAblation/bars_ablation_Cancer.png"
+    },
+    {
+      "id": "dumbbell-chart",
+      "name_zh": "哑铃图",
+      "name_en": "Dumbbell Chart",
+      "categories": [
+        "comparison-ranking"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "slope-chart",
+      "name_zh": "坡度图",
+      "name_en": "Slope Chart",
+      "categories": [
+        "comparison-ranking",
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "pareto-chart",
+      "name_zh": "帕累托图",
+      "name_en": "Pareto Chart",
+      "categories": [
+        "comparison-ranking",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "contribution-waterfall-chart",
+      "name_zh": "贡献瀑布图",
+      "name_en": "Contribution Waterfall Chart",
+      "categories": [
+        "comparison-ranking",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "line-chart",
+      "name_zh": "折线图",
+      "name_en": "Line Chart",
+      "categories": [
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/LineTrend/comparison_posttraining.png"
+    },
+    {
+      "id": "step-chart",
+      "name_zh": "阶梯图",
+      "name_en": "Step Chart",
+      "categories": [
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "confidence-band-plot",
+      "name_zh": "置信带图",
+      "name_en": "Confidence Band Plot",
+      "categories": [
+        "time-trend-dynamics",
+        "uncertainty-effect-size"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "moving-average-plot",
+      "name_zh": "移动平均图",
+      "name_en": "Moving Average Plot",
+      "categories": [
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "area-chart",
+      "name_zh": "面积图",
+      "name_en": "Area Chart",
+      "categories": [
+        "time-trend-dynamics",
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "stacked-area-chart",
+      "name_zh": "堆叠面积图",
+      "name_en": "Stacked Area Chart",
+      "categories": [
+        "time-trend-dynamics",
+        "composition-proportion"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/StackedArea/stacked_area.png"
+    },
+    {
+      "id": "streamgraph",
+      "name_zh": "流图",
+      "name_en": "Streamgraph",
+      "categories": [
+        "time-trend-dynamics",
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "horizon-chart",
+      "name_zh": "地平线图",
+      "name_en": "Horizon Chart",
+      "categories": [
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "run-chart",
+      "name_zh": "运行图",
+      "name_en": "Run Chart",
+      "categories": [
+        "time-trend-dynamics",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "control-chart",
+      "name_zh": "控制图",
+      "name_en": "Control Chart",
+      "categories": [
+        "time-trend-dynamics",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "gantt-chart",
+      "name_zh": "甘特图",
+      "name_en": "Gantt Chart",
+      "categories": [
+        "time-trend-dynamics",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "timeline",
+      "name_zh": "时间线",
+      "name_en": "Timeline",
+      "categories": [
+        "time-trend-dynamics",
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "spaghetti-plot",
+      "name_zh": "个体纵向轨迹图",
+      "name_en": "Spaghetti Plot",
+      "categories": [
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "histogram",
+      "name_zh": "直方图",
+      "name_en": "Histogram",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "kernel-density-plot",
+      "name_zh": "核密度图",
+      "name_en": "Kernel Density Plot",
+      "categories": [
+        "distribution-diagnostics",
+        "relationship-regression"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/KernelDensity/plot_CorrelationDensity1.png"
+    },
+    {
+      "id": "ecdf-plot",
+      "name_zh": "经验累积分布图",
+      "name_en": "ECDF Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "qq-plot",
+      "name_zh": "Q-Q图",
+      "name_en": "Q-Q Plot",
+      "categories": [
+        "distribution-diagnostics",
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "box-plot",
+      "name_zh": "箱线图",
+      "name_en": "Box Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "violin-plot",
+      "name_zh": "小提琴图",
+      "name_en": "Violin Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/Violin/plot_Violin.png"
+    },
+    {
+      "id": "grouped-violin-plot",
+      "name_zh": "分组小提琴图",
+      "name_en": "Grouped Violin Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/GroupedViolin/plot_GroupedViolin.png"
+    },
+    {
+      "id": "raincloud-plot",
+      "name_zh": "雨云图",
+      "name_en": "Raincloud Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "beeswarm-plot",
+      "name_zh": "蜂群图",
+      "name_en": "Beeswarm Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "ridgeline-plot",
+      "name_zh": "山脊图",
+      "name_en": "Ridgeline Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/RidgePlot/plot_RidgePlot1_1.png"
+    },
+    {
+      "id": "paired-box-scatter",
+      "name_zh": "配对箱线散点图",
+      "name_en": "Paired Box Scatter",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/PairedBoxScatter/plot_PairedBoxScatter1.png"
+    },
+    {
+      "id": "rug-plot",
+      "name_zh": "地毯图",
+      "name_en": "Rug Plot",
+      "categories": [
+        "distribution-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "scatter-plot",
+      "name_zh": "散点图",
+      "name_en": "Scatter Plot",
+      "categories": [
+        "relationship-regression"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "scatter-regression-plot",
+      "name_zh": "回归散点图",
+      "name_en": "Scatter Regression Plot",
+      "categories": [
+        "relationship-regression"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "bubble-scatter",
+      "name_zh": "气泡散点图",
+      "name_en": "Bubble Scatter",
+      "categories": [
+        "relationship-regression"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/BubbleScatter/bubble_scatter.png"
+    },
+    {
+      "id": "marginal-density-scatter",
+      "name_zh": "边际密度散点图",
+      "name_en": "Marginal Density Scatter",
+      "categories": [
+        "relationship-regression"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/MarginalDensity/plot_VariableCorrelation_1.png"
+    },
+    {
+      "id": "hexbin-plot",
+      "name_zh": "六边形分箱图",
+      "name_en": "Hexbin Plot",
+      "categories": [
+        "relationship-regression"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "two-dimensional-histogram",
+      "name_zh": "二维直方图",
+      "name_en": "Two-dimensional Histogram",
+      "categories": [
+        "relationship-regression",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "connected-scatter",
+      "name_zh": "连接散点图",
+      "name_en": "Connected Scatter Plot",
+      "categories": [
+        "relationship-regression"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "bland-altman-plot",
+      "name_zh": "Bland–Altman图",
+      "name_en": "Bland–Altman Plot",
+      "categories": [
+        "relationship-regression",
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "correlation-matrix",
+      "name_zh": "相关矩阵",
+      "name_en": "Correlation Matrix",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/CorrelationMatrix/plot_CorrelationHeatmap_v1.png"
+    },
+    {
+      "id": "grouped-correlation-matrix",
+      "name_zh": "分组相关矩阵",
+      "name_en": "Grouped Correlation Matrix",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/GroupedCorrelationMatrix/plot_GroupCorrelationHeatmap_1.png"
+    },
+    {
+      "id": "correlation-bubble-matrix",
+      "name_zh": "相关性气泡矩阵",
+      "name_en": "Correlation Bubble Matrix",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"
+    },
+    {
+      "id": "scatterplot-matrix",
+      "name_zh": "散点矩阵",
+      "name_en": "Scatterplot Matrix",
+      "categories": [
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "pca-biplot",
+      "name_zh": "PCA双标图",
+      "name_en": "PCA Biplot",
+      "categories": [
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/PCA/plot_PCA_1.png"
+    },
+    {
+      "id": "rda-triplot",
+      "name_zh": "RDA三标图",
+      "name_en": "RDA Triplot",
+      "categories": [
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "umap-plot",
+      "name_zh": "UMAP图",
+      "name_en": "UMAP Plot",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "single-cell-spatial-omics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "tsne-plot",
+      "name_zh": "t-SNE图",
+      "name_en": "t-SNE Plot",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "single-cell-spatial-omics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "manifold-embedding-plot",
+      "name_zh": "流形嵌入图",
+      "name_en": "Manifold Embedding Plot",
+      "categories": [
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/Manifold/diffusion_swiss_roll.png"
+    },
+    {
+      "id": "parallel-coordinates",
+      "name_zh": "平行坐标图",
+      "name_en": "Parallel Coordinates",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "composite-advanced"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "ternary-plot",
+      "name_zh": "三元图",
+      "name_en": "Ternary Plot",
+      "categories": [
+        "multivariate-dimension-reduction",
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "heatmap",
+      "name_zh": "热图",
+      "name_en": "Heatmap",
+      "categories": [
+        "matrix-heatmap"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/heatmap/composition_heatmap.png"
+    },
+    {
+      "id": "clustered-heatmap",
+      "name_zh": "聚类热图",
+      "name_en": "Clustered Heatmap",
+      "categories": [
+        "matrix-heatmap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "annotated-heatmap",
+      "name_zh": "注释热图",
+      "name_en": "Annotated Heatmap",
+      "categories": [
+        "matrix-heatmap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "density-heatmap",
+      "name_zh": "密度热图",
+      "name_en": "Density Heatmap",
+      "categories": [
+        "matrix-heatmap"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/DensityHeatmap/plot_DensityHeatmap_2.png"
+    },
+    {
+      "id": "three-dimensional-heatmap",
+      "name_zh": "三维热图",
+      "name_en": "Three-dimensional Heatmap",
+      "categories": [
+        "matrix-heatmap",
+        "composite-advanced"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/3DHeatmap/plot_3Dheatmap_1.png"
+    },
+    {
+      "id": "frequency-3d-heatmap",
+      "name_zh": "三维频率热图",
+      "name_en": "Three-dimensional Frequency Heatmap",
+      "categories": [
+        "matrix-heatmap",
+        "composite-advanced"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/Frequency_3DHeatmap/plot_Frequency_3DHeatmap_1.png"
+    },
+    {
+      "id": "sparse-matrix-plot",
+      "name_zh": "稀疏矩阵图",
+      "name_en": "Sparse Matrix Plot",
+      "categories": [
+        "matrix-heatmap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "calendar-heatmap",
+      "name_zh": "日历热图",
+      "name_en": "Calendar Heatmap",
+      "categories": [
+        "matrix-heatmap",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "mosaic-plot",
+      "name_zh": "马赛克图",
+      "name_en": "Mosaic Plot",
+      "categories": [
+        "matrix-heatmap",
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "forest-plot",
+      "name_zh": "森林图",
+      "name_en": "Forest Plot",
+      "categories": [
+        "uncertainty-effect-size",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "coefficient-plot",
+      "name_zh": "系数图",
+      "name_en": "Coefficient Plot",
+      "categories": [
+        "uncertainty-effect-size",
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "interval-plot",
+      "name_zh": "区间图",
+      "name_en": "Interval Plot",
+      "categories": [
+        "uncertainty-effect-size"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "error-bar-plot",
+      "name_zh": "误差线图",
+      "name_en": "Error Bar Plot",
+      "categories": [
+        "uncertainty-effect-size"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "meta-analysis-funnel-plot",
+      "name_zh": "元分析漏斗图",
+      "name_en": "Meta-analysis Funnel Plot",
+      "categories": [
+        "uncertainty-effect-size",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "roc-curve",
+      "name_zh": "ROC曲线",
+      "name_en": "ROC Curve",
+      "categories": [
+        "model-evaluation-diagnostics",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/AUROC/plot_AUROC1_1.png"
+    },
+    {
+      "id": "precision-recall-curve",
+      "name_zh": "精确率-召回率曲线",
+      "name_en": "Precision–Recall Curve",
+      "categories": [
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "calibration-curve",
+      "name_zh": "校准曲线",
+      "name_en": "Calibration Curve",
+      "categories": [
+        "model-evaluation-diagnostics",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "confusion-matrix",
+      "name_zh": "混淆矩阵",
+      "name_en": "Confusion Matrix",
+      "categories": [
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/ConfusionMatrix/plot_SectorConfusionMatrix.png"
+    },
+    {
+      "id": "decision-curve",
+      "name_zh": "决策曲线",
+      "name_en": "Decision Curve",
+      "categories": [
+        "model-evaluation-diagnostics",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "residual-diagnostic-plot",
+      "name_zh": "残差诊断图",
+      "name_en": "Residual Diagnostic Plot",
+      "categories": [
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "learning-curve",
+      "name_zh": "学习曲线",
+      "name_en": "Learning Curve",
+      "categories": [
+        "model-evaluation-diagnostics",
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "feature-importance-plot",
+      "name_zh": "特征重要性图",
+      "name_en": "Feature Importance Plot",
+      "categories": [
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "shap-beeswarm",
+      "name_zh": "SHAP蜂群图",
+      "name_en": "SHAP Beeswarm",
+      "categories": [
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "partial-dependence-plot",
+      "name_zh": "部分依赖图",
+      "name_en": "Partial Dependence Plot",
+      "categories": [
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "ice-plot",
+      "name_zh": "个体条件期望图",
+      "name_en": "Individual Conditional Expectation Plot",
+      "categories": [
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "permutation-importance-plot",
+      "name_zh": "置换重要性图",
+      "name_en": "Permutation Importance Plot",
+      "categories": [
+        "machine-learning-explainability"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "stacked-bar-chart",
+      "name_zh": "堆叠柱状图",
+      "name_en": "Stacked Bar Chart",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "percent-stacked-bar-chart",
+      "name_zh": "百分比堆叠柱状图",
+      "name_en": "100% Stacked Bar Chart",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "diverging-stacked-bar-chart",
+      "name_zh": "发散堆叠柱状图",
+      "name_en": "Diverging Stacked Bar Chart",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "composition-bar-chart",
+      "name_zh": "组成柱状图",
+      "name_en": "Composition Bar Chart",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/BarComposition/plot_brute_force.png"
+    },
+    {
+      "id": "stacked-bar-scatter",
+      "name_zh": "堆叠柱状散点图",
+      "name_en": "Stacked Bar Scatter",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/StackedBarScatter/plot_StackedBarScatter_1.png"
+    },
+    {
+      "id": "population-pyramid",
+      "name_zh": "人口金字塔",
+      "name_en": "Population Pyramid",
+      "categories": [
+        "composition-proportion",
+        "geospatial-cartography"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "radar-chart",
+      "name_zh": "雷达图",
+      "name_en": "Radar Chart",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/Radar/comparison_radar.png"
+    },
+    {
+      "id": "treemap",
+      "name_zh": "矩形式树图",
+      "name_en": "Treemap",
+      "categories": [
+        "composition-proportion",
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "pie-chart",
+      "name_zh": "饼图",
+      "name_en": "Pie Chart",
+      "categories": [
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "upset-plot",
+      "name_zh": "UpSet图",
+      "name_en": "UpSet Plot",
+      "categories": [
+        "sets-overlap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "venn-diagram",
+      "name_zh": "韦恩图",
+      "name_en": "Venn Diagram",
+      "categories": [
+        "sets-overlap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "euler-diagram",
+      "name_zh": "欧拉图",
+      "name_en": "Euler Diagram",
+      "categories": [
+        "sets-overlap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "set-matrix",
+      "name_zh": "集合成员矩阵",
+      "name_en": "Set Membership Matrix",
+      "categories": [
+        "sets-overlap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "sankey-diagram",
+      "name_zh": "桑基图",
+      "name_en": "Sankey Diagram",
+      "categories": [
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/SankeyDiagram/plot_SankeyDiagram_1.png"
+    },
+    {
+      "id": "alluvial-diagram",
+      "name_zh": "冲积图",
+      "name_en": "Alluvial Diagram",
+      "categories": [
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "conversion-funnel-chart",
+      "name_zh": "转化漏斗图",
+      "name_en": "Conversion Funnel Chart",
+      "categories": [
+        "flow-process-hierarchy",
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "hierarchy-tree",
+      "name_zh": "层级树",
+      "name_en": "Hierarchy Tree",
+      "categories": [
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "sunburst-chart",
+      "name_zh": "旭日图",
+      "name_en": "Sunburst Chart",
+      "categories": [
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "circular-packing",
+      "name_zh": "圆形打包图",
+      "name_en": "Circle Packing",
+      "categories": [
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "process-flow-diagram",
+      "name_zh": "流程图",
+      "name_en": "Process Flow Diagram",
+      "categories": [
+        "flow-process-hierarchy",
+        "project-quality-operations"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "consort-flow-diagram",
+      "name_zh": "CONSORT流程图",
+      "name_en": "CONSORT Flow Diagram",
+      "categories": [
+        "flow-process-hierarchy",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "prisma-flow-diagram",
+      "name_zh": "PRISMA流程图",
+      "name_en": "PRISMA Flow Diagram",
+      "categories": [
+        "flow-process-hierarchy",
+        "clinical-epidemiology",
+        "bibliometrics-science-mapping"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "correlation-network",
+      "name_zh": "相关网络图",
+      "name_en": "Correlation Network",
+      "categories": [
+        "network-graph",
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/CorrelationNetwork/correlation_network.png"
+    },
+    {
+      "id": "co-occurrence-network",
+      "name_zh": "共现网络",
+      "name_en": "Co-occurrence Network",
+      "categories": [
+        "network-graph",
+        "bibliometrics-science-mapping"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "arc-diagram",
+      "name_zh": "弧线图",
+      "name_en": "Arc Diagram",
+      "categories": [
+        "network-graph"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "chord-diagram",
+      "name_zh": "弦图",
+      "name_en": "Chord Diagram",
+      "categories": [
+        "network-graph",
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "dendrogram",
+      "name_zh": "树状图",
+      "name_en": "Dendrogram",
+      "categories": [
+        "network-graph",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "phylogenetic-tree",
+      "name_zh": "系统发育树",
+      "name_en": "Phylogenetic Tree",
+      "categories": [
+        "network-graph",
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "proportional-symbol-map",
+      "name_zh": "比例符号地图",
+      "name_en": "Proportional Symbol Map",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/GeographicBubbleMap/geographic_bubble_map.png"
+    },
+    {
+      "id": "choropleth-map",
+      "name_zh": "分级设色地图",
+      "name_en": "Choropleth Map",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "spatial-heatmap",
+      "name_zh": "空间热图",
+      "name_en": "Spatial Heatmap",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "contour-map",
+      "name_zh": "等值线地图",
+      "name_en": "Contour Map",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "raster-map",
+      "name_zh": "栅格地图",
+      "name_en": "Raster Map",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "flow-map",
+      "name_zh": "流向地图",
+      "name_en": "Flow Map",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "hexbin-map",
+      "name_zh": "蜂窝地图",
+      "name_en": "Hexbin Map",
+      "categories": [
+        "geospatial-cartography"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "kaplan-meier-curve",
+      "name_zh": "Kaplan–Meier曲线",
+      "name_en": "Kaplan–Meier Curve",
+      "categories": [
+        "survival-event-history",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "cumulative-hazard-curve",
+      "name_zh": "累计风险曲线",
+      "name_en": "Cumulative Hazard Curve",
+      "categories": [
+        "survival-event-history"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "cumulative-incidence-curve",
+      "name_zh": "累计发生率曲线",
+      "name_en": "Cumulative Incidence Curve",
+      "categories": [
+        "survival-event-history",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "competing-risk-plot",
+      "name_zh": "竞争风险图",
+      "name_en": "Competing Risk Plot",
+      "categories": [
+        "survival-event-history",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "swimmer-plot",
+      "name_zh": "游泳图",
+      "name_en": "Swimmer Plot",
+      "categories": [
+        "survival-event-history",
+        "clinical-epidemiology"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "love-plot",
+      "name_zh": "协变量平衡图",
+      "name_en": "Love Plot",
+      "categories": [
+        "clinical-epidemiology",
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "difference-in-differences-plot",
+      "name_zh": "双重差分图",
+      "name_en": "Difference-in-Differences Plot",
+      "categories": [
+        "clinical-epidemiology",
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "event-study-plot",
+      "name_zh": "事件研究图",
+      "name_en": "Event Study Plot",
+      "categories": [
+        "clinical-epidemiology",
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "diagnostic-test-plot",
+      "name_zh": "诊断试验性能图",
+      "name_en": "Diagnostic Test Performance Plot",
+      "categories": [
+        "clinical-epidemiology",
+        "model-evaluation-diagnostics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "volcano-plot",
+      "name_zh": "火山图",
+      "name_en": "Volcano Plot",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/volcano/rnaseq_deseq2_standard.png"
+    },
+    {
+      "id": "ma-plot",
+      "name_zh": "MA图",
+      "name_en": "MA Plot",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "manhattan-plot",
+      "name_zh": "曼哈顿图",
+      "name_en": "Manhattan Plot",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "locuszoom-plot",
+      "name_zh": "区域关联图",
+      "name_en": "LocusZoom Plot",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "genome-browser-track",
+      "name_zh": "基因组浏览器轨道",
+      "name_en": "Genome Browser Track",
+      "categories": [
+        "genomics-transcriptomics",
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "mutation-lollipop-plot",
+      "name_zh": "突变棒棒糖图",
+      "name_en": "Mutation Lollipop Plot",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "oncoprint",
+      "name_zh": "肿瘤突变谱图",
+      "name_en": "OncoPrint",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "gsea-curve",
+      "name_zh": "GSEA富集曲线",
+      "name_en": "GSEA Enrichment Curve",
+      "categories": [
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "mantel-correlation-plot",
+      "name_zh": "Mantel相关图",
+      "name_en": "Mantel Correlation Plot",
+      "categories": [
+        "genomics-transcriptomics",
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/MantelCorrelation/plot_MantelCorrelation1_1.png"
+    },
+    {
+      "id": "marker-gene-dot-plot",
+      "name_zh": "标记基因点图",
+      "name_en": "Marker-gene Dot Plot",
+      "categories": [
+        "single-cell-spatial-omics",
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/MarkerGeneDotPlot/plot_MarkerGeneDotPlot.png"
+    },
+    {
+      "id": "single-cell-umap",
+      "name_zh": "单细胞UMAP图",
+      "name_en": "Single-cell UMAP",
+      "categories": [
+        "single-cell-spatial-omics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "single-cell-trajectory",
+      "name_zh": "单细胞轨迹图",
+      "name_en": "Single-cell Trajectory",
+      "categories": [
+        "single-cell-spatial-omics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "spatial-transcriptomics-overlay",
+      "name_zh": "空间转录组叠加图",
+      "name_en": "Spatial Transcriptomics Overlay",
+      "categories": [
+        "single-cell-spatial-omics",
+        "microscopy-image-quantification"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "cell-composition-plot",
+      "name_zh": "细胞组成图",
+      "name_en": "Cell Composition Plot",
+      "categories": [
+        "single-cell-spatial-omics",
+        "composition-proportion"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "pseudotime-heatmap",
+      "name_zh": "拟时间热图",
+      "name_en": "Pseudotime Heatmap",
+      "categories": [
+        "single-cell-spatial-omics",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "microscopy-image-plate",
+      "name_zh": "显微图像板",
+      "name_en": "Microscopy Image Plate",
+      "categories": [
+        "microscopy-image-quantification",
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "pathology-image-plate",
+      "name_zh": "病理图像板",
+      "name_en": "Pathology Image Plate",
+      "categories": [
+        "microscopy-image-quantification",
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "colocalization-plot",
+      "name_zh": "共定位图",
+      "name_en": "Colocalization Plot",
+      "categories": [
+        "microscopy-image-quantification"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "line-scan-intensity",
+      "name_zh": "线扫描强度图",
+      "name_en": "Line-scan Intensity Plot",
+      "categories": [
+        "microscopy-image-quantification"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "volume-rendering",
+      "name_zh": "体渲染",
+      "name_en": "Volume Rendering",
+      "categories": [
+        "microscopy-image-quantification",
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "isosurface",
+      "name_zh": "等值面",
+      "name_en": "Isosurface",
+      "categories": [
+        "microscopy-image-quantification",
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "item-characteristic-curve",
+      "name_zh": "题目特征曲线",
+      "name_en": "Item Characteristic Curve",
+      "categories": [
+        "education-psychometrics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "test-information-curve",
+      "name_zh": "测验信息曲线",
+      "name_en": "Test Information Curve",
+      "categories": [
+        "education-psychometrics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "wright-map",
+      "name_zh": "Wright图",
+      "name_en": "Wright Map",
+      "categories": [
+        "education-psychometrics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "scree-plot",
+      "name_zh": "碎石图",
+      "name_en": "Scree Plot",
+      "categories": [
+        "education-psychometrics",
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "parallel-analysis-plot",
+      "name_zh": "平行分析图",
+      "name_en": "Parallel Analysis Plot",
+      "categories": [
+        "education-psychometrics",
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "sem-path-diagram",
+      "name_zh": "结构方程路径图",
+      "name_en": "SEM Path Diagram",
+      "categories": [
+        "education-psychometrics",
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "latent-profile-plot",
+      "name_zh": "潜在剖面图",
+      "name_en": "Latent Profile Plot",
+      "categories": [
+        "education-psychometrics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "causal-dag",
+      "name_zh": "因果有向无环图",
+      "name_en": "Causal DAG",
+      "categories": [
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "regression-discontinuity-plot",
+      "name_zh": "回归不连续图",
+      "name_en": "Regression Discontinuity Plot",
+      "categories": [
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "synthetic-control-plot",
+      "name_zh": "合成控制图",
+      "name_en": "Synthetic Control Plot",
+      "categories": [
+        "causal-policy-evaluation"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "interrupted-time-series",
+      "name_zh": "中断时间序列图",
+      "name_en": "Interrupted Time-series Plot",
+      "categories": [
+        "causal-policy-evaluation",
+        "time-trend-dynamics"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "co-citation-network",
+      "name_zh": "共被引网络",
+      "name_en": "Co-citation Network",
+      "categories": [
+        "bibliometrics-science-mapping",
+        "network-graph"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "keyword-burst-plot",
+      "name_zh": "关键词突现图",
+      "name_en": "Keyword Burst Plot",
+      "categories": [
+        "bibliometrics-science-mapping"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "thematic-map",
+      "name_zh": "主题图",
+      "name_en": "Thematic Map",
+      "categories": [
+        "bibliometrics-science-mapping"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "bibliographic-coupling-network",
+      "name_zh": "文献耦合网络",
+      "name_en": "Bibliographic Coupling Network",
+      "categories": [
+        "bibliometrics-science-mapping",
+        "network-graph"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "co-word-network",
+      "name_zh": "共词网络",
+      "name_en": "Co-word Network",
+      "categories": [
+        "bibliometrics-science-mapping",
+        "network-graph"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "strategic-diagram",
+      "name_zh": "战略坐标图",
+      "name_en": "Strategic Diagram",
+      "categories": [
+        "bibliometrics-science-mapping"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "before-after-bar-chart",
+      "name_zh": "前后比较柱状图",
+      "name_en": "Before–After Bar Chart",
+      "categories": [
+        "project-quality-operations",
+        "comparison-ranking"
+      ],
+      "implementation_status": "production_template",
+      "preview": "assets/figures/BarDistribution/plot_selfcorrection_math.png"
+    },
+    {
+      "id": "cohort-retention-heatmap",
+      "name_zh": "队列留存热图",
+      "name_en": "Cohort Retention Heatmap",
+      "categories": [
+        "project-quality-operations",
+        "matrix-heatmap"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "bullet-chart",
+      "name_zh": "子弹图",
+      "name_en": "Bullet Chart",
+      "categories": [
+        "project-quality-operations"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "kpi-card",
+      "name_zh": "KPI卡片",
+      "name_en": "KPI Card",
+      "categories": [
+        "project-quality-operations"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "quality-control-overview",
+      "name_zh": "质量控制总览",
+      "name_en": "Quality-control Overview",
+      "categories": [
+        "project-quality-operations",
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "three-dimensional-surface",
+      "name_zh": "三维表面图",
+      "name_en": "Three-dimensional Surface",
+      "categories": [
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "three-dimensional-vector-field",
+      "name_zh": "三维矢量场",
+      "name_en": "Three-dimensional Vector Field",
+      "categories": [
+        "composite-advanced"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "grand-tour",
+      "name_zh": "Grand Tour动态图",
+      "name_en": "Grand Tour",
+      "categories": [
+        "composite-advanced",
+        "multivariate-dimension-reduction"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "hyperbolic-tree",
+      "name_zh": "双曲树",
+      "name_en": "Hyperbolic Tree",
+      "categories": [
+        "composite-advanced",
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "circos-plot",
+      "name_zh": "Circos图",
+      "name_en": "Circos Plot",
+      "categories": [
+        "composite-advanced",
+        "genomics-transcriptomics"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "complex-process-mining",
+      "name_zh": "复杂流程挖掘图",
+      "name_en": "Complex Process-mining Plot",
+      "categories": [
+        "composite-advanced",
+        "flow-process-hierarchy"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "image-plus-quant-composite",
+      "name_zh": "图像与定量复合图",
+      "name_en": "Image-plus-quantification Composite",
+      "categories": [
+        "composite-advanced",
+        "microscopy-image-quantification"
+      ],
+      "implementation_status": "on_demand",
+      "preview": null
+    },
+    {
+      "id": "asymmetric-multipanel",
+      "name_zh": "非对称多面板图",
+      "name_en": "Asymmetric Multipanel Figure",
+      "categories": [
+        "composite-advanced"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    },
+    {
+      "id": "small-multiples",
+      "name_zh": "小多图",
+      "name_en": "Small Multiples",
+      "categories": [
+        "composite-advanced"
+      ],
+      "implementation_status": "reusable_pattern",
+      "preview": null
+    }
+  ]
+}

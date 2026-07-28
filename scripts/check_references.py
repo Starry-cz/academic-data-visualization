@@ -6,6 +6,7 @@ Validates:
   2. compose.py PANEL_ASPECT covers all figure types in directory-map
   3. SKILL.md references only existing files
   4. Every assets/figures/<type>/ has at least one script + one preview PNG
+  5. Registry production status ↔ asset.yaml ↔ real asset paths
 
 Usage:
     py check_references.py          # full integrity scan
@@ -15,6 +16,8 @@ Usage:
 from __future__ import annotations
 import json, os, re, sys
 from pathlib import Path
+
+from check_chart_registry import validate_registry
 
 # 以脚本所在仓库为准，避免仓库改名后仍指向历史目录。
 SKILL_DIR = Path(__file__).resolve().parents[1]
@@ -187,6 +190,8 @@ def check_reference_md_health() -> list[dict]:
     # Files SKILL.md says to always load / on-demand
     expected = [
         "asset-reuse-protocol.md", "checklist.md", "color-palettes.md",
+        "chart-alias-index.md", "chart-coverage-audit.md",
+        "chart-taxonomy-source.md",
         "common-pitfalls.md", "complexheatmap.md", "directory-map.md",
         "export-specs.md", "figure-contract.md", "figure-deconstruction.md",
         "figure-design-brief.md", "figure-type-catalog.md", "journal-intel.md",
@@ -212,6 +217,18 @@ def check_reference_md_health() -> list[dict]:
     return findings
 
 
+def check_registry_integrity() -> list[dict]:
+    """Expose registry/manifest failures through the legacy integrity command."""
+    return [
+        {
+            "check": "chart_registry_integrity",
+            "severity": "FAIL",
+            "detail": error,
+        }
+        for error in validate_registry()
+    ]
+
+
 def run_all() -> dict:
     map_dirs = parse_directory_map()
     asset_dirs = list_asset_dirs()
@@ -223,6 +240,7 @@ def run_all() -> dict:
     findings += check_aspect_coverage(map_dirs, aspect_keys)
     findings += check_skill_refs_exist(skill_refs)
     findings += check_reference_md_health()
+    findings += check_registry_integrity()
 
     fails = [f for f in findings if f["severity"] == "FAIL"]
     warns = [f for f in findings if f["severity"] == "WARN"]

@@ -28,6 +28,41 @@
 | 空间与地理 | 分级设色图、比例符号图、空间热图 | 等值线、栅格图、流向图 | 需要坐标系、地图边界与空间尺度；避免误导性面积编码 |
 | 项目、运营与业务 | 甘特、漏斗、子弹图、KPI、帕累托 | 控制图、队列 / 留存热图、瀑布图 | 仪表盘用于监测；论文主图避免堆砌 KPI 卡片 |
 
+## 24 类完整分类索引
+
+先通过上表确定信息任务，再只读取最相关的 1–3 个分类文件。名称、缩写或同名异义先查 `chart-alias-index.md`。
+
+<!-- chart-registry:category-index:start -->
+| 编号 | 分类 | 适用研究问题 | 图型数量 | 文档 |
+|---|---|---|---:|---|
+| 01 | 数值比较与排序 / Comparison and Ranking | 比较、排序或变化幅度 | 12 | [打开](chart-types/01-comparison-ranking.md) |
+| 02 | 时间、趋势与动态 / Time, Trend, and Dynamics | 随有序时间或剂量的变化 | 15 | [打开](chart-types/02-time-trend-dynamics.md) |
+| 03 | 分布与统计诊断 / Distribution and Statistical Diagnostics | 分布形态、离散程度与异常值 | 13 | [打开](chart-types/03-distribution-diagnostics.md) |
+| 04 | 关系与回归 / Relationship and Regression | 变量关系、拟合与一致性 | 9 | [打开](chart-types/04-relationship-regression.md) |
+| 05 | 多变量与降维 / Multivariate and Dimension Reduction | 多变量结构、相关与低维表示 | 16 | [打开](chart-types/05-multivariate-dimension-reduction.md) |
+| 06 | 矩阵、热图与模式 / Matrix, Heatmap, and Pattern | 矩阵模式、簇与注释 | 16 | [打开](chart-types/06-matrix-heatmap.md) |
+| 07 | 不确定性与效应量 / Uncertainty and Effect Size | 效应方向、大小与不确定性 | 6 | [打开](chart-types/07-uncertainty-effect-size.md) |
+| 08 | 模型评估与诊断 / Model Evaluation and Diagnostics | 预测区分度、校准或误差结构 | 11 | [打开](chart-types/08-model-evaluation-diagnostics.md) |
+| 09 | 机器学习解释 / Machine Learning Explainability | 模型贡献、响应与解释稳定性 | 7 | [打开](chart-types/09-machine-learning-explainability.md) |
+| 10 | 组成与比例 / Composition and Proportion | 整体组成、比例与结构 | 15 | [打开](chart-types/10-composition-proportion.md) |
+| 11 | 集合与交集 / Sets and Overlap | 集合交集与成员关系 | 4 | [打开](chart-types/11-sets-overlap.md) |
+| 12 | 流向、流程与层级 / Flow, Process, and Hierarchy | 阶段流向、流程与层级组成 | 13 | [打开](chart-types/12-flow-process-hierarchy.md) |
+| 13 | 网络与图结构 / Network and Graph Structure | 实体连接、权重与社区结构 | 9 | [打开](chart-types/13-network-graph.md) |
+| 14 | 地理空间与制图 / Geospatial and Cartography | 空间位置、区域差异与地理量级 | 8 | [打开](chart-types/14-geospatial-cartography.md) |
+| 15 | 生存与事件史 / Survival and Event History | 事件时间、生存概率与竞争结局 | 5 | [打开](chart-types/15-survival-event-history.md) |
+| 16 | 临床试验与流行病学 / Clinical Trials and Epidemiology | 临床路径、效应与流行病学比较 | 15 | [打开](chart-types/16-clinical-epidemiology.md) |
+| 17 | 基因组与转录组 / Genomics and Transcriptomics | 基因组位置、表达差异与通路信号 | 13 | [打开](chart-types/17-genomics-transcriptomics.md) |
+| 18 | 单细胞与空间组学 / Single-cell and Spatial Omics | 细胞状态、表达与空间组学结构 | 8 | [打开](chart-types/18-single-cell-spatial-omics.md) |
+| 19 | 显微图像与定量 / Microscopy and Image Quantification | 图像结构、通道与空间定量 | 8 | [打开](chart-types/19-microscopy-image-quantification.md) |
+| 20 | 教育测量与心理计量 / Education and Psychometrics | 测量模型、题目性能与潜变量结构 | 7 | [打开](chart-types/20-education-psychometrics.md) |
+| 21 | 因果推断与政策评估 / Causal Inference and Policy Evaluation | 处理效应、反事实趋势与识别假设 | 8 | [打开](chart-types/21-causal-policy-evaluation.md) |
+| 22 | 文献计量与科学知识图谱 / Bibliometrics and Science Mapping | 知识关联、主题演化与科学结构 | 8 | [打开](chart-types/22-bibliometrics-science-mapping.md) |
+| 23 | 项目、质量与运营 / Project, Quality, and Operations | 计划进度、过程稳定性与运营监测 | 13 | [打开](chart-types/23-project-quality-operations.md) |
+| 24 | 复合图与高级可视化 / Composite and Advanced Visualization | 多证据整合、三维或高级结构 | 18 | [打开](chart-types/24-composite-advanced.md) |
+<!-- chart-registry:category-index:end -->
+
+实现状态以 `chart-registry.yaml` 为准：`production_template` 才能进入真实资产目录；`reusable_pattern` 表示规则和视觉模式可复用；`on_demand` 必须按数据与依赖新实现。
+
 ## 图型清单
 
 ### 1. 比较、排序与组成

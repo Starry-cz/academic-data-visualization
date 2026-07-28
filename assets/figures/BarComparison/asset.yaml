@@ -1,0 +1,45 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "method-comparison-bar-chart"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_comparison_GeneRegulatory.py",
+    "plot_comparison_Trajectory.py",
+    "raw_data.py"
+  ],
+  "previews": [
+    "plot_comparison_GeneRegulatory.png",
+    "plot_comparison_Trajectory.png"
+  ],
+  "outputs": {
+    "vector": [],
+    "raster": [
+      "plot_comparison_GeneRegulatory.png",
+      "plot_comparison_Trajectory.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 6.0,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

@@ -1,7 +1,8 @@
 # Figure Type Directory Map
 
 Maps user language (Chinese + English) to exact `assets/figures/<dir>/` paths.
-Step 4 reads this table FIRST, then falls back to `ls figures/` for unmatched types.
+Use this table only after `chart-alias-index.md` and `chart-registry.yaml` confirm a
+`production_template`. Unmatched registered charts must not be assigned a fabricated directory.
 
 **Usage:** Find the user's description in the "Keywords" column → use the exact directory path.
 One user request can match multiple directories — the engine picks the closest semantic match.

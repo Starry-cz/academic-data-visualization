@@ -1,0 +1,44 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "stacked-area-chart"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_stacked_area.py"
+  ],
+  "previews": [
+    "stacked_area.png"
+  ],
+  "outputs": {
+    "vector": [
+      "stacked_area.pdf",
+      "stacked_area.svg"
+    ],
+    "raster": [
+      "stacked_area.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 1.7468,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

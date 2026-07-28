@@ -1,0 +1,47 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "three-dimensional-heatmap"
+  ],
+  "backend": [
+    "r"
+  ],
+  "entrypoints": [
+    "plot_3Dheatmap.R"
+  ],
+  "previews": [
+    "plot_3Dheatmap_1.png",
+    "plot_3Dheatmap_2.png",
+    "plot_3Dheatmap_3.png",
+    "plot_3Dheatmap_4.png"
+  ],
+  "outputs": {
+    "vector": [],
+    "raster": [
+      "plot_3Dheatmap_1.png",
+      "plot_3Dheatmap_2.png",
+      "plot_3Dheatmap_3.png",
+      "plot_3Dheatmap_4.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "预先声明且可追溯的标准化、对数或比例变换"
+  ],
+  "unsupported_cases": [
+    "缺少图型必需变量",
+    "仅因外形相似而替代领域专用图"
+  ],
+  "aspect_ratio": 1.0,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

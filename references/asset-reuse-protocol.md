@@ -5,11 +5,22 @@ Use this protocol after the figure plan and backend have been fixed. Its purpose
 ## 1. Route the requested chart
 
 1. Read `figure-type-catalog.md` to identify the information task and implementation status.
-2. Read `directory-map.md` to map Chinese or English chart names to an exact directory.
-3. List `assets/figures/<matched-directory>/`.
-4. Open the candidate script and its companion PNG before deciding to reuse it.
+2. Resolve the user language with `chart-alias-index.md` and obtain the canonical chart ID.
+3. Check the selected record in `chart-registry.yaml`.
+4. If the status is `production_template`, read `directory-map.md` and follow the declared `asset_path`.
+5. Open `asset.yaml`, the candidate script, and its companion PNG before deciding to reuse it.
+6. If the status is `reusable_pattern` or `on_demand`, do not invent an asset path; classify the work as visual adaptation or new implementation.
 
 Do not route from a vague filename match when the catalogue contains an exact entry.
+
+```text
+用户语言
+→ alias index
+→ canonical chart
+→ implementation status
+→ production asset directory（仅当存在）
+→ native reuse / visual adapt / new implementation
+```
 
 ## 2. Classify reuse
 

@@ -53,6 +53,16 @@ Uncertainty: [SD / SEM / CI / IQR / none]
 
 Read `references/figure-type-catalog.md` whenever the chart type is not already justified. Recommend one primary chart and, when useful, one or two alternatives.
 
+Route through the registry without loading the entire taxonomy:
+
+1. use the information-task table in `references/figure-type-catalog.md`;
+2. read only the 1–3 matching files under `references/chart-types/`;
+3. resolve Chinese names, English names, abbreviations, and ambiguous terms with `references/chart-alias-index.md`;
+4. consult `references/chart-registry.yaml` only for the selected canonical records and implementation status;
+5. route `production_template` to a verified asset, adapt `reusable_pattern` from shared rules, and build `on_demand` only when its data and dependencies are available.
+
+For cross-domain charts, check both the general chart contract and the specialist category contract. Never load all 24 category files for one request.
+
 For each panel, state:
 
 | Panel | Figure type | Question answered | Data-based reason |
@@ -101,12 +111,13 @@ For gallery, batch, or atlas-like outputs, keep a **palette allocation ledger**:
 
 For a README or catalogue gallery, group cards by aspect ratio before ordering by chart family. Keep near-square cards in a complete equal-column grid and landscape cards in a separate two-column grid; do not mix their canvases in the same row. Create fixed-canvas preview cards with white padding rather than cropping, stretching, or changing the scientific evidence. Link each card to its original full-resolution preview and keep the card order in the generator script and README synchronized.
 
-Then read `references/directory-map.md` and `references/asset-reuse-protocol.md`. For every panel:
+Then read `references/asset-reuse-protocol.md` and, only for a `production_template`, `references/directory-map.md`. For every panel:
 
-1. locate the exact `assets/figures/<type>/` directory;
-2. inspect the production script and companion preview;
-3. classify reuse as `native reuse`, `visual adapt`, or `new implementation`;
-4. record the decision and any backend or editability limitation.
+1. confirm the canonical ID and implementation status;
+2. locate the exact `assets/figures/<type>/` directory only when `asset_path` is declared;
+3. inspect `asset.yaml`, the production script, and companion preview;
+4. classify reuse as `native reuse`, `visual adapt`, or `new implementation`;
+5. record the decision and any backend or editability limitation.
 
 Never claim that a PDF/SVG composite is fully editable when it contains rasterized panel images. In that case, deliver the per-panel vector masters together with the composite proof and disclose the embedded raster panels.
 
@@ -182,6 +193,9 @@ Read references progressively; do not load the full folder.
 |---|---|
 | `references/figure-contract.md` | Every new figure |
 | `references/figure-type-catalog.md` | Chart choice is unclear or specialised |
+| `references/chart-types/<category>.md` | A matching taxonomy category has been identified; read 1–3 only |
+| `references/chart-alias-index.md` | Resolving names, abbreviations, or ambiguous terms |
+| `references/chart-registry.yaml` | Checking selected canonical records, status, or asset path |
 | `references/common-pitfalls.md` | Selecting or reviewing a chart |
 | `references/journal-specs.md` | Every submission-oriented figure |
 | `references/journal-intel.md` | A target journal is named |
@@ -203,6 +217,11 @@ Run commands from the repository root:
 # Skill and reference integrity
 python scripts/check_references.py
 
+# Taxonomy, manifests, and generated catalog
+python scripts/check_chart_registry.py
+python scripts/build_chart_registry.py --check
+python scripts/generate_chart_catalog.py --check
+
 # Trigger boundary benchmark
 python scripts/trigger_benchmark.py
 
@@ -221,7 +240,7 @@ python scripts/generate_atlas.py
 
 ## Production assets and adapters
 
-- `assets/figures/<type>/`: reusable production scripts and companion previews.
+- `assets/figures/<type>/`: reusable production scripts, companion previews, and `asset.yaml`.
 - `assets/figure-atlas/`: README chart-index thumbnails and fixed-canvas gallery cards.
 - `assets/palette-gallery/`: named-theme RGB previews.
 - `install/`: generated cross-platform adapters.
