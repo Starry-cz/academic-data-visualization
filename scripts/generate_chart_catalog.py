@@ -215,7 +215,10 @@ def render_readme_summary(registry: dict, english: bool) -> str:
         intro = "注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。"
     lines = [intro, "", '<table width="100%" align="center">']
     for label, value in rows:
-        lines.append(f"  <tr><td width=\"35%\"><strong>{label}</strong></td><td>{value}</td></tr>")
+        lines.append(
+            f"  <tr><td width=\"50%\"><strong>{label}</strong></td>"
+            f"<td width=\"50%\">{value}</td></tr>"
+        )
     lines.append("</table>")
     return "\n".join(lines)
 

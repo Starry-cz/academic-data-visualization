@@ -4,8 +4,9 @@
 
 - Rebuilt the Chinese and English README pages around an outcome-first quick start, verified capability boundaries, and a compact documentation map.
 - Replaced outdated `96`-pattern and `40 / 40` trigger claims with registry-backed `714 / 714`, `34 / 34`, and `88 / 88` evidence.
-- Reduced the landing-page galleries to representative figures and palettes while preserving direct routes to the full catalogues.
-- Added regression tests for README-local links, published metrics, and hero information hierarchy.
+- Restored the workflow hero to the top of the page and expanded the landing gallery to 22 production examples across distinct chart families.
+- Standardized gallery thumbnails on square or landscape canvases and gave every README table cell an explicit width for symmetric rendering.
+- Added regression tests for README-local links, published metrics, hero information hierarchy, table widths, gallery coverage, and card dimensions.
 
 ## 2.1.0
 

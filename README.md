@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="从研究问题和数据剖析到投稿级成图与视觉复核的工作流">
+</p>
+
 <h1 align="center">Academic Data Visualization</h1>
 
 <p align="center">
@@ -49,26 +53,34 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 灰度校样和 QA 报告。
 ```
 
-<p align="center">
-  <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="从研究问题和数据剖析到投稿级成图与视觉复核的工作流">
-</p>
-
 ## 为什么使用它
 
-| 结论驱动 | 真实能力边界 | 可复用生产资产 | 投稿前闭环 |
-|---|---|---|---|
-| 先判断读者需要比较、关联还是决策，再选择图型 | 665 个规范化图型均标记真实实现状态，不把“已登记”冒充“已有模板” | 34 类资产具备脚本、预览和 manifest，可追溯复用 | 同时检查反模式、代码与导出、科学逻辑、最终渲染 |
+<table width="100%" align="center">
+  <tr>
+    <th width="25%">结论驱动</th>
+    <th width="25%">真实能力边界</th>
+    <th width="25%">可复用生产资产</th>
+    <th width="25%">投稿前闭环</th>
+  </tr>
+  <tr>
+    <td width="25%">先判断读者需要比较、关联还是决策，再选择图型</td>
+    <td width="25%">665 个规范化图型均标记真实实现状态，不把“已登记”冒充“已有模板”</td>
+    <td width="25%">34 类资产具备脚本、预览和 manifest，可追溯复用</td>
+    <td width="25%">同时检查反模式、代码与导出、科学逻辑、最终渲染</td>
+  </tr>
+</table>
 
 传统绘图请求常从“画柱状图/热图”开始；本 Skill 从研究主张和数据契约开始，并主动拦截小样本均值柱、双 Y 轴、彩虹色图、错误连线、误导性截轴等常见风险。
 
 ## 它如何工作
 
-| 阶段 | 关键动作 | 产出 |
-|---|---|---|
-| 1. 定义 | 明确结论、观测单位、变量、依赖结构和目标期刊 | [`figure-contract.md`](references/figure-contract.md) |
-| 2. 论证 | 剖析样本量、分布、缺失、异常值与分组，比较候选图型 | 图型选择理由与风险说明 |
-| 3. 实现 | 路由生产模板、可复用模式或按需实现，统一面板与配色 | Python / R 脚本和可编辑主文件 |
-| 4. 验证 | 程序检查、最终尺寸 RGB 复核、灰度复核和导出审查 | PNG 校样、矢量文件与 QA 报告 |
+<table width="100%" align="center">
+  <tr><th width="20%">阶段</th><th width="60%">关键动作</th><th width="20%">产出</th></tr>
+  <tr><td width="20%"><strong>1. 定义</strong></td><td width="60%">明确结论、观测单位、变量、依赖结构和目标期刊</td><td width="20%"><a href="references/figure-contract.md">图表契约</a></td></tr>
+  <tr><td width="20%"><strong>2. 论证</strong></td><td width="60%">剖析样本量、分布、缺失、异常值与分组，比较候选图型</td><td width="20%">图型理由与风险</td></tr>
+  <tr><td width="20%"><strong>3. 实现</strong></td><td width="60%">路由生产模板、可复用模式或按需实现，统一面板与配色</td><td width="20%">Python / R 与矢量主文件</td></tr>
+  <tr><td width="20%"><strong>4. 验证</strong></td><td width="60%">程序检查、最终尺寸 RGB 复核、灰度复核和导出审查</td><td width="20%">校样与 QA 报告</td></tr>
+</table>
 
 ## 能力范围
 
@@ -76,41 +88,77 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。
 
 <table width="100%" align="center">
-  <tr><td width="35%"><strong>分类体系</strong></td><td>24 类</td></tr>
-  <tr><td width="35%"><strong>规范化图型</strong></td><td>665 个</td></tr>
-  <tr><td width="35%"><strong>源清单图型</strong></td><td>625 个</td></tr>
-  <tr><td width="35%"><strong>仓库扩展图型</strong></td><td>40 个</td></tr>
-  <tr><td width="35%"><strong>源分类归属</strong></td><td>714 / 714 条已映射</td></tr>
-  <tr><td width="35%"><strong>生产模板</strong></td><td>34 类</td></tr>
-  <tr><td width="35%"><strong>可复用模式</strong></td><td>228 类</td></tr>
-  <tr><td width="35%"><strong>按需实现</strong></td><td>403 类</td></tr>
+  <tr><td width="50%"><strong>分类体系</strong></td><td width="50%">24 类</td></tr>
+  <tr><td width="50%"><strong>规范化图型</strong></td><td width="50%">665 个</td></tr>
+  <tr><td width="50%"><strong>源清单图型</strong></td><td width="50%">625 个</td></tr>
+  <tr><td width="50%"><strong>仓库扩展图型</strong></td><td width="50%">40 个</td></tr>
+  <tr><td width="50%"><strong>源分类归属</strong></td><td width="50%">714 / 714 条已映射</td></tr>
+  <tr><td width="50%"><strong>生产模板</strong></td><td width="50%">34 类</td></tr>
+  <tr><td width="50%"><strong>可复用模式</strong></td><td width="50%">228 类</td></tr>
+  <tr><td width="50%"><strong>按需实现</strong></td><td width="50%">403 类</td></tr>
 </table>
 <!-- chart-registry:summary:end -->
 
-| 状态 | 含义 | 仓库承诺 |
-|---|---|---|
-| `production_template` | 已核验生产模板 | 真实脚本 + PNG + `asset.yaml`，可用时附 SVG/PDF |
-| `reusable_pattern` | 可复用实现模式 | 有明确数据契约与后端路由，但不声称已有独立资产 |
-| `on_demand` | 按数据与依赖实现 | 不伪造预览，不用外形相似的普通图代替专业图型 |
+<table width="100%" align="center">
+  <tr><th width="25%">状态</th><th width="25%">含义</th><th width="50%">仓库承诺</th></tr>
+  <tr><td width="25%"><code>production_template</code></td><td width="25%">已核验生产模板</td><td width="50%">真实脚本 + PNG + <code>asset.yaml</code>，可用时附 SVG/PDF</td></tr>
+  <tr><td width="25%"><code>reusable_pattern</code></td><td width="25%">可复用实现模式</td><td width="50%">有明确数据契约与后端路由，但不声称已有独立资产</td></tr>
+  <tr><td width="25%"><code>on_demand</code></td><td width="25%">按数据与依赖实现</td><td width="50%">不伪造预览，不用外形相似的普通图代替专业图型</td></tr>
+</table>
 
 查看 [24 类完整图型目录](references/figure-type-catalog.md)、[中英文别名索引](references/chart-alias-index.md)、[覆盖审计](references/chart-coverage-audit.md) 和 [真实生产资产映射](references/directory-map.md)。
 
 ## 精选成图
 
-首页只展示六个代表案例；完整预览和实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+首页按画幅展示 22 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+
+### 关系、降维、诊断与高维结构 · 3 × 4
 
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><strong>相关矩阵</strong><br><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png" width="390" alt="相关矩阵示例"></td>
-    <td width="50%" align="center" valign="top"><strong>PCA</strong><br><img src="assets/figure-atlas/readme-cards/PCA.png" width="390" alt="PCA 示例"></td>
+    <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D 热图"></a><br><sub>高维强度结构</sub></td>
+    <td width="34%" align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png" width="280" alt="密度热图"></a><br><sub>二维密度与聚集区</sub></td>
+    <td width="33%" align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png" width="280" alt="PCA 双标图"></a><br><sub>样本分离与载荷</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>小提琴图</strong><br><img src="assets/figure-atlas/readme-cards/violin_chart.png" width="390" alt="小提琴图示例"></td>
-    <td align="center" valign="top"><strong>时间趋势</strong><br><img src="assets/figure-atlas/readme-cards/trend.png" width="390" alt="时间趋势图示例"></td>
+    <td width="33%" align="center" valign="top"><strong>AUROC</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png" width="280" alt="AUROC 曲线"></a><br><sub>模型判别能力</sub></td>
+    <td width="34%" align="center" valign="top"><strong>相关密度图</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png" width="280" alt="相关密度图"></a><br><sub>关系与局部密度</sub></td>
+    <td width="33%" align="center" valign="top"><strong>相关矩阵</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png" width="280" alt="相关矩阵"></a><br><sub>多变量关系</sub></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>桑基图</strong><br><img src="assets/figure-atlas/readme-cards/sankey.png" width="390" alt="桑基图示例"></td>
-    <td align="center" valign="top"><strong>Mantel 关联图</strong><br><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png" width="390" alt="Mantel 关联图示例"></td>
+    <td width="33%" align="center" valign="top"><strong>分组相关矩阵</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/readme-cards/GroupCorrelationmatrix.png" width="280" alt="分组相关矩阵"></a><br><sub>条件间相关结构</sub></td>
+    <td width="34%" align="center" valign="top"><strong>雷达图</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png" width="280" alt="雷达图"></a><br><sub>少量对象多指标</sub></td>
+    <td width="33%" align="center" valign="top"><strong>山脊图</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png" width="280" alt="山脊图"></a><br><sub>多组分布迁移</sub></td>
+  </tr>
+  <tr>
+    <td width="33%" align="center" valign="top"><strong>气泡散点图</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figure-atlas/readme-cards/bubble_scatter.png" width="280" alt="气泡散点图"></a><br><sub>二维关系与第三变量</sub></td>
+    <td width="34%" align="center" valign="top"><strong>相关气泡矩阵</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figure-atlas/readme-cards/correlation_bubble_matrix.png" width="280" alt="相关气泡矩阵"></a><br><sub>方向、强度与显著性</sub></td>
+    <td width="33%" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="280" alt="相关网络图"></a><br><sub>节点关系与社群结构</sub></td>
+  </tr>
+</table>
+
+### 比较、分布、趋势、组成与空间 · 2 × 5
+
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png" width="390" alt="柱状图"></a><br><sub>组间摘要与原始观测</sub></td>
+    <td width="50%" align="center" valign="top"><strong>分组柱状图</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png" width="390" alt="分组柱状图"></a><br><sub>多处理 × 多指标</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Mantel 关联图</strong><br><a href="assets/figure-atlas/MantelCorrelation.png"><img src="assets/figure-atlas/readme-cards/MantelCorrelation.png" width="390" alt="Mantel 关联图"></a><br><sub>距离矩阵与环境关联</sub></td>
+    <td width="50%" align="center" valign="top"><strong>小提琴图</strong><br><a href="assets/figure-atlas/violin_chart.png"><img src="assets/figure-atlas/readme-cards/violin_chart.png" width="390" alt="小提琴图"></a><br><sub>分布形态与异常值</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>时间趋势</strong><br><a href="assets/figure-atlas/trend.png"><img src="assets/figure-atlas/readme-cards/trend.png" width="390" alt="时间趋势图"></a><br><sub>变化轨迹与不确定性</sub></td>
+    <td width="50%" align="center" valign="top"><strong>堆叠柱状散点图</strong><br><a href="assets/figure-atlas/StackedBarScatter.png"><img src="assets/figure-atlas/readme-cards/StackedBarScatter.png" width="390" alt="堆叠柱状散点图"></a><br><sub>组成与样本级观测</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>频率 3D 热图</strong><br><a href="assets/figure-atlas/Frequency_3DHeatmap.png"><img src="assets/figure-atlas/readme-cards/Frequency_3DHeatmap.png" width="390" alt="频率 3D 热图"></a><br><sub>双因子分箱频次</sub></td>
+    <td width="50%" align="center" valign="top"><strong>桑基图</strong><br><a href="assets/figure-atlas/sankey.png"><img src="assets/figure-atlas/readme-cards/sankey.png" width="390" alt="桑基图"></a><br><sub>类别流向与状态转换</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>堆叠面积图</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figure-atlas/readme-cards/stacked_area.png" width="390" alt="堆叠面积图"></a><br><sub>组成随时间变化</sub></td>
+    <td width="50%" align="center" valign="top"><strong>地理气泡地图</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figure-atlas/readme-cards/geographic_bubble_map.png" width="390" alt="地理气泡地图"></a><br><sub>空间位置与规模编码</sub></td>
   </tr>
 </table>
 
@@ -124,8 +172,8 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
     <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal 配色预览"></td>
   </tr>
   <tr>
-    <td align="center" valign="top"><strong>Pastel harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony 配色预览"></td>
-    <td align="center" valign="top"><strong>Coastal sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>Pastel harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>Coastal sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset 配色预览"></td>
   </tr>
 </table>
 
@@ -133,23 +181,25 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 ## 适用边界
 
-| 适合 | 不适合 |
-|---|---|
-| 论文主图、补充图、学位论文和科研报告 | 交互式仪表盘或 Web 数据产品 |
-| 不确定该选什么图，需要基于数据结构论证 | 没有定量面板的纯插画式机制图 |
-| 重绘旧图、统一多面板语言、适配目标期刊 | 与绘图无关的统计分析、清洗或文献综述 |
-| 投稿前检查裁切、遮挡、灰度、误导编码和导出 | 要求用普通图假装地图、基因组轨道或三维体数据 |
+<table width="100%" align="center">
+  <tr><th width="50%">适合</th><th width="50%">不适合</th></tr>
+  <tr><td width="50%">论文主图、补充图、学位论文和科研报告</td><td width="50%">交互式仪表盘或 Web 数据产品</td></tr>
+  <tr><td width="50%">不确定该选什么图，需要基于数据结构论证</td><td width="50%">没有定量面板的纯插画式机制图</td></tr>
+  <tr><td width="50%">重绘旧图、统一多面板语言、适配目标期刊</td><td width="50%">与绘图无关的统计分析、清洗或文献综述</td></tr>
+  <tr><td width="50%">投稿前检查裁切、遮挡、灰度、误导编码和导出</td><td width="50%">要求用普通图假装地图、基因组轨道或三维体数据</td></tr>
+</table>
 
 ## 文档导航
 
-| 你要解决的问题 | 入口 |
-|---|---|
-| 查找图型、别名与真实实现状态 | [图型目录](references/figure-type-catalog.md) · [别名索引](references/chart-alias-index.md) · [注册表](references/chart-registry.yaml) |
-| 定义输入、结论与交付规格 | [图表契约](references/figure-contract.md) · [设计简报](references/figure-design-brief.md) |
-| 组织多面板与视觉层级 | [多面板布局](references/multipanel-layout.md) · [视觉样式](references/visual-style.md) |
-| 适配期刊尺寸与导出 | [期刊情报](references/journal-intel.md) · [期刊规格](references/journal-specs.md) · [导出规格](references/export-specs.md) |
-| 选择或扩展配色 | [配色指南](references/color-palettes.md) · [配色注册表](references/palette-library.json) |
-| 复用资产并完成投稿前检查 | [资产复用协议](references/asset-reuse-protocol.md) · [四轮 QA 清单](references/checklist.md) |
+<table width="100%" align="center">
+  <tr><th width="50%">你要解决的问题</th><th width="50%">入口</th></tr>
+  <tr><td width="50%">查找图型、别名与真实实现状态</td><td width="50%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a> · <a href="references/chart-registry.yaml">注册表</a></td></tr>
+  <tr><td width="50%">定义输入、结论与交付规格</td><td width="50%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td></tr>
+  <tr><td width="50%">组织多面板与视觉层级</td><td width="50%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
+  <tr><td width="50%">适配期刊尺寸与导出</td><td width="50%"><a href="references/journal-intel.md">期刊情报</a> · <a href="references/journal-specs.md">期刊规格</a> · <a href="references/export-specs.md">导出规格</a></td></tr>
+  <tr><td width="50%">选择或扩展配色</td><td width="50%"><a href="references/color-palettes.md">配色指南</a> · <a href="references/palette-library.json">配色注册表</a></td></tr>
+  <tr><td width="50%">复用资产并完成投稿前检查</td><td width="50%"><a href="references/asset-reuse-protocol.md">资产复用协议</a> · <a href="references/checklist.md">四轮 QA 清单</a></td></tr>
+</table>
 
 ## 更多安装方式
 
