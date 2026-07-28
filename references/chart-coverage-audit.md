@@ -2,77 +2,78 @@
 
 ## 审计结论
 
-本次升级以仓库提交 `1d4c909` 为基线。升级前的确定性检查全部通过：
+用户补充的源文件包含 24 个一级类别、714 条编号分类条目。本版本已经逐条解析并映射：
 
-- Skill metadata：PASS；
-- directory map 与生产资产：34 / 34，0 FAIL，0 WARN；
-- trigger benchmark：40 / 40；
-- QA fixtures：26 / 26，覆盖 15 / 15 类检查；
-- Python 源码：compileall PASS。
-
-当前注册表建立了 24 个类别、177 个 canonical chart records 和 257 条可验证的分类归属。其中：
-
+- 源类别：24 / 24；
+- 源分类归属：714 / 714；
+- 未映射源条目：0；
+- canonical chart records：665；
+- 源清单图型：625；
+- 仓库扩展图型：40；
 - `production_template`：34；
-- `reusable_pattern`：83；
-- `on_demand`：60。
+- `reusable_pattern`：228；
+- `on_demand`：403。
 
-## 原始清单缺口
+`source_expectation.source_complete` 已更新为 `true`。注册表、源清单和 24 个分类文档之间的对应关系由测试与 CI 强制验证。
 
-输入方案声明存在 714 条源分类条目，但所提供的 Markdown 只有执行方案和字段示例，没有附带 714 条原始清单，也没有另一份可读取的源文件。仓库和工作区全文检索均未发现该清单。
+## 源清单处理
 
-因此本版本采取保守策略：
+`references/chart-taxonomy-source.md` 保存 714 条原始名称及其 canonical ID。导入遵循以下规则：
 
-1. 不伪造 714 / 714 覆盖；
-2. 以当前 96 个图型模式、34 类真实生产资产、方案列出的 P1–P3 图型及领域路由建立 24 类注册表；
-3. 在 `source_expectation` 中保留声明数量、可验证数量和 `source_complete: false`；
-4. 让生成器和检查器支持后续导入，并将缺失源条目暴露为待规范化草稿；
-5. README 明确区分“可验证源归属”和“方案声明但未提供的原始条目”。
+1. 原始条目和跨类别重复均保留为 source membership；
+2. 同一图型只保存一个 canonical record；
+3. 中英文名、缩写和常见变体进入别名索引；
+4. 同名异义必须显式声明，不使用模糊猜测；
+5. 未出现在源清单、但属于原仓库能力的记录标记为 `repository_extension`。
 
-收到原始清单后，应把重复出现保留为 `source_memberships`，但不得复制 canonical 定义。
+当前明确消歧的术语包括：
 
-## 现有生产资产迁移
+- “漏斗图”：元分析发表偏倚与流程转化；
+- “棒棒糖图”：通用排序与突变位点；
+- “瀑布图”：一般增减贡献与肿瘤疗效；
+- “蜘蛛图”：多指标雷达图与肿瘤负荷纵向图。
 
-`assets/figures/` 下所有 34 个含脚本的生产目录均已映射到唯一 canonical ID，并补充 `asset.yaml`。每个 manifest 记录：
+## 类别对齐
 
-- canonical chart ID；
-- Python / R 后端；
-- 实际入口脚本；
-- 真实 PNG 预览；
-- 可用 SVG / PDF；
-- 数据模式、复用限制、宽高比、主题和 QA 命令。
+24 类名称和顺序已经与补充源文件对齐。相较 2.0 版，新增或重新独立表达了：
 
-`directory-map.md` 仍只承担真实生产目录路由，没有写入未实现图型。
+- 实验设计与组间差异；
+- 质性研究与文本分析；
+- 层级与分类结构；
+- 三维、曲面与科学计算；
+- 工程质量与过程控制；
+- 因果机制与理论模型；
+- 研究流程与论文规范。
 
-## 别名、重复与同名异义
+原有图型通过 category remap 保留，不因类别重排丢失能力。
 
-- 跨类别重复通过一个 canonical record 加多个 `category_ids` 处理；
-- 中文名、英文名、缩写和常见别名由 `chart-alias-index.md` 统一生成；
-- “漏斗图”拆分为元分析发表偏倚与转化流程两种语义；
-- “棒棒糖图”拆分为通用排序与突变位点两种数据契约；
-- `check_chart_registry.py` 会阻止未解决的别名冲突。
+## 生产资产真实性
 
-## 状态判定依据
+`assets/figures/` 下 34 个真实生产目录保持不变。每个生产模板仍必须同时具有：
 
-### production_template
+- 真实 Python / R 脚本；
+- PNG 预览；
+- `asset.yaml`；
+- registry 与 manifest 双向映射；
+- 可执行 QA 命令。
 
-仅当真实目录同时存在脚本、PNG 与 `asset.yaml`，且 manifest 与 registry 双向一致时使用。
+新增源图型没有被批量伪装为生产资产。只有统计与视觉规则可直接复用的条目标为 `reusable_pattern`；地图、专业流程、文本网络、三维场和领域模型等依赖数据契约的图型保持 `on_demand`。
 
-### reusable_pattern
+## 自动检查
 
-用于统计与视觉规则成熟、可用通用后端可靠实现，但尚未形成独立生产资产包的图型。不得填写 `asset_path`。
+以下检查共同保证 714 条覆盖不回退：
 
-### on_demand
+- `scripts/import_source_taxonomy.py`：要求源文件正好包含 24 类和 714 条编号记录；
+- `scripts/check_chart_registry.py`：按分类、canonical ID 和原始标签逐条核对；
+- `scripts/generate_chart_catalog.py --check`：检查 24 个分类文档、别名索引、README 和机器目录；
+- `tests/test_chart_registry.py`：断言 714 / 714、来源状态和生产资产真实性；
+- `tests/test_chart_routing.py`：检查中英文名称、缩写和同名异义；
+- GitHub Actions：在 Windows 与 Ubuntu 上运行全部确定性检查。
 
-用于依赖坐标、拓扑、专业注释、模型对象、图像标定或复杂后端的图型。不得用外形相似的普通图冒充，也不得生成虚假预览。
+## 兼容性
 
-## 现有图鉴与路由
-
-- 旧 6 组 × 16 个图鉴模式及原路径保留；
-- `figure-type-catalog.md` 继续提供按信息任务的快速选择；
-- 新增的 24 类索引只在匹配请求时读取 1–3 个分类文件；
-- 用户名称先进入 alias index，再进入 canonical record、实现状态和真实资产路径；
-- 未改变现有 README 图鉴、配色预览和生产脚本路径。
-
-## 仍待外部输入
-
-唯一未能完成的声明性指标是“714 / 714 原始源条目映射”，原因是源条目未包含在输入文件中。该缺口不是实现错误，也不会降低现有 177 个图型记录、257 条归属和 34 个生产资产的真实性。
+- 保留旧 6 组 × 16 个图鉴和公开路径；
+- 保留 34 个生产资产目录及 canonical ID；
+- `directory-map.md` 仍只列真实生产资产；
+- `SKILL.md` 仍是精简路由入口，详细图型知识按需读取；
+- 未 force push，也未覆盖用户历史。

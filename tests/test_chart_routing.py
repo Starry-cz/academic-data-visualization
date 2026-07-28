@@ -35,6 +35,15 @@ class ChartRoutingTests(unittest.TestCase):
             resolve_chart_name(self.registry, "棒棒糖图"),
             ["lollipop-chart", "mutation-lollipop-plot"],
         )
+        self.assertEqual(
+            resolve_chart_name(self.registry, "瀑布图"),
+            ["contribution-waterfall-chart", "tumor-response-waterfall-plot"],
+        )
+
+    def test_new_source_taxonomy_routes(self) -> None:
+        self.assertEqual(resolve_chart_name(self.registry, "词云"), ["word-cloud"])
+        self.assertEqual(resolve_chart_name(self.registry, "鱼骨图"), ["ishikawa-diagram"])
+        self.assertEqual(resolve_chart_name(self.registry, "DAG"), ["causal-dag"])
 
     def test_unknown_name_is_not_guessed(self) -> None:
         self.assertEqual(resolve_chart_name(self.registry, "不存在的万能神图"), [])

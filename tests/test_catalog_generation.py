@@ -31,12 +31,17 @@ class CatalogGenerationTests(unittest.TestCase):
             if path.parent == ROOT / "references" / "chart-types"
         ]
         self.assertEqual(len(category_docs), 24)
+        self.assertEqual(
+            len(list((ROOT / "references" / "chart-types").glob("*.md"))),
+            24,
+        )
 
     def test_readme_blocks_are_generated(self) -> None:
         for name in ("README.md", "README_EN.md"):
             text = self.outputs[ROOT / name]
             self.assertIn("chart-registry:summary:start", text)
-            self.assertIn("177", text)
+            self.assertIn("665", text)
+            self.assertIn("714", text)
             self.assertIn("34", text)
 
 

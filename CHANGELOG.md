@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0
+
+- Imported the supplied 24-category source taxonomy and mapped all 714 memberships.
+- Expanded the registry from 177 to 665 canonical records after alias and duplicate normalization.
+- Realigned category names and ordering with the source list, including qualitative/text, research-process, and scientific-computing categories.
+- Added deterministic source import, explicit source-versus-extension provenance, and 714/714 regression checks.
+- Preserved all 34 verified production templates; unimplemented additions remain reusable patterns or on-demand routes.
+
 ## 2.0.0
 
 - Added a 24-category, 177-record canonical chart registry with 257 verifiable source memberships.

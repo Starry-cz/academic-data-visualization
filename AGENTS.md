@@ -13,6 +13,7 @@
 - Do not hand-edit `references/chart-types/*.md`, `references/chart-alias-index.md`, or `references/chart-registry-stats.json`.
 - Regenerate them with `python scripts/generate_chart_catalog.py`.
 - Regenerate production manifests with `python scripts/build_chart_registry.py --sync-manifests`.
+- Import a replacement 24-category source list with `python scripts/import_source_taxonomy.py <source-file>`; require exactly 714 numbered memberships.
 
 ## Code style
 
