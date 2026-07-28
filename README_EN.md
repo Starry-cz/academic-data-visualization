@@ -11,7 +11,7 @@
 <p align="center">
   <a href="#one-minute-start"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
   <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Figure_patterns-96-73C79E?style=flat-square" alt="96 figure patterns"></a>
-  <a href="#palette-library"><img src="https://img.shields.io/badge/Palette_themes-20-F599A1?style=flat-square" alt="20 palette themes"></a>
+  <a href="#palette-library"><img src="https://img.shields.io/badge/Palette_themes-23-F599A1?style=flat-square" alt="23 palette themes"></a>
   <a href="#reproducible-quality-evidence"><img src="https://img.shields.io/badge/QA-4--pass_loop-95AEDA?style=flat-square" alt="Four-pass QA loop"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
@@ -54,8 +54,8 @@
   </thead>
   <tbody>
     <tr><td width="30%"><strong>96 figure patterns</strong></td><td width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Six atlas groups × 16 verified patterns; nine specialist selection categories are implemented on demand</td></tr>
-    <tr><td><strong>29 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
-    <tr><td><strong>20 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
+    <tr><td><strong>34 production asset families</strong></td><td>Python / R scripts, data constraints, and verifiable previews</td></tr>
+    <tr><td><strong>23 palette themes</strong></td><td>Categorical, diverging, sequential, and reference-image personalization workflows</td></tr>
     <tr><td><strong>4 QA passes</strong></td><td>Anti-pattern, code/export, scientific logic, and rendered-proof review</td></tr>
   </tbody>
 </table>
@@ -177,6 +177,20 @@ The cards below retain only representative production assets rather than repeati
   </tr>
 </table>
 
+### Reference-image additions · 3 + 2
+
+<table width="100%" align="center">
+  <tr>
+    <td width="33%" align="center" valign="top"><strong>Bubble scatter</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figures/BubbleScatter/bubble_scatter.png?v=reference-expansion-v1" width="280" alt="Bubble scatter"></a><br><sub>Position, size, and category in one view</sub></td>
+    <td width="33%" align="center" valign="top"><strong>Correlation bubble matrix</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png?v=reference-expansion-v1" width="280" alt="Correlation bubble matrix"></a><br><sub>Direction, strength, and significance</sub></td>
+    <td width="33%" align="center" valign="top"><strong>Correlation network</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figures/CorrelationNetwork/correlation_network.png?v=reference-expansion-v1" width="280" alt="Correlation network"></a><br><sub>Signed edges, weights, and communities</sub></td>
+  </tr>
+  <tr>
+    <td colspan="2" width="66%" align="center" valign="top"><strong>Stacked area</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figures/StackedArea/stacked_area.png?v=reference-expansion-v1" width="390" alt="Stacked area chart"></a><br><sub>Composition and cumulative change over ordered time</sub></td>
+    <td width="34%" align="center" valign="top"><strong>Geographic bubble map</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figures/GeographicBubbleMap/geographic_bubble_map.png?v=reference-expansion-v1" width="390" alt="Geographic bubble map"></a><br><sub>Location, region, and magnitude</sub></td>
+  </tr>
+</table>
+
 <p align="center"><a href="references/figure-type-catalog.md"><strong>Open the complete catalogue and selection constraints →</strong></a></p>
 
 ## Palette library
@@ -224,6 +238,13 @@ The default is `nature-default`; the README previews use different themes by fig
     <td align="center" valign="top"><strong>Method blueprint · method-blueprint</strong><br><img src="assets/palette-gallery/method-blueprint.png?qa=direct-labels-v1" width="390" alt="Method blueprint palette preview"></td>
     <td align="center" valign="top"><strong>Ablation contrast · ablation-contrast</strong><br><img src="assets/palette-gallery/ablation-contrast.png?qa=direct-labels-v1" width="390" alt="Ablation contrast palette preview"></td>
   </tr>
+  <tr>
+    <td align="center" valign="top"><strong>Pastel harmony · pastel-harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png?qa=reference-expansion-v1" width="390" alt="Pastel harmony palette preview"></td>
+    <td align="center" valign="top"><strong>Blue-red signal · blue-red-signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png?qa=reference-expansion-v1" width="390" alt="Blue-red signal palette preview"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="top"><strong>Coastal sunset · coastal-sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png?qa=reference-expansion-v1" width="390" alt="Coastal sunset palette preview"></td>
+  </tr>
 </table>
 
 After the first reviewed render, the skill asks whether to keep the theme or redraw with another library theme, user-supplied hex values, a palette image, or a reference paper figure. Recolouring changes visual roles only; it does not change data, statistics, chart type, group order, or colour semantics.
@@ -233,7 +254,7 @@ After the first reviewed render, the skill asks whether to keep the theme or red
 Current repository baseline:
 
 - **40 / 40** trigger prompts classified correctly, including positive and negative cases;
-- **29 / 29** production figure families have parseable scripts;
+- **34 / 34** production figure families have parseable scripts;
 - **26 / 26** QA fixtures hit their expected targets across **15 / 15** programmatic checks;
 - the composition engine passes column-width, 450 dpi, TrueType embedding, vector-export, and palette checks.
 

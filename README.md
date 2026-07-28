@@ -11,7 +11,7 @@
 <p align="center">
   <a href="#一分钟开始"><img src="https://img.shields.io/badge/Agent_Skill-Codex_%7C_Claude_%7C_Cursor-4573B4?style=flat-square" alt="Agent Skill"></a>
   <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/图型模式-96-73C79E?style=flat-square" alt="96 个图型模式"></a>
-  <a href="#配色主题库"><img src="https://img.shields.io/badge/配色主题-20-F599A1?style=flat-square" alt="20 个配色主题"></a>
+  <a href="#配色主题库"><img src="https://img.shields.io/badge/配色主题-23-F599A1?style=flat-square" alt="23 个配色主题"></a>
   <a href="#可复现的质量证据"><img src="https://img.shields.io/badge/QA-四轮闭环-95AEDA?style=flat-square" alt="四轮 QA 闭环"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
@@ -54,8 +54,8 @@
   </thead>
   <tbody>
     <tr><td width="30%"><strong>96 个图型模式</strong></td><td width="70%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">6 组图鉴 × 16 个已核验模式；另有 9 类专业选图路径，按数据与依赖实现</td></tr>
-    <tr><td><strong>29 类生产资产</strong></td><td>Python / R 脚本、示例数据约束与可核验预览</td></tr>
-    <tr><td><strong>20 个主题配色</strong></td><td>分类色、发散色、连续色及参考图个性化重绘流程</td></tr>
+    <tr><td><strong>34 类生产资产</strong></td><td>Python / R 脚本、示例数据约束与可核验预览</td></tr>
+    <tr><td><strong>23 个主题配色</strong></td><td>分类色、发散色、连续色及参考图个性化重绘流程</td></tr>
     <tr><td><strong>4 轮 QA 审查</strong></td><td>反模式、代码与导出、科学逻辑、最终渲染审查</td></tr>
   </tbody>
 </table>
@@ -176,6 +176,20 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   </tr>
 </table>
 
+### 新增参考图型 · 3 + 2
+
+<table width="100%" align="center">
+  <tr>
+    <td width="33%" align="center" valign="top"><strong>气泡散点图</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figures/BubbleScatter/bubble_scatter.png?v=reference-expansion-v1" width="280" alt="气泡散点图"></a><br><sub>位置、大小与类别的联合编码</sub></td>
+    <td width="33%" align="center" valign="top"><strong>相关性气泡矩阵</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png?v=reference-expansion-v1" width="280" alt="相关性气泡矩阵"></a><br><sub>方向、强度与显著性的紧凑表达</sub></td>
+    <td width="33%" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figures/CorrelationNetwork/correlation_network.png?v=reference-expansion-v1" width="280" alt="相关网络图"></a><br><sub>正负相关、边权与社区结构</sub></td>
+  </tr>
+  <tr>
+    <td colspan="2" width="66%" align="center" valign="top"><strong>堆叠面积图</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figures/StackedArea/stacked_area.png?v=reference-expansion-v1" width="390" alt="堆叠面积图"></a><br><sub>有序时间上的组成与累积变化</sub></td>
+    <td width="34%" align="center" valign="top"><strong>地理气泡图</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figures/GeographicBubbleMap/geographic_bubble_map.png?v=reference-expansion-v1" width="390" alt="地理气泡图"></a><br><sub>地理位置、区域与量级分布</sub></td>
+  </tr>
+</table>
+
 <p align="center"><a href="references/figure-type-catalog.md"><strong>查看完整图型目录与选择约束 →</strong></a></p>
 
 ## 配色主题库
@@ -223,6 +237,13 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
     <td align="center" valign="top"><strong>方法蓝图 · method-blueprint</strong><br><img src="assets/palette-gallery/method-blueprint.png?qa=direct-labels-v1" width="390" alt="方法蓝图配色预览"></td>
     <td align="center" valign="top"><strong>消融对照 · ablation-contrast</strong><br><img src="assets/palette-gallery/ablation-contrast.png?qa=direct-labels-v1" width="390" alt="消融对照配色预览"></td>
   </tr>
+  <tr>
+    <td align="center" valign="top"><strong>柔彩协调 · pastel-harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png?qa=reference-expansion-v1" width="390" alt="柔彩协调配色预览"></td>
+    <td align="center" valign="top"><strong>蓝红信号 · blue-red-signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png?qa=reference-expansion-v1" width="390" alt="蓝红信号配色预览"></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" valign="top"><strong>海岸日落 · coastal-sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png?qa=reference-expansion-v1" width="390" alt="海岸日落配色预览"></td>
+  </tr>
 </table>
 
 首版图通过审查后，Skill 会询问是否保留当前主题，或改用其他主题、你提供的十六进制颜色、配色参考图或论文图进行个性化重绘。重绘只改变视觉角色，不改变数据、统计、图型、分组顺序或颜色语义。
@@ -232,7 +253,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 当前仓库基线：
 
 - **40 / 40** 条触发测试正确，包含应触发与不应触发场景；
-- **29 / 29** 类生产图型均有可解析脚本；
+- **34 / 34** 类生产图型均有可解析脚本；
 - **26 / 26** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
 - 组合引擎通过栏宽、450 dpi、TrueType 字体嵌入、矢量导出和配色检查。
 

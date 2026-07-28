@@ -36,9 +36,13 @@ One user request can match multiple directories — the engine picks the closest
 | **MantelCorrelation** | Mantel相关, Mantel test, 环境因子相关, microbial correlation | Mantel correlation with linkET — heatmap + connection curves |
 | **Manifold** | 流形, manifold, 流形可视化, Swiss roll, diffusion | Manifold visualization / Swiss roll / diffusion plots |
 | **LineTrend** | 趋势线, trend, 时间序列, time series, 折线图, 参数扫描, sweep | Line/trend plots — time series, parameter sweeps, post-training trends |
+| **StackedArea** | 堆叠面积图, stacked area, 面积图, composition over time, 累积构成 | Ordered composition over time with direct endpoint labels |
+| **BubbleScatter** | 气泡散点, bubble, 气泡图, bubble scatter, 三变量散点 | Scatter with bubble area as a third quantitative variable |
+| **CorrelationBubbleMatrix** | 相关性气泡矩阵, correlation bubble matrix, corrplot, 相关点阵 | Correlation sign by colour and absolute magnitude by bubble area |
+| **CorrelationNetwork** | 相关网络, correlation network, 共现网络, co-occurrence network | Thresholded weighted network with signed and styled edges |
+| **GeographicBubbleMap** | 地理气泡地图, geographic bubble map, 比例符号地图, world map, 经纬度分布 | Coordinate-aware proportional-symbol map over supplied boundaries |
 | **MarkerGeneDotPlot** | 标记基因点图, marker gene, dot plot, 基因表达点图 | Marker gene expression dot plot |
 | **volcano** (via `volcano/`) | 火山图, volcano, 差异表达, differential expression | Volcano plot with significance thresholds |
 | **UpSet** (via cross-type from ConfusionMatrix) | UpSet, upset plot, 交集图, 集合交集 | UpSet intersection plot |
 | **Forest** (via cross-type from Bar) | 森林图, forest plot, CI, 置信区间, 效应量 | Forest plot with confidence intervals |
 | **Single-cell** (via cross-type from PCA) | 单细胞轨迹, pseudotime, trajectory, 单细胞动力 | Single-cell trajectory / pseudotime plot |
-| **Bubble Scatter** (via cross-type from Scatter) | 气泡散点, bubble, 气泡图, bubble scatter | Scatter with bubble size as third variable |

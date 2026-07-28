@@ -48,6 +48,9 @@ def audit_figure(figure: Figure, figure_name: str) -> VisualQAReport:
 
     # 图例位于坐标轴绘图区内时会直接遮挡数据，因此统一要求移到图外或改用直接标注。
     for axis in figure.axes:
+        # 关闭坐标轴的专用图例面板不承载数据，不应按“遮挡绘图区”处理。
+        if not axis.axison:
+            continue
         legend = axis.get_legend()
         if legend is None or not legend.get_visible():
             continue

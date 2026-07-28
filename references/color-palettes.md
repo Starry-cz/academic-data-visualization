@@ -1,6 +1,6 @@
 # Theme Library and Accessible Colour System
 
-This skill has one default theme and nineteen user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
+This skill has one default theme and twenty-two user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
 
 ## Select a theme
 
@@ -26,6 +26,9 @@ This skill has one default theme and nineteen user-selectable themes. The palett
 | `quiet-atlas` | 静谧图谱 | Dense overview figures, atlas-style summaries, and explanatory graphics | `#4F738C #90B9C8 #D4A48B #9B88B2 #7EAF9A` |
 | `method-blueprint` | 方法蓝图 | Benchmark, multi-method, and proposed-versus-baseline comparisons | `#0F4D92 #3775BA #8BCF8B #B64342 #42949E` |
 | `ablation-contrast` | 消融对照 | Ablations, model variants, and compact metric comparisons | `#1F5D99 #72A96B #E3B07C #B94A48 #6B7280` |
+| `pastel-harmony` | 柔彩协调 | Calm exploratory panels with redundant shapes or direct labels | `#EEA599 #FAC795 #FFE9BE #E3EDE0 #ABD3E1 #92B4C8` |
+| `blue-red-signal` | 蓝红信号 | Signed effects, strong group contrasts, and correlation structure | `#565AA7 #6B92C3 #6EA9CF #F3683C #DA4139 #A90B2F` |
+| `coastal-sunset` | 海岸日落 | Ordered trajectories, geographic groups, and warm–cool summaries | `#497AB7 #7EB6D5 #BDE2ED #F0F0D9 #FEEAA1 #FCB567 #F27144` |
 
 The canonical full values, including sequential and diverging ramps, live in [`palette-library.json`](palette-library.json). Use that file as the single source of truth for preview scripts and future adapters.
 
@@ -41,6 +44,8 @@ Select a theme from the evidence, not from whichever preview was generated most 
 | Omics, single-cell, genomics, population structure | `teal-genome`, `pastel-omics`, or `bright-bio` | Rainbow expression scales |
 | Materials, electrochemistry, catalysis, cost | `electrochemistry`, `pastel-catalysis`, `cryo-electrolyte`, or `soft-cost` | Decorative gradients without a numeric order |
 | Dense methods, benchmarks, diagrams, network summaries | `method-blueprint`, `sage-methods`, or `quiet-atlas` | Repeating a saturated accent for every element |
+| Signed correlation or effect structure | `blue-red-signal` or `coastal-sunset` | Treating categorical order as a quantitative colour scale |
+| Calm multi-group overview with direct labels | `pastel-harmony` | Colour-only encoding for critical comparisons |
 
 For a gallery or batch of unrelated previews, create a compact allocation ledger before rendering:
 

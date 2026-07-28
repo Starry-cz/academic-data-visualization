@@ -181,6 +181,33 @@
       "sequential": ["#F7FAFC", "#D5E2EC", "#8DB3C9", "#1F5D99"],
       "diverging": ["#1F5D99", "#FFFEFA", "#B94A48"],
       "accent": "#B94A48"
+    },
+    {
+      "id": "pastel-harmony",
+      "name": "柔彩协调",
+      "source": "用户提供的科研配色参考图：珊瑚、杏橙、奶油黄、淡绿与雾蓝",
+      "categorical": ["#EEA599", "#FAC795", "#FFE9BE", "#E3EDE0", "#ABD3E1", "#92B4C8"],
+      "sequential": ["#F8FAF7", "#E3EDE0", "#ABD3E1", "#92B4C8"],
+      "diverging": ["#92B4C8", "#F8FAF7", "#EEA599"],
+      "accent": "#EEA599"
+    },
+    {
+      "id": "blue-red-signal",
+      "name": "蓝红信号",
+      "source": "用户提供的科研配色参考图：靛蓝、阶梯蓝、橙红与深红",
+      "categorical": ["#565AA7", "#6B92C3", "#6EA9CF", "#F3683C", "#DA4139", "#A90B2F"],
+      "sequential": ["#F7FAFC", "#6EA9CF", "#6B92C3", "#565AA7"],
+      "diverging": ["#565AA7", "#F7F7F7", "#A90B2F"],
+      "accent": "#A90B2F"
+    },
+    {
+      "id": "coastal-sunset",
+      "name": "海岸日落",
+      "source": "用户提供的科研配色参考图：深蓝、浅蓝、淡绿、柔黄、橙与珊瑚红",
+      "categorical": ["#497AB7", "#7EB6D5", "#BDE2ED", "#F0F0D9", "#FEEAA1", "#FCB567", "#F27144"],
+      "sequential": ["#FFFAF0", "#FEEAA1", "#FCB567", "#F27144"],
+      "diverging": ["#497AB7", "#F0F0D9", "#F27144"],
+      "accent": "#F27144"
     }
   ]
 }
