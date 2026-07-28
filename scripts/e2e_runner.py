@@ -16,10 +16,7 @@ Usage:
 
 from __future__ import annotations
 import json, os, re, sys
-from pathlib import Path
 from dataclasses import dataclass, field
-
-PROJECT = Path(__file__).resolve().parents[2]
 
 
 @dataclass

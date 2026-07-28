@@ -13,6 +13,7 @@
   <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/图型模式-96-73C79E?style=flat-square" alt="96 个图型模式"></a>
   <a href="#配色主题库"><img src="https://img.shields.io/badge/配色主题-20-F599A1?style=flat-square" alt="20 个配色主题"></a>
   <a href="#可复现的质量证据"><img src="https://img.shields.io/badge/QA-四轮闭环-95AEDA?style=flat-square" alt="四轮 QA 闭环"></a>
+  <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
 </p>
 
@@ -236,13 +237,14 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 - 组合引擎通过栏宽、450 dpi、TrueType 字体嵌入、矢量导出和配色检查。
 
 ```bash
-# Skill 结构与触发准确率
+# Skill 元数据、结构与触发准确率
+python scripts/check_skill_metadata.py
 python scripts/trigger_benchmark.py
 
 # 引用、生产资产与 QA 规则覆盖
 python scripts/check_references.py
 python scripts/qa_coverage.py
-python scripts/eval_runner.py --report-only
+python -m compileall -q scripts assets/figures
 
 # 审查一个实际绘图脚本
 python scripts/qa_validator.py path/to/figure.py

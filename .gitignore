@@ -1,5 +1,9 @@
 # Python 运行时缓存
-scripts/__pycache__/
+__pycache__/
+*.py[cod]
 
 # README 预览可按脚本再生；TIFF 仅用于本地投稿级质量检查，不进入仓库。
 assets/figure-atlas/*.tiff
+
+# 本地自动评估结果包含环境与时间戳，不进入版本控制。
+scripts/.eval_results.json

@@ -16,8 +16,9 @@ from __future__ import annotations
 import json, sys
 from pathlib import Path
 
-PROJECT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(PROJECT))
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SCRIPTS_DIR = PROJECT_ROOT / "scripts"
+sys.path.insert(0, str(SCRIPTS_DIR))
 
 from qa_validator import (
     check_ap0_style_baseline, check_ap1_default_palette, check_ap2_jet_rainbow,

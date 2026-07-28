@@ -1,0 +1,48 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.13"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Validate skill metadata
+        run: python scripts/check_skill_metadata.py
+
+      - name: Validate references and assets
+        run: python scripts/check_references.py
+
+      - name: Benchmark trigger boundary
+        run: python scripts/trigger_benchmark.py
+
+      - name: Verify QA rule coverage
+        run: python scripts/qa_coverage.py
+
+      - name: Compile Python sources
+        run: python -m compileall -q scripts assets/figures

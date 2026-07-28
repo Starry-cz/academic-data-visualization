@@ -13,6 +13,7 @@
   <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Figure_patterns-96-73C79E?style=flat-square" alt="96 figure patterns"></a>
   <a href="#palette-library"><img src="https://img.shields.io/badge/Palette_themes-20-F599A1?style=flat-square" alt="20 palette themes"></a>
   <a href="#reproducible-quality-evidence"><img src="https://img.shields.io/badge/QA-4--pass_loop-95AEDA?style=flat-square" alt="Four-pass QA loop"></a>
+  <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
 </p>
 
@@ -237,13 +238,14 @@ Current repository baseline:
 - the composition engine passes column-width, 450 dpi, TrueType embedding, vector-export, and palette checks.
 
 ```bash
-# Skill structure and trigger accuracy
+# Skill metadata, structure, and trigger accuracy
+python scripts/check_skill_metadata.py
 python scripts/trigger_benchmark.py
 
 # Reference, production-asset, and QA coverage
 python scripts/check_references.py
 python scripts/qa_coverage.py
-python scripts/eval_runner.py --report-only
+python -m compileall -q scripts assets/figures
 
 # Audit a real plotting script
 python scripts/qa_validator.py path/to/figure.py
