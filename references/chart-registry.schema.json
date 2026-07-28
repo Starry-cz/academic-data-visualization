@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Starry-cz/academic-data-visualization/chart-registry.schema.json",
+  "title": "Academic data visualization chart registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "registry_version",
+    "generated_at",
+    "source_expectation",
+    "categories",
+    "ambiguous_terms",
+    "charts"
+  ],
+  "properties": {
+    "schema_version": {"type": "string", "const": "1.0.0"},
+    "registry_version": {"type": "string"},
+    "generated_at": {"type": ["string", "null"]},
+    "source_expectation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declared_memberships",
+        "available_source_memberships",
+        "source_complete",
+        "note"
+      ],
+      "properties": {
+        "declared_memberships": {"type": "integer", "minimum": 0},
+        "available_source_memberships": {"type": "integer", "minimum": 0},
+        "source_complete": {"type": "boolean"},
+        "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "categories": {
+      "type": "array",
+      "minItems": 24,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "slug", "name_zh", "name_en"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^(0[1-9]|1[0-9]|2[0-4])$"},
+          "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+          "name_zh": {"type": "string", "minLength": 2},
+          "name_en": {"type": "string", "minLength": 2}
+        }
+      }
+    },
+    "ambiguous_terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["term", "candidate_ids", "resolution"],
+        "properties": {
+          "term": {"type": "string", "minLength": 1},
+          "candidate_ids": {
+            "type": "array",
+            "minItems": 2,
+            "items": {"type": "string"}
+          },
+          "resolution": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "charts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/chart"}
+    }
+  },
+  "$defs": {
+    "nonEmptyStrings": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "chart": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name_zh",
+        "name_en",
+        "aliases_zh",
+        "aliases_en",
+        "category_ids",
+        "primary_category_id",
+        "information_tasks",
+        "disciplines",
+        "definition",
+        "research_questions",
+        "observation_unit",
+        "required_variables",
+        "optional_variables",
+        "data_types",
+        "minimum_sample",
+        "suitable_when",
+        "avoid_when",
+        "visual_encoding",
+        "statistics",
+        "uncertainty",
+        "allowed_transforms",
+        "forbidden_transforms",
+        "axes_scales",
+        "color_grayscale",
+        "accessibility",
+        "annotations",
+        "publication_risks",
+        "implementation_status",
+        "backends",
+        "dependencies",
+        "asset_path",
+        "reuse_constraints",
+        "alternatives",
+        "complements",
+        "qa_rules",
+        "source_memberships",
+        "components"
+      ],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "name_zh": {"type": "string", "minLength": 1},
+        "name_en": {"type": "string", "minLength": 1},
+        "aliases_zh": {"type": "array", "items": {"type": "string"}},
+        "aliases_en": {"type": "array", "items": {"type": "string"}},
+        "category_ids": {"$ref": "#/$defs/nonEmptyStrings"},
+        "primary_category_id": {"type": "string"},
+        "information_tasks": {"$ref": "#/$defs/nonEmptyStrings"},
+        "disciplines": {"$ref": "#/$defs/nonEmptyStrings"},
+        "definition": {"type": "string", "minLength": 10},
+        "research_questions": {"$ref": "#/$defs/nonEmptyStrings"},
+        "observation_unit": {"type": "string", "minLength": 1},
+        "required_variables": {"$ref": "#/$defs/nonEmptyStrings"},
+        "optional_variables": {"type": "array", "items": {"type": "string"}},
+        "data_types": {"$ref": "#/$defs/nonEmptyStrings"},
+        "minimum_sample": {"type": "string", "minLength": 1},
+        "suitable_when": {"$ref": "#/$defs/nonEmptyStrings"},
+        "avoid_when": {"$ref": "#/$defs/nonEmptyStrings"},
+        "visual_encoding": {"$ref": "#/$defs/nonEmptyStrings"},
+        "statistics": {"$ref": "#/$defs/nonEmptyStrings"},
+        "uncertainty": {"$ref": "#/$defs/nonEmptyStrings"},
+        "allowed_transforms": {"$ref": "#/$defs/nonEmptyStrings"},
+        "forbidden_transforms": {"$ref": "#/$defs/nonEmptyStrings"},
+        "axes_scales": {"$ref": "#/$defs/nonEmptyStrings"},
+        "color_grayscale": {"$ref": "#/$defs/nonEmptyStrings"},
+        "accessibility": {"$ref": "#/$defs/nonEmptyStrings"},
+        "annotations": {"$ref": "#/$defs/nonEmptyStrings"},
+        "publication_risks": {"$ref": "#/$defs/nonEmptyStrings"},
+        "implementation_status": {
+          "type": "string",
+          "enum": ["production_template", "reusable_pattern", "on_demand"]
+        },
+        "backends": {"type": "array", "items": {"type": "string"}},
+        "dependencies": {"type": "array", "items": {"type": "string"}},
+        "asset_path": {"type": ["string", "null"]},
+        "reuse_constraints": {"$ref": "#/$defs/nonEmptyStrings"},
+        "alternatives": {"$ref": "#/$defs/nonEmptyStrings"},
+        "complements": {"$ref": "#/$defs/nonEmptyStrings"},
+        "qa_rules": {"$ref": "#/$defs/nonEmptyStrings"},
+        "source_memberships": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source_category_id", "source_label"],
+            "properties": {
+              "source_category_id": {"type": "string"},
+              "source_label": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "components": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}
