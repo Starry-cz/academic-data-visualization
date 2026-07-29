@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="references/chart-registry.yaml"><img src="https://img.shields.io/badge/Registry-665_canonical-6B92C3?style=flat-square" alt="665 个规范化图型"></a>
-  <a href="#能力范围"><img src="https://img.shields.io/badge/Coverage-714%2F714-73C79E?style=flat-square" alt="714/714 条源分类归属已映射"></a>
+  <a href="#它如何工作"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Python 与 R 原生后端"></a>
+  <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="矢量与高分辨率交付"></a>
   <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 类已核验生产资产"></a>
   <a href="#质量证据"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="四轮 QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
@@ -24,7 +24,7 @@
   <a href="#30-秒开始">30 秒开始</a> ·
   <a href="#精选成图">22 张成图</a> ·
   <a href="#它如何工作">工作流程</a> ·
-  <a href="#能力范围">能力与边界</a> ·
+  <a href="#它能帮你完成什么">核心能力</a> ·
   <a href="#质量证据">质量证据</a>
 </p>
 
@@ -78,7 +78,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   </tr>
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先判断读者需要比较、关联还是决策，再选择图型</td>
-    <td width="25%">665 个规范化图型均标记真实实现状态，不把“已登记”冒充“已有模板”</td>
+    <td width="25%">每条图型路线都会说明是直接复用、基于模式改造，还是按真实数据实现</td>
     <td width="25%">34 类资产具备脚本、预览和 manifest，可追溯复用</td>
     <td width="25%">同时检查反模式、代码与导出、科学逻辑和最终渲染结果</td>
   </tr>
@@ -96,31 +96,22 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   <tr><td width="20%"><strong>4. 验证</strong></td><td width="60%">程序检查、最终尺寸 RGB 复核、灰度复核和导出审查</td><td width="20%">校样与 QA 报告</td></tr>
 </table>
 
-## 能力范围
+## 它能帮你完成什么
 
 <!-- chart-registry:summary:start -->
-注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。
+Skill 把研究问题、数据结构和期刊约束转换成一条可执行、可审查的成图路径；你不需要先从长长的图名清单里自行选择。
 
 <table width="100%" align="center">
-  <tr><td width="50%"><strong>分类体系</strong></td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">24 类</td></tr>
-  <tr><td width="50%"><strong>规范化图型</strong></td><td width="50%">665 个</td></tr>
-  <tr><td width="50%"><strong>源清单图型</strong></td><td width="50%">625 个</td></tr>
-  <tr><td width="50%"><strong>仓库扩展图型</strong></td><td width="50%">40 个</td></tr>
-  <tr><td width="50%"><strong>源分类归属</strong></td><td width="50%">714 / 714 条已映射</td></tr>
-  <tr><td width="50%"><strong>生产模板</strong></td><td width="50%">34 类</td></tr>
-  <tr><td width="50%"><strong>可复用模式</strong></td><td width="50%">228 类</td></tr>
-  <tr><td width="50%"><strong>按需实现</strong></td><td width="50%">403 类</td></tr>
+  <tr><th width="28%">你的情况</th><th width="44%">Skill 会怎么做</th><th width="28%">你会得到什么</th></tr>
+  <tr><td width="28%"><strong>不知道该选什么图</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">根据研究问题与真实数据结构比较可辩护的候选图型</td><td width="28%">选图理由与风险提示</td></tr>
+  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 34 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
+  <tr><td width="28%"><strong>需要统一多面板或旧图</strong></td><td width="44%">统一物理尺寸、字体、配色、图例与面板层级</td><td width="28%">符合期刊尺寸的主图或补充图</td></tr>
+  <tr><td width="28%"><strong>正在准备投稿</strong></td><td width="44%">依次检查反模式、代码与导出、科学逻辑和最终渲染</td><td width="28%">RGB、灰度校样与 QA 报告</td></tr>
+  <tr><td width="28%"><strong>需要专业领域图型</strong></td><td width="44%">使用真实专业实现，不用外形相似的普通图冒充</td><td width="28%">依赖、限制与替代方案说明</td></tr>
 </table>
+
+能力覆盖比较、趋势、分布、关联、降维、模型评估、医学、生物信息和空间分析等 24 类研究任务。需要完整索引时，可查看[图型目录](references/figure-type-catalog.md)或[真实生产资产](references/directory-map.md)。
 <!-- chart-registry:summary:end -->
-
-<table width="100%" align="center">
-  <tr><th width="25%">状态</th><th width="25%">含义</th><th width="50%">仓库承诺</th></tr>
-  <tr><td width="25%"><code>production_template</code></td><td width="25%">已核验生产模板</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">真实脚本 + PNG + <code>asset.yaml</code>，可用时附 SVG/PDF</td></tr>
-  <tr><td width="25%"><code>reusable_pattern</code></td><td width="25%">可复用实现模式</td><td width="50%">有明确数据契约与后端路由，但不声称已有独立资产</td></tr>
-  <tr><td width="25%"><code>on_demand</code></td><td width="25%">按数据与依赖实现</td><td width="50%">不伪造预览，不用外形相似的普通图代替专业图型</td></tr>
-</table>
-
-查看 [24 类完整图型目录](references/figure-type-catalog.md)、[中英文别名索引](references/chart-alias-index.md)、[覆盖审计](references/chart-coverage-audit.md) 和 [真实生产资产映射](references/directory-map.md)。
 
 ## 精选成图
 

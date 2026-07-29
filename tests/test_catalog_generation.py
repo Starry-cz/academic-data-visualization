@@ -40,9 +40,17 @@ class CatalogGenerationTests(unittest.TestCase):
         for name in ("README.md", "README_EN.md"):
             text = self.outputs[ROOT / name]
             self.assertIn("chart-registry:summary:start", text)
-            self.assertIn("665", text)
-            self.assertIn("714", text)
-            self.assertIn("34", text)
+            block = text.split("<!-- chart-registry:summary:start -->", 1)[1].split(
+                "<!-- chart-registry:summary:end -->",
+                1,
+            )[0]
+            self.assertIn("34", block)
+            self.assertNotIn("665", block)
+            self.assertNotIn("714", block)
+            self.assertIn(
+                "What the Skill does" if name == "README_EN.md" else "Skill 会怎么做",
+                block,
+            )
 
 
 if __name__ == "__main__":

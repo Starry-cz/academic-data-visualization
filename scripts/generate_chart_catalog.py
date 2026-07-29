@@ -185,36 +185,95 @@ def render_category_index(registry: dict) -> str:
 def render_readme_summary(registry: dict, english: bool) -> str:
     values = stats(registry)
     if english:
-        source_note = f"{values['source_memberships']} / {values['declared_source_memberships']} mapped"
         rows = [
-            ("Taxonomy categories", f"{values['categories']}"),
-            ("Canonical chart records", f"{values['canonical_charts']}"),
-            ("Source taxonomy records", f"{values['source_taxonomy']}"),
-            ("Repository extensions", f"{values['repository_extension']}"),
-            ("Source memberships", source_note),
-            ("Production templates", f"{values['production_template']}"),
-            ("Reusable patterns", f"{values['reusable_pattern']}"),
-            ("On-demand routes", f"{values['on_demand']}"),
+            (
+                "Unsure which chart to use",
+                "Compare defensible candidates from the research question and real data structure",
+                "Chart rationale and risk notes",
+            ),
+            (
+                "Have data and need a figure",
+                f"Reuse one of {values['production_template']} verified asset families when suitable; "
+                "otherwise build for the actual data",
+                "Python / R script and editable vector master",
+            ),
+            (
+                "Need a coherent multipanel figure",
+                "Unify physical size, typography, colour, legends, and panel hierarchy",
+                "Journal-sized main or supplementary figure",
+            ),
+            (
+                "Preparing a submission",
+                "Run anti-pattern, code/export, scientific-logic, and final-render checks",
+                "RGB and grayscale proofs plus a QA report",
+            ),
+            (
+                "Need a specialist chart",
+                "Use a genuine domain implementation instead of a generic visual look-alike",
+                "Dependencies, limitations, and alternatives",
+            ),
         ]
         intro = (
-            "The registry separates catalogue coverage from implementation status. "
-            "Only production templates have reusable scripts, previews, and manifests."
+            "The Skill turns a research question, data structure, and journal constraints into "
+            "a defensible figure workflow; you do not need to choose from a long list of chart names."
+        )
+        footer = (
+            f"Coverage spans {values['categories']} research-task families, including comparison, "
+            "trend, distribution, association, ordination, model evaluation, medicine, bioinformatics, "
+            "and geospatial analysis. Browse the "
+            "[chart catalogue](references/figure-type-catalog.md) or "
+            "[verified production assets](references/directory-map.md) when you need the full index."
         )
     else:
-        source_note = f"{values['source_memberships']} / {values['declared_source_memberships']} 条已映射"
         rows = [
-            ("分类体系", f"{values['categories']} 类"),
-            ("规范化图型", f"{values['canonical_charts']} 个"),
-            ("源清单图型", f"{values['source_taxonomy']} 个"),
-            ("仓库扩展图型", f"{values['repository_extension']} 个"),
-            ("源分类归属", source_note),
-            ("生产模板", f"{values['production_template']} 类"),
-            ("可复用模式", f"{values['reusable_pattern']} 类"),
-            ("按需实现", f"{values['on_demand']} 类"),
+            (
+                "不知道该选什么图",
+                "根据研究问题与真实数据结构比较可辩护的候选图型",
+                "选图理由与风险提示",
+            ),
+            (
+                "已有数据，需要尽快成图",
+                f"适合时复用 {values['production_template']} 类已核验生产资产；不匹配时按真实数据实现",
+                "Python / R 脚本与可编辑矢量主文件",
+            ),
+            (
+                "需要统一多面板或旧图",
+                "统一物理尺寸、字体、配色、图例与面板层级",
+                "符合期刊尺寸的主图或补充图",
+            ),
+            (
+                "正在准备投稿",
+                "依次检查反模式、代码与导出、科学逻辑和最终渲染",
+                "RGB、灰度校样与 QA 报告",
+            ),
+            (
+                "需要专业领域图型",
+                "使用真实专业实现，不用外形相似的普通图冒充",
+                "依赖、限制与替代方案说明",
+            ),
         ]
-        intro = "注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。"
+        intro = (
+            "Skill 把研究问题、数据结构和期刊约束转换成一条可执行、可审查的成图路径；"
+            "你不需要先从长长的图名清单里自行选择。"
+        )
+        footer = (
+            f"能力覆盖比较、趋势、分布、关联、降维、模型评估、医学、生物信息和空间分析等 "
+            f"{values['categories']} 类研究任务。需要完整索引时，可查看"
+            "[图型目录](references/figure-type-catalog.md)或"
+            "[真实生产资产](references/directory-map.md)。"
+        )
     lines = [intro, "", '<table width="100%" align="center">']
-    for index, (label, value) in enumerate(rows):
+    if english:
+        lines.append(
+            '  <tr><th width="28%">Your situation</th><th width="44%">What the Skill does</th>'
+            '<th width="28%">What you receive</th></tr>'
+        )
+    else:
+        lines.append(
+            '  <tr><th width="28%">你的情况</th><th width="44%">Skill 会怎么做</th>'
+            '<th width="28%">你会得到什么</th></tr>'
+        )
+    for index, (situation, action, outcome) in enumerate(rows):
         spacer = (
             '<img src="assets/readme/table-full-width-spacer.svg" '
             'width="800" height="1" align="right" alt="">'
@@ -222,10 +281,11 @@ def render_readme_summary(registry: dict, english: bool) -> str:
             else ""
         )
         lines.append(
-            f"  <tr><td width=\"50%\"><strong>{label}</strong></td>"
-            f"<td width=\"50%\">{spacer}{value}</td></tr>"
+            f"  <tr><td width=\"28%\"><strong>{situation}</strong></td>"
+            f"<td width=\"44%\">{spacer}{action}</td>"
+            f"<td width=\"28%\">{outcome}</td></tr>"
         )
-    lines.append("</table>")
+    lines.extend(["</table>", "", footer])
     return "\n".join(lines)
 
 

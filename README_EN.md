@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="references/chart-registry.yaml"><img src="https://img.shields.io/badge/Registry-665_canonical-6B92C3?style=flat-square" alt="665 canonical chart records"></a>
-  <a href="#capability-scope"><img src="https://img.shields.io/badge/Coverage-714%2F714-73C79E?style=flat-square" alt="714/714 source memberships mapped"></a>
+  <a href="#how-it-works"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Native Python and R backends"></a>
+  <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="Vector and high-resolution delivery"></a>
   <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 verified production assets"></a>
   <a href="#quality-evidence"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="Four-pass QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
@@ -24,7 +24,7 @@
   <a href="#30-second-start">30-second start</a> ·
   <a href="#selected-figures">22 figures</a> ·
   <a href="#how-it-works">Workflow</a> ·
-  <a href="#capability-scope">Capabilities</a> ·
+  <a href="#what-it-helps-you-do">Capabilities</a> ·
   <a href="#quality-evidence">Quality</a>
 </p>
 
@@ -79,7 +79,7 @@ a grayscale proof, and a QA report.
   </tr>
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Decide what readers must compare, relate, or judge before choosing a chart</td>
-    <td width="25%">All 665 canonical records expose their real implementation state</td>
+    <td width="25%">Every chart route states whether it is ready to reuse, adapted from a pattern, or built for the real data</td>
     <td width="25%">34 asset families include scripts, previews, and manifests</td>
     <td width="25%">Review anti-patterns, code and export, scientific logic, and the final rendering</td>
   </tr>
@@ -97,31 +97,22 @@ Conventional plotting requests start with “make a bar chart” or “draw a he
   <tr><td width="20%"><strong>4. Verify</strong></td><td width="60%">Run programmatic checks and inspect final-size RGB, grayscale, and export proofs</td><td width="20%">Proofs and QA report</td></tr>
 </table>
 
-## Capability scope
+## What it helps you do
 
 <!-- chart-registry:summary:start -->
-The registry separates catalogue coverage from implementation status. Only production templates have reusable scripts, previews, and manifests.
+The Skill turns a research question, data structure, and journal constraints into a defensible figure workflow; you do not need to choose from a long list of chart names.
 
 <table width="100%" align="center">
-  <tr><td width="50%"><strong>Taxonomy categories</strong></td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">24</td></tr>
-  <tr><td width="50%"><strong>Canonical chart records</strong></td><td width="50%">665</td></tr>
-  <tr><td width="50%"><strong>Source taxonomy records</strong></td><td width="50%">625</td></tr>
-  <tr><td width="50%"><strong>Repository extensions</strong></td><td width="50%">40</td></tr>
-  <tr><td width="50%"><strong>Source memberships</strong></td><td width="50%">714 / 714 mapped</td></tr>
-  <tr><td width="50%"><strong>Production templates</strong></td><td width="50%">34</td></tr>
-  <tr><td width="50%"><strong>Reusable patterns</strong></td><td width="50%">228</td></tr>
-  <tr><td width="50%"><strong>On-demand routes</strong></td><td width="50%">403</td></tr>
+  <tr><th width="28%">Your situation</th><th width="44%">What the Skill does</th><th width="28%">What you receive</th></tr>
+  <tr><td width="28%"><strong>Unsure which chart to use</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Compare defensible candidates from the research question and real data structure</td><td width="28%">Chart rationale and risk notes</td></tr>
+  <tr><td width="28%"><strong>Have data and need a figure</strong></td><td width="44%">Reuse one of 34 verified asset families when suitable; otherwise build for the actual data</td><td width="28%">Python / R script and editable vector master</td></tr>
+  <tr><td width="28%"><strong>Need a coherent multipanel figure</strong></td><td width="44%">Unify physical size, typography, colour, legends, and panel hierarchy</td><td width="28%">Journal-sized main or supplementary figure</td></tr>
+  <tr><td width="28%"><strong>Preparing a submission</strong></td><td width="44%">Run anti-pattern, code/export, scientific-logic, and final-render checks</td><td width="28%">RGB and grayscale proofs plus a QA report</td></tr>
+  <tr><td width="28%"><strong>Need a specialist chart</strong></td><td width="44%">Use a genuine domain implementation instead of a generic visual look-alike</td><td width="28%">Dependencies, limitations, and alternatives</td></tr>
 </table>
+
+Coverage spans 24 research-task families, including comparison, trend, distribution, association, ordination, model evaluation, medicine, bioinformatics, and geospatial analysis. Browse the [chart catalogue](references/figure-type-catalog.md) or [verified production assets](references/directory-map.md) when you need the full index.
 <!-- chart-registry:summary:end -->
-
-<table width="100%" align="center">
-  <tr><th width="25%">State</th><th width="25%">Meaning</th><th width="50%">Repository promise</th></tr>
-  <tr><td width="25%"><code>production_template</code></td><td width="25%">Verified template</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Real script + PNG + <code>asset.yaml</code>, with SVG/PDF where available</td></tr>
-  <tr><td width="25%"><code>reusable_pattern</code></td><td width="25%">Reusable pattern</td><td width="50%">Explicit data contract and backend route, but no claim of a standalone asset</td></tr>
-  <tr><td width="25%"><code>on_demand</code></td><td width="25%">Built for actual data</td><td width="50%">No fake previews and no look-alike substitutes for specialist charts</td></tr>
-</table>
-
-Browse the [complete 24-category catalogue](references/figure-type-catalog.md), [bilingual alias index](references/chart-alias-index.md), [coverage audit](references/chart-coverage-audit.md), and [verified production-asset map](references/directory-map.md).
 
 ## Selected figures
 

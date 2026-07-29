@@ -82,6 +82,23 @@ class ReadmeTests(unittest.TestCase):
             self.assertNotIn("Figure_patterns-96", text)
             self.assertNotIn("**40 / 40**", text)
 
+    def test_primary_capabilities_are_user_facing(self) -> None:
+        """核心能力区呈现用户任务，不把注册表审计数字当作产品价值。"""
+        expected = {
+            "README.md": ("## 它能帮你完成什么", "Skill 会怎么做"),
+            "README_EN.md": ("## What it helps you do", "What the Skill does"),
+        }
+        for name, phrases in expected.items():
+            text = (ROOT / name).read_text(encoding="utf-8")
+            block = text.split("<!-- chart-registry:summary:start -->", 1)[1].split(
+                "<!-- chart-registry:summary:end -->",
+                1,
+            )[0]
+            self.assertIn(phrases[0], text)
+            self.assertIn(phrases[1], block)
+            self.assertNotIn("665", block)
+            self.assertNotIn("714", block)
+
     def test_visual_banner_replaces_duplicate_title(self) -> None:
         for name in README_NAMES:
             text = (ROOT / name).read_text(encoding="utf-8")
