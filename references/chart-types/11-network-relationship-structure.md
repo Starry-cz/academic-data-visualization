@@ -24,7 +24,7 @@
 | `bibliographic-coupling` | 节点与边 | source, target | 按需实现 |
 | `bibliographic-coupling-network` | 文献、作者或关键词 | document_or_term, relation | 按需实现 |
 | `bipartite-network` | 节点与边 | source, target | 按需实现 |
-| `chord-diagram` | 节点或边 | source, target, weight | 按需实现 |
+| `chord-diagram` | 节点或边 | source, target, weight | 生产模板 |
 | `citation-network` | 节点与边 | source, target | 按需实现 |
 | `co-citation-network` | 文献、作者或关键词 | document_or_term, relation | 按需实现 |
 | `co-occurrence-network` | 节点或边 | source, target, weight | 可复用模式 |
@@ -63,7 +63,7 @@
 | 文献耦合网络图 / Bibliographic Coupling | `bibliographic-coupling` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
 | 文献耦合网络 / Bibliographic Coupling Network | `bibliographic-coupling-network` | 知识关联、主题演化与科学结构 | 按需实现 |
 | 二模网络图 / Bipartite Network | `bipartite-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 按需实现 |
+| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 生产模板 |
 | 引文网络图 / Citation Network | `citation-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
 | 共被引网络 / Co-citation Network | `co-citation-network` | 知识关联、主题演化与科学结构 | 按需实现 |
 | 共现网络 / Co-occurrence Network | `co-occurrence-network` | 实体连接、权重与社区结构 | 可复用模式 |
@@ -319,9 +319,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_template`
+- **可复用资产**：`assets/figures/ChordDiagram`
+- **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-network；co-occurrence-network；arc-diagram
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof

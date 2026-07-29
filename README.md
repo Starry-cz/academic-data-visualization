@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#它如何工作"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Python 与 R 原生后端"></a>
   <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="矢量与高分辨率交付"></a>
-  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-36_verified-F2A65A?style=flat-square" alt="36 类已核验生产资产"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-37_verified-F2A65A?style=flat-square" alt="37 类已核验生产资产"></a>
   <a href="#质量证据"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="四轮 QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
 </p>
@@ -22,7 +22,7 @@
 <p align="center">
   <a href="#使用入口">使用入口</a> ·
   <a href="#30-秒开始">30 秒开始</a> ·
-  <a href="#精选成图">24 张成图</a> ·
+  <a href="#精选成图">23 张成图</a> ·
   <a href="#它如何工作">工作流程</a> ·
   <a href="#它能帮你完成什么">核心能力</a> ·
   <a href="#质量证据">质量证据</a>
@@ -37,7 +37,7 @@
 <table width="100%" align="center">
   <tr><th width="30%">你现在要做什么</th><th width="35%">直接入口</th><th width="35%">继续深入</th></tr>
   <tr><td width="30%">第一次安装并完成一张图</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-秒开始">30 秒开始</a></td><td width="35%"><a href="#它如何工作">四阶段工作流</a></td></tr>
-  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">24 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
+  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">23 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
   <tr><td width="30%">查找图型、别名与实现状态</td><td width="35%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a></td><td width="35%"><a href="references/chart-registry.yaml">规范化注册表</a></td></tr>
   <tr><td width="30%">定义结论、版式与交付规格</td><td width="35%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td><td width="35%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
   <tr><td width="30%">适配期刊、演讲或发布会</td><td width="35%"><a href="references/delivery-profiles.md">交付场景</a> · <a href="references/journal-specs.md">期刊规格</a></td><td width="35%"><a href="references/export-specs.md">导出规格</a></td></tr>
@@ -79,7 +79,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先判断读者需要比较、关联还是决策，再选择图型</td>
     <td width="25%">每条图型路线都会说明是直接复用、基于模式改造，还是按真实数据实现</td>
-    <td width="25%">36 类资产具备脚本、预览和 manifest，可追溯复用</td>
+    <td width="25%">37 类资产具备脚本、预览和 manifest，可追溯复用</td>
     <td width="25%">同时检查反模式、代码与导出、科学逻辑和最终渲染结果</td>
   </tr>
 </table>
@@ -104,7 +104,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 <table width="100%" align="center">
   <tr><th width="28%">你的情况</th><th width="44%">Skill 会怎么做</th><th width="28%">你会得到什么</th></tr>
   <tr><td width="28%"><strong>不知道该选什么图</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">根据研究问题与真实数据结构比较可辩护的候选图型</td><td width="28%">选图理由与风险提示</td></tr>
-  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 36 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
+  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 37 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
   <tr><td width="28%"><strong>需要统一多面板或旧图</strong></td><td width="44%">统一物理尺寸、字体、配色、图例与面板层级</td><td width="28%">符合期刊尺寸的主图或补充图</td></tr>
   <tr><td width="28%"><strong>正在准备投稿</strong></td><td width="44%">依次检查反模式、代码与导出、科学逻辑和最终渲染</td><td width="28%">RGB、灰度校样与 QA 报告</td></tr>
   <tr><td width="28%"><strong>需要演讲或产品发布数据图</strong></td><td width="44%">从同一分析结果派生 16:9 远距阅读版本，保留基线、不确定性与来源</td><td width="28%">SVG/PDF、1080p/4K 校样与替代文本</td></tr>
@@ -116,30 +116,29 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 ## 精选成图
 
-首页按画幅展示 24 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+首页按画幅展示 23 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
 
-### 关系、降维、诊断与高维结构 · 3 × 4
+### 关系、降维、诊断、高维与网络结构
 
 <table width="100%" align="center">
   <tr>
-    <td width="33%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D 热图"></a><br><sub>高维强度结构</sub></td>
-    <td width="34%" align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png" width="280" alt="密度热图"></a><br><sub>二维密度与聚集区</sub></td>
-    <td width="33%" align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png" width="280" alt="PCA 双标图"></a><br><sub>样本分离与载荷</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D 热图"></a><br><sub>高维强度结构</sub></td>
+    <td width="34%" colspan="2" align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png" width="280" alt="PCA 双标图"></a><br><sub>样本分离与载荷</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>AUROC</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png" width="280" alt="AUROC 曲线"></a><br><sub>模型判别能力</sub></td>
   </tr>
   <tr>
-    <td width="33%" align="center" valign="top"><strong>AUROC</strong><br><a href="assets/figure-atlas/auroc.png"><img src="assets/figure-atlas/readme-cards/auroc.png" width="280" alt="AUROC 曲线"></a><br><sub>模型判别能力</sub></td>
-    <td width="34%" align="center" valign="top"><strong>相关密度图</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png" width="280" alt="相关密度图"></a><br><sub>关系与局部密度</sub></td>
-    <td width="33%" align="center" valign="top"><strong>相关矩阵</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png" width="280" alt="相关矩阵"></a><br><sub>多变量关系</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>相关密度图</strong><br><a href="assets/figure-atlas/CorrelationDensity.png"><img src="assets/figure-atlas/readme-cards/CorrelationDensity.png" width="280" alt="相关密度图"></a><br><sub>关系与局部密度</sub></td>
+    <td width="34%" colspan="2" align="center" valign="top"><strong>相关矩阵</strong><br><a href="assets/figure-atlas/Correlationmatrix.png"><img src="assets/figure-atlas/readme-cards/Correlationmatrix.png" width="280" alt="相关矩阵"></a><br><sub>多变量关系</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>雷达图</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png" width="280" alt="雷达图"></a><br><sub>少量对象多指标</sub></td>
   </tr>
   <tr>
-    <td width="33%" align="center" valign="top"><strong>分组相关矩阵</strong><br><a href="assets/figure-atlas/GroupCorrelationmatrix.png"><img src="assets/figure-atlas/readme-cards/GroupCorrelationmatrix.png" width="280" alt="分组相关矩阵"></a><br><sub>条件间相关结构</sub></td>
-    <td width="34%" align="center" valign="top"><strong>雷达图</strong><br><a href="assets/figure-atlas/radar.png"><img src="assets/figure-atlas/readme-cards/radar.png" width="280" alt="雷达图"></a><br><sub>少量对象多指标</sub></td>
-    <td width="33%" align="center" valign="top"><strong>山脊图</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png" width="280" alt="山脊图"></a><br><sub>多组分布迁移</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>山脊图</strong><br><a href="assets/figure-atlas/RidgePlot.png"><img src="assets/figure-atlas/readme-cards/RidgePlot.png" width="280" alt="山脊图"></a><br><sub>多组分布迁移</sub></td>
+    <td width="34%" colspan="2" align="center" valign="top"><strong>气泡散点图</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figure-atlas/readme-cards/bubble_scatter.png" width="280" alt="气泡散点图"></a><br><sub>二维关系与第三变量</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>相关气泡矩阵</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figure-atlas/readme-cards/correlation_bubble_matrix.png" width="280" alt="相关气泡矩阵"></a><br><sub>方向、强度与显著性</sub></td>
   </tr>
   <tr>
-    <td width="33%" align="center" valign="top"><strong>气泡散点图</strong><br><a href="assets/figures/BubbleScatter/bubble_scatter.png"><img src="assets/figure-atlas/readme-cards/bubble_scatter.png" width="280" alt="气泡散点图"></a><br><sub>二维关系与第三变量</sub></td>
-    <td width="34%" align="center" valign="top"><strong>相关气泡矩阵</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figure-atlas/readme-cards/correlation_bubble_matrix.png" width="280" alt="相关气泡矩阵"></a><br><sub>方向、强度与显著性</sub></td>
-    <td width="33%" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="280" alt="相关网络图"></a><br><sub>节点关系与社群结构</sub></td>
+    <td width="50%" colspan="3" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="390" alt="相关网络图"></a><br><sub>节点关系与社群结构</sub></td>
+    <td width="50%" colspan="3" align="center" valign="top"><strong>加权弦图</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="390" alt="加权弦图"></a><br><sub>跨领域连接、权重与整体结构</sub></td>
   </tr>
 </table>
 
@@ -237,7 +236,7 @@ git -C ~/.codex/skills/academic-data-visualization pull
 当前仓库基线：
 
 - **714 / 714** 条源分类归属完成可复现映射；
-- **36 / 36** 类生产图型均有真实脚本、PNG 与 manifest；
+- **37 / 37** 类生产图型均有真实脚本、PNG 与 manifest；
 - **90 / 90** 条触发边界用例判断正确；
 - **28 / 28** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
 - 注册表 Schema、24 类生成文档、别名冲突、资产映射与 README 摘要均由 CI 审计。

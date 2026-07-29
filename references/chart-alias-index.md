@@ -86,7 +86,7 @@
 | `chaotic-attractor-plot` | 混沌吸引子图 | Chaotic Attractor Plot | 无 | 三维、曲面与科学计算图 | 按需实现 |
 | `chart-and-table-composite-figure` | 图表—表格组合 | Chart and Table Composite Figure | 无 | 复合图与高级科研图形 | 按需实现 |
 | `chernoff-faces-plot` | Chernoff脸谱图 | Chernoff Faces Plot | 无 | 高维与多变量数据图 | 按需实现 |
-| `chord-diagram` | 弦图 | Chord Diagram | 无 | 网络与关系结构图、流程、迁移与流量图、医学、公共卫生与生命科学常用图 | 按需实现 |
+| `chord-diagram` | 弦图 | Chord Diagram | 无 | 网络与关系结构图、流程、迁移与流量图、医学、公共卫生与生命科学常用图 | 生产模板 |
 | `choropleth-map` | 分级设色地图 | Choropleth Map | 无 | 空间与地理数据图 | 按需实现 |
 | `circos-plot` | Circos图 | Circos Plot | 无 | 医学、公共卫生与生命科学常用图、复合图与高级科研图形 | 按需实现 |
 | `circular-hierarchy-plot` | 圆环层级图 | Circular Hierarchy Plot | 无 | 构成、比例与整体—部分关系图 | 可复用模式 |

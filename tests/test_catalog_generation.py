@@ -44,7 +44,7 @@ class CatalogGenerationTests(unittest.TestCase):
                 "<!-- chart-registry:summary:end -->",
                 1,
             )[0]
-            self.assertIn("36", block)
+            self.assertIn("37", block)
             self.assertNotIn("665", block)
             self.assertNotIn("714", block)
             self.assertIn(

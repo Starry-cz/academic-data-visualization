@@ -18,7 +18,7 @@
 |---|---|---|---|
 | `alluvial-diagram` | 流、节点或步骤 | source, target, value | 可复用模式 |
 | `causal-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `chord-diagram` | 节点或边 | source, target, weight | 按需实现 |
+| `chord-diagram` | 节点或边 | source, target, weight | 生产模板 |
 | `circular-packing` | 流、节点或步骤 | source, target, value | 可复用模式 |
 | `complex-process-mining` | 面板、体素或多维对象 | component_data | 按需实现 |
 | `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
@@ -55,7 +55,7 @@
 |---|---|---|---|
 | 冲积图 / Alluvial Diagram | `alluvial-diagram` | 阶段流向、流程与层级组成 | 可复用模式 |
 | 因果流程图 / Causal Flow Diagram | `causal-flow-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 按需实现 |
+| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 生产模板 |
 | 圆形打包图 / Circle Packing | `circular-packing` | 阶段流向、流程与层级组成 | 可复用模式 |
 | 复杂流程挖掘图 / Complex Process-mining Plot | `complex-process-mining` | 多证据整合、三维或高级结构 | 按需实现 |
 | CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
@@ -159,9 +159,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_template`
+- **可复用资产**：`assets/figures/ChordDiagram`
+- **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-network；co-occurrence-network；arc-diagram
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof

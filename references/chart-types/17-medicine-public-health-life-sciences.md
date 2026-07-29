@@ -22,7 +22,7 @@
 | `case-timeline` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
 | `cell-communication-network` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
 | `cell-composition-plot` | 细胞或空间点 | cell, feature, value | 可复用模式 |
-| `chord-diagram` | 节点或边 | source, target, weight | 按需实现 |
+| `chord-diagram` | 节点或边 | source, target, weight | 生产模板 |
 | `circos-plot` | 面板、体素或多维对象 | component_data | 按需实现 |
 | `colocalization-plot` | 图像、视野或样本 | image, measurement | 按需实现 |
 | `competing-risk-plot` | 受试者 | time, event, group | 按需实现 |
@@ -97,7 +97,7 @@
 | 病例时间轴 / Case Timeline | `case-timeline` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
 | 细胞通信网络图 / Cell Communication Network | `cell-communication-network` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
 | 细胞组成图 / Cell Composition Plot | `cell-composition-plot` | 细胞状态、表达与空间组学结构 | 可复用模式 |
-| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 按需实现 |
+| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 生产模板 |
 | Circos图 / Circos Plot | `circos-plot` | 多证据整合、三维或高级结构 | 按需实现 |
 | 共定位图 / Colocalization Plot | `colocalization-plot` | 图像结构、通道与空间定量 | 按需实现 |
 | 竞争风险图 / Competing Risk Plot | `competing-risk-plot` | 事件时间、生存概率与竞争结局 | 按需实现 |
@@ -339,9 +339,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_template`
+- **可复用资产**：`assets/figures/ChordDiagram`
+- **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-network；co-occurrence-network；arc-diagram
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof

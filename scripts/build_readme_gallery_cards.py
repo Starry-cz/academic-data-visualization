@@ -15,12 +15,10 @@ CARD_DIR = ATLAS_DIR / "readme-cards"
 # 近方形图以 3 列展示；横向图以 2 列展示。统一画布避免 README 两侧高度不齐。
 SQUARE_SPECS = (
     (ATLAS_DIR / "3Dheatmap.png", "3Dheatmap.png"),
-    (ATLAS_DIR / "density_heatmap.png", "density_heatmap.png"),
     (ATLAS_DIR / "PCA.png", "PCA.png"),
     (ATLAS_DIR / "auroc.png", "auroc.png"),
     (ATLAS_DIR / "CorrelationDensity.png", "CorrelationDensity.png"),
     (ATLAS_DIR / "Correlationmatrix.png", "Correlationmatrix.png"),
-    (ATLAS_DIR / "GroupCorrelationmatrix.png", "GroupCorrelationmatrix.png"),
     (ATLAS_DIR / "radar.png", "radar.png"),
     (ATLAS_DIR / "RidgePlot.png", "RidgePlot.png"),
     (ROOT / "assets" / "figures" / "BubbleScatter" / "bubble_scatter.png", "bubble_scatter.png"),
@@ -58,6 +56,12 @@ MATERIAL_SPECS = (
         "exafs_wavelet_map.png",
     ),
 )
+NETWORK_SPECS = (
+    (
+        ROOT / "assets" / "figures" / "ChordDiagram" / "chord_diagram.png",
+        "chord_diagram.png",
+    ),
+)
 
 SQUARE_CANVAS = (1800, 1800)
 WIDE_CANVAS = (1800, 1000)
@@ -90,6 +94,8 @@ def main() -> None:
     for source_path, output_name in WIDE_SPECS:
         rendered.append(build_card(source_path, output_name, WIDE_CANVAS))
     for source_path, output_name in MATERIAL_SPECS:
+        rendered.append(build_card(source_path, output_name, SQUARE_CANVAS))
+    for source_path, output_name in NETWORK_SPECS:
         rendered.append(build_card(source_path, output_name, SQUARE_CANVAS))
     print(f"Built {len(rendered)} README gallery cards in {CARD_DIR}")
 

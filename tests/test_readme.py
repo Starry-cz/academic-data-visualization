@@ -14,12 +14,10 @@ HTML_TARGET = re.compile(r"""(?:href|src)=["']([^"']+)["']""")
 CARD_DIR = ROOT / "assets" / "figure-atlas" / "readme-cards"
 SQUARE_CARDS = {
     "3Dheatmap.png",
-    "density_heatmap.png",
     "PCA.png",
     "auroc.png",
     "CorrelationDensity.png",
     "Correlationmatrix.png",
-    "GroupCorrelationmatrix.png",
     "radar.png",
     "RidgePlot.png",
     "bubble_scatter.png",
@@ -27,6 +25,7 @@ SQUARE_CARDS = {
     "correlation_network.png",
     "xps_peak_deconvolution.png",
     "exafs_wavelet_map.png",
+    "chord_diagram.png",
 }
 WIDE_CARDS = {
     "bar.png",
@@ -79,7 +78,7 @@ class ReadmeTests(unittest.TestCase):
         for name in README_NAMES:
             text = (ROOT / name).read_text(encoding="utf-8")
             self.assertIn("714 / 714", text)
-            self.assertIn("36 / 36", text)
+            self.assertIn("37 / 37", text)
             self.assertIn("90 / 90", text)
             self.assertNotIn("Figure_patterns-96", text)
             self.assertNotIn("**40 / 40**", text)
@@ -163,7 +162,7 @@ class ReadmeTests(unittest.TestCase):
                     f"{name} table {index}",
                 )
 
-    def test_gallery_uses_24_equal_canvas_cards(self) -> None:
+    def test_gallery_uses_23_equal_canvas_cards(self) -> None:
         self.assertEqual(
             {path.name for path in CARD_DIR.glob("*.png")},
             SQUARE_CARDS | WIDE_CARDS,

@@ -7559,13 +7559,16 @@
         "样本量或不确定性表达不足",
         "把相关或描述性结构误写为因果"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "production_template",
       "backends": [
-        "python",
-        "r"
+        "python"
       ],
-      "dependencies": [],
-      "asset_path": null,
+      "dependencies": [
+        "matplotlib",
+        "numpy",
+        "pandas"
+      ],
+      "asset_path": "assets/figures/ChordDiagram",
       "reuse_constraints": [
         "复用前核对数据结构、观测单位、统计语义和输出尺寸"
       ],

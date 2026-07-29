@@ -798,9 +798,9 @@
         "flow-migration",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "production_template",
       "registry_origin": "source_taxonomy",
-      "preview": null
+      "preview": "assets/figures/ChordDiagram/chord_diagram.png"
     },
     {
       "id": "choropleth-map",

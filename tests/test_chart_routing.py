@@ -60,6 +60,9 @@ class ChartRoutingTests(unittest.TestCase):
             with self.subTest(query=query):
                 self.assertEqual(resolve_chart_name(self.registry, query), chart_ids)
 
+    def test_chord_diagram_route(self) -> None:
+        self.assertEqual(resolve_chart_name(self.registry, "Chord Diagram"), ["chord-diagram"])
+
     def test_unknown_name_is_not_guessed(self) -> None:
         self.assertEqual(resolve_chart_name(self.registry, "不存在的万能神图"), [])
 
