@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Reordered the bilingual README around reader intent: task-based navigation now appears before installation, the hero links directly to all 22 retained figure examples, and quick start is split into install and prompt steps.
 - Rebuilt the Chinese and English README pages around an outcome-first quick start, verified capability boundaries, and a compact documentation map.
 - Replaced outdated `96`-pattern and `40 / 40` trigger claims with registry-backed `714 / 714`, `34 / 34`, and `88 / 88` evidence.
 - Restored the workflow hero to the top of the page and expanded the landing gallery to 22 production examples across distinct chart families.

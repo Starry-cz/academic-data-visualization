@@ -20,20 +20,33 @@
 </p>
 
 <p align="center">
-  <a href="#30-秒开始">快速开始</a> ·
+  <a href="#使用入口">使用入口</a> ·
+  <a href="#30-秒开始">30 秒开始</a> ·
+  <a href="#精选成图">22 张成图</a> ·
   <a href="#它如何工作">工作流程</a> ·
-  <a href="#能力范围">能力范围</a> ·
-  <a href="#精选成图">成图图鉴</a> ·
-  <a href="#配色系统">配色系统</a> ·
-  <a href="#文档导航">文档导航</a> ·
+  <a href="#能力范围">能力与边界</a> ·
   <a href="#质量证据">质量证据</a>
 </p>
 
 > **不是模板图库。** Skill 先判断研究问题、数据结构和投稿约束，再选择可辩护的图型；只有具备真实脚本、预览和 manifest 的资产才标记为生产模板。
 
+## 使用入口
+
+不必从头阅读。按照当前任务直接进入对应路径：
+
+<table width="100%" align="center">
+  <tr><th width="30%">你现在要做什么</th><th width="35%">直接入口</th><th width="35%">继续深入</th></tr>
+  <tr><td width="30%">第一次安装并完成一张图</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-秒开始">30 秒开始</a></td><td width="35%"><a href="#它如何工作">四阶段工作流</a></td></tr>
+  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">22 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
+  <tr><td width="30%">查找图型、别名与实现状态</td><td width="35%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a></td><td width="35%"><a href="references/chart-registry.yaml">规范化注册表</a></td></tr>
+  <tr><td width="30%">定义结论、版式与交付规格</td><td width="35%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td><td width="35%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
+  <tr><td width="30%">适配期刊、尺寸与导出</td><td width="35%"><a href="references/journal-intel.md">期刊情报</a> · <a href="references/journal-specs.md">期刊规格</a></td><td width="35%"><a href="references/export-specs.md">导出规格</a></td></tr>
+  <tr><td width="30%">复用资产、配色并完成 QA</td><td width="35%"><a href="references/asset-reuse-protocol.md">资产复用协议</a> · <a href="references/color-palettes.md">配色指南</a></td><td width="35%"><a href="references/palette-library.json">配色注册表</a> · <a href="references/checklist.md">四轮 QA 清单</a></td></tr>
+</table>
+
 ## 30 秒开始
 
-安装完整 Skill，而不是只复制 `SKILL.md`：
+**1. 安装完整 Skill。** 不要只复制 `SKILL.md`，运行时还需要 `references/`、`scripts/` 与 `assets/`。
 
 ```powershell
 # Windows PowerShell · Codex
@@ -45,7 +58,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USE
 git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
 ```
 
-然后直接描述研究问题、数据与交付规格：
+**2. 直接描述研究问题、数据与交付规格。**
 
 ```text
 使用 academic-data-visualization 分析 experiment.csv。
@@ -54,20 +67,20 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 灰度校样和 QA 报告。
 ```
 
-## 为什么使用它
+## 为什么值得使用
 
 <table width="100%" align="center">
   <tr>
-    <th width="25%">结论驱动</th>
-    <th width="25%">真实能力边界</th>
-    <th width="25%">可复用生产资产</th>
-    <th width="25%">投稿前闭环</th>
+    <th width="25%">科学结论先行</th>
+    <th width="25%">实现状态透明</th>
+    <th width="25%">真实资产复用</th>
+    <th width="25%">投稿前验证</th>
   </tr>
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先判断读者需要比较、关联还是决策，再选择图型</td>
     <td width="25%">665 个规范化图型均标记真实实现状态，不把“已登记”冒充“已有模板”</td>
     <td width="25%">34 类资产具备脚本、预览和 manifest，可追溯复用</td>
-    <td width="25%">同时检查反模式、代码与导出、科学逻辑、最终渲染</td>
+    <td width="25%">同时检查反模式、代码与导出、科学逻辑和最终渲染结果</td>
   </tr>
 </table>
 
@@ -188,18 +201,6 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   <tr><td width="50%">不确定该选什么图，需要基于数据结构论证</td><td width="50%">没有定量面板的纯插画式机制图</td></tr>
   <tr><td width="50%">重绘旧图、统一多面板语言、适配目标期刊</td><td width="50%">与绘图无关的统计分析、清洗或文献综述</td></tr>
   <tr><td width="50%">投稿前检查裁切、遮挡、灰度、误导编码和导出</td><td width="50%">要求用普通图假装地图、基因组轨道或三维体数据</td></tr>
-</table>
-
-## 文档导航
-
-<table width="100%" align="center">
-  <tr><th width="50%">你要解决的问题</th><th width="50%">入口</th></tr>
-  <tr><td width="50%">查找图型、别名与真实实现状态</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a> · <a href="references/chart-registry.yaml">注册表</a></td></tr>
-  <tr><td width="50%">定义输入、结论与交付规格</td><td width="50%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td></tr>
-  <tr><td width="50%">组织多面板与视觉层级</td><td width="50%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
-  <tr><td width="50%">适配期刊尺寸与导出</td><td width="50%"><a href="references/journal-intel.md">期刊情报</a> · <a href="references/journal-specs.md">期刊规格</a> · <a href="references/export-specs.md">导出规格</a></td></tr>
-  <tr><td width="50%">选择或扩展配色</td><td width="50%"><a href="references/color-palettes.md">配色指南</a> · <a href="references/palette-library.json">配色注册表</a></td></tr>
-  <tr><td width="50%">复用资产并完成投稿前检查</td><td width="50%"><a href="references/asset-reuse-protocol.md">资产复用协议</a> · <a href="references/checklist.md">四轮 QA 清单</a></td></tr>
 </table>
 
 ## 更多安装方式

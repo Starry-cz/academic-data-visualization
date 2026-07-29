@@ -110,6 +110,22 @@ class ReadmeTests(unittest.TestCase):
         self.assertIn("从研究问题到投稿级图表", chinese)
         self.assertIn("From research question to publication-ready figure", english)
 
+    def test_reader_entry_points_appear_before_installation(self) -> None:
+        """首屏先帮助读者选择路径，再进入安装和详细能力说明。"""
+        expected = {
+            "README.md": ("## 使用入口", "## 30 秒开始", "## 为什么值得使用"),
+            "README_EN.md": (
+                "## Start here",
+                "## 30-second start",
+                "## Why it is different",
+            ),
+        }
+        for name, headings in expected.items():
+            text = (ROOT / name).read_text(encoding="utf-8")
+            self.assertEqual(text.count(headings[0]), 1, name)
+            self.assertLess(text.index(headings[0]), text.index(headings[1]), name)
+            self.assertLess(text.index(headings[1]), text.index(headings[2]), name)
+
     def test_all_table_cells_declare_widths(self) -> None:
         for name in README_NAMES:
             text = (ROOT / name).read_text(encoding="utf-8")

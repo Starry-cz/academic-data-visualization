@@ -20,20 +20,33 @@
 </p>
 
 <p align="center">
-  <a href="#30-second-start">Quick start</a> ·
+  <a href="#start-here">Start here</a> ·
+  <a href="#30-second-start">30-second start</a> ·
+  <a href="#selected-figures">22 figures</a> ·
   <a href="#how-it-works">Workflow</a> ·
-  <a href="#capability-scope">Scope</a> ·
-  <a href="#selected-figures">Figure gallery</a> ·
-  <a href="#colour-system">Colour system</a> ·
-  <a href="#documentation-map">Docs</a> ·
+  <a href="#capability-scope">Capabilities</a> ·
   <a href="#quality-evidence">Quality</a>
 </p>
 
 > **Not a template gallery.** The Skill evaluates the research question, data structure, and submission constraints before selecting a defensible chart. Only assets with real scripts, previews, and manifests are marked as production templates.
 
+## Start here
+
+You do not need to read the README from top to bottom. Enter at the path that matches your task:
+
+<table width="100%" align="center">
+  <tr><th width="30%">What do you need?</th><th width="35%">Start here</th><th width="35%">Go deeper</th></tr>
+  <tr><td width="30%">Install the Skill and make a first figure</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-second-start">30-second start</a></td><td width="35%"><a href="#how-it-works">Four-stage workflow</a></td></tr>
+  <tr><td width="30%">Inspect real outputs and visual styles</td><td width="35%"><a href="#selected-figures">22 selected figures</a></td><td width="35%"><a href="assets/figures/">Production assets</a> · <a href="#colour-system">Colour system</a></td></tr>
+  <tr><td width="30%">Find a chart, alias, or implementation state</td><td width="35%"><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a></td><td width="35%"><a href="references/chart-registry.yaml">Canonical registry</a></td></tr>
+  <tr><td width="30%">Define the claim, layout, and deliverables</td><td width="35%"><a href="references/figure-contract.md">Figure contract</a> · <a href="references/figure-design-brief.md">Design brief</a></td><td width="35%"><a href="references/multipanel-layout.md">Multipanel layout</a> · <a href="references/visual-style.md">Visual style</a></td></tr>
+  <tr><td width="30%">Match a journal, size, and export format</td><td width="35%"><a href="references/journal-intel.md">Journal intelligence</a> · <a href="references/journal-specs.md">Journal specs</a></td><td width="35%"><a href="references/export-specs.md">Export specs</a></td></tr>
+  <tr><td width="30%">Reuse assets and colour, then complete QA</td><td width="35%"><a href="references/asset-reuse-protocol.md">Asset reuse protocol</a> · <a href="references/color-palettes.md">Colour guide</a></td><td width="35%"><a href="references/palette-library.json">Palette registry</a> · <a href="references/checklist.md">Four-pass QA</a></td></tr>
+</table>
+
 ## 30-second start
 
-Install the complete Skill rather than copying `SKILL.md` alone:
+**1. Install the complete Skill.** Do not copy `SKILL.md` alone: the runtime also needs `references/`, `scripts/`, and `assets/`.
 
 ```powershell
 # Windows PowerShell · Codex
@@ -45,7 +58,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USE
 git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
 ```
 
-Then describe the research question, data, and deliverables:
+**2. Describe the research question, data, and deliverables.**
 
 ```text
 Use academic-data-visualization to analyse experiment.csv.
@@ -55,20 +68,20 @@ Target a two-column manuscript figure and deliver an editable vector master, a 4
 a grayscale proof, and a QA report.
 ```
 
-## Why use it
+## Why it is different
 
 <table width="100%" align="center">
   <tr>
-    <th width="25%">Claim first</th>
-    <th width="25%">Honest boundaries</th>
-    <th width="25%">Reusable assets</th>
-    <th width="25%">Submission-ready QA</th>
+    <th width="25%">Scientific claim first</th>
+    <th width="25%">Transparent status</th>
+    <th width="25%">Real asset reuse</th>
+    <th width="25%">Pre-submission verification</th>
   </tr>
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Decide what readers must compare, relate, or judge before choosing a chart</td>
     <td width="25%">All 665 canonical records expose their real implementation state</td>
     <td width="25%">34 asset families include scripts, previews, and manifests</td>
-    <td width="25%">Review anti-patterns, code and export, scientific logic, and final rendering</td>
+    <td width="25%">Review anti-patterns, code and export, scientific logic, and the final rendering</td>
   </tr>
 </table>
 
@@ -189,18 +202,6 @@ See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.js
   <tr><td width="50%">Choosing a defensible chart from the real data structure</td><td width="50%">Illustration-only mechanisms with no quantitative panels</td></tr>
   <tr><td width="50%">Rebuilding old figures, unifying panels, or adapting to a journal</td><td width="50%">Statistical analysis, cleaning, or literature review with no figure goal</td></tr>
   <tr><td width="50%">Pre-submission checks for clipping, overlap, grayscale, encodings, and export</td><td width="50%">Pretending that a generic chart is a map, genome track, or 3D volume</td></tr>
-</table>
-
-## Documentation map
-
-<table width="100%" align="center">
-  <tr><th width="50%">Need</th><th width="50%">Start here</th></tr>
-  <tr><td width="50%">Find a chart, alias, and real implementation state</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a> · <a href="references/chart-registry.yaml">Registry</a></td></tr>
-  <tr><td width="50%">Define inputs, claims, and deliverables</td><td width="50%"><a href="references/figure-contract.md">Figure contract</a> · <a href="references/figure-design-brief.md">Design brief</a></td></tr>
-  <tr><td width="50%">Organise multipanel hierarchy</td><td width="50%"><a href="references/multipanel-layout.md">Multipanel layout</a> · <a href="references/visual-style.md">Visual style</a></td></tr>
-  <tr><td width="50%">Match journal dimensions and export</td><td width="50%"><a href="references/journal-intel.md">Journal intelligence</a> · <a href="references/journal-specs.md">Journal specs</a> · <a href="references/export-specs.md">Export specs</a></td></tr>
-  <tr><td width="50%">Select or extend a palette</td><td width="50%"><a href="references/color-palettes.md">Colour guide</a> · <a href="references/palette-library.json">Palette registry</a></td></tr>
-  <tr><td width="50%">Reuse assets and run final checks</td><td width="50%"><a href="references/asset-reuse-protocol.md">Asset reuse protocol</a> · <a href="references/checklist.md">Four-pass QA checklist</a></td></tr>
 </table>
 
 ## More installation options
