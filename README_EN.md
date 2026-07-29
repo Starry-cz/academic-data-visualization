@@ -12,9 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Taxonomy-24_categories-4573B4?style=flat-square" alt="24-category chart taxonomy"></a>
   <a href="references/chart-registry.yaml"><img src="https://img.shields.io/badge/Registry-665_canonical-6B92C3?style=flat-square" alt="665 canonical chart records"></a>
-  <a href="#capability-scope"><img src="https://img.shields.io/badge/Source_coverage-714%2F714-73C79E?style=flat-square" alt="714/714 source memberships mapped"></a>
+  <a href="#capability-scope"><img src="https://img.shields.io/badge/Coverage-714%2F714-73C79E?style=flat-square" alt="714/714 source memberships mapped"></a>
   <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 verified production assets"></a>
   <a href="#quality-evidence"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="Four-pass QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>

@@ -12,9 +12,8 @@
 </p>
 
 <p align="center">
-  <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Taxonomy-24_categories-4573B4?style=flat-square" alt="24 类图型体系"></a>
   <a href="references/chart-registry.yaml"><img src="https://img.shields.io/badge/Registry-665_canonical-6B92C3?style=flat-square" alt="665 个规范化图型"></a>
-  <a href="#能力范围"><img src="https://img.shields.io/badge/Source_coverage-714%2F714-73C79E?style=flat-square" alt="714/714 条源分类归属已映射"></a>
+  <a href="#能力范围"><img src="https://img.shields.io/badge/Coverage-714%2F714-73C79E?style=flat-square" alt="714/714 条源分类归属已映射"></a>
   <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 类已核验生产资产"></a>
   <a href="#质量证据"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="四轮 QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
