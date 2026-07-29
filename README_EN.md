@@ -119,15 +119,6 @@ Coverage spans 24 research-task families, including comparison, trend, distribut
 
 The landing page shows 24 verified examples across distinct chart families. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for complete implementation states.
 
-### Materials characterization and spectroscopy · 2 × 1
-
-<table width="100%" align="center">
-  <tr>
-    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>XPS peak deconvolution</strong><br><a href="assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"><img src="assets/figure-atlas/readme-cards/xps_peak_deconvolution.png" width="390" alt="XPS peak deconvolution plot"></a><br><sub>Observed spectrum, total fit, background, and chemical components</sub></td>
-    <td width="50%" align="center" valign="top"><strong>EXAFS wavelet-transform map</strong><br><a href="assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"><img src="assets/figure-atlas/readme-cards/exafs_wavelet_map.png" width="390" alt="EXAFS wavelet-transform map"></a><br><sub>Joint k–R structure with a quantitative 2D projection</sub></td>
-  </tr>
-</table>
-
 ### Relationships, ordination, diagnostics, and high-dimensional structure · 3 × 4
 
 <table width="100%" align="center">
@@ -153,7 +144,7 @@ The landing page shows 24 verified examples across distinct chart families. Ever
   </tr>
 </table>
 
-### Comparison, distribution, trend, composition, and space · 2 × 5
+### Comparison, distribution, trend, composition, space, and materials · 2 × 6
 
 <table width="100%" align="center">
   <tr>
@@ -175,6 +166,10 @@ The landing page shows 24 verified examples across distinct chart families. Ever
   <tr>
     <td width="50%" align="center" valign="top"><strong>Stacked area</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figure-atlas/readme-cards/stacked_area.png" width="390" alt="Stacked area chart"></a><br><sub>Composition over time</sub></td>
     <td width="50%" align="center" valign="top"><strong>Geographic bubble map</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figure-atlas/readme-cards/geographic_bubble_map.png" width="390" alt="Geographic bubble map"></a><br><sub>Location and magnitude</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>XPS peak deconvolution</strong><br><a href="assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"><img src="assets/figure-atlas/readme-cards/xps_peak_deconvolution.png" width="390" alt="XPS peak deconvolution plot"></a><br><sub>Observed spectrum, total fit, background, and chemical components</sub></td>
+    <td width="50%" align="center" valign="top"><strong>EXAFS wavelet-transform map</strong><br><a href="assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"><img src="assets/figure-atlas/readme-cards/exafs_wavelet_map.png" width="390" alt="EXAFS wavelet-transform map"></a><br><sub>Joint k–R structure with a quantitative 2D projection</sub></td>
   </tr>
 </table>
 

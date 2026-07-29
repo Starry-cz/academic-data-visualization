@@ -118,15 +118,6 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 首页按画幅展示 24 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
 
-### 材料表征与谱学 · 2 × 1
-
-<table width="100%" align="center">
-  <tr>
-    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>XPS 峰拟合分峰图</strong><br><a href="assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"><img src="assets/figure-atlas/readme-cards/xps_peak_deconvolution.png" width="390" alt="XPS 峰拟合分峰图"></a><br><sub>观测谱、总拟合、背景与化学组分</sub></td>
-    <td width="50%" align="center" valign="top"><strong>EXAFS 小波变换图</strong><br><a href="assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"><img src="assets/figure-atlas/readme-cards/exafs_wavelet_map.png" width="390" alt="EXAFS 小波变换图"></a><br><sub>k–R 联合结构与二维定量投影</sub></td>
-  </tr>
-</table>
-
 ### 关系、降维、诊断与高维结构 · 3 × 4
 
 <table width="100%" align="center">
@@ -152,7 +143,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
   </tr>
 </table>
 
-### 比较、分布、趋势、组成与空间 · 2 × 5
+### 比较、分布、趋势、组成、空间与材料表征 · 2 × 6
 
 <table width="100%" align="center">
   <tr>
@@ -174,6 +165,10 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
   <tr>
     <td width="50%" align="center" valign="top"><strong>堆叠面积图</strong><br><a href="assets/figures/StackedArea/stacked_area.png"><img src="assets/figure-atlas/readme-cards/stacked_area.png" width="390" alt="堆叠面积图"></a><br><sub>组成随时间变化</sub></td>
     <td width="50%" align="center" valign="top"><strong>地理气泡地图</strong><br><a href="assets/figures/GeographicBubbleMap/geographic_bubble_map.png"><img src="assets/figure-atlas/readme-cards/geographic_bubble_map.png" width="390" alt="地理气泡地图"></a><br><sub>空间位置与规模编码</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>XPS 峰拟合分峰图</strong><br><a href="assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"><img src="assets/figure-atlas/readme-cards/xps_peak_deconvolution.png" width="390" alt="XPS 峰拟合分峰图"></a><br><sub>观测谱、总拟合、背景与化学组分</sub></td>
+    <td width="50%" align="center" valign="top"><strong>EXAFS 小波变换图</strong><br><a href="assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"><img src="assets/figure-atlas/readme-cards/exafs_wavelet_map.png" width="390" alt="EXAFS 小波变换图"></a><br><sub>k–R 联合结构与二维定量投影</sub></td>
   </tr>
 </table>
 
