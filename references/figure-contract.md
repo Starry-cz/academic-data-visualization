@@ -40,24 +40,30 @@ Classify the figure into one of four archetypes. The archetype determines layout
 
 If unsure, default to `quantitative grid`. Most CNS figures fall into this archetype.
 
-### 4. Journal / Export Contract
+### 4. Delivery / Export Contract
 
 Set the target before styling:
-- **Target journal:** [journal name or "Nature-family standard"]
-- **Layout:** single-column (89mm) or double-column (183mm)
-- **Export format:** editable vector master (PDF/SVG) + 450dpi RGB PNG/TIFF proof
-- **Color mode:** RGB
-- **Font:** Arial/Helvetica, ≥5pt at print size
+- **Primary profile:** [`journal_print` / `keynote_screen` / `report_web` / `poster_large`]
+- **Target:** [journal, venue, report, product launch, or screen]
+- **Canvas:** [physical width for print, exact pixels for screen]
+- **Export format:** [editable vector master + profile-specific raster proof]
+- **Colour mode:** [normally RGB unless the target explicitly requires otherwise]
+- **Font:** [target-safe family and verified final-size range]
+
+Read `delivery-profiles.md`. Do not apply manuscript typography or DPI rules to a keynote chart, and do not apply launch-style simplification to a journal figure.
 
 ### 5. Review Risk Assessment
 
 Identify what a reviewer might challenge before they see it:
 
 - **Statistics:** Are statistical tests clearly defined? Are error bars labeled (SD/SEM/CI)? Are p-values reported with exact values?
-- **Sample size:** Is n clearly stated? Are individual data points visible for small n (<10)?
+- **Sample size:** Is `n` clearly defined as independent experimental units rather than technical replicates? Are individual data points visible for small groups?
+- **Inference:** Does the visual or headline imply causality, superiority, or generalisation beyond the design and uncertainty?
 - **Color accessibility:** Is the figure interpretable in greyscale? Are red-green only pairs avoided?
 - **Data traceability:** Can every data point be traced to source data?
 - **Image integrity:** For microscopy/blot images — are scale bars present? Are contrast adjustments documented?
+- **Model integrity:** For ML figures — are split, leakage controls, resampling unit, uncertainty, calibration, and external validation represented when relevant?
+- **Screen accessibility:** For digital delivery — do text and essential graphical objects meet contrast targets, and is alt text available?
 
 Flag any risks explicitly. A flagged risk is a checklist item; an unflagged risk becomes a reviewer comment.
 

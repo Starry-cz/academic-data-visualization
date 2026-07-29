@@ -5,17 +5,15 @@ These are mistakes that signal "not designed" to reviewers, regardless of the sp
 ## Default Color Palettes
 
 ```
-❌ matplotlib tab10 / tab20 default colors
-❌ ggplot2 default hue palette
-❌ Excel default color set
+⚠️ matplotlib / seaborn / ggplot2 / Excel defaults used without reviewing semantics, contrast, and grayscale
 ❌ jet / rainbow colormap for continuous data
 
-✅ Custom hex color palette (see color-palettes.md)
-✅ Semantic colors: green = treatment, purple = control, grey = background
+✅ A documented palette selected for the variable type and viewing context (custom hex is not automatically better)
+✅ Semantic colours whose roles are declared for this study and remain stable across panels
 ✅ Perceptually uniform sequential colormaps (viridis, cividis, scico)
 ```
 
-**Why reviewers flag this:** Default palettes are immediately recognizable. They communicate that the author didn't iterate on the figure's design. Jet/rainbow colormaps have non-monotonic luminance, distorting perceived data patterns.
+**Why reviewers flag this:** An unreviewed palette can obscure ordering, fail in grayscale, or assign inconsistent meaning. Jet/rainbow maps have non-monotonic luminance and can distort perceived patterns. A default palette may be retained only after it passes the same semantic, contrast, colour-vision, and grayscale review as a custom one.
 
 ## Over-Decorated Axes
 
@@ -103,4 +101,56 @@ These are mistakes that signal "not designed" to reviewers, regardless of the sp
 ✅ Clarify error bar type in deliverable notes
 ✅ Prefer exact p-values; define asterisk thresholds if used
 ✅ Label log-scaled axes as "log10(Expression)" not just "Expression"
+```
+
+## Unit-of-Analysis and Inference Traps
+
+```
+❌ Treating cells, images, repeated time points, or CV folds as independent biological samples
+❌ Reporting only significance stars while hiding effect size and uncertainty
+❌ Claiming causality, superiority, or generalisation from a design that supports only association
+❌ Showing training performance as if it were held-out performance
+
+✅ Define n and the independent experimental unit in the caption or notes
+✅ Prioritise effect size and confidence intervals; retain exact p-values where useful
+✅ Match the headline and annotation language to the study design
+✅ Separate train/validation/test results and report resampling variation
+```
+
+## Axis and Transformation Traps
+
+```
+❌ Truncated bar baselines, hidden axis breaks, or aspect ratios chosen to magnify slopes
+❌ Diverging colour maps centred at the sample midpoint rather than a meaningful scientific reference
+❌ Log transformations applied to zero/negative values without an explicit rule
+❌ Independent facet scales that invite direct visual comparison without clear labels
+
+✅ Start bars at zero; make any justified break unmistakable
+✅ Centre diverging scales on a declared reference such as zero or a clinical threshold
+✅ Record transformations and show interpretable tick labels
+✅ Share scales for direct comparisons or label free scales prominently
+```
+
+## Image and Processing Integrity
+
+```
+❌ Selective contrast, smoothing, cropping, or removal applied to only one comparison group
+❌ Microscopy without a scale bar or inconsistent display ranges across comparable images
+❌ Undisclosed lane splicing or omitted original image evidence
+
+✅ Apply documented global processing consistently within a comparison
+✅ Preserve scale bars, acquisition context, and identical LUT/range where comparison requires it
+✅ Disclose splices and retain traceable source images
+```
+
+## Product-Launch and Keynote Traps
+
+```
+❌ Copying a dense journal panel onto a 16:9 screen
+❌ Replacing uncertainty, denominators, or baselines with a marketing slogan
+❌ Using motion, rescaling, or selective reveals to exaggerate improvement
+
+✅ Derive a screen-specific view from the same analysis output
+✅ Use one supported takeaway, direct labels, large type, and a visible source/method note
+✅ Keep scales and semantic mappings stable across animated frames
 ```

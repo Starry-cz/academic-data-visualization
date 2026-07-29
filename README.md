@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <strong>从研究问题到投稿级图表</strong><br>
-  <sub>先理解数据与论证目标，再完成选图、绘制、审查和多格式交付。</sub>
+  <strong>从研究问题到顶刊与发布场景级数据图</strong><br>
+  <sub>同一份可信证据，分别适配论文近距阅读、演讲大屏与产品发布场景。</sub>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@
   <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">22 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
   <tr><td width="30%">查找图型、别名与实现状态</td><td width="35%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a></td><td width="35%"><a href="references/chart-registry.yaml">规范化注册表</a></td></tr>
   <tr><td width="30%">定义结论、版式与交付规格</td><td width="35%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td><td width="35%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
-  <tr><td width="30%">适配期刊、尺寸与导出</td><td width="35%"><a href="references/journal-intel.md">期刊情报</a> · <a href="references/journal-specs.md">期刊规格</a></td><td width="35%"><a href="references/export-specs.md">导出规格</a></td></tr>
+  <tr><td width="30%">适配期刊、演讲或发布会</td><td width="35%"><a href="references/delivery-profiles.md">交付场景</a> · <a href="references/journal-specs.md">期刊规格</a></td><td width="35%"><a href="references/export-specs.md">导出规格</a></td></tr>
   <tr><td width="30%">复用资产、配色并完成 QA</td><td width="35%"><a href="references/asset-reuse-protocol.md">资产复用协议</a> · <a href="references/color-palettes.md">配色指南</a></td><td width="35%"><a href="references/palette-library.json">配色注册表</a> · <a href="references/checklist.md">四轮 QA 清单</a></td></tr>
 </table>
 
@@ -63,7 +63,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 ```text
 使用 academic-data-visualization 分析 experiment.csv。
 我要比较三种处理在四个时间点的变化。请先检查样本量、分布、缺失值和重复测量结构，
-再论证图型与多面板方案；目标是双栏论文主图，交付可编辑矢量文件、450 dpi 校样、
+再论证图型与多面板方案；目标是双栏论文主图，交付可编辑矢量文件、符合目标期刊的 RGB 校样、
 灰度校样和 QA 报告。
 ```
 
@@ -90,7 +90,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr><th width="20%">阶段</th><th width="60%">关键动作</th><th width="20%">产出</th></tr>
-  <tr><td width="20%"><strong>1. 定义</strong></td><td width="60%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">明确结论、观测单位、变量、依赖结构和目标期刊</td><td width="20%"><a href="references/figure-contract.md">图表契约</a></td></tr>
+  <tr><td width="20%"><strong>1. 定义</strong></td><td width="60%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">明确结论、观测单位、变量、依赖结构和交付场景</td><td width="20%"><a href="references/figure-contract.md">图表契约</a></td></tr>
   <tr><td width="20%"><strong>2. 论证</strong></td><td width="60%">剖析样本量、分布、缺失、异常值与分组，比较候选图型</td><td width="20%">图型理由与风险</td></tr>
   <tr><td width="20%"><strong>3. 实现</strong></td><td width="60%">路由生产模板、可复用模式或按需实现，统一面板与配色</td><td width="20%">Python / R 与矢量主文件</td></tr>
   <tr><td width="20%"><strong>4. 验证</strong></td><td width="60%">程序检查、最终尺寸 RGB 复核、灰度复核和导出审查</td><td width="20%">校样与 QA 报告</td></tr>
@@ -99,7 +99,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 ## 它能帮你完成什么
 
 <!-- chart-registry:summary:start -->
-Skill 把研究问题、数据结构和期刊约束转换成一条可执行、可审查的成图路径；你不需要先从长长的图名清单里自行选择。
+Skill 把研究问题、数据结构和交付约束转换成一条可执行、可审查的成图路径；你不需要先从长长的图名清单里自行选择。
 
 <table width="100%" align="center">
   <tr><th width="28%">你的情况</th><th width="44%">Skill 会怎么做</th><th width="28%">你会得到什么</th></tr>
@@ -107,6 +107,7 @@ Skill 把研究问题、数据结构和期刊约束转换成一条可执行、�
   <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 34 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
   <tr><td width="28%"><strong>需要统一多面板或旧图</strong></td><td width="44%">统一物理尺寸、字体、配色、图例与面板层级</td><td width="28%">符合期刊尺寸的主图或补充图</td></tr>
   <tr><td width="28%"><strong>正在准备投稿</strong></td><td width="44%">依次检查反模式、代码与导出、科学逻辑和最终渲染</td><td width="28%">RGB、灰度校样与 QA 报告</td></tr>
+  <tr><td width="28%"><strong>需要演讲或产品发布数据图</strong></td><td width="44%">从同一分析结果派生 16:9 远距阅读版本，保留基线、不确定性与来源</td><td width="28%">SVG/PDF、1080p/4K 校样与替代文本</td></tr>
   <tr><td width="28%"><strong>需要专业领域图型</strong></td><td width="44%">使用真实专业实现，不用外形相似的普通图冒充</td><td width="28%">依赖、限制与替代方案说明</td></tr>
 </table>
 
@@ -188,7 +189,7 @@ Skill 把研究问题、数据结构和期刊约束转换成一条可执行、�
 
 <table width="100%" align="center">
   <tr><th width="50%">适合</th><th width="50%">不适合</th></tr>
-  <tr><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">论文主图、补充图、学位论文和科研报告</td><td width="50%">交互式仪表盘或 Web 数据产品</td></tr>
+  <tr><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">论文主图、补充图、学术演讲和产品发布数据图</td><td width="50%">交互式仪表盘、Web 数据产品或完整幻灯片设计</td></tr>
   <tr><td width="50%">不确定该选什么图，需要基于数据结构论证</td><td width="50%">没有定量面板的纯插画式机制图</td></tr>
   <tr><td width="50%">重绘旧图、统一多面板语言、适配目标期刊</td><td width="50%">与绘图无关的统计分析、清洗或文献综述</td></tr>
   <tr><td width="50%">投稿前检查裁切、遮挡、灰度、误导编码和导出</td><td width="50%">要求用普通图假装地图、基因组轨道或三维体数据</td></tr>
@@ -233,8 +234,8 @@ git -C ~/.codex/skills/academic-data-visualization pull
 
 - **714 / 714** 条源分类归属完成可复现映射；
 - **34 / 34** 类生产图型均有真实脚本、PNG 与 manifest；
-- **88 / 88** 条触发边界用例判断正确；
-- **26 / 26** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
+- **90 / 90** 条触发边界用例判断正确；
+- **28 / 28** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
 - 注册表 Schema、24 类生成文档、别名冲突、资产映射与 README 摘要均由 CI 审计。
 
 ```bash

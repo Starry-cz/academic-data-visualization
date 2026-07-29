@@ -208,13 +208,19 @@ def render_readme_summary(registry: dict, english: bool) -> str:
                 "RGB and grayscale proofs plus a QA report",
             ),
             (
+                "Need a keynote or product-launch chart",
+                "Derive a 16:9 distant-reading view from the same analysis while preserving "
+                "baselines, uncertainty, and source",
+                "SVG/PDF, 1080p/4K proofs, and alt text",
+            ),
+            (
                 "Need a specialist chart",
                 "Use a genuine domain implementation instead of a generic visual look-alike",
                 "Dependencies, limitations, and alternatives",
             ),
         ]
         intro = (
-            "The Skill turns a research question, data structure, and journal constraints into "
+            "The Skill turns a research question, data structure, and delivery constraints into "
             "a defensible figure workflow; you do not need to choose from a long list of chart names."
         )
         footer = (
@@ -247,13 +253,18 @@ def render_readme_summary(registry: dict, english: bool) -> str:
                 "RGB、灰度校样与 QA 报告",
             ),
             (
+                "需要演讲或产品发布数据图",
+                "从同一分析结果派生 16:9 远距阅读版本，保留基线、不确定性与来源",
+                "SVG/PDF、1080p/4K 校样与替代文本",
+            ),
+            (
                 "需要专业领域图型",
                 "使用真实专业实现，不用外形相似的普通图冒充",
                 "依赖、限制与替代方案说明",
             ),
         ]
         intro = (
-            "Skill 把研究问题、数据结构和期刊约束转换成一条可执行、可审查的成图路径；"
+            "Skill 把研究问题、数据结构和交付约束转换成一条可执行、可审查的成图路径；"
             "你不需要先从长长的图名清单里自行选择。"
         )
         footer = (

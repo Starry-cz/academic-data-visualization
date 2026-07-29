@@ -78,7 +78,7 @@ class ReadmeTests(unittest.TestCase):
             text = (ROOT / name).read_text(encoding="utf-8")
             self.assertIn("714 / 714", text)
             self.assertIn("34 / 34", text)
-            self.assertIn("88 / 88", text)
+            self.assertIn("90 / 90", text)
             self.assertNotIn("Figure_patterns-96", text)
             self.assertNotIn("**40 / 40**", text)
 
@@ -110,7 +110,7 @@ class ReadmeTests(unittest.TestCase):
                 text.index("academic-data-visualization-workflow-v5.png"),
                 text.index("From research question")
                 if name == "README_EN.md"
-                else text.index("从研究问题到投稿级图表"),
+                else text.index("从研究问题到顶刊与发布场景级数据图"),
             )
 
     def test_language_switch_defaults_to_chinese(self) -> None:
@@ -124,8 +124,8 @@ class ReadmeTests(unittest.TestCase):
             '<a href="README.md">简体中文</a> · <strong>English</strong>',
             english,
         )
-        self.assertIn("从研究问题到投稿级图表", chinese)
-        self.assertIn("From research question to publication-ready figure", english)
+        self.assertIn("从研究问题到顶刊与发布场景级数据图", chinese)
+        self.assertIn("From research question to journal- and launch-ready data graphics", english)
 
     def test_reader_entry_points_appear_before_installation(self) -> None:
         """首屏先帮助读者选择路径，再进入安装和详细能力说明。"""

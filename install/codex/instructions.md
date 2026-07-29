@@ -1,8 +1,8 @@
 # Academic Data Visualization Instructions for Codex
-# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-28 12:34 UTC
+# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-29 11:29 UTC
 
 # Academic Data Visualization Portable Core Rules
-# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-28 12:34 UTC
+# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-29 11:29 UTC
 # These rules work across Claude Code, Codex, Cursor, and Copilot.
 
 ## Advisor Workflow

@@ -1,7 +1,7 @@
 ---
 name: academic-data-visualization
 description: >-
-  Create, revise, audit, and export publication-grade scientific figures in Python or R for Nature, Cell, Science, IEEE, Elsevier, PNAS, and Chinese journals. Use for 论文配图、科研绘图、学术图表、数据可视化、选图建议、图表重绘、多面板排版、投稿前审查、色盲安全配色、显著性标注、矢量导出, or when the user provides data or an existing figure and asks how it should be shown. Profile the data and clarify the scientific claim before plotting; actively intercept misleading chart choices; render and visually inspect the final-size proof before delivery. Do not use for interactive dashboards, presentation slides, illustration-first schematics, literature reviews, or statistical analysis with no figure-making intent.
+  Create, revise, audit, and export evidence-faithful scientific and high-stakes presentation charts in Python or R for Nature, Cell, Science, IEEE, Elsevier, PNAS, Chinese journals, conferences, and product launches. Use for 论文配图、科研绘图、学术图表、数据可视化、选图建议、图表重绘、多面板排版、投稿前审查、色盲安全配色、显著性标注、矢量导出、发布会数据图、演讲图表, or when the user provides data or an existing figure and asks how it should be shown. Profile the data, define the unit of analysis, and clarify the supported claim before plotting; actively intercept misleading chart choices; choose a journal, screen, report, or poster delivery profile; render and visually inspect the final-size proof before delivery. Do not use for interactive dashboards, full slide-deck design, illustration-first schematics, literature reviews, or statistical analysis with no figure-making intent.
 ---
 
 # Academic Data Visualization
@@ -10,12 +10,13 @@ Act as a scientific-visualization advisor first and a plotting engine second. St
 
 ## Non-negotiable principles
 
-1. **One figure, one core message.** Make the primary conclusion visible within three seconds.
+1. **One figure, one defensible overarching claim.** Each panel may carry one unique supporting claim; do not force unrelated results into one composite.
 2. **Evidence before aesthetics.** Never invent, hide, downsample, or reorder data to improve appearance.
-3. **Final-size design.** Set the journal column width before plotting; do not shrink the completed figure later.
+3. **Final-size design.** Set the target physical dimensions or exact screen pixels before plotting; do not shrink a completed figure as a substitute for layout.
 4. **Semantic colour.** Use a named library theme or user-confirmed palette, keep meanings stable across panels, and add redundant non-colour encoding.
 5. **Vector-first delivery.** Preserve editable text and line work whenever the backend permits it.
 6. **Render-review-revise.** A saved file is not finished until the colour and grayscale proofs pass visual inspection.
+7. **Context-specific delivery.** Journal, screen, report, and poster outputs share the same evidence but not the same canvas, density, typography, or export package.
 
 ## Closed-loop workflow
 
@@ -28,6 +29,7 @@ Read `references/figure-contract.md`. Establish:
 - scientific question and one-sentence claim;
 - source data, unit of observation, groups, repeated measures, and sample size;
 - target journal or output context;
+- primary delivery profile (`journal_print`, `keynote_screen`, `report_web`, or `poster_large`);
 - required formats and language;
 - known reviewer risks.
 
@@ -85,7 +87,7 @@ When the user insists on a risky chart, document the warning and preserve the un
 
 ### Step 3 — Fix journal, canvas, backend, and hierarchy
 
-1. Read `references/journal-specs.md`; when a journal is named, also read `references/journal-intel.md`.
+1. Read `references/delivery-profiles.md`. For a submission, also read `references/journal-specs.md`; when a journal is named, read `references/journal-intel.md`.
 2. Detect Python and R. Honour the user's backend choice; otherwise prefer the backend of a matching production asset, then choose the backend that represents the chart most faithfully.
 3. For two or more panels, read `references/figure-design-brief.md` and `references/multipanel-layout.md`.
 4. Decide the archetype from the evidence:
@@ -94,7 +96,7 @@ When the user insists on a risky chart, document the warning and preserve the un
    - `image_plate + quant`: images are the primary evidence;
    - `asymmetric_mixed`: one dense overview or decisive result is the hero.
 
-Do not assign a hero panel by default. Use a symmetric grid when no panel is scientifically dominant.
+Assign a hero panel only when one evidence item is scientifically dominant. Use a symmetric grid when panels answer comparable questions with equal evidential weight. Put a schematic first only when readers need it to decode the measurements; otherwise follow the evidence sequence.
 
 ### Step 4 — Load the visual baseline and inspect reusable assets
 
@@ -131,6 +133,7 @@ Before rendering, check:
 finite values · valid log inputs · non-zero ranges · expected group order
 sample counts · transformation traceability · uncertainty definition
 axis limits · colour-role mapping · panel-to-contract match
+claim strength · denominator / baseline · profile dimensions · source-note completeness
 ```
 
 For simulated demonstrations, verify that every panel contains a visible but non-saturated signal. For real data, never alter values merely to make the signal stronger.
@@ -165,13 +168,16 @@ Deliver:
 1. reproducible Python or R code;
 2. QA report with proof paths and unresolved warnings;
 3. PDF/SVG vector master where genuinely editable;
-4. 450 dpi RGB PNG/TIFF proof and grayscale proof;
+4. an RGB raster proof and grayscale proof:
+   - for `journal_print`, use the named journal's raster requirement and keep line/text layers vector;
+   - for `keynote_screen`, deliver exact-pixel 1080p/4K proofs rather than treating DPI as the quality target;
 5. statistics and reproducibility report:
    - definition of `n`;
    - centre and spread / interval;
    - statistical test and multiple-comparison correction;
    - source-file and column traceability;
    - for ML figures: split, seeds/folds, metric, and baseline definitions.
+6. for digital or screen delivery: concise alt text and a source/method note.
 
 ## Review mode
 
@@ -192,6 +198,7 @@ Read references progressively; do not load the full folder.
 | Reference | Read when |
 |---|---|
 | `references/figure-contract.md` | Every new figure |
+| `references/delivery-profiles.md` | Every new figure; selects journal, screen, report, or poster rules |
 | `references/figure-type-catalog.md` | Chart choice is unclear or specialised |
 | `references/chart-types/<category>.md` | A matching taxonomy category has been identified; read 1–3 only |
 | `references/chart-alias-index.md` | Resolving names, abbreviations, or ambiguous terms |
@@ -208,6 +215,7 @@ Read references progressively; do not load the full folder.
 | `references/complexheatmap.md` | ComplexHeatmap implementation |
 | `references/checklist.md` | Before delivery |
 | `references/revision-cases.md` | Reviewer simulation or a matching failure pattern |
+| `references/quality-evidence-sources.md` | Auditing why a cross-cutting quality rule exists |
 
 ## Deterministic tools
 

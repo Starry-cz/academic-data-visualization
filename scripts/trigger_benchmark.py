@@ -51,6 +51,8 @@ SHOULD_TRIGGER = [
     # --- Polish / review ---
     ("T19_polish_fig",   "polish this figure — it looks amateur"),
     ("T20_vector_export","save this as vector PDF with embedded fonts for the journal"),
+    ("T21_launch_chart", "turn these benchmark results into a data chart for a product launch keynote"),
+    ("T22_talk_chart_cn", "把这组实验结果做成学术演讲大屏上能看清的数据图"),
     # --- Two routing prompts for each of the 24 registry categories ---
     ("C01a_compare_cn", "画点图比较不同学校的平均得分和置信区间"),
     ("C01b_rank_en", "make a lollipop chart ranking the treatment effects"),
@@ -183,6 +185,7 @@ TRIGGER_SIGNALS = [
         r"\b(?:polish|review|export|save|format)\b.*\b(?:figure|plot|as)\b",
         r"\b300dpi\b|\bvector\s*(?:PDF|export)\b|\bcairo_pdf\b",
         r"\bembedded\s+fonts\b",
+        r"\b(?:product\s+launch|keynote|conference\s+talk)\b.*\b(?:data|figure|plot|chart|visual)\b",
     ]),
 ]
 
@@ -197,7 +200,7 @@ EXCLUSION_SIGNALS = [
     r"(?i)\b(?:Plotly|Bokeh|Altair)\b",
     r"\binteractive\b.*\b(?:plot|chart|dashboard)\b",
     # Presentation / document
-    r"\b(?:PowerPoint|presentation|slide\s*deck)\b",
+    r"\b(?:PowerPoint|slide\s*deck)\b",
     r"\bcreate\s+a\s+slide\b",
     # Data analysis without viz intent
     r"\b(?:calculate|compute|run)\b.*\b(?:p.value|t.test|ANOVA|significance|statistical)\b",

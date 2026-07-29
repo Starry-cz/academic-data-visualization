@@ -38,16 +38,17 @@ A 3-panel figure with information-dense, non-redundant panels beats a 6-panel fi
 
 ---
 
-## 2. Hero Panel Principle
+## 2. Conditional Hero Panel Principle
 
-Every multi-panel figure needs one **hero panel** — the panel with the strongest visual weight that anchors the reader's attention.
+A hero panel is justified only when one panel carries the decisive evidence, necessary overview, or primary image. Comparable panels with equal evidential weight use an equal grid.
 
-- **Size:** 1.2-1.5× the area of supporting panels
-- **Position:** Top-left or center (the most visually prominent position)
-- **Color:** Uses the palette's accent color — the only place saturation is deliberately higher
-- **Content:** Carries the figure's core conclusion directly. If a reviewer looks at the hero panel for 3 seconds, they get the key message.
+- **Hero case:** Give the decisive panel about 1.2–1.5× the area of a support panel when that area improves decoding.
+- **Equal-grid case:** Keep dimensions, scales, and visual weight aligned when panels answer parallel questions.
+- **Position:** Follow the reading sequence; top-left or centre is useful only when it matches the evidence logic.
+- **Colour:** Accent the focal evidence role, not the panel container. Do not make a result look stronger by saturation alone.
+- **Content:** Visual dominance must be traceable to a declared role in the figure contract.
 
-Supporting panels are visually subordinate: smaller, using secondary palette colors, with less saturated fills. This hierarchy guides the reader before they read the caption.
+Supporting panels may be quieter, but no panel may become too small to inspect at final size.
 
 ---
 
@@ -57,7 +58,7 @@ Panels are read left-to-right, top-to-bottom. The panel order IS the story.
 
 ### Rules
 
-1. **Data before schematics.** Experimental evidence first, model/schematic that synthesizes it second. A schematic at position (a) telegraphs "this is speculative."
+1. **Decode before interpret.** Put a study design, cohort flow, or measurement schematic first only when it is required to understand the data. Otherwise lead with empirical evidence and place a synthesis model later. Mark speculative model elements explicitly.
 2. **Discovery before validation.** Screening results go before follow-up validation.
 3. **Less complex before more complex.** Simple bar chart at (a), dense heatmap at (d). Readers build visual literacy panel by panel.
 4. **Shared-axis panels adjacent.** If panels (b) and (c) share y-axis range, place them side-by-side.

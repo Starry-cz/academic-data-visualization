@@ -103,6 +103,12 @@ TEST_CASES = [
         "source": GOOD_BASELINE + "\nscale_color_hue()",
         "expected_fail": ["check_ap1_default_palette"],
     },
+    {
+        "id": "AP1_reviewed_default",
+        "description": "A default palette with explicit semantic-role review passes AP-1",
+        "source": GOOD_BASELINE + "\nSEMANTIC_COLOR_ROLES = {'control': 0, 'treatment': 1}\nplt.get_cmap('tab10')",
+        "expected_fail": [],
+    },
 
     # --- AP-2: Jet / rainbow ---
     {
@@ -215,6 +221,12 @@ TEST_CASES = [
         "id": "CL3_rcparams_dpi",
         "description": "savefig.dpi: 450 in rcParams dict — should pass CL-3",
         "source": GOOD_BASELINE,
+        "expected_fail": [],
+    },
+    {
+        "id": "CL3_300_dpi_fallback",
+        "description": "300 dpi meets the fallback print-raster minimum",
+        "source": GOOD_BASELINE.replace('"savefig.dpi": 450', '"savefig.dpi": 300').replace("dpi=450", "dpi=300"),
         "expected_fail": [],
     },
 

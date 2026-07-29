@@ -1,6 +1,6 @@
 # Export Specifications
 
-> **Nature-ready baseline:** Nature requests editable vector artwork for text and line work, RGB colour, embedded standard fonts, and 450 dpi or higher for raster images. Use PDF as the master for quantitative figures and keep a 450 dpi PNG/TIFF proof for review. Source: <https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/>.
+> **Profile-first rule:** keep text and line work editable, then follow the named journal or venue specification. Nature recommends RGB and editable standard fonts; 300 dpi is a common minimum for photographic raster content, while a 450 dpi proof can maximise detail in Nature's online proof workflow. DPI does not improve vector line art. Source: <https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/>.
 
 ```python
 # Academic Data Visualization export baseline
@@ -36,12 +36,18 @@ save_nature_ready_figure <- function(plot, filename, width_mm = 183, height_mm =
 | Content Type | Format | Notes |
 |-------------|--------|-------|
 | Line plots, scatter plots, bar charts, boxplots | PDF or SVG or EPS | Vector elements (lines, text, shapes) must remain vector |
-| Heatmap colour blocks, micrographs, photos | TIFF or PNG at ≥450 dpi | True raster content only |
+| Heatmap colour blocks, micrographs, photos | TIFF or PNG at the target specification; absent one, ≥300 dpi at final size | True raster content only |
 | Mixed (scatter with >100K rasterized points on vector axes) | PDF with `rasterized=True` on the data layer | Keeps axes/labels as vector text |
 
-**Always deliver:**
-1. One vector master file (PDF preferred, or SVG/EPS if specified by journal)
-2. One 450 dpi RGB PNG proof (for quick viewing, visual QA, manuscript drafts)
+**For journal figures deliver:**
+1. One vector master file for line/text content (PDF preferred, or SVG/EPS if specified)
+2. One RGB raster proof at the target specification; 450 dpi remains the repository's high-detail review default when the target is silent
+3. One grayscale proof and a list of any intentionally rasterized layers
+
+**For keynote/product-launch charts deliver:**
+1. One editable SVG/PDF master
+2. Exact-pixel RGB PNG files for the target screen, normally 1920×1080 and/or 3840×2160
+3. Light/dark-background proofs when both contexts are expected
 
 ## Python Matplotlib Export
 
@@ -95,11 +101,11 @@ dev.off()
 
 | Journal Family | Line Art | Raster/Photo |
 |---------------|----------|-------------|
-| Nature | PDF/SVG/EPS preferred | ≥450 dpi at final physical size |
-| Cell | ≥600 dpi when raster line art is requested | ≥300 dpi |
-| Science | ≥600 dpi when raster line art is requested | ≥300 dpi |
+| Nature | PDF/SVG/EPS preferred | ≥300 dpi for photographs; a 450 dpi proof maximises online-proof detail |
+| IEEE | Vector preferred; >600 dpi if black-and-white line art must be raster | >300 dpi for colour/grayscale raster |
+| Other journals | Verify current author instructions | Do not infer one family-wide value |
 
-**Guideline:** Do not rasterize line art merely to chase DPI. Export editable vector artwork; use 450 dpi or higher only for genuine raster content.
+**Guideline:** Do not rasterize line art merely to chase DPI. Export editable vector artwork, keep genuine raster content at its native resolution, and never upscale a low-resolution source to manufacture compliance.
 
 ## File Naming Convention
 

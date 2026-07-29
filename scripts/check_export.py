@@ -4,7 +4,7 @@ Academic Figure Skill Export Format & Resolution Checker.
 
 Checks scientific figure export settings for CNS journal compliance:
   - Vector export (PDF/SVG/EPS) for line art
-  - Raster export (PNG/TIFF) resolution (>=450 dpi baseline)
+  - Raster export (PNG/TIFF) resolution (>=300 dpi fallback baseline)
   - Font embedding settings (pdf.fonttype=42, svg.fonttype=none)
 
 Supports Python (matplotlib savefig, rcParams) and R (ggsave, cairo_pdf,
@@ -145,7 +145,8 @@ _RE_R_SHOWTEXT = re.compile(
 )
 
 
-MIN_DPI = 450
+# 未指定期刊时采用通行的打印栅格下限；指定期刊时仍应以其当前规范为准。
+MIN_DPI = 300
 
 
 def _parse_int(value_str):
@@ -186,7 +187,7 @@ def _check_export_formats(code):
         else:
             messages.append(
                 "  - No export command found. Always produce a vector master "
-                "(PDF preferred) and a 450 dpi RGB PNG proof."
+                "(PDF preferred) and a profile-compliant RGB raster proof."
             )
     else:
         # List what was found
@@ -198,7 +199,7 @@ def _check_export_formats(code):
     if vector_count > 0 and raster_count == 0:
         messages.append(
             "  - Vector export found but no raster preview (PNG). "
-            "Deliver both: editable vector master + 450 dpi RGB PNG proof."
+            "Deliver both: editable vector master + a profile-compliant RGB raster proof."
         )
 
     return messages

@@ -1,6 +1,6 @@
 # Typography & Font Specifications
 
-> **Nature-ready baseline:** Nature's current figure guide requires editable, standard sans-serif text, with routine figure text between 5 and 7 pt and multi-panel labels at 8 pt bold. Copy the applicable block before plotting and set physical figure dimensions before judging type size. Source: <https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/>.
+> **Nature journal baseline:** Nature's current figure guide requires editable, standard sans-serif text, with routine figure text between 5 and 7 pt and multi-panel labels at 8 pt bold. These values apply at final manuscript size, not to keynote, web, or poster outputs. Read `delivery-profiles.md` before copying a block. Source: <https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/>.
 
 ```python
 # Academic Data Visualization typography baseline — place at TOP of script
@@ -57,6 +57,8 @@ Always use editable sans-serif text. **Preferred:** Arial or Helvetica. **Fallba
 ## Font Size Floor
 
 At final print dimensions: axis ticks and legend labels 5–6 pt; axis titles, panel titles, and annotations 6–7 pt; panel labels 8 pt bold, upright, and lowercase (`a`, `b`, `c`). Do not use routine figure text above 7 pt or below 5 pt.
+
+For `keynote_screen`, use the pixel-based starting ranges in `delivery-profiles.md` and verify them at the actual screen size and viewing distance. Never reuse the 5–7 pt manuscript block on a 16:9 stage graphic.
 
 ## R ggplot2 Setup
 

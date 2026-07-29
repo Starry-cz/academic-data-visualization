@@ -12,7 +12,7 @@ Use this reference whenever the target is Nature or the user asks for Nature-lik
 | Palette | Accessible semantic colours plus shape/line redundancy | Nature requires accessible colour use and points authors to colour-blindness guidance. |
 | Grid and decoration | No background grid, shadows, patterns, or decorative icons by default | These reduce data-to-ink ratio and are explicitly discouraged. |
 | Text colour | Near-black labels with coloured keys, not coloured text | Coloured text is discouraged in the official guide. |
-| Export | RGB, editable PDF/SVG linework, embedded TrueType, 450 dpi raster proof | Preserve editability and high-quality raster content. |
+| Export | RGB, editable PDF/SVG linework, embedded TrueType; raster content meets the current Nature specification | Preserve editability; use 300 dpi or above for photographs and a 450 dpi proof when maximising Nature online-proof detail. |
 
 ## Dimensions and Hierarchy
 
@@ -20,7 +20,7 @@ Use this reference whenever the target is Nature or the user asks for Nature-lik
 2. Allocate visual prominence to the panel that carries the central claim; do not make every panel equally dominant by default.
 3. Use one semantic palette per figure. Add only one accent role and keep category colours stable across panels.
 4. Place legends outside data whenever direct labels cannot replace them.
-5. Export once in vector form and inspect the 450 dpi raster proof at final physical size.
+5. Export line/text content in vector form and inspect a profile-compliant raster proof at final physical size.
 
 ## Prohibited Shortcuts
 

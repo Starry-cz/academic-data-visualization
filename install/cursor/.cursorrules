@@ -1,12 +1,12 @@
 # Academic Data Visualization — Scientific Figure Making Rules
 # Place this file at: <your-project>/.cursorrules
-# Cursor auto-loads it. Generated: 2026-07-28 12:34 UTC
+# Cursor auto-loads it. Generated: 2026-07-29 11:29 UTC
 
 You are helping create scientific figures for Nature/Cell/Science journals.
 Follow these rules when writing matplotlib/ggplot2/ComplexHeatmap code.
 
 # Academic Data Visualization Portable Core Rules
-# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-28 12:34 UTC
+# Auto-generated from academic-data-visualization/SKILL.md — 2026-07-29 11:29 UTC
 # These rules work across Claude Code, Codex, Cursor, and Copilot.
 
 ## Advisor Workflow

@@ -71,7 +71,7 @@ def check_ap0_style_baseline(source: str) -> list[Finding]:
 
 
 def check_ap1_default_palette(source: str) -> Finding:
-    """Detect default matplotlib/seaborn/ggplot2 palettes."""
+    """检测未经语义声明就直接使用的默认分类配色。"""
     defaults = [
         "cmap='tab10'", "cmap='tab20'", "cmap='jet'", "cmap='rainbow'", "cmap='hsv'",
         "plt.cm.tab10", "plt.cm.tab20", "plt.cm.jet",
@@ -83,10 +83,20 @@ def check_ap1_default_palette(source: str) -> Finding:
         "brewer.pal(n, 'Set1')", "brewer.pal(n, 'Paired')",
     ]
     hits = [d for d in defaults if d in source]
-    ok = len(hits) == 0
+    has_semantic_review = any(
+        marker in source
+        for marker in ("SEMANTIC_COLOR_ROLES", "semantic_color_roles", "semantic colour roles")
+    )
+    ok = len(hits) == 0 or has_semantic_review
     return Finding("AP-1", ok,
         "PASS" if ok else "FAIL",
-        "No default palette detected" if ok else f"Default palette found: {hits}")
+        (
+            "Palette has no flagged defaults"
+            if not hits
+            else "Default palette retained with explicit semantic-role review"
+        )
+        if ok
+        else f"Unreviewed default palette found: {hits}")
 
 
 def check_ap2_jet_rainbow(source: str) -> Finding:
@@ -218,19 +228,19 @@ def check_cl2_dimensions(source: str) -> Finding:
 
 
 def check_cl3_dpi(source: str) -> Finding:
-    """Check DPI >= 450 in raster save calls or rcParams dict."""
+    """检查打印型栅格校样是否达到未指定期刊时的 300 dpi 基线。"""
     dpi_values = [int(m.group(1)) for m in re.finditer(r'dpi\s*=\s*(\d+)', source)]
     res_values = [int(m.group(1)) for m in re.finditer(r'res\s*=\s*(\d+)', source)]
     # rcParams 字典写法："savefig.dpi": 450 或 'savefig.dpi': 450
     dict_dpi = [int(m.group(1)) for m in re.finditer(r'''["']savefig\.dpi["']\s*:\s*(\d+)''', source)]
     all_vals = dpi_values + res_values + dict_dpi
     if not all_vals:
-        return Finding("CL-3", False, "WARN", "No explicit raster DPI — use 450 for the print proof")
-    too_low = [v for v in all_vals if v < 450]
+        return Finding("CL-3", False, "WARN", "No explicit raster DPI — use the target specification; default print proof minimum is 300 dpi")
+    too_low = [v for v in all_vals if v < 300]
     ok = len(too_low) == 0
     return Finding("CL-3", ok,
         "PASS" if ok else "FAIL",
-        f"All raster DPI values >= 450" if ok else f"Raster DPI below 450: {too_low}")
+        "All raster DPI values meet the 300 dpi fallback minimum" if ok else f"Raster DPI below 300: {too_low}")
 
 
 def check_cl4_font_embedding(source: str) -> Finding:

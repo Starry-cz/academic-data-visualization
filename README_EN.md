@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-  <strong>From research question to publication-ready figure</strong><br>
-  <sub>Understand the data and scientific claim first, then select, render, review, and export.</sub>
+  <strong>From research question to journal- and launch-ready data graphics</strong><br>
+  <sub>One evidence base, adapted separately for close manuscript reading and distant screen viewing.</sub>
 </p>
 
 <p align="center">
@@ -40,7 +40,7 @@ You do not need to read the README from top to bottom. Enter at the path that ma
   <tr><td width="30%">Inspect real outputs and visual styles</td><td width="35%"><a href="#selected-figures">22 selected figures</a></td><td width="35%"><a href="assets/figures/">Production assets</a> · <a href="#colour-system">Colour system</a></td></tr>
   <tr><td width="30%">Find a chart, alias, or implementation state</td><td width="35%"><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a></td><td width="35%"><a href="references/chart-registry.yaml">Canonical registry</a></td></tr>
   <tr><td width="30%">Define the claim, layout, and deliverables</td><td width="35%"><a href="references/figure-contract.md">Figure contract</a> · <a href="references/figure-design-brief.md">Design brief</a></td><td width="35%"><a href="references/multipanel-layout.md">Multipanel layout</a> · <a href="references/visual-style.md">Visual style</a></td></tr>
-  <tr><td width="30%">Match a journal, size, and export format</td><td width="35%"><a href="references/journal-intel.md">Journal intelligence</a> · <a href="references/journal-specs.md">Journal specs</a></td><td width="35%"><a href="references/export-specs.md">Export specs</a></td></tr>
+  <tr><td width="30%">Match a journal, talk, or launch context</td><td width="35%"><a href="references/delivery-profiles.md">Delivery profiles</a> · <a href="references/journal-specs.md">Journal specs</a></td><td width="35%"><a href="references/export-specs.md">Export specs</a></td></tr>
   <tr><td width="30%">Reuse assets and colour, then complete QA</td><td width="35%"><a href="references/asset-reuse-protocol.md">Asset reuse protocol</a> · <a href="references/color-palettes.md">Colour guide</a></td><td width="35%"><a href="references/palette-library.json">Palette registry</a> · <a href="references/checklist.md">Four-pass QA</a></td></tr>
 </table>
 
@@ -64,7 +64,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 Use academic-data-visualization to analyse experiment.csv.
 I need to compare three treatments at four time points. Profile sample sizes, distributions,
 missingness, and repeated-measures structure before defending the chart and multipanel design.
-Target a two-column manuscript figure and deliver an editable vector master, a 450 dpi proof,
+Target a two-column manuscript figure and deliver an editable vector master, a journal-compliant RGB proof,
 a grayscale proof, and a QA report.
 ```
 
@@ -91,7 +91,7 @@ Conventional plotting requests start with “make a bar chart” or “draw a he
 
 <table width="100%" align="center">
   <tr><th width="20%">Stage</th><th width="60%">Key action</th><th width="20%">Output</th></tr>
-  <tr><td width="20%"><strong>1. Define</strong></td><td width="60%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Fix the claim, observation unit, variables, dependence, and target journal</td><td width="20%"><a href="references/figure-contract.md">Figure contract</a></td></tr>
+  <tr><td width="20%"><strong>1. Define</strong></td><td width="60%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Fix the claim, observation unit, variables, dependence, and delivery context</td><td width="20%"><a href="references/figure-contract.md">Figure contract</a></td></tr>
   <tr><td width="20%"><strong>2. Defend</strong></td><td width="60%">Profile sample sizes, distributions, missingness, outliers, and groups; compare candidates</td><td width="20%">Rationale and risks</td></tr>
   <tr><td width="20%"><strong>3. Implement</strong></td><td width="60%">Route to a production template, reusable pattern, or on-demand build; unify panels and colour</td><td width="20%">Python / R and vector master</td></tr>
   <tr><td width="20%"><strong>4. Verify</strong></td><td width="60%">Run programmatic checks and inspect final-size RGB, grayscale, and export proofs</td><td width="20%">Proofs and QA report</td></tr>
@@ -100,7 +100,7 @@ Conventional plotting requests start with “make a bar chart” or “draw a he
 ## What it helps you do
 
 <!-- chart-registry:summary:start -->
-The Skill turns a research question, data structure, and journal constraints into a defensible figure workflow; you do not need to choose from a long list of chart names.
+The Skill turns a research question, data structure, and delivery constraints into a defensible figure workflow; you do not need to choose from a long list of chart names.
 
 <table width="100%" align="center">
   <tr><th width="28%">Your situation</th><th width="44%">What the Skill does</th><th width="28%">What you receive</th></tr>
@@ -108,6 +108,7 @@ The Skill turns a research question, data structure, and journal constraints int
   <tr><td width="28%"><strong>Have data and need a figure</strong></td><td width="44%">Reuse one of 34 verified asset families when suitable; otherwise build for the actual data</td><td width="28%">Python / R script and editable vector master</td></tr>
   <tr><td width="28%"><strong>Need a coherent multipanel figure</strong></td><td width="44%">Unify physical size, typography, colour, legends, and panel hierarchy</td><td width="28%">Journal-sized main or supplementary figure</td></tr>
   <tr><td width="28%"><strong>Preparing a submission</strong></td><td width="44%">Run anti-pattern, code/export, scientific-logic, and final-render checks</td><td width="28%">RGB and grayscale proofs plus a QA report</td></tr>
+  <tr><td width="28%"><strong>Need a keynote or product-launch chart</strong></td><td width="44%">Derive a 16:9 distant-reading view from the same analysis while preserving baselines, uncertainty, and source</td><td width="28%">SVG/PDF, 1080p/4K proofs, and alt text</td></tr>
   <tr><td width="28%"><strong>Need a specialist chart</strong></td><td width="44%">Use a genuine domain implementation instead of a generic visual look-alike</td><td width="28%">Dependencies, limitations, and alternatives</td></tr>
 </table>
 
@@ -189,7 +190,7 @@ See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.js
 
 <table width="100%" align="center">
   <tr><th width="50%">Good fit</th><th width="50%">Out of scope</th></tr>
-  <tr><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Manuscript main figures, supplements, theses, and scientific reports</td><td width="50%">Interactive dashboards or web data products</td></tr>
+  <tr><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Manuscripts, supplements, scientific talks, and product-launch data graphics</td><td width="50%">Interactive dashboards, web data products, or complete slide-deck design</td></tr>
   <tr><td width="50%">Choosing a defensible chart from the real data structure</td><td width="50%">Illustration-only mechanisms with no quantitative panels</td></tr>
   <tr><td width="50%">Rebuilding old figures, unifying panels, or adapting to a journal</td><td width="50%">Statistical analysis, cleaning, or literature review with no figure goal</td></tr>
   <tr><td width="50%">Pre-submission checks for clipping, overlap, grayscale, encodings, and export</td><td width="50%">Pretending that a generic chart is a map, genome track, or 3D volume</td></tr>
@@ -234,8 +235,8 @@ Current repository baseline:
 
 - **714 / 714** source memberships are reproducibly mapped;
 - **34 / 34** production asset families contain real scripts, PNGs, and manifests;
-- **88 / 88** trigger-boundary cases classify correctly;
-- **26 / 26** QA fixtures hit their expected results across **15 / 15** programmatic checks;
+- **90 / 90** trigger-boundary cases classify correctly;
+- **28 / 28** QA fixtures hit their expected results across **15 / 15** programmatic checks;
 - CI audits the registry schema, 24 generated category documents, alias conflicts, asset mapping, and README summaries.
 
 ```bash

@@ -1,6 +1,6 @@
 # Journal-Specific Unwritten Preferences
 
-This file captures tacit editorial and reviewer preferences — things that are NOT in the official author guidelines but that experienced authors learn through submission and revision. Content is structured by journal.
+This file contains optional, experience-based routing heuristics. It is not an acceptance checklist and must never override official author instructions, the evidence, or a specific editor's request. Treat every statement below as a hypothesis to verify against current published examples and the target journal guide.
 
 ## Operational Journal Style Routing
 
@@ -78,7 +78,7 @@ The routing table is a style baseline, not an authority on journal acceptance. O
 **Unwritten Rules:**
 - Network and interactome diagrams: node size and edge thickness must be mapped to quantitative properties (never arbitrary), with the mapping explained in caption
 - t-SNE/UMAP figures: color scales must be perceptually uniform; label clusters with biologically meaningful names, not numbers
-- Model performance plots (ROC, PR curves): include AUROC/AUPR values on the plot; show both training and test set performance
+- Model performance plots: prioritise held-out or external performance, show uncertainty across valid resamples, and include calibration or decision utility when the claim requires it. Training performance may be shown only when clearly separated and scientifically useful.
 
 **Common Desk Reject Triggers:**
 - Figure overload — trying to cram data + schematic + model diagram into one undersized panel set

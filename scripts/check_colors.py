@@ -202,10 +202,26 @@ def check(target, journal="nature-genetics"):
         return name, True, ["  - No code content to check."]
 
     messages = []
-    messages += _check_default_palettes(code)
-    messages += _check_red_green_only(code)
+    violations = []
+    default_messages = _check_default_palettes(code)
+    has_semantic_review = any(
+        marker in code
+        for marker in ("SEMANTIC_COLOR_ROLES", "semantic_color_roles", "semantic colour roles")
+    )
+    if default_messages and has_semantic_review:
+        messages.append(
+            "  - Default palette retained with explicit semantic roles; "
+            "complete contrast, colour-vision, and grayscale review."
+        )
+    else:
+        messages += default_messages
+        violations += default_messages
 
-    passed = len(messages) == 0
+    red_green_messages = _check_red_green_only(code)
+    messages += red_green_messages
+    violations += red_green_messages
+
+    passed = len(violations) == 0
     if passed:
         messages.append("  - No default palettes or red-green issues detected.")
 

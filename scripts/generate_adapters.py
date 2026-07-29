@@ -181,9 +181,9 @@ def generate_codex_manifest(core: str) -> str:
 name: academic-data-visualization
 version: "1.0.0"
 description: >-
-  Publication-grade scientific figure advising, creation, revision, and visual QA.
-  Profiles data, selects defensible charts, applies journal-aware layout and colour,
-  and exports reproducible Python/R figures.
+  Evidence-faithful scientific and high-stakes presentation chart advising, creation,
+  revision, and visual QA. Profiles data, selects defensible charts, applies
+  delivery-profile-aware layout and colour, and exports reproducible Python/R figures.
 
 entrypoint: SKILL.md
 resources:
@@ -195,8 +195,8 @@ resources:
 
 triggers:
   - keywords: [figure, plot, chart, heatmap, volcano, boxplot, scatter, bar,
-               manuscript, publication, Nature, Cell, Science,
-               论文配图, 科研绘图, 学术图表, 图, 绘图, 作图]
+               manuscript, publication, Nature, Cell, Science, keynote, product-launch,
+               论文配图, 科研绘图, 学术图表, 发布会数据图, 演讲图表, 图, 绘图, 作图]
   - file_patterns: ["*.py", "*.R", "*.r"]
     content_hints: ["matplotlib", "ggplot2", "seaborn", "ComplexHeatmap",
                     "plt.plot", "plt.scatter", "ggplot(", "geom_"]

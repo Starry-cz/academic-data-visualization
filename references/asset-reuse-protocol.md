@@ -100,7 +100,7 @@ Never borrow a data transformation, statistical test, or annotation merely becau
 - When the composition engine embeds a PNG with `imshow`, the composite PDF/SVG contains rasterized panel content.
 - Deliver each native panel's vector file alongside the composite proof.
 - State which panels are rasterized; do not call the composite fully editable.
-- Render all mixed-language panels at their final physical dimensions and at least 450 dpi.
+- Render mixed-language journal panels at final physical dimensions and the target raster specification; absent one, use at least 300 dpi. For screen profiles, render at the exact target pixels.
 
 ## 9. Asset confirmation record
 
