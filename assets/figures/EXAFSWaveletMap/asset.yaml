@@ -1,0 +1,43 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "exafs-wavelet-transform-map"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_exafs_wavelet_map.py"
+  ],
+  "previews": [
+    "exafs_wavelet_map.png"
+  ],
+  "outputs": {
+    "vector": [
+      "exafs_wavelet_map.pdf",
+      "exafs_wavelet_map.svg"
+    ],
+    "raster": [
+      "exafs_wavelet_map.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "将幅值按全图最大值归一化并明确说明"
+  ],
+  "unsupported_cases": [
+    "仅以 3D 透视图替代可定量读取的二维投影"
+  ],
+  "aspect_ratio": 0.98,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

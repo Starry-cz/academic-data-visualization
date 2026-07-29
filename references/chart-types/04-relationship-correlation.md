@@ -40,6 +40,7 @@
 | `mosaic-plot` | 矩阵单元 | row, column, value | 可复用模式 |
 | `partial-correlation-plot` | 配对观测或变量组合 | x, y | 可复用模式 |
 | `partial-dependence-plot` | 特征或样本 | feature, importance | 按需实现 |
+| `peak-current-scan-rate-log-log-plot` | 一个峰在一个扫描速率下的电流 | scan_rate, peak_current, peak | 可复用模式 |
 | `quadrant-chart` | 配对观测或变量组合 | x, y | 可复用模式 |
 | `scatter-plot` | 成对观测 | x, y | 可复用模式 |
 | `scatter-regression-plot` | 成对观测 | x, y | 可复用模式 |
@@ -77,6 +78,7 @@
 | 马赛克图 / Mosaic Plot | `mosaic-plot` | 矩阵模式、簇与注释 | 可复用模式 |
 | 偏相关图 / Partial Correlation Plot | `partial-correlation-plot` | 评估变量之间的方向、强度、形态与非线性关系 | 可复用模式 |
 | 部分依赖图 / Partial Dependence Plot | `partial-dependence-plot` | 模型贡献、响应与解释稳定性 | 按需实现 |
+| 峰电流-扫描速率双对数图 / Peak-current Scan-rate Log-log Plot | `peak-current-scan-rate-log-log-plot` | 估计峰电流与扫描速率的幂律指数 | 可复用模式 |
 | 四象限图 / Quadrant Chart | `quadrant-chart` | 评估变量之间的方向、强度、形态与非线性关系 | 可复用模式 |
 | 散点图 / Scatter Plot | `scatter-plot` | 变量关系、拟合与一致性 | 可复用模式 |
 | 回归散点图 / Scatter Regression Plot | `scatter-regression-plot` | 变量关系、拟合与一致性 | 可复用模式 |
@@ -711,6 +713,32 @@
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：feature-importance-plot；shap-beeswarm；ice-plot
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
+
+### 峰电流-扫描速率双对数图（Peak-current Scan-rate Log-log Plot）
+
+- **Canonical ID**：`peak-current-scan-rate-log-log-plot`
+- **别名**：b 值拟合图；log i-log v 图；b-value plot；log peak current vs log scan rate
+- **适合回答**：不同峰的电流对扫描速率呈现何种幂律关系？
+- **定义**：在双对数坐标中拟合峰电流与扫描速率关系，用斜率估计动力学 b 值。
+- **必需数据**：scan_rate；peak_current；peak
+- **可选数据**：replicate；direction
+- **观测单位**：一个峰在一个扫描速率下的电流
+- **推荐编码**：双对数位置、点与拟合线
+- **适用条件**：幂律模型在预设范围内合理
+- **不适用条件**：包含零或负值却直接取对数；只报告斜率不报告拟合范围与不确定性
+- **统计与不确定性**：报告 b 值、置信区间、样本数和拟合诊断；斜率置信区间和重复测量变异
+- **样本量与分布要求**：每个峰至少包含足以估计回归和不确定性的多个扫描速率。
+- **轴、尺度与变换**：两轴均明确使用对数尺度和原始单位；严格正值的对数变换
+- **禁止变换**：为改善线性而事后删点
+- **颜色、灰度与无障碍**：峰使用颜色加标记形状；直接标注峰名与 b 值
+- **标注规则**：标注回归方程、区间和拟合范围
+- **常见投稿风险**：点数不足、伪重复或事后选择线性区间
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留原始正值、预设拟合范围和回归诊断
+- **替代 / 补充图型**：scatter-regression-plot；electrochemical-kinetics-contour-map
+- **QA 规则**：核对对数输入、拟合范围、斜率区间和重复结构
 
 ### 四象限图（Quadrant Chart）
 

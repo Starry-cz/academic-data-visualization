@@ -45,6 +45,21 @@ class ChartRoutingTests(unittest.TestCase):
         self.assertEqual(resolve_chart_name(self.registry, "鱼骨图"), ["ishikawa-diagram"])
         self.assertEqual(resolve_chart_name(self.registry, "DAG"), ["causal-dag"])
 
+    def test_materials_and_electrochemistry_routes(self) -> None:
+        expected = {
+            "XPS peak fitting": ["xps-peak-deconvolution-plot"],
+            "WT-EXAFS": ["exafs-wavelet-transform-map"],
+            "CV curve": ["cyclic-voltammetry-curve"],
+            "GCD profile": ["galvanostatic-charge-discharge-curve"],
+            "rate capability test": ["battery-rate-capability-plot"],
+            "long-term cycling plot": ["battery-cycling-stability-plot"],
+            "b-value plot": ["peak-current-scan-rate-log-log-plot"],
+            "capacitive contribution plot": ["capacitive-diffusion-contribution-plot"],
+        }
+        for query, chart_ids in expected.items():
+            with self.subTest(query=query):
+                self.assertEqual(resolve_chart_name(self.registry, query), chart_ids)
+
     def test_unknown_name_is_not_guessed(self) -> None:
         self.assertEqual(resolve_chart_name(self.registry, "不存在的万能神图"), [])
 

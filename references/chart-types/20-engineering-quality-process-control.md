@@ -17,10 +17,13 @@
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
 | `bathtub-curve` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
+| `battery-cycling-stability-plot` | 一个循环 | cycle, capacity | 可复用模式 |
+| `battery-rate-capability-plot` | 一个循环或倍率阶段 | cycle, capacity, current_density | 可复用模式 |
 | `before-after-bar-chart` | 任务、批次或指标 | time_or_category, metric | 生产模板 |
 | `bullet-chart` | 任务、批次或指标 | time_or_category, metric | 可复用模式 |
 | `c-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `calendar-heatmap` | 矩阵单元 | row, column, value | 可复用模式 |
+| `capacitive-diffusion-contribution-plot` | 一个扫描速率下的贡献分解 | scan_rate, mechanism, contribution_percent | 可复用模式 |
 | `cohort-retention-heatmap` | 任务、批次或指标 | time_or_category, metric | 可复用模式 |
 | `contour-optimization-plot` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `contribution-waterfall-chart` | 类别或对象 | category, value | 可复用模式 |
@@ -28,14 +31,21 @@
 | `conversion-funnel-chart` | 流、节点或步骤 | source, target, value | 可复用模式 |
 | `cp-and-cpk-plot` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `cusum-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
+| `cyclic-voltammetry-curve` | 一次完整电位扫描循环 | potential, current, scan_order | 可复用模式 |
+| `electrochemical-kinetics-contour-map` | 电位 × 扫描速率网格单元 | potential, scan_rate, response | 可复用模式 |
 | `event-tree` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `ewma-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
+| `exafs-fourier-transform-spectrum` | 样品的一条 EXAFS 傅里叶变换谱 | r, ft_magnitude, sample | 可复用模式 |
+| `exafs-r-space-fitting-plot` | 一次 EXAFS 结构拟合 | r, observed, fitted | 可复用模式 |
+| `exafs-wavelet-transform-map` | 一个样品的小波变换网格 | k, r, magnitude | 生产模板 |
 | `fault-tree` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `flow-ability-plot` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `fmea-risk-matrix` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `gage-r-and-r-plot` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
+| `galvanostatic-charge-discharge-curve` | 一个充电或放电半周期 | capacity_or_time, voltage, direction | 可复用模式 |
 | `gantt-chart` | 时间点或重复观测对象 | time, value | 可复用模式 |
 | `interaction-effect-plot` | 样本、模型、参数或阈值 | model_output, diagnostic_measure | 可复用模式 |
+| `ion-diffusion-coefficient-profile` | 一个反应状态下的扩散系数估计 | reaction_state, diffusion_coefficient, direction | 可复用模式 |
 | `ishikawa-diagram` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `kpi-card` | 任务、批次或指标 | time_or_category, metric | 按需实现 |
 | `lifetime-distribution-plot` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
@@ -44,6 +54,7 @@
 | `np-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `p-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `pareto-chart` | 类别或对象 | category, value | 可复用模式 |
+| `peak-current-scan-rate-log-log-plot` | 一个峰在一个扫描速率下的电流 | scan_rate, peak_current, peak | 可复用模式 |
 | `process-capability-histogram` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `process-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
 | `quality-control-overview` | 任务、批次或指标 | time_or_category, metric | 按需实现 |
@@ -57,16 +68,21 @@
 | `u-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `weibull-probability-plot` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
 | `x-bar-control-chart` | 过程批次、样本、部件或失效事件 | process_or_reliability_measure | 按需实现 |
+| `xanes-spectrum` | 样品或参考标准的一条 XANES 光谱 | energy, normalized_absorption, sample | 可复用模式 |
+| `xps-peak-deconvolution-plot` | 样品中的一个高分辨 XPS 能区 | spectrum, binding_energy, observed, fit, background, component_intensity | 生产模板 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
 | 浴盆曲线 / Bathtub Curve | `bathtub-curve` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
+| 电池循环稳定性图 / Battery Cycling Stability Plot | `battery-cycling-stability-plot` | 展示容量保持、衰减与库仑效率随循环变化 | 可复用模式 |
+| 电池倍率性能图 / Battery Rate Capability Plot | `battery-rate-capability-plot` | 比较阶梯倍率下的容量保持与恢复 | 可复用模式 |
 | 前后比较柱状图 / Before–After Bar Chart | `before-after-bar-chart` | 计划进度、过程稳定性与运营监测 | 生产模板 |
 | 子弹图 / Bullet Chart | `bullet-chart` | 计划进度、过程稳定性与运营监测 | 可复用模式 |
 | C控制图 / C Control Chart | `c-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | 日历热图 / Calendar Heatmap | `calendar-heatmap` | 矩阵模式、簇与注释 | 可复用模式 |
+| 电容-扩散贡献图 / Capacitive-diffusion Contribution Plot | `capacitive-diffusion-contribution-plot` | 比较电容控制与扩散控制贡献比例 | 可复用模式 |
 | 队列留存热图 / Cohort Retention Heatmap | `cohort-retention-heatmap` | 计划进度、过程稳定性与运营监测 | 可复用模式 |
 | 等高线优化图 / Contour Optimization Plot | `contour-optimization-plot` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | 贡献瀑布图 / Contribution Waterfall Chart | `contribution-waterfall-chart` | 比较、排序或变化幅度 | 可复用模式 |
@@ -74,14 +90,21 @@
 | 转化漏斗图 / Conversion Funnel Chart | `conversion-funnel-chart` | 阶段流向、流程与层级组成 | 可复用模式 |
 | Cp/Cpk图 / Cp and Cpk Plot | `cp-and-cpk-plot` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | CUSUM控制图 / CUSUM Control Chart | `cusum-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
+| 循环伏安曲线 / Cyclic Voltammetry Curve | `cyclic-voltammetry-curve` | 比较氧化还原峰、电位窗口与循环响应 | 可复用模式 |
+| 电化学动力学等高图 / Electrochemical Kinetics Contour Map | `electrochemical-kinetics-contour-map` | 展示电位、扫描速率与响应强度的二维关系 | 可复用模式 |
 | 事件树 / Event Tree | `event-tree` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | EWMA控制图 / EWMA Control Chart | `ewma-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
+| EXAFS 傅里叶变换谱 / EXAFS Fourier-transform Spectrum | `exafs-fourier-transform-spectrum` | 比较局域配位壳层在 R 空间中的位置与强度 | 可复用模式 |
+| EXAFS R 空间拟合图 / EXAFS R-space Fitting Plot | `exafs-r-space-fitting-plot` | 比较实验 EXAFS 与结构模型拟合 | 可复用模式 |
+| EXAFS 小波变换图 / EXAFS Wavelet-transform Map | `exafs-wavelet-transform-map` | 联合定位 EXAFS 信号在 k 与 R 空间的特征 | 生产模板 |
 | 故障树 / Fault Tree | `fault-tree` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | 流程能力图 / Flow Ability Plot | `flow-ability-plot` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | FMEA风险矩阵 / FMEA Risk Matrix | `fmea-risk-matrix` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | Gage R&R图 / Gage R&R Plot | `gage-r-and-r-plot` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
+| 恒流充放电曲线 / Galvanostatic Charge-discharge Curve | `galvanostatic-charge-discharge-curve` | 比较容量、电压平台、极化与充放电效率 | 可复用模式 |
 | 甘特图 / Gantt Chart | `gantt-chart` | 随有序时间或剂量的变化 | 可复用模式 |
 | 交互效应图 / Interaction Effect Plot | `interaction-effect-plot` | 诊断回归与统计模型的拟合、残差、影响点和假设 | 可复用模式 |
+| 离子扩散系数状态曲线 / Ion Diffusion-coefficient Profile | `ion-diffusion-coefficient-profile` | 比较充放电过程中扩散系数的变化 | 可复用模式 |
 | 鱼骨图 / Ishikawa Diagram | `ishikawa-diagram` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | KPI卡片 / KPI Card | `kpi-card` | 计划进度、过程稳定性与运营监测 | 按需实现 |
 | 寿命分布图 / Lifetime Distribution Plot | `lifetime-distribution-plot` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
@@ -90,6 +113,7 @@
 | NP控制图 / NP Control Chart | `np-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | P控制图 / P Control Chart | `p-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | 帕累托图 / Pareto Chart | `pareto-chart` | 比较、排序或变化幅度 | 可复用模式 |
+| 峰电流-扫描速率双对数图 / Peak-current Scan-rate Log-log Plot | `peak-current-scan-rate-log-log-plot` | 估计峰电流与扫描速率的幂律指数 | 可复用模式 |
 | 过程能力直方图 / Process Capability Histogram | `process-capability-histogram` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | 流程图 / Process Flow Diagram | `process-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
 | 质量控制总览 / Quality-control Overview | `quality-control-overview` | 计划进度、过程稳定性与运营监测 | 按需实现 |
@@ -103,6 +127,8 @@
 | U控制图 / U Control Chart | `u-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | Weibull概率图 / Weibull Probability Plot | `weibull-probability-plot` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
 | X-bar控制图 / X-bar Control Chart | `x-bar-control-chart` | 监控工程质量、过程稳定性、可靠性与风险 | 按需实现 |
+| XANES 吸收近边谱 / XANES Spectrum | `xanes-spectrum` | 比较吸收边位置、白线强度与近边结构 | 可复用模式 |
+| XPS 峰拟合分峰图 / XPS Peak Deconvolution Plot | `xps-peak-deconvolution-plot` | 分解重叠谱峰并比较化学组分 | 生产模板 |
 
 ## 图型详细条目
 
@@ -131,6 +157,58 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### 电池循环稳定性图（Battery Cycling Stability Plot）
+
+- **Canonical ID**：`battery-cycling-stability-plot`
+- **别名**：长循环性能图；循环寿命图；long-term cycling plot；cycling performance plot
+- **适合回答**：容量在长期循环中如何衰减，效率是否稳定？
+- **定义**：按循环编号展示容量或容量保持率，并在科学相关时附库仑效率。
+- **必需数据**：cycle；capacity
+- **可选数据**：sample；coulombic_efficiency；retention
+- **观测单位**：一个循环
+- **推荐编码**：循环位置与容量位置
+- **适用条件**：测试协议、中断和失效规则均可追溯
+- **不适用条件**：仅选择稳定区间或隐藏早期活化和失效
+- **统计与不确定性**：报告初始容量、末端容量、保持率和衰减率定义；多电极应显示变异或明确代表性曲线选择规则
+- **样本量与分布要求**：至少覆盖研究声称的循环区间。
+- **轴、尺度与变换**：循环从零或首个有效循环开始，单位明确；按预先声明基准计算保持率
+- **禁止变换**：删除异常循环而不披露
+- **颜色、灰度与无障碍**：容量与效率使用颜色加标记或线型；末端值直接标注
+- **标注规则**：标注电流密度、容量保持和测试中断
+- **常见投稿风险**：代表性曲线选择偏差、双轴误导或测试条件缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留完整循环序列和测试协议
+- **替代 / 补充图型**：line-chart；battery-rate-capability-plot
+- **QA 规则**：核对循环完整性、保持率分母、重复电极和双轴使用
+
+### 电池倍率性能图（Battery Rate Capability Plot）
+
+- **Canonical ID**：`battery-rate-capability-plot`
+- **别名**：倍率性能图；倍率测试图；rate performance plot；rate capability test
+- **适合回答**：容量如何随倍率升高而变化，恢复低倍率后能否回到原水平？
+- **定义**：按测试顺序展示不同电流密度阶段的容量，并可在有明确物理联系时附库仑效率。
+- **必需数据**：cycle；capacity；current_density
+- **可选数据**：sample；coulombic_efficiency
+- **观测单位**：一个循环或倍率阶段
+- **推荐编码**：循环位置、容量位置和背景分区编码倍率阶段
+- **适用条件**：倍率阶段、循环顺序和容量基准可追溯
+- **不适用条件**：双 Y 轴仅用于制造趋势一致性
+- **统计与不确定性**：报告各阶段容量及恢复率；多电极比较应显示误差或个体轨迹
+- **样本量与分布要求**：至少包含两个倍率阶段和一个明确基准。
+- **轴、尺度与变换**：容量与效率必须明确单位和轴归属；按质量、面积或体积归一化并披露分母
+- **禁止变换**：重排倍率阶段或删除过渡循环
+- **颜色、灰度与无障碍**：样品用颜色和标记；倍率阶段用浅色背景或标签；直接标注倍率阶段
+- **标注规则**：标注每段电流密度和恢复阶段
+- **常见投稿风险**：未说明双轴关系、倍率定义或恢复基准
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：双轴只在容量与库仑效率同时属于同一循环时使用；否则拆成对齐面板
+- **替代 / 补充图型**：line-chart；battery-cycling-stability-plot
+- **QA 规则**：核对阶段顺序、倍率单位、恢复率和双轴合理性
 
 ### 前后比较柱状图（Before–After Bar Chart）
 
@@ -235,6 +313,32 @@
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：heatmap；clustered-heatmap；annotated-heatmap
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
+
+### 电容-扩散贡献图（Capacitive-diffusion Contribution Plot）
+
+- **Canonical ID**：`capacitive-diffusion-contribution-plot`
+- **别名**：电容贡献堆积图；扩散控制贡献图；capacitive contribution plot；diffusion-controlled contribution plot
+- **适合回答**：两类储能机制的相对贡献如何随扫描速率变化？
+- **定义**：以百分比堆积条展示不同扫描速率下电容控制和扩散控制贡献。
+- **必需数据**：scan_rate；mechanism；contribution_percent
+- **可选数据**：replicate；uncertainty
+- **观测单位**：一个扫描速率下的贡献分解
+- **推荐编码**：百分比堆积长度与有序扫描速率
+- **适用条件**：分解方法和归一化基准可复现
+- **不适用条件**：贡献估计未闭合或方法未披露
+- **统计与不确定性**：报告分解模型、拟合参数和贡献计算；重复实验应给出贡献比例的不确定性
+- **样本量与分布要求**：每个扫描速率的贡献必须覆盖完整组成并合计为 100%。
+- **轴、尺度与变换**：纵轴固定 0–100%；按总贡献归一化至 100%
+- **禁止变换**：分别归一化后掩盖未解释部分
+- **颜色、灰度与无障碍**：两类机制采用高亮度差与纹理；直接标注主要比例并提供图例
+- **标注规则**：标注电容贡献比例与扫描速率
+- **常见投稿风险**：总和不为 100%、未报告分解方法或无不确定性
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须验证每组构成闭合并披露计算方法
+- **替代 / 补充图型**：percent-stacked-bar-chart；peak-current-scan-rate-log-log-plot
+- **QA 规则**：核对 100% 闭合、分解方法、标签和灰度纹理
 
 ### 队列留存热图（Cohort Retention Heatmap）
 
@@ -418,6 +522,58 @@
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
 
+### 循环伏安曲线（Cyclic Voltammetry Curve）
+
+- **Canonical ID**：`cyclic-voltammetry-curve`
+- **别名**：CV 曲线；循环伏安图；CV curve；cyclic voltammogram
+- **适合回答**：氧化还原峰、电位差和电流响应如何随样品或扫描速率变化？
+- **定义**：按扫描顺序绘制电流或电流密度随电位变化的闭合电化学曲线。
+- **必需数据**：potential；current；scan_order
+- **可选数据**：sample；cycle；scan_rate
+- **观测单位**：一次完整电位扫描循环
+- **推荐编码**：电位位置、电流位置与扫描路径
+- **适用条件**：扫描方向和速率可追溯
+- **不适用条件**：按电位排序后破坏扫描路径；不同电极面积或质量未归一化却直接比较
+- **统计与不确定性**：报告峰电位、峰电流及其定义；重复电极应报告变异
+- **样本量与分布要求**：至少一个完整正向和反向扫描周期。
+- **轴、尺度与变换**：明确参比电极、电流归一化和扫描速率；经披露的面积或质量归一化
+- **禁止变换**：平滑导致峰位或峰高改变
+- **颜色、灰度与无障碍**：样品采用颜色加线型；标注扫描方向和关键峰
+- **标注规则**：标注氧化峰、还原峰和扫描速率
+- **常见投稿风险**：参比电极、循环编号或归一化基准缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留采集顺序和元数据
+- **替代 / 补充图型**：line-chart；galvanostatic-charge-discharge-curve
+- **QA 规则**：核对扫描方向、参比电极、归一化和循环编号
+
+### 电化学动力学等高图（Electrochemical Kinetics Contour Map）
+
+- **Canonical ID**：`electrochemical-kinetics-contour-map`
+- **别名**：峰电位扫描速率等高图；电化学动力学热图；electrochemical kinetics heatmap；potential scan-rate contour
+- **适合回答**：响应峰如何随扫描速率和电位共同变化？
+- **定义**：在电位与扫描速率二维空间编码电流或拟合响应，用于观察峰位漂移和动力学区域。
+- **必需数据**：potential；scan_rate；response
+- **可选数据**：direction；peak_label
+- **观测单位**：电位 × 扫描速率网格单元
+- **推荐编码**：二维位置与感知均匀色阶
+- **适用条件**：网格密度和插值方法可追溯
+- **不适用条件**：稀疏数据被高阶插值伪造成连续结构
+- **统计与不确定性**：报告插值、平滑和峰提取方法；必要时用重复图或等值线敏感性展示
+- **样本量与分布要求**：足以支持二维插值或原始网格显示的扫描速率与电位组合。
+- **轴、尺度与变换**：扫描速率使用物理合理的线性或对数尺度；经披露的规则网格化与轻度平滑
+- **禁止变换**：产生超出观测范围的外推色块
+- **颜色、灰度与无障碍**：使用感知均匀色阶并保留等值线；颜色之外用等值线和峰标签
+- **标注规则**：标注峰轨迹与扫描方向
+- **常见投稿风险**：插值伪影、色标截断或未说明扫描方向
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须披露网格化、插值和平滑方法
+- **替代 / 补充图型**：contour-map；peak-current-scan-rate-log-log-plot
+- **QA 规则**：核对色标、插值范围、峰轨迹和灰度等值线
+
 ### 事件树（Event Tree）
 
 - **Canonical ID**：`event-tree`
@@ -469,6 +625,84 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### EXAFS 傅里叶变换谱（EXAFS Fourier-transform Spectrum）
+
+- **Canonical ID**：`exafs-fourier-transform-spectrum`
+- **别名**：EXAFS R 空间谱；傅里叶变换 EXAFS；FT-EXAFS；EXAFS R-space magnitude
+- **适合回答**：样品的主要配位壳层相对参考物如何变化？
+- **定义**：展示加权 EXAFS 信号傅里叶变换后的 R 空间幅值或实部，用于观察局域配位壳层。
+- **必需数据**：r；ft_magnitude；sample
+- **可选数据**：ft_real；k_weight；window；k_range
+- **观测单位**：样品的一条 EXAFS 傅里叶变换谱
+- **推荐编码**：R 位置与傅里叶幅值曲线
+- **适用条件**：变换参数一致且可追溯
+- **不适用条件**：把未经相移校正的 R 峰直接当作真实键长
+- **统计与不确定性**：声明 k 权重、k 范围、窗函数和相移处理；重复样品或拟合不确定性应另行报告
+- **样本量与分布要求**：至少一条声明 k 权重、窗口和变换范围的谱。
+- **轴、尺度与变换**：统一 R 范围并明确单位；声明参数的傅里叶变换与垂直错位展示
+- **禁止变换**：比较时使用不一致的 k 范围或归一化
+- **颜色、灰度与无障碍**：颜色结合线型或垂直顺序；曲线采用直接标签
+- **标注规则**：标注候选配位壳层但避免过度归属
+- **常见投稿风险**：遗漏变换参数或把峰位直接解释为键长
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：比较组必须使用相同的 EXAFS 处理参数
+- **替代 / 补充图型**：line-chart；exafs-r-space-fitting-plot
+- **QA 规则**：核对 k 权重、变换窗口、R 范围和相移声明
+
+### EXAFS R 空间拟合图（EXAFS R-space Fitting Plot）
+
+- **Canonical ID**：`exafs-r-space-fitting-plot`
+- **别名**：EXAFS 拟合图；R 空间拟合；EXAFS fit；R-space EXAFS fit
+- **适合回答**：候选局域结构模型在多大程度上解释实验 EXAFS？
+- **定义**：在一致 R 区间中叠加实验傅里叶谱和结构模型拟合，并配合残差与参数表审阅。
+- **必需数据**：r；observed；fitted
+- **可选数据**：residual；fit_range；path
+- **观测单位**：一次 EXAFS 结构拟合
+- **推荐编码**：R 位置与实验/拟合曲线
+- **适用条件**：路径、自由参数、约束和拟合范围可追溯
+- **不适用条件**：仅展示平滑拟合线而不报告拟合配置
+- **统计与不确定性**：报告 R 因子、独立点数、自由参数和参数不确定性；提供残差和参数置信信息
+- **样本量与分布要求**：至少包含完整拟合区间内的实验值和拟合值。
+- **轴、尺度与变换**：实验与拟合共享坐标和单位；与建模流程一致的 k 权重和傅里叶变换
+- **禁止变换**：隐藏不拟合区间或只展示最吻合的局部
+- **颜色、灰度与无障碍**：实验与拟合使用不同线型；不依赖颜色区分实验和模型
+- **标注规则**：标注拟合区间与关键壳层
+- **常见投稿风险**：过参数化、遗漏残差或独立点数
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须同时交付拟合配置和参数报告
+- **替代 / 补充图型**：line-chart；exafs-wavelet-transform-map
+- **QA 规则**：核对拟合区间、参数数量、残差和不确定性
+
+### EXAFS 小波变换图（EXAFS Wavelet-transform Map）
+
+- **Canonical ID**：`exafs-wavelet-transform-map`
+- **别名**：WT-EXAFS 图；EXAFS 小波等高图；EXAFS 小波三维图；WT-EXAFS；EXAFS wavelet map；EXAFS wavelet surface
+- **适合回答**：不同散射体或配位壳层在 k 与 R 空间中出现在哪里？
+- **定义**：将 EXAFS 小波变换幅值编码在 k–R 平面，并可附加 3D 表面作为结构视图。
+- **必需数据**：k；r；magnitude
+- **可选数据**：sample；wavelet；k_weight；window
+- **观测单位**：一个样品的小波变换网格
+- **推荐编码**：二维位置编码 k 与 R，感知均匀色阶编码幅值；3D 高度仅作冗余结构提示
+- **适用条件**：需要同时分辨距离与散射强度特征；小波、范围和窗函数已声明
+- **不适用条件**：仅以 3D 透视图替代可定量读取的二维投影
+- **统计与不确定性**：声明小波类型、参数、k 权重、k/R 范围和窗函数；必要时对重复样品或参数敏感性做并列比较
+- **样本量与分布要求**：完整的 k × R 网格且至少包含一个非零信号。
+- **轴、尺度与变换**：k 与 R 保持物理单位和一致范围；将幅值按全图最大值归一化并明确说明
+- **禁止变换**：分别缩放比较图导致峰强不可比
+- **颜色、灰度与无障碍**：使用感知有序或有明确中点的色阶，并提供灰度证明；二维投影保留等值结构，避免仅依赖 3D 深度
+- **标注规则**：只标注有物理依据的主要区域
+- **常见投稿风险**：3D 遮挡、未披露小波参数或把可视峰直接当作唯一散射体
+- **实现状态**：`production_template`
+- **可复用资产**：`assets/figures/EXAFSWaveletMap`
+- **后端与依赖**：python；matplotlib；numpy；pandas
+- **复用限制**：输入必须是完整真实网格；比较图必须共享变换参数与色阶
+- **替代 / 补充图型**：contour-map；exafs-fourier-transform-spectrum
+- **QA 规则**：核对小波参数、色阶范围、二维可读性、3D 遮挡和灰度证明
 
 ### 故障树（Fault Tree）
 
@@ -574,6 +808,32 @@
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
 
+### 恒流充放电曲线（Galvanostatic Charge-discharge Curve）
+
+- **Canonical ID**：`galvanostatic-charge-discharge-curve`
+- **别名**：GCD 曲线；充放电曲线；GCD profile；galvanostatic profile
+- **适合回答**：不同样品或倍率下的容量、电压平台和极化如何变化？
+- **定义**：绘制恒定电流条件下电位随比容量或时间的充放电轨迹。
+- **必需数据**：capacity_or_time；voltage；direction
+- **可选数据**：sample；cycle；current_density
+- **观测单位**：一个充电或放电半周期
+- **推荐编码**：容量或时间位置、电压位置与充放电方向
+- **适用条件**：质量负载、电流密度和电压窗口可追溯
+- **不适用条件**：将不同倍率或质量基准的数据混为同一曲线
+- **统计与不确定性**：报告容量、能量效率或库仑效率的计算定义；重复电极应报告变异
+- **样本量与分布要求**：至少包含一条完整充电或放电曲线。
+- **轴、尺度与变换**：明确电压参比、容量基准与电流密度；经披露的质量、面积或体积归一化
+- **禁止变换**：裁掉低性能区段或改变充放电方向
+- **颜色、灰度与无障碍**：充电与放电使用颜色加线型；直接标注方向与倍率
+- **标注规则**：标注电压平台和测试条件
+- **常见投稿风险**：活性物质量、倍率、循环编号或截止电压缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留测试条件和归一化分母
+- **替代 / 补充图型**：line-chart；battery-rate-capability-plot
+- **QA 规则**：核对质量负载、电流密度、电压窗口和归一化
+
 ### 甘特图（Gantt Chart）
 
 - **Canonical ID**：`gantt-chart`
@@ -625,6 +885,32 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### 离子扩散系数状态曲线（Ion Diffusion-coefficient Profile）
+
+- **Canonical ID**：`ion-diffusion-coefficient-profile`
+- **别名**：扩散系数-反应状态图；GITT 扩散系数曲线；diffusion coefficient vs state；GITT diffusion profile
+- **适合回答**：离子扩散动力学在反应进程中何处变慢或恢复？
+- **定义**：展示对数扩散系数随荷电状态、反应状态或容量的变化，并区分充电和放电。
+- **必需数据**：reaction_state；diffusion_coefficient；direction
+- **可选数据**：sample；uncertainty
+- **观测单位**：一个反应状态下的扩散系数估计
+- **推荐编码**：反应状态位置与对数扩散系数位置
+- **适用条件**：扩散系数计算公式、脉冲协议和单位可追溯
+- **不适用条件**：零或负值被直接取对数
+- **统计与不确定性**：报告扩散系数计算方法和假设；传播电压、时间和几何参数的不确定性
+- **样本量与分布要求**：覆盖研究声称区间的多个状态点。
+- **轴、尺度与变换**：明确 log10 单位、状态定义与充放电方向；严格正扩散系数的以 10 为底对数
+- **禁止变换**：删去低扩散区或过度平滑局部极值
+- **颜色、灰度与无障碍**：充放电采用颜色加标记；使用不同标记并直接标注方向
+- **标注规则**：标注相变或显著动力学区段
+- **常见投稿风险**：公式假设、几何参数或误差传播缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须披露扩散系数计算公式、输入参数和假设
+- **替代 / 补充图型**：line-chart；galvanostatic-charge-discharge-curve
+- **QA 规则**：核对对数输入、方向、单位、计算公式和不确定性
 
 ### 鱼骨图（Ishikawa Diagram）
 
@@ -833,6 +1119,32 @@
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：dot-plot；lollipop-chart；horizontal-bar-chart
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
+
+### 峰电流-扫描速率双对数图（Peak-current Scan-rate Log-log Plot）
+
+- **Canonical ID**：`peak-current-scan-rate-log-log-plot`
+- **别名**：b 值拟合图；log i-log v 图；b-value plot；log peak current vs log scan rate
+- **适合回答**：不同峰的电流对扫描速率呈现何种幂律关系？
+- **定义**：在双对数坐标中拟合峰电流与扫描速率关系，用斜率估计动力学 b 值。
+- **必需数据**：scan_rate；peak_current；peak
+- **可选数据**：replicate；direction
+- **观测单位**：一个峰在一个扫描速率下的电流
+- **推荐编码**：双对数位置、点与拟合线
+- **适用条件**：幂律模型在预设范围内合理
+- **不适用条件**：包含零或负值却直接取对数；只报告斜率不报告拟合范围与不确定性
+- **统计与不确定性**：报告 b 值、置信区间、样本数和拟合诊断；斜率置信区间和重复测量变异
+- **样本量与分布要求**：每个峰至少包含足以估计回归和不确定性的多个扫描速率。
+- **轴、尺度与变换**：两轴均明确使用对数尺度和原始单位；严格正值的对数变换
+- **禁止变换**：为改善线性而事后删点
+- **颜色、灰度与无障碍**：峰使用颜色加标记形状；直接标注峰名与 b 值
+- **标注规则**：标注回归方程、区间和拟合范围
+- **常见投稿风险**：点数不足、伪重复或事后选择线性区间
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留原始正值、预设拟合范围和回归诊断
+- **替代 / 补充图型**：scatter-regression-plot；electrochemical-kinetics-contour-map
+- **QA 规则**：核对对数输入、拟合范围、斜率区间和重复结构
 
 ### 过程能力直方图（Process Capability Histogram）
 
@@ -1171,3 +1483,55 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### XANES 吸收近边谱（XANES Spectrum）
+
+- **Canonical ID**：`xanes-spectrum`
+- **别名**：X 射线吸收近边结构谱；吸收边谱；X-ray absorption near-edge spectrum；XANES edge plot
+- **适合回答**：样品的吸收边、白线和近边特征相对参考物如何变化？
+- **定义**：以光子能量为横轴展示归一化吸收系数，用于比较价态和局域电子结构。
+- **必需数据**：energy；normalized_absorption；sample
+- **可选数据**：reference；edge_energy；inset
+- **观测单位**：样品或参考标准的一条 XANES 光谱
+- **推荐编码**：能量位置与归一化吸收曲线
+- **适用条件**：能量校准、预边和后边归一化流程已记录
+- **不适用条件**：跨批次能量漂移未校正
+- **统计与不确定性**：报告边能量或白线指标的定义；重复扫描应展示变异或说明合并方法
+- **样本量与分布要求**：至少一条校准、归一化并覆盖完整近边区间的光谱。
+- **轴、尺度与变换**：保持比较曲线相同能量窗口与归一化尺度；可追溯的能量校准和归一化
+- **禁止变换**：为强化位移而独立拉伸各曲线
+- **颜色、灰度与无障碍**：颜色结合线型和直接标签；参考谱与样品谱使用冗余线型
+- **标注规则**：标注吸收边、白线和参考标准
+- **常见投稿风险**：把微小未校准位移解释为价态变化
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须根据真实能量校准和归一化流程实现
+- **替代 / 补充图型**：line-chart；exafs-fourier-transform-spectrum
+- **QA 规则**：核对能量校准、归一化窗口、参考标准和重复扫描
+
+### XPS 峰拟合分峰图（XPS Peak Deconvolution Plot）
+
+- **Canonical ID**：`xps-peak-deconvolution-plot`
+- **别名**：XPS 分峰图；XPS 峰拟合图；XPS 高分辨谱；XPS peak fitting；XPS component fit；high-resolution XPS spectrum
+- **适合回答**：哪些化学态共同解释观测峰形，各组分如何在样品间变化？
+- **定义**：展示 XPS 观测谱、总拟合、背景与各化学组分峰，并支持样品间的同尺度比较。
+- **必需数据**：spectrum；binding_energy；observed；fit；background；component_intensity
+- **可选数据**：component_label；residual；fit_constraint
+- **观测单位**：样品中的一个高分辨 XPS 能区
+- **推荐编码**：结合能位置编码峰位；强度编码信号；填充与线型区分组分、观测和拟合
+- **适用条件**：峰模型、背景模型和约束均可追溯；需要比较化学态而非仅展示总强度
+- **不适用条件**：未完成能量校准或背景扣除；仅凭视觉外观指定峰数和化学态
+- **统计与不确定性**：报告峰位、峰面积、半峰宽、拟合优度及约束；给出参数不确定性或拟合残差
+- **样本量与分布要求**：每个样品至少包含完整能区网格、观测谱、总拟合、背景和一个组分峰。
+- **轴、尺度与变换**：结合能轴按领域惯例从高到低排列；同一比较组保持一致能区与强度定义；经披露的电荷校正、背景建模与强度归一化
+- **禁止变换**：为得到理想峰形而隐藏残差或任意增删组分
+- **颜色、灰度与无障碍**：组分采用色盲安全配色，总拟合与观测使用不同线型；组分峰直接标注，关键曲线不只依赖颜色
+- **标注规则**：标注化学态、峰位及样品身份
+- **常见投稿风险**：缺少背景、峰形、约束或残差说明会使化学态归属不可审查
+- **实现状态**：`production_template`
+- **可复用资产**：`assets/figures/XPSPeakDeconvolution`
+- **后端与依赖**：python；matplotlib；numpy；pandas
+- **复用限制**：输入必须包含真实观测、拟合、背景与分峰数据；示例数据不得用于论文结论
+- **替代 / 补充图型**：line-chart；scatter-regression-plot
+- **QA 规则**：核对能量方向、峰面积、残差、组分标签和灰度可辨识度

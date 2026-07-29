@@ -134,7 +134,14 @@ def main() -> None:
                 print(f"  - {path}")
             raise SystemExit(1)
         verb = "checked" if args.check else "updated"
-        print(f"Production manifests {verb}: {len(differences) if not args.check else 34}")
+        production_count = sum(
+            chart["implementation_status"] == "production_template"
+            for chart in registry["charts"]
+        )
+        print(
+            f"Production manifests {verb}: "
+            f"{len(differences) if not args.check else production_count}"
+        )
 
 
 if __name__ == "__main__":

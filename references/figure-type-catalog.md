@@ -36,10 +36,10 @@
 | 编号 | 分类 | 适用研究问题 | 图型数量 | 文档 |
 |---|---|---|---:|---|
 | 01 | 数值比较与排序图 / Comparison and Ranking | 多变量结构、相关与低维表示；整体组成、比例与结构 | 27 | [打开](chart-types/01-comparison-ranking.md) |
-| 02 | 时间趋势与动态变化图 / Time Trends and Dynamics | 临床路径、效应与流行病学比较；处理效应、反事实趋势与识别假设 | 34 | [打开](chart-types/02-time-trend-dynamics.md) |
+| 02 | 时间趋势与动态变化图 / Time Trends and Dynamics | 临床路径、效应与流行病学比较；处理效应、反事实趋势与识别假设 | 39 | [打开](chart-types/02-time-trend-dynamics.md) |
 | 03 | 数据分布图 / Data Distribution | 分布形态、离散程度与异常值；变量关系、拟合与一致性 | 30 | [打开](chart-types/03-distribution.md) |
-| 04 | 变量关系与相关性图 / Relationships and Correlation | 变量关系、拟合与一致性；多变量结构、相关与低维表示 | 32 | [打开](chart-types/04-relationship-correlation.md) |
-| 05 | 构成、比例与整体—部分关系图 / Composition and Part-to-whole | 展示组成比例以及整体与部分之间的关系；整体组成、比例与结构 | 29 | [打开](chart-types/05-composition-proportion.md) |
+| 04 | 变量关系与相关性图 / Relationships and Correlation | 变量关系、拟合与一致性；多变量结构、相关与低维表示 | 33 | [打开](chart-types/04-relationship-correlation.md) |
+| 05 | 构成、比例与整体—部分关系图 / Composition and Part-to-whole | 展示组成比例以及整体与部分之间的关系；整体组成、比例与结构 | 30 | [打开](chart-types/05-composition-proportion.md) |
 | 06 | 统计估计、效应量与不确定性图 / Estimation, Effect Size, and Uncertainty | 报告估计值、效应量与统计不确定性；效应方向、大小与不确定性 | 30 | [打开](chart-types/06-uncertainty-effect-size.md) |
 | 07 | 实验设计与组间差异图 / Experimental Design and Group Differences | 临床路径、效应与流行病学比较；分布形态、离散程度与异常值 | 31 | [打开](chart-types/07-experimental-design-group-differences.md) |
 | 08 | 回归与统计模型诊断图 / Regression and Statistical Model Diagnostics | 诊断回归与统计模型的拟合、残差、影响点和假设；预测区分度、校准或误差结构 | 39 | [打开](chart-types/08-regression-model-diagnostics.md) |
@@ -48,13 +48,13 @@
 | 11 | 网络与关系结构图 / Networks and Relational Structure | 实体连接、权重与社区结构；展示实体之间的连接、权重、社群与网络结构 | 34 | [打开](chart-types/11-network-relationship-structure.md) |
 | 12 | 流程、迁移与流量图 / Process, Transition, and Flow | 多证据整合、三维或高级结构；展示流程、状态迁移、路径和流量 | 32 | [打开](chart-types/12-flow-migration.md) |
 | 13 | 空间与地理数据图 / Spatial and Geographic Data | 展示地理位置、区域差异、空间模式与空间过程；空间位置、区域差异与地理量级 | 40 | [打开](chart-types/13-spatial-geographic.md) |
-| 14 | 高维与多变量数据图 / High-dimensional and Multivariate Data | 多变量结构、相关与低维表示；多证据整合、三维或高级结构 | 50 | [打开](chart-types/14-high-dimensional-multivariate.md) |
+| 14 | 高维与多变量数据图 / High-dimensional and Multivariate Data | 多变量结构、相关与低维表示；多证据整合、三维或高级结构 | 51 | [打开](chart-types/14-high-dimensional-multivariate.md) |
 | 15 | 质性研究与文本分析图 / Qualitative Research and Text Analysis | 展示质性编码、文本主题、语义关系与叙事结构；知识关联、主题演化与科学结构 | 35 | [打开](chart-types/15-qualitative-text-analysis.md) |
 | 16 | 教育学与心理测量常用图 / Education and Psychometrics | 测量模型、题目性能与潜变量结构；表达教育测量、心理计量、学习过程与学校效应 | 40 | [打开](chart-types/16-education-psychometrics.md) |
 | 17 | 医学、公共卫生与生命科学常用图 / Medicine, Public Health, and Life Sciences | 临床路径、效应与流行病学比较；事件时间、生存概率与竞争结局 | 70 | [打开](chart-types/17-medicine-public-health-life-sciences.md) |
 | 18 | 集合、重叠与分类组合图 / Sets, Overlap, and Category Combinations | 展示集合成员、交集、重叠与分类组合；集合交集与成员关系 | 15 | [打开](chart-types/18-sets-overlap-combinations.md) |
-| 19 | 三维、曲面与科学计算图 / 3D, Surface, and Scientific Computing | 图像结构、通道与空间定量；多证据整合、三维或高级结构 | 30 | [打开](chart-types/19-three-dimensional-scientific-computing.md) |
-| 20 | 工程、质量管理与过程控制图 / Engineering, Quality, and Process Control | 监控工程质量、过程稳定性、可靠性与风险；计划进度、过程稳定性与运营监测 | 41 | [打开](chart-types/20-engineering-quality-process-control.md) |
+| 19 | 三维、曲面与科学计算图 / 3D, Surface, and Scientific Computing | 图像结构、通道与空间定量；多证据整合、三维或高级结构 | 31 | [打开](chart-types/19-three-dimensional-scientific-computing.md) |
+| 20 | 工程、质量管理与过程控制图 / Engineering, Quality, and Process Control | 估计峰电流与扫描速率的幂律指数；分解重叠谱峰并比较化学组分 | 54 | [打开](chart-types/20-engineering-quality-process-control.md) |
 | 21 | 文献计量与科学知识图谱 / Bibliometrics and Science Mapping | 展示文献计量关系、知识结构、主题与研究前沿；知识关联、主题演化与科学结构 | 35 | [打开](chart-types/21-bibliometrics-science-mapping.md) |
 | 22 | 因果机制与理论模型图 / Causal Mechanisms and Theoretical Models | 处理效应、反事实趋势与识别假设；表达因果机制、理论关系、路径与逻辑模型 | 25 | [打开](chart-types/22-causal-theoretical-models.md) |
 | 23 | 研究流程与论文规范图 / Research Process and Reporting Standards | 说明研究流程、报告规范、实验步骤与系统架构 | 25 | [打开](chart-types/23-research-process-paper-standards.md) |

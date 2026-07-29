@@ -681,3 +681,16 @@
 | `wright-map` | Wright图 | Wright Map | 项目—人对应图；person-item map | 教育学与心理测量常用图 | 按需实现 |
 | `x-bar-control-chart` | X-bar控制图 | X-bar Control Chart | 无 | 工程、质量管理与过程控制图 | 按需实现 |
 | `year-on-year-and-period-on-period-change-plot` | 同比／环比变化图 | Year-on-year and Period-on-period Change Plot | 无 | 时间趋势与动态变化图 | 可复用模式 |
+| `xps-peak-deconvolution-plot` | XPS 峰拟合分峰图 | XPS Peak Deconvolution Plot | XPS 分峰图；XPS 峰拟合图；XPS 高分辨谱；XPS peak fitting；XPS component fit；high-resolution XPS spectrum | 工程、质量管理与过程控制图 | 生产模板 |
+| `xanes-spectrum` | XANES 吸收近边谱 | XANES Spectrum | X 射线吸收近边结构谱；吸收边谱；X-ray absorption near-edge spectrum；XANES edge plot | 工程、质量管理与过程控制图 | 可复用模式 |
+| `exafs-fourier-transform-spectrum` | EXAFS 傅里叶变换谱 | EXAFS Fourier-transform Spectrum | EXAFS R 空间谱；傅里叶变换 EXAFS；FT-EXAFS；EXAFS R-space magnitude | 工程、质量管理与过程控制图 | 可复用模式 |
+| `exafs-r-space-fitting-plot` | EXAFS R 空间拟合图 | EXAFS R-space Fitting Plot | EXAFS 拟合图；R 空间拟合；EXAFS fit；R-space EXAFS fit | 工程、质量管理与过程控制图 | 可复用模式 |
+| `exafs-wavelet-transform-map` | EXAFS 小波变换图 | EXAFS Wavelet-transform Map | WT-EXAFS 图；EXAFS 小波等高图；EXAFS 小波三维图；WT-EXAFS；EXAFS wavelet map；EXAFS wavelet surface | 三维、曲面与科学计算图、工程、质量管理与过程控制图 | 生产模板 |
+| `cyclic-voltammetry-curve` | 循环伏安曲线 | Cyclic Voltammetry Curve | CV 曲线；循环伏安图；CV curve；cyclic voltammogram | 时间趋势与动态变化图、工程、质量管理与过程控制图 | 可复用模式 |
+| `galvanostatic-charge-discharge-curve` | 恒流充放电曲线 | Galvanostatic Charge-discharge Curve | GCD 曲线；充放电曲线；GCD profile；galvanostatic profile | 时间趋势与动态变化图、工程、质量管理与过程控制图 | 可复用模式 |
+| `battery-rate-capability-plot` | 电池倍率性能图 | Battery Rate Capability Plot | 倍率性能图；倍率测试图；rate performance plot；rate capability test | 时间趋势与动态变化图、工程、质量管理与过程控制图 | 可复用模式 |
+| `battery-cycling-stability-plot` | 电池循环稳定性图 | Battery Cycling Stability Plot | 长循环性能图；循环寿命图；long-term cycling plot；cycling performance plot | 时间趋势与动态变化图、工程、质量管理与过程控制图 | 可复用模式 |
+| `electrochemical-kinetics-contour-map` | 电化学动力学等高图 | Electrochemical Kinetics Contour Map | 峰电位扫描速率等高图；电化学动力学热图；electrochemical kinetics heatmap；potential scan-rate contour | 高维与多变量数据图、工程、质量管理与过程控制图 | 可复用模式 |
+| `peak-current-scan-rate-log-log-plot` | 峰电流-扫描速率双对数图 | Peak-current Scan-rate Log-log Plot | b 值拟合图；log i-log v 图；b-value plot；log peak current vs log scan rate | 变量关系与相关性图、工程、质量管理与过程控制图 | 可复用模式 |
+| `capacitive-diffusion-contribution-plot` | 电容-扩散贡献图 | Capacitive-diffusion Contribution Plot | 电容贡献堆积图；扩散控制贡献图；capacitive contribution plot；diffusion-controlled contribution plot | 构成、比例与整体—部分关系图、工程、质量管理与过程控制图 | 可复用模式 |
+| `ion-diffusion-coefficient-profile` | 离子扩散系数状态曲线 | Ion Diffusion-coefficient Profile | 扩散系数-反应状态图；GITT 扩散系数曲线；diffusion coefficient vs state；GITT diffusion profile | 时间趋势与动态变化图、工程、质量管理与过程控制图 | 可复用模式 |

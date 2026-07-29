@@ -1,0 +1,44 @@
+{
+  "manifest_version": "1.0.0",
+  "chart_ids": [
+    "xps-peak-deconvolution-plot"
+  ],
+  "backend": [
+    "python"
+  ],
+  "entrypoints": [
+    "plot_xps_peak_deconvolution.py"
+  ],
+  "previews": [
+    "xps_peak_deconvolution.png"
+  ],
+  "outputs": {
+    "vector": [
+      "xps_peak_deconvolution.pdf",
+      "xps_peak_deconvolution.svg"
+    ],
+    "raster": [
+      "xps_peak_deconvolution.png"
+    ]
+  },
+  "data": {
+    "mode": "bundled_or_synthetic_demo",
+    "required_columns": []
+  },
+  "supported_transforms": [
+    "经披露的电荷校正、背景建模与强度归一化"
+  ],
+  "unsupported_cases": [
+    "未完成能量校准或背景扣除",
+    "仅凭视觉外观指定峰数和化学态"
+  ],
+  "aspect_ratio": 1.0854,
+  "theme": "nature-default",
+  "qa": {
+    "status": "passed",
+    "commands": [
+      "python scripts/check_references.py",
+      "python scripts/check_chart_registry.py"
+    ]
+  }
+}

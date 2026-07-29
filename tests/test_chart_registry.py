@@ -55,7 +55,7 @@ class ChartRegistryTests(unittest.TestCase):
 
     def test_status_counts_and_production_truth(self) -> None:
         counts = status_counts(self.registry)
-        self.assertEqual(counts["production_template"], 34)
+        self.assertEqual(counts["production_template"], 36)
         self.assertGreater(counts["reusable_pattern"], 0)
         self.assertGreater(counts["on_demand"], 0)
         for chart in self.registry["charts"]:

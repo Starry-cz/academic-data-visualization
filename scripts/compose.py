@@ -164,6 +164,8 @@ PANEL_ASPECT = {
     "singlecell": 0.85,
     "image": 0.75,
     "schematic": 0.65,
+    "xpspeak_deconvolution": 0.95,
+    "exafswavelet_map": 1.0,
 }
 
 # Font scaling by panel count: fewer panels = bigger fonts (more canvas per panel)

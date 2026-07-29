@@ -65,6 +65,8 @@ Route through the registry without loading the entire taxonomy:
 
 For cross-domain charts, check both the general chart contract and the specialist category contract. Never load all 24 category files for one request.
 
+For XPS, XANES, EXAFS, cyclic voltammetry, galvanostatic charge-discharge, rate capability, cycling stability, electrochemical kinetics, or capacitive/diffusion contribution figures, also read `references/materials-electrochemistry-chart-guide.md`.
+
 For each panel, state:
 
 | Panel | Figure type | Question answered | Data-based reason |

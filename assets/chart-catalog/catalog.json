@@ -7473,6 +7473,158 @@
       "implementation_status": "reusable_pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
+    },
+    {
+      "id": "xps-peak-deconvolution-plot",
+      "name_zh": "XPS 峰拟合分峰图",
+      "name_en": "XPS Peak Deconvolution Plot",
+      "categories": [
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "production_template",
+      "registry_origin": "repository_extension",
+      "preview": "assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"
+    },
+    {
+      "id": "xanes-spectrum",
+      "name_zh": "XANES 吸收近边谱",
+      "name_en": "XANES Spectrum",
+      "categories": [
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "exafs-fourier-transform-spectrum",
+      "name_zh": "EXAFS 傅里叶变换谱",
+      "name_en": "EXAFS Fourier-transform Spectrum",
+      "categories": [
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "exafs-r-space-fitting-plot",
+      "name_zh": "EXAFS R 空间拟合图",
+      "name_en": "EXAFS R-space Fitting Plot",
+      "categories": [
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "exafs-wavelet-transform-map",
+      "name_zh": "EXAFS 小波变换图",
+      "name_en": "EXAFS Wavelet-transform Map",
+      "categories": [
+        "three-dimensional-scientific-computing",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "production_template",
+      "registry_origin": "repository_extension",
+      "preview": "assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"
+    },
+    {
+      "id": "cyclic-voltammetry-curve",
+      "name_zh": "循环伏安曲线",
+      "name_en": "Cyclic Voltammetry Curve",
+      "categories": [
+        "time-trend-dynamics",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "galvanostatic-charge-discharge-curve",
+      "name_zh": "恒流充放电曲线",
+      "name_en": "Galvanostatic Charge-discharge Curve",
+      "categories": [
+        "time-trend-dynamics",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "battery-rate-capability-plot",
+      "name_zh": "电池倍率性能图",
+      "name_en": "Battery Rate Capability Plot",
+      "categories": [
+        "time-trend-dynamics",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "battery-cycling-stability-plot",
+      "name_zh": "电池循环稳定性图",
+      "name_en": "Battery Cycling Stability Plot",
+      "categories": [
+        "time-trend-dynamics",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "electrochemical-kinetics-contour-map",
+      "name_zh": "电化学动力学等高图",
+      "name_en": "Electrochemical Kinetics Contour Map",
+      "categories": [
+        "high-dimensional-multivariate",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "peak-current-scan-rate-log-log-plot",
+      "name_zh": "峰电流-扫描速率双对数图",
+      "name_en": "Peak-current Scan-rate Log-log Plot",
+      "categories": [
+        "relationship-correlation",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "capacitive-diffusion-contribution-plot",
+      "name_zh": "电容-扩散贡献图",
+      "name_en": "Capacitive-diffusion Contribution Plot",
+      "categories": [
+        "composition-proportion",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
+    },
+    {
+      "id": "ion-diffusion-coefficient-profile",
+      "name_zh": "离子扩散系数状态曲线",
+      "name_en": "Ion Diffusion-coefficient Profile",
+      "categories": [
+        "time-trend-dynamics",
+        "engineering-quality-process-control"
+      ],
+      "implementation_status": "reusable_pattern",
+      "registry_origin": "repository_extension",
+      "preview": null
     }
   ]
 }

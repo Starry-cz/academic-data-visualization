@@ -23,6 +23,7 @@
 | `contour-plot` | 配对观测或变量组合 | x, y | 可复用模式 |
 | `displacement-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
 | `electric-field-distribution-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
+| `exafs-wavelet-transform-map` | 一个样品的小波变换网格 | k, r, magnitude | 生产模板 |
 | `finite-element-mesh-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
 | `fluid-particle-trajectory-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
 | `heat-conduction-field-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
@@ -58,6 +59,7 @@
 | 等高线图 / Contour Plot | `contour-plot` | 评估变量之间的方向、强度、形态与非线性关系 | 可复用模式 |
 | 位移云图 / Displacement Contour Plot | `displacement-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
 | 电场分布图 / Electric Field Distribution Plot | `electric-field-distribution-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
+| EXAFS 小波变换图 / EXAFS Wavelet-transform Map | `exafs-wavelet-transform-map` | 联合定位 EXAFS 信号在 k 与 R 空间的特征 | 生产模板 |
 | 有限元网格图 / Finite Element Mesh Plot | `finite-element-mesh-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
 | 流体粒子轨迹图 / Fluid Particle Trajectory Plot | `fluid-particle-trajectory-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
 | 热传导场图 / Heat Conduction Field Plot | `heat-conduction-field-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
@@ -265,6 +267,32 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### EXAFS 小波变换图（EXAFS Wavelet-transform Map）
+
+- **Canonical ID**：`exafs-wavelet-transform-map`
+- **别名**：WT-EXAFS 图；EXAFS 小波等高图；EXAFS 小波三维图；WT-EXAFS；EXAFS wavelet map；EXAFS wavelet surface
+- **适合回答**：不同散射体或配位壳层在 k 与 R 空间中出现在哪里？
+- **定义**：将 EXAFS 小波变换幅值编码在 k–R 平面，并可附加 3D 表面作为结构视图。
+- **必需数据**：k；r；magnitude
+- **可选数据**：sample；wavelet；k_weight；window
+- **观测单位**：一个样品的小波变换网格
+- **推荐编码**：二维位置编码 k 与 R，感知均匀色阶编码幅值；3D 高度仅作冗余结构提示
+- **适用条件**：需要同时分辨距离与散射强度特征；小波、范围和窗函数已声明
+- **不适用条件**：仅以 3D 透视图替代可定量读取的二维投影
+- **统计与不确定性**：声明小波类型、参数、k 权重、k/R 范围和窗函数；必要时对重复样品或参数敏感性做并列比较
+- **样本量与分布要求**：完整的 k × R 网格且至少包含一个非零信号。
+- **轴、尺度与变换**：k 与 R 保持物理单位和一致范围；将幅值按全图最大值归一化并明确说明
+- **禁止变换**：分别缩放比较图导致峰强不可比
+- **颜色、灰度与无障碍**：使用感知有序或有明确中点的色阶，并提供灰度证明；二维投影保留等值结构，避免仅依赖 3D 深度
+- **标注规则**：只标注有物理依据的主要区域
+- **常见投稿风险**：3D 遮挡、未披露小波参数或把可视峰直接当作唯一散射体
+- **实现状态**：`production_template`
+- **可复用资产**：`assets/figures/EXAFSWaveletMap`
+- **后端与依赖**：python；matplotlib；numpy；pandas
+- **复用限制**：输入必须是完整真实网格；比较图必须共享变换参数与色阶
+- **替代 / 补充图型**：contour-map；exafs-fourier-transform-spectrum
+- **QA 规则**：核对小波参数、色阶范围、二维可读性、3D 遮挡和灰度证明
 
 ### 有限元网格图（Finite Element Mesh Plot）
 

@@ -1,13 +1,13 @@
 {
   "registry_version": "2.1.0",
   "categories": 24,
-  "canonical_charts": 665,
+  "canonical_charts": 678,
   "source_memberships": 714,
   "declared_source_memberships": 714,
   "source_complete": true,
   "source_taxonomy": 625,
-  "repository_extension": 40,
-  "production_template": 34,
-  "reusable_pattern": 228,
+  "repository_extension": 53,
+  "production_template": 36,
+  "reusable_pattern": 239,
   "on_demand": 403
 }

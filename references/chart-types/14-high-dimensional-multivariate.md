@@ -30,6 +30,7 @@
 | `dendrogram` | 节点或边 | source, target, weight | 可复用模式 |
 | `density-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
 | `dimension-correlation-network` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `electrochemical-kinetics-contour-map` | 电位 × 扫描速率网格单元 | potential, scan_rate, response | 可复用模式 |
 | `factor-loading-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
 | `frequency-3d-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
 | `glyph-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
@@ -85,6 +86,7 @@
 | 树状图 / Dendrogram | `dendrogram` | 实体连接、权重与社区结构 | 可复用模式 |
 | 密度热图 / Density Heatmap | `density-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
 | 维度相关网络图 / Dimension Correlation Network | `dimension-correlation-network` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| 电化学动力学等高图 / Electrochemical Kinetics Contour Map | `electrochemical-kinetics-contour-map` | 展示电位、扫描速率与响应强度的二维关系 | 可复用模式 |
 | 因子载荷图 / Factor Loading Plot | `factor-loading-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
 | 三维频率热图 / Three-dimensional Frequency Heatmap | `frequency-3d-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
 | Glyph图 / Glyph Plot | `glyph-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
@@ -487,6 +489,32 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### 电化学动力学等高图（Electrochemical Kinetics Contour Map）
+
+- **Canonical ID**：`electrochemical-kinetics-contour-map`
+- **别名**：峰电位扫描速率等高图；电化学动力学热图；electrochemical kinetics heatmap；potential scan-rate contour
+- **适合回答**：响应峰如何随扫描速率和电位共同变化？
+- **定义**：在电位与扫描速率二维空间编码电流或拟合响应，用于观察峰位漂移和动力学区域。
+- **必需数据**：potential；scan_rate；response
+- **可选数据**：direction；peak_label
+- **观测单位**：电位 × 扫描速率网格单元
+- **推荐编码**：二维位置与感知均匀色阶
+- **适用条件**：网格密度和插值方法可追溯
+- **不适用条件**：稀疏数据被高阶插值伪造成连续结构
+- **统计与不确定性**：报告插值、平滑和峰提取方法；必要时用重复图或等值线敏感性展示
+- **样本量与分布要求**：足以支持二维插值或原始网格显示的扫描速率与电位组合。
+- **轴、尺度与变换**：扫描速率使用物理合理的线性或对数尺度；经披露的规则网格化与轻度平滑
+- **禁止变换**：产生超出观测范围的外推色块
+- **颜色、灰度与无障碍**：使用感知均匀色阶并保留等值线；颜色之外用等值线和峰标签
+- **标注规则**：标注峰轨迹与扫描方向
+- **常见投稿风险**：插值伪影、色标截断或未说明扫描方向
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须披露网格化、插值和平滑方法
+- **替代 / 补充图型**：contour-map；peak-current-scan-rate-log-log-plot
+- **QA 规则**：核对色标、插值范围、峰轨迹和灰度等值线
 
 ### 因子载荷图（Factor Loading Plot）
 

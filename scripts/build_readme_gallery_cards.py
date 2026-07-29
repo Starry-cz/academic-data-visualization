@@ -48,6 +48,16 @@ WIDE_SPECS = (
         "geographic_bubble_map.png",
     ),
 )
+MATERIAL_SPECS = (
+    (
+        ROOT / "assets" / "figures" / "XPSPeakDeconvolution" / "xps_peak_deconvolution.png",
+        "xps_peak_deconvolution.png",
+    ),
+    (
+        ROOT / "assets" / "figures" / "EXAFSWaveletMap" / "exafs_wavelet_map.png",
+        "exafs_wavelet_map.png",
+    ),
+)
 
 SQUARE_CANVAS = (1800, 1800)
 WIDE_CANVAS = (1800, 1000)
@@ -79,6 +89,8 @@ def main() -> None:
         rendered.append(build_card(source_path, output_name, SQUARE_CANVAS))
     for source_path, output_name in WIDE_SPECS:
         rendered.append(build_card(source_path, output_name, WIDE_CANVAS))
+    for source_path, output_name in MATERIAL_SPECS:
+        rendered.append(build_card(source_path, output_name, SQUARE_CANVAS))
     print(f"Built {len(rendered)} README gallery cards in {CARD_DIR}")
 
 

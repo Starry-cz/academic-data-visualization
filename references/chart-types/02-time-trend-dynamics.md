@@ -19,19 +19,24 @@
 | `age-period-cohort-plot` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
 | `area-chart` | 时间点或重复观测对象 | time, value | 可复用模式 |
 | `autocorrelation-plot` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
+| `battery-cycling-stability-plot` | 一个循环 | cycle, capacity | 可复用模式 |
+| `battery-rate-capability-plot` | 一个循环或倍率阶段 | cycle, capacity, current_density | 可复用模式 |
 | `calendar-heatmap` | 矩阵单元 | row, column, value | 可复用模式 |
 | `confidence-band-plot` | 时间点或重复观测对象 | time, value | 可复用模式 |
 | `control-chart` | 时间点或重复观测对象 | time, value | 可复用模式 |
 | `cumulative-curve` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
 | `cumulative-incidence-plot` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
+| `cyclic-voltammetry-curve` | 一次完整电位扫描循环 | potential, current, scan_order | 可复用模式 |
 | `event-study-plot` | 受试者或研究 | group, outcome | 可复用模式 |
 | `fan-chart` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
 | `forecast-plot` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
+| `galvanostatic-charge-discharge-curve` | 一个充电或放电半周期 | capacity_or_time, voltage, direction | 可复用模式 |
 | `gantt-chart` | 时间点或重复观测对象 | time, value | 可复用模式 |
 | `horizon-chart` | 时间点或重复观测对象 | time, value | 按需实现 |
 | `index-chart` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
 | `individual-growth-curve` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
 | `interrupted-time-series` | 个体、组或时间点 | treatment, time, outcome | 可复用模式 |
+| `ion-diffusion-coefficient-profile` | 一个反应状态下的扩散系数估计 | reaction_state, diffusion_coefficient, direction | 可复用模式 |
 | `lag-plot` | 时间点、阶段或纵向观测 | ordered_time, value | 可复用模式 |
 | `line-chart` | 时间点或重复观测对象 | time, value | 生产模板 |
 | `moving-average-plot` | 时间点或重复观测对象 | time, value | 可复用模式 |
@@ -58,19 +63,24 @@
 | 年龄—时期—队列图 / Age–Period–Cohort Plot | `age-period-cohort-plot` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
 | 面积图 / Area Chart | `area-chart` | 随有序时间或剂量的变化 | 可复用模式 |
 | 自相关图 / Autocorrelation Plot | `autocorrelation-plot` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
+| 电池循环稳定性图 / Battery Cycling Stability Plot | `battery-cycling-stability-plot` | 展示容量保持、衰减与库仑效率随循环变化 | 可复用模式 |
+| 电池倍率性能图 / Battery Rate Capability Plot | `battery-rate-capability-plot` | 比较阶梯倍率下的容量保持与恢复 | 可复用模式 |
 | 日历热图 / Calendar Heatmap | `calendar-heatmap` | 矩阵模式、簇与注释 | 可复用模式 |
 | 置信带图 / Confidence Band Plot | `confidence-band-plot` | 随有序时间或剂量的变化 | 可复用模式 |
 | 控制图 / Control Chart | `control-chart` | 随有序时间或剂量的变化 | 可复用模式 |
 | 累积曲线 / Cumulative Curve | `cumulative-curve` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
 | 累积发生图 / Cumulative Incidence Plot | `cumulative-incidence-plot` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
+| 循环伏安曲线 / Cyclic Voltammetry Curve | `cyclic-voltammetry-curve` | 比较氧化还原峰、电位窗口与循环响应 | 可复用模式 |
 | 事件研究图 / Event Study Plot | `event-study-plot` | 临床路径、效应与流行病学比较 | 可复用模式 |
 | 扇形预测图 / Fan Chart | `fan-chart` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
 | 时间序列预测图 / Forecast Plot | `forecast-plot` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
+| 恒流充放电曲线 / Galvanostatic Charge-discharge Curve | `galvanostatic-charge-discharge-curve` | 比较容量、电压平台、极化与充放电效率 | 可复用模式 |
 | 甘特图 / Gantt Chart | `gantt-chart` | 随有序时间或剂量的变化 | 可复用模式 |
 | 地平线图 / Horizon Chart | `horizon-chart` | 随有序时间或剂量的变化 | 按需实现 |
 | 指数变化图 / Index Chart | `index-chart` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
 | 个体成长曲线图 / Individual Growth Curve | `individual-growth-curve` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
 | 中断时间序列图 / Interrupted Time-series Plot | `interrupted-time-series` | 处理效应、反事实趋势与识别假设 | 可复用模式 |
+| 离子扩散系数状态曲线 / Ion Diffusion-coefficient Profile | `ion-diffusion-coefficient-profile` | 比较充放电过程中扩散系数的变化 | 可复用模式 |
 | 滞后图 / Lag Plot | `lag-plot` | 展示变量随时间、阶段、年龄或实验轮次的变化 | 可复用模式 |
 | 折线图 / Line Chart | `line-chart` | 随有序时间或剂量的变化 | 生产模板 |
 | 移动平均图 / Moving Average Plot | `moving-average-plot` | 随有序时间或剂量的变化 | 可复用模式 |
@@ -169,6 +179,58 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### 电池循环稳定性图（Battery Cycling Stability Plot）
+
+- **Canonical ID**：`battery-cycling-stability-plot`
+- **别名**：长循环性能图；循环寿命图；long-term cycling plot；cycling performance plot
+- **适合回答**：容量在长期循环中如何衰减，效率是否稳定？
+- **定义**：按循环编号展示容量或容量保持率，并在科学相关时附库仑效率。
+- **必需数据**：cycle；capacity
+- **可选数据**：sample；coulombic_efficiency；retention
+- **观测单位**：一个循环
+- **推荐编码**：循环位置与容量位置
+- **适用条件**：测试协议、中断和失效规则均可追溯
+- **不适用条件**：仅选择稳定区间或隐藏早期活化和失效
+- **统计与不确定性**：报告初始容量、末端容量、保持率和衰减率定义；多电极应显示变异或明确代表性曲线选择规则
+- **样本量与分布要求**：至少覆盖研究声称的循环区间。
+- **轴、尺度与变换**：循环从零或首个有效循环开始，单位明确；按预先声明基准计算保持率
+- **禁止变换**：删除异常循环而不披露
+- **颜色、灰度与无障碍**：容量与效率使用颜色加标记或线型；末端值直接标注
+- **标注规则**：标注电流密度、容量保持和测试中断
+- **常见投稿风险**：代表性曲线选择偏差、双轴误导或测试条件缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留完整循环序列和测试协议
+- **替代 / 补充图型**：line-chart；battery-rate-capability-plot
+- **QA 规则**：核对循环完整性、保持率分母、重复电极和双轴使用
+
+### 电池倍率性能图（Battery Rate Capability Plot）
+
+- **Canonical ID**：`battery-rate-capability-plot`
+- **别名**：倍率性能图；倍率测试图；rate performance plot；rate capability test
+- **适合回答**：容量如何随倍率升高而变化，恢复低倍率后能否回到原水平？
+- **定义**：按测试顺序展示不同电流密度阶段的容量，并可在有明确物理联系时附库仑效率。
+- **必需数据**：cycle；capacity；current_density
+- **可选数据**：sample；coulombic_efficiency
+- **观测单位**：一个循环或倍率阶段
+- **推荐编码**：循环位置、容量位置和背景分区编码倍率阶段
+- **适用条件**：倍率阶段、循环顺序和容量基准可追溯
+- **不适用条件**：双 Y 轴仅用于制造趋势一致性
+- **统计与不确定性**：报告各阶段容量及恢复率；多电极比较应显示误差或个体轨迹
+- **样本量与分布要求**：至少包含两个倍率阶段和一个明确基准。
+- **轴、尺度与变换**：容量与效率必须明确单位和轴归属；按质量、面积或体积归一化并披露分母
+- **禁止变换**：重排倍率阶段或删除过渡循环
+- **颜色、灰度与无障碍**：样品用颜色和标记；倍率阶段用浅色背景或标签；直接标注倍率阶段
+- **标注规则**：标注每段电流密度和恢复阶段
+- **常见投稿风险**：未说明双轴关系、倍率定义或恢复基准
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：双轴只在容量与库仑效率同时属于同一循环时使用；否则拆成对齐面板
+- **替代 / 补充图型**：line-chart；battery-cycling-stability-plot
+- **QA 规则**：核对阶段顺序、倍率单位、恢复率和双轴合理性
 
 ### 日历热图（Calendar Heatmap）
 
@@ -300,6 +362,32 @@
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
 
+### 循环伏安曲线（Cyclic Voltammetry Curve）
+
+- **Canonical ID**：`cyclic-voltammetry-curve`
+- **别名**：CV 曲线；循环伏安图；CV curve；cyclic voltammogram
+- **适合回答**：氧化还原峰、电位差和电流响应如何随样品或扫描速率变化？
+- **定义**：按扫描顺序绘制电流或电流密度随电位变化的闭合电化学曲线。
+- **必需数据**：potential；current；scan_order
+- **可选数据**：sample；cycle；scan_rate
+- **观测单位**：一次完整电位扫描循环
+- **推荐编码**：电位位置、电流位置与扫描路径
+- **适用条件**：扫描方向和速率可追溯
+- **不适用条件**：按电位排序后破坏扫描路径；不同电极面积或质量未归一化却直接比较
+- **统计与不确定性**：报告峰电位、峰电流及其定义；重复电极应报告变异
+- **样本量与分布要求**：至少一个完整正向和反向扫描周期。
+- **轴、尺度与变换**：明确参比电极、电流归一化和扫描速率；经披露的面积或质量归一化
+- **禁止变换**：平滑导致峰位或峰高改变
+- **颜色、灰度与无障碍**：样品采用颜色加线型；标注扫描方向和关键峰
+- **标注规则**：标注氧化峰、还原峰和扫描速率
+- **常见投稿风险**：参比电极、循环编号或归一化基准缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留采集顺序和元数据
+- **替代 / 补充图型**：line-chart；galvanostatic-charge-discharge-curve
+- **QA 规则**：核对扫描方向、参比电极、归一化和循环编号
+
 ### 事件研究图（Event Study Plot）
 
 - **Canonical ID**：`event-study-plot`
@@ -377,6 +465,32 @@
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
 - **替代 / 补充图型**：dot-plot；interval-plot
 - **QA 规则**：检查数据契约、尺度、颜色、标注、可访问性和导出文件
+
+### 恒流充放电曲线（Galvanostatic Charge-discharge Curve）
+
+- **Canonical ID**：`galvanostatic-charge-discharge-curve`
+- **别名**：GCD 曲线；充放电曲线；GCD profile；galvanostatic profile
+- **适合回答**：不同样品或倍率下的容量、电压平台和极化如何变化？
+- **定义**：绘制恒定电流条件下电位随比容量或时间的充放电轨迹。
+- **必需数据**：capacity_or_time；voltage；direction
+- **可选数据**：sample；cycle；current_density
+- **观测单位**：一个充电或放电半周期
+- **推荐编码**：容量或时间位置、电压位置与充放电方向
+- **适用条件**：质量负载、电流密度和电压窗口可追溯
+- **不适用条件**：将不同倍率或质量基准的数据混为同一曲线
+- **统计与不确定性**：报告容量、能量效率或库仑效率的计算定义；重复电极应报告变异
+- **样本量与分布要求**：至少包含一条完整充电或放电曲线。
+- **轴、尺度与变换**：明确电压参比、容量基准与电流密度；经披露的质量、面积或体积归一化
+- **禁止变换**：裁掉低性能区段或改变充放电方向
+- **颜色、灰度与无障碍**：充电与放电使用颜色加线型；直接标注方向与倍率
+- **标注规则**：标注电压平台和测试条件
+- **常见投稿风险**：活性物质量、倍率、循环编号或截止电压缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须保留测试条件和归一化分母
+- **替代 / 补充图型**：line-chart；battery-rate-capability-plot
+- **QA 规则**：核对质量负载、电流密度、电压窗口和归一化
 
 ### 甘特图（Gantt Chart）
 
@@ -507,6 +621,32 @@
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：causal-dag；regression-discontinuity-plot；synthetic-control-plot
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
+
+### 离子扩散系数状态曲线（Ion Diffusion-coefficient Profile）
+
+- **Canonical ID**：`ion-diffusion-coefficient-profile`
+- **别名**：扩散系数-反应状态图；GITT 扩散系数曲线；diffusion coefficient vs state；GITT diffusion profile
+- **适合回答**：离子扩散动力学在反应进程中何处变慢或恢复？
+- **定义**：展示对数扩散系数随荷电状态、反应状态或容量的变化，并区分充电和放电。
+- **必需数据**：reaction_state；diffusion_coefficient；direction
+- **可选数据**：sample；uncertainty
+- **观测单位**：一个反应状态下的扩散系数估计
+- **推荐编码**：反应状态位置与对数扩散系数位置
+- **适用条件**：扩散系数计算公式、脉冲协议和单位可追溯
+- **不适用条件**：零或负值被直接取对数
+- **统计与不确定性**：报告扩散系数计算方法和假设；传播电压、时间和几何参数的不确定性
+- **样本量与分布要求**：覆盖研究声称区间的多个状态点。
+- **轴、尺度与变换**：明确 log10 单位、状态定义与充放电方向；严格正扩散系数的以 10 为底对数
+- **禁止变换**：删去低扩散区或过度平滑局部极值
+- **颜色、灰度与无障碍**：充放电采用颜色加标记；使用不同标记并直接标注方向
+- **标注规则**：标注相变或显著动力学区段
+- **常见投稿风险**：公式假设、几何参数或误差传播缺失
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须披露扩散系数计算公式、输入参数和假设
+- **替代 / 补充图型**：line-chart；galvanostatic-charge-discharge-curve
+- **QA 规则**：核对对数输入、方向、单位、计算公式和不确定性
 
 ### 滞后图（Lag Plot）
 

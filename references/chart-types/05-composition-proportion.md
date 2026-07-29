@@ -17,6 +17,7 @@
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
 | `area-chart` | 时间点或重复观测对象 | time, value | 可复用模式 |
+| `capacitive-diffusion-contribution-plot` | 一个扫描速率下的贡献分解 | scan_rate, mechanism, contribution_percent | 可复用模式 |
 | `cell-composition-plot` | 细胞或空间点 | cell, feature, value | 可复用模式 |
 | `circular-hierarchy-plot` | 整体中的类别或层级单元 | category, value_or_proportion | 可复用模式 |
 | `circular-packing` | 流、节点或步骤 | source, target, value | 可复用模式 |
@@ -51,6 +52,7 @@
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
 | 面积图 / Area Chart | `area-chart` | 随有序时间或剂量的变化 | 可复用模式 |
+| 电容-扩散贡献图 / Capacitive-diffusion Contribution Plot | `capacitive-diffusion-contribution-plot` | 比较电容控制与扩散控制贡献比例 | 可复用模式 |
 | 细胞组成图 / Cell Composition Plot | `cell-composition-plot` | 细胞状态、表达与空间组学结构 | 可复用模式 |
 | 圆环层级图 / Circular Hierarchy Plot | `circular-hierarchy-plot` | 展示组成比例以及整体与部分之间的关系 | 可复用模式 |
 | 圆形打包图 / Circle Packing | `circular-packing` | 阶段流向、流程与层级组成 | 可复用模式 |
@@ -107,6 +109,32 @@
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：line-chart；step-chart；confidence-band-plot
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
+
+### 电容-扩散贡献图（Capacitive-diffusion Contribution Plot）
+
+- **Canonical ID**：`capacitive-diffusion-contribution-plot`
+- **别名**：电容贡献堆积图；扩散控制贡献图；capacitive contribution plot；diffusion-controlled contribution plot
+- **适合回答**：两类储能机制的相对贡献如何随扫描速率变化？
+- **定义**：以百分比堆积条展示不同扫描速率下电容控制和扩散控制贡献。
+- **必需数据**：scan_rate；mechanism；contribution_percent
+- **可选数据**：replicate；uncertainty
+- **观测单位**：一个扫描速率下的贡献分解
+- **推荐编码**：百分比堆积长度与有序扫描速率
+- **适用条件**：分解方法和归一化基准可复现
+- **不适用条件**：贡献估计未闭合或方法未披露
+- **统计与不确定性**：报告分解模型、拟合参数和贡献计算；重复实验应给出贡献比例的不确定性
+- **样本量与分布要求**：每个扫描速率的贡献必须覆盖完整组成并合计为 100%。
+- **轴、尺度与变换**：纵轴固定 0–100%；按总贡献归一化至 100%
+- **禁止变换**：分别归一化后掩盖未解释部分
+- **颜色、灰度与无障碍**：两类机制采用高亮度差与纹理；直接标注主要比例并提供图例
+- **标注规则**：标注电容贡献比例与扫描速率
+- **常见投稿风险**：总和不为 100%、未报告分解方法或无不确定性
+- **实现状态**：`reusable_pattern`
+- **可复用资产**：无现成资产
+- **后端与依赖**：无
+- **复用限制**：必须验证每组构成闭合并披露计算方法
+- **替代 / 补充图型**：percent-stacked-bar-chart；peak-current-scan-rate-log-log-plot
+- **QA 规则**：核对 100% 闭合、分解方法、标签和灰度纹理
 
 ### 细胞组成图（Cell Composition Plot）
 

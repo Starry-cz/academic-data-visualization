@@ -47,3 +47,5 @@ One user request can match multiple directories — the engine picks the closest
 | **UpSet** (via cross-type from ConfusionMatrix) | UpSet, upset plot, 交集图, 集合交集 | UpSet intersection plot |
 | **Forest** (via cross-type from Bar) | 森林图, forest plot, CI, 置信区间, 效应量 | Forest plot with confidence intervals |
 | **Single-cell** (via cross-type from PCA) | 单细胞轨迹, pseudotime, trajectory, 单细胞动力 | Single-cell trajectory / pseudotime plot |
+| **XPSPeakDeconvolution** | XPS 分峰, XPS peak fitting, 高分辨 XPS, peak deconvolution | XPS observed spectrum, total fit, background, and component peaks |
+| **EXAFSWaveletMap** | WT-EXAFS, EXAFS 小波图, wavelet-transform map, EXAFS 3D surface | EXAFS wavelet magnitude with quantitative floor projection and 3D context |

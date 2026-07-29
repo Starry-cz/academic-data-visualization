@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#它如何工作"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Python 与 R 原生后端"></a>
   <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="矢量与高分辨率交付"></a>
-  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 类已核验生产资产"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-36_verified-F2A65A?style=flat-square" alt="36 类已核验生产资产"></a>
   <a href="#质量证据"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="四轮 QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
 </p>
@@ -22,7 +22,7 @@
 <p align="center">
   <a href="#使用入口">使用入口</a> ·
   <a href="#30-秒开始">30 秒开始</a> ·
-  <a href="#精选成图">22 张成图</a> ·
+  <a href="#精选成图">24 张成图</a> ·
   <a href="#它如何工作">工作流程</a> ·
   <a href="#它能帮你完成什么">核心能力</a> ·
   <a href="#质量证据">质量证据</a>
@@ -37,7 +37,7 @@
 <table width="100%" align="center">
   <tr><th width="30%">你现在要做什么</th><th width="35%">直接入口</th><th width="35%">继续深入</th></tr>
   <tr><td width="30%">第一次安装并完成一张图</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-秒开始">30 秒开始</a></td><td width="35%"><a href="#它如何工作">四阶段工作流</a></td></tr>
-  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">22 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
+  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">24 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
   <tr><td width="30%">查找图型、别名与实现状态</td><td width="35%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a></td><td width="35%"><a href="references/chart-registry.yaml">规范化注册表</a></td></tr>
   <tr><td width="30%">定义结论、版式与交付规格</td><td width="35%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td><td width="35%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
   <tr><td width="30%">适配期刊、演讲或发布会</td><td width="35%"><a href="references/delivery-profiles.md">交付场景</a> · <a href="references/journal-specs.md">期刊规格</a></td><td width="35%"><a href="references/export-specs.md">导出规格</a></td></tr>
@@ -79,7 +79,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先判断读者需要比较、关联还是决策，再选择图型</td>
     <td width="25%">每条图型路线都会说明是直接复用、基于模式改造，还是按真实数据实现</td>
-    <td width="25%">34 类资产具备脚本、预览和 manifest，可追溯复用</td>
+    <td width="25%">36 类资产具备脚本、预览和 manifest，可追溯复用</td>
     <td width="25%">同时检查反模式、代码与导出、科学逻辑和最终渲染结果</td>
   </tr>
 </table>
@@ -104,7 +104,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 <table width="100%" align="center">
   <tr><th width="28%">你的情况</th><th width="44%">Skill 会怎么做</th><th width="28%">你会得到什么</th></tr>
   <tr><td width="28%"><strong>不知道该选什么图</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">根据研究问题与真实数据结构比较可辩护的候选图型</td><td width="28%">选图理由与风险提示</td></tr>
-  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 34 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
+  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 36 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
   <tr><td width="28%"><strong>需要统一多面板或旧图</strong></td><td width="44%">统一物理尺寸、字体、配色、图例与面板层级</td><td width="28%">符合期刊尺寸的主图或补充图</td></tr>
   <tr><td width="28%"><strong>正在准备投稿</strong></td><td width="44%">依次检查反模式、代码与导出、科学逻辑和最终渲染</td><td width="28%">RGB、灰度校样与 QA 报告</td></tr>
   <tr><td width="28%"><strong>需要演讲或产品发布数据图</strong></td><td width="44%">从同一分析结果派生 16:9 远距阅读版本，保留基线、不确定性与来源</td><td width="28%">SVG/PDF、1080p/4K 校样与替代文本</td></tr>
@@ -116,7 +116,16 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 ## 精选成图
 
-首页按画幅展示 22 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+首页按画幅展示 24 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+
+### 材料表征与谱学 · 2 × 1
+
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>XPS 峰拟合分峰图</strong><br><a href="assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"><img src="assets/figure-atlas/readme-cards/xps_peak_deconvolution.png" width="390" alt="XPS 峰拟合分峰图"></a><br><sub>观测谱、总拟合、背景与化学组分</sub></td>
+    <td width="50%" align="center" valign="top"><strong>EXAFS 小波变换图</strong><br><a href="assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"><img src="assets/figure-atlas/readme-cards/exafs_wavelet_map.png" width="390" alt="EXAFS 小波变换图"></a><br><sub>k–R 联合结构与二维定量投影</sub></td>
+  </tr>
+</table>
 
 ### 关系、降维、诊断与高维结构 · 3 × 4
 
@@ -233,7 +242,7 @@ git -C ~/.codex/skills/academic-data-visualization pull
 当前仓库基线：
 
 - **714 / 714** 条源分类归属完成可复现映射；
-- **34 / 34** 类生产图型均有真实脚本、PNG 与 manifest；
+- **36 / 36** 类生产图型均有真实脚本、PNG 与 manifest；
 - **90 / 90** 条触发边界用例判断正确；
 - **28 / 28** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
 - 注册表 Schema、24 类生成文档、别名冲突、资产映射与 README 摘要均由 CI 审计。

@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#how-it-works"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Native Python and R backends"></a>
   <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="Vector and high-resolution delivery"></a>
-  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 verified production assets"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-36_verified-F2A65A?style=flat-square" alt="36 verified production assets"></a>
   <a href="#quality-evidence"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="Four-pass QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
 </p>
@@ -22,7 +22,7 @@
 <p align="center">
   <a href="#start-here">Start here</a> ·
   <a href="#30-second-start">30-second start</a> ·
-  <a href="#selected-figures">22 figures</a> ·
+  <a href="#selected-figures">24 figures</a> ·
   <a href="#how-it-works">Workflow</a> ·
   <a href="#what-it-helps-you-do">Capabilities</a> ·
   <a href="#quality-evidence">Quality</a>
@@ -37,7 +37,7 @@ You do not need to read the README from top to bottom. Enter at the path that ma
 <table width="100%" align="center">
   <tr><th width="30%">What do you need?</th><th width="35%">Start here</th><th width="35%">Go deeper</th></tr>
   <tr><td width="30%">Install the Skill and make a first figure</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-second-start">30-second start</a></td><td width="35%"><a href="#how-it-works">Four-stage workflow</a></td></tr>
-  <tr><td width="30%">Inspect real outputs and visual styles</td><td width="35%"><a href="#selected-figures">22 selected figures</a></td><td width="35%"><a href="assets/figures/">Production assets</a> · <a href="#colour-system">Colour system</a></td></tr>
+  <tr><td width="30%">Inspect real outputs and visual styles</td><td width="35%"><a href="#selected-figures">24 selected figures</a></td><td width="35%"><a href="assets/figures/">Production assets</a> · <a href="#colour-system">Colour system</a></td></tr>
   <tr><td width="30%">Find a chart, alias, or implementation state</td><td width="35%"><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a></td><td width="35%"><a href="references/chart-registry.yaml">Canonical registry</a></td></tr>
   <tr><td width="30%">Define the claim, layout, and deliverables</td><td width="35%"><a href="references/figure-contract.md">Figure contract</a> · <a href="references/figure-design-brief.md">Design brief</a></td><td width="35%"><a href="references/multipanel-layout.md">Multipanel layout</a> · <a href="references/visual-style.md">Visual style</a></td></tr>
   <tr><td width="30%">Match a journal, talk, or launch context</td><td width="35%"><a href="references/delivery-profiles.md">Delivery profiles</a> · <a href="references/journal-specs.md">Journal specs</a></td><td width="35%"><a href="references/export-specs.md">Export specs</a></td></tr>
@@ -80,7 +80,7 @@ a grayscale proof, and a QA report.
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Decide what readers must compare, relate, or judge before choosing a chart</td>
     <td width="25%">Every chart route states whether it is ready to reuse, adapted from a pattern, or built for the real data</td>
-    <td width="25%">34 asset families include scripts, previews, and manifests</td>
+    <td width="25%">36 asset families include scripts, previews, and manifests</td>
     <td width="25%">Review anti-patterns, code and export, scientific logic, and the final rendering</td>
   </tr>
 </table>
@@ -105,7 +105,7 @@ The Skill turns a research question, data structure, and delivery constraints in
 <table width="100%" align="center">
   <tr><th width="28%">Your situation</th><th width="44%">What the Skill does</th><th width="28%">What you receive</th></tr>
   <tr><td width="28%"><strong>Unsure which chart to use</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Compare defensible candidates from the research question and real data structure</td><td width="28%">Chart rationale and risk notes</td></tr>
-  <tr><td width="28%"><strong>Have data and need a figure</strong></td><td width="44%">Reuse one of 34 verified asset families when suitable; otherwise build for the actual data</td><td width="28%">Python / R script and editable vector master</td></tr>
+  <tr><td width="28%"><strong>Have data and need a figure</strong></td><td width="44%">Reuse one of 36 verified asset families when suitable; otherwise build for the actual data</td><td width="28%">Python / R script and editable vector master</td></tr>
   <tr><td width="28%"><strong>Need a coherent multipanel figure</strong></td><td width="44%">Unify physical size, typography, colour, legends, and panel hierarchy</td><td width="28%">Journal-sized main or supplementary figure</td></tr>
   <tr><td width="28%"><strong>Preparing a submission</strong></td><td width="44%">Run anti-pattern, code/export, scientific-logic, and final-render checks</td><td width="28%">RGB and grayscale proofs plus a QA report</td></tr>
   <tr><td width="28%"><strong>Need a keynote or product-launch chart</strong></td><td width="44%">Derive a 16:9 distant-reading view from the same analysis while preserving baselines, uncertainty, and source</td><td width="28%">SVG/PDF, 1080p/4K proofs, and alt text</td></tr>
@@ -117,7 +117,16 @@ Coverage spans 24 research-task families, including comparison, trend, distribut
 
 ## Selected figures
 
-The landing page shows 22 verified examples across distinct chart families. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for complete implementation states.
+The landing page shows 24 verified examples across distinct chart families. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for complete implementation states.
+
+### Materials characterization and spectroscopy · 2 × 1
+
+<table width="100%" align="center">
+  <tr>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>XPS peak deconvolution</strong><br><a href="assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"><img src="assets/figure-atlas/readme-cards/xps_peak_deconvolution.png" width="390" alt="XPS peak deconvolution plot"></a><br><sub>Observed spectrum, total fit, background, and chemical components</sub></td>
+    <td width="50%" align="center" valign="top"><strong>EXAFS wavelet-transform map</strong><br><a href="assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"><img src="assets/figure-atlas/readme-cards/exafs_wavelet_map.png" width="390" alt="EXAFS wavelet-transform map"></a><br><sub>Joint k–R structure with a quantitative 2D projection</sub></td>
+  </tr>
+</table>
 
 ### Relationships, ordination, diagnostics, and high-dimensional structure · 3 × 4
 
@@ -234,7 +243,7 @@ git -C ~/.codex/skills/academic-data-visualization pull
 Current repository baseline:
 
 - **714 / 714** source memberships are reproducibly mapped;
-- **34 / 34** production asset families contain real scripts, PNGs, and manifests;
+- **36 / 36** production asset families contain real scripts, PNGs, and manifests;
 - **90 / 90** trigger-boundary cases classify correctly;
 - **28 / 28** QA fixtures hit their expected results across **15 / 15** programmatic checks;
 - CI audits the registry schema, 24 generated category documents, alias conflicts, asset mapping, and README summaries.
