@@ -3,30 +3,34 @@
 </p>
 
 <p align="center">
-  <strong>Research question → data contract → chart rationale → publication-ready figure</strong><br>
-  <sub>Turn real data and journal constraints into reproducible, reviewable Python / R scientific figures.</sub>
+  <sub>Language / 语言: <a href="README.md">简体中文</a> · <strong>English</strong></sub>
+</p>
+
+<p align="center">
+  <strong>From research question to publication-ready figure</strong><br>
+  <sub>Understand the data and scientific claim first, then select, render, review, and export.</sub>
 </p>
 
 <p align="center">
   <a href="references/figure-type-catalog.md"><img src="https://img.shields.io/badge/Taxonomy-24_categories-4573B4?style=flat-square" alt="24-category chart taxonomy"></a>
-  <a href="#capability-scope"><img src="https://img.shields.io/badge/Source_memberships-714%2F714-73C79E?style=flat-square" alt="714/714 source memberships mapped"></a>
-  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production_assets-34_verified-F2A65A?style=flat-square" alt="34 verified production assets"></a>
+  <a href="references/chart-registry.yaml"><img src="https://img.shields.io/badge/Registry-665_canonical-6B92C3?style=flat-square" alt="665 canonical chart records"></a>
+  <a href="#capability-scope"><img src="https://img.shields.io/badge/Source_coverage-714%2F714-73C79E?style=flat-square" alt="714/714 source memberships mapped"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-34_verified-F2A65A?style=flat-square" alt="34 verified production assets"></a>
   <a href="#quality-evidence"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="Four-pass QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache--2.0-7A939F?style=flat-square" alt="Apache-2.0 License"></a>
 </p>
 
 <p align="center">
   <a href="#30-second-start">Quick start</a> ·
-  <a href="#why-use-it">Why</a> ·
+  <a href="#how-it-works">Workflow</a> ·
   <a href="#capability-scope">Scope</a> ·
-  <a href="#selected-figures">Gallery</a> ·
+  <a href="#selected-figures">Figure gallery</a> ·
+  <a href="#colour-system">Colour system</a> ·
   <a href="#documentation-map">Docs</a> ·
-  <a href="#quality-evidence">Quality</a> ·
-  <a href="README.md">中文</a>
+  <a href="#quality-evidence">Quality</a>
 </p>
 
-> This is not a gallery that forces data into preset templates. It first defines the claim, unit of observation, variable structure, and submission target; then it selects a chart, reuses a verified asset or implements one on demand, and reviews final-size RGB and grayscale proofs through four QA passes.
+> **Not a template gallery.** The Skill evaluates the research question, data structure, and submission constraints before selecting a defensible chart. Only assets with real scripts, previews, and manifests are marked as production templates.
 
 ## 30-second start
 

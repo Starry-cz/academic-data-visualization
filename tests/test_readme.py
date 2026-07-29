@@ -91,10 +91,24 @@ class ReadmeTests(unittest.TestCase):
             )
             self.assertLess(
                 text.index("academic-data-visualization-workflow-v5.png"),
-                text.index("Research question →")
+                text.index("From research question")
                 if name == "README_EN.md"
-                else text.index("科研问题 →"),
+                else text.index("从研究问题到投稿级图表"),
             )
+
+    def test_language_switch_defaults_to_chinese(self) -> None:
+        chinese = (ROOT / "README.md").read_text(encoding="utf-8")
+        english = (ROOT / "README_EN.md").read_text(encoding="utf-8")
+        self.assertIn(
+            '<strong>简体中文</strong> · <a href="README_EN.md">English</a>',
+            chinese,
+        )
+        self.assertIn(
+            '<a href="README.md">简体中文</a> · <strong>English</strong>',
+            english,
+        )
+        self.assertIn("从研究问题到投稿级图表", chinese)
+        self.assertIn("From research question to publication-ready figure", english)
 
     def test_all_table_cells_declare_widths(self) -> None:
         for name in README_NAMES:

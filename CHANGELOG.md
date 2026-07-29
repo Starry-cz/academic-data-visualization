@@ -8,6 +8,7 @@
 - Standardized gallery thumbnails on square or landscape canvases and gave every README table cell an explicit width for symmetric rendering.
 - Forced every Chinese and English README table to the same full content width with a transparent layout spacer, avoiding GitHub's content-width shrinkage.
 - Removed the duplicate text heading below the workflow hero because the hero already carries the project title.
+- Refined the hero copy, simplified the metric badges and navigation, and added a prominent Chinese/English switch while keeping Chinese as the default root README.
 - Added regression tests for README-local links, published metrics, hero information hierarchy, table widths, gallery coverage, and card dimensions.
 
 ## 2.1.0
