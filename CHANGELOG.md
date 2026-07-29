@@ -6,6 +6,7 @@
 - Replaced outdated `96`-pattern and `40 / 40` trigger claims with registry-backed `714 / 714`, `34 / 34`, and `88 / 88` evidence.
 - Restored the workflow hero to the top of the page and expanded the landing gallery to 22 production examples across distinct chart families.
 - Standardized gallery thumbnails on square or landscape canvases and gave every README table cell an explicit width for symmetric rendering.
+- Forced every Chinese and English README table to the same full content width with a transparent layout spacer, avoiding GitHub's content-width shrinkage.
 - Added regression tests for README-local links, published metrics, hero information hierarchy, table widths, gallery coverage, and card dimensions.
 
 ## 2.1.0

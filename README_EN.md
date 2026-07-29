@@ -64,7 +64,7 @@ a grayscale proof, and a QA report.
     <th width="25%">Submission-ready QA</th>
   </tr>
   <tr>
-    <td width="25%">Decide what readers must compare, relate, or judge before choosing a chart</td>
+    <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Decide what readers must compare, relate, or judge before choosing a chart</td>
     <td width="25%">All 665 canonical records expose their real implementation state</td>
     <td width="25%">34 asset families include scripts, previews, and manifests</td>
     <td width="25%">Review anti-patterns, code and export, scientific logic, and final rendering</td>
@@ -77,7 +77,7 @@ Conventional plotting requests start with “make a bar chart” or “draw a he
 
 <table width="100%" align="center">
   <tr><th width="20%">Stage</th><th width="60%">Key action</th><th width="20%">Output</th></tr>
-  <tr><td width="20%"><strong>1. Define</strong></td><td width="60%">Fix the claim, observation unit, variables, dependence, and target journal</td><td width="20%"><a href="references/figure-contract.md">Figure contract</a></td></tr>
+  <tr><td width="20%"><strong>1. Define</strong></td><td width="60%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Fix the claim, observation unit, variables, dependence, and target journal</td><td width="20%"><a href="references/figure-contract.md">Figure contract</a></td></tr>
   <tr><td width="20%"><strong>2. Defend</strong></td><td width="60%">Profile sample sizes, distributions, missingness, outliers, and groups; compare candidates</td><td width="20%">Rationale and risks</td></tr>
   <tr><td width="20%"><strong>3. Implement</strong></td><td width="60%">Route to a production template, reusable pattern, or on-demand build; unify panels and colour</td><td width="20%">Python / R and vector master</td></tr>
   <tr><td width="20%"><strong>4. Verify</strong></td><td width="60%">Run programmatic checks and inspect final-size RGB, grayscale, and export proofs</td><td width="20%">Proofs and QA report</td></tr>
@@ -89,7 +89,7 @@ Conventional plotting requests start with “make a bar chart” or “draw a he
 The registry separates catalogue coverage from implementation status. Only production templates have reusable scripts, previews, and manifests.
 
 <table width="100%" align="center">
-  <tr><td width="50%"><strong>Taxonomy categories</strong></td><td width="50%">24</td></tr>
+  <tr><td width="50%"><strong>Taxonomy categories</strong></td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">24</td></tr>
   <tr><td width="50%"><strong>Canonical chart records</strong></td><td width="50%">665</td></tr>
   <tr><td width="50%"><strong>Source taxonomy records</strong></td><td width="50%">625</td></tr>
   <tr><td width="50%"><strong>Repository extensions</strong></td><td width="50%">40</td></tr>
@@ -102,7 +102,7 @@ The registry separates catalogue coverage from implementation status. Only produ
 
 <table width="100%" align="center">
   <tr><th width="25%">State</th><th width="25%">Meaning</th><th width="50%">Repository promise</th></tr>
-  <tr><td width="25%"><code>production_template</code></td><td width="25%">Verified template</td><td width="50%">Real script + PNG + <code>asset.yaml</code>, with SVG/PDF where available</td></tr>
+  <tr><td width="25%"><code>production_template</code></td><td width="25%">Verified template</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Real script + PNG + <code>asset.yaml</code>, with SVG/PDF where available</td></tr>
   <tr><td width="25%"><code>reusable_pattern</code></td><td width="25%">Reusable pattern</td><td width="50%">Explicit data contract and backend route, but no claim of a standalone asset</td></tr>
   <tr><td width="25%"><code>on_demand</code></td><td width="25%">Built for actual data</td><td width="50%">No fake previews and no look-alike substitutes for specialist charts</td></tr>
 </table>
@@ -117,7 +117,7 @@ The landing page shows 22 verified examples across distinct chart families. Ever
 
 <table width="100%" align="center">
   <tr>
-    <td width="33%" align="center" valign="top"><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D heatmap"></a><br><sub>High-dimensional intensity</sub></td>
+    <td width="33%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>3D heatmap</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D heatmap"></a><br><sub>High-dimensional intensity</sub></td>
     <td width="34%" align="center" valign="top"><strong>Density heatmap</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png" width="280" alt="Density heatmap"></a><br><sub>2D density and clusters</sub></td>
     <td width="33%" align="center" valign="top"><strong>PCA biplot</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png" width="280" alt="PCA biplot"></a><br><sub>Sample separation and loadings</sub></td>
   </tr>
@@ -142,7 +142,7 @@ The landing page shows 22 verified examples across distinct chart families. Ever
 
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Bar plot</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png" width="390" alt="Bar plot"></a><br><sub>Group summaries and observations</sub></td>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Bar plot</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png" width="390" alt="Bar plot"></a><br><sub>Group summaries and observations</sub></td>
     <td width="50%" align="center" valign="top"><strong>Grouped bars</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png" width="390" alt="Grouped bar chart"></a><br><sub>Multiple treatments × metrics</sub></td>
   </tr>
   <tr>
@@ -169,7 +169,7 @@ Twenty-three themes cover categorical, sequential, and diverging semantics. The 
 
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default palette preview"></td>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default palette preview"></td>
     <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal palette preview"></td>
   </tr>
   <tr>
@@ -184,7 +184,7 @@ See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.js
 
 <table width="100%" align="center">
   <tr><th width="50%">Good fit</th><th width="50%">Out of scope</th></tr>
-  <tr><td width="50%">Manuscript main figures, supplements, theses, and scientific reports</td><td width="50%">Interactive dashboards or web data products</td></tr>
+  <tr><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Manuscript main figures, supplements, theses, and scientific reports</td><td width="50%">Interactive dashboards or web data products</td></tr>
   <tr><td width="50%">Choosing a defensible chart from the real data structure</td><td width="50%">Illustration-only mechanisms with no quantitative panels</td></tr>
   <tr><td width="50%">Rebuilding old figures, unifying panels, or adapting to a journal</td><td width="50%">Statistical analysis, cleaning, or literature review with no figure goal</td></tr>
   <tr><td width="50%">Pre-submission checks for clipping, overlap, grayscale, encodings, and export</td><td width="50%">Pretending that a generic chart is a map, genome track, or 3D volume</td></tr>
@@ -194,7 +194,7 @@ See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.js
 
 <table width="100%" align="center">
   <tr><th width="50%">Need</th><th width="50%">Start here</th></tr>
-  <tr><td width="50%">Find a chart, alias, and real implementation state</td><td width="50%"><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a> · <a href="references/chart-registry.yaml">Registry</a></td></tr>
+  <tr><td width="50%">Find a chart, alias, and real implementation state</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a> · <a href="references/chart-registry.yaml">Registry</a></td></tr>
   <tr><td width="50%">Define inputs, claims, and deliverables</td><td width="50%"><a href="references/figure-contract.md">Figure contract</a> · <a href="references/figure-design-brief.md">Design brief</a></td></tr>
   <tr><td width="50%">Organise multipanel hierarchy</td><td width="50%"><a href="references/multipanel-layout.md">Multipanel layout</a> · <a href="references/visual-style.md">Visual style</a></td></tr>
   <tr><td width="50%">Match journal dimensions and export</td><td width="50%"><a href="references/journal-intel.md">Journal intelligence</a> · <a href="references/journal-specs.md">Journal specs</a> · <a href="references/export-specs.md">Export specs</a></td></tr>

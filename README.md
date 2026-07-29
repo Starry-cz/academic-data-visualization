@@ -63,7 +63,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
     <th width="25%">投稿前闭环</th>
   </tr>
   <tr>
-    <td width="25%">先判断读者需要比较、关联还是决策，再选择图型</td>
+    <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先判断读者需要比较、关联还是决策，再选择图型</td>
     <td width="25%">665 个规范化图型均标记真实实现状态，不把“已登记”冒充“已有模板”</td>
     <td width="25%">34 类资产具备脚本、预览和 manifest，可追溯复用</td>
     <td width="25%">同时检查反模式、代码与导出、科学逻辑、最终渲染</td>
@@ -76,7 +76,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr><th width="20%">阶段</th><th width="60%">关键动作</th><th width="20%">产出</th></tr>
-  <tr><td width="20%"><strong>1. 定义</strong></td><td width="60%">明确结论、观测单位、变量、依赖结构和目标期刊</td><td width="20%"><a href="references/figure-contract.md">图表契约</a></td></tr>
+  <tr><td width="20%"><strong>1. 定义</strong></td><td width="60%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">明确结论、观测单位、变量、依赖结构和目标期刊</td><td width="20%"><a href="references/figure-contract.md">图表契约</a></td></tr>
   <tr><td width="20%"><strong>2. 论证</strong></td><td width="60%">剖析样本量、分布、缺失、异常值与分组，比较候选图型</td><td width="20%">图型理由与风险</td></tr>
   <tr><td width="20%"><strong>3. 实现</strong></td><td width="60%">路由生产模板、可复用模式或按需实现，统一面板与配色</td><td width="20%">Python / R 与矢量主文件</td></tr>
   <tr><td width="20%"><strong>4. 验证</strong></td><td width="60%">程序检查、最终尺寸 RGB 复核、灰度复核和导出审查</td><td width="20%">校样与 QA 报告</td></tr>
@@ -88,7 +88,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 注册表严格区分目录覆盖与实现状态；只有生产模板拥有可复用脚本、预览和 manifest。
 
 <table width="100%" align="center">
-  <tr><td width="50%"><strong>分类体系</strong></td><td width="50%">24 类</td></tr>
+  <tr><td width="50%"><strong>分类体系</strong></td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">24 类</td></tr>
   <tr><td width="50%"><strong>规范化图型</strong></td><td width="50%">665 个</td></tr>
   <tr><td width="50%"><strong>源清单图型</strong></td><td width="50%">625 个</td></tr>
   <tr><td width="50%"><strong>仓库扩展图型</strong></td><td width="50%">40 个</td></tr>
@@ -101,7 +101,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr><th width="25%">状态</th><th width="25%">含义</th><th width="50%">仓库承诺</th></tr>
-  <tr><td width="25%"><code>production_template</code></td><td width="25%">已核验生产模板</td><td width="50%">真实脚本 + PNG + <code>asset.yaml</code>，可用时附 SVG/PDF</td></tr>
+  <tr><td width="25%"><code>production_template</code></td><td width="25%">已核验生产模板</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">真实脚本 + PNG + <code>asset.yaml</code>，可用时附 SVG/PDF</td></tr>
   <tr><td width="25%"><code>reusable_pattern</code></td><td width="25%">可复用实现模式</td><td width="50%">有明确数据契约与后端路由，但不声称已有独立资产</td></tr>
   <tr><td width="25%"><code>on_demand</code></td><td width="25%">按数据与依赖实现</td><td width="50%">不伪造预览，不用外形相似的普通图代替专业图型</td></tr>
 </table>
@@ -116,7 +116,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr>
-    <td width="33%" align="center" valign="top"><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D 热图"></a><br><sub>高维强度结构</sub></td>
+    <td width="33%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>3D 热图</strong><br><a href="assets/figure-atlas/3Dheatmap.png"><img src="assets/figure-atlas/readme-cards/3Dheatmap.png" width="280" alt="3D 热图"></a><br><sub>高维强度结构</sub></td>
     <td width="34%" align="center" valign="top"><strong>密度热图</strong><br><a href="assets/figure-atlas/density_heatmap.png"><img src="assets/figure-atlas/readme-cards/density_heatmap.png" width="280" alt="密度热图"></a><br><sub>二维密度与聚集区</sub></td>
     <td width="33%" align="center" valign="top"><strong>PCA 双标图</strong><br><a href="assets/figure-atlas/PCA.png"><img src="assets/figure-atlas/readme-cards/PCA.png" width="280" alt="PCA 双标图"></a><br><sub>样本分离与载荷</sub></td>
   </tr>
@@ -141,7 +141,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png" width="390" alt="柱状图"></a><br><sub>组间摘要与原始观测</sub></td>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>柱状图</strong><br><a href="assets/figure-atlas/bar.png"><img src="assets/figure-atlas/readme-cards/bar.png" width="390" alt="柱状图"></a><br><sub>组间摘要与原始观测</sub></td>
     <td width="50%" align="center" valign="top"><strong>分组柱状图</strong><br><a href="assets/figure-atlas/GroupedBarChart.png"><img src="assets/figure-atlas/readme-cards/GroupedBarChart.png" width="390" alt="分组柱状图"></a><br><sub>多处理 × 多指标</sub></td>
   </tr>
   <tr>
@@ -168,7 +168,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default 配色预览"></td>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default 配色预览"></td>
     <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal 配色预览"></td>
   </tr>
   <tr>
@@ -183,7 +183,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr><th width="50%">适合</th><th width="50%">不适合</th></tr>
-  <tr><td width="50%">论文主图、补充图、学位论文和科研报告</td><td width="50%">交互式仪表盘或 Web 数据产品</td></tr>
+  <tr><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">论文主图、补充图、学位论文和科研报告</td><td width="50%">交互式仪表盘或 Web 数据产品</td></tr>
   <tr><td width="50%">不确定该选什么图，需要基于数据结构论证</td><td width="50%">没有定量面板的纯插画式机制图</td></tr>
   <tr><td width="50%">重绘旧图、统一多面板语言、适配目标期刊</td><td width="50%">与绘图无关的统计分析、清洗或文献综述</td></tr>
   <tr><td width="50%">投稿前检查裁切、遮挡、灰度、误导编码和导出</td><td width="50%">要求用普通图假装地图、基因组轨道或三维体数据</td></tr>
@@ -193,7 +193,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
 
 <table width="100%" align="center">
   <tr><th width="50%">你要解决的问题</th><th width="50%">入口</th></tr>
-  <tr><td width="50%">查找图型、别名与真实实现状态</td><td width="50%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a> · <a href="references/chart-registry.yaml">注册表</a></td></tr>
+  <tr><td width="50%">查找图型、别名与真实实现状态</td><td width="50%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a> · <a href="references/chart-registry.yaml">注册表</a></td></tr>
   <tr><td width="50%">定义输入、结论与交付规格</td><td width="50%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td></tr>
   <tr><td width="50%">组织多面板与视觉层级</td><td width="50%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
   <tr><td width="50%">适配期刊尺寸与导出</td><td width="50%"><a href="references/journal-intel.md">期刊情报</a> · <a href="references/journal-specs.md">期刊规格</a> · <a href="references/export-specs.md">导出规格</a></td></tr>

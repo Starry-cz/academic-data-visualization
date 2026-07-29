@@ -96,6 +96,18 @@ class ReadmeTests(unittest.TestCase):
             cells_without_width = re.findall(r"<t[dh]\b(?![^>]*\bwidth=)[^>]*>", text)
             self.assertEqual(cells_without_width, [], name)
 
+    def test_every_table_is_forced_to_readme_width(self) -> None:
+        for name in README_NAMES:
+            text = (ROOT / name).read_text(encoding="utf-8")
+            tables = re.findall(r"<table\b.*?</table>", text, flags=re.DOTALL)
+            self.assertGreater(len(tables), 0, name)
+            for index, table in enumerate(tables, start=1):
+                self.assertEqual(
+                    table.count("assets/readme/table-full-width-spacer.svg"),
+                    1,
+                    f"{name} table {index}",
+                )
+
     def test_gallery_uses_22_equal_canvas_cards(self) -> None:
         self.assertEqual(
             {path.name for path in CARD_DIR.glob("*.png")},
