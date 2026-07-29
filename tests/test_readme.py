@@ -82,12 +82,18 @@ class ReadmeTests(unittest.TestCase):
             self.assertNotIn("Figure_patterns-96", text)
             self.assertNotIn("**40 / 40**", text)
 
-    def test_visual_banner_precedes_title(self) -> None:
+    def test_visual_banner_replaces_duplicate_title(self) -> None:
         for name in README_NAMES:
             text = (ROOT / name).read_text(encoding="utf-8")
+            self.assertNotIn(
+                '<h1 align="center">Academic Data Visualization</h1>',
+                text,
+            )
             self.assertLess(
                 text.index("academic-data-visualization-workflow-v5.png"),
-                text.index("<h1"),
+                text.index("Research question →")
+                if name == "README_EN.md"
+                else text.index("科研问题 →"),
             )
 
     def test_all_table_cells_declare_widths(self) -> None:

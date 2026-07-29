@@ -2,8 +2,6 @@
   <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="Workflow from research question and data profiling to publication-ready figures and visual review">
 </p>
 
-<h1 align="center">Academic Data Visualization</h1>
-
 <p align="center">
   <strong>Research question → data contract → chart rationale → publication-ready figure</strong><br>
   <sub>Turn real data and journal constraints into reproducible, reviewable Python / R scientific figures.</sub>

@@ -2,8 +2,6 @@
   <img src="assets/readme/academic-data-visualization-workflow-v5.png" width="100%" alt="从研究问题和数据剖析到投稿级成图与视觉复核的工作流">
 </p>
 
-<h1 align="center">Academic Data Visualization</h1>
-
 <p align="center">
   <strong>科研问题 → 数据契约 → 图型论证 → 投稿级成图</strong><br>
   <sub>把真实数据与期刊约束转化为可复现、可审查、可投稿的 Python / R 科研图表。</sub>

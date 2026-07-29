@@ -7,6 +7,7 @@
 - Restored the workflow hero to the top of the page and expanded the landing gallery to 22 production examples across distinct chart families.
 - Standardized gallery thumbnails on square or landscape canvases and gave every README table cell an explicit width for symmetric rendering.
 - Forced every Chinese and English README table to the same full content width with a transparent layout spacer, avoiding GitHub's content-width shrinkage.
+- Removed the duplicate text heading below the workflow hero because the hero already carries the project title.
 - Added regression tests for README-local links, published metrics, hero information hierarchy, table widths, gallery coverage, and card dimensions.
 
 ## 2.1.0
