@@ -26,6 +26,7 @@ SQUARE_CARDS = {
     "xps_peak_deconvolution.png",
     "exafs_wavelet_map.png",
     "chord_diagram.png",
+    "manifold_embedding.png",
 }
 WIDE_CARDS = {
     "bar.png",
@@ -162,7 +163,7 @@ class ReadmeTests(unittest.TestCase):
                     f"{name} table {index}",
                 )
 
-    def test_gallery_uses_23_equal_canvas_cards(self) -> None:
+    def test_gallery_uses_24_equal_canvas_cards(self) -> None:
         self.assertEqual(
             {path.name for path in CARD_DIR.glob("*.png")},
             SQUARE_CARDS | WIDE_CARDS,

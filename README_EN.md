@@ -117,9 +117,9 @@ Coverage spans 24 research-task families, including comparison, trend, distribut
 
 ## Selected figures
 
-The landing page shows 23 verified examples across distinct chart families. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for complete implementation states.
+The landing page shows 24 verified examples across distinct chart families. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for complete implementation states.
 
-### Relationships, ordination, diagnostics, high-dimensional, and network structure
+### Relationships, ordination, diagnostics, high-dimensional, and network structure · 3 × 4
 
 <table width="100%" align="center">
   <tr>
@@ -138,8 +138,9 @@ The landing page shows 23 verified examples across distinct chart families. Ever
     <td width="33%" colspan="2" align="center" valign="top"><strong>Correlation bubbles</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figure-atlas/readme-cards/correlation_bubble_matrix.png" width="280" alt="Correlation bubble matrix"></a><br><sub>Direction, strength, significance</sub></td>
   </tr>
   <tr>
-    <td width="50%" colspan="3" align="center" valign="top"><strong>Correlation network</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="390" alt="Correlation network"></a><br><sub>Edges and community structure</sub></td>
-    <td width="50%" colspan="3" align="center" valign="top"><strong>Weighted chord diagram</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="390" alt="Weighted chord diagram"></a><br><sub>Cross-domain links, weights, and global structure</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>Correlation network</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="280" alt="Correlation network"></a><br><sub>Edges and community structure</sub></td>
+    <td width="34%" colspan="2" align="center" valign="top"><strong>Weighted chord diagram</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="280" alt="Weighted chord diagram"></a><br><sub>Cross-domain links, weights, and global structure</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>Manifold embedding</strong><br><a href="assets/figures/Manifold/diffusion_swiss_roll.png"><img src="assets/figure-atlas/readme-cards/manifold_embedding.png" width="280" alt="Manifold embedding"></a><br><sub>Nonlinear high-dimensional structure and local neighborhoods</sub></td>
   </tr>
 </table>
 

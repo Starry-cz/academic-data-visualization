@@ -116,9 +116,9 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 ## 精选成图
 
-首页按画幅展示 23 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+首页按画幅展示 24 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
 
-### 关系、降维、诊断、高维与网络结构
+### 关系、降维、诊断、高维与网络结构 · 3 × 4
 
 <table width="100%" align="center">
   <tr>
@@ -137,8 +137,9 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
     <td width="33%" colspan="2" align="center" valign="top"><strong>相关气泡矩阵</strong><br><a href="assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"><img src="assets/figure-atlas/readme-cards/correlation_bubble_matrix.png" width="280" alt="相关气泡矩阵"></a><br><sub>方向、强度与显著性</sub></td>
   </tr>
   <tr>
-    <td width="50%" colspan="3" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="390" alt="相关网络图"></a><br><sub>节点关系与社群结构</sub></td>
-    <td width="50%" colspan="3" align="center" valign="top"><strong>加权弦图</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="390" alt="加权弦图"></a><br><sub>跨领域连接、权重与整体结构</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="280" alt="相关网络图"></a><br><sub>节点关系与社群结构</sub></td>
+    <td width="34%" colspan="2" align="center" valign="top"><strong>加权弦图</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="280" alt="加权弦图"></a><br><sub>跨领域连接、权重与整体结构</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>流形嵌入图</strong><br><a href="assets/figures/Manifold/diffusion_swiss_roll.png"><img src="assets/figure-atlas/readme-cards/manifold_embedding.png" width="280" alt="流形嵌入图"></a><br><sub>非线性高维结构与局部邻域</sub></td>
   </tr>
 </table>
 

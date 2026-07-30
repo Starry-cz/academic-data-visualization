@@ -61,6 +61,10 @@ NETWORK_SPECS = (
         ROOT / "assets" / "figures" / "ChordDiagram" / "chord_diagram.png",
         "chord_diagram.png",
     ),
+    (
+        ROOT / "assets" / "figures" / "Manifold" / "diffusion_swiss_roll.png",
+        "manifold_embedding.png",
+    ),
 )
 
 SQUARE_CANVAS = (1800, 1800)
