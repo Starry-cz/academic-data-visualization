@@ -35254,7 +35254,6 @@
       "dependencies": [
         "matplotlib",
         "numpy",
-        "phate",
         "scipy"
       ],
       "asset_path": "assets/figures/Manifold",

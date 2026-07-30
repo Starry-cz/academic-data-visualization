@@ -719,7 +719,7 @@
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
 - **实现状态**：`production_template`
 - **可复用资产**：`assets/figures/Manifold`
-- **后端与依赖**：python；matplotlib；numpy；phate；scipy
+- **后端与依赖**：python；matplotlib；numpy；scipy
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-matrix；grouped-correlation-matrix；correlation-bubble-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
