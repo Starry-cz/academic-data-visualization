@@ -140,7 +140,7 @@ The landing page shows 24 verified examples across distinct chart families. Ever
   <tr>
     <td width="33%" colspan="2" align="center" valign="top"><strong>Correlation network</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="280" alt="Correlation network"></a><br><sub>Edges and community structure</sub></td>
     <td width="34%" colspan="2" align="center" valign="top"><strong>Weighted chord diagram</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="280" alt="Weighted chord diagram"></a><br><sub>Cross-domain links, weights, and global structure</sub></td>
-    <td width="33%" colspan="2" align="center" valign="top"><strong>Manifold embedding</strong><br><a href="assets/figures/Manifold/diffusion_swiss_roll.png"><img src="assets/figure-atlas/readme-cards/manifold_embedding.png" width="280" alt="Manifold embedding"></a><br><sub>Nonlinear high-dimensional structure and local neighborhoods</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>PHATE trajectory map</strong><br><a href="assets/figures/Manifold/phate_trajectory.png"><img src="assets/figure-atlas/readme-cards/phate_trajectory.png" width="280" alt="PHATE trajectory map"></a><br><sub>High-dimensional states, continuous trajectories, and local density</sub></td>
   </tr>
 </table>
 

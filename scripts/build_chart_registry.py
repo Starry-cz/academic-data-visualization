@@ -29,6 +29,11 @@ def build_manifest(chart: dict) -> dict:
         if path.is_file() and path.suffix.lower() in {".py", ".r"}
     )
     previews = sorted(path.name for path in asset_dir.glob("*.png"))
+    # PNG 用于目录预览；TIFF 作为投稿级栅格输出，同样必须进入 manifest。
+    rasters = sorted(
+        path.name for path in asset_dir.iterdir()
+        if path.is_file() and path.suffix.lower() in {".png", ".tif", ".tiff"}
+    )
     vectors = sorted(
         path.name for path in asset_dir.iterdir()
         if path.is_file() and path.suffix.lower() in {".svg", ".pdf"}
@@ -42,7 +47,7 @@ def build_manifest(chart: dict) -> dict:
         "backend": backends,
         "entrypoints": scripts,
         "previews": previews,
-        "outputs": {"vector": vectors, "raster": previews},
+        "outputs": {"vector": vectors, "raster": rasters},
         "data": {"mode": "bundled_or_synthetic_demo", "required_columns": []},
         "supported_transforms": chart["allowed_transforms"],
         "unsupported_cases": chart["avoid_when"],

@@ -9,19 +9,26 @@
   "entrypoints": [
     "diffusion_swiss_roll.py",
     "plot_hole_manifold.py",
-    "plot_manifold.py"
+    "plot_manifold.py",
+    "plot_phate_trajectory.py"
   ],
   "previews": [
     "diffusion_swiss_roll.png",
     "manifold.png",
-    "manifold_holes.png"
+    "manifold_holes.png",
+    "phate_trajectory.png"
   ],
   "outputs": {
-    "vector": [],
+    "vector": [
+      "phate_trajectory.pdf",
+      "phate_trajectory.svg"
+    ],
     "raster": [
       "diffusion_swiss_roll.png",
       "manifold.png",
-      "manifold_holes.png"
+      "manifold_holes.png",
+      "phate_trajectory.png",
+      "phate_trajectory.tiff"
     ]
   },
   "data": {

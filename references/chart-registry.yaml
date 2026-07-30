@@ -35171,9 +35171,14 @@
       "id": "manifold-embedding-plot",
       "name_zh": "流形嵌入图",
       "name_en": "Manifold Embedding Plot",
-      "aliases_zh": [],
+      "aliases_zh": [
+        "PHATE轨迹图",
+        "PHATE嵌入图"
+      ],
       "aliases_en": [
-        "Swiss roll"
+        "Swiss roll",
+        "PHATE trajectory map",
+        "PHATE embedding plot"
       ],
       "category_ids": [
         "14"
@@ -35246,7 +35251,12 @@
       "backends": [
         "python"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "matplotlib",
+        "numpy",
+        "phate",
+        "scipy"
+      ],
       "asset_path": "assets/figures/Manifold",
       "reuse_constraints": [
         "复用前核对数据结构、观测单位、统计语义和输出尺寸"

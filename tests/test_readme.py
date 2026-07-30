@@ -26,7 +26,7 @@ SQUARE_CARDS = {
     "xps_peak_deconvolution.png",
     "exafs_wavelet_map.png",
     "chord_diagram.png",
-    "manifold_embedding.png",
+    "phate_trajectory.png",
 }
 WIDE_CARDS = {
     "bar.png",

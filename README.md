@@ -139,7 +139,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
   <tr>
     <td width="33%" colspan="2" align="center" valign="top"><strong>相关网络图</strong><br><a href="assets/figures/CorrelationNetwork/correlation_network.png"><img src="assets/figure-atlas/readme-cards/correlation_network.png" width="280" alt="相关网络图"></a><br><sub>节点关系与社群结构</sub></td>
     <td width="34%" colspan="2" align="center" valign="top"><strong>加权弦图</strong><br><a href="assets/figures/ChordDiagram/chord_diagram.png"><img src="assets/figure-atlas/readme-cards/chord_diagram.png" width="280" alt="加权弦图"></a><br><sub>跨领域连接、权重与整体结构</sub></td>
-    <td width="33%" colspan="2" align="center" valign="top"><strong>流形嵌入图</strong><br><a href="assets/figures/Manifold/diffusion_swiss_roll.png"><img src="assets/figure-atlas/readme-cards/manifold_embedding.png" width="280" alt="流形嵌入图"></a><br><sub>非线性高维结构与局部邻域</sub></td>
+    <td width="33%" colspan="2" align="center" valign="top"><strong>PHATE 轨迹图</strong><br><a href="assets/figures/Manifold/phate_trajectory.png"><img src="assets/figure-atlas/readme-cards/phate_trajectory.png" width="280" alt="PHATE 轨迹图"></a><br><sub>高维状态、连续轨迹与局部密度</sub></td>
   </tr>
 </table>
 

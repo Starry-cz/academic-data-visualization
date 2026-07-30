@@ -62,8 +62,8 @@ NETWORK_SPECS = (
         "chord_diagram.png",
     ),
     (
-        ROOT / "assets" / "figures" / "Manifold" / "diffusion_swiss_roll.png",
-        "manifold_embedding.png",
+        ROOT / "assets" / "figures" / "Manifold" / "phate_trajectory.png",
+        "phate_trajectory.png",
     ),
 )
 

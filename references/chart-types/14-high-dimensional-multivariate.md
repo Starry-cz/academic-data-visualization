@@ -701,7 +701,7 @@
 ### 流形嵌入图（Manifold Embedding Plot）
 
 - **Canonical ID**：`manifold-embedding-plot`
-- **别名**：Swiss roll
+- **别名**：PHATE轨迹图；PHATE嵌入图；Swiss roll；PHATE trajectory map；PHATE embedding plot
 - **适合回答**：研究对象在多变量结构、相关与低维表示方面呈现什么结构或差异？
 - **定义**：流形嵌入图用于表达多变量结构、相关与低维表示，其核心视觉编码是矩阵单元或低维位置。
 - **必需数据**：numeric_features
@@ -719,7 +719,7 @@
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
 - **实现状态**：`production_template`
 - **可复用资产**：`assets/figures/Manifold`
-- **后端与依赖**：python
+- **后端与依赖**：python；matplotlib；numpy；phate；scipy
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-matrix；grouped-correlation-matrix；correlation-bubble-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof

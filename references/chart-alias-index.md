@@ -350,7 +350,7 @@
 | `main-effects-plot` | 主效应图 | Main Effects Plot | 无 | 实验设计与组间差异图、工程、质量管理与过程控制图 | 可复用模式 |
 | `main-figure-with-magnified-inset` | 主图—局部放大图 | Main Figure with Magnified Inset | 无 | 复合图与高级科研图形 | 按需实现 |
 | `manhattan-plot` | 曼哈顿图 | Manhattan Plot | 无 | 医学、公共卫生与生命科学常用图 | 按需实现 |
-| `manifold-embedding-plot` | 流形嵌入图 | Manifold Embedding Plot | Swiss roll | 高维与多变量数据图 | 生产模板 |
+| `manifold-embedding-plot` | 流形嵌入图 | Manifold Embedding Plot | PHATE轨迹图；PHATE嵌入图；Swiss roll；PHATE trajectory map；PHATE embedding plot | 高维与多变量数据图 | 生产模板 |
 | `mantel-correlation-plot` | Mantel相关图 | Mantel Correlation Plot | Mantel test | 高维与多变量数据图、医学、公共卫生与生命科学常用图 | 生产模板 |
 | `map-and-sankey-composite-figure` | 地图—桑基图组合 | Map and Sankey Composite Figure | 无 | 复合图与高级科研图形 | 按需实现 |
 | `map-and-time-series-composite-figure` | 地图—时间序列组合 | Map and Time-series Composite Figure | 无 | 复合图与高级科研图形 | 按需实现 |
