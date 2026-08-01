@@ -29,6 +29,8 @@ Mark an asset `production_verified` only when all conditions below are evidenced
 11. Pass the repository CI execution lane.
 12. Record code, data, and third-party asset provenance.
 
+For a new asset or any asset whose colours, opacity, background, or mark roles change, run the output QA with `--strict-colors` before recording new release evidence. Existing stored evidence remains historically valid until that asset is materially revised; do not rewrite evidence hashes merely to adopt a newer QA report format.
+
 If any condition is missing, use `demo_runnable` or `legacy_example` instead.
 
 ## Unified command

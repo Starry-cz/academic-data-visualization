@@ -8,6 +8,7 @@ import json
 import tempfile
 from pathlib import Path
 
+from color_audit import audit_svg_colours
 from qa_validator import audit_metadata, audit_source, check_cl3_dpi
 
 
@@ -71,11 +72,38 @@ def palette_tamper_lane() -> list[dict[str, object]]:
     return [{"name": "unregistered palette value is caught", "passed": not findings["COLOR-1"].pass_}]
 
 
+def rendered_colour_lane() -> list[dict[str, object]]:
+    svg = """\
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120">
+  <g id="figure_1">
+    <g id="patch_1"><path d="M 0 0 H 200 V 120 H 0 Z" style="fill: #FFFFFF"/></g>
+    <g id="Line2D_1"><path d="M 10 80 L 190 20" style="fill: none; stroke: #BDE2ED; stroke-width: 2"/></g>
+    <text x="10" y="110" style="fill: #B0B0B0">Faint label</text>
+  </g>
+</svg>
+"""
+    with tempfile.TemporaryDirectory(prefix="adv-colour-coverage-") as temp:
+        path = Path(temp) / "figure.svg"
+        path.write_text(svg, encoding="utf-8")
+        compatible = {item.check_id: item for item in audit_svg_colours(path, ["#BDE2ED"], strict=False)}
+        strict = {item.check_id: item for item in audit_svg_colours(path, ["#BDE2ED"], strict=True)}
+    return [
+        {
+            "name": "rendered contrast remains backward-compatible by default",
+            "passed": compatible["COLOR-2"].severity == "WARN" and compatible["A11Y-3"].severity == "WARN",
+        },
+        {
+            "name": "strict rendered contrast blocks pale text and marks",
+            "passed": strict["COLOR-2"].severity == "FAIL" and strict["A11Y-3"].severity == "FAIL",
+        },
+    ]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
-    results = source_lane() + rendered_lane() + palette_tamper_lane()
+    results = source_lane() + rendered_lane() + palette_tamper_lane() + rendered_colour_lane()
     passed = sum(bool(item["passed"]) for item in results)
     payload = {"checks": len(results), "passed": passed, "failed": len(results) - passed, "results": results}
     if args.json:

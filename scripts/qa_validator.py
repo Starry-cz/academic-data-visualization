@@ -14,11 +14,12 @@ from typing import Any
 
 from PIL import Image, ImageStat
 
+from color_audit import audit_svg_colours
 from manifest_lib import load_manifest, sha256_file
 from palette_lib import THEMES
 
 
-QA_VERSION = "2.0.0"
+QA_VERSION = "2.1.0"
 PROFILE_PIXELS = {
     "journal_print": (3242, 2160),
     "report_web": (2000, 1200),
@@ -167,9 +168,11 @@ def audit_metadata(path: Path, source_path: Path, profile: str) -> list[Finding]
     return findings
 
 
-def audit_output_bundle(output_dir: Path, manifest_path: Path) -> dict[str, Any]:
+def audit_output_bundle(output_dir: Path, manifest_path: Path, strict_colors: bool = False) -> dict[str, Any]:
     manifest = load_manifest(manifest_path)
-    profile = json.loads((output_dir / "figure-metadata.json").read_text(encoding="utf-8"))["profile"]
+    metadata_path = output_dir / "figure-metadata.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    profile = metadata["profile"]
     required = manifest["outputs"]["required"]
     findings: list[Finding] = []
     missing = [name for name in required if name not in {"qa-report.json", "run-record.json"} and not (output_dir / name).is_file()]
@@ -181,13 +184,27 @@ def audit_output_bundle(output_dir: Path, manifest_path: Path) -> dict[str, Any]
         findings.extend(audit_grayscale(output_dir / "figure-grayscale.png", expected_size))
         findings.extend(audit_svg(output_dir / "figure.svg"))
         findings.extend(audit_pdf(output_dir / "figure.pdf"))
-        findings.extend(audit_metadata(output_dir / "figure-metadata.json", output_dir / "source-data.csv", profile))
+        findings.extend(audit_metadata(metadata_path, output_dir / "source-data.csv", profile))
+        categorical = metadata.get("palette", {}).get("categorical", [])
+        if not isinstance(categorical, list):
+            categorical = []
+        # 新检查读取最终 SVG 的实际绘制颜色；默认兼容模式只新增警告，严格模式才阻断交付。
+        rendered_colour_findings = audit_svg_colours(
+            output_dir / "figure.svg",
+            categorical=[colour for colour in categorical if isinstance(colour, str)],
+            strict=strict_colors,
+        )
+        findings.extend(
+            Finding(item.check_id, item.pass_, item.severity, item.detail)
+            for item in rendered_colour_findings
+        )
         alt_text = (output_dir / "alt-text.txt").read_text(encoding="utf-8").strip()
         findings.append(Finding("A11Y-2", len(alt_text) >= 40, "PASS" if len(alt_text) >= 40 else "FAIL", f"Alt text length: {len(alt_text)}"))
     result = {
         "qa_version": QA_VERSION,
         "asset_id": manifest["asset_id"],
         "profile": profile,
+        "colour_policy": "strict" if strict_colors else "compatible",
         "findings": [asdict(item) for item in findings],
         "summary": {
             "passed": sum(item.pass_ for item in findings),
@@ -213,6 +230,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--report", type=Path)
     parser.add_argument("--production-interface", action="store_true")
+    parser.add_argument(
+        "--strict-colors",
+        action="store_true",
+        help="Promote rendered text and essential-mark contrast violations from WARN to FAIL",
+    )
     return parser.parse_args()
 
 
@@ -221,7 +243,11 @@ def main() -> None:
     if args.output_dir or args.manifest:
         if not args.output_dir or not args.manifest:
             raise SystemExit("--output-dir and --manifest must be used together")
-        report = audit_output_bundle(args.output_dir.resolve(), args.manifest.resolve())
+        report = audit_output_bundle(
+            args.output_dir.resolve(),
+            args.manifest.resolve(),
+            strict_colors=args.strict_colors,
+        )
     elif args.target:
         findings = audit_source(args.target.resolve(), args.production_interface)
         report = {

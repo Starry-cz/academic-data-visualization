@@ -128,6 +128,8 @@ Read every title, axis, tick, legend, gene name, and annotation at intended size
 
 Check that adjacent categories remain distinct, ordered ramps progress visibly, light marks do not disappear on white, and neutral context does not overpower evidence.
 
+Before manual inspection, run the rendered SVG colour gate described in `color-accessibility-qa.md`. For new or materially revised deliverables, use `--strict-colors`; resolve every `COLOR-2` and `A11Y-3` failure. Treat `COLOR-3` through `COLOR-5` and `A11Y-4` through `A11Y-5` as explicit visual-review prompts rather than proof of accessibility.
+
 ### `VV-5` Data signal integrity
 
 Confirm that every panel contains the evidence its chart type requires:

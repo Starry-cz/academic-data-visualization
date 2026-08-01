@@ -25,6 +25,7 @@ Apply this protocol after deterministic output QA. Automated checks cannot decid
 - Use direct labels when they reduce lookup cost without covering evidence.
 - For multi-panel figures, align panel labels and axes; use a hero panel only when the evidence hierarchy is genuinely asymmetric.
 - Inspect the RGB figure and grayscale proof at the final delivery size.
+- Run the actual-SVG checks in `color-accessibility-qa.md`; use strict mode for a new or materially revised final deliverable. The checker composites opacity over the explicit canvas background, but local overlap and redundant encoding still require visual inspection.
 
 ## 4. Profile-specific review
 

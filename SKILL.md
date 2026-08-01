@@ -220,6 +220,7 @@ Read references progressively; do not load the full folder.
 | `references/figure-design-brief.md` | Two or more panels |
 | `references/multipanel-layout.md` | Multi-panel layout or composition |
 | `references/color-palettes.md` | Selecting or customising a theme |
+| `references/color-accessibility-qa.md` | Reviewing rendered contrast, opacity, white-background readability, or grayscale warnings |
 | `references/asset-reuse-protocol.md` | Reusing `assets/figures/` |
 | `references/production-verification.md` | Interpreting v2 states or promoting an asset |
 | `references/visual-review-protocol.md` | Inspecting final-size colour and grayscale proofs |
@@ -262,6 +263,9 @@ python scripts/build_skill_package.py --check
 
 # Audit one generated script
 python scripts/qa_validator.py path/to/figure.py
+
+# Strict rendered-colour gate for a completed output bundle
+python scripts/qa_validator.py --output-dir output/forest --manifest templates/production-verified/forest-plot/asset.yaml --strict-colors
 
 # Rebuild README previews and atlases
 python scripts/generate_readme_previews.py

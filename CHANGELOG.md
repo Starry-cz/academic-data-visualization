@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added backward-compatible rendered-SVG colour QA with opacity compositing, role-aware 3:1 graphical checks, 4.5:1 text checks, grayscale warnings, embedded-image review prompts, and an opt-in `--strict-colors` delivery gate.
 - Reframed the capability section around user situations, actions, and deliverables; moved registry coverage metrics out of the primary product story and replaced technical hero badges with backend and export capabilities.
 - Reordered the bilingual README around reader intent: task-based navigation now appears before installation, the hero links directly to all 22 retained figure examples, and quick start is split into install and prompt steps.
 - Rebuilt the Chinese and English README pages around an outcome-first quick start, verified capability boundaries, and a compact documentation map.
