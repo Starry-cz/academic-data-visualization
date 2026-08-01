@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "forest-plot",
+  "profile": "journal_print",
+  "theme": "literature-clinical",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 6,
+  "source_sha256": "c8488c1a89d03779484caf6305de1f96e5c605913ea1436ebc720000bec0102f",
+  "palette": {
+    "categorical": [
+      "#477E95",
+      "#72AE9E",
+      "#D87B67",
+      "#D4B261",
+      "#9C86B3",
+      "#7A8791"
+    ],
+    "sequential": [
+      "#F7FAF9",
+      "#CDE5DF",
+      "#8ABFB4",
+      "#3D7A76"
+    ],
+    "diverging": [
+      "#3D7890",
+      "#FFFDF9",
+      "#C86A59"
+    ],
+    "accent": "#D87B67"
+  },
+  "metrics": {
+    "effects": [
+      {
+        "label": "Outcome F",
+        "estimate": 0.18,
+        "lower": -0.02,
+        "upper": 0.38
+      },
+      {
+        "label": "Outcome E",
+        "estimate": 0.73,
+        "lower": 0.4499999999999999,
+        "upper": 1.01
+      },
+      {
+        "label": "Outcome D",
+        "estimate": -0.08,
+        "lower": -0.24,
+        "upper": 0.08
+      },
+      {
+        "label": "Outcome C",
+        "estimate": 0.52,
+        "lower": 0.27,
+        "upper": 0.77
+      },
+      {
+        "label": "Outcome B",
+        "estimate": 0.31,
+        "lower": 0.13,
+        "upper": 0.49
+      },
+      {
+        "label": "Outcome A",
+        "estimate": -0.24,
+        "lower": -0.4599999999999999,
+        "upper": -0.0199999999999999
+      }
+    ]
+  },
+  "alt_text": "Forest Plot. The chart is based on 6 source rows; consult figure-metadata.json for computed values and methods."
+}

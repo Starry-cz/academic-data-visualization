@@ -1,20 +1,12 @@
-# Academic Data Visualization — Claude Code Installation
+# Claude Code installation
 
-The Claude Code skill is at `academic-data-visualization/`. Install via symlink:
+Install or symlink the complete repository at `~/.claude/skills/academic-data-visualization`. Historical assets under `assets/figures/` are examples, not verified production templates.
 
-```bash
-ln -s $(pwd)/academic-data-visualization ~/.claude/skills/academic-data-visualization
-```
+# Academic Data Visualization portable rules
 
-Or copy:
-```bash
-cp -r academic-data-visualization ~/.claude/skills/academic-data-visualization
-```
-
-After installation, Claude Code auto-triggers on: "make a volcano plot", "画个热图",
-"review this figure for Nature", etc.
-
-The skill checks `academic-data-visualization/assets/figures/<type>/` for production scripts before
-generating any code. Add your own scripts there to extend figure type coverage.
-
-Generated: 2026-07-29 11:29 UTC
+1. Define the claim, observation unit, data contract, and delivery profile before selecting a chart.
+2. Route chart names through the canonical registry; only `production_verified + release_passed` is a release template.
+3. Preserve the approved palette unless the user explicitly requests a change; add redundant non-colour encoding.
+4. Execute verified templates through `scripts/run_asset.py`, never by runtime package installation or a hidden backend fallback.
+5. Deliver editable SVG/PDF, exact-profile RGB and grayscale proofs, source data, metadata, alt text, and QA evidence.
+6. Inspect the rendered result at final size; automated checks do not approve aesthetics.

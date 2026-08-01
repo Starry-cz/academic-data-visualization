@@ -372,7 +372,7 @@ if __name__ == "__main__":
 
     print("=" * 64)
     if result["f1"] >= 0.95:
-        print("Verdict: EXCELLENT — trigger accuracy is production-grade")
+        print("Verdict: fixture rules matched; this is not evidence of live model trigger accuracy")
     elif result["f1"] >= 0.85:
         print("Verdict: GOOD — minor tuning needed")
     elif result["f1"] >= 0.70:

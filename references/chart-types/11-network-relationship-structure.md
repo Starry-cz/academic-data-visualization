@@ -9,86 +9,86 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `adjacency-matrix` | 节点与边 | source, target | 按需实现 |
-| `alluvial-network-evolution-diagram` | 节点与边 | source, target | 按需实现 |
+| `adjacency-matrix` | 节点与边 | source, target | 知识登记 |
+| `alluvial-network-evolution-diagram` | 节点与边 | source, target | 知识登记 |
 | `arc-diagram` | 节点或边 | source, target, weight | 可复用模式 |
-| `association-rule-network` | 节点与边 | source, target | 按需实现 |
-| `author-collaboration-network` | 节点与边 | source, target | 按需实现 |
-| `bibliographic-coupling` | 节点与边 | source, target | 按需实现 |
-| `bibliographic-coupling-network` | 文献、作者或关键词 | document_or_term, relation | 按需实现 |
-| `bipartite-network` | 节点与边 | source, target | 按需实现 |
-| `chord-diagram` | 节点或边 | source, target, weight | 生产模板 |
-| `citation-network` | 节点与边 | source, target | 按需实现 |
-| `co-citation-network` | 文献、作者或关键词 | document_or_term, relation | 按需实现 |
+| `association-rule-network` | 节点与边 | source, target | 知识登记 |
+| `author-collaboration-network` | 节点与边 | source, target | 知识登记 |
+| `bibliographic-coupling` | 节点与边 | source, target | 知识登记 |
+| `bibliographic-coupling-network` | 文献、作者或关键词 | document_or_term, relation | 知识登记 |
+| `bipartite-network` | 节点与边 | source, target | 知识登记 |
+| `chord-diagram` | 节点或边 | source, target, weight | 历史示例 |
+| `citation-network` | 节点与边 | source, target | 知识登记 |
+| `co-citation-network` | 文献、作者或关键词 | document_or_term, relation | 知识登记 |
 | `co-occurrence-network` | 节点或边 | source, target, weight | 可复用模式 |
-| `co-word-network` | 文献、作者或关键词 | document_or_term, relation | 按需实现 |
-| `community-network` | 节点与边 | source, target | 按需实现 |
-| `concept-network` | 节点与边 | source, target | 按需实现 |
-| `correlation-network` | 节点或边 | source, target, weight | 生产模板 |
-| `country-collaboration-network` | 节点与边 | source, target | 按需实现 |
+| `co-word-network` | 文献、作者或关键词 | document_or_term, relation | 知识登记 |
+| `community-network` | 节点与边 | source, target | 知识登记 |
+| `concept-network` | 节点与边 | source, target | 知识登记 |
+| `correlation-network` | 节点或边 | source, target, weight | 历史示例 |
+| `country-collaboration-network` | 节点与边 | source, target | 知识登记 |
 | `dendrogram` | 节点或边 | source, target, weight | 可复用模式 |
-| `ego-network` | 节点与边 | source, target | 按需实现 |
-| `hive-plot` | 节点与边 | source, target | 按需实现 |
-| `hypergraph` | 节点与边 | source, target | 按需实现 |
-| `institution-collaboration-network` | 节点与边 | source, target | 按需实现 |
-| `knowledge-graph` | 节点与边 | source, target | 按需实现 |
-| `multilayer-network` | 节点与边 | source, target | 按需实现 |
-| `network-centrality-distribution-plot` | 节点与边 | source, target | 按需实现 |
-| `network-community-sankey-diagram` | 节点与边 | source, target | 按需实现 |
-| `network-degree-distribution-plot` | 节点与边 | source, target | 按需实现 |
-| `network-matrix-heatmap` | 节点与边 | source, target | 按需实现 |
-| `node-link-diagram` | 节点与边 | source, target | 按需实现 |
-| `phylogenetic-tree` | 节点或边 | source, target, weight | 按需实现 |
-| `semantic-network` | 节点与边 | source, target | 按需实现 |
-| `social-network-graph` | 节点与边 | source, target | 按需实现 |
-| `temporal-network-evolution-plot` | 节点与边 | source, target | 按需实现 |
-| `theme-evolution-network` | 节点与边 | source, target | 按需实现 |
+| `ego-network` | 节点与边 | source, target | 知识登记 |
+| `hive-plot` | 节点与边 | source, target | 知识登记 |
+| `hypergraph` | 节点与边 | source, target | 知识登记 |
+| `institution-collaboration-network` | 节点与边 | source, target | 知识登记 |
+| `knowledge-graph` | 节点与边 | source, target | 知识登记 |
+| `multilayer-network` | 节点与边 | source, target | 知识登记 |
+| `network-centrality-distribution-plot` | 节点与边 | source, target | 知识登记 |
+| `network-community-sankey-diagram` | 节点与边 | source, target | 知识登记 |
+| `network-degree-distribution-plot` | 节点与边 | source, target | 知识登记 |
+| `network-matrix-heatmap` | 节点与边 | source, target | 知识登记 |
+| `node-link-diagram` | 节点与边 | source, target | 知识登记 |
+| `phylogenetic-tree` | 节点或边 | source, target, weight | 知识登记 |
+| `semantic-network` | 节点与边 | source, target | 知识登记 |
+| `social-network-graph` | 节点与边 | source, target | 知识登记 |
+| `temporal-network-evolution-plot` | 节点与边 | source, target | 知识登记 |
+| `theme-evolution-network` | 节点与边 | source, target | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 邻接矩阵图 / Adjacency Matrix | `adjacency-matrix` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| Alluvial网络演化图 / Alluvial Network Evolution Diagram | `alluvial-network-evolution-diagram` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
+| 邻接矩阵图 / Adjacency Matrix | `adjacency-matrix` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| Alluvial网络演化图 / Alluvial Network Evolution Diagram | `alluvial-network-evolution-diagram` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
 | 弧线图 / Arc Diagram | `arc-diagram` | 实体连接、权重与社区结构 | 可复用模式 |
-| 关联规则网络图 / Association Rule Network | `association-rule-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 作者合作网络图 / Author Collaboration Network | `author-collaboration-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 文献耦合网络图 / Bibliographic Coupling | `bibliographic-coupling` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 文献耦合网络 / Bibliographic Coupling Network | `bibliographic-coupling-network` | 知识关联、主题演化与科学结构 | 按需实现 |
-| 二模网络图 / Bipartite Network | `bipartite-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 生产模板 |
-| 引文网络图 / Citation Network | `citation-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 共被引网络 / Co-citation Network | `co-citation-network` | 知识关联、主题演化与科学结构 | 按需实现 |
+| 关联规则网络图 / Association Rule Network | `association-rule-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 作者合作网络图 / Author Collaboration Network | `author-collaboration-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 文献耦合网络图 / Bibliographic Coupling | `bibliographic-coupling` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 文献耦合网络 / Bibliographic Coupling Network | `bibliographic-coupling-network` | 知识关联、主题演化与科学结构 | 知识登记 |
+| 二模网络图 / Bipartite Network | `bipartite-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 历史示例 |
+| 引文网络图 / Citation Network | `citation-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 共被引网络 / Co-citation Network | `co-citation-network` | 知识关联、主题演化与科学结构 | 知识登记 |
 | 共现网络 / Co-occurrence Network | `co-occurrence-network` | 实体连接、权重与社区结构 | 可复用模式 |
-| 共词网络 / Co-word Network | `co-word-network` | 知识关联、主题演化与科学结构 | 按需实现 |
-| 社群网络图 / Community Network | `community-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 概念网络图 / Concept Network | `concept-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 相关网络图 / Correlation Network | `correlation-network` | 实体连接、权重与社区结构 | 生产模板 |
-| 国家合作网络图 / Country Collaboration Network | `country-collaboration-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
+| 共词网络 / Co-word Network | `co-word-network` | 知识关联、主题演化与科学结构 | 知识登记 |
+| 社群网络图 / Community Network | `community-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 概念网络图 / Concept Network | `concept-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 相关网络图 / Correlation Network | `correlation-network` | 实体连接、权重与社区结构 | 历史示例 |
+| 国家合作网络图 / Country Collaboration Network | `country-collaboration-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
 | 树状图 / Dendrogram | `dendrogram` | 实体连接、权重与社区结构 | 可复用模式 |
-| Ego Network / Ego Network | `ego-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| Hive Plot / Hive Plot | `hive-plot` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 超图 / Hypergraph | `hypergraph` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 机构合作网络图 / Institution Collaboration Network | `institution-collaboration-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 知识图谱 / Knowledge Graph | `knowledge-graph` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 多层网络图 / Multilayer Network | `multilayer-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 网络中心性分布图 / Network Centrality Distribution Plot | `network-centrality-distribution-plot` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 网络社区桑基图 / Network Community Sankey Diagram | `network-community-sankey-diagram` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 网络度分布图 / Network Degree Distribution Plot | `network-degree-distribution-plot` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 网络矩阵热力图 / Network Matrix Heatmap | `network-matrix-heatmap` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 节点—连线图 / Node-link Diagram | `node-link-diagram` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 系统发育树 / Phylogenetic Tree | `phylogenetic-tree` | 实体连接、权重与社区结构 | 按需实现 |
-| 语义网络图 / Semantic Network | `semantic-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 社会网络图 / Social Network Graph | `social-network-graph` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 网络时间演化图 / Temporal Network Evolution Plot | `temporal-network-evolution-plot` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 主题演化网络图 / Theme Evolution Network | `theme-evolution-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
+| Ego Network / Ego Network | `ego-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| Hive Plot / Hive Plot | `hive-plot` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 超图 / Hypergraph | `hypergraph` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 机构合作网络图 / Institution Collaboration Network | `institution-collaboration-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 知识图谱 / Knowledge Graph | `knowledge-graph` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 多层网络图 / Multilayer Network | `multilayer-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 网络中心性分布图 / Network Centrality Distribution Plot | `network-centrality-distribution-plot` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 网络社区桑基图 / Network Community Sankey Diagram | `network-community-sankey-diagram` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 网络度分布图 / Network Degree Distribution Plot | `network-degree-distribution-plot` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 网络矩阵热力图 / Network Matrix Heatmap | `network-matrix-heatmap` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 节点—连线图 / Node-link Diagram | `node-link-diagram` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 系统发育树 / Phylogenetic Tree | `phylogenetic-tree` | 实体连接、权重与社区结构 | 知识登记 |
+| 语义网络图 / Semantic Network | `semantic-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 社会网络图 / Social Network Graph | `social-network-graph` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 网络时间演化图 / Temporal Network Evolution Plot | `temporal-network-evolution-plot` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 主题演化网络图 / Theme Evolution Network | `theme-evolution-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
 
 ## 图型详细条目
 
@@ -111,7 +111,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -137,7 +137,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -163,7 +163,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -189,7 +189,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -215,7 +215,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -241,7 +241,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -267,7 +267,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；bibliographic network data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -293,7 +293,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -319,7 +319,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/ChordDiagram`
 - **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -345,7 +345,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -371,7 +371,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；bibliographic network data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -397,7 +397,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -423,7 +423,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；bibliographic network data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -449,7 +449,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -475,7 +475,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -501,7 +501,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/CorrelationNetwork`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -527,7 +527,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -553,7 +553,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -579,7 +579,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -605,7 +605,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -631,7 +631,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -657,7 +657,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -683,7 +683,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -709,7 +709,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -735,7 +735,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -761,7 +761,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -787,7 +787,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -813,7 +813,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -839,7 +839,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -865,7 +865,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -891,7 +891,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -917,7 +917,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -943,7 +943,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -969,7 +969,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

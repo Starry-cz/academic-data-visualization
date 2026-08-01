@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#它如何工作"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Python 与 R 原生后端"></a>
   <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="矢量与高分辨率交付"></a>
-  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-37_verified-F2A65A?style=flat-square" alt="37 类已核验生产资产"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-12_release--verified-F2A65A?style=flat-square" alt="12 类发布级已验证生产模板"></a>
   <a href="#质量证据"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="四轮 QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="自动质量检查"></a>
 </p>
@@ -22,13 +22,13 @@
 <p align="center">
   <a href="#使用入口">使用入口</a> ·
   <a href="#30-秒开始">30 秒开始</a> ·
-  <a href="#精选成图">23 张成图</a> ·
+  <a href="#精选成图">24 张成图</a> ·
   <a href="#它如何工作">工作流程</a> ·
   <a href="#它能帮你完成什么">核心能力</a> ·
   <a href="#质量证据">质量证据</a>
 </p>
 
-> **不是模板图库。** Skill 先判断研究问题、数据结构和投稿约束，再选择可辩护的图型；只有具备真实脚本、预览和 manifest 的资产才标记为生产模板。
+> **可执行证据驱动的可视化顾问。** Skill 先判断研究问题、数据结构和交付约束，再选择可辩护的图型。仅有脚本或预览不代表生产可用；模板必须通过真实执行、产物 QA 与最终尺寸视觉复核。
 
 ## 使用入口
 
@@ -37,7 +37,7 @@
 <table width="100%" align="center">
   <tr><th width="30%">你现在要做什么</th><th width="35%">直接入口</th><th width="35%">继续深入</th></tr>
   <tr><td width="30%">第一次安装并完成一张图</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-秒开始">30 秒开始</a></td><td width="35%"><a href="#它如何工作">四阶段工作流</a></td></tr>
-  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">23 张精选成图</a></td><td width="35%"><a href="assets/figures/">生产资产目录</a> · <a href="#配色系统">配色系统</a></td></tr>
+  <tr><td width="30%">先看真实成图与视觉风格</td><td width="35%"><a href="#精选成图">24 张精选成图</a></td><td width="35%"><a href="references/directory-map.md">资产状态目录</a> · <a href="#配色系统">配色系统</a></td></tr>
   <tr><td width="30%">查找图型、别名与实现状态</td><td width="35%"><a href="references/figure-type-catalog.md">图型目录</a> · <a href="references/chart-alias-index.md">别名索引</a></td><td width="35%"><a href="references/chart-registry.yaml">规范化注册表</a></td></tr>
   <tr><td width="30%">定义结论、版式与交付规格</td><td width="35%"><a href="references/figure-contract.md">图表契约</a> · <a href="references/figure-design-brief.md">设计简报</a></td><td width="35%"><a href="references/multipanel-layout.md">多面板布局</a> · <a href="references/visual-style.md">视觉样式</a></td></tr>
   <tr><td width="30%">适配期刊、演讲或发布会</td><td width="35%"><a href="references/delivery-profiles.md">交付场景</a> · <a href="references/journal-specs.md">期刊规格</a></td><td width="35%"><a href="references/export-specs.md">导出规格</a></td></tr>
@@ -50,12 +50,12 @@
 
 ```powershell
 # Windows PowerShell · Codex
-git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.codex\skills\academic-data-visualization"
+git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.agents\skills\academic-data-visualization"
 ```
 
 ```bash
 # macOS / Linux · Codex
-git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
+git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.agents/skills/academic-data-visualization
 ```
 
 **2. 直接描述研究问题、数据与交付规格。**
@@ -79,7 +79,7 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">先判断读者需要比较、关联还是决策，再选择图型</td>
     <td width="25%">每条图型路线都会说明是直接复用、基于模式改造，还是按真实数据实现</td>
-    <td width="25%">37 类资产具备脚本、预览和 manifest，可追溯复用</td>
+    <td width="25%">12 类模板通过 demo、真实输入、产物 QA、证据哈希与视觉复核</td>
     <td width="25%">同时检查反模式、代码与导出、科学逻辑和最终渲染结果</td>
   </tr>
 </table>
@@ -104,7 +104,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 <table width="100%" align="center">
   <tr><th width="28%">你的情况</th><th width="44%">Skill 会怎么做</th><th width="28%">你会得到什么</th></tr>
   <tr><td width="28%"><strong>不知道该选什么图</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">根据研究问题与真实数据结构比较可辩护的候选图型</td><td width="28%">选图理由与风险提示</td></tr>
-  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 37 类已核验生产资产；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
+  <tr><td width="28%"><strong>已有数据，需要尽快成图</strong></td><td width="44%">适合时复用 12 个发布级验证模板；不匹配时按真实数据实现</td><td width="28%">Python / R 脚本与可编辑矢量主文件</td></tr>
   <tr><td width="28%"><strong>需要统一多面板或旧图</strong></td><td width="44%">统一物理尺寸、字体、配色、图例与面板层级</td><td width="28%">符合期刊尺寸的主图或补充图</td></tr>
   <tr><td width="28%"><strong>正在准备投稿</strong></td><td width="44%">依次检查反模式、代码与导出、科学逻辑和最终渲染</td><td width="28%">RGB、灰度校样与 QA 报告</td></tr>
   <tr><td width="28%"><strong>需要演讲或产品发布数据图</strong></td><td width="44%">从同一分析结果派生 16:9 远距阅读版本，保留基线、不确定性与来源</td><td width="28%">SVG/PDF、1080p/4K 校样与替代文本</td></tr>
@@ -116,7 +116,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 ## 精选成图
 
-首页按画幅展示 24 个不同类型的真实案例；统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现状态请进入 [生产资产目录](assets/figures/) 与 [图型目录](references/figure-type-catalog.md)。
+首页固定展示 24 个维护者选定的真实案例；精选展示不等于生产状态。统一缩略图画布确保每一行左右对齐，点击图片可查看原始成图。完整实现与验证状态请进入 [资产状态目录](references/directory-map.md) 与 [图型目录](references/figure-type-catalog.md)。
 
 ### 关系、降维、诊断、高维与网络结构 · 3 × 4
 
@@ -201,7 +201,7 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 ## 更多安装方式
 
-完整仓库中的 `references/`、`scripts/` 与 `assets/` 共同提供路由、约束、生产资产和质量检查，请勿只复制单个文件。
+完整仓库中的 `references/`、`scripts/`、`templates/` 与 `assets/` 共同提供路由、验证执行、历史示例和质量检查，请勿只复制单个文件。
 
 <details>
 <summary><strong>Claude Code</strong></summary>
@@ -229,18 +229,18 @@ git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.claude
 更新已有安装：
 
 ```bash
-git -C ~/.codex/skills/academic-data-visualization pull
+git -C ~/.agents/skills/academic-data-visualization pull
 ```
 
 ## 质量证据
 
-当前仓库基线：
+仓库只有在以下条件同时满足时，才把资产称为生产模板：
 
-- **714 / 714** 条源分类归属完成可复现映射；
-- **37 / 37** 类生产图型均有真实脚本、PNG 与 manifest；
-- **90 / 90** 条触发边界用例判断正确；
-- **28 / 28** 个 QA 用例命中预期，覆盖 **15 / 15** 类程序检查；
-- 注册表 Schema、24 类生成文档、别名冲突、资产映射与 README 摘要均由 CI 审计。
+- 同一入口分别使用确定性 demo 与受控 CSV fixture 完成真实执行；
+- 渲染过程隔离、禁用网络，并且只写入指定输出目录；
+- 产物同时包含可编辑 SVG/PDF、精确交付尺寸的 RGB 图、灰度图、源数据、指标元数据、替代文本与机器可读 QA 报告；
+- 保存产物哈希与环境版本，并对最终尺寸的彩色、灰度结果单独完成视觉复核；
+- CI 在 Windows 与 Linux 重跑可执行模板、解析保留的 R 脚本、审计路由与 manifest，并锁定精选成图和配色库不发生漂移。
 
 ```bash
 python scripts/check_skill_metadata.py
@@ -248,10 +248,14 @@ python scripts/check_references.py
 python scripts/check_chart_registry.py
 python scripts/build_chart_registry.py --check
 python scripts/generate_chart_catalog.py --check
+python scripts/generate_directory_map.py --check
+python scripts/check_showcase_lock.py
+python scripts/build_skill_package.py --check
 python -m unittest discover -s tests -v
 python scripts/trigger_benchmark.py
 python scripts/qa_coverage.py
-python -m compileall -q scripts assets/figures tests
+python scripts/verify_production_assets.py
+python -m compileall -q scripts assets/figures templates tests
 ```
 
 只有 [`checklist.md`](references/checklist.md) 中的反模式、代码与导出、科学逻辑、最终渲染四轮检查全部完成，结果才可标记为 `READY`。
@@ -267,7 +271,10 @@ academic-data-visualization/
 ├── references/              # 注册表、24 类目录、选图、期刊、配色、导出与 QA
 ├── scripts/                 # 生成、校验、组合、配色与灰度校样
 ├── tests/                   # taxonomy、路由与生成结果回归测试
-├── assets/                  # 生产脚本、manifest、图鉴与配色预览
+├── templates/               # 发布级已验证模板、fixture、产物与证据
+├── assets/                  # 历史示例、精选图鉴与配色预览
+├── .codex-plugin/           # Codex 插件清单
+├── skills/                  # 插件引用的可安装轻量 Skill 包（自动生成）
 └── install/                 # Codex / Claude Code / Cursor / Copilot 适配文件
 ```
 
@@ -275,6 +282,6 @@ academic-data-visualization/
 
 ## 贡献与许可
 
-新增图型时，请先登记 canonical record、别名、分类与真实实现状态，再运行目录生成器。只有同时提交真实脚本、PNG 和 `asset.yaml` 的图型才能标记为 `production_template`；不得为未实现图型伪造预览或资产路径。完整要求见 [`AGENTS.md`](AGENTS.md)。
+新增图型时，请先登记 canonical record、别名、分类与真实实现状态，再运行目录生成器。只有同时提交 Manifest v2、统一输入接口、双路径实跑、完整产物、哈希、程序 QA 与视觉复核证据的图型才能标记为 `production_verified`；不得伪造预览、证据或资产路径。完整要求见 [`AGENTS.md`](AGENTS.md)。
 
 本项目采用 [Apache-2.0](LICENSE) 许可证。

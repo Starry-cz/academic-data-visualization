@@ -1,0 +1,40 @@
+{
+  "runner_version": "2.0.0",
+  "asset_id": "violin-plot",
+  "mode": "input",
+  "profile": "journal_print",
+  "theme": "pastel-harmony",
+  "seed": 20260801,
+  "command": [
+    "python",
+    "scripts/verified_template.py",
+    "--chart-id",
+    "violin-plot",
+    "--output-dir",
+    "<OUTPUT_DIR>",
+    "--profile",
+    "journal_print",
+    "--theme",
+    "pastel-harmony",
+    "--seed",
+    "20260801",
+    "--input",
+    "<INPUT_CSV>"
+  ],
+  "duration_seconds": 5.315,
+  "renderer_returncode": 0,
+  "qa_passed": true,
+  "renderer_summary": {
+    "chart_id": "violin-plot",
+    "outputs": [
+      "figure.pdf",
+      "figure.svg",
+      "figure.png",
+      "figure-grayscale.png",
+      "figure-metadata.json",
+      "alt-text.txt",
+      "source-data.csv"
+    ]
+  },
+  "stderr": ""
+}

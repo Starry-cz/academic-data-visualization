@@ -1,6 +1,13 @@
-if (!require("ggridges")) install.packages("ggridges")
-if (!require("ggplot2")) install.packages("ggplot2")
-if (!require("dplyr")) install.packages("dplyr")
+required_packages <- c("ggridges", "ggplot2", "dplyr")
+missing_packages <- required_packages[!vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)]
+if (length(missing_packages) > 0) {
+  stop(
+    sprintf(
+      "Missing R packages: %s. Install them before running this legacy example.",
+      paste(missing_packages, collapse = ", ")
+    )
+  )
+}
 library(ggridges)
 library(ggplot2)
 library(dplyr)

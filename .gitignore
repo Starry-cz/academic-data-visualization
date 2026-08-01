@@ -7,3 +7,10 @@ assets/figure-atlas/*.tiff
 
 # 本地自动评估结果包含环境与时间戳，不进入版本控制。
 scripts/.eval_results.json
+
+# 本地渲染与视觉审阅缓存；发布证据只保存在 templates/production-verified/。
+.mplconfig-test/
+.verification-smoke/
+.validation-deps/
+.pytest_cache/
+.coverage

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "precision-recall-curve",
+  "profile": "journal_print",
+  "theme": "literature-clinical",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 180,
+  "source_sha256": "65e8db238f709aee2dc3ee1b15bd56a7737939a9e56fc7a72563882bf9a2bbe7",
+  "palette": {
+    "categorical": [
+      "#477E95",
+      "#72AE9E",
+      "#D87B67",
+      "#D4B261",
+      "#9C86B3",
+      "#7A8791"
+    ],
+    "sequential": [
+      "#F7FAF9",
+      "#CDE5DF",
+      "#8ABFB4",
+      "#3D7A76"
+    ],
+    "diverging": [
+      "#3D7890",
+      "#FFFDF9",
+      "#C86A59"
+    ],
+    "accent": "#D87B67"
+  },
+  "metrics": {
+    "auprc": 0.985437172417289,
+    "prevalence": 0.5444444444444444,
+    "n": 180
+  },
+  "alt_text": "Precision Recall Curve. The chart is based on 180 source rows; consult figure-metadata.json for computed values and methods."
+}

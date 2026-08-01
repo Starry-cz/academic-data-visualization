@@ -1,0 +1,14 @@
+[project]
+name = "academic-data-visualization-runtime"
+version = "2.0.0"
+description = "Deterministic runtime and QA tools for the Academic Data Visualization Skill"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "matplotlib>=3.10,<3.12",
+  "numpy>=2.0,<3",
+  "pandas>=2.2,<3.1",
+  "Pillow>=11,<13",
+]
+
+[tool.uv]
+package = false

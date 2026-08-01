@@ -32,6 +32,13 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
+      - name: Install verified runtime dependencies
+        run: python -m pip install -r requirements/verified-core.txt
+
+      - name: Install approved sans-serif font on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y fonts-liberation
+
       - name: Validate skill metadata
         run: python scripts/check_skill_metadata.py
 
@@ -43,6 +50,10 @@ jobs:
           python scripts/check_chart_registry.py
           python scripts/build_chart_registry.py --check
           python scripts/generate_chart_catalog.py --check
+          python scripts/generate_directory_map.py --check
+          python scripts/generate_adapters.py --check
+          python scripts/check_showcase_lock.py
+          python scripts/build_skill_package.py --check
 
       - name: Run taxonomy and routing tests
         run: python -m unittest discover -s tests -v
@@ -54,4 +65,41 @@ jobs:
         run: python scripts/qa_coverage.py
 
       - name: Compile Python sources
-        run: python -m compileall -q scripts assets/figures tests
+        run: python -m compileall -q scripts assets/figures templates tests
+
+  execute-production:
+    name: Execute verified templates on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Install verified runtime dependencies
+        run: python -m pip install -r requirements/verified-core.txt
+      - name: Install approved sans-serif font on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y fonts-liberation
+      - name: Execute demo and fixture paths for all verified templates
+        run: python scripts/verify_production_assets.py
+
+  parse-r-assets:
+    name: Parse retained R examples
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+      - name: Parse every retained R source
+        shell: Rscript {0}
+        run: |
+          files <- list.files("assets/figures", pattern = "\\.[Rr]$", recursive = TRUE, full.names = TRUE)
+          stopifnot(length(files) > 0)
+          for (file in files) parse(file = file)

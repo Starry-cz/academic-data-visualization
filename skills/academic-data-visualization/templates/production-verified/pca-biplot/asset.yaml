@@ -1,0 +1,84 @@
+{
+  "manifest_version": "2.0.0",
+  "asset_id": "pca-biplot",
+  "chart_ids": [
+    "pca-biplot"
+  ],
+  "asset_status": "production_verified",
+  "entrypoint": {
+    "role": "production",
+    "backend": "python",
+    "path": "../../../scripts/verified_template.py",
+    "interface_version": "1.0.0"
+  },
+  "environment": {
+    "python": ">=3.11,<3.14",
+    "r": null,
+    "dependency_group": "verified-core",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [
+      "csv"
+    ],
+    "required_columns": {
+      "sample_id": "string",
+      "group": "categorical"
+    },
+    "feature_columns": {
+      "type": "numeric",
+      "minimum": 3
+    },
+    "missing_value_policy": "error",
+    "minimum_rows": 10,
+    "fixtures": {
+      "demo": "generated-deterministically",
+      "validation": "fixture.csv"
+    }
+  },
+  "outputs": {
+    "required": [
+      "figure.pdf",
+      "figure.svg",
+      "figure.png",
+      "figure-grayscale.png",
+      "figure-metadata.json",
+      "alt-text.txt",
+      "source-data.csv",
+      "qa-report.json",
+      "run-record.json"
+    ],
+    "example_directory": "example-output",
+    "previews": [
+      "preview.png"
+    ]
+  },
+  "safety": {
+    "overwrite_default": false,
+    "writes_only_to_output_dir": true
+  },
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "deterministic-synthetic-fixture",
+    "data_license": "CC0-1.0",
+    "redistribution": "allowed"
+  },
+  "verification": {
+    "status": "release_passed",
+    "verified_at": "2026-08-01",
+    "verifier_version": "2.0.0",
+    "evidence": "verification-record.json",
+    "fixture_sha256": "f4a5c00985f9972fea2717ff2c2285f3dac802707875070212313514bddc22ed",
+    "artifact_sha256": {
+      "figure.pdf": "e18a13101b59abf0a04475a993d69edb09f81f5ee66f99d1db8179af8eed50fe",
+      "figure.svg": "c84477f7dcaa8708b68ef919c03910ec2ce9d8a28291006e91eed57f95adc8b5",
+      "figure.png": "1870b1d9f9d615d573558aa2f23089da0c94bc028760b168d9fdca2caaaa0d84",
+      "figure-grayscale.png": "f1896fb3988415dc72029d42de6a3714053997c4affd3eb4ef87fdb23d223d6c",
+      "figure-metadata.json": "5d6c301ad5358baadcd0dfd78254b7d18f4245c78906d8cc6a372b5f4fa5cb5f",
+      "alt-text.txt": "d8196875bb5d9d12987f9e757b739e688f8484107c054d9597d3366e8905acda",
+      "source-data.csv": "0ff713167cdab9a38e2b20b3166ff9ea80212f0c230dee41f460de9dd9935495",
+      "qa-report.json": "c01c70bf1d42c08c723c95470c960baa170a46807a33d3d454e017b31538afd2",
+      "run-record.json": "4935c292198b9e12bd690f6362cae92a8e17925e66031f4ca7fa2f7af5be57e2"
+    }
+  }
+}

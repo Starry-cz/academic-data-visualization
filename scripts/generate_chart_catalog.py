@@ -20,9 +20,12 @@ from chart_registry_lib import (
 
 
 STATUS_ZH = {
-    "production_template": "生产模板",
-    "reusable_pattern": "可复用模式",
-    "on_demand": "按需实现",
+    "production_verified": "生产已验证",
+    "demo_runnable": "演示可运行",
+    "legacy_example": "历史示例",
+    "pattern": "可复用模式",
+    "none": "知识登记",
+    "deprecated": "已弃用",
 }
 
 
@@ -43,7 +46,7 @@ def render_category(category: dict, charts: list[dict]) -> str:
         "## 选择总则",
         "",
         "1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。",
-        "2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。",
+        "2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。",
         "3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。",
         "",
         "## 数据契约总览",
@@ -193,7 +196,7 @@ def render_readme_summary(registry: dict, english: bool) -> str:
             ),
             (
                 "Have data and need a figure",
-                f"Reuse one of {values['production_template']} verified asset families when suitable; "
+                f"Reuse one of {values['production_verified']} release-verified templates when suitable; "
                 "otherwise build for the actual data",
                 "Python / R script and editable vector master",
             ),
@@ -239,7 +242,7 @@ def render_readme_summary(registry: dict, english: bool) -> str:
             ),
             (
                 "已有数据，需要尽快成图",
-                f"适合时复用 {values['production_template']} 类已核验生产资产；不匹配时按真实数据实现",
+                f"适合时复用 {values['production_verified']} 个发布级验证模板；不匹配时按真实数据实现",
                 "Python / R 脚本与可编辑矢量主文件",
             ),
             (
@@ -306,10 +309,10 @@ def render_catalog_data(registry: dict) -> str:
     charts = []
     for chart in registry["charts"]:
         preview = None
-        if chart["implementation_status"] == "production_template":
+        if chart["implementation_status"] == "production_verified":
             asset_dir = ROOT / chart["asset_path"]
             manifest = json.loads((asset_dir / "asset.yaml").read_text(encoding="utf-8"))
-            preview = f"{chart['asset_path']}/{manifest['previews'][0]}"
+            preview = f"{chart['asset_path']}/{manifest['outputs']['previews'][0]}"
         charts.append(
             {
                 "id": chart["id"],

@@ -1,0 +1,1 @@
+Grouped Bar Chart. The chart is based on 126 source rows; consult figure-metadata.json for computed values and methods.

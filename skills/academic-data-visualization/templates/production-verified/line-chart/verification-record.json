@@ -1,0 +1,114 @@
+{
+  "verification_version": "2.0.0",
+  "asset_id": "line-chart",
+  "verified_at": "2026-08-01",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0"
+  },
+  "fixture": {
+    "path": "fixture.csv",
+    "sha256": "3e103a4a95680553bb67ef1d2163c11a0bf4ed3d093f6fa593de76a412c4e3dc"
+  },
+  "modes": {
+    "demo": {
+      "runner_version": "2.0.0",
+      "asset_id": "line-chart",
+      "mode": "demo",
+      "profile": "journal_print",
+      "theme": "coastal-sunset",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "line-chart",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "coastal-sunset",
+        "--seed",
+        "20260801",
+        "--demo"
+      ],
+      "duration_seconds": 4.366,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "line-chart",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    },
+    "input": {
+      "runner_version": "2.0.0",
+      "asset_id": "line-chart",
+      "mode": "input",
+      "profile": "journal_print",
+      "theme": "coastal-sunset",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "line-chart",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "coastal-sunset",
+        "--seed",
+        "20260801",
+        "--input",
+        "<INPUT_CSV>"
+      ],
+      "duration_seconds": 4.354,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "line-chart",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "figure.pdf": "6681086c217187860d6d1896e9670587edc4d0cb38e855b7d4fa486272a1bbba",
+    "figure.svg": "afa3601e2cacc75bc054b0a6da96e0a93907c2cccdb6c8a0f9d526b4d034074a",
+    "figure.png": "ae463a27ff8798e8ae9fe0975a5a4d76df7e2d76ae25e267f61c686b695bd0a4",
+    "figure-grayscale.png": "d58c1cc7535b37ee2d6dd9a1499be7fc5608267d7602ca4214dd00e8ca90cec2",
+    "figure-metadata.json": "a25bf675d943c7b7e5c5269af3df65c98743869eb7d6d60b355b6299d34cba4a",
+    "alt-text.txt": "0e4fd7927813e7d78bd101b211ce2c1354228345fec314af475e767cd0001bca",
+    "source-data.csv": "8e36e8e6fbc6095d4b7316c319b0dabcde33624dba86ddad75bb3fb294ae0aa6",
+    "qa-report.json": "c3724098ca774acc7b1388993a7d85ba6c83e72e2f4ed62d72fecf38b759e947",
+    "run-record.json": "47655fd4b56a2f928610db46ea9a48398c3ffc588e5511b3d9111c5191959cdd"
+  },
+  "visual_review": {
+    "status": "passed",
+    "rubric": "references/visual-review-protocol.md",
+    "reviewer": "Codex visual QA 2026-08-01"
+  }
+}

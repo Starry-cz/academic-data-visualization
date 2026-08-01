@@ -1,0 +1,29 @@
+{
+  "name": "academic-data-visualization",
+  "version": "2.0.0",
+  "description": "Research-question-first scientific visualization with verified execution and final-output QA",
+  "author": {
+    "name": "Starry-cz",
+    "url": "https://github.com/Starry-cz"
+  },
+  "homepage": "https://github.com/Starry-cz/academic-data-visualization",
+  "repository": "https://github.com/Starry-cz/academic-data-visualization",
+  "license": "Apache-2.0",
+  "keywords": ["scientific-visualization", "publication-figures", "matplotlib", "nature", "data-visualization"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Academic Data Visualization",
+    "shortDescription": "Evidence-first publication and keynote charts",
+    "longDescription": "Select, render, audit, and export research figures through explicit data contracts, verified templates, and final-size visual QA.",
+    "developerName": "Starry-cz",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/Starry-cz/academic-data-visualization",
+    "defaultPrompt": [
+      "Choose and create a defensible figure from my data.",
+      "Audit this figure for journal submission.",
+      "Adapt this analysis for a keynote screen."
+    ],
+    "brandColor": "#497AB7"
+  }
+}

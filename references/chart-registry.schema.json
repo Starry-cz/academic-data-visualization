@@ -1,31 +1,18 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Starry-cz/academic-data-visualization/chart-registry.schema.json",
-  "title": "Academic data visualization chart registry",
+  "title": "Academic data visualization chart registry v2",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "schema_version",
-    "registry_version",
-    "generated_at",
-    "source_expectation",
-    "categories",
-    "ambiguous_terms",
-    "charts"
-  ],
+  "required": ["schema_version", "registry_version", "generated_at", "source_expectation", "categories", "ambiguous_terms", "charts"],
   "properties": {
-    "schema_version": {"type": "string", "const": "1.0.0"},
+    "schema_version": {"type": "string", "const": "2.0.0"},
     "registry_version": {"type": "string"},
     "generated_at": {"type": ["string", "null"]},
     "source_expectation": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "declared_memberships",
-        "available_source_memberships",
-        "source_complete",
-        "note"
-      ],
+      "required": ["declared_memberships", "available_source_memberships", "source_complete", "note"],
       "properties": {
         "declared_memberships": {"type": "integer", "minimum": 0},
         "available_source_memberships": {"type": "integer", "minimum": 0},
@@ -57,70 +44,26 @@
         "required": ["term", "candidate_ids", "resolution"],
         "properties": {
           "term": {"type": "string", "minLength": 1},
-          "candidate_ids": {
-            "type": "array",
-            "minItems": 2,
-            "items": {"type": "string"}
-          },
+          "candidate_ids": {"type": "array", "minItems": 2, "items": {"type": "string"}},
           "resolution": {"type": "string", "minLength": 1}
         }
       }
     },
-    "charts": {
-      "type": "array",
-      "minItems": 1,
-      "items": {"$ref": "#/$defs/chart"}
-    }
+    "charts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/chart"}}
   },
   "$defs": {
-    "nonEmptyStrings": {
-      "type": "array",
-      "minItems": 1,
-      "items": {"type": "string", "minLength": 1}
-    },
+    "nonEmptyStrings": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
     "chart": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "id",
-        "name_zh",
-        "name_en",
-        "aliases_zh",
-        "aliases_en",
-        "category_ids",
-        "primary_category_id",
-        "information_tasks",
-        "disciplines",
-        "definition",
-        "research_questions",
-        "observation_unit",
-        "required_variables",
-        "optional_variables",
-        "data_types",
-        "minimum_sample",
-        "suitable_when",
-        "avoid_when",
-        "visual_encoding",
-        "statistics",
-        "uncertainty",
-        "allowed_transforms",
-        "forbidden_transforms",
-        "axes_scales",
-        "color_grayscale",
-        "accessibility",
-        "annotations",
-        "publication_risks",
-        "implementation_status",
-        "backends",
-        "dependencies",
-        "asset_path",
-        "reuse_constraints",
-        "alternatives",
-        "complements",
-        "qa_rules",
-        "source_memberships",
-        "components",
-        "registry_origin"
+        "id", "name_zh", "name_en", "aliases_zh", "aliases_en", "category_ids", "primary_category_id",
+        "information_tasks", "disciplines", "definition", "research_questions", "observation_unit",
+        "required_variables", "optional_variables", "data_types", "minimum_sample", "suitable_when", "avoid_when",
+        "visual_encoding", "statistics", "uncertainty", "allowed_transforms", "forbidden_transforms", "axes_scales",
+        "color_grayscale", "accessibility", "annotations", "publication_risks", "knowledge_status",
+        "implementation_status", "verification_status", "backends", "dependencies", "asset_path", "reuse_constraints",
+        "alternatives", "complements", "qa_rules", "source_memberships", "components", "registry_origin"
       ],
       "properties": {
         "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
@@ -151,10 +94,9 @@
         "accessibility": {"$ref": "#/$defs/nonEmptyStrings"},
         "annotations": {"$ref": "#/$defs/nonEmptyStrings"},
         "publication_risks": {"$ref": "#/$defs/nonEmptyStrings"},
-        "implementation_status": {
-          "type": "string",
-          "enum": ["production_template", "reusable_pattern", "on_demand"]
-        },
+        "knowledge_status": {"type": "string", "enum": ["registered", "reviewed", "deprecated"]},
+        "implementation_status": {"type": "string", "enum": ["none", "pattern", "legacy_example", "demo_runnable", "production_verified", "deprecated"]},
+        "verification_status": {"type": "string", "enum": ["untested", "syntax_parsed", "rendered_passed", "release_passed", "failed"]},
         "backends": {"type": "array", "items": {"type": "string"}},
         "dependencies": {"type": "array", "items": {"type": "string"}},
         "asset_path": {"type": ["string", "null"]},
@@ -164,7 +106,6 @@
         "qa_rules": {"$ref": "#/$defs/nonEmptyStrings"},
         "source_memberships": {
           "type": "array",
-          "minItems": 0,
           "items": {
             "type": "object",
             "additionalProperties": false,
@@ -176,10 +117,7 @@
           }
         },
         "components": {"type": "array", "items": {"type": "string"}},
-        "registry_origin": {
-          "type": "string",
-          "enum": ["source_taxonomy", "repository_extension"]
-        }
+        "registry_origin": {"type": "string", "enum": ["source_taxonomy", "repository_extension"]}
       }
     }
   }

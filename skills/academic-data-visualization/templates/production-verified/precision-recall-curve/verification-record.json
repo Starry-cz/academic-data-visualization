@@ -1,0 +1,114 @@
+{
+  "verification_version": "2.0.0",
+  "asset_id": "precision-recall-curve",
+  "verified_at": "2026-08-01",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0"
+  },
+  "fixture": {
+    "path": "fixture.csv",
+    "sha256": "761774e1e904e1a4f14a46991004c15c777da313258b5ba6fa4eb527d65fd1f1"
+  },
+  "modes": {
+    "demo": {
+      "runner_version": "2.0.0",
+      "asset_id": "precision-recall-curve",
+      "mode": "demo",
+      "profile": "journal_print",
+      "theme": "literature-clinical",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "precision-recall-curve",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "literature-clinical",
+        "--seed",
+        "20260801",
+        "--demo"
+      ],
+      "duration_seconds": 4.295,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "precision-recall-curve",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    },
+    "input": {
+      "runner_version": "2.0.0",
+      "asset_id": "precision-recall-curve",
+      "mode": "input",
+      "profile": "journal_print",
+      "theme": "literature-clinical",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "precision-recall-curve",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "literature-clinical",
+        "--seed",
+        "20260801",
+        "--input",
+        "<INPUT_CSV>"
+      ],
+      "duration_seconds": 4.838,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "precision-recall-curve",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "figure.pdf": "9b8c1d616f6ea819432722f3b276edc07157e45d4615053cc63b1ad100533215",
+    "figure.svg": "43ccc1c4c1ee235bd48746828af4145e00ccc43a0cefa035ea14002a943274cf",
+    "figure.png": "347b79a8c98fdf9602bb58988c396a6467ce0cbfb8655659dd337d2f5740fac3",
+    "figure-grayscale.png": "5ef6dcb6ff49fc04c147fad0d2b83c1fa78b0c1cec6b6d15ee98cd034835158d",
+    "figure-metadata.json": "6155ee96252ef3298b7ccd96b1e5de1f2bf57a878f35885f5af341601326c615",
+    "alt-text.txt": "481bfc427daaa6a7857aff1a3abb48b1c327940e4c4234e80ab79ba59c963c60",
+    "source-data.csv": "65e8db238f709aee2dc3ee1b15bd56a7737939a9e56fc7a72563882bf9a2bbe7",
+    "qa-report.json": "bfcb64dde02a33c08d06c8e8390b26942d2074840e2fd3d60c0f7a78fd81b5cf",
+    "run-record.json": "44ce17e7368b7d52e85dbad4a5a1b8386654453754252e7a42815a69448e6dc1"
+  },
+  "visual_review": {
+    "status": "passed",
+    "rubric": "references/visual-review-protocol.md",
+    "reviewer": "Codex visual QA 2026-08-01"
+  }
+}

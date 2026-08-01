@@ -1,0 +1,1 @@
+Roc Curve. The chart is based on 180 source rows; consult figure-metadata.json for computed values and methods.

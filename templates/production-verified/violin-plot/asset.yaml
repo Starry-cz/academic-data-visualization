@@ -1,0 +1,81 @@
+{
+  "manifest_version": "2.0.0",
+  "asset_id": "violin-plot",
+  "chart_ids": [
+    "violin-plot"
+  ],
+  "asset_status": "production_verified",
+  "entrypoint": {
+    "role": "production",
+    "backend": "python",
+    "path": "../../../scripts/verified_template.py",
+    "interface_version": "1.0.0"
+  },
+  "environment": {
+    "python": ">=3.11,<3.14",
+    "r": null,
+    "dependency_group": "verified-core",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [
+      "csv"
+    ],
+    "required_columns": {
+      "group": "categorical",
+      "value": "numeric"
+    },
+    "feature_columns": null,
+    "missing_value_policy": "error",
+    "minimum_rows": 12,
+    "fixtures": {
+      "demo": "generated-deterministically",
+      "validation": "fixture.csv"
+    }
+  },
+  "outputs": {
+    "required": [
+      "figure.pdf",
+      "figure.svg",
+      "figure.png",
+      "figure-grayscale.png",
+      "figure-metadata.json",
+      "alt-text.txt",
+      "source-data.csv",
+      "qa-report.json",
+      "run-record.json"
+    ],
+    "example_directory": "example-output",
+    "previews": [
+      "preview.png"
+    ]
+  },
+  "safety": {
+    "overwrite_default": false,
+    "writes_only_to_output_dir": true
+  },
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "deterministic-synthetic-fixture",
+    "data_license": "CC0-1.0",
+    "redistribution": "allowed"
+  },
+  "verification": {
+    "status": "release_passed",
+    "verified_at": "2026-08-01",
+    "verifier_version": "2.0.0",
+    "evidence": "verification-record.json",
+    "fixture_sha256": "d5ba25fe080abcff57c00f9454b8e43aa678da83ff77f67131cb8a373146e11d",
+    "artifact_sha256": {
+      "figure.pdf": "e14f38555b3e045ed8b8f6d279cc4a18485efa6ab35eb22e2cfffa4cb3729757",
+      "figure.svg": "ae186f5d5d69cd9a2bf8a7f6b16f9ee8908faa98e9c5f58060dfc5f3123f999e",
+      "figure.png": "55b6cdb8e8dfdce91b291f275e3b6fcbcc2e42a7988d7bbfa9364c126912af51",
+      "figure-grayscale.png": "365f92f17bc9814523e0afeef7629665c4cd9c0912685ba2ea4fd6cf310dd0fd",
+      "figure-metadata.json": "127f34afaf728a618634684823f38004205533824065c784d5640375a3cc8c07",
+      "alt-text.txt": "8e6a65191427ff5b182a5cbe659467076d6121f662f0c86083b4506870e08cff",
+      "source-data.csv": "a6819d1a2ca483eb3b7fadd518ccffc556b1a864a0370ff435956428ba13b804",
+      "qa-report.json": "1c63325a2a30287c2e42c8ce0942f9dc3f96a307c2a9d8d9bf4399208ea5c4b1",
+      "run-record.json": "193925dd4d79c48c374d94650a601826bdaca14d690a9e4ec4b342ead292eaf8"
+    }
+  }
+}

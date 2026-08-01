@@ -1,0 +1,103 @@
+{
+  "qa_version": "2.0.0",
+  "asset_id": "grouped-bar-chart",
+  "profile": "journal_print",
+  "findings": [
+    {
+      "check_id": "OUT-0",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "All renderer outputs exist"
+    },
+    {
+      "check_id": "OUT-1",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "PNG dimensions (3242, 2160); expected (3242, 2160)"
+    },
+    {
+      "check_id": "OUT-2",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "PNG contains visible variation"
+    },
+    {
+      "check_id": "OUT-3",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "PNG colour mode is RGBA"
+    },
+    {
+      "check_id": "OUT-4",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Grayscale proof mode=L, size=(3242, 2160)"
+    },
+    {
+      "check_id": "OUT-5",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "SVG contains 13 editable text nodes"
+    },
+    {
+      "check_id": "OUT-6",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "PDF signature and size (42625 bytes)"
+    },
+    {
+      "check_id": "OUT-7",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Embedded TrueType/OpenType font program found"
+    },
+    {
+      "check_id": "DATA-1",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Recorded profile: journal_print"
+    },
+    {
+      "check_id": "DATA-2",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Recorded source rows: 126"
+    },
+    {
+      "check_id": "DATA-3",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Source-data hash matches metadata"
+    },
+    {
+      "check_id": "DATA-4",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Computed metrics are recorded"
+    },
+    {
+      "check_id": "COLOR-1",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Theme 'pastel-harmony' matches references/palette-library.json"
+    },
+    {
+      "check_id": "A11Y-1",
+      "pass_": false,
+      "severity": "WARN",
+      "detail": "Palette colours below 3:1 against white require redundant encoding: [2.0, 1.54, 1.19, 1.2, 1.6, 2.19, 1.05, 1.2, 1.6, 2.19, 2.19, 1.05, 2.0, 2.0]"
+    },
+    {
+      "check_id": "A11Y-2",
+      "pass_": true,
+      "severity": "PASS",
+      "detail": "Alt text length: 119"
+    }
+  ],
+  "summary": {
+    "passed": 14,
+    "failed": 0,
+    "warnings": 1
+  },
+  "passed": true
+}

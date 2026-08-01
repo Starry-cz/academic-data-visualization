@@ -1,0 +1,114 @@
+{
+  "verification_version": "2.0.0",
+  "asset_id": "forest-plot",
+  "verified_at": "2026-08-01",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0"
+  },
+  "fixture": {
+    "path": "fixture.csv",
+    "sha256": "a08b228e2385331317d2bd4c2720708d1b543e5c5fbefae58b38553093ca4ac8"
+  },
+  "modes": {
+    "demo": {
+      "runner_version": "2.0.0",
+      "asset_id": "forest-plot",
+      "mode": "demo",
+      "profile": "journal_print",
+      "theme": "literature-clinical",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "forest-plot",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "literature-clinical",
+        "--seed",
+        "20260801",
+        "--demo"
+      ],
+      "duration_seconds": 4.149,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "forest-plot",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    },
+    "input": {
+      "runner_version": "2.0.0",
+      "asset_id": "forest-plot",
+      "mode": "input",
+      "profile": "journal_print",
+      "theme": "literature-clinical",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "forest-plot",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "literature-clinical",
+        "--seed",
+        "20260801",
+        "--input",
+        "<INPUT_CSV>"
+      ],
+      "duration_seconds": 3.957,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "forest-plot",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "figure.pdf": "0c63dc57c143065a5dadad1c6e4d73bd2ec33f393d5b2542436c39ad7ec0966b",
+    "figure.svg": "67b7ec873f72a7f032d994dcf22ce2c72768196ef593919139058defb083daa0",
+    "figure.png": "2075ede51e82fb32a7636e7305c42090d00d2aab09a7e383a212dd4ea2c4fe3a",
+    "figure-grayscale.png": "338aae5965f73e06ab648fc569a4da31ee71f64b7157b73b87c3159c1f343010",
+    "figure-metadata.json": "5e26e5f71077c287b6b85e602cb8bc99829f1c883ce76b4ae8a90471dcd2e8d7",
+    "alt-text.txt": "f07fa814325c1f80877b85a35814992472b4d82d093ed551789fcdbe8cf637ee",
+    "source-data.csv": "c8488c1a89d03779484caf6305de1f96e5c605913ea1436ebc720000bec0102f",
+    "qa-report.json": "88f6c6c712eb5bef86aaabfb47d6c6a7b26e2efab9ab30c31e4c84ce0560f84d",
+    "run-record.json": "8c9270efe39257d658a8d786cacc86e4757b72e5e32e576f87ded06d0dc05534"
+  },
+  "visual_review": {
+    "status": "passed",
+    "rubric": "references/visual-review-protocol.md",
+    "reviewer": "Codex visual QA 2026-08-01"
+  }
+}

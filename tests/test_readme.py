@@ -75,12 +75,12 @@ class ReadmeTests(unittest.TestCase):
                     missing.append(f"{name}: {target}")
         self.assertEqual(missing, [])
 
-    def test_public_metrics_match_current_baseline(self) -> None:
+    def test_public_copy_uses_user_value_not_internal_audit_counts(self) -> None:
         for name in README_NAMES:
             text = (ROOT / name).read_text(encoding="utf-8")
-            self.assertIn("714 / 714", text)
-            self.assertIn("37 / 37", text)
-            self.assertIn("90 / 90", text)
+            self.assertNotIn("714 / 714", text)
+            self.assertNotIn("37 / 37", text)
+            self.assertNotIn("90 / 90", text)
             self.assertNotIn("Figure_patterns-96", text)
             self.assertNotIn("**40 / 40**", text)
 
@@ -178,6 +178,14 @@ class ReadmeTests(unittest.TestCase):
                 re.findall(r"assets/figure-atlas/readme-cards/([^\"?]+\.png)", text)
             )
             self.assertEqual(gallery_refs, SQUARE_CARDS | WIDE_CARDS)
+
+    def test_featured_gallery_and_palette_library_are_locked(self) -> None:
+        import check_showcase_lock
+
+        expected = __import__("json").loads(
+            (ROOT / "references" / "showcase-lock.json").read_text(encoding="utf-8")
+        )
+        self.assertEqual(check_showcase_lock.snapshot(), expected)
 
 
 if __name__ == "__main__":

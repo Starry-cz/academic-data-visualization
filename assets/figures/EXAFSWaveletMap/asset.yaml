@@ -1,43 +1,57 @@
 {
-  "manifest_version": "1.0.0",
+  "manifest_version": "2.0.0",
+  "asset_id": "exafs-wavelet-transform-map",
   "chart_ids": [
     "exafs-wavelet-transform-map"
   ],
-  "backend": [
-    "python"
-  ],
-  "entrypoints": [
-    "plot_exafs_wavelet_map.py"
-  ],
-  "previews": [
-    "exafs_wavelet_map.png"
-  ],
+  "asset_status": "legacy_example",
+  "entrypoint": {
+    "role": "legacy",
+    "backend": "python",
+    "path": "plot_exafs_wavelet_map.py",
+    "interface_version": "legacy-unversioned"
+  },
+  "environment": {
+    "python": null,
+    "r": null,
+    "dependency_group": "legacy-unlocked",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [],
+    "required_columns": {},
+    "feature_columns": null,
+    "missing_value_policy": "unknown",
+    "minimum_rows": null,
+    "fixtures": {}
+  },
   "outputs": {
-    "vector": [
+    "required": [
       "exafs_wavelet_map.pdf",
+      "exafs_wavelet_map.png",
       "exafs_wavelet_map.svg"
     ],
-    "raster": [
+    "example_directory": ".",
+    "previews": [
       "exafs_wavelet_map.png"
     ]
   },
-  "data": {
-    "mode": "bundled_or_synthetic_demo",
-    "required_columns": []
+  "safety": {
+    "overwrite_default": "unknown",
+    "writes_only_to_output_dir": "unknown"
   },
-  "supported_transforms": [
-    "将幅值按全图最大值归一化并明确说明"
-  ],
-  "unsupported_cases": [
-    "仅以 3D 透视图替代可定量读取的二维投影"
-  ],
-  "aspect_ratio": 0.98,
-  "theme": "nature-default",
-  "qa": {
-    "status": "passed",
-    "commands": [
-      "python scripts/check_references.py",
-      "python scripts/check_chart_registry.py"
-    ]
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "legacy-or-synthetic-example",
+    "redistribution": "review source files before external reuse",
+    "canonical_successor": null
+  },
+  "verification": {
+    "status": "syntax_parsed",
+    "verified_at": null,
+    "verifier_version": "2.0.0",
+    "evidence": null,
+    "fixture_sha256": null,
+    "artifact_sha256": {}
   }
 }

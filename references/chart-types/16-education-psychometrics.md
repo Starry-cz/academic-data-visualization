@@ -9,98 +9,98 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `class-and-school-value-added-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `classroom-interaction-network` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `cognitive-diagnosis-attribute-mastery-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `confirmatory-factor-analysis-path-diagram` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `differential-item-functioning-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `factor-loading-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `growth-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
+| `class-and-school-value-added-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `classroom-interaction-network` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `cognitive-diagnosis-attribute-mastery-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `confirmatory-factor-analysis-path-diagram` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `differential-item-functioning-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `factor-loading-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `growth-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
 | `interaction-plot` | 受试者、实验单元或组别 | condition, outcome | 可复用模式 |
-| `item-characteristic-curve` | 被试、题目或量表 | person_or_item, parameter | 按需实现 |
-| `item-difficulty-distribution-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `item-fit-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `item-information-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `knowledge-mastery-heatmap` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `latent-class-probability-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `latent-growth-curve-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `latent-profile-plot` | 被试、题目或量表 | person_or_item, parameter | 按需实现 |
-| `learner-profile-cluster-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `learning-achievement-distribution-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `learning-behavior-time-series-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `learning-engagement-radar-chart` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `learning-path-sankey-diagram` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `learning-trajectory-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `measurement-invariance-comparison-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `mediation-effect-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `moderated-mediation-model-diagram` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `moderation-effect-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `multilevel-model-caterpillar-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
+| `item-characteristic-curve` | 被试、题目或量表 | person_or_item, parameter | 知识登记 |
+| `item-difficulty-distribution-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `item-fit-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `item-information-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `knowledge-mastery-heatmap` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `latent-class-probability-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `latent-growth-curve-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `latent-profile-plot` | 被试、题目或量表 | person_or_item, parameter | 知识登记 |
+| `learner-profile-cluster-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `learning-achievement-distribution-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `learning-behavior-time-series-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `learning-engagement-radar-chart` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `learning-path-sankey-diagram` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `learning-trajectory-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `measurement-invariance-comparison-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `mediation-effect-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `moderated-mediation-model-diagram` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `moderation-effect-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `multilevel-model-caterpillar-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
 | `parallel-analysis-plot` | 被试、题目或量表 | person_or_item, parameter | 可复用模式 |
-| `pretest-posttest-paired-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `q-matrix-heatmap` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `radar-ability-profile` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `rasch-item-map` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `reliability-coefficient-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `school-effect-forest-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
+| `pretest-posttest-paired-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `q-matrix-heatmap` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `radar-ability-profile` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `rasch-item-map` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `reliability-coefficient-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `school-effect-forest-plot` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
 | `scree-plot` | 被试、题目或量表 | person_or_item, parameter | 可复用模式 |
-| `sem-path-diagram` | 被试、题目或量表 | person_or_item, parameter | 按需实现 |
-| `teacher-student-relationship-network` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `test-feature-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `test-information-curve` | 被试、题目或量表 | person_or_item, parameter | 按需实现 |
-| `wright-map` | 被试、题目或量表 | person_or_item, parameter | 按需实现 |
+| `sem-path-diagram` | 被试、题目或量表 | person_or_item, parameter | 知识登记 |
+| `teacher-student-relationship-network` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `test-feature-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `test-information-curve` | 被试、题目或量表 | person_or_item, parameter | 知识登记 |
+| `wright-map` | 被试、题目或量表 | person_or_item, parameter | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 班级／学校增值图 / Class and School Value-added Plot | `class-and-school-value-added-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 课堂互动网络图 / Classroom Interaction Network | `classroom-interaction-network` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 认知诊断属性掌握图 / Cognitive Diagnosis Attribute Mastery Plot | `cognitive-diagnosis-attribute-mastery-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 验证性因素分析路径图 / Confirmatory Factor Analysis Path Diagram | `confirmatory-factor-analysis-path-diagram` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| DIF项目图 / Differential Item Functioning Plot | `differential-item-functioning-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 因子载荷图 / Factor Loading Plot | `factor-loading-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 成长曲线图 / Growth Curve | `growth-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
+| 班级／学校增值图 / Class and School Value-added Plot | `class-and-school-value-added-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 课堂互动网络图 / Classroom Interaction Network | `classroom-interaction-network` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 认知诊断属性掌握图 / Cognitive Diagnosis Attribute Mastery Plot | `cognitive-diagnosis-attribute-mastery-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 验证性因素分析路径图 / Confirmatory Factor Analysis Path Diagram | `confirmatory-factor-analysis-path-diagram` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| DIF项目图 / Differential Item Functioning Plot | `differential-item-functioning-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 因子载荷图 / Factor Loading Plot | `factor-loading-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 成长曲线图 / Growth Curve | `growth-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
 | 交互作用图 / Interaction Plot | `interaction-plot` | 表达实验设计、前后测、重复测量与组间差异 | 可复用模式 |
-| 题目特征曲线 / Item Characteristic Curve | `item-characteristic-curve` | 测量模型、题目性能与潜变量结构 | 按需实现 |
-| 项目难度分布图 / Item Difficulty Distribution Plot | `item-difficulty-distribution-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 项目拟合图 / Item Fit Plot | `item-fit-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 项目信息曲线 / Item Information Curve | `item-information-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 知识掌握热力图 / Knowledge Mastery Heatmap | `knowledge-mastery-heatmap` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 潜在类别概率图 / Latent Class Probability Plot | `latent-class-probability-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 潜在增长曲线图 / Latent Growth Curve Plot | `latent-growth-curve-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 潜在剖面图 / Latent Profile Plot | `latent-profile-plot` | 测量模型、题目性能与潜变量结构 | 按需实现 |
-| 学习者画像聚类图 / Learner Profile Cluster Plot | `learner-profile-cluster-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 学习成绩分布图 / Learning Achievement Distribution Plot | `learning-achievement-distribution-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 学习行为时间序列图 / Learning Behavior Time-series Plot | `learning-behavior-time-series-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 学习投入雷达图 / Learning Engagement Radar Chart | `learning-engagement-radar-chart` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 学习路径桑基图 / Learning Path Sankey Diagram | `learning-path-sankey-diagram` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 学习轨迹图 / Learning Trajectory Plot | `learning-trajectory-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 测量不变性比较图 / Measurement Invariance Comparison Plot | `measurement-invariance-comparison-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 中介效应图 / Mediation Effect Plot | `mediation-effect-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 有调节的中介模型图 / Moderated Mediation Model Diagram | `moderated-mediation-model-diagram` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 调节效应图 / Moderation Effect Plot | `moderation-effect-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 多层模型毛毛虫图 / Multilevel Model Caterpillar Plot | `multilevel-model-caterpillar-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
+| 题目特征曲线 / Item Characteristic Curve | `item-characteristic-curve` | 测量模型、题目性能与潜变量结构 | 知识登记 |
+| 项目难度分布图 / Item Difficulty Distribution Plot | `item-difficulty-distribution-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 项目拟合图 / Item Fit Plot | `item-fit-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 项目信息曲线 / Item Information Curve | `item-information-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 知识掌握热力图 / Knowledge Mastery Heatmap | `knowledge-mastery-heatmap` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 潜在类别概率图 / Latent Class Probability Plot | `latent-class-probability-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 潜在增长曲线图 / Latent Growth Curve Plot | `latent-growth-curve-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 潜在剖面图 / Latent Profile Plot | `latent-profile-plot` | 测量模型、题目性能与潜变量结构 | 知识登记 |
+| 学习者画像聚类图 / Learner Profile Cluster Plot | `learner-profile-cluster-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 学习成绩分布图 / Learning Achievement Distribution Plot | `learning-achievement-distribution-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 学习行为时间序列图 / Learning Behavior Time-series Plot | `learning-behavior-time-series-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 学习投入雷达图 / Learning Engagement Radar Chart | `learning-engagement-radar-chart` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 学习路径桑基图 / Learning Path Sankey Diagram | `learning-path-sankey-diagram` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 学习轨迹图 / Learning Trajectory Plot | `learning-trajectory-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 测量不变性比较图 / Measurement Invariance Comparison Plot | `measurement-invariance-comparison-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 中介效应图 / Mediation Effect Plot | `mediation-effect-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 有调节的中介模型图 / Moderated Mediation Model Diagram | `moderated-mediation-model-diagram` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 调节效应图 / Moderation Effect Plot | `moderation-effect-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 多层模型毛毛虫图 / Multilevel Model Caterpillar Plot | `multilevel-model-caterpillar-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
 | 平行分析图 / Parallel Analysis Plot | `parallel-analysis-plot` | 测量模型、题目性能与潜变量结构 | 可复用模式 |
-| 前后测配对图 / Pretest–posttest Paired Plot | `pretest-posttest-paired-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| Q矩阵热力图 / Q-matrix Heatmap | `q-matrix-heatmap` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 雷达能力画像图 / Radar Ability Profile | `radar-ability-profile` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| Rasch项目地图 / Rasch Item Map | `rasch-item-map` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 信度系数图 / Reliability Coefficient Plot | `reliability-coefficient-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 学校效应森林图 / School Effect Forest Plot | `school-effect-forest-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
+| 前后测配对图 / Pretest–posttest Paired Plot | `pretest-posttest-paired-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| Q矩阵热力图 / Q-matrix Heatmap | `q-matrix-heatmap` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 雷达能力画像图 / Radar Ability Profile | `radar-ability-profile` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| Rasch项目地图 / Rasch Item Map | `rasch-item-map` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 信度系数图 / Reliability Coefficient Plot | `reliability-coefficient-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 学校效应森林图 / School Effect Forest Plot | `school-effect-forest-plot` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
 | 碎石图 / Scree Plot | `scree-plot` | 测量模型、题目性能与潜变量结构 | 可复用模式 |
-| 结构方程路径图 / SEM Path Diagram | `sem-path-diagram` | 测量模型、题目性能与潜变量结构 | 按需实现 |
-| 教师—学生关系网络图 / Teacher–student Relationship Network | `teacher-student-relationship-network` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 测验特征曲线 / Test Feature Curve | `test-feature-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| 测验信息曲线 / Test Information Curve | `test-information-curve` | 测量模型、题目性能与潜变量结构 | 按需实现 |
-| Wright图 / Wright Map | `wright-map` | 测量模型、题目性能与潜变量结构 | 按需实现 |
+| 结构方程路径图 / SEM Path Diagram | `sem-path-diagram` | 测量模型、题目性能与潜变量结构 | 知识登记 |
+| 教师—学生关系网络图 / Teacher–student Relationship Network | `teacher-student-relationship-network` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 测验特征曲线 / Test Feature Curve | `test-feature-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| 测验信息曲线 / Test Information Curve | `test-information-curve` | 测量模型、题目性能与潜变量结构 | 知识登记 |
+| Wright图 / Wright Map | `wright-map` | 测量模型、题目性能与潜变量结构 | 知识登记 |
 
 ## 图型详细条目
 
@@ -123,7 +123,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -149,7 +149,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -175,7 +175,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -201,7 +201,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -227,7 +227,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -253,7 +253,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -279,7 +279,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -305,7 +305,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -331,7 +331,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；psychometric model output
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -357,7 +357,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -383,7 +383,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -409,7 +409,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -435,7 +435,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -461,7 +461,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -487,7 +487,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -513,7 +513,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；psychometric model output
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -539,7 +539,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -565,7 +565,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -591,7 +591,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -617,7 +617,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -643,7 +643,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -669,7 +669,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -695,7 +695,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -721,7 +721,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -747,7 +747,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -773,7 +773,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -799,7 +799,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -825,7 +825,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -851,7 +851,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -877,7 +877,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -903,7 +903,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -929,7 +929,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -955,7 +955,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -981,7 +981,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1007,7 +1007,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1033,7 +1033,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；psychometric model output
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1059,7 +1059,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1085,7 +1085,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1111,7 +1111,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；psychometric model output
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1137,7 +1137,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；psychometric model output
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸

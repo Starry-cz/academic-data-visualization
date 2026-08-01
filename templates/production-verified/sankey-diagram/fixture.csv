@@ -1,0 +1,7 @@
+source,target,value
+Discovery,Selected,72
+Discovery,Excluded,28
+Validation,Confirmed,51
+Validation,Rejected,21
+Deployment,Adopted,39
+Deployment,Deferred,12

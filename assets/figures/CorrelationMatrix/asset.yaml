@@ -1,47 +1,59 @@
 {
-  "manifest_version": "1.0.0",
+  "manifest_version": "2.0.0",
+  "asset_id": "legacy-correlation-matrix",
   "chart_ids": [
-    "correlation-matrix"
+    "legacy-correlation-matrix"
   ],
-  "backend": [
-    "r"
-  ],
-  "entrypoints": [
-    "plot_CorrelationHeatmap_v1.R",
-    "plot_CorrelationHeatmap_v2.R",
-    "plot_CorrelationHeatmap_v3.R"
-  ],
-  "previews": [
-    "plot_CorrelationHeatmap_v1.png",
-    "plot_CorrelationHeatmap_v2.png",
-    "plot_CorrelationHeatmap_v3.png"
-  ],
+  "asset_status": "legacy_example",
+  "entrypoint": {
+    "role": "legacy",
+    "backend": "r",
+    "path": "plot_CorrelationHeatmap_v1.R",
+    "interface_version": "legacy-unversioned"
+  },
+  "environment": {
+    "python": null,
+    "r": null,
+    "dependency_group": "legacy-unlocked",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [],
+    "required_columns": {},
+    "feature_columns": null,
+    "missing_value_policy": "unknown",
+    "minimum_rows": null,
+    "fixtures": {}
+  },
   "outputs": {
-    "vector": [],
-    "raster": [
+    "required": [
+      "plot_CorrelationHeatmap_v1.png",
+      "plot_CorrelationHeatmap_v2.png",
+      "plot_CorrelationHeatmap_v3.png"
+    ],
+    "example_directory": ".",
+    "previews": [
       "plot_CorrelationHeatmap_v1.png",
       "plot_CorrelationHeatmap_v2.png",
       "plot_CorrelationHeatmap_v3.png"
     ]
   },
-  "data": {
-    "mode": "bundled_or_synthetic_demo",
-    "required_columns": []
+  "safety": {
+    "overwrite_default": "unknown",
+    "writes_only_to_output_dir": "unknown"
   },
-  "supported_transforms": [
-    "预先声明且可追溯的标准化、对数或比例变换"
-  ],
-  "unsupported_cases": [
-    "缺少图型必需变量",
-    "仅因外形相似而替代领域专用图"
-  ],
-  "aspect_ratio": 1.1159,
-  "theme": "nature-default",
-  "qa": {
-    "status": "passed",
-    "commands": [
-      "python scripts/check_references.py",
-      "python scripts/check_chart_registry.py"
-    ]
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "legacy-or-synthetic-example",
+    "redistribution": "review source files before external reuse",
+    "canonical_successor": "correlation-matrix"
+  },
+  "verification": {
+    "status": "syntax_parsed",
+    "verified_at": null,
+    "verifier_version": "2.0.0",
+    "evidence": null,
+    "fixture_sha256": null,
+    "artifact_sha256": {}
   }
 }

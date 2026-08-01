@@ -9,7 +9,7 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
@@ -17,74 +17,74 @@
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
 | `alluvial-diagram` | 流、节点或步骤 | source, target, value | 可复用模式 |
-| `causal-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `chord-diagram` | 节点或边 | source, target, weight | 生产模板 |
+| `causal-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `chord-diagram` | 节点或边 | source, target, weight | 历史示例 |
 | `circular-packing` | 流、节点或步骤 | source, target, value | 可复用模式 |
-| `complex-process-mining` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
+| `complex-process-mining` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
 | `conversion-funnel-chart` | 流、节点或步骤 | source, target, value | 可复用模式 |
-| `data-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `energy-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `event-sequence-plot` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
+| `data-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `energy-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `event-sequence-plot` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
 | `hierarchy-tree` | 流、节点或步骤 | source, target, value | 可复用模式 |
-| `hyperbolic-tree` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `learning-path-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `markov-transition-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `material-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `origin-destination-flow` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `parallel-sets` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `patient-path-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `prisma-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
-| `process-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
-| `process-map` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `sankey-diagram` | 流、节点或步骤 | source, target, value | 生产模板 |
-| `state-transition-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `state-transition-matrix-heatmap` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
+| `hyperbolic-tree` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `learning-path-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `markov-transition-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `material-flow-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `origin-destination-flow` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `parallel-sets` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `patient-path-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `prisma-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
+| `process-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
+| `process-map` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `sankey-diagram` | 流、节点或步骤 | source, target, value | 生产已验证 |
+| `state-transition-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `state-transition-matrix-heatmap` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
 | `sunburst-chart` | 流、节点或步骤 | source, target, value | 可复用模式 |
-| `swimlane-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
+| `swimlane-diagram` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
 | `timeline` | 时间点或重复观测对象 | time, value | 可复用模式 |
-| `transition-flow-plot` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `transition-probability-plot` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
+| `transition-flow-plot` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `transition-probability-plot` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
 | `treemap` | 总体或分组 | category, component, value | 可复用模式 |
-| `user-journey-flow` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `value-stream-map` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
+| `user-journey-flow` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `value-stream-map` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
 | 冲积图 / Alluvial Diagram | `alluvial-diagram` | 阶段流向、流程与层级组成 | 可复用模式 |
-| 因果流程图 / Causal Flow Diagram | `causal-flow-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 生产模板 |
+| 因果流程图 / Causal Flow Diagram | `causal-flow-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 历史示例 |
 | 圆形打包图 / Circle Packing | `circular-packing` | 阶段流向、流程与层级组成 | 可复用模式 |
-| 复杂流程挖掘图 / Complex Process-mining Plot | `complex-process-mining` | 多证据整合、三维或高级结构 | 按需实现 |
-| CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
+| 复杂流程挖掘图 / Complex Process-mining Plot | `complex-process-mining` | 多证据整合、三维或高级结构 | 知识登记 |
+| CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
 | 转化漏斗图 / Conversion Funnel Chart | `conversion-funnel-chart` | 阶段流向、流程与层级组成 | 可复用模式 |
-| 数据流图 / Data Flow Diagram | `data-flow-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 能量流图 / Energy Flow Diagram | `energy-flow-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 事件序列图 / Event Sequence Plot | `event-sequence-plot` | 展示流程、状态迁移、路径和流量 | 按需实现 |
+| 数据流图 / Data Flow Diagram | `data-flow-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 能量流图 / Energy Flow Diagram | `energy-flow-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 事件序列图 / Event Sequence Plot | `event-sequence-plot` | 展示流程、状态迁移、路径和流量 | 知识登记 |
 | 层级树 / Hierarchy Tree | `hierarchy-tree` | 阶段流向、流程与层级组成 | 可复用模式 |
-| 双曲树 / Hyperbolic Tree | `hyperbolic-tree` | 多证据整合、三维或高级结构 | 按需实现 |
-| 学习路径图 / Learning Path Diagram | `learning-path-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 马尔可夫转移图 / Markov Transition Diagram | `markov-transition-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 物质流图 / Material Flow Diagram | `material-flow-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| OD流向图 / Origin–Destination Flow | `origin-destination-flow` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 平行集合图 / Parallel Sets | `parallel-sets` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 患者路径图 / Patient Path Diagram | `patient-path-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| PRISMA流程图 / PRISMA Flow Diagram | `prisma-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
-| 流程图 / Process Flow Diagram | `process-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
-| 过程图 / Process Map | `process-map` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 桑基图 / Sankey Diagram | `sankey-diagram` | 阶段流向、流程与层级组成 | 生产模板 |
-| 状态转移图 / State Transition Diagram | `state-transition-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 状态迁移矩阵热力图 / State Transition Matrix Heatmap | `state-transition-matrix-heatmap` | 展示流程、状态迁移、路径和流量 | 按需实现 |
+| 双曲树 / Hyperbolic Tree | `hyperbolic-tree` | 多证据整合、三维或高级结构 | 知识登记 |
+| 学习路径图 / Learning Path Diagram | `learning-path-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 马尔可夫转移图 / Markov Transition Diagram | `markov-transition-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 物质流图 / Material Flow Diagram | `material-flow-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| OD流向图 / Origin–Destination Flow | `origin-destination-flow` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 平行集合图 / Parallel Sets | `parallel-sets` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 患者路径图 / Patient Path Diagram | `patient-path-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| PRISMA流程图 / PRISMA Flow Diagram | `prisma-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
+| 流程图 / Process Flow Diagram | `process-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
+| 过程图 / Process Map | `process-map` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 桑基图 / Sankey Diagram | `sankey-diagram` | 阶段流向、流程与层级组成 | 生产已验证 |
+| 状态转移图 / State Transition Diagram | `state-transition-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 状态迁移矩阵热力图 / State Transition Matrix Heatmap | `state-transition-matrix-heatmap` | 展示流程、状态迁移、路径和流量 | 知识登记 |
 | 旭日图 / Sunburst Chart | `sunburst-chart` | 阶段流向、流程与层级组成 | 可复用模式 |
-| 泳道图 / Swimlane Diagram | `swimlane-diagram` | 展示流程、状态迁移、路径和流量 | 按需实现 |
+| 泳道图 / Swimlane Diagram | `swimlane-diagram` | 展示流程、状态迁移、路径和流量 | 知识登记 |
 | 时间线 / Timeline | `timeline` | 随有序时间或剂量的变化 | 可复用模式 |
-| 迁移流向图 / Transition Flow Plot | `transition-flow-plot` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 转移概率图 / Transition Probability Plot | `transition-probability-plot` | 展示流程、状态迁移、路径和流量 | 按需实现 |
+| 迁移流向图 / Transition Flow Plot | `transition-flow-plot` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 转移概率图 / Transition Probability Plot | `transition-probability-plot` | 展示流程、状态迁移、路径和流量 | 知识登记 |
 | 矩形式树图 / Treemap | `treemap` | 整体组成、比例与结构 | 可复用模式 |
-| 用户路径图 / User Journey Flow | `user-journey-flow` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| 价值流图 / Value Stream Map | `value-stream-map` | 展示流程、状态迁移、路径和流量 | 按需实现 |
+| 用户路径图 / User Journey Flow | `user-journey-flow` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| 价值流图 / Value Stream Map | `value-stream-map` | 展示流程、状态迁移、路径和流量 | 知识登记 |
 
 ## 图型详细条目
 
@@ -107,7 +107,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -133,7 +133,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -159,7 +159,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/ChordDiagram`
 - **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -185,7 +185,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -211,7 +211,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -237,7 +237,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -263,7 +263,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -289,7 +289,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -315,7 +315,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -341,7 +341,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -367,7 +367,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -393,7 +393,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -419,7 +419,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -445,7 +445,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -471,7 +471,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -497,7 +497,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -523,7 +523,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -549,7 +549,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -575,7 +575,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -601,7 +601,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -627,7 +627,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -653,9 +653,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/SankeyDiagram`
-- **后端与依赖**：python
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/sankey-diagram`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：alluvial-diagram；conversion-funnel-chart；hierarchy-tree
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -679,7 +679,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -705,7 +705,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -731,7 +731,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -757,7 +757,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -783,7 +783,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -809,7 +809,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -835,7 +835,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -861,7 +861,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -887,7 +887,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -913,7 +913,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

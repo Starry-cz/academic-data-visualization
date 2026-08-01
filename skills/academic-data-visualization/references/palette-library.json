@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "default_theme": "nature-default",
+  "themes": [
+    {
+      "id": "nature-default",
+      "name": "Nature 默认",
+      "source": "既有色盲安全主配色",
+      "categorical": ["#0072B2", "#009E73", "#E69F00", "#CC79A7", "#D55E00", "#56B4E9", "#999999"],
+      "sequential": ["#F7FBFF", "#C6DBEF", "#6BAED6", "#2171B5", "#084594"],
+      "diverging": ["#2166AC", "#F7F7F7", "#B2182B"],
+      "accent": "#D55E00"
+    },
+    {
+      "id": "vivid-signal",
+      "name": "高辨识信号",
+      "source": "用户上传图 1",
+      "categorical": ["#E31A1C", "#FC8D3C", "#377EB8", "#984EA3", "#4DAF4A", "#FDBF6F", "#BDBDBD", "#4D4D4D"],
+      "sequential": ["#FFF5F0", "#FDBF6F", "#FC8D3C", "#E31A1C"],
+      "diverging": ["#377EB8", "#FFFFFF", "#E31A1C"],
+      "accent": "#E31A1C"
+    },
+    {
+      "id": "bright-bio",
+      "name": "明亮生物",
+      "source": "用户上传图 2",
+      "categorical": ["#F7A63A", "#557CFF", "#80C662", "#866AD2", "#56BFB0", "#9E9E9E", "#535353", "#E36889"],
+      "sequential": ["#FFF8E8", "#F7A63A", "#E36889"],
+      "diverging": ["#557CFF", "#FFFFFF", "#E36889"],
+      "accent": "#E36889"
+    },
+    {
+      "id": "teal-genome",
+      "name": "青绿组学",
+      "source": "用户上传图 3",
+      "categorical": ["#0F9EA8", "#008B82", "#45728F", "#8CD1B2", "#8B84A3", "#3D3539"],
+      "sequential": ["#F0FBF9", "#8CD1B2", "#0F9EA8", "#008B82"],
+      "diverging": ["#45728F", "#FFFFFF", "#0F9EA8"],
+      "accent": "#008B82"
+    },
+    {
+      "id": "muted-microbe",
+      "name": "柔和微生物",
+      "source": "用户上传图 4",
+      "categorical": ["#BA4460", "#FFAFAC", "#DBAC72", "#87AD7C", "#65AA93", "#626890"],
+      "sequential": ["#FFF7F5", "#FFAFAC", "#DBAC72", "#BA4460"],
+      "diverging": ["#626890", "#FFFFFF", "#BA4460"],
+      "accent": "#BA4460"
+    },
+    {
+      "id": "immuno-signal",
+      "name": "免疫信号",
+      "source": "用户上传图 5",
+      "categorical": ["#A9C4E2", "#B9D6ED", "#AEDFE4", "#F04A4D", "#5896D0", "#68C9D4"],
+      "sequential": ["#F5FAFE", "#B9D6ED", "#A9C4E2", "#5896D0"],
+      "diverging": ["#5896D0", "#FFFFFF", "#F04A4D"],
+      "accent": "#F04A4D"
+    },
+    {
+      "id": "pastel-catalysis",
+      "name": "粉彩催化",
+      "source": "用户上传图 6",
+      "categorical": ["#7AD4FE", "#FDCBA7", "#B3DDD4", "#C9D2F9", "#DDEAF6", "#E0EDD8", "#FEF1C8"],
+      "sequential": ["#F6FCFE", "#DDEAF6", "#7AD4FE", "#509CBA"],
+      "diverging": ["#509CBA", "#FFFFFF", "#FDCBA7"],
+      "accent": "#FDCBA7"
+    },
+    {
+      "id": "electrochemistry",
+      "name": "电化学柔彩",
+      "source": "用户上传图 7",
+      "categorical": ["#E26E67", "#509CBA", "#91BFDB", "#F1B9B6", "#A4D86A", "#F8D1B5", "#4BC783"],
+      "sequential": ["#F7FCFB", "#91BFDB", "#509CBA", "#4BC783"],
+      "diverging": ["#509CBA", "#FFFFFF", "#E26E67"],
+      "accent": "#E26E67"
+    },
+    {
+      "id": "soft-cost",
+      "name": "柔和成本",
+      "source": "用户上传图 8",
+      "categorical": ["#6DA4B0", "#ABCBD4", "#E1B3AD", "#D78F81", "#D7CDE1", "#BED191", "#E6E9C4"],
+      "sequential": ["#F7FBFC", "#ABCBD4", "#6DA4B0"],
+      "diverging": ["#6DA4B0", "#FFFFFF", "#D78F81"],
+      "accent": "#D78F81"
+    },
+    {
+      "id": "soft-academic",
+      "name": "柔和学术",
+      "source": "用户上传图 9",
+      "categorical": ["#FCE8E6", "#FFC6BC", "#F8B9B8", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#668FCA", "#C9CEFE", "#66A8CD", "#006BAD"],
+      "sequential": ["#F7FBFF", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#006BAD"],
+      "diverging": ["#5FA3CB", "#FFFFFF", "#FFC6BC"],
+      "accent": "#006BAD"
+    },
+    {
+      "id": "pastel-omics",
+      "name": "柔彩组学",
+      "source": "用户上传图 10",
+      "categorical": ["#F9ADE5", "#EFEAB7", "#BBD6F5", "#AAD1CC", "#C0A3ED", "#F6B593", "#81CAEA", "#84C492", "#816EA7", "#EFC372", "#3DBFCC", "#72B1AC"],
+      "sequential": ["#F7FBFB", "#D5ECE7", "#AAD1CC", "#72B1AC", "#3DBFCC"],
+      "diverging": ["#816EA7", "#FFFFFF", "#F6B593"],
+      "accent": "#3DBFCC"
+    },
+    {
+      "id": "warm-cool-kinetics",
+      "name": "暖冷动力学",
+      "source": "用户上传图 11",
+      "categorical": ["#D7312D", "#F2724D", "#FEE395", "#FEF9B7", "#ACD2E5", "#6090C1", "#AB2428", "#FB8275", "#F79015", "#DAA81C", "#115FA4", "#82C9FF"],
+      "sequential": ["#FEF9B7", "#FEE395", "#F2724D", "#D7312D", "#AB2428"],
+      "diverging": ["#115FA4", "#FEF9B7", "#D7312D"],
+      "accent": "#D7312D"
+    },
+    {
+      "id": "aquifer-recovery",
+      "name": "含水层复苏",
+      "source": "用户上传图 12",
+      "categorical": ["#F599A1", "#9FD7E9", "#95AEDA", "#FCD590", "#A577AD", "#73C79E", "#5299CC"],
+      "sequential": ["#F6FCFC", "#9FD7E9", "#73C79E", "#5299CC"],
+      "diverging": ["#5299CC", "#FFFFFF", "#F599A1"],
+      "accent": "#73C79E"
+    },
+    {
+      "id": "neuro-navy",
+      "name": "神经深蓝",
+      "source": "用户上传图 13",
+      "categorical": ["#D9E6EB", "#9FC3D5", "#8F96BD", "#2A347A", "#D6D69B"],
+      "sequential": ["#F7FAFB", "#D9E6EB", "#9FC3D5", "#2A347A"],
+      "diverging": ["#2A347A", "#FFFFFF", "#D6D69B"],
+      "accent": "#2A347A"
+    },
+    {
+      "id": "cryo-electrolyte",
+      "name": "低温电解质",
+      "source": "用户上传图 14",
+      "categorical": ["#ECE3EF", "#CFBBD9", "#D9EBF2", "#A2D1E6", "#F9CFB1", "#ACC3E5", "#355AA4", "#7A939F", "#D4E7F2"],
+      "sequential": ["#F8FAFC", "#D9EBF2", "#A2D1E6", "#355AA4"],
+      "diverging": ["#355AA4", "#FFFFFF", "#F9CFB1"],
+      "accent": "#355AA4"
+    },
+    {
+      "id": "literature-clinical",
+      "name": "临床文献",
+      "source": "基于文献图的白底、柔和蓝绿与珊瑚强调角色重新组合",
+      "categorical": ["#477E95", "#72AE9E", "#D87B67", "#D4B261", "#9C86B3", "#7A8791"],
+      "sequential": ["#F7FAF9", "#CDE5DF", "#8ABFB4", "#3D7A76"],
+      "diverging": ["#3D7890", "#FFFDF9", "#C86A59"],
+      "accent": "#D87B67"
+    },
+    {
+      "id": "sage-methods",
+      "name": "鼠尾草方法",
+      "source": "基于方法图的青绿、砂岩与淡紫角色重新组合",
+      "categorical": ["#3B7480", "#8CB58B", "#DCA16C", "#C7859D", "#8295C0", "#8B9590"],
+      "sequential": ["#F8FBF8", "#D7E7D8", "#93BD99", "#4E8A70"],
+      "diverging": ["#3B7480", "#FFFEFA", "#C06D7C"],
+      "accent": "#C7859D"
+    },
+    {
+      "id": "quiet-atlas",
+      "name": "静谧图谱",
+      "source": "基于信息图的雾蓝、浅绿、暖沙与低饱和紫色角色重新组合",
+      "categorical": ["#4F738C", "#90B9C8", "#D4A48B", "#9B88B2", "#7EAF9A", "#C7AA59"],
+      "sequential": ["#F8FAFB", "#D5E7EA", "#9CC6CC", "#4E8590"],
+      "diverging": ["#4F738C", "#FFFDF8", "#CB846D"],
+      "accent": "#D4A48B"
+    },
+    {
+      "id": "method-blueprint",
+      "name": "方法蓝图",
+      "source": "受 figures4papers 的关键蓝、改善绿、对照暖色与中性灰语义组织方式启发",
+      "categorical": ["#0F4D92", "#3775BA", "#8BCF8B", "#B64342", "#42949E", "#767676"],
+      "sequential": ["#F7FBFF", "#CFE0F4", "#7FA8D6", "#0F4D92"],
+      "diverging": ["#0F4D92", "#FFFFFF", "#B64342"],
+      "accent": "#B64342"
+    },
+    {
+      "id": "ablation-contrast",
+      "name": "消融对照",
+      "source": "基于基准比较图的蓝色主证据、绿色正向变体、暖色对照与灰色上下文重新组合",
+      "categorical": ["#1F5D99", "#72A96B", "#E3B07C", "#B94A48", "#6B7280", "#8F79B5"],
+      "sequential": ["#F7FAFC", "#D5E2EC", "#8DB3C9", "#1F5D99"],
+      "diverging": ["#1F5D99", "#FFFEFA", "#B94A48"],
+      "accent": "#B94A48"
+    },
+    {
+      "id": "pastel-harmony",
+      "name": "柔彩协调",
+      "source": "用户提供的科研配色参考图：珊瑚、杏橙、奶油黄、淡绿与雾蓝",
+      "categorical": ["#EEA599", "#FAC795", "#FFE9BE", "#E3EDE0", "#ABD3E1", "#92B4C8"],
+      "sequential": ["#F8FAF7", "#E3EDE0", "#ABD3E1", "#92B4C8"],
+      "diverging": ["#92B4C8", "#F8FAF7", "#EEA599"],
+      "accent": "#EEA599"
+    },
+    {
+      "id": "blue-red-signal",
+      "name": "蓝红信号",
+      "source": "用户提供的科研配色参考图：靛蓝、阶梯蓝、橙红与深红",
+      "categorical": ["#565AA7", "#6B92C3", "#6EA9CF", "#F3683C", "#DA4139", "#A90B2F"],
+      "sequential": ["#F7FAFC", "#6EA9CF", "#6B92C3", "#565AA7"],
+      "diverging": ["#565AA7", "#F7F7F7", "#A90B2F"],
+      "accent": "#A90B2F"
+    },
+    {
+      "id": "coastal-sunset",
+      "name": "海岸日落",
+      "source": "用户提供的科研配色参考图：深蓝、浅蓝、淡绿、柔黄、橙与珊瑚红",
+      "categorical": ["#497AB7", "#7EB6D5", "#BDE2ED", "#F0F0D9", "#FEEAA1", "#FCB567", "#F27144"],
+      "sequential": ["#FFFAF0", "#FEEAA1", "#FCB567", "#F27144"],
+      "diverging": ["#497AB7", "#F0F0D9", "#F27144"],
+      "accent": "#F27144"
+    }
+  ]
+}

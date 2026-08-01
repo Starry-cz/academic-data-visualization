@@ -9,88 +9,88 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `case-comparison-matrix` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `causal-relationship-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `citation-relationship-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `co-word-matrix-heatmap` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `coding-co-occurrence-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `coding-frequency-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `concept-map` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `discourse-structure-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `document-term-matrix-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `evidence-chain-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `framework-matrix` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `grounded-theory-category-relationship-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `keyword-burst-plot` | 文献、作者或关键词 | document_or_term, relation | 按需实现 |
-| `keyword-co-occurrence-network` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `logic-model-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `mind-map` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `narrative-timeline` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `qualitative-coding-tree` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `semantic-difference-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `semantic-network` | 节点与边 | source, target | 按需实现 |
-| `sentiment-polarity-distribution-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `sentiment-radar-chart` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `sentiment-trend-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `text-clustering-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `text-flow` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `text-similarity-heatmap` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `theme-bubble-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `theme-evolution-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `theme-matrix` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `theme-model-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `theme-river` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `theme-sankey-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `topic-transition-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `word-cloud` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `word-frequency-bar-chart` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
+| `case-comparison-matrix` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `causal-relationship-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `citation-relationship-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `co-word-matrix-heatmap` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `coding-co-occurrence-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `coding-frequency-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `concept-map` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `discourse-structure-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `document-term-matrix-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `evidence-chain-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `framework-matrix` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `grounded-theory-category-relationship-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `keyword-burst-plot` | 文献、作者或关键词 | document_or_term, relation | 知识登记 |
+| `keyword-co-occurrence-network` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `logic-model-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `mind-map` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `narrative-timeline` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `qualitative-coding-tree` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `semantic-difference-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `semantic-network` | 节点与边 | source, target | 知识登记 |
+| `sentiment-polarity-distribution-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `sentiment-radar-chart` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `sentiment-trend-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `text-clustering-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `text-flow` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `text-similarity-heatmap` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `theme-bubble-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `theme-evolution-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `theme-matrix` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `theme-model-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `theme-river` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `theme-sankey-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `topic-transition-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `word-cloud` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `word-frequency-bar-chart` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 案例比较矩阵 / Case Comparison Matrix | `case-comparison-matrix` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 因果关系图 / Causal Relationship Plot | `causal-relationship-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 引文关系图 / Citation Relationship Plot | `citation-relationship-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 共词矩阵热力图 / Co-word Matrix Heatmap | `co-word-matrix-heatmap` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 编码共现图 / Coding Co-occurrence Plot | `coding-co-occurrence-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 编码频次图 / Coding Frequency Plot | `coding-frequency-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 概念地图 / Concept Map | `concept-map` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 话语结构图 / Discourse Structure Diagram | `discourse-structure-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 文档—术语矩阵图 / Document–term Matrix Plot | `document-term-matrix-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 证据链图 / Evidence Chain Diagram | `evidence-chain-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 框架矩阵 / Framework Matrix | `framework-matrix` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 扎根理论范畴关系图 / Grounded Theory Category Relationship Diagram | `grounded-theory-category-relationship-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 关键词突现图 / Keyword Burst Plot | `keyword-burst-plot` | 知识关联、主题演化与科学结构 | 按需实现 |
-| 关键词共现网络图 / Keyword Co-occurrence Network | `keyword-co-occurrence-network` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 逻辑模型图 / Logic Model Plot | `logic-model-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 思维导图 / Mind Map | `mind-map` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 叙事时间轴 / Narrative Timeline | `narrative-timeline` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 质性编码树 / Qualitative Coding Tree | `qualitative-coding-tree` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 语义差异图 / Semantic Difference Plot | `semantic-difference-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 语义网络图 / Semantic Network | `semantic-network` | 展示实体之间的连接、权重、社群与网络结构 | 按需实现 |
-| 情感极性分布图 / Sentiment Polarity Distribution Plot | `sentiment-polarity-distribution-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 情感雷达图 / Sentiment Radar Chart | `sentiment-radar-chart` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 情感趋势图 / Sentiment Trend Plot | `sentiment-trend-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 文本聚类图 / Text Clustering Plot | `text-clustering-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 文本流图 / Text Flow | `text-flow` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 文本相似度热力图 / Text Similarity Heatmap | `text-similarity-heatmap` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 主题气泡图 / Theme Bubble Plot | `theme-bubble-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 主题演化图 / Theme Evolution Plot | `theme-evolution-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 主题矩阵 / Theme Matrix | `theme-matrix` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 主题模型图 / Theme Model Plot | `theme-model-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 主题河流图 / Theme River | `theme-river` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 主题桑基图 / Theme Sankey Diagram | `theme-sankey-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 话题迁移图 / Topic Transition Plot | `topic-transition-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 词云 / Word Cloud | `word-cloud` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 词频条形图 / Word-frequency Bar Chart | `word-frequency-bar-chart` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
+| 案例比较矩阵 / Case Comparison Matrix | `case-comparison-matrix` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 因果关系图 / Causal Relationship Plot | `causal-relationship-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 引文关系图 / Citation Relationship Plot | `citation-relationship-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 共词矩阵热力图 / Co-word Matrix Heatmap | `co-word-matrix-heatmap` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 编码共现图 / Coding Co-occurrence Plot | `coding-co-occurrence-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 编码频次图 / Coding Frequency Plot | `coding-frequency-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 概念地图 / Concept Map | `concept-map` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 话语结构图 / Discourse Structure Diagram | `discourse-structure-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 文档—术语矩阵图 / Document–term Matrix Plot | `document-term-matrix-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 证据链图 / Evidence Chain Diagram | `evidence-chain-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 框架矩阵 / Framework Matrix | `framework-matrix` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 扎根理论范畴关系图 / Grounded Theory Category Relationship Diagram | `grounded-theory-category-relationship-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 关键词突现图 / Keyword Burst Plot | `keyword-burst-plot` | 知识关联、主题演化与科学结构 | 知识登记 |
+| 关键词共现网络图 / Keyword Co-occurrence Network | `keyword-co-occurrence-network` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 逻辑模型图 / Logic Model Plot | `logic-model-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 思维导图 / Mind Map | `mind-map` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 叙事时间轴 / Narrative Timeline | `narrative-timeline` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 质性编码树 / Qualitative Coding Tree | `qualitative-coding-tree` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 语义差异图 / Semantic Difference Plot | `semantic-difference-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 语义网络图 / Semantic Network | `semantic-network` | 展示实体之间的连接、权重、社群与网络结构 | 知识登记 |
+| 情感极性分布图 / Sentiment Polarity Distribution Plot | `sentiment-polarity-distribution-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 情感雷达图 / Sentiment Radar Chart | `sentiment-radar-chart` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 情感趋势图 / Sentiment Trend Plot | `sentiment-trend-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 文本聚类图 / Text Clustering Plot | `text-clustering-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 文本流图 / Text Flow | `text-flow` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 文本相似度热力图 / Text Similarity Heatmap | `text-similarity-heatmap` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 主题气泡图 / Theme Bubble Plot | `theme-bubble-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 主题演化图 / Theme Evolution Plot | `theme-evolution-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 主题矩阵 / Theme Matrix | `theme-matrix` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 主题模型图 / Theme Model Plot | `theme-model-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 主题河流图 / Theme River | `theme-river` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 主题桑基图 / Theme Sankey Diagram | `theme-sankey-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 话题迁移图 / Topic Transition Plot | `topic-transition-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 词云 / Word Cloud | `word-cloud` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 词频条形图 / Word-frequency Bar Chart | `word-frequency-bar-chart` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
 
 ## 图型详细条目
 
@@ -113,7 +113,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -139,7 +139,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -165,7 +165,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -191,7 +191,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -217,7 +217,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -243,7 +243,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -269,7 +269,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -295,7 +295,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -321,7 +321,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -347,7 +347,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -373,7 +373,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -399,7 +399,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -425,7 +425,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；bibliographic network data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -451,7 +451,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -477,7 +477,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -503,7 +503,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -529,7 +529,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -555,7 +555,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -581,7 +581,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -607,7 +607,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -633,7 +633,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -659,7 +659,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -685,7 +685,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -711,7 +711,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -737,7 +737,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -763,7 +763,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -789,7 +789,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -815,7 +815,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -841,7 +841,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -867,7 +867,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -893,7 +893,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -919,7 +919,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -945,7 +945,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -971,7 +971,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -997,7 +997,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

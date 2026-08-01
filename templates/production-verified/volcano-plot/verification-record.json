@@ -1,0 +1,114 @@
+{
+  "verification_version": "2.0.0",
+  "asset_id": "volcano-plot",
+  "verified_at": "2026-08-01",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0"
+  },
+  "fixture": {
+    "path": "fixture.csv",
+    "sha256": "36bcda297548f20aa86ee82faa393adebe4e1b09242bdef21badc6fb3c0dba73"
+  },
+  "modes": {
+    "demo": {
+      "runner_version": "2.0.0",
+      "asset_id": "volcano-plot",
+      "mode": "demo",
+      "profile": "journal_print",
+      "theme": "blue-red-signal",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "volcano-plot",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "blue-red-signal",
+        "--seed",
+        "20260801",
+        "--demo"
+      ],
+      "duration_seconds": 4.361,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "volcano-plot",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    },
+    "input": {
+      "runner_version": "2.0.0",
+      "asset_id": "volcano-plot",
+      "mode": "input",
+      "profile": "journal_print",
+      "theme": "blue-red-signal",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "volcano-plot",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "blue-red-signal",
+        "--seed",
+        "20260801",
+        "--input",
+        "<INPUT_CSV>"
+      ],
+      "duration_seconds": 5.171,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "volcano-plot",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "figure.pdf": "14eabae1afc0d41d10b1609ba0c9731873ffdf10f1cb44b039c6d3d203f76cd3",
+    "figure.svg": "ce50fd455b39fafd97713300f2548a6cedd376a3abf6323cb8e9e4c4499db952",
+    "figure.png": "db67671a86f1f272bd35c889298e8b76a7fc62bed4c197b583d55e177f31e42f",
+    "figure-grayscale.png": "b727be5a414fb2b0a9d7299f0e66a4257469c3772589177e938f07a6f125aef0",
+    "figure-metadata.json": "1a10165b0aac3e0ae057e37f43ae8de06f5303f3ebbe49268751e6d4cc669e14",
+    "alt-text.txt": "b076d0179e9cbed058d5df4ae1e9ceb6d3545fc9146a4234b1b1288891f1c2be",
+    "source-data.csv": "4f7d0dc0b1aa9b3bede5a62afc1d0e1bd3d3ea755a241f04d8f95706f792d984",
+    "qa-report.json": "06b1e48caa9e0d5bf9986a2432097d5183b7b1b85e3a84a1938596ca9ebadbd9",
+    "run-record.json": "f740e453a548b2635964ff6c70e972b650ee75046378455cfaaacb35d18875a4"
+  },
+  "visual_review": {
+    "status": "passed",
+    "rubric": "references/visual-review-protocol.md",
+    "reviewer": "Codex visual QA 2026-08-01"
+  }
+}

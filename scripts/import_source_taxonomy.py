@@ -1054,6 +1054,7 @@ def merge_existing_charts(charts: list[dict[str, Any]]) -> list[dict[str, Any]]:
 def build_new_chart(chart_id: str, name_zh: str, name_en: str, category_id: str) -> dict[str, Any]:
     profile = CATEGORY_PROFILES[category_id]
     specialized = category_id in {"09", "10", "11", "12", "13", "14", "15", "16", "17", "19", "20", "21", "22", "23", "24"}
+    profile_status = {"reusable_pattern": "pattern", "on_demand": "none"}[profile["status"]]
     return {
         "id": chart_id,
         "name_zh": name_zh,
@@ -1086,7 +1087,9 @@ def build_new_chart(chart_id: str, name_zh: str, name_en: str, category_id: str)
             "数据契约、统计方法或样本量披露不足",
             "使用装饰性编码、误导尺度或把描述性结构写成因果结论",
         ],
-        "implementation_status": "on_demand" if specialized else profile["status"],
+        "knowledge_status": "registered",
+        "implementation_status": "none" if specialized else profile_status,
+        "verification_status": "untested",
         "backends": [],
         "dependencies": [],
         "asset_path": None,
@@ -1225,7 +1228,8 @@ def import_taxonomy(source_path: Path, base_revision: str | None = None) -> dict
         chart["aliases_zh"] = sorted(set(chart["aliases_zh"]), key=normalize_alias)
         chart["aliases_en"] = sorted(set(chart["aliases_en"]), key=normalize_alias)
 
-    registry["registry_version"] = "2.1.0"
+    registry["schema_version"] = "2.0.0"
+    registry["registry_version"] = "3.0.0"
     registry["generated_at"] = None
     registry["source_expectation"] = {
         "declared_memberships": 714,

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "kaplan-meier-curve",
+  "profile": "journal_print",
+  "theme": "literature-clinical",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 140,
+  "source_sha256": "973a3033f83d64dc85071b29f09ee74dbc209a2ae5c2130d10609e68db5bb5db",
+  "palette": {
+    "categorical": [
+      "#477E95",
+      "#72AE9E",
+      "#D87B67",
+      "#D4B261",
+      "#9C86B3",
+      "#7A8791"
+    ],
+    "sequential": [
+      "#F7FAF9",
+      "#CDE5DF",
+      "#8ABFB4",
+      "#3D7A76"
+    ],
+    "diverging": [
+      "#3D7890",
+      "#FFFDF9",
+      "#C86A59"
+    ],
+    "accent": "#D87B67"
+  },
+  "metrics": {
+    "groups": {
+      "Control": {
+        "n": 70,
+        "events": 51
+      },
+      "Treatment": {
+        "n": 70,
+        "events": 36
+      }
+    }
+  },
+  "alt_text": "Kaplan Meier Curve. The chart is based on 140 source rows; consult figure-metadata.json for computed values and methods."
+}

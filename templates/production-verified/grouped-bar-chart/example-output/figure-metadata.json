@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "grouped-bar-chart",
+  "profile": "journal_print",
+  "theme": "pastel-harmony",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 126,
+  "source_sha256": "aa957909da6893ff4b603dd1ab833df59f2665f18bbee028c1a098743d0e2077",
+  "palette": {
+    "categorical": [
+      "#EEA599",
+      "#FAC795",
+      "#FFE9BE",
+      "#E3EDE0",
+      "#ABD3E1",
+      "#92B4C8"
+    ],
+    "sequential": [
+      "#F8FAF7",
+      "#E3EDE0",
+      "#ABD3E1",
+      "#92B4C8"
+    ],
+    "diverging": [
+      "#92B4C8",
+      "#F8FAF7",
+      "#EEA599"
+    ],
+    "accent": "#EEA599"
+  },
+  "metrics": {
+    "means": {
+      "Cohort 1|Control": {
+        "mean": 1.3002098423774637,
+        "ci95": 0.16028254158317823,
+        "n": 14
+      },
+      "Cohort 2|Control": {
+        "mean": 2.12924446429317,
+        "ci95": 0.13278846749151416,
+        "n": 14
+      },
+      "Cohort 3|Control": {
+        "mean": 2.781872589774628,
+        "ci95": 0.1414151639005928,
+        "n": 14
+      },
+      "Cohort 1|Treatment A": {
+        "mean": 1.9680050145829449,
+        "ci95": 0.1543047573495667,
+        "n": 14
+      },
+      "Cohort 2|Treatment A": {
+        "mean": 2.76003942208024,
+        "ci95": 0.14495065430097065,
+        "n": 14
+      },
+      "Cohort 3|Treatment A": {
+        "mean": 3.4622523700516905,
+        "ci95": 0.1331988977620168,
+        "n": 14
+      },
+      "Cohort 1|Treatment B": {
+        "mean": 2.552809247565512,
+        "ci95": 0.17799419904218033,
+        "n": 14
+      },
+      "Cohort 2|Treatment B": {
+        "mean": 3.3085909766243162,
+        "ci95": 0.12165583398169041,
+        "n": 14
+      },
+      "Cohort 3|Treatment B": {
+        "mean": 3.983619208107818,
+        "ci95": 0.11577547513283579,
+        "n": 14
+      }
+    }
+  },
+  "alt_text": "Grouped Bar Chart. The chart is based on 126 source rows; consult figure-metadata.json for computed values and methods."
+}

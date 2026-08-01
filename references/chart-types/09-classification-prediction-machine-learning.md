@@ -9,99 +9,99 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `ablation-bar-chart` | 类别或对象 | category, value | 生产模板 |
-| `accumulated-local-effects-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `calibration-curve` | 样本或模型折 | truth, prediction | 可复用模式 |
+| `ablation-bar-chart` | 类别或对象 | category, value | 历史示例 |
+| `accumulated-local-effects-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `calibration-curve` | 样本或模型折 | truth, prediction | 生产已验证 |
 | `clustered-heatmap` | 矩阵单元 | row, column, value | 可复用模式 |
-| `confusion-matrix` | 样本或模型折 | truth, prediction | 生产模板 |
-| `cumulative-gains-chart` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `decision-curve` | 样本或模型折 | truth, prediction | 按需实现 |
-| `decision-tree-diagram` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
+| `confusion-matrix` | 样本或模型折 | truth, prediction | 历史示例 |
+| `cumulative-gains-chart` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `decision-curve` | 样本或模型折 | truth, prediction | 知识登记 |
+| `decision-tree-diagram` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
 | `dendrogram` | 节点或边 | source, target, weight | 可复用模式 |
-| `dimensionality-reduction-scatter-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `elbow-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `error-analysis-matrix` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
+| `dimensionality-reduction-scatter-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `elbow-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `error-analysis-matrix` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
 | `feature-importance-plot` | 特征或样本 | feature, importance | 可复用模式 |
-| `feature-interaction-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `force-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `ice-plot` | 特征或样本 | feature, importance | 按需实现 |
-| `kolmogorov-smirnov-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
+| `feature-interaction-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `force-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `ice-plot` | 特征或样本 | feature, importance | 知识登记 |
+| `kolmogorov-smirnov-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
 | `learning-curve` | 样本或模型折 | truth, prediction | 可复用模式 |
-| `lift-chart` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `lime-explanation-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `model-fairness-comparison-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `model-residual-distribution-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `multiclass-precision-recall-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `multiclass-roc-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `partial-dependence-plot` | 特征或样本 | feature, importance | 按需实现 |
-| `pca-loading-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `pca-score-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
+| `lift-chart` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `lime-explanation-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `model-fairness-comparison-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `model-residual-distribution-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `multiclass-precision-recall-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `multiclass-roc-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `partial-dependence-plot` | 特征或样本 | feature, importance | 知识登记 |
+| `pca-loading-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `pca-score-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
 | `permutation-importance-plot` | 特征或样本 | feature, importance | 可复用模式 |
-| `precision-recall-curve` | 样本或模型折 | truth, prediction | 可复用模式 |
-| `random-forest-tree-structure-diagram` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `roc-confidence-interval-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `roc-curve` | 样本或模型折 | truth, prediction | 生产模板 |
-| `rule-extraction-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `shap-beeswarm` | 特征或样本 | feature, importance | 按需实现 |
-| `shap-dependence-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `shap-summary-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `shap-waterfall-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `silhouette-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `tsne-plot` | 样本 | numeric_features | 按需实现 |
-| `umap-plot` | 样本 | numeric_features | 按需实现 |
+| `precision-recall-curve` | 样本或模型折 | truth, prediction | 生产已验证 |
+| `random-forest-tree-structure-diagram` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `roc-confidence-interval-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `roc-curve` | 样本或模型折 | truth, prediction | 生产已验证 |
+| `rule-extraction-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `shap-beeswarm` | 特征或样本 | feature, importance | 知识登记 |
+| `shap-dependence-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `shap-summary-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `shap-waterfall-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `silhouette-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `tsne-plot` | 样本 | numeric_features | 知识登记 |
+| `umap-plot` | 样本 | numeric_features | 知识登记 |
 | `validation-curve` | 样本、模型、参数或阈值 | model_output, diagnostic_measure | 可复用模式 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 消融柱状图 / Ablation Bar Chart | `ablation-bar-chart` | 比较、排序或变化幅度 | 生产模板 |
-| ALE图 / Accumulated Local Effects Plot | `accumulated-local-effects-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 校准曲线 / Calibration Curve | `calibration-curve` | 预测区分度、校准或误差结构 | 可复用模式 |
+| 消融柱状图 / Ablation Bar Chart | `ablation-bar-chart` | 比较、排序或变化幅度 | 历史示例 |
+| ALE图 / Accumulated Local Effects Plot | `accumulated-local-effects-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 校准曲线 / Calibration Curve | `calibration-curve` | 预测区分度、校准或误差结构 | 生产已验证 |
 | 聚类热图 / Clustered Heatmap | `clustered-heatmap` | 矩阵模式、簇与注释 | 可复用模式 |
-| 混淆矩阵 / Confusion Matrix | `confusion-matrix` | 预测区分度、校准或误差结构 | 生产模板 |
-| 累积增益图 / Cumulative Gains Chart | `cumulative-gains-chart` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 决策曲线 / Decision Curve | `decision-curve` | 预测区分度、校准或误差结构 | 按需实现 |
-| 决策树图 / Decision Tree Diagram | `decision-tree-diagram` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
+| 混淆矩阵 / Confusion Matrix | `confusion-matrix` | 预测区分度、校准或误差结构 | 历史示例 |
+| 累积增益图 / Cumulative Gains Chart | `cumulative-gains-chart` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 决策曲线 / Decision Curve | `decision-curve` | 预测区分度、校准或误差结构 | 知识登记 |
+| 决策树图 / Decision Tree Diagram | `decision-tree-diagram` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
 | 树状图 / Dendrogram | `dendrogram` | 实体连接、权重与社区结构 | 可复用模式 |
-| 降维散点图 / Dimensionality Reduction Scatter Plot | `dimensionality-reduction-scatter-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 肘部法图 / Elbow Plot | `elbow-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 误差分析矩阵 / Error Analysis Matrix | `error-analysis-matrix` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
+| 降维散点图 / Dimensionality Reduction Scatter Plot | `dimensionality-reduction-scatter-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 肘部法图 / Elbow Plot | `elbow-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 误差分析矩阵 / Error Analysis Matrix | `error-analysis-matrix` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
 | 特征重要性图 / Feature Importance Plot | `feature-importance-plot` | 模型贡献、响应与解释稳定性 | 可复用模式 |
-| 特征交互图 / Feature Interaction Plot | `feature-interaction-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| SHAP力图 / Force Plot | `force-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 个体条件期望图 / Individual Conditional Expectation Plot | `ice-plot` | 模型贡献、响应与解释稳定性 | 按需实现 |
-| KS图 / Kolmogorov–Smirnov Plot | `kolmogorov-smirnov-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
+| 特征交互图 / Feature Interaction Plot | `feature-interaction-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| SHAP力图 / Force Plot | `force-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 个体条件期望图 / Individual Conditional Expectation Plot | `ice-plot` | 模型贡献、响应与解释稳定性 | 知识登记 |
+| KS图 / Kolmogorov–Smirnov Plot | `kolmogorov-smirnov-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
 | 学习曲线 / Learning Curve | `learning-curve` | 预测区分度、校准或误差结构 | 可复用模式 |
-| 提升图 / Lift Chart | `lift-chart` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| LIME解释图 / LIME Explanation Plot | `lime-explanation-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 模型公平性比较图 / Model Fairness Comparison Plot | `model-fairness-comparison-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 模型残差分布图 / Model Residual Distribution Plot | `model-residual-distribution-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 多分类PR图 / Multiclass Precision–Recall Plot | `multiclass-precision-recall-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 多分类ROC图 / Multiclass ROC Plot | `multiclass-roc-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 部分依赖图 / Partial Dependence Plot | `partial-dependence-plot` | 模型贡献、响应与解释稳定性 | 按需实现 |
-| PCA载荷图 / PCA Loading Plot | `pca-loading-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| PCA得分图 / PCA Score Plot | `pca-score-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
+| 提升图 / Lift Chart | `lift-chart` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| LIME解释图 / LIME Explanation Plot | `lime-explanation-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 模型公平性比较图 / Model Fairness Comparison Plot | `model-fairness-comparison-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 模型残差分布图 / Model Residual Distribution Plot | `model-residual-distribution-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 多分类PR图 / Multiclass Precision–Recall Plot | `multiclass-precision-recall-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 多分类ROC图 / Multiclass ROC Plot | `multiclass-roc-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 部分依赖图 / Partial Dependence Plot | `partial-dependence-plot` | 模型贡献、响应与解释稳定性 | 知识登记 |
+| PCA载荷图 / PCA Loading Plot | `pca-loading-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| PCA得分图 / PCA Score Plot | `pca-score-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
 | 置换重要性图 / Permutation Importance Plot | `permutation-importance-plot` | 模型贡献、响应与解释稳定性 | 可复用模式 |
-| 精确率-召回率曲线 / Precision–Recall Curve | `precision-recall-curve` | 预测区分度、校准或误差结构 | 可复用模式 |
-| 随机森林树结构图 / Random Forest Tree Structure Diagram | `random-forest-tree-structure-diagram` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| ROC置信区间图 / ROC Confidence Interval Plot | `roc-confidence-interval-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| ROC曲线 / ROC Curve | `roc-curve` | 预测区分度、校准或误差结构 | 生产模板 |
-| 规则提取图 / Rule Extraction Plot | `rule-extraction-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| SHAP蜂群图 / SHAP Beeswarm | `shap-beeswarm` | 模型贡献、响应与解释稳定性 | 按需实现 |
-| SHAP依赖图 / SHAP Dependence Plot | `shap-dependence-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| SHAP摘要图 / SHAP Summary Plot | `shap-summary-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| SHAP瀑布图 / SHAP Waterfall Plot | `shap-waterfall-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| 聚类轮廓图 / Silhouette Plot | `silhouette-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| t-SNE图 / t-SNE Plot | `tsne-plot` | 多变量结构、相关与低维表示 | 按需实现 |
-| UMAP图 / UMAP Plot | `umap-plot` | 多变量结构、相关与低维表示 | 按需实现 |
+| 精确率-召回率曲线 / Precision–Recall Curve | `precision-recall-curve` | 预测区分度、校准或误差结构 | 生产已验证 |
+| 随机森林树结构图 / Random Forest Tree Structure Diagram | `random-forest-tree-structure-diagram` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| ROC置信区间图 / ROC Confidence Interval Plot | `roc-confidence-interval-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| ROC曲线 / ROC Curve | `roc-curve` | 预测区分度、校准或误差结构 | 生产已验证 |
+| 规则提取图 / Rule Extraction Plot | `rule-extraction-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| SHAP蜂群图 / SHAP Beeswarm | `shap-beeswarm` | 模型贡献、响应与解释稳定性 | 知识登记 |
+| SHAP依赖图 / SHAP Dependence Plot | `shap-dependence-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| SHAP摘要图 / SHAP Summary Plot | `shap-summary-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| SHAP瀑布图 / SHAP Waterfall Plot | `shap-waterfall-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| 聚类轮廓图 / Silhouette Plot | `silhouette-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| t-SNE图 / t-SNE Plot | `tsne-plot` | 多变量结构、相关与低维表示 | 知识登记 |
+| UMAP图 / UMAP Plot | `umap-plot` | 多变量结构、相关与低维表示 | 知识登记 |
 | 验证曲线 / Validation Curve | `validation-curve` | 诊断回归与统计模型的拟合、残差、影响点和假设 | 可复用模式 |
 
 ## 图型详细条目
@@ -125,7 +125,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/BarAblation`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -151,7 +151,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -177,9 +177,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/calibration-curve`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：roc-curve；precision-recall-curve；confusion-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -203,7 +203,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -229,7 +229,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/ConfusionMatrix`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -255,7 +255,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -281,7 +281,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -307,7 +307,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -333,7 +333,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -359,7 +359,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -385,7 +385,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -411,7 +411,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -437,7 +437,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -463,7 +463,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -489,7 +489,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -515,7 +515,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -541,7 +541,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -567,7 +567,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -593,7 +593,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -619,7 +619,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -645,7 +645,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -671,7 +671,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -697,7 +697,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -723,7 +723,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -749,7 +749,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -775,7 +775,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -801,7 +801,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -827,7 +827,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -853,9 +853,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/precision-recall-curve`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：roc-curve；calibration-curve；confusion-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -879,7 +879,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -905,7 +905,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -931,9 +931,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/AUROC`
-- **后端与依赖**：python
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/roc-curve`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：precision-recall-curve；calibration-curve；confusion-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -957,7 +957,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -983,7 +983,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1009,7 +1009,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1035,7 +1035,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1061,7 +1061,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1087,7 +1087,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1113,7 +1113,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1139,7 +1139,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1165,7 +1165,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

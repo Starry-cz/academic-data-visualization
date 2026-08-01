@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "violin-plot",
+  "profile": "journal_print",
+  "theme": "pastel-harmony",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 140,
+  "source_sha256": "a6819d1a2ca483eb3b7fadd518ccffc556b1a864a0370ff435956428ba13b804",
+  "palette": {
+    "categorical": [
+      "#EEA599",
+      "#FAC795",
+      "#FFE9BE",
+      "#E3EDE0",
+      "#ABD3E1",
+      "#92B4C8"
+    ],
+    "sequential": [
+      "#F8FAF7",
+      "#E3EDE0",
+      "#ABD3E1",
+      "#92B4C8"
+    ],
+    "diverging": [
+      "#92B4C8",
+      "#F8FAF7",
+      "#EEA599"
+    ],
+    "accent": "#EEA599"
+  },
+  "metrics": {
+    "groups": {
+      "Control": {
+        "n": 35,
+        "median": -0.1370430840214021
+      },
+      "Dose 1": {
+        "n": 35,
+        "median": 0.7203642700089667
+      },
+      "Dose 2": {
+        "n": 35,
+        "median": 1.3308797315104288
+      },
+      "Dose 3": {
+        "n": 35,
+        "median": 0.9137860966383292
+      }
+    }
+  },
+  "alt_text": "Violin Plot. The chart is based on 140 source rows; consult figure-metadata.json for computed values and methods."
+}

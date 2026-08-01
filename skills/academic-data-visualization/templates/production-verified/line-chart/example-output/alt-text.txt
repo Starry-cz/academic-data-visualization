@@ -1,0 +1,1 @@
+Line Chart. The chart is based on 288 source rows; consult figure-metadata.json for computed values and methods.

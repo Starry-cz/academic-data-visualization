@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#how-it-works"><img src="https://img.shields.io/badge/Backends-Python_%7C_R-6B92C3?style=flat-square" alt="Native Python and R backends"></a>
   <a href="references/export-specs.md"><img src="https://img.shields.io/badge/Output-SVG_%7C_PDF_%7C_TIFF-73C79E?style=flat-square" alt="Vector and high-resolution delivery"></a>
-  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-37_verified-F2A65A?style=flat-square" alt="37 verified production assets"></a>
+  <a href="references/directory-map.md"><img src="https://img.shields.io/badge/Production-12_release--verified-F2A65A?style=flat-square" alt="12 release-verified production templates"></a>
   <a href="#quality-evidence"><img src="https://img.shields.io/badge/QA-4_passes-95AEDA?style=flat-square" alt="Four-pass QA"></a>
   <a href="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml"><img src="https://github.com/Starry-cz/academic-data-visualization/actions/workflows/quality.yml/badge.svg" alt="Automated quality checks"></a>
 </p>
@@ -22,13 +22,13 @@
 <p align="center">
   <a href="#start-here">Start here</a> ·
   <a href="#30-second-start">30-second start</a> ·
-  <a href="#selected-figures">23 figures</a> ·
+  <a href="#selected-figures">24 figures</a> ·
   <a href="#how-it-works">Workflow</a> ·
   <a href="#what-it-helps-you-do">Capabilities</a> ·
   <a href="#quality-evidence">Quality</a>
 </p>
 
-> **Not a template gallery.** The Skill evaluates the research question, data structure, and submission constraints before selecting a defensible chart. Only assets with real scripts, previews, and manifests are marked as production templates.
+> **A visual advisor with executable evidence.** The Skill evaluates the research question, data structure, and delivery constraints before selecting a defensible chart. A script or preview alone is not a production claim: release templates must pass real execution, output QA, and final-size visual review.
 
 ## Start here
 
@@ -37,7 +37,7 @@ You do not need to read the README from top to bottom. Enter at the path that ma
 <table width="100%" align="center">
   <tr><th width="30%">What do you need?</th><th width="35%">Start here</th><th width="35%">Go deeper</th></tr>
   <tr><td width="30%">Install the Skill and make a first figure</td><td width="35%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><a href="#30-second-start">30-second start</a></td><td width="35%"><a href="#how-it-works">Four-stage workflow</a></td></tr>
-  <tr><td width="30%">Inspect real outputs and visual styles</td><td width="35%"><a href="#selected-figures">23 selected figures</a></td><td width="35%"><a href="assets/figures/">Production assets</a> · <a href="#colour-system">Colour system</a></td></tr>
+  <tr><td width="30%">Inspect real outputs and visual styles</td><td width="35%"><a href="#selected-figures">24 selected figures</a></td><td width="35%"><a href="references/directory-map.md">Asset status directory</a> · <a href="#colour-system">Colour system</a></td></tr>
   <tr><td width="30%">Find a chart, alias, or implementation state</td><td width="35%"><a href="references/figure-type-catalog.md">Chart catalogue</a> · <a href="references/chart-alias-index.md">Alias index</a></td><td width="35%"><a href="references/chart-registry.yaml">Canonical registry</a></td></tr>
   <tr><td width="30%">Define the claim, layout, and deliverables</td><td width="35%"><a href="references/figure-contract.md">Figure contract</a> · <a href="references/figure-design-brief.md">Design brief</a></td><td width="35%"><a href="references/multipanel-layout.md">Multipanel layout</a> · <a href="references/visual-style.md">Visual style</a></td></tr>
   <tr><td width="30%">Match a journal, talk, or launch context</td><td width="35%"><a href="references/delivery-profiles.md">Delivery profiles</a> · <a href="references/journal-specs.md">Journal specs</a></td><td width="35%"><a href="references/export-specs.md">Export specs</a></td></tr>
@@ -50,12 +50,12 @@ You do not need to read the README from top to bottom. Enter at the path that ma
 
 ```powershell
 # Windows PowerShell · Codex
-git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.codex\skills\academic-data-visualization"
+git clone https://github.com/Starry-cz/academic-data-visualization.git "$env:USERPROFILE\.agents\skills\academic-data-visualization"
 ```
 
 ```bash
 # macOS / Linux · Codex
-git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.codex/skills/academic-data-visualization
+git clone https://github.com/Starry-cz/academic-data-visualization.git ~/.agents/skills/academic-data-visualization
 ```
 
 **2. Describe the research question, data, and deliverables.**
@@ -80,7 +80,7 @@ a grayscale proof, and a QA report.
   <tr>
     <td width="25%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Decide what readers must compare, relate, or judge before choosing a chart</td>
     <td width="25%">Every chart route states whether it is ready to reuse, adapted from a pattern, or built for the real data</td>
-    <td width="25%">37 asset families include scripts, previews, and manifests</td>
+    <td width="25%">12 templates pass demo and real-input execution, output QA, evidence hashing, and visual review</td>
     <td width="25%">Review anti-patterns, code and export, scientific logic, and the final rendering</td>
   </tr>
 </table>
@@ -105,7 +105,7 @@ The Skill turns a research question, data structure, and delivery constraints in
 <table width="100%" align="center">
   <tr><th width="28%">Your situation</th><th width="44%">What the Skill does</th><th width="28%">What you receive</th></tr>
   <tr><td width="28%"><strong>Unsure which chart to use</strong></td><td width="44%"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt="">Compare defensible candidates from the research question and real data structure</td><td width="28%">Chart rationale and risk notes</td></tr>
-  <tr><td width="28%"><strong>Have data and need a figure</strong></td><td width="44%">Reuse one of 37 verified asset families when suitable; otherwise build for the actual data</td><td width="28%">Python / R script and editable vector master</td></tr>
+  <tr><td width="28%"><strong>Have data and need a figure</strong></td><td width="44%">Reuse one of 12 release-verified templates when suitable; otherwise build for the actual data</td><td width="28%">Python / R script and editable vector master</td></tr>
   <tr><td width="28%"><strong>Need a coherent multipanel figure</strong></td><td width="44%">Unify physical size, typography, colour, legends, and panel hierarchy</td><td width="28%">Journal-sized main or supplementary figure</td></tr>
   <tr><td width="28%"><strong>Preparing a submission</strong></td><td width="44%">Run anti-pattern, code/export, scientific-logic, and final-render checks</td><td width="28%">RGB and grayscale proofs plus a QA report</td></tr>
   <tr><td width="28%"><strong>Need a keynote or product-launch chart</strong></td><td width="44%">Derive a 16:9 distant-reading view from the same analysis while preserving baselines, uncertainty, and source</td><td width="28%">SVG/PDF, 1080p/4K proofs, and alt text</td></tr>
@@ -117,7 +117,7 @@ Coverage spans 24 research-task families, including comparison, trend, distribut
 
 ## Selected figures
 
-The landing page shows 24 verified examples across distinct chart families. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [production asset directory](assets/figures/) and [chart catalogue](references/figure-type-catalog.md) for complete implementation states.
+The landing page preserves 24 maintainer-selected visual examples across distinct chart families. Gallery inclusion is not a production-status claim. Every thumbnail uses a fixed canvas so paired cells remain aligned; click an image for the original figure. Use the [asset status directory](references/directory-map.md) and [chart catalogue](references/figure-type-catalog.md) for implementation state and verification evidence.
 
 ### Relationships, ordination, diagnostics, high-dimensional, and network structure · 3 × 4
 
@@ -202,7 +202,7 @@ See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.js
 
 ## More installation options
 
-The complete repository matters: `references/`, `scripts/`, and `assets/` jointly provide routing, constraints, production assets, and QA. Do not copy a single file.
+The complete repository matters: `references/`, `scripts/`, `templates/`, and `assets/` jointly provide routing, verified execution, retained examples, and QA. Do not copy a single file.
 
 <details>
 <summary><strong>Claude Code</strong></summary>
@@ -230,18 +230,18 @@ Use [`install/copilot/copilot-instructions.md`](install/copilot/copilot-instruct
 Update an existing installation with:
 
 ```bash
-git -C ~/.codex/skills/academic-data-visualization pull
+git -C ~/.agents/skills/academic-data-visualization pull
 ```
 
 ## Quality evidence
 
-Current repository baseline:
+What the repository verifies before calling an asset production-ready:
 
-- **714 / 714** source memberships are reproducibly mapped;
-- **37 / 37** production asset families contain real scripts, PNGs, and manifests;
-- **90 / 90** trigger-boundary cases classify correctly;
-- **28 / 28** QA fixtures hit their expected results across **15 / 15** programmatic checks;
-- CI audits the registry schema, 24 generated category documents, alias conflicts, asset mapping, and README summaries.
+- the same entrypoint executes with both deterministic demo data and a checked CSV fixture;
+- rendering is isolated, network-free, and writes only to the chosen output directory;
+- the bundle contains editable SVG/PDF, an exact-profile RGB proof, a grayscale proof, source data, metrics, alt text, and a machine-readable QA report;
+- artifact hashes and environment versions are preserved, then the final-size colour and grayscale proofs receive a separate visual review;
+- CI repeats the executable lane on Windows and Linux, parses retained R sources, audits routing and manifests, and protects the approved README gallery and palette library from drift.
 
 ```bash
 python scripts/check_skill_metadata.py
@@ -249,10 +249,14 @@ python scripts/check_references.py
 python scripts/check_chart_registry.py
 python scripts/build_chart_registry.py --check
 python scripts/generate_chart_catalog.py --check
+python scripts/generate_directory_map.py --check
+python scripts/check_showcase_lock.py
+python scripts/build_skill_package.py --check
 python -m unittest discover -s tests -v
 python scripts/trigger_benchmark.py
 python scripts/qa_coverage.py
-python -m compileall -q scripts assets/figures tests
+python scripts/verify_production_assets.py
+python -m compileall -q scripts assets/figures templates tests
 ```
 
 A result is marked `READY` only after all four passes in [`checklist.md`](references/checklist.md): anti-patterns, code and export, scientific logic, and final rendering.
@@ -268,7 +272,10 @@ academic-data-visualization/
 ├── references/              # Registry, 24-category catalogue, journals, colour, export, and QA
 ├── scripts/                 # Generation, validation, composition, colour, and grayscale tools
 ├── tests/                   # Taxonomy, routing, and generated-output regression tests
-├── assets/                  # Production scripts, manifests, atlas, and palette previews
+├── templates/               # Release-verified fixtures, outputs, manifests, and evidence
+├── assets/                  # Retained examples, selected gallery, and palette previews
+├── .codex-plugin/           # Codex plugin manifest
+├── skills/                  # Generated lightweight Skill package referenced by the plugin
 └── install/                 # Codex / Claude Code / Cursor / Copilot adapters
 ```
 
@@ -276,6 +283,6 @@ academic-data-visualization/
 
 ## Contributing and licence
 
-Register the canonical record, aliases, categories, and real implementation state before adding a chart, then run the catalogue generator. A chart may be marked `production_template` only when its real script, PNG, and `asset.yaml` are committed together. Never fabricate previews or asset paths for unimplemented charts. See [`AGENTS.md`](AGENTS.md) for the complete rules.
+Register the canonical record, aliases, categories, and real implementation state before adding a chart, then run the catalogue generator. A chart may be marked `production_verified` only after its Manifest v2, unified input interface, dual-path executions, output bundle, hashes, programmatic QA, and visual review evidence are committed together. Never fabricate previews, evidence, or asset paths. See [`AGENTS.md`](AGENTS.md) for the complete rules.
 
 Licensed under [Apache-2.0](LICENSE).

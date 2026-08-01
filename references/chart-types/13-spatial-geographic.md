@@ -9,98 +9,98 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `accessibility-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `bivariate-choropleth-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `cartogram` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `choropleth-map` | 空间单元或位置 | longitude, latitude, value | 按需实现 |
-| `contour-map` | 空间单元或位置 | longitude, latitude, value | 按需实现 |
-| `dem` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `dot-density-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `flow-map` | 空间单元或位置 | longitude, latitude, value | 按需实现 |
-| `geographic-network` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `geographic-scatter-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `geographically-weighted-regression-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `grid-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `hexbin-map` | 空间单元或位置 | longitude, latitude, value | 按需实现 |
-| `hillshade` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `isochrone-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `isopleth-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `kernel-density-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `land-use-classification-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `local-indicators-of-spatial-association-cluster-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `moran-scatter-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `od-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
+| `accessibility-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `bivariate-choropleth-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `cartogram` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `choropleth-map` | 空间单元或位置 | longitude, latitude, value | 知识登记 |
+| `contour-map` | 空间单元或位置 | longitude, latitude, value | 知识登记 |
+| `dem` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `dot-density-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `flow-map` | 空间单元或位置 | longitude, latitude, value | 知识登记 |
+| `geographic-network` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `geographic-scatter-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `geographically-weighted-regression-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `grid-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `hexbin-map` | 空间单元或位置 | longitude, latitude, value | 知识登记 |
+| `hillshade` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `isochrone-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `isopleth-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `kernel-density-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `land-use-classification-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `local-indicators-of-spatial-association-cluster-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `moran-scatter-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `od-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
 | `population-pyramid` | 总体或分组 | category, component, value | 可复用模式 |
-| `proportional-symbol-map` | 空间单元或位置 | longitude, latitude, value | 生产模板 |
-| `raster-map` | 空间单元或位置 | longitude, latitude, value | 按需实现 |
-| `remote-sensing-false-color-image` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `satellite-image-overlay` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `small-multiple-maps` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `spatial-autocorrelation-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `spatial-clustering-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `spatial-heatmap` | 空间单元或位置 | longitude, latitude, value | 按需实现 |
-| `spatial-regression-coefficient-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `spatial-residual-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `spatiotemporal-trajectory-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `terrain-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `thiessen-polygon-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `three-dimensional-terrain-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `time-slider-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `trajectory-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `trivariate-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
-| `voronoi-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 按需实现 |
+| `proportional-symbol-map` | 空间单元或位置 | longitude, latitude, value | 历史示例 |
+| `raster-map` | 空间单元或位置 | longitude, latitude, value | 知识登记 |
+| `remote-sensing-false-color-image` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `satellite-image-overlay` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `small-multiple-maps` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `spatial-autocorrelation-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `spatial-clustering-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `spatial-heatmap` | 空间单元或位置 | longitude, latitude, value | 知识登记 |
+| `spatial-regression-coefficient-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `spatial-residual-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `spatiotemporal-trajectory-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `terrain-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `thiessen-polygon-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `three-dimensional-terrain-plot` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `time-slider-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `trajectory-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `trivariate-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
+| `voronoi-map` | 坐标、区域、栅格或空间对象 | geometry_or_coordinates, value | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 可达性地图 / Accessibility Map | `accessibility-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 双变量分级设色地图 / Bivariate Choropleth Map | `bivariate-choropleth-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| Cartogram变形地图 / Cartogram | `cartogram` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 分级设色地图 / Choropleth Map | `choropleth-map` | 空间位置、区域差异与地理量级 | 按需实现 |
-| 等值线地图 / Contour Map | `contour-map` | 空间位置、区域差异与地理量级 | 按需实现 |
-| 数字高程模型图 / DEM | `dem` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 点密度地图 / Dot Density Map | `dot-density-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 流向地图 / Flow Map | `flow-map` | 空间位置、区域差异与地理量级 | 按需实现 |
-| 地理网络图 / Geographic Network | `geographic-network` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 地理散点图 / Geographic Scatter Plot | `geographic-scatter-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 地理加权回归地图 / Geographically Weighted Regression Map | `geographically-weighted-regression-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 网格地图 / Grid Map | `grid-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 蜂窝地图 / Hexbin Map | `hexbin-map` | 空间位置、区域差异与地理量级 | 按需实现 |
-| 阴影地形图 / Hillshade | `hillshade` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 等时圈地图 / Isochrone Map | `isochrone-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 等值区域图 / Isopleth Map | `isopleth-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 核密度地图 / Kernel Density Map | `kernel-density-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 土地利用分类图 / Land Use Classification Plot | `land-use-classification-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| LISA聚类地图 / Local Indicators of Spatial Association Cluster Map | `local-indicators-of-spatial-association-cluster-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| Moran散点图 / Moran Scatter Plot | `moran-scatter-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| OD地图 / OD Map | `od-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
+| 可达性地图 / Accessibility Map | `accessibility-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 双变量分级设色地图 / Bivariate Choropleth Map | `bivariate-choropleth-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| Cartogram变形地图 / Cartogram | `cartogram` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 分级设色地图 / Choropleth Map | `choropleth-map` | 空间位置、区域差异与地理量级 | 知识登记 |
+| 等值线地图 / Contour Map | `contour-map` | 空间位置、区域差异与地理量级 | 知识登记 |
+| 数字高程模型图 / DEM | `dem` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 点密度地图 / Dot Density Map | `dot-density-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 流向地图 / Flow Map | `flow-map` | 空间位置、区域差异与地理量级 | 知识登记 |
+| 地理网络图 / Geographic Network | `geographic-network` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 地理散点图 / Geographic Scatter Plot | `geographic-scatter-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 地理加权回归地图 / Geographically Weighted Regression Map | `geographically-weighted-regression-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 网格地图 / Grid Map | `grid-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 蜂窝地图 / Hexbin Map | `hexbin-map` | 空间位置、区域差异与地理量级 | 知识登记 |
+| 阴影地形图 / Hillshade | `hillshade` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 等时圈地图 / Isochrone Map | `isochrone-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 等值区域图 / Isopleth Map | `isopleth-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 核密度地图 / Kernel Density Map | `kernel-density-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 土地利用分类图 / Land Use Classification Plot | `land-use-classification-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| LISA聚类地图 / Local Indicators of Spatial Association Cluster Map | `local-indicators-of-spatial-association-cluster-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| Moran散点图 / Moran Scatter Plot | `moran-scatter-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| OD地图 / OD Map | `od-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
 | 人口金字塔 / Population Pyramid | `population-pyramid` | 整体组成、比例与结构 | 可复用模式 |
-| 比例符号地图 / Proportional Symbol Map | `proportional-symbol-map` | 空间位置、区域差异与地理量级 | 生产模板 |
-| 栅格地图 / Raster Map | `raster-map` | 空间位置、区域差异与地理量级 | 按需实现 |
-| 遥感假彩色图 / Remote-sensing False-color Image | `remote-sensing-false-color-image` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 卫星影像叠加图 / Satellite Image Overlay | `satellite-image-overlay` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 小倍数地图 / Small-multiple Maps | `small-multiple-maps` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 空间自相关图 / Spatial Autocorrelation Plot | `spatial-autocorrelation-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 空间聚类地图 / Spatial Clustering Map | `spatial-clustering-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 空间热图 / Spatial Heatmap | `spatial-heatmap` | 空间位置、区域差异与地理量级 | 按需实现 |
-| 空间回归系数地图 / Spatial Regression Coefficient Map | `spatial-regression-coefficient-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 空间残差图 / Spatial Residual Plot | `spatial-residual-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 时空轨迹图 / Spatiotemporal Trajectory Plot | `spatiotemporal-trajectory-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 地形图 / Terrain Plot | `terrain-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 泰森多边形图 / Thiessen Polygon Map | `thiessen-polygon-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 三维地形图 / Three-dimensional Terrain Plot | `three-dimensional-terrain-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 时间滑块地图 / Time-slider Map | `time-slider-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 路径轨迹地图 / Trajectory Map | `trajectory-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| 三变量地图 / Trivariate Map | `trivariate-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
-| Voronoi地图 / Voronoi Map | `voronoi-map` | 展示地理位置、区域差异、空间模式与空间过程 | 按需实现 |
+| 比例符号地图 / Proportional Symbol Map | `proportional-symbol-map` | 空间位置、区域差异与地理量级 | 历史示例 |
+| 栅格地图 / Raster Map | `raster-map` | 空间位置、区域差异与地理量级 | 知识登记 |
+| 遥感假彩色图 / Remote-sensing False-color Image | `remote-sensing-false-color-image` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 卫星影像叠加图 / Satellite Image Overlay | `satellite-image-overlay` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 小倍数地图 / Small-multiple Maps | `small-multiple-maps` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 空间自相关图 / Spatial Autocorrelation Plot | `spatial-autocorrelation-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 空间聚类地图 / Spatial Clustering Map | `spatial-clustering-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 空间热图 / Spatial Heatmap | `spatial-heatmap` | 空间位置、区域差异与地理量级 | 知识登记 |
+| 空间回归系数地图 / Spatial Regression Coefficient Map | `spatial-regression-coefficient-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 空间残差图 / Spatial Residual Plot | `spatial-residual-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 时空轨迹图 / Spatiotemporal Trajectory Plot | `spatiotemporal-trajectory-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 地形图 / Terrain Plot | `terrain-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 泰森多边形图 / Thiessen Polygon Map | `thiessen-polygon-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 三维地形图 / Three-dimensional Terrain Plot | `three-dimensional-terrain-plot` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 时间滑块地图 / Time-slider Map | `time-slider-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 路径轨迹地图 / Trajectory Map | `trajectory-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| 三变量地图 / Trivariate Map | `trivariate-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
+| Voronoi地图 / Voronoi Map | `voronoi-map` | 展示地理位置、区域差异、空间模式与空间过程 | 知识登记 |
 
 ## 图型详细条目
 
@@ -123,7 +123,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -149,7 +149,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -175,7 +175,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -201,7 +201,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；geospatial boundary data；coordinate reference system
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -227,7 +227,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；geospatial boundary data；coordinate reference system
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -253,7 +253,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -279,7 +279,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -305,7 +305,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；geospatial boundary data；coordinate reference system
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -331,7 +331,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -357,7 +357,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -383,7 +383,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -409,7 +409,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -435,7 +435,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；geospatial boundary data；coordinate reference system
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -461,7 +461,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -487,7 +487,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -513,7 +513,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -539,7 +539,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -565,7 +565,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -591,7 +591,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -617,7 +617,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -643,7 +643,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -669,7 +669,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -695,7 +695,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/GeographicBubbleMap`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -721,7 +721,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；geospatial boundary data；coordinate reference system
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -747,7 +747,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -773,7 +773,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -799,7 +799,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -825,7 +825,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -851,7 +851,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -877,7 +877,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；geospatial boundary data；coordinate reference system
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -903,7 +903,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -929,7 +929,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -955,7 +955,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -981,7 +981,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1007,7 +1007,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1033,7 +1033,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1059,7 +1059,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1085,7 +1085,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1111,7 +1111,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1137,7 +1137,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

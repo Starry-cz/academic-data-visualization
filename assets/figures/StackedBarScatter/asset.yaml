@@ -1,50 +1,63 @@
 {
-  "manifest_version": "1.0.0",
+  "manifest_version": "2.0.0",
+  "asset_id": "stacked-bar-scatter",
   "chart_ids": [
     "stacked-bar-scatter"
   ],
-  "backend": [
-    "python"
-  ],
-  "entrypoints": [
-    "plot_StackedBarScatter.py"
-  ],
-  "previews": [
-    "plot_StackedBarScatter_1.png",
-    "plot_StackedBarScatter_2.png"
-  ],
+  "asset_status": "legacy_example",
+  "entrypoint": {
+    "role": "legacy",
+    "backend": "python",
+    "path": "plot_StackedBarScatter.py",
+    "interface_version": "legacy-unversioned"
+  },
+  "environment": {
+    "python": null,
+    "r": null,
+    "dependency_group": "legacy-unlocked",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [],
+    "required_columns": {},
+    "feature_columns": null,
+    "missing_value_policy": "unknown",
+    "minimum_rows": null,
+    "fixtures": {}
+  },
   "outputs": {
-    "vector": [
+    "required": [
       "figureA.pdf",
       "figureA.svg",
       "figureB1.pdf",
       "figureB1.svg",
       "figureC1.pdf",
-      "figureC1.svg"
+      "figureC1.svg",
+      "plot_StackedBarScatter_1.png",
+      "plot_StackedBarScatter_2.png"
     ],
-    "raster": [
+    "example_directory": ".",
+    "previews": [
       "plot_StackedBarScatter_1.png",
       "plot_StackedBarScatter_2.png"
     ]
   },
-  "data": {
-    "mode": "bundled_or_synthetic_demo",
-    "required_columns": []
+  "safety": {
+    "overwrite_default": "unknown",
+    "writes_only_to_output_dir": "unknown"
   },
-  "supported_transforms": [
-    "预先声明且可追溯的标准化、对数或比例变换"
-  ],
-  "unsupported_cases": [
-    "缺少图型必需变量",
-    "仅因外形相似而替代领域专用图"
-  ],
-  "aspect_ratio": 2.2255,
-  "theme": "nature-default",
-  "qa": {
-    "status": "passed",
-    "commands": [
-      "python scripts/check_references.py",
-      "python scripts/check_chart_registry.py"
-    ]
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "legacy-or-synthetic-example",
+    "redistribution": "review source files before external reuse",
+    "canonical_successor": null
+  },
+  "verification": {
+    "status": "syntax_parsed",
+    "verified_at": null,
+    "verifier_version": "2.0.0",
+    "evidence": null,
+    "fixture_sha256": null,
+    "artifact_sha256": {}
   }
 }

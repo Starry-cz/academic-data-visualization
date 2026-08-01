@@ -1,0 +1,82 @@
+{
+  "manifest_version": "2.0.0",
+  "asset_id": "kaplan-meier-curve",
+  "chart_ids": [
+    "kaplan-meier-curve"
+  ],
+  "asset_status": "production_verified",
+  "entrypoint": {
+    "role": "production",
+    "backend": "python",
+    "path": "../../../scripts/verified_template.py",
+    "interface_version": "1.0.0"
+  },
+  "environment": {
+    "python": ">=3.11,<3.14",
+    "r": null,
+    "dependency_group": "verified-core",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [
+      "csv"
+    ],
+    "required_columns": {
+      "time": "nonnegative_numeric",
+      "event": "binary",
+      "group": "categorical"
+    },
+    "feature_columns": null,
+    "missing_value_policy": "error",
+    "minimum_rows": 20,
+    "fixtures": {
+      "demo": "generated-deterministically",
+      "validation": "fixture.csv"
+    }
+  },
+  "outputs": {
+    "required": [
+      "figure.pdf",
+      "figure.svg",
+      "figure.png",
+      "figure-grayscale.png",
+      "figure-metadata.json",
+      "alt-text.txt",
+      "source-data.csv",
+      "qa-report.json",
+      "run-record.json"
+    ],
+    "example_directory": "example-output",
+    "previews": [
+      "preview.png"
+    ]
+  },
+  "safety": {
+    "overwrite_default": false,
+    "writes_only_to_output_dir": true
+  },
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "deterministic-synthetic-fixture",
+    "data_license": "CC0-1.0",
+    "redistribution": "allowed"
+  },
+  "verification": {
+    "status": "release_passed",
+    "verified_at": "2026-08-01",
+    "verifier_version": "2.0.0",
+    "evidence": "verification-record.json",
+    "fixture_sha256": "ab3fa1528616d09a2193c0f1c6e223ac93e9d1a1d4006bb189706bf6a801e686",
+    "artifact_sha256": {
+      "figure.pdf": "bd74253ee9c8a7e216d3c8ea2b0f15088bba52fd75b310702bbb95f411fb5b00",
+      "figure.svg": "3141efe93bc818b979f4a37b90dd3a13bd9c4057c78b39a043930a39458810eb",
+      "figure.png": "46d03fa9d281b1745391d691e8782c9d7d9049d1477ad196305d90fd4d68644f",
+      "figure-grayscale.png": "04c6d564459d19f8f5efba9a86acf51ecae41dd715a56d67f2fa48ccf1fcdae6",
+      "figure-metadata.json": "a2b9a05b14fce59441a7a6127248d0e20e721162338c908e3f15c5f91201ac22",
+      "alt-text.txt": "6e7fe9b56bf05c84b717212e4ee6ef5d2d60e894eb19e943bb99abdc46b9c920",
+      "source-data.csv": "973a3033f83d64dc85071b29f09ee74dbc209a2ae5c2130d10609e68db5bb5db",
+      "qa-report.json": "d867219d663d101e9dde91a6f9bc4bee6c28bb34ed0230403b2ca0a98851ddd0",
+      "run-record.json": "e742e6755de801ba00a55ce4720d2e679ef6dcbee9795c95e3f4aad34773313c"
+    }
+  }
+}

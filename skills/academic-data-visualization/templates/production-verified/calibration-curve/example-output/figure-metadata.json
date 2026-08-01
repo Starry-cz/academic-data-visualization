@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "calibration-curve",
+  "profile": "journal_print",
+  "theme": "literature-clinical",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 180,
+  "source_sha256": "65e8db238f709aee2dc3ee1b15bd56a7737939a9e56fc7a72563882bf9a2bbe7",
+  "palette": {
+    "categorical": [
+      "#477E95",
+      "#72AE9E",
+      "#D87B67",
+      "#D4B261",
+      "#9C86B3",
+      "#7A8791"
+    ],
+    "sequential": [
+      "#F7FAF9",
+      "#CDE5DF",
+      "#8ABFB4",
+      "#3D7A76"
+    ],
+    "diverging": [
+      "#3D7890",
+      "#FFFDF9",
+      "#C86A59"
+    ],
+    "accent": "#D87B67"
+  },
+  "metrics": {
+    "brier_score": 0.07841306210683605,
+    "bins": [
+      {
+        "bin": 0,
+        "predicted": 0.0194135500850887,
+        "observed": 0.0,
+        "n": 35
+      },
+      {
+        "bin": 1,
+        "predicted": 0.14356655588564238,
+        "observed": 0.0,
+        "n": 11
+      },
+      {
+        "bin": 2,
+        "predicted": 0.25094057574286677,
+        "observed": 0.0625,
+        "n": 16
+      },
+      {
+        "bin": 3,
+        "predicted": 0.34396594133185676,
+        "observed": 0.09090909090909091,
+        "n": 11
+      },
+      {
+        "bin": 4,
+        "predicted": 0.44375899444406236,
+        "observed": 0.6,
+        "n": 15
+      },
+      {
+        "bin": 5,
+        "predicted": 0.5533643125525052,
+        "observed": 0.7692307692307693,
+        "n": 13
+      },
+      {
+        "bin": 6,
+        "predicted": 0.6511645570814093,
+        "observed": 0.875,
+        "n": 16
+      },
+      {
+        "bin": 7,
+        "predicted": 0.7477468743168697,
+        "observed": 1.0,
+        "n": 16
+      },
+      {
+        "bin": 8,
+        "predicted": 0.8519812272314887,
+        "observed": 1.0,
+        "n": 17
+      },
+      {
+        "bin": 9,
+        "predicted": 0.9835613241647282,
+        "observed": 1.0,
+        "n": 30
+      }
+    ]
+  },
+  "alt_text": "Calibration Curve. The chart is based on 180 source rows; consult figure-metadata.json for computed values and methods."
+}

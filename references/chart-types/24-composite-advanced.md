@@ -9,7 +9,7 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
@@ -17,84 +17,84 @@
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
 | `asymmetric-multipanel` | 面板、体素或多维对象 | component_data | 可复用模式 |
-| `bar-and-line-composite-chart` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `box-and-scatter-overlay-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `chart-and-table-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `circos-plot` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `complex-process-mining` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `dual-axis-chart` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `facet-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `forest-and-funnel-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `frequency-3d-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
-| `genome-browser-track` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
-| `grand-tour` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `heatmap-and-dendrogram-composite-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `hyperbolic-tree` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `image-plus-quant-composite` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `inset-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `isosurface` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `main-figure-with-magnified-inset` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `map-and-sankey-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `map-and-time-series-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `matrix-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `microscopy-image-plate` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `multi-panel-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `multimodal-visualization` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `network-and-timeline-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
+| `bar-and-line-composite-chart` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `box-and-scatter-overlay-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `chart-and-table-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `circos-plot` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `complex-process-mining` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `dual-axis-chart` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `facet-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `forest-and-funnel-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `frequency-3d-heatmap` | 矩阵单元 | row, column, value | 历史示例 |
+| `genome-browser-track` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
+| `grand-tour` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `heatmap-and-dendrogram-composite-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `hyperbolic-tree` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `image-plus-quant-composite` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `inset-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `isosurface` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `main-figure-with-magnified-inset` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `map-and-sankey-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `map-and-time-series-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `matrix-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `microscopy-image-plate` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `multi-panel-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `multimodal-visualization` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `network-and-timeline-composite-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
 | `parallel-coordinates` | 样本 | numeric_features | 可复用模式 |
-| `pathology-image-plate` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `quality-control-overview` | 任务、批次或指标 | time_or_category, metric | 按需实现 |
+| `pathology-image-plate` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `quality-control-overview` | 任务、批次或指标 | time_or_category, metric | 知识登记 |
 | `raincloud-plot` | 独立观测 | value, group | 可复用模式 |
-| `research-dashboard-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `scatter-and-marginal-density-composite-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
+| `research-dashboard-figure` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `scatter-and-marginal-density-composite-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
 | `small-multiples` | 面板、体素或多维对象 | component_data | 可复用模式 |
-| `three-dimensional-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
-| `three-dimensional-surface` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `three-dimensional-vector-field` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `violin-box-and-scatter-composite-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 按需实现 |
-| `volume-rendering` | 图像、视野或样本 | image, measurement | 按需实现 |
+| `three-dimensional-heatmap` | 矩阵单元 | row, column, value | 历史示例 |
+| `three-dimensional-surface` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `three-dimensional-vector-field` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `violin-box-and-scatter-composite-plot` | 面板、图层、模态或证据模块 | multiple_evidence_layers | 知识登记 |
+| `volume-rendering` | 图像、视野或样本 | image, measurement | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
 | 非对称多面板图 / Asymmetric Multipanel Figure | `asymmetric-multipanel` | 多证据整合、三维或高级结构 | 可复用模式 |
-| 柱线组合图 / Bar and Line Composite Chart | `bar-and-line-composite-chart` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 箱线—散点叠加图 / Box and Scatter Overlay Plot | `box-and-scatter-overlay-plot` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 图表—表格组合 / Chart and Table Composite Figure | `chart-and-table-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| Circos图 / Circos Plot | `circos-plot` | 多证据整合、三维或高级结构 | 按需实现 |
-| 复杂流程挖掘图 / Complex Process-mining Plot | `complex-process-mining` | 多证据整合、三维或高级结构 | 按需实现 |
-| 双轴图 / Dual-axis Chart | `dual-axis-chart` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 分面图 / Facet Plot | `facet-plot` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 森林图—漏斗图组合 / Forest and Funnel Composite Figure | `forest-and-funnel-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 三维频率热图 / Three-dimensional Frequency Heatmap | `frequency-3d-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
-| 基因组浏览器轨道 / Genome Browser Track | `genome-browser-track` | 基因组位置、表达差异与通路信号 | 按需实现 |
-| Grand Tour动态图 / Grand Tour | `grand-tour` | 多证据整合、三维或高级结构 | 按需实现 |
-| 热力图—聚类树组合图 / Heatmap and Dendrogram Composite Plot | `heatmap-and-dendrogram-composite-plot` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 双曲树 / Hyperbolic Tree | `hyperbolic-tree` | 多证据整合、三维或高级结构 | 按需实现 |
-| 图像与定量复合图 / Image-plus-quantification Composite | `image-plus-quant-composite` | 多证据整合、三维或高级结构 | 按需实现 |
-| 嵌套图 / Inset Plot | `inset-plot` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 等值面 / Isosurface | `isosurface` | 图像结构、通道与空间定量 | 按需实现 |
-| 主图—局部放大图 / Main Figure with Magnified Inset | `main-figure-with-magnified-inset` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 地图—桑基图组合 / Map and Sankey Composite Figure | `map-and-sankey-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 地图—时间序列组合 / Map and Time-series Composite Figure | `map-and-time-series-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 矩阵式综合图 / Matrix Composite Figure | `matrix-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 显微图像板 / Microscopy Image Plate | `microscopy-image-plate` | 图像结构、通道与空间定量 | 按需实现 |
-| 多面板图 / Multi-panel Figure | `multi-panel-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 多模态可视化图 / Multimodal Visualization | `multimodal-visualization` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 网络图—时间线组合 / Network and Timeline Composite Figure | `network-and-timeline-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
+| 柱线组合图 / Bar and Line Composite Chart | `bar-and-line-composite-chart` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 箱线—散点叠加图 / Box and Scatter Overlay Plot | `box-and-scatter-overlay-plot` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 图表—表格组合 / Chart and Table Composite Figure | `chart-and-table-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| Circos图 / Circos Plot | `circos-plot` | 多证据整合、三维或高级结构 | 知识登记 |
+| 复杂流程挖掘图 / Complex Process-mining Plot | `complex-process-mining` | 多证据整合、三维或高级结构 | 知识登记 |
+| 双轴图 / Dual-axis Chart | `dual-axis-chart` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 分面图 / Facet Plot | `facet-plot` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 森林图—漏斗图组合 / Forest and Funnel Composite Figure | `forest-and-funnel-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 三维频率热图 / Three-dimensional Frequency Heatmap | `frequency-3d-heatmap` | 矩阵模式、簇与注释 | 历史示例 |
+| 基因组浏览器轨道 / Genome Browser Track | `genome-browser-track` | 基因组位置、表达差异与通路信号 | 知识登记 |
+| Grand Tour动态图 / Grand Tour | `grand-tour` | 多证据整合、三维或高级结构 | 知识登记 |
+| 热力图—聚类树组合图 / Heatmap and Dendrogram Composite Plot | `heatmap-and-dendrogram-composite-plot` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 双曲树 / Hyperbolic Tree | `hyperbolic-tree` | 多证据整合、三维或高级结构 | 知识登记 |
+| 图像与定量复合图 / Image-plus-quantification Composite | `image-plus-quant-composite` | 多证据整合、三维或高级结构 | 知识登记 |
+| 嵌套图 / Inset Plot | `inset-plot` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 等值面 / Isosurface | `isosurface` | 图像结构、通道与空间定量 | 知识登记 |
+| 主图—局部放大图 / Main Figure with Magnified Inset | `main-figure-with-magnified-inset` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 地图—桑基图组合 / Map and Sankey Composite Figure | `map-and-sankey-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 地图—时间序列组合 / Map and Time-series Composite Figure | `map-and-time-series-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 矩阵式综合图 / Matrix Composite Figure | `matrix-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 显微图像板 / Microscopy Image Plate | `microscopy-image-plate` | 图像结构、通道与空间定量 | 知识登记 |
+| 多面板图 / Multi-panel Figure | `multi-panel-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 多模态可视化图 / Multimodal Visualization | `multimodal-visualization` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 网络图—时间线组合 / Network and Timeline Composite Figure | `network-and-timeline-composite-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
 | 平行坐标图 / Parallel Coordinates | `parallel-coordinates` | 多变量结构、相关与低维表示 | 可复用模式 |
-| 病理图像板 / Pathology Image Plate | `pathology-image-plate` | 图像结构、通道与空间定量 | 按需实现 |
-| 质量控制总览 / Quality-control Overview | `quality-control-overview` | 计划进度、过程稳定性与运营监测 | 按需实现 |
+| 病理图像板 / Pathology Image Plate | `pathology-image-plate` | 图像结构、通道与空间定量 | 知识登记 |
+| 质量控制总览 / Quality-control Overview | `quality-control-overview` | 计划进度、过程稳定性与运营监测 | 知识登记 |
 | 雨云图 / Raincloud Plot | `raincloud-plot` | 分布形态、离散程度与异常值 | 可复用模式 |
-| 仪表板式科研图 / Research Dashboard Figure | `research-dashboard-figure` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 散点—边际密度组合图 / Scatter and Marginal Density Composite Plot | `scatter-and-marginal-density-composite-plot` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
+| 仪表板式科研图 / Research Dashboard Figure | `research-dashboard-figure` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 散点—边际密度组合图 / Scatter and Marginal Density Composite Plot | `scatter-and-marginal-density-composite-plot` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
 | 小多图 / Small Multiples | `small-multiples` | 多证据整合、三维或高级结构 | 可复用模式 |
-| 三维热图 / Three-dimensional Heatmap | `three-dimensional-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
-| 三维表面图 / Three-dimensional Surface | `three-dimensional-surface` | 多证据整合、三维或高级结构 | 按需实现 |
-| 三维矢量场 / Three-dimensional Vector Field | `three-dimensional-vector-field` | 多证据整合、三维或高级结构 | 按需实现 |
-| 小提琴—箱线—散点组合图 / Violin Box and Scatter Composite Plot | `violin-box-and-scatter-composite-plot` | 整合多个证据层、图型或模态形成复合科研图 | 按需实现 |
-| 体渲染 / Volume Rendering | `volume-rendering` | 图像结构、通道与空间定量 | 按需实现 |
+| 三维热图 / Three-dimensional Heatmap | `three-dimensional-heatmap` | 矩阵模式、簇与注释 | 历史示例 |
+| 三维表面图 / Three-dimensional Surface | `three-dimensional-surface` | 多证据整合、三维或高级结构 | 知识登记 |
+| 三维矢量场 / Three-dimensional Vector Field | `three-dimensional-vector-field` | 多证据整合、三维或高级结构 | 知识登记 |
+| 小提琴—箱线—散点组合图 / Violin Box and Scatter Composite Plot | `violin-box-and-scatter-composite-plot` | 整合多个证据层、图型或模态形成复合科研图 | 知识登记 |
+| 体渲染 / Volume Rendering | `volume-rendering` | 图像结构、通道与空间定量 | 知识登记 |
 
 ## 图型详细条目
 
@@ -117,7 +117,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -143,7 +143,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -169,7 +169,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -195,7 +195,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -221,7 +221,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -247,7 +247,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -273,7 +273,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -299,7 +299,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -325,7 +325,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -351,7 +351,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/Frequency_3DHeatmap`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -377,7 +377,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -403,7 +403,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -429,7 +429,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -455,7 +455,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -481,7 +481,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -507,7 +507,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -533,7 +533,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -559,7 +559,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -585,7 +585,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -611,7 +611,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -637,7 +637,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -663,7 +663,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -689,7 +689,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -715,7 +715,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -741,7 +741,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -767,7 +767,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -793,7 +793,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -819,7 +819,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -845,7 +845,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -871,7 +871,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -897,7 +897,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -923,7 +923,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -949,7 +949,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/3DHeatmap`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -975,7 +975,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1001,7 +1001,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1027,7 +1027,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1053,7 +1053,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸

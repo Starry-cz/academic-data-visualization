@@ -1,0 +1,12 @@
+# 历史 R 示例仍未达到 production_verified；此清单仅用于显式记录依赖，不在脚本中自动安装。
+Cairo
+ComplexHeatmap
+RColorBrewer
+circlize
+corrplot
+dplyr
+ggplot2
+ggridges
+patchwork
+readr
+tidyr

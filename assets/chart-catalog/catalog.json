@@ -1,5 +1,5 @@
 {
-  "registry_version": "2.1.0",
+  "registry_version": "3.0.0",
   "note": "Preview is non-null only for verified production templates.",
   "charts": [
     {
@@ -9,7 +9,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -21,9 +21,9 @@
         "comparison-ranking",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/BarAblation/bars_ablation_Cancer.png"
+      "preview": null
     },
     {
       "id": "accessibility-map",
@@ -32,7 +32,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -43,7 +43,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -54,7 +54,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -65,7 +65,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -76,7 +76,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -87,7 +87,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -98,7 +98,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -109,7 +109,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -120,7 +120,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -131,7 +131,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -142,7 +142,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -153,7 +153,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -164,7 +164,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -176,7 +176,7 @@
         "time-trend-dynamics",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -188,7 +188,7 @@
         "relationship-correlation",
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -199,7 +199,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -210,7 +210,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -222,7 +222,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -233,7 +233,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -244,7 +244,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -255,7 +255,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -266,7 +266,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -277,7 +277,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -288,7 +288,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -299,7 +299,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -310,7 +310,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -322,9 +322,9 @@
         "comparison-ranking",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/BarDistribution/plot_selfcorrection_math.png"
+      "preview": null
     },
     {
       "id": "between-group-box-plot",
@@ -333,7 +333,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -344,7 +344,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -355,7 +355,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -366,7 +366,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -378,7 +378,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -389,7 +389,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -400,7 +400,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -411,7 +411,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -422,7 +422,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -434,7 +434,7 @@
         "relationship-correlation",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -445,7 +445,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -459,7 +459,7 @@
         "regression-model-diagnostics",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -470,7 +470,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -481,7 +481,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -492,7 +492,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -503,7 +503,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -514,7 +514,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -525,7 +525,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -536,9 +536,9 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/BubbleScatter/bubble_scatter.png"
+      "preview": null
     },
     {
       "id": "bullet-chart",
@@ -548,7 +548,7 @@
         "comparison-ranking",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -559,7 +559,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -570,7 +570,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -583,7 +583,7 @@
         "high-dimensional-multivariate",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -596,9 +596,9 @@
         "classification-prediction-machine-learning",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": null
+      "preview": "templates/production-verified/calibration-curve/preview.png"
     },
     {
       "id": "canonical-correlation-plot",
@@ -607,7 +607,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -618,7 +618,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -629,7 +629,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -640,7 +640,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -651,9 +651,9 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/BarCategorical/plot_correctness_by_category.png"
+      "preview": null
     },
     {
       "id": "caterpillar-plot",
@@ -662,7 +662,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -674,7 +674,7 @@
         "experimental-design-group-differences",
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -685,7 +685,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -696,7 +696,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -707,7 +707,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -718,7 +718,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -729,7 +729,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -740,7 +740,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -752,7 +752,7 @@
         "composition-proportion",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -763,7 +763,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -774,7 +774,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -785,7 +785,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -798,9 +798,9 @@
         "flow-migration",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/ChordDiagram/chord_diagram.png"
+      "preview": null
     },
     {
       "id": "choropleth-map",
@@ -809,7 +809,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -821,7 +821,7 @@
         "medicine-public-health-life-sciences",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -832,7 +832,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -845,7 +845,7 @@
         "hierarchy-classification",
         "flow-migration"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -856,7 +856,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -868,7 +868,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -879,7 +879,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -890,7 +890,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -901,7 +901,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -912,7 +912,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -923,7 +923,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -934,7 +934,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -946,7 +946,7 @@
         "classification-prediction-machine-learning",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -957,7 +957,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -969,7 +969,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -980,7 +980,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -992,7 +992,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1003,7 +1003,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1014,7 +1014,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1026,7 +1026,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1037,7 +1037,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1048,7 +1048,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1059,7 +1059,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1071,7 +1071,7 @@
         "uncertainty-effect-size",
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1082,7 +1082,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1094,7 +1094,7 @@
         "high-dimensional-multivariate",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -1105,7 +1105,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1116,7 +1116,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -1127,7 +1127,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1138,7 +1138,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1149,7 +1149,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1160,7 +1160,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1172,7 +1172,7 @@
         "flow-migration",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1183,7 +1183,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1194,9 +1194,9 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/BarComposition/plot_brute_force.png"
+      "preview": null
     },
     {
       "id": "concentration-time-curve",
@@ -1205,7 +1205,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1216,7 +1216,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1227,7 +1227,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1238,7 +1238,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1249,7 +1249,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1260,7 +1260,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1271,7 +1271,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1282,7 +1282,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1293,7 +1293,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1305,7 +1305,7 @@
         "time-trend-dynamics",
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1316,7 +1316,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1328,9 +1328,9 @@
         "regression-model-diagnostics",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/ConfusionMatrix/plot_SectorConfusionMatrix.png"
+      "preview": null
     },
     {
       "id": "confusion-matrix-heatmap",
@@ -1339,7 +1339,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1351,7 +1351,7 @@
         "relationship-correlation",
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1364,7 +1364,7 @@
         "medicine-public-health-life-sciences",
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1375,7 +1375,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1386,7 +1386,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1397,7 +1397,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1409,7 +1409,7 @@
         "relationship-correlation",
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1421,7 +1421,7 @@
         "comparison-ranking",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1433,7 +1433,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1444,7 +1444,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1456,7 +1456,7 @@
         "flow-migration",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1467,7 +1467,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1478,9 +1478,9 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/CorrelationBubbleMatrix/correlation_bubble_matrix.png"
+      "preview": null
     },
     {
       "id": "correlation-matrix",
@@ -1490,9 +1490,9 @@
         "relationship-correlation",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/CorrelationMatrix/plot_CorrelationHeatmap_v1.png"
+      "preview": "templates/production-verified/correlation-matrix/preview.png"
     },
     {
       "id": "correlation-network",
@@ -1502,9 +1502,9 @@
         "network-relationship-structure",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/CorrelationNetwork/correlation_network.png"
+      "preview": null
     },
     {
       "id": "country-collaboration-network",
@@ -1514,7 +1514,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1525,7 +1525,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1536,7 +1536,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1547,7 +1547,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1558,7 +1558,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1569,7 +1569,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1580,7 +1580,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1591,7 +1591,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1602,7 +1602,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1613,7 +1613,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1624,7 +1624,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1635,7 +1635,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1646,7 +1646,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1657,7 +1657,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1668,7 +1668,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1679,7 +1679,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1690,7 +1690,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1703,7 +1703,7 @@
         "classification-prediction-machine-learning",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1715,7 +1715,7 @@
         "classification-prediction-machine-learning",
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1726,7 +1726,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1741,7 +1741,7 @@
         "high-dimensional-multivariate",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1752,7 +1752,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1763,9 +1763,9 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/DensityHeatmap/plot_DensityHeatmap_2.png"
+      "preview": null
     },
     {
       "id": "diagnostic-test-plot",
@@ -1775,7 +1775,7 @@
         "regression-model-diagnostics",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -1787,7 +1787,7 @@
         "experimental-design-group-differences",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1798,7 +1798,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1809,7 +1809,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1820,7 +1820,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1831,7 +1831,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1842,7 +1842,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1853,7 +1853,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1864,7 +1864,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1875,7 +1875,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -1886,7 +1886,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1897,7 +1897,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1908,7 +1908,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1919,7 +1919,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1930,7 +1930,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1941,7 +1941,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1952,7 +1952,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1964,7 +1964,7 @@
         "comparison-ranking",
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1975,7 +1975,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1986,7 +1986,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -1997,7 +1997,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2008,7 +2008,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2019,7 +2019,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2030,7 +2030,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2041,7 +2041,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2052,7 +2052,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2063,7 +2063,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2074,7 +2074,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2085,7 +2085,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2096,7 +2096,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2107,7 +2107,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2118,7 +2118,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2129,7 +2129,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2140,7 +2140,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2151,7 +2151,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2162,7 +2162,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2175,7 +2175,7 @@
         "experimental-design-group-differences",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2186,7 +2186,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2198,7 +2198,7 @@
         "qualitative-text-analysis",
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2209,7 +2209,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2220,7 +2220,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2231,7 +2231,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2242,7 +2242,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2253,7 +2253,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2264,7 +2264,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2275,7 +2275,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2287,7 +2287,7 @@
         "high-dimensional-multivariate",
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2299,7 +2299,7 @@
         "time-trend-dynamics",
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2310,7 +2310,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2321,7 +2321,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2332,7 +2332,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2343,7 +2343,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2354,7 +2354,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2365,7 +2365,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2376,7 +2376,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2387,7 +2387,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2398,7 +2398,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2409,7 +2409,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2420,7 +2420,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2432,9 +2432,9 @@
         "uncertainty-effect-size",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": null
+      "preview": "templates/production-verified/forest-plot/preview.png"
     },
     {
       "id": "framework-matrix",
@@ -2443,7 +2443,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2455,9 +2455,9 @@
         "high-dimensional-multivariate",
         "composite-advanced"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/Frequency_3DHeatmap/plot_Frequency_3DHeatmap_1.png"
+      "preview": null
     },
     {
       "id": "frequency-polygon",
@@ -2466,7 +2466,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2477,7 +2477,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2488,7 +2488,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2500,7 +2500,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2511,7 +2511,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2522,7 +2522,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2533,7 +2533,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2545,7 +2545,7 @@
         "medicine-public-health-life-sciences",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2556,7 +2556,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2567,7 +2567,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2578,7 +2578,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2589,7 +2589,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2601,7 +2601,7 @@
         "high-dimensional-multivariate",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2612,7 +2612,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2623,7 +2623,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2634,9 +2634,9 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/GroupedBarChart/plot_GroupedBarChartv1_1.png"
+      "preview": "templates/production-verified/grouped-bar-chart/preview.png"
     },
     {
       "id": "grouped-correlation-matrix",
@@ -2645,9 +2645,9 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/GroupedCorrelationMatrix/plot_GroupCorrelationHeatmap_1.png"
+      "preview": null
     },
     {
       "id": "grouped-violin-plot",
@@ -2657,9 +2657,9 @@
         "distribution",
         "experimental-design-group-differences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/GroupedViolin/plot_GroupedViolin.png"
+      "preview": null
     },
     {
       "id": "growth-curve",
@@ -2669,7 +2669,7 @@
         "education-psychometrics",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2680,7 +2680,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2691,7 +2691,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2702,7 +2702,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2713,9 +2713,9 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/heatmap/composition_heatmap.png"
+      "preview": null
     },
     {
       "id": "heatmap-and-dendrogram-composite-plot",
@@ -2724,7 +2724,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2735,7 +2735,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2746,7 +2746,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2758,7 +2758,7 @@
         "distribution",
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2770,7 +2770,7 @@
         "hierarchy-classification",
         "flow-migration"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2781,7 +2781,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2792,7 +2792,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2803,7 +2803,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2814,7 +2814,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2825,7 +2825,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2836,7 +2836,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -2847,7 +2847,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2858,7 +2858,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2871,7 +2871,7 @@
         "flow-migration",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2882,7 +2882,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2894,7 +2894,7 @@
         "relationship-correlation",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2905,7 +2905,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2917,7 +2917,7 @@
         "medicine-public-health-life-sciences",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -2928,7 +2928,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2939,7 +2939,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2950,7 +2950,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2961,7 +2961,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2972,7 +2972,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2983,7 +2983,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -2994,7 +2994,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3005,7 +3005,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3017,7 +3017,7 @@
         "network-relationship-structure",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3029,7 +3029,7 @@
         "regression-model-diagnostics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3041,7 +3041,7 @@
         "experimental-design-group-differences",
         "education-psychometrics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3053,7 +3053,7 @@
         "time-trend-dynamics",
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3064,7 +3064,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3075,7 +3075,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3086,7 +3086,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3097,7 +3097,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3108,7 +3108,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3119,7 +3119,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3132,7 +3132,7 @@
         "three-dimensional-scientific-computing",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3143,7 +3143,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3154,7 +3154,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3165,7 +3165,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3176,7 +3176,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3187,7 +3187,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3198,7 +3198,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3209,7 +3209,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3220,9 +3220,9 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": null
+      "preview": "templates/production-verified/kaplan-meier-curve/preview.png"
     },
     {
       "id": "kernel-density-map",
@@ -3231,7 +3231,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3243,9 +3243,9 @@
         "distribution",
         "relationship-correlation"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/KernelDensity/plot_CorrelationDensity1.png"
+      "preview": null
     },
     {
       "id": "keyword-burst-plot",
@@ -3255,7 +3255,7 @@
         "qualitative-text-analysis",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3266,7 +3266,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3278,7 +3278,7 @@
         "qualitative-text-analysis",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3289,7 +3289,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3300,7 +3300,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3311,7 +3311,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3322,7 +3322,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3333,7 +3333,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3344,7 +3344,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3355,7 +3355,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3366,7 +3366,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -3377,7 +3377,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3388,7 +3388,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3399,7 +3399,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3410,7 +3410,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3421,7 +3421,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3432,7 +3432,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3443,7 +3443,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3454,7 +3454,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3465,7 +3465,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3477,7 +3477,7 @@
         "regression-model-diagnostics",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3488,7 +3488,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3499,7 +3499,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3510,7 +3510,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3521,7 +3521,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3532,7 +3532,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3543,7 +3543,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3554,7 +3554,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3565,7 +3565,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3576,7 +3576,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3587,9 +3587,9 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/LineTrend/comparison_posttraining.png"
+      "preview": "templates/production-verified/line-chart/preview.png"
     },
     {
       "id": "line-scan-intensity",
@@ -3598,7 +3598,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -3609,7 +3609,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3620,7 +3620,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3631,7 +3631,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3642,7 +3642,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3654,7 +3654,7 @@
         "qualitative-text-analysis",
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3665,7 +3665,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3676,7 +3676,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3687,7 +3687,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3699,7 +3699,7 @@
         "experimental-design-group-differences",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3710,7 +3710,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3721,7 +3721,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3733,7 +3733,7 @@
         "experimental-design-group-differences",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3744,7 +3744,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3755,7 +3755,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3766,9 +3766,9 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/Manifold/diffusion_swiss_roll.png"
+      "preview": null
     },
     {
       "id": "mantel-correlation-plot",
@@ -3778,9 +3778,9 @@
         "high-dimensional-multivariate",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/MantelCorrelation/plot_MantelCorrelation1_1.png"
+      "preview": null
     },
     {
       "id": "map-and-sankey-composite-figure",
@@ -3789,7 +3789,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3800,7 +3800,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3811,9 +3811,9 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/MarginalDensity/plot_VariableCorrelation_1.png"
+      "preview": null
     },
     {
       "id": "marginal-effects-plot",
@@ -3823,7 +3823,7 @@
         "relationship-correlation",
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3834,9 +3834,9 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/MarkerGeneDotPlot/plot_MarkerGeneDotPlot.png"
+      "preview": null
     },
     {
       "id": "markov-transition-diagram",
@@ -3845,7 +3845,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3856,7 +3856,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3867,7 +3867,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3878,7 +3878,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3889,7 +3889,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3900,7 +3900,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3911,7 +3911,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3922,7 +3922,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3933,7 +3933,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3944,7 +3944,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3955,7 +3955,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3967,7 +3967,7 @@
         "uncertainty-effect-size",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -3978,9 +3978,9 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/BarComparison/plot_comparison_GeneRegulatory.png"
+      "preview": null
     },
     {
       "id": "method-integration-plot",
@@ -3989,7 +3989,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4001,7 +4001,7 @@
         "medicine-public-health-life-sciences",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -4012,7 +4012,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4023,7 +4023,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4034,7 +4034,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4045,7 +4045,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4056,7 +4056,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4067,7 +4067,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4078,7 +4078,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4089,7 +4089,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4100,7 +4100,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4111,7 +4111,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4122,7 +4122,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4133,7 +4133,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4147,7 +4147,7 @@
         "high-dimensional-multivariate",
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4158,7 +4158,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4169,7 +4169,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4180,7 +4180,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4191,7 +4191,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4202,7 +4202,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4213,7 +4213,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4224,7 +4224,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4235,7 +4235,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4246,7 +4246,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4257,7 +4257,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4268,7 +4268,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4279,7 +4279,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4290,7 +4290,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4301,7 +4301,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4312,7 +4312,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4323,7 +4323,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4334,7 +4334,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -4345,7 +4345,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4356,7 +4356,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4367,7 +4367,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4378,7 +4378,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4389,7 +4389,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4400,7 +4400,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4411,7 +4411,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4422,7 +4422,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4434,7 +4434,7 @@
         "comparison-ranking",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4445,7 +4445,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4456,7 +4456,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4467,7 +4467,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4478,7 +4478,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4489,7 +4489,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4500,7 +4500,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4511,7 +4511,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4522,7 +4522,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4533,7 +4533,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4544,7 +4544,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4555,7 +4555,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -4566,7 +4566,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4577,7 +4577,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4588,7 +4588,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4599,7 +4599,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4610,7 +4610,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4621,7 +4621,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4632,9 +4632,9 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/PairedBoxScatter/plot_PairedBoxScatter1.png"
+      "preview": null
     },
     {
       "id": "paired-dot-plot",
@@ -4643,7 +4643,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4654,7 +4654,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4666,7 +4666,7 @@
         "high-dimensional-multivariate",
         "education-psychometrics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4679,7 +4679,7 @@
         "high-dimensional-multivariate",
         "composite-advanced"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4691,7 +4691,7 @@
         "flow-migration",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4703,7 +4703,7 @@
         "comparison-ranking",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4714,7 +4714,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4725,7 +4725,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4737,7 +4737,7 @@
         "relationship-correlation",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4748,7 +4748,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4759,7 +4759,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4771,7 +4771,7 @@
         "medicine-public-health-life-sciences",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -4782,7 +4782,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4793,7 +4793,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4805,9 +4805,9 @@
         "high-dimensional-multivariate",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/PCA/plot_PCA_1.png"
+      "preview": "templates/production-verified/pca-biplot/preview.png"
     },
     {
       "id": "pca-loading-plot",
@@ -4817,7 +4817,7 @@
         "classification-prediction-machine-learning",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4829,7 +4829,7 @@
         "classification-prediction-machine-learning",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4841,7 +4841,7 @@
         "time-trend-dynamics",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4853,7 +4853,7 @@
         "comparison-ranking",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4864,7 +4864,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4875,7 +4875,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4886,7 +4886,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4897,7 +4897,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4908,7 +4908,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4921,7 +4921,7 @@
         "network-relationship-structure",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4932,7 +4932,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4943,7 +4943,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4954,7 +4954,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4965,7 +4965,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4976,7 +4976,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4987,7 +4987,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -4998,7 +4998,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5009,7 +5009,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5020,7 +5020,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5034,7 +5034,7 @@
         "composition-proportion",
         "spatial-geographic"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5045,7 +5045,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5057,9 +5057,9 @@
         "regression-model-diagnostics",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": null
+      "preview": "templates/production-verified/precision-recall-curve/preview.png"
     },
     {
       "id": "predicted-versus-observed-plot",
@@ -5068,7 +5068,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5079,7 +5079,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5090,7 +5090,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5101,7 +5101,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5112,7 +5112,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5123,7 +5123,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5137,7 +5137,7 @@
         "bibliometrics-science-mapping",
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5148,7 +5148,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5159,7 +5159,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5170,7 +5170,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5181,7 +5181,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5193,7 +5193,7 @@
         "flow-migration",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5204,7 +5204,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5215,7 +5215,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5226,7 +5226,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5237,7 +5237,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5248,9 +5248,9 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/GeographicBubbleMap/geographic_bubble_map.png"
+      "preview": null
     },
     {
       "id": "pseudotime-heatmap",
@@ -5260,7 +5260,7 @@
         "high-dimensional-multivariate",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -5271,7 +5271,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5283,7 +5283,7 @@
         "distribution",
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5294,7 +5294,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5305,7 +5305,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5317,7 +5317,7 @@
         "engineering-quality-process-control",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -5328,7 +5328,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5339,7 +5339,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5350,7 +5350,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5361,7 +5361,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5372,7 +5372,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5385,9 +5385,9 @@
         "composition-proportion",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/Radar/comparison_radar.png"
+      "preview": null
     },
     {
       "id": "radial-tree",
@@ -5396,7 +5396,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5407,7 +5407,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5419,7 +5419,7 @@
         "distribution",
         "composite-advanced"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5430,7 +5430,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5441,7 +5441,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5452,7 +5452,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5463,7 +5463,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -5474,7 +5474,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -5485,7 +5485,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5496,7 +5496,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5507,7 +5507,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5518,7 +5518,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5529,7 +5529,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5540,7 +5540,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5551,7 +5551,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5562,7 +5562,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5573,7 +5573,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5584,7 +5584,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5595,7 +5595,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5606,7 +5606,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5617,7 +5617,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5628,7 +5628,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5639,7 +5639,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5650,7 +5650,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5661,7 +5661,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -5672,7 +5672,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5683,7 +5683,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5694,7 +5694,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5705,9 +5705,9 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/RidgePlot/plot_RidgePlot1_1.png"
+      "preview": null
     },
     {
       "id": "risk-heatmap",
@@ -5716,7 +5716,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5727,7 +5727,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5738,7 +5738,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5749,7 +5749,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5762,9 +5762,9 @@
         "classification-prediction-machine-learning",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/AUROC/plot_AUROC1_1.png"
+      "preview": "templates/production-verified/roc-curve/preview.png"
     },
     {
       "id": "roc-space-plot",
@@ -5773,7 +5773,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5784,7 +5784,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5795,7 +5795,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5807,7 +5807,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5818,7 +5818,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5829,7 +5829,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5840,9 +5840,9 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/SankeyDiagram/plot_SankeyDiagram_1.png"
+      "preview": "templates/production-verified/sankey-diagram/preview.png"
     },
     {
       "id": "satellite-image-overlay",
@@ -5851,7 +5851,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5862,7 +5862,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5873,7 +5873,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5885,7 +5885,7 @@
         "relationship-correlation",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5896,7 +5896,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5908,7 +5908,7 @@
         "relationship-correlation",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5919,7 +5919,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5931,7 +5931,7 @@
         "high-dimensional-multivariate",
         "education-psychometrics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5942,7 +5942,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5953,7 +5953,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5964,7 +5964,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5976,7 +5976,7 @@
         "experimental-design-group-differences",
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5987,7 +5987,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -5998,7 +5998,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6010,7 +6010,7 @@
         "network-relationship-structure",
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6021,7 +6021,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6032,7 +6032,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6043,7 +6043,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6054,7 +6054,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6065,7 +6065,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6076,7 +6076,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6087,7 +6087,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6098,7 +6098,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6109,7 +6109,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6120,7 +6120,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6131,7 +6131,7 @@
       "categories": [
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6142,7 +6142,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6153,7 +6153,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6164,7 +6164,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -6175,7 +6175,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6187,7 +6187,7 @@
         "comparison-ranking",
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6198,7 +6198,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6209,7 +6209,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6220,7 +6220,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6231,7 +6231,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6242,7 +6242,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6253,7 +6253,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6264,7 +6264,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -6275,7 +6275,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6286,7 +6286,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6297,7 +6297,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6308,7 +6308,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6319,7 +6319,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6330,7 +6330,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -6341,7 +6341,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6352,7 +6352,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6364,9 +6364,9 @@
         "time-trend-dynamics",
         "composition-proportion"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/StackedArea/stacked_area.png"
+      "preview": null
     },
     {
       "id": "stacked-bar-chart",
@@ -6376,7 +6376,7 @@
         "comparison-ranking",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6387,9 +6387,9 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/StackedBarScatter/plot_StackedBarScatter_1.png"
+      "preview": null
     },
     {
       "id": "standardized-residual-plot",
@@ -6398,7 +6398,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6409,7 +6409,7 @@
       "categories": [
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6420,7 +6420,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6431,7 +6431,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6442,7 +6442,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6453,7 +6453,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6464,7 +6464,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6475,7 +6475,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6487,7 +6487,7 @@
         "time-trend-dynamics",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6498,7 +6498,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6509,7 +6509,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6520,7 +6520,7 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6531,7 +6531,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6544,7 +6544,7 @@
         "hierarchy-classification",
         "flow-migration"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6555,7 +6555,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6566,7 +6566,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6577,7 +6577,7 @@
       "categories": [
         "experimental-design-group-differences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -6588,7 +6588,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6599,7 +6599,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6610,7 +6610,7 @@
       "categories": [
         "comparison-ranking"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6621,7 +6621,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6632,7 +6632,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6644,7 +6644,7 @@
         "composition-proportion",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6655,7 +6655,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6666,7 +6666,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6677,7 +6677,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6688,7 +6688,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6699,7 +6699,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6710,7 +6710,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6722,7 +6722,7 @@
         "qualitative-text-analysis",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6733,7 +6733,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6744,7 +6744,7 @@
       "categories": [
         "network-relationship-structure"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6756,7 +6756,7 @@
         "qualitative-text-analysis",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6767,7 +6767,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6778,7 +6778,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6789,7 +6789,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6801,7 +6801,7 @@
         "qualitative-text-analysis",
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6812,7 +6812,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6823,7 +6823,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6834,7 +6834,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6845,7 +6845,7 @@
       "categories": [
         "causal-theoretical-models"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6856,7 +6856,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6867,7 +6867,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6878,7 +6878,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6890,9 +6890,9 @@
         "high-dimensional-multivariate",
         "composite-advanced"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/3DHeatmap/plot_3Dheatmap_1.png"
+      "preview": null
     },
     {
       "id": "three-dimensional-scatter-plot",
@@ -6902,7 +6902,7 @@
         "relationship-correlation",
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6915,7 +6915,7 @@
         "three-dimensional-scientific-computing",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6926,7 +6926,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6938,7 +6938,7 @@
         "three-dimensional-scientific-computing",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6949,7 +6949,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6960,7 +6960,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6971,7 +6971,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6982,7 +6982,7 @@
       "categories": [
         "bibliometrics-science-mapping"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -6993,7 +6993,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7005,7 +7005,7 @@
         "time-trend-dynamics",
         "flow-migration"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7016,7 +7016,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7027,7 +7027,7 @@
       "categories": [
         "uncertainty-effect-size"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7038,7 +7038,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7049,7 +7049,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7060,7 +7060,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7071,7 +7071,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7082,7 +7082,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7095,7 +7095,7 @@
         "hierarchy-classification",
         "flow-migration"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7106,7 +7106,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7119,7 +7119,7 @@
         "high-dimensional-multivariate",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7130,7 +7130,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7141,7 +7141,7 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7152,7 +7152,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7165,7 +7165,7 @@
         "relationship-correlation",
         "high-dimensional-multivariate"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7176,7 +7176,7 @@
       "categories": [
         "relationship-correlation"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7187,7 +7187,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7200,7 +7200,7 @@
         "high-dimensional-multivariate",
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7211,7 +7211,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7223,7 +7223,7 @@
         "medicine-public-health-life-sciences",
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7234,7 +7234,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7246,7 +7246,7 @@
         "regression-model-diagnostics",
         "classification-prediction-machine-learning"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7257,7 +7257,7 @@
       "categories": [
         "flow-migration"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7268,7 +7268,7 @@
       "categories": [
         "research-process-paper-standards"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7279,7 +7279,7 @@
       "categories": [
         "regression-model-diagnostics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7291,7 +7291,7 @@
         "medicine-public-health-life-sciences",
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7302,7 +7302,7 @@
       "categories": [
         "sets-overlap-combinations"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7313,7 +7313,7 @@
       "categories": [
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7324,9 +7324,9 @@
       "categories": [
         "distribution"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/Violin/plot_Violin.png"
+      "preview": "templates/production-verified/violin-plot/preview.png"
     },
     {
       "id": "volcano-plot",
@@ -7335,9 +7335,9 @@
       "categories": [
         "medicine-public-health-life-sciences"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "production_verified",
       "registry_origin": "source_taxonomy",
-      "preview": "assets/figures/volcano/rnaseq_deseq2_standard.png"
+      "preview": "templates/production-verified/volcano-plot/preview.png"
     },
     {
       "id": "volume-rendering",
@@ -7348,7 +7348,7 @@
         "three-dimensional-scientific-computing",
         "composite-advanced"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7359,7 +7359,7 @@
       "categories": [
         "hierarchy-classification"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7370,7 +7370,7 @@
       "categories": [
         "spatial-geographic"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7381,7 +7381,7 @@
       "categories": [
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7393,7 +7393,7 @@
         "comparison-ranking",
         "composition-proportion"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7404,7 +7404,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7415,7 +7415,7 @@
       "categories": [
         "three-dimensional-scientific-computing"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7426,7 +7426,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7437,7 +7437,7 @@
       "categories": [
         "qualitative-text-analysis"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7448,7 +7448,7 @@
       "categories": [
         "education-psychometrics"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7459,7 +7459,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "on_demand",
+      "implementation_status": "none",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7470,7 +7470,7 @@
       "categories": [
         "time-trend-dynamics"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "source_taxonomy",
       "preview": null
     },
@@ -7481,9 +7481,9 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/XPSPeakDeconvolution/xps_peak_deconvolution.png"
+      "preview": null
     },
     {
       "id": "xanes-spectrum",
@@ -7492,7 +7492,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7503,7 +7503,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7514,7 +7514,7 @@
       "categories": [
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7526,9 +7526,9 @@
         "three-dimensional-scientific-computing",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "production_template",
+      "implementation_status": "legacy_example",
       "registry_origin": "repository_extension",
-      "preview": "assets/figures/EXAFSWaveletMap/exafs_wavelet_map.png"
+      "preview": null
     },
     {
       "id": "cyclic-voltammetry-curve",
@@ -7538,7 +7538,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7550,7 +7550,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7562,7 +7562,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7574,7 +7574,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7586,7 +7586,7 @@
         "high-dimensional-multivariate",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7598,7 +7598,7 @@
         "relationship-correlation",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7610,7 +7610,7 @@
         "composition-proportion",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     },
@@ -7622,7 +7622,7 @@
         "time-trend-dynamics",
         "engineering-quality-process-control"
       ],
-      "implementation_status": "reusable_pattern",
+      "implementation_status": "pattern",
       "registry_origin": "repository_extension",
       "preview": null
     }

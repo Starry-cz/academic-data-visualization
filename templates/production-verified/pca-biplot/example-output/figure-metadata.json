@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "pca-biplot",
+  "profile": "journal_print",
+  "theme": "pastel-omics",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 66,
+  "source_sha256": "0ff713167cdab9a38e2b20b3166ff9ea80212f0c230dee41f460de9dd9935495",
+  "palette": {
+    "categorical": [
+      "#F9ADE5",
+      "#EFEAB7",
+      "#BBD6F5",
+      "#AAD1CC",
+      "#C0A3ED",
+      "#F6B593",
+      "#81CAEA",
+      "#84C492",
+      "#816EA7",
+      "#EFC372",
+      "#3DBFCC",
+      "#72B1AC"
+    ],
+    "sequential": [
+      "#F7FBFB",
+      "#D5ECE7",
+      "#AAD1CC",
+      "#72B1AC",
+      "#3DBFCC"
+    ],
+    "diverging": [
+      "#816EA7",
+      "#FFFFFF",
+      "#F6B593"
+    ],
+    "accent": "#3DBFCC"
+  },
+  "metrics": {
+    "explained_variance": [
+      0.6445823899609977,
+      0.33896980600208143
+    ],
+    "feature_columns": [
+      "feature_1",
+      "feature_2",
+      "feature_3",
+      "feature_4"
+    ]
+  },
+  "alt_text": "Pca Biplot. The chart is based on 66 source rows; consult figure-metadata.json for computed values and methods."
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "sankey-diagram",
+  "profile": "journal_print",
+  "theme": "coastal-sunset",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 6,
+  "source_sha256": "875f81482c68d4421ef6595c41aeb6012d662a51ef3ecea756093812c1e90204",
+  "palette": {
+    "categorical": [
+      "#497AB7",
+      "#7EB6D5",
+      "#BDE2ED",
+      "#F0F0D9",
+      "#FEEAA1",
+      "#FCB567",
+      "#F27144"
+    ],
+    "sequential": [
+      "#FFFAF0",
+      "#FEEAA1",
+      "#FCB567",
+      "#F27144"
+    ],
+    "diverging": [
+      "#497AB7",
+      "#F0F0D9",
+      "#F27144"
+    ],
+    "accent": "#F27144"
+  },
+  "metrics": {
+    "total_flow": 223.0,
+    "links": [
+      {
+        "source": "Discovery",
+        "target": "Selected",
+        "value": 72
+      },
+      {
+        "source": "Discovery",
+        "target": "Excluded",
+        "value": 28
+      },
+      {
+        "source": "Validation",
+        "target": "Confirmed",
+        "value": 51
+      },
+      {
+        "source": "Validation",
+        "target": "Rejected",
+        "value": 21
+      },
+      {
+        "source": "Deployment",
+        "target": "Adopted",
+        "value": 39
+      },
+      {
+        "source": "Deployment",
+        "target": "Deferred",
+        "value": 12
+      }
+    ]
+  },
+  "alt_text": "Sankey Diagram. The chart is based on 6 source rows; consult figure-metadata.json for computed values and methods."
+}

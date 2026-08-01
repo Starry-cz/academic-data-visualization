@@ -1,0 +1,1 @@
+Pca Biplot. The chart is based on 66 source rows; consult figure-metadata.json for computed values and methods.

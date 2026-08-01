@@ -9,68 +9,68 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `causal-dag` | 个体、组或时间点 | treatment, time, outcome | 按需实现 |
-| `causal-forest-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `causal-loop-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `concept-framework-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `conceptual-mechanism-matrix` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `context-mechanism-outcome-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `cross-level-effect-model-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `evidence-chain-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `input-process-output-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `input-process-output-model-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `logic-model-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 按需实现 |
-| `logic-tree` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `mechanism-chain-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `mediation-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `moderation-mediation-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `moderation-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `multilevel-theoretical-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `objective-tree` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `path-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `problem-tree` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `research-hypothesis-relationship-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `sem-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `system-dynamics-stock-and-flow-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `theoretical-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
-| `theory-of-change-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 按需实现 |
+| `causal-dag` | 个体、组或时间点 | treatment, time, outcome | 知识登记 |
+| `causal-forest-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `causal-loop-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `concept-framework-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `conceptual-mechanism-matrix` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `context-mechanism-outcome-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `cross-level-effect-model-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `evidence-chain-diagram` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `input-process-output-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `input-process-output-model-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `logic-model-plot` | 文本、文档、编码、主题或案例 | text_unit_or_code, frequency_or_relation | 知识登记 |
+| `logic-tree` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `mechanism-chain-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `mediation-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `moderation-mediation-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `moderation-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `multilevel-theoretical-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `objective-tree` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `path-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `problem-tree` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `research-hypothesis-relationship-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `sem-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `system-dynamics-stock-and-flow-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `theoretical-model-plot` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
+| `theory-of-change-diagram` | 概念、变量、机制、路径或系统状态 | concept_or_variable, relationship | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 因果有向无环图 / Causal DAG | `causal-dag` | 处理效应、反事实趋势与识别假设 | 按需实现 |
-| 因果森林图 / Causal Forest Plot | `causal-forest-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 因果回路图 / Causal Loop Diagram | `causal-loop-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 概念框架图 / Concept Framework Diagram | `concept-framework-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 概念机制矩阵 / Conceptual Mechanism Matrix | `conceptual-mechanism-matrix` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| Context–Mechanism–Outcome图 / Context Mechanism Outcome Plot | `context-mechanism-outcome-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 跨层作用模型图 / Cross-level Effect Model Diagram | `cross-level-effect-model-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 证据链图 / Evidence Chain Diagram | `evidence-chain-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 投入—过程—产出图 / Input Process Output Diagram | `input-process-output-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| IPO模型图 / Input–Process–Output Model Diagram | `input-process-output-model-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 逻辑模型图 / Logic Model Plot | `logic-model-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 按需实现 |
-| 逻辑树 / Logic Tree | `logic-tree` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 机制链条图 / Mechanism Chain Diagram | `mechanism-chain-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 中介模型图 / Mediation Model Plot | `mediation-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 调节中介模型图 / Moderation Mediation Model Plot | `moderation-mediation-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 调节模型图 / Moderation Model Plot | `moderation-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 多层理论模型图 / Multilevel Theoretical Model Plot | `multilevel-theoretical-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 目标树 / Objective Tree | `objective-tree` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 路径图 / Path Diagram | `path-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 问题树 / Problem Tree | `problem-tree` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 研究假设关系图 / Research Hypothesis Relationship Plot | `research-hypothesis-relationship-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 结构方程模型图 / SEM Diagram | `sem-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 系统动力学库存—流量图 / System Dynamics Stock and Flow Diagram | `system-dynamics-stock-and-flow-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| 理论模型图 / Theoretical Model Plot | `theoretical-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
-| Theory of Change图 / Theory of Change Diagram | `theory-of-change-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 按需实现 |
+| 因果有向无环图 / Causal DAG | `causal-dag` | 处理效应、反事实趋势与识别假设 | 知识登记 |
+| 因果森林图 / Causal Forest Plot | `causal-forest-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 因果回路图 / Causal Loop Diagram | `causal-loop-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 概念框架图 / Concept Framework Diagram | `concept-framework-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 概念机制矩阵 / Conceptual Mechanism Matrix | `conceptual-mechanism-matrix` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| Context–Mechanism–Outcome图 / Context Mechanism Outcome Plot | `context-mechanism-outcome-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 跨层作用模型图 / Cross-level Effect Model Diagram | `cross-level-effect-model-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 证据链图 / Evidence Chain Diagram | `evidence-chain-diagram` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 投入—过程—产出图 / Input Process Output Diagram | `input-process-output-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| IPO模型图 / Input–Process–Output Model Diagram | `input-process-output-model-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 逻辑模型图 / Logic Model Plot | `logic-model-plot` | 展示质性编码、文本主题、语义关系与叙事结构 | 知识登记 |
+| 逻辑树 / Logic Tree | `logic-tree` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 机制链条图 / Mechanism Chain Diagram | `mechanism-chain-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 中介模型图 / Mediation Model Plot | `mediation-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 调节中介模型图 / Moderation Mediation Model Plot | `moderation-mediation-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 调节模型图 / Moderation Model Plot | `moderation-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 多层理论模型图 / Multilevel Theoretical Model Plot | `multilevel-theoretical-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 目标树 / Objective Tree | `objective-tree` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 路径图 / Path Diagram | `path-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 问题树 / Problem Tree | `problem-tree` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 研究假设关系图 / Research Hypothesis Relationship Plot | `research-hypothesis-relationship-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 结构方程模型图 / SEM Diagram | `sem-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 系统动力学库存—流量图 / System Dynamics Stock and Flow Diagram | `system-dynamics-stock-and-flow-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| 理论模型图 / Theoretical Model Plot | `theoretical-model-plot` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
+| Theory of Change图 / Theory of Change Diagram | `theory-of-change-diagram` | 表达因果机制、理论关系、路径与逻辑模型 | 知识登记 |
 
 ## 图型详细条目
 
@@ -93,7 +93,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -119,7 +119,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -145,7 +145,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -171,7 +171,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -197,7 +197,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -223,7 +223,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -249,7 +249,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -275,7 +275,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -301,7 +301,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -327,7 +327,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -353,7 +353,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -379,7 +379,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -405,7 +405,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -431,7 +431,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -457,7 +457,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -483,7 +483,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -509,7 +509,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -535,7 +535,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -561,7 +561,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -587,7 +587,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -613,7 +613,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -639,7 +639,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -665,7 +665,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -691,7 +691,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -717,7 +717,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

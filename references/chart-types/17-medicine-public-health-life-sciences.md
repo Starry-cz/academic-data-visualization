@@ -9,158 +9,158 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `biomarker-box-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
+| `biomarker-box-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
 | `bland-altman-plot` | 成对观测 | x, y | 可复用模式 |
-| `calibration-curve` | 样本或模型折 | truth, prediction | 可复用模式 |
-| `case-timeline` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `cell-communication-network` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
+| `calibration-curve` | 样本或模型折 | truth, prediction | 生产已验证 |
+| `case-timeline` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `cell-communication-network` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
 | `cell-composition-plot` | 细胞或空间点 | cell, feature, value | 可复用模式 |
-| `chord-diagram` | 节点或边 | source, target, weight | 生产模板 |
-| `circos-plot` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `colocalization-plot` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `competing-risk-plot` | 受试者 | time, event, group | 按需实现 |
-| `concentration-time-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
+| `chord-diagram` | 节点或边 | source, target, weight | 历史示例 |
+| `circos-plot` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `colocalization-plot` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `competing-risk-plot` | 受试者 | time, event, group | 知识登记 |
+| `concentration-time-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
 | `cumulative-hazard-curve` | 受试者 | time, event, group | 可复用模式 |
-| `cumulative-incidence-curve` | 受试者 | time, event, group | 按需实现 |
-| `decision-curve` | 样本或模型折 | truth, prediction | 按需实现 |
+| `cumulative-incidence-curve` | 受试者 | time, event, group | 知识登记 |
+| `decision-curve` | 样本或模型折 | truth, prediction | 知识登记 |
 | `dendrogram` | 节点或边 | source, target, weight | 可复用模式 |
 | `diagnostic-test-plot` | 受试者或研究 | group, outcome | 可复用模式 |
 | `difference-in-differences-plot` | 受试者或研究 | group, outcome | 可复用模式 |
-| `dose-response-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `enrichment-bar-chart` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `enrichment-bubble-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `epidemic-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
+| `dose-response-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `enrichment-bar-chart` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `enrichment-bubble-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `epidemic-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
 | `event-study-plot` | 受试者或研究 | group, outcome | 可复用模式 |
-| `forest-plot` | 效应或比较 | estimate, lower, upper | 可复用模式 |
-| `gene-expression-heatmap` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `genome-browser-track` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
-| `growth-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 按需实现 |
-| `gsea-curve` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
-| `hotspot-map` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `image-plus-quant-composite` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `incidence-map` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `isosurface` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `kaplan-meier-curve` | 受试者 | time, event, group | 可复用模式 |
-| `line-scan-intensity` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `locuszoom-plot` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
+| `forest-plot` | 效应或比较 | estimate, lower, upper | 生产已验证 |
+| `gene-expression-heatmap` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `genome-browser-track` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
+| `growth-curve` | 学生、题目、班级、学校或潜变量 | measurement_or_learning_output | 知识登记 |
+| `gsea-curve` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
+| `hotspot-map` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `image-plus-quant-composite` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `incidence-map` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `isosurface` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `kaplan-meier-curve` | 受试者 | time, event, group | 生产已验证 |
+| `line-scan-intensity` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `locuszoom-plot` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
 | `love-plot` | 受试者或研究 | group, outcome | 可复用模式 |
 | `ma-plot` | 基因、位点或通路 | feature, effect, significance | 可复用模式 |
-| `manhattan-plot` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
-| `mantel-correlation-plot` | 基因、位点或通路 | feature, effect, significance | 生产模板 |
-| `marker-gene-dot-plot` | 细胞或空间点 | cell, feature, value | 生产模板 |
+| `manhattan-plot` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
+| `mantel-correlation-plot` | 基因、位点或通路 | feature, effect, significance | 历史示例 |
+| `marker-gene-dot-plot` | 细胞或空间点 | cell, feature, value | 历史示例 |
 | `meta-analysis-funnel-plot` | 效应或比较 | estimate, lower, upper | 可复用模式 |
-| `microscopy-image-plate` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `mutation-landscape` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `mutation-lollipop-plot` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
-| `nelson-aalen-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `nomogram` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `oncoplot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `oncoprint` | 基因、位点或通路 | feature, effect, significance | 按需实现 |
-| `pathology-image-plate` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `patient-flow-diagram` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `pca-biplot` | 样本 | numeric_features | 生产模板 |
-| `pharmacokinetic-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `phylogenetic-tree` | 节点或边 | source, target, weight | 按需实现 |
-| `prisma-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
-| `pseudotime-heatmap` | 细胞或空间点 | cell, feature, value | 按需实现 |
-| `risk-score-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `roc-curve` | 样本或模型折 | truth, prediction | 生产模板 |
-| `single-cell-trajectory` | 细胞或空间点 | cell, feature, value | 按需实现 |
-| `single-cell-umap` | 细胞或空间点 | cell, feature, value | 按需实现 |
-| `spatial-transcriptomics-overlay` | 细胞或空间点 | cell, feature, value | 按需实现 |
-| `swimmer-plot` | 受试者 | time, event, group | 按需实现 |
-| `transmission-network` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `tsne-plot` | 样本 | numeric_features | 按需实现 |
-| `tumor-burden-spider-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `tumor-response-waterfall-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 按需实现 |
-| `umap-plot` | 样本 | numeric_features | 按需实现 |
+| `microscopy-image-plate` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `mutation-landscape` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `mutation-lollipop-plot` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
+| `nelson-aalen-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `nomogram` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `oncoplot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `oncoprint` | 基因、位点或通路 | feature, effect, significance | 知识登记 |
+| `pathology-image-plate` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `patient-flow-diagram` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `pca-biplot` | 样本 | numeric_features | 生产已验证 |
+| `pharmacokinetic-curve` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `phylogenetic-tree` | 节点或边 | source, target, weight | 知识登记 |
+| `prisma-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
+| `pseudotime-heatmap` | 细胞或空间点 | cell, feature, value | 知识登记 |
+| `risk-score-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `roc-curve` | 样本或模型折 | truth, prediction | 生产已验证 |
+| `single-cell-trajectory` | 细胞或空间点 | cell, feature, value | 知识登记 |
+| `single-cell-umap` | 细胞或空间点 | cell, feature, value | 知识登记 |
+| `spatial-transcriptomics-overlay` | 细胞或空间点 | cell, feature, value | 知识登记 |
+| `swimmer-plot` | 受试者 | time, event, group | 知识登记 |
+| `transmission-network` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `tsne-plot` | 样本 | numeric_features | 知识登记 |
+| `tumor-burden-spider-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `tumor-response-waterfall-plot` | 患者、事件、样本、基因、细胞或通路 | biomedical_measure_or_model_output | 知识登记 |
+| `umap-plot` | 样本 | numeric_features | 知识登记 |
 | `upset-plot` | 元素 | set_membership | 可复用模式 |
 | `venn-diagram` | 元素 | set_membership | 可复用模式 |
-| `volcano-plot` | 基因、位点或通路 | feature, effect, significance | 生产模板 |
-| `volume-rendering` | 图像、视野或样本 | image, measurement | 按需实现 |
+| `volcano-plot` | 基因、位点或通路 | feature, effect, significance | 生产已验证 |
+| `volume-rendering` | 图像、视野或样本 | image, measurement | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 生物标志物箱线图 / Biomarker Box Plot | `biomarker-box-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
+| 生物标志物箱线图 / Biomarker Box Plot | `biomarker-box-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
 | Bland–Altman图 / Bland–Altman Plot | `bland-altman-plot` | 变量关系、拟合与一致性 | 可复用模式 |
-| 校准曲线 / Calibration Curve | `calibration-curve` | 预测区分度、校准或误差结构 | 可复用模式 |
-| 病例时间轴 / Case Timeline | `case-timeline` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 细胞通信网络图 / Cell Communication Network | `cell-communication-network` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
+| 校准曲线 / Calibration Curve | `calibration-curve` | 预测区分度、校准或误差结构 | 生产已验证 |
+| 病例时间轴 / Case Timeline | `case-timeline` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 细胞通信网络图 / Cell Communication Network | `cell-communication-network` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
 | 细胞组成图 / Cell Composition Plot | `cell-composition-plot` | 细胞状态、表达与空间组学结构 | 可复用模式 |
-| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 生产模板 |
-| Circos图 / Circos Plot | `circos-plot` | 多证据整合、三维或高级结构 | 按需实现 |
-| 共定位图 / Colocalization Plot | `colocalization-plot` | 图像结构、通道与空间定量 | 按需实现 |
-| 竞争风险图 / Competing Risk Plot | `competing-risk-plot` | 事件时间、生存概率与竞争结局 | 按需实现 |
-| 浓度—时间曲线 / Concentration–time Curve | `concentration-time-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
+| 弦图 / Chord Diagram | `chord-diagram` | 实体连接、权重与社区结构 | 历史示例 |
+| Circos图 / Circos Plot | `circos-plot` | 多证据整合、三维或高级结构 | 知识登记 |
+| 共定位图 / Colocalization Plot | `colocalization-plot` | 图像结构、通道与空间定量 | 知识登记 |
+| 竞争风险图 / Competing Risk Plot | `competing-risk-plot` | 事件时间、生存概率与竞争结局 | 知识登记 |
+| 浓度—时间曲线 / Concentration–time Curve | `concentration-time-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
 | 累计风险曲线 / Cumulative Hazard Curve | `cumulative-hazard-curve` | 事件时间、生存概率与竞争结局 | 可复用模式 |
-| 累计发生率曲线 / Cumulative Incidence Curve | `cumulative-incidence-curve` | 事件时间、生存概率与竞争结局 | 按需实现 |
-| 决策曲线 / Decision Curve | `decision-curve` | 预测区分度、校准或误差结构 | 按需实现 |
+| 累计发生率曲线 / Cumulative Incidence Curve | `cumulative-incidence-curve` | 事件时间、生存概率与竞争结局 | 知识登记 |
+| 决策曲线 / Decision Curve | `decision-curve` | 预测区分度、校准或误差结构 | 知识登记 |
 | 树状图 / Dendrogram | `dendrogram` | 实体连接、权重与社区结构 | 可复用模式 |
 | 诊断试验性能图 / Diagnostic Test Performance Plot | `diagnostic-test-plot` | 临床路径、效应与流行病学比较 | 可复用模式 |
 | 双重差分图 / Difference-in-Differences Plot | `difference-in-differences-plot` | 临床路径、效应与流行病学比较 | 可复用模式 |
-| 剂量—反应曲线 / Dose Response Curve | `dose-response-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 富集条形图 / Enrichment Bar Chart | `enrichment-bar-chart` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 富集气泡图 / Enrichment Bubble Plot | `enrichment-bubble-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 流行病曲线 / Epidemic Curve | `epidemic-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
+| 剂量—反应曲线 / Dose Response Curve | `dose-response-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 富集条形图 / Enrichment Bar Chart | `enrichment-bar-chart` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 富集气泡图 / Enrichment Bubble Plot | `enrichment-bubble-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 流行病曲线 / Epidemic Curve | `epidemic-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
 | 事件研究图 / Event Study Plot | `event-study-plot` | 临床路径、效应与流行病学比较 | 可复用模式 |
-| 森林图 / Forest Plot | `forest-plot` | 效应方向、大小与不确定性 | 可复用模式 |
-| 基因表达热力图 / Gene Expression Heatmap | `gene-expression-heatmap` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 基因组浏览器轨道 / Genome Browser Track | `genome-browser-track` | 基因组位置、表达差异与通路信号 | 按需实现 |
-| 成长曲线图 / Growth Curve | `growth-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 按需实现 |
-| GSEA富集曲线 / GSEA Enrichment Curve | `gsea-curve` | 基因组位置、表达差异与通路信号 | 按需实现 |
-| 热点地图 / Hotspot Map | `hotspot-map` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 图像与定量复合图 / Image-plus-quantification Composite | `image-plus-quant-composite` | 多证据整合、三维或高级结构 | 按需实现 |
-| 发病率地图 / Incidence Map | `incidence-map` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 等值面 / Isosurface | `isosurface` | 图像结构、通道与空间定量 | 按需实现 |
-| Kaplan–Meier曲线 / Kaplan–Meier Curve | `kaplan-meier-curve` | 事件时间、生存概率与竞争结局 | 可复用模式 |
-| 线扫描强度图 / Line-scan Intensity Plot | `line-scan-intensity` | 图像结构、通道与空间定量 | 按需实现 |
-| 区域关联图 / LocusZoom Plot | `locuszoom-plot` | 基因组位置、表达差异与通路信号 | 按需实现 |
+| 森林图 / Forest Plot | `forest-plot` | 效应方向、大小与不确定性 | 生产已验证 |
+| 基因表达热力图 / Gene Expression Heatmap | `gene-expression-heatmap` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 基因组浏览器轨道 / Genome Browser Track | `genome-browser-track` | 基因组位置、表达差异与通路信号 | 知识登记 |
+| 成长曲线图 / Growth Curve | `growth-curve` | 表达教育测量、心理计量、学习过程与学校效应 | 知识登记 |
+| GSEA富集曲线 / GSEA Enrichment Curve | `gsea-curve` | 基因组位置、表达差异与通路信号 | 知识登记 |
+| 热点地图 / Hotspot Map | `hotspot-map` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 图像与定量复合图 / Image-plus-quantification Composite | `image-plus-quant-composite` | 多证据整合、三维或高级结构 | 知识登记 |
+| 发病率地图 / Incidence Map | `incidence-map` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 等值面 / Isosurface | `isosurface` | 图像结构、通道与空间定量 | 知识登记 |
+| Kaplan–Meier曲线 / Kaplan–Meier Curve | `kaplan-meier-curve` | 事件时间、生存概率与竞争结局 | 生产已验证 |
+| 线扫描强度图 / Line-scan Intensity Plot | `line-scan-intensity` | 图像结构、通道与空间定量 | 知识登记 |
+| 区域关联图 / LocusZoom Plot | `locuszoom-plot` | 基因组位置、表达差异与通路信号 | 知识登记 |
 | 协变量平衡图 / Love Plot | `love-plot` | 临床路径、效应与流行病学比较 | 可复用模式 |
 | MA图 / MA Plot | `ma-plot` | 基因组位置、表达差异与通路信号 | 可复用模式 |
-| 曼哈顿图 / Manhattan Plot | `manhattan-plot` | 基因组位置、表达差异与通路信号 | 按需实现 |
-| Mantel相关图 / Mantel Correlation Plot | `mantel-correlation-plot` | 基因组位置、表达差异与通路信号 | 生产模板 |
-| 标记基因点图 / Marker-gene Dot Plot | `marker-gene-dot-plot` | 细胞状态、表达与空间组学结构 | 生产模板 |
+| 曼哈顿图 / Manhattan Plot | `manhattan-plot` | 基因组位置、表达差异与通路信号 | 知识登记 |
+| Mantel相关图 / Mantel Correlation Plot | `mantel-correlation-plot` | 基因组位置、表达差异与通路信号 | 历史示例 |
+| 标记基因点图 / Marker-gene Dot Plot | `marker-gene-dot-plot` | 细胞状态、表达与空间组学结构 | 历史示例 |
 | 元分析漏斗图 / Meta-analysis Funnel Plot | `meta-analysis-funnel-plot` | 效应方向、大小与不确定性 | 可复用模式 |
-| 显微图像板 / Microscopy Image Plate | `microscopy-image-plate` | 图像结构、通道与空间定量 | 按需实现 |
-| Mutation Landscape / Mutation Landscape | `mutation-landscape` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 突变棒棒糖图 / Mutation Lollipop Plot | `mutation-lollipop-plot` | 基因组位置、表达差异与通路信号 | 按需实现 |
-| Nelson–Aalen曲线 / Nelson–Aalen Curve | `nelson-aalen-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 列线图 / Nomogram | `nomogram` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| Oncoplot / Oncoplot | `oncoplot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 肿瘤突变谱图 / OncoPrint | `oncoprint` | 基因组位置、表达差异与通路信号 | 按需实现 |
-| 病理图像板 / Pathology Image Plate | `pathology-image-plate` | 图像结构、通道与空间定量 | 按需实现 |
-| 患者流程图 / Patient Flow Diagram | `patient-flow-diagram` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| PCA双标图 / PCA Biplot | `pca-biplot` | 多变量结构、相关与低维表示 | 生产模板 |
-| 药代动力学曲线 / Pharmacokinetic Curve | `pharmacokinetic-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 系统发育树 / Phylogenetic Tree | `phylogenetic-tree` | 实体连接、权重与社区结构 | 按需实现 |
-| PRISMA流程图 / PRISMA Flow Diagram | `prisma-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
-| 拟时间热图 / Pseudotime Heatmap | `pseudotime-heatmap` | 细胞状态、表达与空间组学结构 | 按需实现 |
-| 风险评分图 / Risk Score Plot | `risk-score-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| ROC曲线 / ROC Curve | `roc-curve` | 预测区分度、校准或误差结构 | 生产模板 |
-| 单细胞轨迹图 / Single-cell Trajectory | `single-cell-trajectory` | 细胞状态、表达与空间组学结构 | 按需实现 |
-| 单细胞UMAP图 / Single-cell UMAP | `single-cell-umap` | 细胞状态、表达与空间组学结构 | 按需实现 |
-| 空间转录组叠加图 / Spatial Transcriptomics Overlay | `spatial-transcriptomics-overlay` | 细胞状态、表达与空间组学结构 | 按需实现 |
-| 游泳图 / Swimmer Plot | `swimmer-plot` | 事件时间、生存概率与竞争结局 | 按需实现 |
-| 传播网络图 / Transmission Network | `transmission-network` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| t-SNE图 / t-SNE Plot | `tsne-plot` | 多变量结构、相关与低维表示 | 按需实现 |
-| 肿瘤负荷蜘蛛图 / Tumor Burden Spider Plot | `tumor-burden-spider-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| 肿瘤疗效瀑布图 / Tumor Response Waterfall Plot | `tumor-response-waterfall-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 按需实现 |
-| UMAP图 / UMAP Plot | `umap-plot` | 多变量结构、相关与低维表示 | 按需实现 |
+| 显微图像板 / Microscopy Image Plate | `microscopy-image-plate` | 图像结构、通道与空间定量 | 知识登记 |
+| Mutation Landscape / Mutation Landscape | `mutation-landscape` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 突变棒棒糖图 / Mutation Lollipop Plot | `mutation-lollipop-plot` | 基因组位置、表达差异与通路信号 | 知识登记 |
+| Nelson–Aalen曲线 / Nelson–Aalen Curve | `nelson-aalen-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 列线图 / Nomogram | `nomogram` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| Oncoplot / Oncoplot | `oncoplot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 肿瘤突变谱图 / OncoPrint | `oncoprint` | 基因组位置、表达差异与通路信号 | 知识登记 |
+| 病理图像板 / Pathology Image Plate | `pathology-image-plate` | 图像结构、通道与空间定量 | 知识登记 |
+| 患者流程图 / Patient Flow Diagram | `patient-flow-diagram` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| PCA双标图 / PCA Biplot | `pca-biplot` | 多变量结构、相关与低维表示 | 生产已验证 |
+| 药代动力学曲线 / Pharmacokinetic Curve | `pharmacokinetic-curve` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 系统发育树 / Phylogenetic Tree | `phylogenetic-tree` | 实体连接、权重与社区结构 | 知识登记 |
+| PRISMA流程图 / PRISMA Flow Diagram | `prisma-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
+| 拟时间热图 / Pseudotime Heatmap | `pseudotime-heatmap` | 细胞状态、表达与空间组学结构 | 知识登记 |
+| 风险评分图 / Risk Score Plot | `risk-score-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| ROC曲线 / ROC Curve | `roc-curve` | 预测区分度、校准或误差结构 | 生产已验证 |
+| 单细胞轨迹图 / Single-cell Trajectory | `single-cell-trajectory` | 细胞状态、表达与空间组学结构 | 知识登记 |
+| 单细胞UMAP图 / Single-cell UMAP | `single-cell-umap` | 细胞状态、表达与空间组学结构 | 知识登记 |
+| 空间转录组叠加图 / Spatial Transcriptomics Overlay | `spatial-transcriptomics-overlay` | 细胞状态、表达与空间组学结构 | 知识登记 |
+| 游泳图 / Swimmer Plot | `swimmer-plot` | 事件时间、生存概率与竞争结局 | 知识登记 |
+| 传播网络图 / Transmission Network | `transmission-network` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| t-SNE图 / t-SNE Plot | `tsne-plot` | 多变量结构、相关与低维表示 | 知识登记 |
+| 肿瘤负荷蜘蛛图 / Tumor Burden Spider Plot | `tumor-burden-spider-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| 肿瘤疗效瀑布图 / Tumor Response Waterfall Plot | `tumor-response-waterfall-plot` | 表达临床、生存、流行病学、基因组与生命科学证据 | 知识登记 |
+| UMAP图 / UMAP Plot | `umap-plot` | 多变量结构、相关与低维表示 | 知识登记 |
 | UpSet图 / UpSet Plot | `upset-plot` | 集合交集与成员关系 | 可复用模式 |
 | 韦恩图 / Venn Diagram | `venn-diagram` | 集合交集与成员关系 | 可复用模式 |
-| 火山图 / Volcano Plot | `volcano-plot` | 基因组位置、表达差异与通路信号 | 生产模板 |
-| 体渲染 / Volume Rendering | `volume-rendering` | 图像结构、通道与空间定量 | 按需实现 |
+| 火山图 / Volcano Plot | `volcano-plot` | 基因组位置、表达差异与通路信号 | 生产已验证 |
+| 体渲染 / Volume Rendering | `volume-rendering` | 图像结构、通道与空间定量 | 知识登记 |
 
 ## 图型详细条目
 
@@ -183,7 +183,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -209,7 +209,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -235,9 +235,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/calibration-curve`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：roc-curve；precision-recall-curve；confusion-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -261,7 +261,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -287,7 +287,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -313,7 +313,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -339,7 +339,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/ChordDiagram`
 - **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -365,7 +365,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -391,7 +391,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -417,7 +417,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -443,7 +443,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -469,7 +469,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -495,7 +495,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -521,7 +521,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -547,7 +547,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -573,7 +573,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -599,7 +599,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -625,7 +625,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -651,7 +651,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -677,7 +677,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -703,7 +703,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -729,7 +729,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -755,7 +755,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -781,9 +781,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/forest-plot`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：coefficient-plot；interval-plot；error-bar-plot
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -807,7 +807,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -833,7 +833,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -859,7 +859,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -885,7 +885,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -911,7 +911,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -937,7 +937,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -963,7 +963,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -989,7 +989,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1015,9 +1015,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
-- **可复用资产**：无现成资产
-- **后端与依赖**：python；r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/kaplan-meier-curve`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：cumulative-hazard-curve；cumulative-incidence-curve；competing-risk-plot
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -1041,7 +1041,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1067,7 +1067,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1093,7 +1093,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1119,7 +1119,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1145,7 +1145,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1171,7 +1171,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/MantelCorrelation`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1197,7 +1197,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/MarkerGeneDotPlot`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1223,7 +1223,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1249,7 +1249,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1275,7 +1275,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1301,7 +1301,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1327,7 +1327,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1353,7 +1353,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1379,7 +1379,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1405,7 +1405,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；domain-specific genomic annotation
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1431,7 +1431,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1457,7 +1457,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1483,9 +1483,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/PCA`
-- **后端与依赖**：r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/pca-biplot`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-matrix；grouped-correlation-matrix；correlation-bubble-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -1509,7 +1509,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1535,7 +1535,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1561,7 +1561,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1587,7 +1587,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；single-cell or spatial-omics object
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1613,7 +1613,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1639,9 +1639,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/AUROC`
-- **后端与依赖**：python
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/roc-curve`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：precision-recall-curve；calibration-curve；confusion-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -1665,7 +1665,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；single-cell or spatial-omics object
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1691,7 +1691,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；single-cell or spatial-omics object
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1717,7 +1717,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；single-cell or spatial-omics object
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1743,7 +1743,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1769,7 +1769,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1795,7 +1795,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1821,7 +1821,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1847,7 +1847,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1873,7 +1873,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1899,7 +1899,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1925,7 +1925,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1951,9 +1951,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/volcano`
-- **后端与依赖**：python
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/volcano-plot`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：ma-plot；manhattan-plot；locuszoom-plot
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -1977,7 +1977,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸

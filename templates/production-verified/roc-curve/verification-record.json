@@ -1,0 +1,114 @@
+{
+  "verification_version": "2.0.0",
+  "asset_id": "roc-curve",
+  "verified_at": "2026-08-01",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0"
+  },
+  "fixture": {
+    "path": "fixture.csv",
+    "sha256": "761774e1e904e1a4f14a46991004c15c777da313258b5ba6fa4eb527d65fd1f1"
+  },
+  "modes": {
+    "demo": {
+      "runner_version": "2.0.0",
+      "asset_id": "roc-curve",
+      "mode": "demo",
+      "profile": "journal_print",
+      "theme": "literature-clinical",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "roc-curve",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "literature-clinical",
+        "--seed",
+        "20260801",
+        "--demo"
+      ],
+      "duration_seconds": 4.174,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "roc-curve",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    },
+    "input": {
+      "runner_version": "2.0.0",
+      "asset_id": "roc-curve",
+      "mode": "input",
+      "profile": "journal_print",
+      "theme": "literature-clinical",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "roc-curve",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "literature-clinical",
+        "--seed",
+        "20260801",
+        "--input",
+        "<INPUT_CSV>"
+      ],
+      "duration_seconds": 4.714,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "roc-curve",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "figure.pdf": "ffed686d1f9abdb1bd901c55d15bd795c6942d28afade80e4efd608c5d192c21",
+    "figure.svg": "9cdf4424f6ca63e602326a1eb2179832833326592c0b68aa1e14bbf4e01d3a6d",
+    "figure.png": "3bf5b731d9b6412ab037186d67edc0ae0c72d43ba91e390863632026b0d17c0f",
+    "figure-grayscale.png": "f9d15e518ccb4b32a41e582ae8201ceb57d03686c6f826452ae28c653a0088c6",
+    "figure-metadata.json": "b31c3bcbdbea2ef3430b591c70eaa9754daf24ebd4d694cc038087db14f05fe8",
+    "alt-text.txt": "392877d0b0120e0b4391eacd234686c235801ef00d662e140c416247dbf9823f",
+    "source-data.csv": "65e8db238f709aee2dc3ee1b15bd56a7737939a9e56fc7a72563882bf9a2bbe7",
+    "qa-report.json": "9c9134a4a6e8a2e8e221f4530066fb3698616181d639915840b5c2d2834b2095",
+    "run-record.json": "92965196b9d2271adf89bb17d714eecf091b1b9ddaa3d9fad5ce28920f67ad73"
+  },
+  "visual_review": {
+    "status": "passed",
+    "rubric": "references/visual-review-protocol.md",
+    "reviewer": "Codex visual QA 2026-08-01"
+  }
+}

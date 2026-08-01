@@ -11,6 +11,7 @@ from pathlib import Path
 from chart_registry_lib import (
     FIGURES_DIR,
     ROOT,
+    asset_records,
     load_registry,
     load_schema,
     normalize_alias,
@@ -20,6 +21,7 @@ from chart_registry_lib import (
     status_counts,
     validate_schema,
 )
+from manifest_lib import load_manifest, validate_manifest
 
 
 def validate_registry() -> list[str]:
@@ -58,41 +60,33 @@ def validate_registry() -> list[str]:
         for alias in [chart["name_zh"], chart["name_en"], *chart["aliases_zh"], *chart["aliases_en"]]:
             alias_owners[normalize_alias(alias)].add(chart["id"])
 
-        if chart["implementation_status"] == "production_template":
+        if chart["implementation_status"] in {"legacy_example", "demo_runnable", "production_verified", "deprecated"}:
             if not chart["asset_path"]:
-                errors.append(f"{chart['id']}: production template has no asset_path")
+                errors.append(f"{chart['id']}: implemented record has no asset_path")
                 continue
-            if not chart["backends"]:
-                errors.append(f"{chart['id']}: production template must declare its real backend")
             asset_dir = ROOT / chart["asset_path"]
             if not asset_dir.is_dir():
                 errors.append(f"{chart['id']}: asset directory does not exist: {chart['asset_path']}")
                 continue
-            scripts = [*asset_dir.glob("*.py"), *asset_dir.glob("*.R"), *asset_dir.glob("*.r")]
-            previews = list(asset_dir.glob("*.png"))
             manifest_path = asset_dir / "asset.yaml"
-            if not scripts or not previews or not manifest_path.is_file():
-                errors.append(f"{chart['id']}: production asset requires script, PNG, and asset.yaml")
+            if not manifest_path.is_file():
+                errors.append(f"{chart['id']}: implemented asset requires asset.yaml")
                 continue
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            required_manifest_fields = {
-                "manifest_version", "chart_ids", "backend", "entrypoints", "previews",
-                "outputs", "data", "supported_transforms", "unsupported_cases",
-                "aspect_ratio", "theme", "qa",
-            }
-            missing_manifest_fields = required_manifest_fields - manifest.keys()
-            if missing_manifest_fields:
-                errors.append(
-                    f"{chart['id']}: manifest missing fields {sorted(missing_manifest_fields)}"
-                )
+            manifest = load_manifest(manifest_path)
+            errors.extend(f"{chart['id']}: {error}" for error in validate_manifest(manifest, asset_dir))
             if chart["id"] not in manifest.get("chart_ids", []):
                 errors.append(f"{chart['id']}: manifest does not list the canonical ID")
-            for field in ("entrypoints", "previews"):
-                for name in manifest.get(field, []):
-                    if not (asset_dir / name).is_file():
-                        errors.append(f"{chart['id']}: manifest {field} path missing: {name}")
+            if manifest.get("asset_status") != chart["implementation_status"]:
+                errors.append(f"{chart['id']}: manifest and registry implementation status differ")
+            if chart["implementation_status"] == "production_verified":
+                if not chart["backends"]:
+                    errors.append(f"{chart['id']}: production_verified must declare its backend")
+                if chart["verification_status"] != "release_passed":
+                    errors.append(f"{chart['id']}: production_verified must be release_passed")
+                if not chart["asset_path"].startswith("templates/production-verified/"):
+                    errors.append(f"{chart['id']}: verified template must live under templates/production-verified")
         elif chart["asset_path"] is not None:
-            errors.append(f"{chart['id']}: non-production record must not declare asset_path")
+            errors.append(f"{chart['id']}: knowledge-only record must not declare asset_path")
 
     resolved_terms = {normalize_alias(term["term"]) for term in registry["ambiguous_terms"]}
     for alias, owners in alias_owners.items():
@@ -135,17 +129,23 @@ def validate_registry() -> list[str]:
         if chart["registry_origin"] == "repository_extension" and chart["source_memberships"]:
             errors.append(f"{chart['id']}: repository_extension unexpectedly has source memberships")
 
-    production_paths = {ROOT / chart["asset_path"] for chart in production_records(registry)}
+    # 旧资产可作为历史示例保留；它们通过 manifest 的 canonical_successor
+    # 指向唯一的生产模板，而不再占用 canonical chart 的执行入口。
+    legacy_paths = {
+        path
+        for path in FIGURES_DIR.iterdir()
+        if path.is_dir() and (path / "asset.yaml").is_file()
+    }
     asset_dirs = {
         path for path in FIGURES_DIR.iterdir()
         if path.is_dir() and any([*path.glob("*.py"), *path.glob("*.R"), *path.glob("*.r")])
     }
-    missing_registry = sorted(str(path.relative_to(ROOT)) for path in asset_dirs - production_paths)
-    orphan_registry = sorted(str(path.relative_to(ROOT)) for path in production_paths - asset_dirs)
+    missing_registry = sorted(str(path.relative_to(ROOT)) for path in asset_dirs - legacy_paths)
+    orphan_registry = sorted(str(path.relative_to(ROOT)) for path in legacy_paths - asset_dirs)
     if missing_registry:
-        errors.append(f"production asset directories missing from registry: {missing_registry}")
+        errors.append(f"legacy asset directories missing from registry: {missing_registry}")
     if orphan_registry:
-        errors.append(f"registry production paths without assets: {orphan_registry}")
+        errors.append(f"registry legacy paths without assets: {orphan_registry}")
     return errors
 
 
@@ -178,9 +178,10 @@ def main() -> None:
         print(f"  Source memberships  : {result['source_memberships']}")
         print(f"  Source chart records: {result['origin_counts']['source_taxonomy']}")
         print(f"  Repository extensions: {result['origin_counts']['repository_extension']}")
-        print(f"  Production templates: {result['status_counts']['production_template']}")
-        print(f"  Reusable patterns   : {result['status_counts']['reusable_pattern']}")
-        print(f"  On-demand routes    : {result['status_counts']['on_demand']}")
+        print(f"  Production verified: {result['status_counts']['production_verified']}")
+        print(f"  Legacy examples     : {result['status_counts']['legacy_example']}")
+        print(f"  Reusable patterns   : {result['status_counts']['pattern']}")
+        print(f"  Knowledge-only      : {result['status_counts']['none']}")
         if errors:
             print("  Errors:")
             for error in errors:

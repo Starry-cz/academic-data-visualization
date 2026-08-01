@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "correlation-matrix",
+  "profile": "journal_print",
+  "theme": "pastel-harmony",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 60,
+  "source_sha256": "b0ce44c5fe09c2354e1f9bcc520ca3856df176eabe68954d3c2f9a633fb4f18d",
+  "palette": {
+    "categorical": [
+      "#EEA599",
+      "#FAC795",
+      "#FFE9BE",
+      "#E3EDE0",
+      "#ABD3E1",
+      "#92B4C8"
+    ],
+    "sequential": [
+      "#F8FAF7",
+      "#E3EDE0",
+      "#ABD3E1",
+      "#92B4C8"
+    ],
+    "diverging": [
+      "#92B4C8",
+      "#F8FAF7",
+      "#EEA599"
+    ],
+    "accent": "#EEA599"
+  },
+  "metrics": {
+    "correlation": {
+      "marker_a": {
+        "marker_a": 1.0,
+        "marker_b": 0.85195412,
+        "marker_c": -0.62943567,
+        "marker_d": -0.16053711,
+        "marker_e": 0.52326117
+      },
+      "marker_b": {
+        "marker_a": 0.85195412,
+        "marker_b": 1.0,
+        "marker_c": -0.67056266,
+        "marker_d": -0.104591,
+        "marker_e": 0.46138629
+      },
+      "marker_c": {
+        "marker_a": -0.62943567,
+        "marker_b": -0.67056266,
+        "marker_c": 1.0,
+        "marker_d": 0.1886595,
+        "marker_e": -0.20560572
+      },
+      "marker_d": {
+        "marker_a": -0.16053711,
+        "marker_b": -0.104591,
+        "marker_c": 0.1886595,
+        "marker_d": 1.0,
+        "marker_e": 0.13297051
+      },
+      "marker_e": {
+        "marker_a": 0.52326117,
+        "marker_b": 0.46138629,
+        "marker_c": -0.20560572,
+        "marker_d": 0.13297051,
+        "marker_e": 1.0
+      }
+    }
+  },
+  "alt_text": "Correlation Matrix. The chart is based on 60 source rows; consult figure-metadata.json for computed values and methods."
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "renderer_version": "2.0.0",
+  "chart_id": "volcano-plot",
+  "profile": "journal_print",
+  "theme": "blue-red-signal",
+  "font_family": "Arial",
+  "seed": 20260801,
+  "source_mode": "input",
+  "source_rows": 260,
+  "source_sha256": "4f7d0dc0b1aa9b3bede5a62afc1d0e1bd3d3ea755a241f04d8f95706f792d984",
+  "palette": {
+    "categorical": [
+      "#565AA7",
+      "#6B92C3",
+      "#6EA9CF",
+      "#F3683C",
+      "#DA4139",
+      "#A90B2F"
+    ],
+    "sequential": [
+      "#F7FAFC",
+      "#6EA9CF",
+      "#6B92C3",
+      "#565AA7"
+    ],
+    "diverging": [
+      "#565AA7",
+      "#F7F7F7",
+      "#A90B2F"
+    ],
+    "accent": "#A90B2F"
+  },
+  "metrics": {
+    "significant_n": 98,
+    "up_n": 37,
+    "down_n": 61
+  },
+  "alt_text": "Volcano Plot. The chart is based on 260 source rows; consult figure-metadata.json for computed values and methods."
+}

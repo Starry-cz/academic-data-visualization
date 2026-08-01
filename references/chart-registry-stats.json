@@ -1,5 +1,5 @@
 {
-  "registry_version": "2.1.0",
+  "registry_version": "3.0.0",
   "categories": 24,
   "canonical_charts": 678,
   "source_memberships": 714,
@@ -7,7 +7,10 @@
   "source_complete": true,
   "source_taxonomy": 625,
   "repository_extension": 53,
-  "production_template": 37,
-  "reusable_pattern": 239,
-  "on_demand": 402
+  "production_verified": 12,
+  "demo_runnable": 0,
+  "legacy_example": 29,
+  "pattern": 235,
+  "none": 402,
+  "deprecated": 0
 }

@@ -1,0 +1,114 @@
+{
+  "verification_version": "2.0.0",
+  "asset_id": "violin-plot",
+  "verified_at": "2026-08-01",
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "Pillow": "12.3.0"
+  },
+  "fixture": {
+    "path": "fixture.csv",
+    "sha256": "d5ba25fe080abcff57c00f9454b8e43aa678da83ff77f67131cb8a373146e11d"
+  },
+  "modes": {
+    "demo": {
+      "runner_version": "2.0.0",
+      "asset_id": "violin-plot",
+      "mode": "demo",
+      "profile": "journal_print",
+      "theme": "pastel-harmony",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "violin-plot",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "pastel-harmony",
+        "--seed",
+        "20260801",
+        "--demo"
+      ],
+      "duration_seconds": 5.166,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "violin-plot",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    },
+    "input": {
+      "runner_version": "2.0.0",
+      "asset_id": "violin-plot",
+      "mode": "input",
+      "profile": "journal_print",
+      "theme": "pastel-harmony",
+      "seed": 20260801,
+      "command": [
+        "python",
+        "scripts/verified_template.py",
+        "--chart-id",
+        "violin-plot",
+        "--output-dir",
+        "<OUTPUT_DIR>",
+        "--profile",
+        "journal_print",
+        "--theme",
+        "pastel-harmony",
+        "--seed",
+        "20260801",
+        "--input",
+        "<INPUT_CSV>"
+      ],
+      "duration_seconds": 5.315,
+      "renderer_returncode": 0,
+      "qa_passed": true,
+      "renderer_summary": {
+        "chart_id": "violin-plot",
+        "outputs": [
+          "figure.pdf",
+          "figure.svg",
+          "figure.png",
+          "figure-grayscale.png",
+          "figure-metadata.json",
+          "alt-text.txt",
+          "source-data.csv"
+        ]
+      },
+      "stderr": ""
+    }
+  },
+  "artifact_sha256": {
+    "figure.pdf": "e14f38555b3e045ed8b8f6d279cc4a18485efa6ab35eb22e2cfffa4cb3729757",
+    "figure.svg": "ae186f5d5d69cd9a2bf8a7f6b16f9ee8908faa98e9c5f58060dfc5f3123f999e",
+    "figure.png": "55b6cdb8e8dfdce91b291f275e3b6fcbcc2e42a7988d7bbfa9364c126912af51",
+    "figure-grayscale.png": "365f92f17bc9814523e0afeef7629665c4cd9c0912685ba2ea4fd6cf310dd0fd",
+    "figure-metadata.json": "127f34afaf728a618634684823f38004205533824065c784d5640375a3cc8c07",
+    "alt-text.txt": "8e6a65191427ff5b182a5cbe659467076d6121f662f0c86083b4506870e08cff",
+    "source-data.csv": "a6819d1a2ca483eb3b7fadd518ccffc556b1a864a0370ff435956428ba13b804",
+    "qa-report.json": "1c63325a2a30287c2e42c8ce0942f9dc3f96a307c2a9d8d9bf4399208ea5c4b1",
+    "run-record.json": "193925dd4d79c48c374d94650a601826bdaca14d690a9e4ec4b342ead292eaf8"
+  },
+  "visual_review": {
+    "status": "passed",
+    "rubric": "references/visual-review-protocol.md",
+    "reviewer": "Codex visual QA 2026-08-01"
+  }
+}

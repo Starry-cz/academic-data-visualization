@@ -9,120 +9,120 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `andrews-curve` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `andrews-curve` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `annotated-heatmap` | 矩阵单元 | row, column, value | 可复用模式 |
 | `biplot` | 配对观测或变量组合 | x, y | 可复用模式 |
 | `calendar-heatmap` | 矩阵单元 | row, column, value | 可复用模式 |
-| `chernoff-faces-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `chernoff-faces-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `clustered-heatmap` | 矩阵单元 | row, column, value | 可复用模式 |
-| `co-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `co-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `cohort-retention-heatmap` | 任务、批次或指标 | time_or_category, metric | 可复用模式 |
-| `correlation-bubble-matrix` | 样本 | numeric_features | 生产模板 |
-| `correlation-matrix` | 样本 | numeric_features | 生产模板 |
-| `correlation-network` | 节点或边 | source, target, weight | 生产模板 |
+| `correlation-bubble-matrix` | 样本 | numeric_features | 历史示例 |
+| `correlation-matrix` | 样本 | numeric_features | 生产已验证 |
+| `correlation-network` | 节点或边 | source, target, weight | 历史示例 |
 | `dendrogram` | 节点或边 | source, target, weight | 可复用模式 |
-| `density-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
-| `dimension-correlation-network` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `density-heatmap` | 矩阵单元 | row, column, value | 历史示例 |
+| `dimension-correlation-network` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `electrochemical-kinetics-contour-map` | 电位 × 扫描速率网格单元 | potential, scan_rate, response | 可复用模式 |
-| `factor-loading-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `frequency-3d-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
-| `glyph-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `grand-tour` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `grouped-correlation-matrix` | 样本 | numeric_features | 生产模板 |
-| `heatmap` | 矩阵单元 | row, column, value | 生产模板 |
-| `high-dimensional-clustering-tree` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `manifold-embedding-plot` | 样本 | numeric_features | 生产模板 |
-| `mantel-correlation-plot` | 基因、位点或通路 | feature, effect, significance | 生产模板 |
+| `factor-loading-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `frequency-3d-heatmap` | 矩阵单元 | row, column, value | 历史示例 |
+| `glyph-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `grand-tour` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `grouped-correlation-matrix` | 样本 | numeric_features | 历史示例 |
+| `heatmap` | 矩阵单元 | row, column, value | 历史示例 |
+| `high-dimensional-clustering-tree` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `manifold-embedding-plot` | 样本 | numeric_features | 历史示例 |
+| `mantel-correlation-plot` | 基因、位点或通路 | feature, effect, significance | 历史示例 |
 | `mosaic-plot` | 矩阵单元 | row, column, value | 可复用模式 |
-| `multidimensional-scaling` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `multidimensional-scaling-bubble-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `multivariate-box-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `multivariate-density-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `multidimensional-scaling` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `multidimensional-scaling-bubble-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `multivariate-box-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `multivariate-density-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `parallel-analysis-plot` | 被试、题目或量表 | person_or_item, parameter | 可复用模式 |
 | `parallel-coordinates` | 样本 | numeric_features | 可复用模式 |
-| `parallel-sets` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 按需实现 |
-| `pca-biplot` | 样本 | numeric_features | 生产模板 |
-| `pca-loading-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `pca-score-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 按需实现 |
-| `pixel-oriented-visualization` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `pseudotime-heatmap` | 细胞或空间点 | cell, feature, value | 按需实现 |
-| `quaternary-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
-| `radar-chart` | 总体或分组 | category, component, value | 生产模板 |
-| `radviz-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `parallel-sets` | 阶段、状态、路径或流 | source_or_stage, target_or_next_stage | 知识登记 |
+| `pca-biplot` | 样本 | numeric_features | 生产已验证 |
+| `pca-loading-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `pca-score-plot` | 样本、模型、阈值、特征或聚类 | model_output, target_or_metric | 知识登记 |
+| `pixel-oriented-visualization` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `pseudotime-heatmap` | 细胞或空间点 | cell, feature, value | 知识登记 |
+| `quaternary-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
+| `radar-chart` | 总体或分组 | category, component, value | 历史示例 |
+| `radviz-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `rda-triplot` | 样本 | numeric_features | 可复用模式 |
 | `scatterplot-matrix` | 样本 | numeric_features | 可复用模式 |
 | `scree-plot` | 被试、题目或量表 | person_or_item, parameter | 可复用模式 |
-| `self-organizing-map` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `self-organizing-map` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `sparse-matrix-plot` | 矩阵单元 | row, column, value | 可复用模式 |
-| `star-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 按需实现 |
+| `star-plot` | 样本、变量或低维嵌入点 | multivariate_matrix | 知识登记 |
 | `ternary-plot` | 样本 | numeric_features | 可复用模式 |
-| `three-dimensional-heatmap` | 矩阵单元 | row, column, value | 生产模板 |
-| `tsne-plot` | 样本 | numeric_features | 按需实现 |
+| `three-dimensional-heatmap` | 矩阵单元 | row, column, value | 历史示例 |
+| `tsne-plot` | 样本 | numeric_features | 知识登记 |
 | `two-dimensional-histogram` | 成对观测 | x, y | 可复用模式 |
-| `umap-plot` | 样本 | numeric_features | 按需实现 |
+| `umap-plot` | 样本 | numeric_features | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| Andrews曲线 / Andrews Curve | `andrews-curve` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| Andrews曲线 / Andrews Curve | `andrews-curve` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 注释热图 / Annotated Heatmap | `annotated-heatmap` | 矩阵模式、簇与注释 | 可复用模式 |
 | 双标图 / Biplot | `biplot` | 评估变量之间的方向、强度、形态与非线性关系 | 可复用模式 |
 | 日历热图 / Calendar Heatmap | `calendar-heatmap` | 矩阵模式、簇与注释 | 可复用模式 |
-| Chernoff脸谱图 / Chernoff Faces Plot | `chernoff-faces-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| Chernoff脸谱图 / Chernoff Faces Plot | `chernoff-faces-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 聚类热图 / Clustered Heatmap | `clustered-heatmap` | 矩阵模式、簇与注释 | 可复用模式 |
-| 协调图 / Co-plot | `co-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| 协调图 / Co-plot | `co-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 队列留存热图 / Cohort Retention Heatmap | `cohort-retention-heatmap` | 计划进度、过程稳定性与运营监测 | 可复用模式 |
-| 相关性气泡矩阵 / Correlation Bubble Matrix | `correlation-bubble-matrix` | 多变量结构、相关与低维表示 | 生产模板 |
-| 相关矩阵 / Correlation Matrix | `correlation-matrix` | 多变量结构、相关与低维表示 | 生产模板 |
-| 相关网络图 / Correlation Network | `correlation-network` | 实体连接、权重与社区结构 | 生产模板 |
+| 相关性气泡矩阵 / Correlation Bubble Matrix | `correlation-bubble-matrix` | 多变量结构、相关与低维表示 | 历史示例 |
+| 相关矩阵 / Correlation Matrix | `correlation-matrix` | 多变量结构、相关与低维表示 | 生产已验证 |
+| 相关网络图 / Correlation Network | `correlation-network` | 实体连接、权重与社区结构 | 历史示例 |
 | 树状图 / Dendrogram | `dendrogram` | 实体连接、权重与社区结构 | 可复用模式 |
-| 密度热图 / Density Heatmap | `density-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
-| 维度相关网络图 / Dimension Correlation Network | `dimension-correlation-network` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| 密度热图 / Density Heatmap | `density-heatmap` | 矩阵模式、簇与注释 | 历史示例 |
+| 维度相关网络图 / Dimension Correlation Network | `dimension-correlation-network` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 电化学动力学等高图 / Electrochemical Kinetics Contour Map | `electrochemical-kinetics-contour-map` | 展示电位、扫描速率与响应强度的二维关系 | 可复用模式 |
-| 因子载荷图 / Factor Loading Plot | `factor-loading-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 三维频率热图 / Three-dimensional Frequency Heatmap | `frequency-3d-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
-| Glyph图 / Glyph Plot | `glyph-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| Grand Tour动态图 / Grand Tour | `grand-tour` | 多证据整合、三维或高级结构 | 按需实现 |
-| 分组相关矩阵 / Grouped Correlation Matrix | `grouped-correlation-matrix` | 多变量结构、相关与低维表示 | 生产模板 |
-| 热图 / Heatmap | `heatmap` | 矩阵模式、簇与注释 | 生产模板 |
-| 高维聚类树 / High-dimensional Clustering Tree | `high-dimensional-clustering-tree` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 流形嵌入图 / Manifold Embedding Plot | `manifold-embedding-plot` | 多变量结构、相关与低维表示 | 生产模板 |
-| Mantel相关图 / Mantel Correlation Plot | `mantel-correlation-plot` | 基因组位置、表达差异与通路信号 | 生产模板 |
+| 因子载荷图 / Factor Loading Plot | `factor-loading-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 三维频率热图 / Three-dimensional Frequency Heatmap | `frequency-3d-heatmap` | 矩阵模式、簇与注释 | 历史示例 |
+| Glyph图 / Glyph Plot | `glyph-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| Grand Tour动态图 / Grand Tour | `grand-tour` | 多证据整合、三维或高级结构 | 知识登记 |
+| 分组相关矩阵 / Grouped Correlation Matrix | `grouped-correlation-matrix` | 多变量结构、相关与低维表示 | 历史示例 |
+| 热图 / Heatmap | `heatmap` | 矩阵模式、簇与注释 | 历史示例 |
+| 高维聚类树 / High-dimensional Clustering Tree | `high-dimensional-clustering-tree` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 流形嵌入图 / Manifold Embedding Plot | `manifold-embedding-plot` | 多变量结构、相关与低维表示 | 历史示例 |
+| Mantel相关图 / Mantel Correlation Plot | `mantel-correlation-plot` | 基因组位置、表达差异与通路信号 | 历史示例 |
 | 马赛克图 / Mosaic Plot | `mosaic-plot` | 矩阵模式、簇与注释 | 可复用模式 |
-| MDS图 / Multidimensional Scaling | `multidimensional-scaling` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 多维尺度气泡图 / Multidimensional Scaling Bubble Plot | `multidimensional-scaling-bubble-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 多变量箱线图 / Multivariate Box Plot | `multivariate-box-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 多变量密度图 / Multivariate Density Plot | `multivariate-density-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| MDS图 / Multidimensional Scaling | `multidimensional-scaling` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 多维尺度气泡图 / Multidimensional Scaling Bubble Plot | `multidimensional-scaling-bubble-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 多变量箱线图 / Multivariate Box Plot | `multivariate-box-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 多变量密度图 / Multivariate Density Plot | `multivariate-density-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 平行分析图 / Parallel Analysis Plot | `parallel-analysis-plot` | 测量模型、题目性能与潜变量结构 | 可复用模式 |
 | 平行坐标图 / Parallel Coordinates | `parallel-coordinates` | 多变量结构、相关与低维表示 | 可复用模式 |
-| 平行集合图 / Parallel Sets | `parallel-sets` | 展示流程、状态迁移、路径和流量 | 按需实现 |
-| PCA双标图 / PCA Biplot | `pca-biplot` | 多变量结构、相关与低维表示 | 生产模板 |
-| PCA载荷图 / PCA Loading Plot | `pca-loading-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| PCA得分图 / PCA Score Plot | `pca-score-plot` | 评估分类、预测、聚类和机器学习模型 | 按需实现 |
-| Pixel-oriented Visualization / Pixel-oriented Visualization | `pixel-oriented-visualization` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 拟时间热图 / Pseudotime Heatmap | `pseudotime-heatmap` | 细胞状态、表达与空间组学结构 | 按需实现 |
-| 四元图 / Quaternary Plot | `quaternary-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
-| 雷达图 / Radar Chart | `radar-chart` | 整体组成、比例与结构 | 生产模板 |
-| RadViz图 / RadViz Plot | `radviz-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| 平行集合图 / Parallel Sets | `parallel-sets` | 展示流程、状态迁移、路径和流量 | 知识登记 |
+| PCA双标图 / PCA Biplot | `pca-biplot` | 多变量结构、相关与低维表示 | 生产已验证 |
+| PCA载荷图 / PCA Loading Plot | `pca-loading-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| PCA得分图 / PCA Score Plot | `pca-score-plot` | 评估分类、预测、聚类和机器学习模型 | 知识登记 |
+| Pixel-oriented Visualization / Pixel-oriented Visualization | `pixel-oriented-visualization` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 拟时间热图 / Pseudotime Heatmap | `pseudotime-heatmap` | 细胞状态、表达与空间组学结构 | 知识登记 |
+| 四元图 / Quaternary Plot | `quaternary-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
+| 雷达图 / Radar Chart | `radar-chart` | 整体组成、比例与结构 | 历史示例 |
+| RadViz图 / RadViz Plot | `radviz-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | RDA三标图 / RDA Triplot | `rda-triplot` | 多变量结构、相关与低维表示 | 可复用模式 |
 | 散点矩阵 / Scatterplot Matrix | `scatterplot-matrix` | 多变量结构、相关与低维表示 | 可复用模式 |
 | 碎石图 / Scree Plot | `scree-plot` | 测量模型、题目性能与潜变量结构 | 可复用模式 |
-| SOM自组织映射图 / Self-organizing Map | `self-organizing-map` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| SOM自组织映射图 / Self-organizing Map | `self-organizing-map` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 稀疏矩阵图 / Sparse Matrix Plot | `sparse-matrix-plot` | 矩阵模式、簇与注释 | 可复用模式 |
-| 星形图 / Star Plot | `star-plot` | 揭示高维、多变量与降维后的结构 | 按需实现 |
+| 星形图 / Star Plot | `star-plot` | 揭示高维、多变量与降维后的结构 | 知识登记 |
 | 三元图 / Ternary Plot | `ternary-plot` | 多变量结构、相关与低维表示 | 可复用模式 |
-| 三维热图 / Three-dimensional Heatmap | `three-dimensional-heatmap` | 矩阵模式、簇与注释 | 生产模板 |
-| t-SNE图 / t-SNE Plot | `tsne-plot` | 多变量结构、相关与低维表示 | 按需实现 |
+| 三维热图 / Three-dimensional Heatmap | `three-dimensional-heatmap` | 矩阵模式、簇与注释 | 历史示例 |
+| t-SNE图 / t-SNE Plot | `tsne-plot` | 多变量结构、相关与低维表示 | 知识登记 |
 | 二维直方图 / Two-dimensional Histogram | `two-dimensional-histogram` | 变量关系、拟合与一致性 | 可复用模式 |
-| UMAP图 / UMAP Plot | `umap-plot` | 多变量结构、相关与低维表示 | 按需实现 |
+| UMAP图 / UMAP Plot | `umap-plot` | 多变量结构、相关与低维表示 | 知识登记 |
 
 ## 图型详细条目
 
@@ -145,7 +145,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -171,7 +171,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -197,7 +197,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -223,7 +223,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -249,7 +249,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -275,7 +275,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -301,7 +301,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -327,7 +327,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -353,7 +353,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/CorrelationBubbleMatrix`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -379,9 +379,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/CorrelationMatrix`
-- **后端与依赖**：r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/correlation-matrix`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：grouped-correlation-matrix；correlation-bubble-matrix；scatterplot-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -405,7 +405,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/CorrelationNetwork`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -431,7 +431,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -457,7 +457,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/DensityHeatmap`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -483,7 +483,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -509,7 +509,7 @@
 - **颜色、灰度与无障碍**：使用感知均匀色阶并保留等值线；颜色之外用等值线和峰标签
 - **标注规则**：标注峰轨迹与扫描方向
 - **常见投稿风险**：插值伪影、色标截断或未说明扫描方向
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须披露网格化、插值和平滑方法
@@ -535,7 +535,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -561,7 +561,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/Frequency_3DHeatmap`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -587,7 +587,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -613,7 +613,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -639,7 +639,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/GroupedCorrelationMatrix`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -665,7 +665,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/heatmap`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -691,7 +691,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -717,7 +717,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/Manifold`
 - **后端与依赖**：python；matplotlib；numpy；scipy
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -743,7 +743,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/MantelCorrelation`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -769,7 +769,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -795,7 +795,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -821,7 +821,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -847,7 +847,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -873,7 +873,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -899,7 +899,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -925,7 +925,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -951,7 +951,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -977,9 +977,9 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
-- **可复用资产**：`assets/figures/PCA`
-- **后端与依赖**：r
+- **实现状态**：`production_verified`
+- **可复用资产**：`templates/production-verified/pca-biplot`
+- **后端与依赖**：python；matplotlib；numpy；pandas；Pillow
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
 - **替代 / 补充图型**：correlation-matrix；grouped-correlation-matrix；correlation-bubble-matrix
 - **QA 规则**：AP-1-no-default-palette；VI-2-redundant-encoding；VV-6-grayscale-proof
@@ -1003,7 +1003,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1029,7 +1029,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1055,7 +1055,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1081,7 +1081,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；single-cell or spatial-omics object
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1107,7 +1107,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1133,7 +1133,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/Radar`
 - **后端与依赖**：python
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1159,7 +1159,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1185,7 +1185,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1211,7 +1211,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1237,7 +1237,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1263,7 +1263,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1289,7 +1289,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1315,7 +1315,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -1341,7 +1341,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1367,7 +1367,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/3DHeatmap`
 - **后端与依赖**：r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1393,7 +1393,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1419,7 +1419,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -1445,7 +1445,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸

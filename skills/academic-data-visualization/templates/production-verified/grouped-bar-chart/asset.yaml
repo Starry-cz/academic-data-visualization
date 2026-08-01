@@ -1,0 +1,82 @@
+{
+  "manifest_version": "2.0.0",
+  "asset_id": "grouped-bar-chart",
+  "chart_ids": [
+    "grouped-bar-chart"
+  ],
+  "asset_status": "production_verified",
+  "entrypoint": {
+    "role": "production",
+    "backend": "python",
+    "path": "../../../scripts/verified_template.py",
+    "interface_version": "1.0.0"
+  },
+  "environment": {
+    "python": ">=3.11,<3.14",
+    "r": null,
+    "dependency_group": "verified-core",
+    "network_allowed": false
+  },
+  "data_contract": {
+    "formats": [
+      "csv"
+    ],
+    "required_columns": {
+      "group": "categorical",
+      "condition": "categorical",
+      "value": "numeric"
+    },
+    "feature_columns": null,
+    "missing_value_policy": "error",
+    "minimum_rows": 12,
+    "fixtures": {
+      "demo": "generated-deterministically",
+      "validation": "fixture.csv"
+    }
+  },
+  "outputs": {
+    "required": [
+      "figure.pdf",
+      "figure.svg",
+      "figure.png",
+      "figure-grayscale.png",
+      "figure-metadata.json",
+      "alt-text.txt",
+      "source-data.csv",
+      "qa-report.json",
+      "run-record.json"
+    ],
+    "example_directory": "example-output",
+    "previews": [
+      "preview.png"
+    ]
+  },
+  "safety": {
+    "overwrite_default": false,
+    "writes_only_to_output_dir": true
+  },
+  "provenance": {
+    "code_license": "Apache-2.0",
+    "data_mode": "deterministic-synthetic-fixture",
+    "data_license": "CC0-1.0",
+    "redistribution": "allowed"
+  },
+  "verification": {
+    "status": "release_passed",
+    "verified_at": "2026-08-01",
+    "verifier_version": "2.0.0",
+    "evidence": "verification-record.json",
+    "fixture_sha256": "735323de828aa91be3a872859dd28abedb5574556bf15d754df3d9978f1446a5",
+    "artifact_sha256": {
+      "figure.pdf": "144b58920b1337569c50699538891ef33a26bfbe72e3547823e52caafa9fef53",
+      "figure.svg": "39ac0014dffaa9cfcb69513347add53b7803e4c3a81a502ea76b374ab06dcdd9",
+      "figure.png": "fb82124cc59b80c8c5d41c60d6d5b5f04f807a10e971322d7d2e049390a24064",
+      "figure-grayscale.png": "5c0b7fb088da809f0e79652d59115e9f2431e001db2d0a86319b929e56458344",
+      "figure-metadata.json": "1bed3cd1f5c2776ad973329f7deb1cf2d4298730706e152acc9eadf445028db6",
+      "alt-text.txt": "1873edb741963def5198d8af99a54946cbec42d8e7d3c13977bdf3c29d169b7a",
+      "source-data.csv": "aa957909da6893ff4b603dd1ab833df59f2665f18bbee028c1a098743d0e2077",
+      "qa-report.json": "fb0ccee30b3628f5e738bab74d6dd6c8b9a5baabe544008d921436298b90954a",
+      "run-record.json": "636cc5b9085dd10d1d279f41aee9fed78a025e0775a66a81eec1117db0858349"
+    }
+  }
+}

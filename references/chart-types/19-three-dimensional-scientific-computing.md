@@ -9,80 +9,80 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `bifurcation-diagram` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `bode-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `chaotic-attractor-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `complex-plane-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
+| `bifurcation-diagram` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `bode-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `chaotic-attractor-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `complex-plane-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
 | `contour-plot` | 配对观测或变量组合 | x, y | 可复用模式 |
-| `displacement-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `electric-field-distribution-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `exafs-wavelet-transform-map` | 一个样品的小波变换网格 | k, r, magnitude | 生产模板 |
-| `finite-element-mesh-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `fluid-particle-trajectory-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `heat-conduction-field-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `isosurface` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `magnetic-field-distribution-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `nyquist-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `phase-diagram` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `phase-space-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `poincar-section-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `polar-coordinate-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `quiver-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `slice-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `smith-chart` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `spherical-coordinate-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `streamline-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `stress-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `three-dimensional-bar-chart` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
-| `three-dimensional-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
+| `displacement-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `electric-field-distribution-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `exafs-wavelet-transform-map` | 一个样品的小波变换网格 | k, r, magnitude | 历史示例 |
+| `finite-element-mesh-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `fluid-particle-trajectory-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `heat-conduction-field-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `isosurface` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `magnetic-field-distribution-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `nyquist-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `phase-diagram` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `phase-space-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `poincar-section-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `polar-coordinate-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `quiver-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `slice-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `smith-chart` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `spherical-coordinate-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `streamline-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `stress-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `three-dimensional-bar-chart` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
+| `three-dimensional-contour-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
 | `three-dimensional-scatter-plot` | 配对观测或变量组合 | x, y | 可复用模式 |
-| `three-dimensional-surface` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `three-dimensional-vector-field` | 面板、体素或多维对象 | component_data | 按需实现 |
-| `volume-rendering` | 图像、视野或样本 | image, measurement | 按需实现 |
-| `wireframe-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 按需实现 |
+| `three-dimensional-surface` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `three-dimensional-vector-field` | 面板、体素或多维对象 | component_data | 知识登记 |
+| `volume-rendering` | 图像、视野或样本 | image, measurement | 知识登记 |
+| `wireframe-plot` | 三维坐标、网格、体素或场变量 | spatial_coordinates_or_mesh, field_value | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 分岔图 / Bifurcation Diagram | `bifurcation-diagram` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| Bode图 / Bode Plot | `bode-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 混沌吸引子图 / Chaotic Attractor Plot | `chaotic-attractor-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 复平面图 / Complex Plane Plot | `complex-plane-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
+| 分岔图 / Bifurcation Diagram | `bifurcation-diagram` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| Bode图 / Bode Plot | `bode-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 混沌吸引子图 / Chaotic Attractor Plot | `chaotic-attractor-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 复平面图 / Complex Plane Plot | `complex-plane-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
 | 等高线图 / Contour Plot | `contour-plot` | 评估变量之间的方向、强度、形态与非线性关系 | 可复用模式 |
-| 位移云图 / Displacement Contour Plot | `displacement-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 电场分布图 / Electric Field Distribution Plot | `electric-field-distribution-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| EXAFS 小波变换图 / EXAFS Wavelet-transform Map | `exafs-wavelet-transform-map` | 联合定位 EXAFS 信号在 k 与 R 空间的特征 | 生产模板 |
-| 有限元网格图 / Finite Element Mesh Plot | `finite-element-mesh-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 流体粒子轨迹图 / Fluid Particle Trajectory Plot | `fluid-particle-trajectory-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 热传导场图 / Heat Conduction Field Plot | `heat-conduction-field-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 等值面 / Isosurface | `isosurface` | 图像结构、通道与空间定量 | 按需实现 |
-| 磁场分布图 / Magnetic Field Distribution Plot | `magnetic-field-distribution-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| Nyquist图 / Nyquist Plot | `nyquist-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 相图 / Phase Diagram | `phase-diagram` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 相空间图 / Phase-space Plot | `phase-space-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 庞加莱截面图 / Poincaré Section Plot | `poincar-section-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 极坐标图 / Polar Coordinate Plot | `polar-coordinate-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 箭矢图 / Quiver Plot | `quiver-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 切片图 / Slice Plot | `slice-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| Smith圆图 / Smith Chart | `smith-chart` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 球坐标图 / Spherical Coordinate Plot | `spherical-coordinate-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 流线图 / Streamline Plot | `streamline-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 应力云图 / Stress Contour Plot | `stress-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 三维柱状图 / Three-dimensional Bar Chart | `three-dimensional-bar-chart` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
-| 三维等高线图 / Three-dimensional Contour Plot | `three-dimensional-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
+| 位移云图 / Displacement Contour Plot | `displacement-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 电场分布图 / Electric Field Distribution Plot | `electric-field-distribution-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| EXAFS 小波变换图 / EXAFS Wavelet-transform Map | `exafs-wavelet-transform-map` | 联合定位 EXAFS 信号在 k 与 R 空间的特征 | 历史示例 |
+| 有限元网格图 / Finite Element Mesh Plot | `finite-element-mesh-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 流体粒子轨迹图 / Fluid Particle Trajectory Plot | `fluid-particle-trajectory-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 热传导场图 / Heat Conduction Field Plot | `heat-conduction-field-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 等值面 / Isosurface | `isosurface` | 图像结构、通道与空间定量 | 知识登记 |
+| 磁场分布图 / Magnetic Field Distribution Plot | `magnetic-field-distribution-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| Nyquist图 / Nyquist Plot | `nyquist-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 相图 / Phase Diagram | `phase-diagram` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 相空间图 / Phase-space Plot | `phase-space-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 庞加莱截面图 / Poincaré Section Plot | `poincar-section-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 极坐标图 / Polar Coordinate Plot | `polar-coordinate-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 箭矢图 / Quiver Plot | `quiver-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 切片图 / Slice Plot | `slice-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| Smith圆图 / Smith Chart | `smith-chart` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 球坐标图 / Spherical Coordinate Plot | `spherical-coordinate-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 流线图 / Streamline Plot | `streamline-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 应力云图 / Stress Contour Plot | `stress-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 三维柱状图 / Three-dimensional Bar Chart | `three-dimensional-bar-chart` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
+| 三维等高线图 / Three-dimensional Contour Plot | `three-dimensional-contour-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
 | 三维散点图 / 3D Scatter Plot | `three-dimensional-scatter-plot` | 评估变量之间的方向、强度、形态与非线性关系 | 可复用模式 |
-| 三维表面图 / Three-dimensional Surface | `three-dimensional-surface` | 多证据整合、三维或高级结构 | 按需实现 |
-| 三维矢量场 / Three-dimensional Vector Field | `three-dimensional-vector-field` | 多证据整合、三维或高级结构 | 按需实现 |
-| 体渲染 / Volume Rendering | `volume-rendering` | 图像结构、通道与空间定量 | 按需实现 |
-| 网格曲面图 / Wireframe Plot | `wireframe-plot` | 展示三维场、曲面、体数据与科学计算结果 | 按需实现 |
+| 三维表面图 / Three-dimensional Surface | `three-dimensional-surface` | 多证据整合、三维或高级结构 | 知识登记 |
+| 三维矢量场 / Three-dimensional Vector Field | `three-dimensional-vector-field` | 多证据整合、三维或高级结构 | 知识登记 |
+| 体渲染 / Volume Rendering | `volume-rendering` | 图像结构、通道与空间定量 | 知识登记 |
+| 网格曲面图 / Wireframe Plot | `wireframe-plot` | 展示三维场、曲面、体数据与科学计算结果 | 知识登记 |
 
 ## 图型详细条目
 
@@ -105,7 +105,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -131,7 +131,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -157,7 +157,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -183,7 +183,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -209,7 +209,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -235,7 +235,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -261,7 +261,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -287,7 +287,7 @@
 - **颜色、灰度与无障碍**：使用感知有序或有明确中点的色阶，并提供灰度证明；二维投影保留等值结构，避免仅依赖 3D 深度
 - **标注规则**：只标注有物理依据的主要区域
 - **常见投稿风险**：3D 遮挡、未披露小波参数或把可视峰直接当作唯一散射体
-- **实现状态**：`production_template`
+- **实现状态**：`legacy_example`
 - **可复用资产**：`assets/figures/EXAFSWaveletMap`
 - **后端与依赖**：python；matplotlib；numpy；pandas
 - **复用限制**：输入必须是完整真实网格；比较图必须共享变换参数与色阶
@@ -313,7 +313,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -339,7 +339,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -365,7 +365,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -391,7 +391,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -417,7 +417,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -443,7 +443,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -469,7 +469,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -495,7 +495,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -521,7 +521,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -547,7 +547,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -573,7 +573,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -599,7 +599,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -625,7 +625,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -651,7 +651,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -677,7 +677,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -703,7 +703,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -729,7 +729,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -755,7 +755,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -781,7 +781,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`reusable_pattern`
+- **实现状态**：`pattern`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -807,7 +807,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -833,7 +833,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；chart-specific specialist backend
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -859,7 +859,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r；calibrated image data
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -885,7 +885,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA

@@ -55,14 +55,25 @@ class ChartRegistryTests(unittest.TestCase):
 
     def test_status_counts_and_production_truth(self) -> None:
         counts = status_counts(self.registry)
-        self.assertEqual(counts["production_template"], 37)
-        self.assertGreater(counts["reusable_pattern"], 0)
-        self.assertGreater(counts["on_demand"], 0)
+        self.assertEqual(counts["production_verified"], 12)
+        self.assertEqual(counts["legacy_example"], 29)
+        self.assertGreater(counts["pattern"], 0)
+        self.assertGreater(counts["none"], 0)
         for chart in self.registry["charts"]:
-            if chart["implementation_status"] == "production_template":
+            if chart["implementation_status"] in {"legacy_example", "demo_runnable", "production_verified", "deprecated"}:
                 self.assertIsNotNone(chart["asset_path"])
             else:
                 self.assertIsNone(chart["asset_path"])
+
+    def test_production_status_requires_release_evidence(self) -> None:
+        for chart in self.registry["charts"]:
+            if chart["implementation_status"] != "production_verified":
+                continue
+            self.assertEqual(chart["verification_status"], "release_passed")
+            self.assertTrue(chart["asset_path"].startswith("templates/production-verified/"))
+            asset_dir = ROOT / chart["asset_path"]
+            self.assertTrue((asset_dir / "verification-record.json").is_file())
+            self.assertTrue((asset_dir / "example-output" / "qa-report.json").is_file())
 
 
 if __name__ == "__main__":

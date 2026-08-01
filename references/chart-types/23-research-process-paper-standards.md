@@ -9,68 +9,68 @@
 ## 选择总则
 
 1. 先确认研究问题、观测单位和必需变量；不得从图名反推数据。
-2. `生产模板` 才能直接进入资产复用流程；其余状态仍需按数据实现并完成四轮 QA。
+2. 只有 `生产已验证` 才能直接进入资产运行流程；历史示例不能冒充可复现模板。
 3. 优先保留原始证据、效应量和不确定性，不用装饰性编码替代统计信息。
 
 ## 数据契约总览
 
 | Canonical ID | 观测单位 | 必需变量 | 实现状态 |
 |---|---|---|---|
-| `algorithm-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `coding-framework-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
-| `data-cleaning-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `data-processing-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `database-structure-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `evidence-synthesis-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `experiment-apparatus-schematic` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `experiment-step-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `literature-screening-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `method-integration-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `mixed-research-design-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `model-architecture-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `neural-network-architecture-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `prisma-flow-diagram` | 流、节点或步骤 | source, target, value | 按需实现 |
-| `research-design-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `research-framework-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `research-question-mapping-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `research-stage-gantt-chart` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `research-technical-roadmap` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `sample-screening-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `strobe-study-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `system-architecture-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `theoretical-analysis-framework` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
-| `variable-relationship-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 按需实现 |
+| `algorithm-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `coding-framework-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `consort-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
+| `data-cleaning-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `data-processing-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `database-structure-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `evidence-synthesis-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `experiment-apparatus-schematic` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `experiment-step-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `literature-screening-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `method-integration-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `mixed-research-design-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `model-architecture-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `neural-network-architecture-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `prisma-flow-diagram` | 流、节点或步骤 | source, target, value | 知识登记 |
+| `research-design-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `research-framework-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `research-question-mapping-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `research-stage-gantt-chart` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `research-technical-roadmap` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `sample-screening-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `strobe-study-flow-diagram` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `system-architecture-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `theoretical-analysis-framework` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
+| `variable-relationship-plot` | 研究阶段、样本步骤、模块或方法单元 | step_or_component, sequence_or_relation | 知识登记 |
 
 ## 图型索引
 
 | 图型 | Canonical ID | 信息任务 | 状态 |
 |---|---|---|---|
-| 算法流程图 / Algorithm Flow Diagram | `algorithm-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 编码框架图 / Coding Framework Diagram | `coding-framework-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
-| 数据清洗流程图 / Data Cleaning Flow Diagram | `data-cleaning-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 数据处理流程图 / Data Processing Flow Diagram | `data-processing-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 数据库结构图 / Database Structure Diagram | `database-structure-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 证据综合流程图 / Evidence Synthesis Flow Diagram | `evidence-synthesis-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 实验装置示意图 / Experiment Apparatus Schematic | `experiment-apparatus-schematic` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 实验步骤图 / Experiment Step Plot | `experiment-step-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 文献筛选图 / Literature Screening Plot | `literature-screening-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 方法整合图 / Method Integration Plot | `method-integration-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 混合研究设计图 / Mixed Research Design Plot | `mixed-research-design-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 模型架构图 / Model Architecture Plot | `model-architecture-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 神经网络结构图 / Neural Network Architecture Diagram | `neural-network-architecture-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| PRISMA流程图 / PRISMA Flow Diagram | `prisma-flow-diagram` | 阶段流向、流程与层级组成 | 按需实现 |
-| 研究设计流程图 / Research Design Flow Diagram | `research-design-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 研究框架图 / Research Framework Diagram | `research-framework-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 研究问题映射图 / Research Question Mapping Diagram | `research-question-mapping-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 研究阶段甘特图 / Research-stage Gantt Chart | `research-stage-gantt-chart` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 研究技术路线图 / Research Technical Roadmap | `research-technical-roadmap` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 样本筛选流程图 / Sample Screening Flow Diagram | `sample-screening-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| STROBE研究流程图 / STROBE Study Flow Diagram | `strobe-study-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 系统架构图 / System Architecture Plot | `system-architecture-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 理论分析框架图 / Theoretical Analysis Framework | `theoretical-analysis-framework` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
-| 变量关系图 / Variable Relationship Plot | `variable-relationship-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 按需实现 |
+| 算法流程图 / Algorithm Flow Diagram | `algorithm-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 编码框架图 / Coding Framework Diagram | `coding-framework-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| CONSORT流程图 / CONSORT Flow Diagram | `consort-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
+| 数据清洗流程图 / Data Cleaning Flow Diagram | `data-cleaning-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 数据处理流程图 / Data Processing Flow Diagram | `data-processing-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 数据库结构图 / Database Structure Diagram | `database-structure-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 证据综合流程图 / Evidence Synthesis Flow Diagram | `evidence-synthesis-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 实验装置示意图 / Experiment Apparatus Schematic | `experiment-apparatus-schematic` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 实验步骤图 / Experiment Step Plot | `experiment-step-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 文献筛选图 / Literature Screening Plot | `literature-screening-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 方法整合图 / Method Integration Plot | `method-integration-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 混合研究设计图 / Mixed Research Design Plot | `mixed-research-design-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 模型架构图 / Model Architecture Plot | `model-architecture-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 神经网络结构图 / Neural Network Architecture Diagram | `neural-network-architecture-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| PRISMA流程图 / PRISMA Flow Diagram | `prisma-flow-diagram` | 阶段流向、流程与层级组成 | 知识登记 |
+| 研究设计流程图 / Research Design Flow Diagram | `research-design-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 研究框架图 / Research Framework Diagram | `research-framework-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 研究问题映射图 / Research Question Mapping Diagram | `research-question-mapping-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 研究阶段甘特图 / Research-stage Gantt Chart | `research-stage-gantt-chart` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 研究技术路线图 / Research Technical Roadmap | `research-technical-roadmap` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 样本筛选流程图 / Sample Screening Flow Diagram | `sample-screening-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| STROBE研究流程图 / STROBE Study Flow Diagram | `strobe-study-flow-diagram` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 系统架构图 / System Architecture Plot | `system-architecture-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 理论分析框架图 / Theoretical Analysis Framework | `theoretical-analysis-framework` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
+| 变量关系图 / Variable Relationship Plot | `variable-relationship-plot` | 说明研究流程、报告规范、实验步骤与系统架构 | 知识登记 |
 
 ## 图型详细条目
 
@@ -93,7 +93,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -119,7 +119,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -145,7 +145,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -171,7 +171,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -197,7 +197,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -223,7 +223,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -249,7 +249,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -275,7 +275,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -301,7 +301,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -327,7 +327,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -353,7 +353,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -379,7 +379,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -405,7 +405,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -431,7 +431,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -457,7 +457,7 @@
 - **颜色、灰度与无障碍**：使用语义稳定且色盲安全的颜色，并保留灰度可辨识性；关键比较使用形状、线型、标签、位置或顺序作为冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值与统计信息
 - **常见投稿风险**：样本量或不确定性表达不足；把相关或描述性结构误写为因果
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：python；r
 - **复用限制**：复用前核对数据结构、观测单位、统计语义和输出尺寸
@@ -483,7 +483,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -509,7 +509,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -535,7 +535,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -561,7 +561,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -587,7 +587,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -613,7 +613,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -639,7 +639,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -665,7 +665,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -691,7 +691,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
@@ -717,7 +717,7 @@
 - **颜色、灰度与无障碍**：使用感知合理、色盲安全并可灰度辨识的配色；关键结论使用位置、形状、线型、标签或顺序进行冗余编码
 - **标注规则**：只标注支持核心结论所需的对象、阈值、事件和统计信息
 - **常见投稿风险**：数据契约、统计方法或样本量披露不足；使用装饰性编码、误导尺度或把描述性结构写成因果结论
-- **实现状态**：`on_demand`
+- **实现状态**：`none`
 - **可复用资产**：无现成资产
 - **后端与依赖**：无
 - **复用限制**：必须根据真实数据、终稿尺寸和目标期刊重新实现并完成四轮 QA
