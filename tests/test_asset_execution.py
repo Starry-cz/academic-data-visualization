@@ -12,10 +12,17 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from manifest_lib import manifest_by_chart_id
 from palette_lib import THEMES
-from run_asset import run_asset
+from run_asset import run_asset, unexpected_renderer_stderr
 
 
 class AssetExecutionTests(unittest.TestCase):
+    def test_one_time_font_cache_notice_is_allowed(self) -> None:
+        notice = "Matplotlib is building the font cache; this may take a moment.\n"
+        self.assertEqual(unexpected_renderer_stderr(notice), "")
+
+    def test_real_renderer_warning_remains_strict(self) -> None:
+        self.assertEqual(unexpected_renderer_stderr("RuntimeWarning: invalid value"), "RuntimeWarning: invalid value")
+
     def test_forest_template_runs_and_passes_output_qa(self) -> None:
         manifest_path, _ = manifest_by_chart_id("forest-plot")
         with tempfile.TemporaryDirectory(prefix="adv-test-") as temp:

@@ -17,6 +17,16 @@ from palette_lib import THEME_IDS, resolve_theme
 
 
 RUNNER_VERSION = "2.0.0"
+ALLOWED_RENDERER_STDERR_LINES = {
+    "Matplotlib is building the font cache; this may take a moment.",
+}
+
+
+def unexpected_renderer_stderr(stderr: str) -> str:
+    """Remove only known one-time runtime notices; preserve every real warning."""
+    # 全新 CI 主机首次建立字体缓存属于状态通知，不是渲染或数据质量警告。
+    lines = [line.strip() for line in stderr.splitlines() if line.strip()]
+    return "\n".join(line for line in lines if line not in ALLOWED_RENDERER_STDERR_LINES)
 
 
 def repository_snapshot(excluded: Path) -> dict[Path, tuple[int, int]]:
@@ -128,8 +138,9 @@ def run_asset(
     changed = changed_paths(before, output_dir)
     if completed.returncode != 0:
         raise RuntimeError(f"Renderer failed ({completed.returncode}):\n{completed.stdout}\n{completed.stderr}")
-    if completed.stderr.strip():
-        raise RuntimeError(f"Renderer emitted stderr in strict production mode:\n{completed.stderr}")
+    unexpected_stderr = unexpected_renderer_stderr(completed.stderr)
+    if unexpected_stderr:
+        raise RuntimeError(f"Renderer emitted stderr in strict production mode:\n{unexpected_stderr}")
     renderer_payload = json.loads(completed.stdout)
     if renderer_payload.get("chart_id") != manifest["asset_id"]:
         raise RuntimeError("Renderer JSON does not identify the requested asset")
