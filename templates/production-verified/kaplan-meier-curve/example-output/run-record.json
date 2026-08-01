@@ -21,7 +21,7 @@
     "--input",
     "<INPUT_CSV>"
   ],
-  "duration_seconds": 4.11,
+  "duration_seconds": 3.898,
   "renderer_returncode": 0,
   "qa_passed": true,
   "renderer_summary": {

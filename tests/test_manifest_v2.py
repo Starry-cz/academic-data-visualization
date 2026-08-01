@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -9,11 +10,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from manifest_lib import find_asset_manifests, load_manifest, validate_manifest
+from manifest_lib import find_asset_manifests, load_manifest, sha256_file, validate_manifest
 from qa_validator import audit_source
 
 
 class ManifestV2Tests(unittest.TestCase):
+    def test_text_hash_is_stable_across_line_endings(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_root:
+            root = Path(temp_root)
+            lf_path = root / "lf.json"
+            crlf_path = root / "crlf.json"
+            lf_path.write_bytes(b'{\n  "status": "passed"\n}\n')
+            crlf_path.write_bytes(b'{\r\n  "status": "passed"\r\n}\r\n')
+            self.assertEqual(sha256_file(lf_path), sha256_file(crlf_path))
+
+    def test_manifest_order_is_platform_independent(self) -> None:
+        paths = find_asset_manifests()
+        expected = sorted(paths, key=lambda path: path.relative_to(ROOT).as_posix().casefold())
+        self.assertEqual(paths, expected)
+
     def test_all_asset_manifests_validate(self) -> None:
         errors: list[str] = []
         for path in find_asset_manifests():

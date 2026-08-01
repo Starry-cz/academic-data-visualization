@@ -35,8 +35,34 @@ def verify_one(manifest_path: Path, refresh_evidence: bool) -> dict:
         raise FileNotFoundError(f"Validation fixture is missing: {fixture}")
     with tempfile.TemporaryDirectory(prefix=f"adv-{manifest['asset_id']}-") as temp_root:
         temp = Path(temp_root)
-        demo_record = run_asset(manifest_path, temp / "demo", None, True, "journal_print", "auto", 20260801, None, 120, False)
-        input_record = run_asset(manifest_path, temp / "input", fixture, False, "journal_print", "auto", 20260801, None, 120, False)
+        # 刷新证据时允许旧哈希失效，但仍校验字段、入口、数据契约与产物完整性。
+        validate_evidence = not refresh_evidence
+        demo_record = run_asset(
+            manifest_path,
+            temp / "demo",
+            None,
+            True,
+            "journal_print",
+            "auto",
+            20260801,
+            None,
+            120,
+            False,
+            validate_evidence,
+        )
+        input_record = run_asset(
+            manifest_path,
+            temp / "input",
+            fixture,
+            False,
+            "journal_print",
+            "auto",
+            20260801,
+            None,
+            120,
+            False,
+            validate_evidence,
+        )
         if not refresh_evidence:
             return {"asset_id": manifest["asset_id"], "demo": demo_record, "input": input_record}
         example_dir = asset_dir / manifest["outputs"]["example_directory"]

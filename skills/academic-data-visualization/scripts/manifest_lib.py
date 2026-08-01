@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_VERSION = "2.0.0"
 ASSET_STATES = {"legacy_example", "demo_runnable", "production_verified", "deprecated"}
 PROFILES = {"journal_print", "report_web", "keynote_screen", "poster_large"}
+TEXT_HASH_SUFFIXES = {".csv", ".json", ".md", ".svg", ".txt", ".yaml", ".yml"}
 
 
 def load_manifest(path: Path) -> dict[str, Any]:
@@ -20,6 +21,11 @@ def load_manifest(path: Path) -> dict[str, Any]:
 
 
 def sha256_file(path: Path) -> str:
+    """Return a platform-stable digest while preserving strict binary checks."""
+    if path.suffix.lower() in TEXT_HASH_SUFFIXES:
+        # Git 在不同平台可能签出 CRLF 或 LF；文本证据先统一换行再计算哈希。
+        content = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n")
+        return hashlib.sha256(content.encode("utf-8")).hexdigest()
     digest = hashlib.sha256()
     with path.open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
@@ -27,7 +33,12 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def validate_manifest(manifest: dict[str, Any], asset_dir: Path) -> list[str]:
+def validate_manifest(
+    manifest: dict[str, Any],
+    asset_dir: Path,
+    *,
+    check_artifact_hashes: bool = True,
+) -> list[str]:
     """Validate fields that define truthful state, runnable entrypoints, and safe outputs."""
     errors: list[str] = []
     required = {
@@ -105,7 +116,7 @@ def validate_manifest(manifest: dict[str, Any], asset_dir: Path) -> list[str]:
                 output_path = example_dir / name
                 if not output_path.is_file():
                     errors.append(f"required example output is missing: {name}")
-                elif name in hashes and sha256_file(output_path) != hashes[name]:
+                elif check_artifact_hashes and name in hashes and sha256_file(output_path) != hashes[name]:
                     errors.append(f"recorded hash differs for {name}")
     elif manifest.get("verification", {}).get("status") == "release_passed":
         errors.append("non-production assets cannot claim release_passed")
@@ -114,7 +125,9 @@ def validate_manifest(manifest: dict[str, Any], asset_dir: Path) -> list[str]:
 
 def find_asset_manifests() -> list[Path]:
     roots = [ROOT / "assets" / "figures", ROOT / "templates" / "production-verified"]
-    return sorted(path for root in roots if root.exists() for path in root.glob("*/asset.yaml"))
+    manifests = [path for root in roots if root.exists() for path in root.glob("*/asset.yaml")]
+    # 使用仓库相对 POSIX 路径，避免 Windows 与 Linux 的大小写排序差异。
+    return sorted(manifests, key=lambda path: path.relative_to(ROOT).as_posix().casefold())
 
 
 def manifest_by_chart_id(chart_id: str) -> tuple[Path, dict[str, Any]]:

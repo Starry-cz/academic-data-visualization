@@ -4,10 +4,11 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import re
 from pathlib import Path
+
+from manifest_lib import sha256_file
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,14 +41,6 @@ FEATURED_ORDER = [
 ]
 
 
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
-
-
 def snapshot() -> dict:
     protected = [
         ROOT / "references" / "palette-library.json",
@@ -56,7 +49,7 @@ def snapshot() -> dict:
         *[ROOT / "assets" / "figure-atlas" / "readme-cards" / name for name in FEATURED_ORDER],
     ]
     files = {
-        path.relative_to(ROOT).as_posix(): sha256(path)
+        path.relative_to(ROOT).as_posix(): sha256_file(path)
         for path in protected
         if path.is_file()
     }

@@ -66,17 +66,17 @@
     "verified_at": "2026-08-01",
     "verifier_version": "2.0.0",
     "evidence": "verification-record.json",
-    "fixture_sha256": "ab3fa1528616d09a2193c0f1c6e223ac93e9d1a1d4006bb189706bf6a801e686",
+    "fixture_sha256": "76e213a2615ecd5660b2d3ca30f5a3242ace5c794835518536bbf25a12d75ca7",
     "artifact_sha256": {
-      "figure.pdf": "bd74253ee9c8a7e216d3c8ea2b0f15088bba52fd75b310702bbb95f411fb5b00",
-      "figure.svg": "3141efe93bc818b979f4a37b90dd3a13bd9c4057c78b39a043930a39458810eb",
+      "figure.pdf": "070373dc7a622fdbaae40ca9d07a94f99fbea94f7a08b1dee40adc8ee40af168",
+      "figure.svg": "30498934e1b100da66def7194f0e2e16cd3fedd31a4a8c9379db69f04ff2d4b6",
       "figure.png": "46d03fa9d281b1745391d691e8782c9d7d9049d1477ad196305d90fd4d68644f",
       "figure-grayscale.png": "04c6d564459d19f8f5efba9a86acf51ecae41dd715a56d67f2fa48ccf1fcdae6",
-      "figure-metadata.json": "a2b9a05b14fce59441a7a6127248d0e20e721162338c908e3f15c5f91201ac22",
-      "alt-text.txt": "6e7fe9b56bf05c84b717212e4ee6ef5d2d60e894eb19e943bb99abdc46b9c920",
-      "source-data.csv": "973a3033f83d64dc85071b29f09ee74dbc209a2ae5c2130d10609e68db5bb5db",
-      "qa-report.json": "d867219d663d101e9dde91a6f9bc4bee6c28bb34ed0230403b2ca0a98851ddd0",
-      "run-record.json": "e742e6755de801ba00a55ce4720d2e679ef6dcbee9795c95e3f4aad34773313c"
+      "figure-metadata.json": "23ad488494bdf01a6dbe91b668dcc553ba743ad9fed59c0596c9723228744b6e",
+      "alt-text.txt": "f1fca39e49c941029f73dcfe546b8fbc2e0feada342c9c462ec9f25e81ff48c2",
+      "source-data.csv": "2cab4cfc9687871435bba053c09d4bb99e192a7ebac74049804e6642920b1f38",
+      "qa-report.json": "260c55205c82d9fb43d84620debf653bfb187930289a6a8ce1335bb5ac5d8b9d",
+      "run-record.json": "b7ec7f425fb27ad194bcc64c4007954e4bdf923c1d6e071c1e3d2f7fd933d3d2"
     }
   }
 }

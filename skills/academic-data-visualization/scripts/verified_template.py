@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import math
 from dataclasses import dataclass
@@ -23,6 +22,7 @@ from matplotlib.path import Path as MplPath
 from matplotlib.patches import PathPatch, Rectangle
 from PIL import Image
 
+from manifest_lib import sha256_file
 from palette_lib import THEMES, THEME_IDS, resolve_theme
 
 
@@ -64,14 +64,6 @@ MINIMUM_ROWS = {
     "kaplan-meier-curve": 20,
     "sankey-diagram": 6,
 }
-
-
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
 
 
 def select_font(requested: str | None) -> str:

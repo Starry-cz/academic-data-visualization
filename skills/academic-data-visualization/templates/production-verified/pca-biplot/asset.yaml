@@ -68,17 +68,17 @@
     "verified_at": "2026-08-01",
     "verifier_version": "2.0.0",
     "evidence": "verification-record.json",
-    "fixture_sha256": "f4a5c00985f9972fea2717ff2c2285f3dac802707875070212313514bddc22ed",
+    "fixture_sha256": "83b756c8f4ef1d9cf383322322eac0e474187a39b46ed83785b0986a053bc14f",
     "artifact_sha256": {
-      "figure.pdf": "e18a13101b59abf0a04475a993d69edb09f81f5ee66f99d1db8179af8eed50fe",
-      "figure.svg": "c84477f7dcaa8708b68ef919c03910ec2ce9d8a28291006e91eed57f95adc8b5",
+      "figure.pdf": "d3eb9dc3f2d6e22e64e9050ebc580c6fc9e4521a56e1644e8780681b1d32199f",
+      "figure.svg": "f634f930e615fcbacdcdf28128432fc18f4c4408decd4bf799892f95d00d99af",
       "figure.png": "1870b1d9f9d615d573558aa2f23089da0c94bc028760b168d9fdca2caaaa0d84",
       "figure-grayscale.png": "f1896fb3988415dc72029d42de6a3714053997c4affd3eb4ef87fdb23d223d6c",
-      "figure-metadata.json": "5d6c301ad5358baadcd0dfd78254b7d18f4245c78906d8cc6a372b5f4fa5cb5f",
-      "alt-text.txt": "d8196875bb5d9d12987f9e757b739e688f8484107c054d9597d3366e8905acda",
-      "source-data.csv": "0ff713167cdab9a38e2b20b3166ff9ea80212f0c230dee41f460de9dd9935495",
-      "qa-report.json": "c01c70bf1d42c08c723c95470c960baa170a46807a33d3d454e017b31538afd2",
-      "run-record.json": "4935c292198b9e12bd690f6362cae92a8e17925e66031f4ca7fa2f7af5be57e2"
+      "figure-metadata.json": "e3e2ba6f84779ce2c5736154765acbabe3afe49316e516495e3fbeee3b5411ef",
+      "alt-text.txt": "97f2485974df8ea5a45ab1bde2a54aca1c31a55607c19e0313d15f7dd7479c55",
+      "source-data.csv": "7e0acb5630d1cffe214308b1548b5716eba09493524a932b8d59809ed8318a47",
+      "qa-report.json": "6bde4335bb395c77a5fb1582214f80951bd5a76c85ddb0d227b386c3c57cfb59",
+      "run-record.json": "97379a686ba75ef30e57f79085066f7d101f3a0ccb471c79a0bdabf9245381f8"
     }
   }
 }

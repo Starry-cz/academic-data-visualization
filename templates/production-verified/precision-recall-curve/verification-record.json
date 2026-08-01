@@ -12,7 +12,7 @@
   },
   "fixture": {
     "path": "fixture.csv",
-    "sha256": "761774e1e904e1a4f14a46991004c15c777da313258b5ba6fa4eb527d65fd1f1"
+    "sha256": "a0964d1827f50fc419220a3bda668b10cce31ef3f3e7c4328c15b2b1eeb661e8"
   },
   "modes": {
     "demo": {
@@ -37,7 +37,7 @@
         "20260801",
         "--demo"
       ],
-      "duration_seconds": 4.295,
+      "duration_seconds": 3.681,
       "renderer_returncode": 0,
       "qa_passed": true,
       "renderer_summary": {
@@ -77,7 +77,7 @@
         "--input",
         "<INPUT_CSV>"
       ],
-      "duration_seconds": 4.838,
+      "duration_seconds": 3.735,
       "renderer_returncode": 0,
       "qa_passed": true,
       "renderer_summary": {
@@ -96,19 +96,19 @@
     }
   },
   "artifact_sha256": {
-    "figure.pdf": "9b8c1d616f6ea819432722f3b276edc07157e45d4615053cc63b1ad100533215",
-    "figure.svg": "43ccc1c4c1ee235bd48746828af4145e00ccc43a0cefa035ea14002a943274cf",
+    "figure.pdf": "301f07de3762ed4b52912b3b3b057fd6783fc876fad57747735f27276ad7689c",
+    "figure.svg": "374039c5db476ad220d7181bd92a7c136e1f530b671030f9da210fd85e646174",
     "figure.png": "347b79a8c98fdf9602bb58988c396a6467ce0cbfb8655659dd337d2f5740fac3",
     "figure-grayscale.png": "5ef6dcb6ff49fc04c147fad0d2b83c1fa78b0c1cec6b6d15ee98cd034835158d",
-    "figure-metadata.json": "6155ee96252ef3298b7ccd96b1e5de1f2bf57a878f35885f5af341601326c615",
-    "alt-text.txt": "481bfc427daaa6a7857aff1a3abb48b1c327940e4c4234e80ab79ba59c963c60",
-    "source-data.csv": "65e8db238f709aee2dc3ee1b15bd56a7737939a9e56fc7a72563882bf9a2bbe7",
-    "qa-report.json": "bfcb64dde02a33c08d06c8e8390b26942d2074840e2fd3d60c0f7a78fd81b5cf",
-    "run-record.json": "44ce17e7368b7d52e85dbad4a5a1b8386654453754252e7a42815a69448e6dc1"
+    "figure-metadata.json": "804da164e3610810c522324a3f7debc7d9d6507996880228748962b0c100441b",
+    "alt-text.txt": "bc487361946d9450c793d3ee3fa4235d916963d09ddc0fb7b7e4200f50c53290",
+    "source-data.csv": "881a6baaa3a53ac267965089ff524ac08e9cc7e5ede9d0a31a94f5b4ee10c2af",
+    "qa-report.json": "f38d2a5bdd1b3da10dcc5ab383c9966be6fb613cd6eea45f6a5e3319e8ec37d8",
+    "run-record.json": "198b8b542dedac62c2b0d2a5e2dcefc55a0a4b8b33945341319eb63b4fe5c389"
   },
   "visual_review": {
     "status": "passed",
     "rubric": "references/visual-review-protocol.md",
-    "reviewer": "Codex visual QA 2026-08-01"
+    "reviewer": "Codex visual review 2026-08-01"
   }
 }

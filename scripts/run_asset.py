@@ -52,11 +52,12 @@ def run_asset(
     config: Path | None,
     timeout: int,
     overwrite: bool,
+    validate_evidence: bool = True,
 ) -> dict[str, Any]:
     manifest_path = manifest_path.resolve()
     asset_dir = manifest_path.parent
     manifest = load_manifest(manifest_path)
-    errors = validate_manifest(manifest, asset_dir)
+    errors = validate_manifest(manifest, asset_dir, check_artifact_hashes=validate_evidence)
     if errors:
         raise ValueError("Invalid manifest: " + "; ".join(errors))
     if manifest["asset_status"] not in {"demo_runnable", "production_verified"}:
