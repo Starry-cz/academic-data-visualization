@@ -175,7 +175,7 @@ The landing page preserves 24 maintainer-selected visual examples across distinc
 
 ## Colour system
 
-Twenty-two themes cover categorical, sequential, and diverging semantics. One theme that overlapped materially with the clinical-literature route was merged, and categorical colours that were too close within a theme were removed. The defaults still require colour-blind safety, grayscale legibility, and stable semantic roles.
+Choose a theme that fits the research context, then keep one semantic colour mapping across a figure set or manuscript. If none fits the visual direction or target-journal style, share a reference image or explicit hex values; the Skill will extract candidate colours, confirm their semantic roles, and apply them only after readability, colour-vision, and grayscale review.
 
 <!-- palette-gallery:start -->
 <table width="100%" align="center">
