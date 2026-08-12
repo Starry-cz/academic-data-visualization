@@ -69,6 +69,28 @@ Flag any risks explicitly. A flagged risk is a checklist item; an unflagged risk
 
 ## Contract Establishment Protocol
 
+### Adaptive clarification gate
+
+Do not present the five-point contract as a fixed intake questionnaire. First interpret all available evidence:
+
+- the user's current request and earlier conversation turns;
+- attached data, images, captions, manuscript text, code, and existing figures;
+- previously confirmed backend, palette, language, journal, dimensions, and export choices;
+- facts that can be read directly from the supplied files.
+
+Create a private `known / inferred / unresolved` ledger. For every unresolved item, ask: **would a different answer materially change the supported claim, unit of analysis, chart or statistical encoding, delivery profile, or mandatory visual semantics?** Rank only those material gaps by decision impact and ask the highest-impact one to three questions. Generate their wording and content from the current task; do not reuse a fixed list simply because a contract field is empty.
+
+Use these rules:
+
+1. Ask **zero** questions when the context already supports a defensible figure contract.
+2. Ask no more than **three** questions in the clarification round; combine tightly related gaps only when the combined question remains easy to answer.
+3. Do not ask for information already stated, visible in an attachment, or reliably inferable from the surrounding manuscript or conversation.
+4. Prioritise scientific blockers over aesthetic preferences. A missing observation unit outranks a preferred font; an unsupported claim outranks a preferred palette.
+5. Do not pause for reversible preferences such as an unspecified library theme when the documented default can produce a safe first proof.
+6. After the answers, list every non-trivial inference and default under `Assumptions`, then continue without another generic questionnaire.
+
+Defaults must remain explicit and reversible. Match the user's language; infer the delivery context from the request when possible; otherwise use `report_web` for an exploratory first proof. Use the registered `nature-default` palette unless journal routing or user-provided colours take precedence, and follow the backend routing already defined in `SKILL.md`. Never default or infer scientific facts such as the claim, observation unit, sample size, group meaning, repeated-measure structure, or statistical result when they determine validity. If such an indispensable fact remains unavailable, identify the exact blocker instead of fabricating it.
+
 ### When to Use the Contract
 
 - **Full contract (all 5 points):** New figure from scratch, major revision, or when the user says "I want to make a figure for my paper."
@@ -77,7 +99,7 @@ Flag any risks explicitly. A flagged risk is a checklist item; an unflagged risk
 
 ### How to Present
 
-When establishing the contract, present it conversationally, one point at a time if the user is unsure. For experienced users who know what they want, present all 5 points at once and ask for confirmation.
+Present only the adaptive questions selected above. When the user's context already establishes the contract, summarise the inferred contract and assumptions briefly and proceed; do not ask for ceremonial confirmation. If the user is unsure, ask the most consequential question first and make the trade-off understandable in plain language.
 
 ### Relation to Hub Workflow
 

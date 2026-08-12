@@ -35,6 +35,10 @@ Read `references/figure-contract.md`. Establish:
 
 If the user supplies data without a question, ask what the figure should help the reader compare, relate, rank, or understand. If the surrounding manuscript makes the intended claim unambiguous, state the inference and continue.
 
+Before asking anything, synthesize the current request, earlier turns, attached data or images, manuscript text, existing figures, and decisions already confirmed. Build a private `known / inferred / unresolved` ledger, then rank unresolved items by how much their answers could change the claim, unit of analysis, chart or statistical encoding, delivery profile, or mandatory visual semantics. Ask only the highest-impact **one to three** questions; the questions must be generated for this request rather than copied from a fixed questionnaire. Ask zero questions when the context is already sufficient, never repeat answered information, and do not delay work for preferences that can be safely revised after the first proof.
+
+After the clarification round, state every non-trivial default under `Assumptions` and proceed. Use documented defaults for reversible choices, but never invent a scientific claim, observation unit, sample size, statistical result, or data meaning. If one of those remains indispensable after the available answers, report the exact blocker instead of guessing.
+
 ### Step 1 — Profile only the data needed for the claim
 
 Inspect column types, missingness, group sizes, distributions, outliers, repeated-measure structure, and relevant correlations. Do not run generic analysis unrelated to the claim.
