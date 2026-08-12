@@ -51,7 +51,7 @@
       "id": "immuno-signal",
       "name": "免疫信号",
       "source": "用户上传图 5",
-      "categorical": ["#A9C4E2", "#B9D6ED", "#AEDFE4", "#F04A4D", "#5896D0", "#68C9D4"],
+      "categorical": ["#A9C4E2", "#AEDFE4", "#F04A4D", "#5896D0", "#68C9D4"],
       "sequential": ["#F5FAFE", "#B9D6ED", "#A9C4E2", "#5896D0"],
       "diverging": ["#5896D0", "#FFFFFF", "#F04A4D"],
       "accent": "#F04A4D"
@@ -87,7 +87,7 @@
       "id": "soft-academic",
       "name": "柔和学术",
       "source": "用户上传图 9",
-      "categorical": ["#FCE8E6", "#FFC6BC", "#F8B9B8", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#668FCA", "#C9CEFE", "#66A8CD", "#006BAD"],
+      "categorical": ["#FCE8E6", "#F8B9B8", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#668FCA", "#C9CEFE", "#006BAD"],
       "sequential": ["#F7FBFF", "#D6DFEF", "#A5CDE2", "#5FA3CB", "#006BAD"],
       "diverging": ["#5FA3CB", "#FFFFFF", "#FFC6BC"],
       "accent": "#006BAD"
@@ -132,7 +132,7 @@
       "id": "cryo-electrolyte",
       "name": "低温电解质",
       "source": "用户上传图 14",
-      "categorical": ["#ECE3EF", "#CFBBD9", "#D9EBF2", "#A2D1E6", "#F9CFB1", "#ACC3E5", "#355AA4", "#7A939F", "#D4E7F2"],
+      "categorical": ["#CFBBD9", "#D9EBF2", "#A2D1E6", "#F9CFB1", "#ACC3E5", "#355AA4", "#7A939F"],
       "sequential": ["#F8FAFC", "#D9EBF2", "#A2D1E6", "#355AA4"],
       "diverging": ["#355AA4", "#FFFFFF", "#F9CFB1"],
       "accent": "#355AA4"
@@ -154,15 +154,6 @@
       "sequential": ["#F8FBF8", "#D7E7D8", "#93BD99", "#4E8A70"],
       "diverging": ["#3B7480", "#FFFEFA", "#C06D7C"],
       "accent": "#C7859D"
-    },
-    {
-      "id": "quiet-atlas",
-      "name": "静谧图谱",
-      "source": "基于信息图的雾蓝、浅绿、暖沙与低饱和紫色角色重新组合",
-      "categorical": ["#4F738C", "#90B9C8", "#D4A48B", "#9B88B2", "#7EAF9A", "#C7AA59"],
-      "sequential": ["#F8FAFB", "#D5E7EA", "#9CC6CC", "#4E8590"],
-      "diverging": ["#4F738C", "#FFFDF8", "#CB846D"],
-      "accent": "#D4A48B"
     },
     {
       "id": "method-blueprint",

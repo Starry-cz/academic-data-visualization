@@ -174,18 +174,56 @@ Skill 把研究问题、数据结构和交付约束转换成一条可执行、�
 
 ## 配色系统
 
-23 套主题覆盖分类、顺序和发散语义；默认要求色盲友好、灰度可辨、语义稳定，并支持从参考图片提取候选颜色后重新审查。
+22 套主题覆盖分类、顺序和发散语义。已合并一套与临床文献主题高度重叠的方案，并清理主题内难以区分的分类色；默认仍要求色盲友好、灰度可辨与语义稳定。
 
+<!-- palette-gallery:start -->
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default 配色预览"></td>
-    <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal 配色预览"></td>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Nature 默认</strong><br><code>nature-default</code><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature 默认 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>高辨识信号</strong><br><code>vivid-signal</code><br><img src="assets/palette-gallery/vivid-signal.png" width="390" alt="高辨识信号 配色预览"></td>
   </tr>
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Pastel harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony 配色预览"></td>
-    <td width="50%" align="center" valign="top"><strong>Coastal sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>明亮生物</strong><br><code>bright-bio</code><br><img src="assets/palette-gallery/bright-bio.png" width="390" alt="明亮生物 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>青绿组学</strong><br><code>teal-genome</code><br><img src="assets/palette-gallery/teal-genome.png" width="390" alt="青绿组学 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>柔和微生物</strong><br><code>muted-microbe</code><br><img src="assets/palette-gallery/muted-microbe.png" width="390" alt="柔和微生物 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>免疫信号</strong><br><code>immuno-signal</code><br><img src="assets/palette-gallery/immuno-signal.png" width="390" alt="免疫信号 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>粉彩催化</strong><br><code>pastel-catalysis</code><br><img src="assets/palette-gallery/pastel-catalysis.png" width="390" alt="粉彩催化 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>电化学柔彩</strong><br><code>electrochemistry</code><br><img src="assets/palette-gallery/electrochemistry.png" width="390" alt="电化学柔彩 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>柔和成本</strong><br><code>soft-cost</code><br><img src="assets/palette-gallery/soft-cost.png" width="390" alt="柔和成本 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>柔和学术</strong><br><code>soft-academic</code><br><img src="assets/palette-gallery/soft-academic.png" width="390" alt="柔和学术 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>柔彩组学</strong><br><code>pastel-omics</code><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="柔彩组学 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>暖冷动力学</strong><br><code>warm-cool-kinetics</code><br><img src="assets/palette-gallery/warm-cool-kinetics.png" width="390" alt="暖冷动力学 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>含水层复苏</strong><br><code>aquifer-recovery</code><br><img src="assets/palette-gallery/aquifer-recovery.png" width="390" alt="含水层复苏 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>神经深蓝</strong><br><code>neuro-navy</code><br><img src="assets/palette-gallery/neuro-navy.png" width="390" alt="神经深蓝 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>低温电解质</strong><br><code>cryo-electrolyte</code><br><img src="assets/palette-gallery/cryo-electrolyte.png" width="390" alt="低温电解质 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>临床文献</strong><br><code>literature-clinical</code><br><img src="assets/palette-gallery/literature-clinical.png" width="390" alt="临床文献 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>鼠尾草方法</strong><br><code>sage-methods</code><br><img src="assets/palette-gallery/sage-methods.png" width="390" alt="鼠尾草方法 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>方法蓝图</strong><br><code>method-blueprint</code><br><img src="assets/palette-gallery/method-blueprint.png" width="390" alt="方法蓝图 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>消融对照</strong><br><code>ablation-contrast</code><br><img src="assets/palette-gallery/ablation-contrast.png" width="390" alt="消融对照 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>柔彩协调</strong><br><code>pastel-harmony</code><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="柔彩协调 配色预览"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>蓝红信号</strong><br><code>blue-red-signal</code><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="蓝红信号 配色预览"></td>
+    <td width="50%" align="center" valign="top"><strong>海岸日落</strong><br><code>coastal-sunset</code><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="海岸日落 配色预览"></td>
   </tr>
 </table>
+<!-- palette-gallery:end -->
 
 完整色值、语义角色与使用限制见 [`color-palettes.md`](references/color-palettes.md) 和 [`palette-library.json`](references/palette-library.json)。
 
@@ -250,6 +288,7 @@ python scripts/build_chart_registry.py --check
 python scripts/generate_chart_catalog.py --check
 python scripts/generate_directory_map.py --check
 python scripts/check_showcase_lock.py
+python scripts/audit_palette_library.py --check
 python scripts/build_skill_package.py --check
 python -m unittest discover -s tests -v
 python scripts/trigger_benchmark.py

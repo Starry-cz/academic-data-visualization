@@ -7,7 +7,7 @@
 - Use the v2 axes independently: `knowledge_status`, `implementation_status`, and `verification_status`.
 - Only `production_verified + release_passed` may be routed through `scripts/run_asset.py` as a release template.
 - `legacy_example`, `pattern`, and `none` are not production states. Never infer a stronger state from the presence of a PNG or script.
-- Preserve public paths, all historical examples, the approved 24-card README gallery, and the existing palette library.
+- Preserve public paths, all historical examples, and the approved 24-card README gallery. Change the palette library only with explicit maintainer approval, an auditable similarity decision, and regenerated previews.
 
 ## Production gate
 
@@ -48,6 +48,7 @@ python scripts/build_chart_registry.py --check
 python scripts/generate_chart_catalog.py --check
 python scripts/generate_directory_map.py --check
 python scripts/check_showcase_lock.py
+python scripts/audit_palette_library.py --check
 python scripts/build_skill_package.py --check
 python -m unittest discover -s tests -v
 python scripts/trigger_benchmark.py

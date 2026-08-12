@@ -2,12 +2,14 @@ from __future__ import annotations
 
 import re
 import struct
+import sys
 import unittest
 from pathlib import Path
 from urllib.parse import unquote
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
 README_NAMES = ("README.md", "README_EN.md")
 MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
 HTML_TARGET = re.compile(r"""(?:href|src)=["']([^"']+)["']""")

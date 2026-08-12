@@ -1,6 +1,6 @@
 # Theme Library and Accessible Colour System
 
-This skill has one default theme and twenty-two user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
+This skill has one default theme and twenty-one user-selectable themes. The palette library is intentionally a **style layer**, not a change to scientific meaning: preserve category order, statistical markings, and mark types whenever a theme changes.
 
 ## Select a theme
 
@@ -11,19 +11,18 @@ This skill has one default theme and twenty-two user-selectable themes. The pale
 | `bright-bio` | 明亮生物 | Multi-condition molecular biology panels | `#F7A63A #557CFF #80C662 #866AD2 #56BFB0` |
 | `teal-genome` | 青绿组学 | Genomics and network-style pages | `#0F9EA8 #008B82 #45728F #8CD1B2 #8B84A3` |
 | `muted-microbe` | 柔和微生物 | Experimental biology and culture studies | `#BA4460 #FFAFAC #DBAC72 #87AD7C #65AA93` |
-| `immuno-signal` | 免疫信号 | Immune-response contrasts | `#A9C4E2 #B9D6ED #AEDFE4 #F04A4D #5896D0 #68C9D4` |
+| `immuno-signal` | 免疫信号 | Immune-response contrasts | `#A9C4E2 #AEDFE4 #F04A4D #5896D0 #68C9D4` |
 | `pastel-catalysis` | 粉彩催化 | Materials and catalytic comparisons | `#7AD4FE #FDCBA7 #B3DDD4 #C9D2F9 #DDEAF6` |
 | `electrochemistry` | 电化学柔彩 | Electrochemistry and environmental series | `#E26E67 #509CBA #91BFDB #F1B9B6 #A4D86A` |
 | `soft-cost` | 柔和成本 | Techno-economic and process comparisons | `#6DA4B0 #ABCBD4 #E1B3AD #D78F81 #D7CDE1` |
-| `soft-academic` | 柔和学术 | Multi-panel academic reports and talks | `#FCE8E6 #FFC6BC #F8B9B8 #D6DFEF #A5CDE2 #5FA3CB` |
+| `soft-academic` | 柔和学术 | Multi-panel academic reports and talks | `#FCE8E6 #F8B9B8 #D6DFEF #A5CDE2 #5FA3CB #668FCA` |
 | `pastel-omics` | 柔彩组学 | Multi-cohort omics and population-structure panels | `#F9ADE5 #EFEAB7 #BBD6F5 #AAD1CC #C0A3ED #F6B593` |
 | `warm-cool-kinetics` | 暖冷动力学 | Half-life, decay-rate, and time-resolved molecular panels | `#D7312D #F2724D #FEE395 #FEF9B7 #ACD2E5 #6090C1` |
 | `aquifer-recovery` | 含水层复苏 | Hydrogeology, climate, and recovery trajectories | `#F599A1 #9FD7E9 #95AEDA #FCD590 #A577AD #73C79E` |
 | `neuro-navy` | 神经深蓝 | Neuroscience contrasts and intervention comparisons | `#D9E6EB #9FC3D5 #8F96BD #2A347A #D6D69B` |
-| `cryo-electrolyte` | 低温电解质 | Electrolytes, low-temperature materials, and stability panels | `#ECE3EF #CFBBD9 #D9EBF2 #A2D1E6 #F9CFB1 #355AA4` |
+| `cryo-electrolyte` | 低温电解质 | Electrolytes, low-temperature materials, and stability panels | `#CFBBD9 #D9EBF2 #A2D1E6 #F9CFB1 #ACC3E5 #355AA4` |
 | `literature-clinical` | 临床文献 | Clinical cohorts, biomarker workflows, survival and response panels | `#477E95 #72AE9E #D87B67 #D4B261 #9C86B3` |
 | `sage-methods` | 鼠尾草方法 | Methods, multi-modal workflows, and restrained comparison panels | `#3B7480 #8CB58B #DCA16C #C7859D #8295C0` |
-| `quiet-atlas` | 静谧图谱 | Dense overview figures, atlas-style summaries, and explanatory graphics | `#4F738C #90B9C8 #D4A48B #9B88B2 #7EAF9A` |
 | `method-blueprint` | 方法蓝图 | Benchmark, multi-method, and proposed-versus-baseline comparisons | `#0F4D92 #3775BA #8BCF8B #B64342 #42949E` |
 | `ablation-contrast` | 消融对照 | Ablations, model variants, and compact metric comparisons | `#1F5D99 #72A96B #E3B07C #B94A48 #6B7280` |
 | `pastel-harmony` | 柔彩协调 | Calm exploratory panels with redundant shapes or direct labels | `#EEA599 #FAC795 #FFE9BE #E3EDE0 #ABD3E1 #92B4C8` |
@@ -43,7 +42,7 @@ Select a theme from the evidence, not from whichever preview was generated most 
 | Clinical cohort, survival, treatment response | `literature-clinical` or `neuro-navy` | Red–green-only group coding |
 | Omics, single-cell, genomics, population structure | `teal-genome`, `pastel-omics`, or `bright-bio` | Rainbow expression scales |
 | Materials, electrochemistry, catalysis, cost | `electrochemistry`, `pastel-catalysis`, `cryo-electrolyte`, or `soft-cost` | Decorative gradients without a numeric order |
-| Dense methods, benchmarks, diagrams, network summaries | `method-blueprint`, `sage-methods`, or `quiet-atlas` | Repeating a saturated accent for every element |
+| Dense methods, benchmarks, diagrams, network summaries | `method-blueprint`, `sage-methods`, or `literature-clinical` | Repeating a saturated accent for every element |
 | Signed correlation or effect structure | `blue-red-signal` or `coastal-sunset` | Treating categorical order as a quantitative colour scale |
 | Calm multi-group overview with direct labels | `pastel-harmony` | Colour-only encoding for critical comparisons |
 

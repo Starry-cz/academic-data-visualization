@@ -175,18 +175,56 @@ The landing page preserves 24 maintainer-selected visual examples across distinc
 
 ## Colour system
 
-Twenty-three themes cover categorical, sequential, and diverging semantics. The defaults require colour-blind safety, grayscale legibility, stable meaning, and a review step when colours are extracted from reference images.
+Twenty-two themes cover categorical, sequential, and diverging semantics. One theme that overlapped materially with the clinical-literature route was merged, and categorical colours that were too close within a theme were removed. The defaults still require colour-blind safety, grayscale legibility, and stable semantic roles.
 
+<!-- palette-gallery:start -->
 <table width="100%" align="center">
   <tr>
-    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Nature default</strong><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default palette preview"></td>
-    <td width="50%" align="center" valign="top"><strong>Blue–red signal</strong><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal palette preview"></td>
+    <td width="50%" align="center" valign="top"><img src="assets/readme/table-full-width-spacer.svg" width="800" height="1" align="right" alt=""><strong>Nature default</strong><br><code>nature-default</code><br><img src="assets/palette-gallery/nature-default.png" width="390" alt="Nature default palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Vivid signal</strong><br><code>vivid-signal</code><br><img src="assets/palette-gallery/vivid-signal.png" width="390" alt="Vivid signal palette preview"></td>
   </tr>
   <tr>
-    <td width="50%" align="center" valign="top"><strong>Pastel harmony</strong><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony palette preview"></td>
-    <td width="50%" align="center" valign="top"><strong>Coastal sunset</strong><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Bright bio</strong><br><code>bright-bio</code><br><img src="assets/palette-gallery/bright-bio.png" width="390" alt="Bright bio palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Teal genome</strong><br><code>teal-genome</code><br><img src="assets/palette-gallery/teal-genome.png" width="390" alt="Teal genome palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Muted microbe</strong><br><code>muted-microbe</code><br><img src="assets/palette-gallery/muted-microbe.png" width="390" alt="Muted microbe palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Immuno signal</strong><br><code>immuno-signal</code><br><img src="assets/palette-gallery/immuno-signal.png" width="390" alt="Immuno signal palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Pastel catalysis</strong><br><code>pastel-catalysis</code><br><img src="assets/palette-gallery/pastel-catalysis.png" width="390" alt="Pastel catalysis palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Electrochemistry</strong><br><code>electrochemistry</code><br><img src="assets/palette-gallery/electrochemistry.png" width="390" alt="Electrochemistry palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Soft cost</strong><br><code>soft-cost</code><br><img src="assets/palette-gallery/soft-cost.png" width="390" alt="Soft cost palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Soft academic</strong><br><code>soft-academic</code><br><img src="assets/palette-gallery/soft-academic.png" width="390" alt="Soft academic palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Pastel omics</strong><br><code>pastel-omics</code><br><img src="assets/palette-gallery/pastel-omics.png" width="390" alt="Pastel omics palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Warm-cool kinetics</strong><br><code>warm-cool-kinetics</code><br><img src="assets/palette-gallery/warm-cool-kinetics.png" width="390" alt="Warm-cool kinetics palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Aquifer recovery</strong><br><code>aquifer-recovery</code><br><img src="assets/palette-gallery/aquifer-recovery.png" width="390" alt="Aquifer recovery palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Neuro navy</strong><br><code>neuro-navy</code><br><img src="assets/palette-gallery/neuro-navy.png" width="390" alt="Neuro navy palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Cryo electrolyte</strong><br><code>cryo-electrolyte</code><br><img src="assets/palette-gallery/cryo-electrolyte.png" width="390" alt="Cryo electrolyte palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Literature clinical</strong><br><code>literature-clinical</code><br><img src="assets/palette-gallery/literature-clinical.png" width="390" alt="Literature clinical palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Sage methods</strong><br><code>sage-methods</code><br><img src="assets/palette-gallery/sage-methods.png" width="390" alt="Sage methods palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Method blueprint</strong><br><code>method-blueprint</code><br><img src="assets/palette-gallery/method-blueprint.png" width="390" alt="Method blueprint palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Ablation contrast</strong><br><code>ablation-contrast</code><br><img src="assets/palette-gallery/ablation-contrast.png" width="390" alt="Ablation contrast palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Pastel harmony</strong><br><code>pastel-harmony</code><br><img src="assets/palette-gallery/pastel-harmony.png" width="390" alt="Pastel harmony palette preview"></td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top"><strong>Blue-red signal</strong><br><code>blue-red-signal</code><br><img src="assets/palette-gallery/blue-red-signal.png" width="390" alt="Blue-red signal palette preview"></td>
+    <td width="50%" align="center" valign="top"><strong>Coastal sunset</strong><br><code>coastal-sunset</code><br><img src="assets/palette-gallery/coastal-sunset.png" width="390" alt="Coastal sunset palette preview"></td>
   </tr>
 </table>
+<!-- palette-gallery:end -->
 
 See [`color-palettes.md`](references/color-palettes.md) and [`palette-library.json`](references/palette-library.json) for complete values, semantic roles, and usage constraints.
 
@@ -251,6 +289,7 @@ python scripts/build_chart_registry.py --check
 python scripts/generate_chart_catalog.py --check
 python scripts/generate_directory_map.py --check
 python scripts/check_showcase_lock.py
+python scripts/audit_palette_library.py --check
 python scripts/build_skill_package.py --check
 python -m unittest discover -s tests -v
 python scripts/trigger_benchmark.py

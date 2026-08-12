@@ -41,6 +41,7 @@ FILES = [
     "scripts/chart_registry_lib.py",
     "scripts/manifest_lib.py",
     "scripts/palette_lib.py",
+    "scripts/audit_palette_library.py",
     "scripts/color_audit.py",
     "scripts/query_chart.py",
     "scripts/run_asset.py",

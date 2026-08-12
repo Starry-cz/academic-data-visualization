@@ -47,7 +47,6 @@ GALLERY_THEMES = {
     "literature-clinical": {"red": "#D87B67", "orange": "#D4B261", "green": "#72AE9E", "blue": "#477E95", "mauve": "#9C86B3"},
     "electrochemistry": {"red": "#E26E67", "orange": "#F8D1B5", "green": "#A4D86A", "blue": "#509CBA", "mauve": "#91BFDB"},
     "soft-academic": {"red": "#F8B9B8", "orange": "#FFC6BC", "green": "#A5CDE2", "blue": "#5FA3CB", "mauve": "#668FCA"},
-    "quiet-atlas": {"red": "#D4A48B", "orange": "#C7AA59", "green": "#7EAF9A", "blue": "#4F738C", "mauve": "#9B88B2"},
     "warm-cool-kinetics": {"red": "#D7312D", "orange": "#F2724D", "green": "#FEE395", "blue": "#115FA4", "mauve": "#6090C1"},
     "aquifer-recovery": {"red": "#F599A1", "orange": "#FCD590", "green": "#73C79E", "blue": "#5299CC", "mauve": "#A577AD"},
 }
@@ -60,7 +59,7 @@ GALLERY_THEME_BY_FILE = {
     "Correlationmatrix.png": "teal-genome",
     "density_heatmap.png": "pastel-omics",
     "Frequency_3DHeatmap.png": "electrochemistry",
-    "GroupCorrelationmatrix.png": "quiet-atlas",
+    "GroupCorrelationmatrix.png": "literature-clinical",
     "GroupedBarChart.png": "bright-bio",
     "MantelCorrelation.png": "literature-clinical",
     "PCA.png": "pastel-omics",

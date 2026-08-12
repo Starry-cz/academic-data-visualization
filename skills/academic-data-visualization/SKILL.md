@@ -259,6 +259,7 @@ python scripts/qa_coverage.py
 
 # Protected README gallery, palette library, and installable package
 python scripts/check_showcase_lock.py
+python scripts/audit_palette_library.py --check
 python scripts/build_skill_package.py --check
 
 # Audit one generated script
@@ -271,6 +272,7 @@ python scripts/qa_validator.py --output-dir output/forest --manifest templates/p
 python scripts/generate_readme_previews.py
 python scripts/build_readme_gallery_cards.py
 python scripts/generate_palette_previews.py
+python scripts/generate_readme_palette_gallery.py
 python scripts/generate_atlas.py
 ```
 
